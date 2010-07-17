@@ -1,0 +1,28 @@
+[
+	{
+		"SOURCE_LANGUAGE": "sme", 
+		"OUTPUT_DIR": "/home/fran/source/apertium/incubator/apertium-sme-sma/", 
+		"SRC": "/home/fran/source/giellatekno/trunk/gt/sme/src/",
+		"PRODUCE_LEXC_FOR": "sme", 
+		"TARGET_LANGUAGE": "sme",
+		"HEADER": "sme-lex.txt",
+		"LEXTYPE": "",
+		"files": [
+			["verb-sme-lex.txt", "clip", {"pos_filter": "<V>", "split": "VerbRoot\n"}],
+			["noun-sme-lex.txt", "clip", {"pos_filter": "<N>", "split": "NounRoot\n"}],
+			["adj-sme-lex.txt", "clip", {"pos_filter": "<A>", "split": "AdjectiveRoot\n"}],
+			["propernoun-sme-morph.txt", "cat"],
+			["propernoun-sme-lex.txt", "clip", {"pos_filter": "<N><Prop>", "split": "ProperNoun\n"}],
+			["conjunction-sme-lex.txt", "cat"],
+			["adv-sme-lex.txt", "clip", {"pos_filter": "<Adv>", "no_trim": true, "split": "Adverb"}],
+			["adv-sme-lex.txt", "clip", {"pos_filter": "<Adv>", "no_trim": true, "split": "gadv ! adv that can form compounds", "no_header": true}],
+			["subjunction-sme-lex.txt", "cat"],
+			["pronoun-sme-lex.txt", "cat"],
+			["particle-sme-lex.txt", "cat"],
+			["pp-sme-lex.txt", "cat"],
+			["numeral-sme-lex.txt", "cat"],
+			["abbr-sme-lex.txt", "cat"],
+			["punct-sme-lex.txt", "cat"]
+		]
+	}
+]
