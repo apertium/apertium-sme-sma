@@ -2,12 +2,15 @@
   <alphabet/>
   <sdefs>
     <sdef n="N"/>
+    <sdef n="Pron"/>
     <sdef n="V"/>
     <sdef n="A"/>
     <sdef n="Adv"/>
 
     <sdef n="TV"/>
     <sdef n="IV"/>
+
+    <sdef n="Pers"/>
 
     <sdef n="Prop"/>
     <sdef n="Plc"/>
@@ -18,6 +21,8 @@
     <!-- Adpositions -->
 
     <!-- Pronouns -->
+
+    <e><p><l>mun<s n="Pron"/><s n="Pers"/></l><r>mån<s n="Pron"/><s n="Pers"/></r></p></e>
 
     <!-- Nouns -->
     <e><p><l>dállu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
