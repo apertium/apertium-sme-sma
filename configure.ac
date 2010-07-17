@@ -1,0 +1,105 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+
+AC_PREREQ(2.52)
+
+AC_INIT([apertium-sme-sma], [0.1.0], [giellalinda@users.sourceforge.net])
+AM_INIT_AUTOMAKE([apertium-sme-sma], [0.1.0], no-define)
+AC_PROG_LN_S
+AC_PROG_AWK
+AC_CONFIG_HEADER([config])
+
+AC_DEFUN([PKG_CHECK_LTTOOLBOX], [
+  LTTOOLBOX_VER=0
+  PKG_CHECK_MODULES(LTTOOLBOX, lttoolbox-3.1 >= 3.1.0,
+  [
+    LTTOOLBOX_VER=31
+  ],
+  [
+    PKG_CHECK_MODULES(LTTOOLBOX, lttoolbox-3.2 >= 3.2.0)
+    LTTOOLBOX_VER=32
+  ])
+  AC_SUBST(LTTOOLBOX_VER)
+])
+
+AC_DEFUN([PKG_CHECK_APERTIUM], [
+  APERTIUM_VER=0
+  PKG_CHECK_MODULES(APERTIUM, apertium-3.2 >= 3.2.0,
+  [
+    APERTIUM_VER=32
+  ])
+  AC_SUBST(APERTIUM_VER)
+])
+
+PKG_CHECK_LTTOOLBOX
+PKG_CHECK_APERTIUM
+
+APERTIUM_VER=30
+
+AC_SUBST(APERTIUM_VER)
+
+AC_PATH_PROG(CGCOMP, cg-comp, no)
+if test x$ac_cv_path_CGCOMP = x
+then
+  AC_MSG_ERROR([You don't have cg-comp installed.])
+fi
+if test x$ac_cv_path_CGPROC = xno
+then
+  AC_MSG_ERROR([You don't have cg-comp installed.])
+fi
+
+AC_PATH_PROG(CGPROC, cg-proc, no)
+if test x$ac_cv_path_CGPROC = x
+then
+  AC_MSG_ERROR([You don't have cg-proc installed.])
+fi
+if test x$ac_cv_path_CGPROC = xno
+then
+  AC_MSG_ERROR([You don't have cg-proc installed.])
+fi
+
+AC_PATH_PROG(HFSTPROC, hfst-proc, no)
+if test x$ac_cv_path_HFSTPROC = x
+then
+  AC_MSG_ERROR([You don't have hfst-proc installed.])
+fi
+if test x$ac_cv_path_HFSTPROC = xno
+then
+  AC_MSG_ERROR([You don't have hfst-proc installed.])
+fi
+
+AC_PATH_PROG(HFSTLEXC, hfst-lexc, no)
+if test x$ac_cv_path_HFSTLEXC = x
+then
+  AC_MSG_ERROR([You don't have hfst-lexc installed.])
+fi
+if test x$ac_cv_path_HFSTLEXC = xno
+then
+  AC_MSG_ERROR([You don't have hfst-lexc installed.])
+fi
+
+AC_PATH_PROG(HFSTTWOLC, hfst-twolc, no)
+if test x$ac_cv_path_HFSTTWOLC = x
+then
+  AC_MSG_ERROR([You don't have hfst-twolc installed.])
+fi
+if test x$ac_cv_path_HFSTTWOLC = xno
+then
+  AC_MSG_ERROR([You don't have hfst-twolc installed.])
+fi
+
+AC_PATH_PROG(HFSTSUBSTITUTE, hfst-substitute, no)
+if test x$ac_cv_path_HFSTSUBSTITUTE = x
+then
+  AC_MSG_ERROR([You don't have hfst-subsitute installed.])
+fi
+if test x$ac_cv_path_HFSTSUBSTITUTE = xno
+then
+  AC_MSG_ERROR([You don't have hfst-substitute installed.])
+fi
+
+
+
+
+AC_OUTPUT([Makefile])

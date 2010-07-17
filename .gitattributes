@@ -1,9 +1,16 @@
 * text=auto !eol
 /AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/NEWS -text
 /README -text
 /apertium-sme-sma.sma.lexc -text
 /apertium-sme-sma.sma.twol -text
 /apertium-sme-sma.sme-sma.dix -text
+/apertium-sme-sma.sme-sma.rlx -text
 /apertium-sme-sma.sme.lexc -text
 /apertium-sme-sma.sme.twol -text
+/configure.ac -text
+dev/apertium.relabel -text
 dev/langs.cfg.in -text
+/lexchoicebil.xsl -text
