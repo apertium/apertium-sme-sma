@@ -1,0 +1,42 @@
+<dictionary>
+  <alphabet/>
+  <sdefs>
+    <sdef n="N"/>
+    <sdef n="V"/>
+    <sdef n="A"/>
+    <sdef n="Adv"/>
+
+    <sdef n="TV"/>
+    <sdef n="IV"/>
+
+    <sdef n="Prop"/>
+    <sdef n="Plc"/>
+  </sdefs>
+  <section id="main" type="standard">
+    <!-- Conjunctions -->
+
+    <!-- Adpositions -->
+
+    <!-- Pronouns -->
+
+    <!-- Nouns -->
+    <e><p><l>dállu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
+ 
+    <!-- Proper Nouns -->
+
+    <e><p><l>Oslo<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Oslove<s n="N"/><s n="Prop"/><s n="Plc"/></r></p></e>
+
+    <!-- Adjectives -->
+    <e><p><l>čáhppat<s n="A"/></l><r>tjeehpes<s n="A"/></r></p></e>
+
+    <!-- Adverbs -->
+    <e><p><l>odne<s n="Adv"/></l><r>daenbiejjien<s n="Adv"/></r></p></e>
+
+    <!-- Verbs -->
+    <e><p><l>ii<s n="V"/></l><r>ij<s n="V"/></r></p></e>
+    <e><p><l>leat<s n="V"/></l><r>lea<s n="V"/></r></p></e>
+
+    <e><p><l>čállit<s n="V"/><s n="TV"/></l><r>tjaeledh<s n="V"/></r></p></e>
+
+  </section>
+</dictionary>
