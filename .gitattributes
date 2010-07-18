@@ -21,6 +21,7 @@
 /configure.ac -text
 dev/apertium.relabel -text
 dev/langs.cfg.in -text
+dev/update-lexc.py -text
 /lexchoicebil.xsl -text
 /modes.xml -text
 /pending-tests.sh -text
