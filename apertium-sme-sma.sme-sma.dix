@@ -4,6 +4,7 @@
     <sdef n="N"/>
     <sdef n="Po"/>
     <sdef n="Pron"/>
+    <sdef n="CC"/>
     <sdef n="V"/>
     <sdef n="A"/>
     <sdef n="Adv"/>
@@ -21,6 +22,8 @@
   <section id="main" type="standard">
     <!-- Conjunctions -->
 
+    <e><p><l>ahte<s n="CC"/></l><r>dovne<s n="CC"/></r></p></e>
+
     <!-- Adpositions -->
 
     <e><p><l>birra<s n="Po"/></l><r>bïjre<s n="Po"/></r></p></e>
@@ -29,6 +32,7 @@
 
     <e><p><l>mun<s n="Pron"/><s n="Pers"/></l><r>manne<s n="Pron"/><s n="Pers"/></r></p></e>
     <e><p><l>don<s n="Pron"/><s n="Pers"/></l><r>datne<s n="Pron"/><s n="Pers"/></r></p></e>
+    <e><p><l>dat<s n="Pron"/><s n="Pers"/></l><r>dïhte<s n="Pron"/><s n="Pers"/></r></p></e>
 
     <!-- Nouns -->
     <e><p><l>dállu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
@@ -326,6 +330,7 @@
     <e><p><l>odne<s n="Adv"/></l><r>daen<j/>biejjien<s n="Adv"/></r></p></e>
     <e><p><l>ikte<s n="Adv"/></l><r>jååktan<s n="Adv"/></r></p></e>
     <e><p><l>goas<s n="Adv"/></l><r>gåessie<s n="Adv"/></r></p></e>
+    <e><p><l>dál<s n="Adv"/></l><r>daelie<s n="Adv"/></r></p></e>
 
     <!-- Verbs -->
     <e><p><l>ii<s n="V"/></l><r>ij<s n="V"/></r></p></e>
