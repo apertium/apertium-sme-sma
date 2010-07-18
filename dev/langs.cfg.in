@@ -2,10 +2,10 @@
 	{
 		"LANG2": "sma", 
 		"LANG1": "sme",
-		"OUTPUT_DIR": "/home/fran/source/apertium/incubator/apertium-sme-sma/", 
+		"OUTPUT_DIR": "/Users/pyry/apertium/ref/apertium-sme-sma/",
+		"SRC": "/Users/pyry/gtsvn/gt/sma/src/", 
 		"PRODUCE_LEXC_FOR": "sma", 
 		"BIDIX_SIDE": "R",
-		"SRC": "/home/fran/source/giellatekno/trunk/gt/sma/src/",
 		"HEADER": "sma-lex.txt",
 		"LEXTYPE": "",
 		"files": [
@@ -29,8 +29,8 @@
 	{
 		"LANG2": "sma", 
 		"LANG1": "sme",
-		"OUTPUT_DIR": "/home/fran/source/apertium/incubator/apertium-sme-sma/", 
-		"SRC": "/home/fran/source/giellatekno/trunk/gt/sme/src/",
+		"OUTPUT_DIR": "/Users/pyry/apertium/ref/apertium-sme-sma/",
+		"SRC": "/Users/pyry/gtsvn/gt/sme/src/",
 		"PRODUCE_LEXC_FOR": "sme", 
 		"BIDIX_SIDE": "L",
 		"HEADER": "sme-lex.txt",
