@@ -23,11 +23,11 @@
 
     <!-- Adpositions -->
 
-    <e><p><l>birra<s n="Po"/></l><r>bijre<s n="Po"/></r></p></e>
+    <e><p><l>birra<s n="Po"/></l><r>bïjre<s n="Po"/></r></p></e>
 
     <!-- Pronouns -->
 
-    <e><p><l>mun<s n="Pron"/><s n="Pers"/></l><r>mån<s n="Pron"/><s n="Pers"/></r></p></e>
+    <e><p><l>mun<s n="Pron"/><s n="Pers"/></l><r>manne<s n="Pron"/><s n="Pers"/></r></p></e>
 
     <!-- Nouns -->
     <e><p><l>dállu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
@@ -41,12 +41,13 @@
     <e><p><l>čáhppat<s n="A"/></l><r>tjeehpes<s n="A"/></r></p></e>
 
     <!-- Adverbs -->
-    <e><p><l>odne<s n="Adv"/></l><r>daenbiejjien<s n="Adv"/></r></p></e>
+    <!--<e><p><l>odne<s n="Adv"/></l><r>daenbiejjien<s n="Adv"/></r></p></e>-->
+    <e><p><l>odne<s n="Adv"/></l><r>daen<j/>biejjien<s n="Adv"/></r></p></e>
     <e><p><l>ikte<s n="Adv"/></l><r>jååktan<s n="Adv"/></r></p></e>
 
     <!-- Verbs -->
     <e><p><l>ii<s n="V"/></l><r>ij<s n="V"/></r></p></e>
-    <e><p><l>leat<s n="V"/></l><r>lea<s n="V"/></r></p></e>
+    <e><p><l>leat<s n="V"/><s n="IV"/></l><r>lea<s n="V"/></r></p></e>
 
     <e><p><l>čállit<s n="V"/><s n="TV"/></l><r>tjaeledh<s n="V"/></r></p></e>
 
@@ -209,6 +210,6 @@
     <e><p><l>vuovdit<s n="V"/><s n="TV"/></l><r>doekedh<s n="V"/></r></p></e>
 
     <!-- Punctuation -->
-    <e><re>[.]</re><p><l><s n="CLB"/></l><r><s n="CLB"/></r></p></e>
+    <e><re>[.]+</re><p><l><s n="CLB"/></l><r><s n="CLB"/></r></p></e>
   </section>
 </dictionary>
