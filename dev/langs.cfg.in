@@ -27,14 +27,14 @@
 	},
 
 	{
-		"SOURCE_LANGUAGE": "sma", 
+		"LANG2": "sma", 
+		"LANG1": "sme",
 		"OUTPUT_DIR": "/home/fran/source/apertium/incubator/apertium-sme-sma/", 
 		"SRC": "/home/fran/source/giellatekno/trunk/gt/sme/src/",
 		"PRODUCE_LEXC_FOR": "sme", 
-		"TARGET_LANGUAGE": "sme",
+		"BIDIX_SIDE": "L",
 		"HEADER": "sme-lex.txt",
 		"LEXTYPE": "",
-		"DIRECTION":"LR",
 		"files": [
 			["verb-sme-lex.txt", "clip", {"pos_filter": "<V>", "split": "VerbRoot\n"}],
 			["noun-sme-lex.txt", "clip", {"pos_filter": "<N>", "split": "NounRoot\n"}],
