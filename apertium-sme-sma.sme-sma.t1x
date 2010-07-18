@@ -1726,6 +1726,7 @@
          <chunk name="adpos" case="caseFirstWord">
            <tags>
              <tag><clip pos="1" side="tl" part="a_adpos"/></tag>
+             <tag><clip pos="1" side="sl" part="syntag"/></tag>
            </tags>
            <lu>
              <clip pos="1" side="tl" part="lemh"/>
