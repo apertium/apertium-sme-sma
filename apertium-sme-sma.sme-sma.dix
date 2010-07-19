@@ -16,6 +16,7 @@
 
     <sdef n="Prop"/>
     <sdef n="Plc"/>
+    <sdef n="Mal"/>
 
     <sdef n="CLB"/>
   </sdefs>
@@ -327,6 +328,8 @@
 
     <e><p><l>Oslo<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Oslove<s n="N"/><s n="Prop"/></r></p></e>
     <e><p><l>Sápmi<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Saemie<s n="N"/><s n="Prop"/></r></p></e>
+
+    <e><p><l>Ipmil<s n="N"/><s n="Prop"/><s n="Mal"/></l><r>Jupmele<s n="N"/><s n="Prop"/></r></p></e>
 
     <!-- Adjectives -->
     <e><p><l>čáhppat<s n="A"/></l><r>tjeehpes<s n="A"/></r></p></e>
