@@ -97,6 +97,7 @@
     <e><p><l>čohkohallanlatnja<s n="N"/></l><r>ståapoe<s n="N"/></r></p></e>
     <e><p><l>čukčá<s n="N"/></l><r>tjåktja<s n="N"/></r></p></e>
     <e><p><l>čuonjá<s n="N"/></l><r>gaase<s n="N"/></r></p></e>
+    <e><p><l>čuovga<s n="N"/></l><r>tjoevke<s n="N"/></r></p></e>
     <e><p><l>čuovža<s n="N"/></l><r>tjoevtje<s n="N"/></r></p></e>
     <e><p><l>čurti<s n="N"/></l><r>ravve<s n="N"/></r></p></e>
     <e><p><l>čuru<s n="N"/></l><r>tjoere<s n="N"/></r></p></e>
@@ -341,6 +342,7 @@
     <e><p><l>bastil<s n="A"/></l><r>besteles<s n="A"/></r></p></e>
     <e><p><l>bieđggus<s n="A"/></l><r>barras<s n="A"/></r></p></e>
     <e><p><l>buoidi<s n="A"/></l><r>buajtehks<s n="A"/></r></p></e>
+    <e><p><l>buorre<s n="A"/></l><r>hijven<s n="A"/></r></p></e>
     <e><p><l>buorredoaibmi<s n="A"/></l><r>radtjoes<s n="A"/></r></p></e>
     <e><p><l>čáhppat<s n="A"/></l><r>tjeehpes<s n="A"/></r></p></e>
     <e><p><l>čieŋal<s n="A"/></l><r>gïengeles<s n="A"/></r></p></e>
@@ -383,6 +385,7 @@
     <e><p><l>ránis<s n="A"/></l><r>kraevies<s n="A"/></r></p></e>
     <e><p><l>ruoksat<s n="A"/></l><r>rööpses<s n="A"/></r></p></e>
     <e><p><l>sávri<s n="A"/></l><r>saavrehke<s n="A"/></r></p></e>
+    <e><p><l>stuoris<s n="A"/></l><r>stoere<s n="A"/></r></p></e>
     <e><p><l>viđát<s n="A"/></l><r>vïjhtede<s n="A"/></r></p></e>
 
 
@@ -553,6 +556,7 @@
     <e><p><l>njuvdit<s n="V"/><s n="TV"/></l><r>badtjadidh<s n="V"/></r></p></e>
     <e><p><l>nuoladit<s n="V"/><s n="TV"/></l><r>noeledidh<s n="V"/></r></p></e>
     <e><p><l>oahcudit<s n="V"/><s n="TV"/></l><r>seereldehtedh<s n="V"/></r></p></e>
+    <e><p><l>oaidnit<s n="V"/><s n="TV"/></l><r>vuejnedh<s n="V"/></r></p></e>
     <e><p><l>oastit<s n="V"/><s n="TV"/></l><r>åestedh<s n="V"/></r></p></e>
     <e><p><l>ođasmahttit<s n="V"/><s n="TV"/></l><r>orrestidh<s n="V"/></r></p></e>
     <e><p><l>ostet<s n="V"/><s n="TV"/></l><r>båårhkesjidh<s n="V"/></r></p></e>
@@ -592,6 +596,6 @@
     <e><p><l>vuovdit<s n="V"/><s n="TV"/></l><r>doekedh<s n="V"/></r></p></e>
 
     <!-- Punctuation -->
-    <e><re>[.\?]+</re><p><l><s n="CLB"/></l><r><s n="CLB"/></r></p></e>
+    <e><re>[,.\?]+</re><p><l><s n="CLB"/></l><r><s n="CLB"/></r></p></e>
   </section>
 </dictionary>

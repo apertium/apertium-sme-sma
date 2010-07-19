@@ -6651,6 +6651,7 @@ njámmat:njámma BORRA ;
 nuoladit:nuolad MUITAL ;
 náitalit:nájtal SUOTNJAL ;
 oahcudit:oahcud MUITAL ;
+oaidnit:oajdni DIEHTI ;
 oas0tit:oas'ti DIEHTI ;
 ostet:oste DOHPPE ;
 ođasmahttit:ođasmahtti HAHTTIT ;
@@ -7125,6 +7126,7 @@ vásihus+CmpN/SgN+CmpN/DefSgGen+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/Sg
 ču0ru+CmpN/SgN+CmpN/SgG+CmpN/PlG:čurruh8 BEANA ;
 čuk0čá+CmpN/SgN+CmpN/SgG+CmpN/PlG:čuk'čá ALBMILONG ;
 čuo0njá+CmpN/SgN+CmpN/SgG+CmpN/PlG:čuotnjág8 BEANA ;
+čuov0ga:čuov'ga GOAHTI ;
 čuov0ža+CmpN/SgN+CmpN/SgG+CmpN/PlG:čuov'ža GOAHTI ;
 čur0ti:čur'ti GOAHTI ;
 čáhppes#muor0ji+CmpN/SgN+CmpN/SgG+CmpN/DefPlGen:čáhppes#muor'ji GOAHTI ;
@@ -7333,6 +7335,7 @@ LEXICON AdjectiveRoot
 rá0nis:rátni BOARIS ;
 ábolaš:ábol DABALAS ;
 ovddolaš:ovddol DABALAS ;
+stuo0ris+CmpN/SgN+CmpN/SgG+CmpN/PlG:stuorr STUORIS ; !
 lagas At ;
 ga0ras:garra GARAS "hard A" ;
 issoras:issor ISSORAS "terrible A" ;
@@ -7341,6 +7344,7 @@ guhkki LAIKI "long A" ;
 jeagoheapme+CmpN/SgN+CmpN/SgG+CmpN/PlG:jeagoh JEAGOHEAPMI "disobedient" ; !
 árrat+A:árrad ALLAGA ;
 nuorra+CmpN/SgN+CmpN/SgG+CmpN/PlG:nuorra NUORRA ; !
+buorre+CmpN/SgN+CmpN/SgG+CmpN/PlG:buorri BUORRE ; !
 jaskat:jask VIELG ;
 fiskat:fisk VIELG ;
 čáhppat+CmpN/SgN+CmpN/SgG+CmpN/PlG:čáhpp VIELG ; !
@@ -7373,9 +7377,11 @@ albma LEXATTR ;
 govdat+CmpN/SgN+CmpN/SgG+CmpN/PlG:gov'd ALLAT ; !
 lossat+CmpN/SgN+CmpN/SgG+CmpN/PlG:loss LOSSAT ; !
 njálmmálaš:njálmmál DABALAS ;
+buorre+Use/Sub: BUOROT ; ! !lexeme in e
 albma+A+Sg+Nom:albma%> K ;
 lossat:los'ses LEXATTR ; ! ad hoc exceptional form
 nanus:nana LEXATTR ; ! exceptional attr form
+stuoris+Dial/%-GG:stuorra LEXATTR ; ! takes care of irregular attr form 
 govdat:govdes LEXATTR ; !unusual attr.form
 ! Divvun & Giellatekno - open source grammars for Sámi and other languages
 ! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
