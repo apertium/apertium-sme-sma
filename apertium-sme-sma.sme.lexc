@@ -6833,8 +6833,10 @@ sis#muotkun:sis#muotkum BOAHTIN ;
 ! molssueaktu: Vqldit miellahtutut eret NounRoot:as, ja geavahit 121.
 
 LEXICON NounRoot
+ea0nan+CmpN/SgN+CmpN/SgG+CmpN/PlG:eatnam MALIS ;
 ah0ki+CmpN/SgN+CmpN/SgG+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:ah'ki ALBMI "age N" ;
 albbas+CmpN/SgN+CmpN/SgG+CmpN/PlG:al'bas MATTAR "lynx N" ;
+albmi+CmpN/SgN+CmpN/SgG:albmi ALBMI "sky N" ;
 atnu+CmpN/SgN+CmpN/DefSgGen+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:atnu ALBMILONG ;
 baján+CmpN/SgN+CmpN/SgG+CmpN/PlG:baján GAHPIRLONG ;
 bargo#joav0ku+CmpN/SgN+CmpN/DefSgGen+CmpN/PlG:bargo#joav'ku GOAHTI ;
@@ -6895,9 +6897,14 @@ dállu+CmpN/SgN+CmpN/SgG+CmpN/PlG:dállu ALBMI ;
 dálve#gá0ma:dálve#gápmag8 SEAMU ;
 vuovdaleaddji+CmpN/SgN+CmpN/SgG+CmpN/PlG:vuovdaleaddji¤ ACTOR ;
 dáđ0vi:dáđ'vi GOAHTI ;
+ea0na+CmpN/SgN+CmpN/SgG+CmpN/PlG:eatnam8 SEAMU ;
 eadni+CmpN/SgN+CmpN/SgG+CmpN/PlG:eadni EADNI ;
 eaiggát+CmpN/SgN+CmpN/SgG+CmpN/PlG:eaiggád GAHPIRLONG ;
 ealga#vála GOAHTI ;
+eanan+N+CmpN/SgN:eanan%> R ;
+eanan+N+Ess:eanam%>in K ;
+eanan+N+Sg+Nom:eanan%> K ; !XXX eana
+eatnan:eatnam GAHPIR ;
 eŋgel+CmpN/SgN+CmpN/SgG+CmpN/PlG:eŋgel GAHPIR ;
 fean0da:fean'da GOAHTI ;
 fiel0lu+G3:fiel'lu GOAHTI ;
@@ -7100,6 +7107,7 @@ vásihus+CmpN/SgN+CmpN/DefSgGen+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/Sg
 áddjá+CmpN/SgN+CmpN/SgG+CmpN/PlG:áddjá ALBMILONG ;
 áhčči+CmpN/SgN+CmpN/SgG+CmpN/PlG:áhčči ALBMI ;
 áitta:áj'tag8 SEAMU ;
+ál0gu+CmpN/SgN+CmpN/DefSgGen+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:ál'gu AIGI ;
 ár0bi:ár'bi AIGI ;
 árga#beai0vi+CmpN/SgN+CmpN/SgG+CmpN/PlG:árga#beaj'vi GOAHTI ;
 ášše#meannudeaddji+CmpN/SgN+CmpN/SgG+CmpN/PlG:ášše#meannudeaddji¤ ACTOR ;
