@@ -5,6 +5,7 @@
     <sdef n="Po"/>
     <sdef n="Pron"/>
     <sdef n="CC"/>
+    <sdef n="CS"/>
     <sdef n="V"/>
     <sdef n="A"/>
     <sdef n="Adv"/>
@@ -13,6 +14,9 @@
     <sdef n="IV"/>
 
     <sdef n="Pers"/>
+    <sdef n="Rel"/>
+    <sdef n="Interr"/>
+    <sdef n="Dem"/>
 
     <sdef n="Prop"/>
     <sdef n="Plc"/>
@@ -26,6 +30,18 @@
     <e><p><l>ahte<s n="CC"/></l><r>ahte<s n="CC"/></r></p></e>
     <e><p><l>ja<s n="CC"/></l><r>jïh<s n="CC"/></r></p></e>
 
+    <e><p><l>de<s n="CC"/></l><r>dellie<s n="CC"/></r></p></e>
+    <e><p><l>muhto<s n="CC"/></l><r>mohte<s n="CC"/></r></p></e>
+    <e><p><l>vai<s n="CC"/></l><r>vuj<s n="CC"/></r></p></e>
+
+    <!-- Subjunctions -->
+
+    <e><p><l>go<s n="CS"/></l><r>goh<s n="CS"/></r></p></e>
+    <e><p><l>ahte<s n="CS"/></l><r>ahte<s n="CS"/></r></p></e>
+    <e><p><l>jos<s n="CS"/></l><r>jus<s n="CS"/></r></p></e>
+    <e><p><l>mo<s n="CS"/></l><r>maaje<s n="CS"/></r></p></e>
+    <e><p><l>mađe<s n="CS"/></l><r>medtie<s n="CS"/></r></p></e>
+
     <!-- Adpositions -->
 
     <e><p><l>birra<s n="Po"/></l><r>bïjre<s n="Po"/></r></p></e>
@@ -35,6 +51,16 @@
     <e><p><l>mun<s n="Pron"/><s n="Pers"/></l><r>manne<s n="Pron"/><s n="Pers"/></r></p></e>
     <e><p><l>don<s n="Pron"/><s n="Pers"/></l><r>datne<s n="Pron"/><s n="Pers"/></r></p></e>
     <e><p><l>dat<s n="Pron"/><s n="Pers"/></l><r>dïhte<s n="Pron"/><s n="Pers"/></r></p></e>
+    <e><p><l>son<s n="Pron"/><s n="Pers"/></l><r>satne<s n="Pron"/><s n="Pers"/></r></p></e>
+
+    <e><p><l>mii<s n="Pron"/><s n="Rel"/></l><r>mij<s n="Pron"/><s n="Rel"/></r></p></e>
+    <e><p><l>gii<s n="Pron"/><s n="Rel"/></l><r>gie<s n="Pron"/><s n="Rel"/></r></p></e>
+    <e><p><l>guhte<s n="Pron"/><s n="Rel"/></l><r>gie<s n="Pron"/><s n="Rel"/></r></p></e>
+
+    <e><p><l>dát<s n="Pron"/><s n="Dem"/></l><r>daate<s n="Pron"/><s n="Dem"/></r></p></e>
+
+    <e><p><l>mii<s n="Pron"/><s n="Interr"/></l><r>mij<s n="Pron"/><s n="Interr"/></r></p></e>
+    <e><p><l>gii<s n="Pron"/><s n="Interr"/></l><r>gie<s n="Pron"/><s n="Interr"/></r></p></e>
 
     <!-- Nouns -->
     <e><p><l>dállu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
@@ -184,7 +210,7 @@
     <e><p><l>interneahtta<s n="N"/></l><r>gaskeviermie<s n="N"/></r></p></e>
     <e><p><l>ipmil<s n="N"/></l><r>jupmele<s n="N"/></r></p></e>
     <e><p><l>irgi<s n="N"/></l><r>såångedæjja<s n="N"/></r></p></e>
-    <e><p><l>isit<s n="N"/></l><r>hosbåanta<s n="N"/></r></p></e>
+    <e><p><l>isit<s n="N"/></l><r>hos<j/>båanta<s n="N"/></r></p></e>
     <e><p><l>jagiáigi<s n="N"/></l><r>jaepieboelhke<s n="N"/></r></p></e>
     <e><p><l>jeaggi<s n="N"/></l><r>pluevie<s n="N"/></r></p></e>
     <e><p><l>jeasta<s n="N"/></l><r>jeestere<s n="N"/></r></p></e>
@@ -218,6 +244,7 @@
     <e><p><l>mahtodat<s n="N"/></l><r>ståaroe<s n="N"/></r></p></e>
     <e><p><l>máhtu<s n="N"/></l><r>soekse<s n="N"/></r></p></e>
     <e><p><l>málli<s n="N"/></l><r>joptse<s n="N"/></r></p></e>
+    <e><p><l>máilbmi<s n="N"/></l><r>veartene<s n="N"/></r></p></e>
     <e><p><l>mánáidsuodjalus<s n="N"/></l><r>maanavaarjelimmie<s n="N"/></r></p></e>
     <e><p><l>márfi<s n="N"/></l><r>goerve<s n="N"/></r></p></e>
     <e><p><l>mehter<s n="N"/></l><r>meetere<s n="N"/></r></p></e>
@@ -226,11 +253,13 @@
     <e><p><l>miila<s n="N"/></l><r>mïjle<s n="N"/></r></p></e>
     <e><p><l>moarri<s n="N"/></l><r>måerie<s n="N"/></r></p></e>
     <e><p><l>muohta<s n="N"/></l><r>moehtege<s n="N"/></r></p></e>
+    <e><p><l>muohtu<s n="N"/></l><r>searome<s n="N"/></r></p></e>
     <e><p><l>nággu<s n="N"/></l><r>tsælloe<s n="N"/></r></p></e>
     <e><p><l>nagir<s n="N"/></l><r>nahkere<s n="N"/></r></p></e>
     <e><p><l>neavttár<s n="N"/></l><r>dorjehtæjja<s n="N"/></r></p></e>
     <e><p><l>njáhká<s n="N"/></l><r>njaaka<s n="N"/></r></p></e>
     <e><p><l>njálla<s n="N"/></l><r>svaale<s n="N"/></r></p></e>
+    <e><p><l>njálbmi<s n="N"/></l><r>njaelmie<s n="N"/></r></p></e>
     <e><p><l>njunuščiekči<s n="N"/></l><r>snjuhtjie<s n="N"/></r></p></e>
     <e><p><l>njuolla<s n="N"/></l><r>njoele<s n="N"/></r></p></e>
     <e><p><l>njuovčča<s n="N"/></l><r>njoektjeme<s n="N"/></r></p></e>
@@ -257,6 +286,7 @@
     <e><p><l>riggodat<s n="N"/></l><r>ræjhkoesvoete<s n="N"/></r></p></e>
     <e><p><l>rihkus<s n="N"/></l><r>meadtoe<s n="N"/></r></p></e>
     <e><p><l>riidu<s n="N"/></l><r>ræjtoe<s n="N"/></r></p></e>
+    <e><p><l>riika<s n="N"/></l><r>rijhke<s n="N"/></r></p></e>
     <e><p><l>riššasággi<s n="N"/></l><r>fæjroe<s n="N"/></r></p></e>
     <e><p><l>roahkki<s n="N"/></l><r>kråane<s n="N"/></r></p></e>
     <e><p><l>roahttu<s n="N"/></l><r>rööhtse<s n="N"/></r></p></e>
@@ -339,6 +369,7 @@
     <e><p><l>albma<s n="A"/></l><r>eensi<s n="A"/></r></p></e>
     <e><p><l>alit<s n="A"/></l><r>plaave<s n="A"/></r></p></e>
     <e><p><l>árrat<s n="A"/></l><r>aareh<s n="A"/></r></p></e>
+    <e><p><l>ávdin<s n="A"/></l><r>miehtjies<s n="A"/></r></p></e>
     <e><p><l>bastil<s n="A"/></l><r>besteles<s n="A"/></r></p></e>
     <e><p><l>bieđggus<s n="A"/></l><r>barras<s n="A"/></r></p></e>
     <e><p><l>buoidi<s n="A"/></l><r>buajtehks<s n="A"/></r></p></e>
@@ -391,16 +422,21 @@
 
     <!-- Adverbs -->
 
+    <e><p><l>gos<s n="Adv"/></l><r>gusnie<s n="Adv"/></r></p></e>
+
     <!--<e><p><l>odne<s n="Adv"/></l><r>daenbiejjien<s n="Adv"/></r></p></e>-->
     <e><p><l>odne<s n="Adv"/></l><r>daen<j/>biejjien<s n="Adv"/></r></p></e>
     <e><p><l>ikte<s n="Adv"/></l><r>jååktan<s n="Adv"/></r></p></e>
     <e><p><l>goas<s n="Adv"/></l><r>gåessie<s n="Adv"/></r></p></e>
     <e><p><l>dál<s n="Adv"/></l><r>daelie<s n="Adv"/></r></p></e>
+    <e><p><l>maid<s n="Adv"/></l><r>aaj<s n="Adv"/></r></p></e>
+    <e><p><l>fas<s n="Adv"/></l><r>viht<s n="Adv"/></r></p></e>
+    <e><p><l>nu<s n="Adv"/></l><r>nimhtie<s n="Adv"/></r></p></e>
 
     <e><p><l>badjel<s n="Adv"/></l><r>aatsolen<s n="Adv"/></r></p></e>
     <e><p><l>badjin<s n="Adv"/></l><r>bijjene<s n="Adv"/></r></p></e>
     <e><p><l>beaivet<s n="Adv"/></l><r>biejjege<s n="Adv"/></r></p></e>
-    <e><p><l>bures<s n="Adv"/></l><r>boerehkelaakan<s n="Adv"/></r></p></e>
+    <e><p><l>bures<s n="Adv"/></l><r>boerehke<j/>laakan<s n="Adv"/></r></p></e>
     <e><p><l>dalle<s n="Adv"/></l><r>joem<s n="Adv"/></r></p></e>
     <e><p><l>dálvet<s n="Adv"/></l><r>daelvege<s n="Adv"/></r></p></e>
     <e><p><l>davás<s n="Adv"/></l><r>noerhtese<s n="Adv"/></r></p></e>
@@ -429,7 +465,7 @@
  
 
     <!-- Verbs -->
-    <e><p><l>ii<s n="V"/></l><r>ij<s n="V"/></r></p></e>
+    <e><p><l>ii<s n="V"/><s n="IV"/></l><r>ij<s n="V"/></r></p></e>
     <e><p><l>leat<s n="V"/><s n="IV"/></l><r>lea<s n="V"/></r></p></e>
 
     <e><p><l>čállit<s n="V"/><s n="TV"/></l><r>tjaeledh<s n="V"/></r></p></e>
@@ -467,6 +503,7 @@
     <e><p><l>cáhpat<s n="V"/><s n="TV"/></l><r>tsaapedh<s n="V"/></r></p></e>
     <e><p><l>čeassat<s n="V"/><s n="IV"/></l><r>njabpedidh<s n="V"/></r></p></e>
     <e><p><l>ceavzit<s n="V"/><s n="IV"/></l><r>bearkadidh<s n="V"/></r></p></e>
+    <e><p><l>cealkit<s n="V"/><s n="TV"/></l><r>jiehtedh<s n="V"/></r></p></e>
     <e><p><l>čielgat<s n="V"/><s n="IV"/></l><r>tjïelkedh<s n="V"/></r></p></e>
     <e><p><l>ciellat<s n="V"/><s n="TV"/></l><r>huhtedh<s n="V"/></r></p></e>
     <e><p><l>civkit<s n="V"/><s n="IV"/></l><r>njovhkedidh<s n="V"/></r></p></e>
@@ -514,6 +551,7 @@
     <e><p><l>gođđit<s n="V"/><s n="TV"/></l><r>gurredh<s n="V"/></r></p></e>
     <e><p><l>gohcit<s n="V"/><s n="TV"/></l><r>guhtsedh<s n="V"/></r></p></e>
     <e><p><l>govdut<s n="V"/><s n="IV"/></l><r>gabpeldidh<s n="V"/></r></p></e>
+    <e><p><l>gullat<s n="V"/><s n="TV"/></l><r>govledh<s n="V"/></r></p></e>
     <e><p><l>guođohit<s n="V"/><s n="TV"/></l><r>ryöjnesjidh<s n="V"/></r></p></e>
     <e><p><l>guohtut<s n="V"/><s n="TV"/></l><r>gåatodh<s n="V"/></r></p></e>
     <e><p><l>guossat<s n="V"/><s n="IV"/></l><r>snåhkaridh<s n="V"/></r></p></e>
@@ -522,7 +560,9 @@
     <e><p><l>heavvalastit<s n="V"/><s n="TV"/></l><r>rahkestidh<s n="V"/></r></p></e>
     <e><p><l>hoavridit<s n="V"/><s n="IV"/></l><r>dïeredh<s n="V"/></r></p></e>
     <e><p><l>hoigat<s n="V"/><s n="TV"/></l><r>nehkiehtidh<s n="V"/></r></p></e>
+    <e><p><l>jávkat<s n="V"/><s n="IV"/></l><r>jaavoelidh<s n="V"/></r></p></e>
     <e><p><l>jeagadit<s n="V"/><s n="TV"/></l><r>goltelidh<s n="V"/></r></p></e>
+    <e><p><l>joatkit<s n="V"/><s n="TV"/></l><r>jåerhkedh<s n="V"/></r></p></e>
     <e><p><l>juogadit<s n="V"/><s n="TV"/></l><r>joekedidh<s n="V"/></r></p></e>
     <e><p><l>kasseret<s n="V"/><s n="TV"/></l><r>beelhkedh<s n="V"/></r></p></e>
     <e><p><l>láktat<s n="V"/><s n="IV"/></l><r>låpsodh<s n="V"/></r></p></e>
@@ -594,8 +634,10 @@
     <e><p><l>vuohttit<s n="V"/><s n="TV"/></l><r>goeredh<s n="V"/></r></p></e>
     <e><p><l>vuollat<s n="V"/><s n="TV"/></l><r>voeledh<s n="V"/></r></p></e>
     <e><p><l>vuovdit<s n="V"/><s n="TV"/></l><r>doekedh<s n="V"/></r></p></e>
+    <e><p><l>vástidit<s n="V"/><s n="TV"/></l><r>vaestiedidh<s n="V"/></r></p></e>
 
     <!-- Punctuation -->
-    <e><re>[,.\?]+</re><p><l><s n="CLB"/></l><r><s n="CLB"/></r></p></e>
+    <e><re>[;:,.\?]+</re><p><l><s n="CLB"/></l><r><s n="CLB"/></r></p></e>
+    <e><p><l>excl<s n="CLB"/></l><r>excl<s n="CLB"/></r></p></e>
   </section>
 </dictionary>

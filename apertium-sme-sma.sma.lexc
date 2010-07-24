@@ -3139,6 +3139,8 @@ gijhtedh:gijht BÅETEDH "tacka" ;
 giltedh:gilt BÅETEDH "glänsa" ;
 goeredh:goer TJOEHPEDH "bevege seg langs (noe), fölge langsmed noe" ;
 goltelidh:goltel GOLTELIDH "lyssna" ;
+govledh:govl TJOEHPEDH "höra" ;
+govledh:govl VÅÅJNEDH "höras" ;
 guepmierdidh:guepmierd GOLTELIDH ;
 guhtsedh:guhts BÅETEDH "vaka, vara vaken, vara länge vaken om natten" ;
 gurkedh:gurk GÖÖLEDH "hälla, slå" ;
@@ -3156,8 +3158,11 @@ heehkedh:heehk GÖÖLEDH "hacka upp (t.ex. kött)" ;
 huhtedh:huht BÅETEDH "gläfsa" ;
 håhkesjidh:håhkesj GOLTELIDH ;
 hïetedh:hïet TJOEHPEDH "frusta" ;
+jaavoelidh:jaavoel GOLTELIDH "försvinna" ;
 jeatjahtehtedh:jeatjahteht ÅARAJEHTEDH "förändra" ;
+ jiehtedh:jieht BÅETEDH "säga" ; ! column 4 !V34
 joekedidh:joeked GOLTELIDH "dela ut (till flera)" ;
+jåerhkedh:jåerhk BÅETEDH "förlänga, skarva (nåt som är för kort)" ;
 jöörtedh:jöört GÖÖLEDH ;
 krïevedh:krïev TJOEHPEDH "kräva" ;
 loedtenidh:loedten GOLTELIDH "rämna, spricka" ;
@@ -3224,6 +3229,7 @@ tsåapkodh:tsåapk TJEARODH "bryta i stycken" ;
 unniedidh:unnied GOLTELIDH ;
 uvtedh:uvt BÅETEDH "undvika" ;
 uvtedidh:uvted GOLTELIDH ;
+vaestiedidh:vaestied GOLTELIDH "svara" ;
 veeledidh:veeled GOLTELIDH "luta sig" ;
 veeljedh:veelj GÖÖLEDH "välja" ;
 viehkiehtidh:viehkieht DÅAJVOEHTIDH "hjälpa" ;
@@ -3437,6 +3443,7 @@ mïjle:mïjl NIEJTE ;
 nahkere:nahkar N_ODD ;
 neavroe:neavr N_OE_UML ;
  njaaka+CmpN/SgN+CmpN/SgG+CmpN/PlG:njaak MAANA ; !
+njaelmie:njaelm N_IE ;
 njaltje:njaltj NIEJTE ;
 njoektjeme:njoektjem N_ODD ;
 njoele:njoel NIEJTE ;
@@ -3458,6 +3465,7 @@ prægkoe:prægk N_OE_UML ;
 ravve:ravv NIEJTE ;
 reakta#öörnege:reakta#öörneg N_ODD ;
  reakta+CmpN/SgN+CmpN/SgG+CmpN/PlG:reakt MAANA ; !
+ rijhke+CmpN/SgN+CmpN/SgG+CmpN/PlG:rijhk NIEJTE ; !
  roeste+CmpN/SgN+CmpN/SgG+CmpN/PlG:roest NIEJTE ; !
  råantja+CmpN/SgN+CmpN/SgG+CmpN/PlG:råantj MAANA ; !
  råate+CmpN/SgN+CmpN/SgG+CmpN/PlG:råat NIEJTE ; !
@@ -3473,6 +3481,7 @@ saalme:saalm NIEJTE ;
  saevege:saevieg N_ODD "flagg" ; ! gaamegisnie
  sarve#dajve+CmpN/SgN+CmpN/SgG+CmpN/PlG:sarve#dajv NIEJTE ; !
 savka:savk MAANA ;
+searome:searoem N_ODD ;
 sjïjle:sjïjl NIEJTE ;
 skaamoe:skaam N_OE_UML ;
 skaara:skaar MAANA ;
@@ -3532,6 +3541,7 @@ tsælloe:tsæll N_OE_UML ;
  unnebe#låhkoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:unnebe#låhk N_OE_UML ; !
 vaanhtse:vaanhts NIEJTE ;
  vearolde+CmpN/SgN+CmpN/SgG+CmpN/PlG:vearold N_ODD ; !
+ veartene+CmpN/SgN+CmpN/SgG+CmpN/PlG:veartan N_ODD ; !
 vedtneme:vedtnem N_ODD ;
 veeljeme:veeljem N_ODD ;
 viehkie#vierhtie:viehkie#vierht N_IE ;
@@ -3616,6 +3626,7 @@ löövles+A+Superl+Pred:löövle%>%^COMPDISIMPmes FINAL1 ; ! e(3)-stamme
 löövles:lïevle DIMCOMPCASE ; ! e(3)-stamme
 löövles:löövl es-es-EVENNOCOMP-1 ; ! (omlyd i komp:lïevlebe) ! e(3)-stamme
 löövles:löövle MES ; ! e(3)-stamme
+miehtjies:miehtjies ATTR-0 ; !Pred:miehtjine 
 nannoes:nannoe s-s-ODD-1 ; 
 neahkoeh:neahkoe h-h-ODD-1 ; 
 njaalmeldh:njaalmeldh ATTR-0 ; 
