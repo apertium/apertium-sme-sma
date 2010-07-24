@@ -20,6 +20,8 @@
 /autogen.sh -text
 /configure.ac -text
 dev/apertium.relabel -text
+dev/generation-report.txt -text
+dev/generation-test.sh -text
 dev/langs.cfg.in -text
 dev/update-lexc.py -text
 /lexchoicebil.xsl -text
