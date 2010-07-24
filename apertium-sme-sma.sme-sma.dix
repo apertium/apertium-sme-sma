@@ -3,6 +3,7 @@
   <sdefs>
     <sdef n="N"/>
     <sdef n="Po"/>
+    <sdef n="Pr"/>
     <sdef n="Pron"/>
     <sdef n="CC"/>
     <sdef n="CS"/>
@@ -21,6 +22,9 @@
     <sdef n="Prop"/>
     <sdef n="Plc"/>
     <sdef n="Mal"/>
+    <sdef n="Fem"/>
+    <sdef n="Sur"/>
+    <sdef n="Org"/>
 
     <sdef n="CLB"/>
   </sdefs>
@@ -46,6 +50,82 @@
 
     <e><p><l>birra<s n="Po"/></l><r>bïjre<s n="Po"/></r></p></e>
 
+    <e><p><l>aisttan<s n="Pr"/></l><r>mietie<s n="Po"/></r></p></e>
+    <e><p><l>ala<s n="Po"/></l><r>nelnie<s n="Po"/></r></p></e>
+    <e><p><l>alde<s n="Po"/></l><r>nelhtie<s n="Po"/></r></p></e>
+    <e><p><l>almmá<s n="Pr"/></l><r>bielelen<s n="Pr"/></r></p></e>
+    <e><p><l>badjel<s n="Po"/></l><r>bijjelen<s n="Po"/></r></p></e>
+    <e><p><l>bajábealde<s n="Po"/></l><r>bijjelen<s n="Po"/></r></p></e>
+    <e><p><l>bealde<s n="Po"/></l><r>bieleste<s n="Po"/></r></p></e>
+    <e><p><l>bealee<s n="Po"/></l><r>bielesne<s n="Po"/></r></p></e>
+    <e><p><l>beallai<s n="Po"/></l><r>bealan<s n="Po"/></r></p></e>
+    <e><p><l>beallái<s n="Po"/></l><r>bealan<s n="Po"/></r></p></e>
+    <e><p><l>bokte<s n="Po"/></l><r>baaktoe<s n="Po"/></r></p></e>
+    <e><p><l>buohta<s n="Po"/></l><r>boehth<s n="Po"/></r></p></e>
+    <e><p><l>báldda<s n="Po"/></l><r>bielesne<s n="Po"/></r></p></e>
+    <e><p><l>bálddas<s n="Po"/></l><r>bealan<s n="Po"/></r></p></e>
+    <e><p><l>báldii<s n="Po"/></l><r>bieleste<s n="Po"/></r></p></e>
+    <e><p><l>dihte<s n="Po"/></l><r>dïete<s n="Po"/></r></p></e>
+    <e><p><l>dihtii<s n="Po"/></l><r>dïete<s n="Po"/></r></p></e>
+    <e><p><l>duohkin<s n="Po"/></l><r>duekesne<s n="Po"/></r></p></e>
+    <e><p><l>duohken<s n="Po"/></l><r>duekesne<s n="Po"/></r></p></e>
+    <e><p><l>dáfus<s n="Po"/></l><r>dïete<s n="Po"/></r></p></e>
+    <e><p><l>earet<s n="Pr"/></l><r>bielelen<s n="Po"/></r></p></e>
+    <e><p><l>earret<s n="Pr"/></l><r>bielelen<s n="Pr"/></r></p></e>
+    <e><p><l>ektui<s n="Po"/></l><r>dïete<s n="Po"/></r></p></e>
+    <e><p><l>fárrui<s n="Po"/></l><r>mieteli<s n="Po"/></r></p></e>
+    <e><p><l>fárus<s n="Po"/></l><r>mietelen<s n="Po"/></r></p></e>
+    <e><p><l>gaskal<s n="Pr"/></l><r>gaskesne<s n="Pr"/></r></p></e>
+    <e><p><l>gaskan<s n="Pr"/></l><r>gaskoeh<s n="Pr"/></r></p></e>
+    <e><p><l>gaskka<s n="Po"/></l><r>gaskese<s n="Po"/></r></p></e>
+    <e><p><l>gaskkas<s n="Po"/></l><r>gaskeste<s n="Po"/></r></p></e>
+    <e><p><l>gasku<s n="Pr"/></l><r>gaskoeh<s n="Pr"/></r></p></e>
+    <e><p><l>geahčen<s n="Po"/></l><r>luvnie<s n="Po"/></r></p></e>
+    <e><p><l>geažil<s n="Po"/></l><r>dïete<s n="Po"/></r></p></e>
+    <e><p><l>guoras<s n="Po"/></l><r>baalte<s n="Po"/></r></p></e>
+    <e><p><l>guovdelas<s n="Po"/></l><r>gaskoeh<s n="Po"/></r></p></e>
+    <e><p><l>guovdelas<s n="Pr"/></l><r>gaskoeh<s n="Po"/></r></p></e>
+    <e><p><l>guovdu<s n="Pr"/></l><r>gaskoeh<s n="Po"/></r></p></e>
+    <e><p><l>haga<s n="Po"/></l><r>bielelen<s n="Po"/></r></p></e>
+    <e><p><l>hárrái<s n="Po"/></l><r>vedrørende<s n="Po"/></r></p></e>
+    <e><p><l>lahka<s n="Po"/></l><r>lïhke<s n="Po"/></r></p></e>
+    <e><p><l>lahka<s n="Pr"/></l><r>lïhke<s n="Po"/></r></p></e>
+    <e><p><l>luhtte<s n="Po"/></l><r>luvnie<s n="Po"/></r></p></e>
+    <e><p><l>lusa<s n="Po"/></l><r>gåajka<s n="Po"/></r></p></e>
+    <e><p><l>maŋis<s n="Po"/></l><r>duekesne<s n="Po"/></r></p></e>
+    <e><p><l>maŋŋel<s n="Po"/></l><r>mïnngesne<s n="Po"/></r></p></e>
+    <e><p><l>maŋŋel<s n="Pr"/></l><r>mïnngesne<s n="Po"/></r></p></e>
+    <e><p><l>maŋŋil<s n="Po"/></l><r>mïnngesne<s n="Po"/></r></p></e>
+    <e><p><l>maŋŋil<s n="Pr"/></l><r>mïnngesne<s n="Pr"/></r></p></e>
+    <e><p><l>maŋŋá<s n="Po"/></l><r>mænngan<s n="Po"/></r></p></e>
+    <e><p><l>maŋŋá<s n="Pr"/></l><r>mænngan<s n="Pr"/></r></p></e>
+    <e><p><l>maŋŋái<s n="Po"/></l><r>duekelen<s n="Po"/></r></p></e>
+    <e><p><l>meattá<s n="Po"/></l><r>baalteli<s n="Po"/></r></p></e>
+    <e><p><l>meattá<s n="Pr"/></l><r>baalteli<s n="Po"/></r></p></e>
+    <e><p><l>miehtá<s n="Pr"/></l><r>mietie<s n="Pr"/></r></p></e>
+    <e><p><l>mielde<s n="Po"/></l><r>mietelen<s n="Po"/></r></p></e>
+    <e><p><l>nala<s n="Po"/></l><r>nelnie<s n="Po"/></r></p></e>
+    <e><p><l>nalde<s n="Po"/></l><r>nelhtie<s n="Po"/></r></p></e>
+    <e><p><l>njeaigga<s n="Po"/></l><r>gåajka<s n="Po"/></r></p></e>
+    <e><p><l>ovdal<s n="Pr"/></l><r>aarebi<s n="Po"/></r></p></e>
+    <e><p><l>ovddal<s n="Po"/></l><r>aarebi<s n="Po"/></r></p></e>
+    <e><p><l>ovddas<s n="Po"/></l><r>dïete<s n="Po"/></r></p></e>
+    <e><p><l>rastá<s n="Po"/></l><r>rastah<s n="Po"/></r></p></e>
+    <e><p><l>rastá<s n="Pr"/></l><r>rastah<s n="Pr"/></r></p></e>
+    <e><p><l>rádjai<s n="Po"/></l><r>raajan<s n="Po"/></r></p></e>
+    <e><p><l>rájes<s n="Po"/></l><r>aalkoelistie<s n="Po"/></r></p></e>
+    <e><p><l>sisa<s n="Po"/></l><r>sïjse<s n="Po"/></r></p></e>
+    <e><p><l>siste<s n="Po"/></l><r>sisnie<s n="Po"/></r></p></e>
+    <e><p><l>sjisjnjielisnie<s n="Po"/></l><r>innafor<s n="Po"/></r></p></e>
+    <e><p><l>vuolde<s n="Po"/></l><r>nuelesne<s n="Po"/></r></p></e>
+    <e><p><l>vuollegeahčen<s n="Po"/></l><r>vuelielisnie<s n="Po"/></r></p></e>
+    <e><p><l>vuollái<s n="Po"/></l><r>vuelelen<s n="Po"/></r></p></e>
+    <e><p><l>vuolábealde<s n="Po"/></l><r>vuelielisnie<s n="Po"/></r></p></e>
+    <e><p><l>vuostá<s n="Po"/></l><r>vuestie<s n="Po"/></r></p></e>
+    <e><p><l>vuođul<s n="Po"/></l><r>dïere<s n="Po"/></r></p></e>
+    <e><p><l>várás<s n="Po"/></l><r>dïete<s n="Po"/></r></p></e>
+    <e><p><l>čađa<s n="Po"/></l><r>tjïrrh<s n="Po"/></r></p></e>
+
     <!-- Pronouns -->
 
     <e><p><l>mun<s n="Pron"/><s n="Pers"/></l><r>manne<s n="Pron"/><s n="Pers"/></r></p></e>
@@ -64,7 +144,10 @@
 
     <!-- Nouns -->
     <e><p><l>dállu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
+    <e><p><l>viessu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
     <e><p><l>girji<s n="N"/></l><r>gærja<s n="N"/></r></p></e>
+    <e><p><l>áigi<s n="N"/></l><r>aejkie<s n="N"/></r></p></e>
+    <e><p><l>ealgá<s n="N"/></l><r>ïelje<s n="N"/></r></p></e>
 
     <e><p><l>áddjá<s n="N"/></l><r>aajja<s n="N"/></r></p></e>
     <e><p><l>áhčči<s n="N"/></l><r>aehtjie<s n="N"/></r></p></e>
@@ -190,6 +273,7 @@
     <e><p><l>guoddi<s n="N"/></l><r>guedtije<s n="N"/></r></p></e>
     <e><p><l>guohpa<s n="N"/></l><r>goehpe<s n="N"/></r></p></e>
     <e><p><l>guolleroahkki<s n="N"/></l><r>håagke<s n="N"/></r></p></e>
+    <e><p><l>guolli<s n="N"/></l><r>guelie<s n="N"/></r></p></e>
     <e><p><l>guossa<s n="N"/></l><r>goese<s n="N"/></r></p></e>
     <e><p><l>guottetáigi<s n="N"/></l><r>guedtede<s n="N"/></r></p></e>
     <e><p><l>guovvamánnu<s n="N"/></l><r>goevte<s n="N"/></r></p></e>
@@ -216,6 +300,7 @@
     <e><p><l>jeasta<s n="N"/></l><r>jeestere<s n="N"/></r></p></e>
     <e><p><l>jeđđehus<s n="N"/></l><r>soelkehtimmie<s n="N"/></r></p></e>
     <e><p><l>jierbmi<s n="N"/></l><r>jiermie<s n="N"/></r></p></e>
+    <e><p><l>johka<s n="N"/></l><r>johke<s n="N"/></r></p></e>
     <e><p><l>jumeš<s n="N"/></l><r>jöömmetje<s n="N"/></r></p></e>
     <e><p><l>juovlaskeaŋka<s n="N"/></l><r>jåvlevadtese<s n="N"/></r></p></e>
     <e><p><l>juovllat<s n="N"/></l><r>jåvle<s n="N"/></r></p></e>
@@ -359,8 +444,24 @@
 
     <e><p><l>Oslo<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Oslove<s n="N"/><s n="Prop"/></r></p></e>
     <e><p><l>Sápmi<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Saemie<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Guovdageaidnu<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Kautokeino<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Eira<s n="N"/><s n="Prop"/><s n="Sur"/></l><r>Eira<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Norga<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Nöörje<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Trøndelag<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Trööndelage<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Trøndelága<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Trööndelage<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Finnmárku<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Finnmarhke<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Hedmárku<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Hedmarhke<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Nordlánda<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Novrlaante<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Islánda<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Islaante<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Ruoŧŧa<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Sveerje<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Troandin<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Tråante<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Ruošša<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Russlaante<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Kárášjohka<s n="N"/><s n="Prop"/><s n="Plc"/></l><r>Karasjohke<s n="N"/><s n="Prop"/></r></p></e>
 
     <e><p><l>Ipmil<s n="N"/><s n="Prop"/><s n="Mal"/></l><r>Jupmele<s n="N"/><s n="Prop"/></r></p></e>
+    <e><p><l>Trond<s n="N"/><s n="Prop"/><s n="Mal"/></l><r>Trond<s n="N"/><s n="Prop"/></r></p></e>
+    
+    
 
     <!-- Adjectives -->
     <e><p><l>čáhppat<s n="A"/></l><r>tjeehpes<s n="A"/></r></p></e>
