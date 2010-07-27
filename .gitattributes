@@ -19,7 +19,7 @@
 /apertium-sme-sma.sme.twol -text
 /autogen.sh -text
 /configure.ac -text
-dev/apertium.relabel -text
+dev/apertium.generation.relabel -text
 dev/generation-report.txt -text
 dev/generation-test.sh -text
 dev/langs.cfg.in -text
