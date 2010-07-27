@@ -2,6 +2,7 @@
   <alphabet/>
   <sdefs>
     <sdef n="N"/>
+    <sdef n="Num"/>
     <sdef n="Po"/>
     <sdef n="Pr"/>
     <sdef n="Pron"/>
@@ -149,6 +150,10 @@
     <e><p><l>mii<s n="Pron"/><s n="Interr"/></l><r>mij<s n="Pron"/><s n="Interr"/></r></p></e>
     <e><p><l>gii<s n="Pron"/><s n="Interr"/></l><r>gie<s n="Pron"/><s n="Interr"/></r></p></e>
 
+    <!-- Numerals -->
+
+    <e><p><l>guokte<s n="Num"/></l><r>göökte<s n="Num"/></r></p></e>
+
     <!-- Nouns -->
     <e><p><l>dállu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
     <e><p><l>viessu<s n="N"/></l><r>gåetie<s n="N"/></r></p></e>
@@ -180,6 +185,7 @@
     <e><p><l>bavssa<s n="N"/></l><r>bangseme<s n="N"/></r></p></e>
     <e><p><l>beahcet<s n="N"/></l><r>bïrsje<s n="N"/></r></p></e>
     <e><p><l>beahci<s n="N"/></l><r>bietsie<s n="N"/></r></p></e>
+    <e><p><l>beaivi<s n="N"/></l><r>biejjie<s n="N"/></r></p></e>
     <e><p><l>beaivegirji<s n="N"/></l><r>biejjiegærja<s n="N"/></r></p></e>
     <e><p><l>bealdu<s n="N"/></l><r>åakere<s n="N"/></r></p></e>
     <e><p><l>bealli<s n="N"/></l><r>stuhtje<s n="N"/></r></p></e>
@@ -281,6 +287,7 @@
     <e><p><l>guohpa<s n="N"/></l><r>goehpe<s n="N"/></r></p></e>
     <e><p><l>guolleroahkki<s n="N"/></l><r>håagke<s n="N"/></r></p></e>
     <e><p><l>guolli<s n="N"/></l><r>guelie<s n="N"/></r></p></e>
+    <e><p><l>guorru<s n="N"/></l><r>jemhkelde<s n="N"/></r></p></e>
     <e><p><l>guossa<s n="N"/></l><r>goese<s n="N"/></r></p></e>
     <e><p><l>guottetáigi<s n="N"/></l><r>guedtede<s n="N"/></r></p></e>
     <e><p><l>guovvamánnu<s n="N"/></l><r>goevte<s n="N"/></r></p></e>
@@ -396,6 +403,7 @@
     <e><p><l>sátnegovva<s n="N"/></l><r>baakoeguvvie<s n="N"/></r></p></e>
     <e><p><l>sátneluohkká<s n="N"/></l><r>baakoedåehkie<s n="N"/></r></p></e>
     <e><p><l>sátneriggodat<s n="N"/></l><r>baakoelåhkoe<s n="N"/></r></p></e>
+    <e><p><l>seavdnjadas<s n="N"/></l><r>jemhkele<s n="N"/></r></p></e>
     <e><p><l>šilljogieddi<s n="N"/></l><r>kroenesaate<s n="N"/></r></p></e>
     <e><p><l>sirpe<s n="N"/></l><r>tjearone<s n="N"/></r></p></e>
     <e><p><l>sisbáidi<s n="N"/></l><r>lijhkiesjåarhtoe<s n="N"/></r></p></e>
@@ -622,8 +630,9 @@
     <e><p><l>čuolbmadit<s n="V"/><s n="TV"/></l><r>gaarehtidh<s n="V"/></r></p></e>
     <e><p><l>čuožžut<s n="V"/><s n="IV"/></l><r>tjåadtjodh<s n="V"/></r></p></e>
     <e><p><l>dáhpáhuvvat<s n="V"/><s n="IV"/></l><r>heannadidh<s n="V"/></r></p></e>
-    <e><p><l>dahppat<s n="V"/><s n="TV"/></l><r>steegkedh<s n="V"/></r></p></e>
     <e><p><l>dadjat<s n="V"/><s n="TV"/></l><r>jiehtedh<s n="V"/></r></p></e>
+    <e><p><l>dahppat<s n="V"/><s n="TV"/></l><r>steegkedh<s n="V"/></r></p></e>
+    <e><p><l>dahkat<s n="V"/><s n="TV"/></l><r>daajhtodh<s n="V"/></r></p></e>
     <e><p><l>dánset<s n="V"/><s n="TV"/></l><r>daanhtsodh<s n="V"/></r></p></e>
     <e><p><l>dápmat<s n="V"/><s n="TV"/></l><r>deemedh<s n="V"/></r></p></e>
     <e><p><l>dárjut<s n="V"/><s n="TV"/></l><r>faaledh<s n="V"/></r></p></e>
@@ -659,6 +668,7 @@
     <e><p><l>gođđat<s n="V"/><s n="IV"/></l><r>gårrodh<s n="V"/></r></p></e>
     <e><p><l>gođđit<s n="V"/><s n="TV"/></l><r>gurredh<s n="V"/></r></p></e>
     <e><p><l>gohcit<s n="V"/><s n="TV"/></l><r>guhtsedh<s n="V"/></r></p></e>
+    <e><p><l>gohčodit<s n="V"/><s n="TV"/></l><r>gåhtjodh<s n="V"/></r></p></e>
     <e><p><l>govdut<s n="V"/><s n="IV"/></l><r>gabpeldidh<s n="V"/></r></p></e>
     <e><p><l>gullat<s n="V"/><s n="TV"/></l><r>govledh<s n="V"/></r></p></e>
     <e><p><l>guođohit<s n="V"/><s n="TV"/></l><r>ryöjnesjidh<s n="V"/></r></p></e>

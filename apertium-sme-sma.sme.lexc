@@ -3567,7 +3567,7 @@ LEXICON BOHCCU
 
 LEXICON ATTR ! This is the normal lexicon for ATTR forms
  K ;                  ! Plain attributive
- Rreal ;
+ +Cmpnd: Rreal ;
 ! -:#%- ProperNoun ;   !Already i LEXICON R   !^C^
  #:»# NAMAT ; ! comp-only adj                       ! Added #
  #+Use/Circ:»# ALIT ; ! both comp and independent adj ! 
@@ -6577,6 +6577,7 @@ cum0mestit:cum'mest MUITAL ;
 cáh0pat:cáh'pa BORRA ;
 dad0jat:dad'ja BORRA ;
 dad0jat+Use/Sub:dadd'ja BORRA ; !
+dah0kat:dah'ka BORRA ;
 dahppat:dahppa BORRA ;
 dead0jut:dead'ju DIEVVA ;
 deav0dit:deav'di DIEHTI ;
@@ -6609,6 +6610,7 @@ gir0dit:gir'di BOAHTI ;
 goai0vut:goaj'vu DEAKCU ;
 goarrut:goarru BORRA ;
 goh0cit:goh'ci DIEHTI ;
+gohčodit:gohčod BONJAT ;
 gov0dut:gov'du ALLU ;
 gođđat:gođđa DIEVVA ;
 gođđit:gođđi DIEHTI ;
@@ -6851,6 +6853,7 @@ bargo#joav0ku+CmpN/SgN+CmpN/DefSgGen+CmpN/PlG:bargo#joav'ku GOAHTI ;
 bavssa:bak'sam8 SEAMU ;
 beah0ci+CmpN/SgN+CmpN/SgG+CmpN/DefPlGen:beah'ci AIGI "pine N" ;
 beahcet:beahceh GAHPIR ;
+beai0vi+CmpN/SgN+CmpN/SgG+CmpN/PlG:beaj'vi GOAHTI ;
 beaive#gir0ji:beaive#gir'ji GOAHTI ;
 beal0du:beal'du GOAHTI ;
 bealli+CmpN/SgN+CmpN/DefSgGen+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:bealli GOAHTI ;
@@ -6944,6 +6947,8 @@ gui0gu+CmpN/SgN+CmpN/SgG+CmpN/PlG:guj'gu GOAHTI ;
 guoddi+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:guoddi¤ ACTOR ;
 guoh0pa:guohppag8 SEAMU ;
 guolle#roahkki GOAHTI ;
+guolli+CmpN/SgN+CmpN/SgG+CmpN/PlG:guolli AIGI "fish N" ;
+guorru AIGI ;
 guossa+CmpN/SgN+CmpN/SgG+CmpN/DefPlGen:guossa GOAHTI ;
 guottet#ái0gi+CmpN/SgN+CmpN/SgG+CmpN/PlG:guottet#áj'gi AIGI ;
 guovva#mánnu+CmpN/SgN+CmpN/SgG+CmpN/DefPlGen:guovva#mánnu AIGI ;
@@ -6978,6 +6983,7 @@ jeaggi+CmpN/SgN+CmpN/SgG+CmpN/PlG:jeaggi AIGI ;
 jeas0ta:jeas'ta GOAHTI ;
 jeđđehus:jeđđehuss JOHTOLAT ;
 jierbmi AIGI ;
+joh0ka+CmpN/SgN+CmpN/SgG+CmpN/PlG:joh'ka GOAHTI ;
 jumeš+CmpN/SgN+CmpN/SgG+CmpN/PlG:jumež GAHPIR ;
 juovla#skeaŋ0ka:juovla#skeaŋ'ka GOAHTI ;
 juovllat+CmpN/SgN+CmpN/PlG:juov'la BUVSSAT ;
@@ -7056,6 +7062,7 @@ ruv0da:ruv'da GOAHTI ;
 rátnu GOAHTI ;
 rávdnji+CmpN/SgN+CmpN/SgG+CmpN/PlG:rávdnji AIGI ;
 sarvvis+CmpN/SgN+CmpN/SgG+CmpN/PlG:sar'vis FALIS ;
+seavdnjadas:seavdnjadass JOHTOLAT ;
 sir0pe:sir'pe GOAHTI ;
 sis#bái0di:sis#báj'di AIGI ;
 sivva GOAHTI ;
@@ -7101,6 +7108,7 @@ viellja+CmpN/SgN+CmpN/SgG+CmpN/PlG:viellja GOAHTI ;
 vielppis+CmpN/SgN+CmpN/SgG+CmpN/PlG:viel'pis FALIS ;
 vier0ca+CmpN/SgN+CmpN/SgG+CmpN/PlG:vier'ca GOAHTI ;
 vierro#giella GOAHTI ;
+viessu+CmpN/SgN+CmpN/SgG+CmpN/PlG:viessu GOAHTI ;
 viidodat:viidodah'k JOHTOLAT ;
 vivva+CmpN/SgN+CmpN/SgG+CmpN/PlG:vivva GOAHTI ;
 vuo0ni+CmpN/SgN+CmpN/SgG+CmpN/PlG:vuotnim8 BEANA ;
@@ -7118,6 +7126,7 @@ várre#gil0ga:várre#gil'ga GOAHTI ;
 vásihus+CmpN/SgN+CmpN/DefSgGen+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:vásihuss JOHTOLAT ;
 áddjá+CmpN/SgN+CmpN/SgG+CmpN/PlG:áddjá ALBMILONG ;
 áhčči+CmpN/SgN+CmpN/SgG+CmpN/PlG:áhčči ALBMI ;
+ái0gi+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:áj'gi AIGI ;
 áitta:áj'tag8 SEAMU ;
 ál0gu+CmpN/SgN+CmpN/DefSgGen+CmpN/DefPlGen+CmpN/SgLeft+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:ál'gu AIGI ;
 ár0bi:ár'bi AIGI ;
@@ -9479,9 +9488,23 @@ LEXICON NENPLACELASH
 
 
 LEXICON ProperNoun
+Nord^lán0da:Nord^lán'da MARJA-plc ;
+Is^lán0da:Is^lán'da MARJA-plc ;
+Nor0ga:Nor'ga MARJA-plc ;
+Káráš^joh0ka:Káráš^joh'ka MARJA-plc ;
+Ruoš0ša:Ruoš'ša MARJA-plc ;
+Finn^már0ku:Finn^már'ku MARJA-plc ;
+Guovda^geaidnu:Guovda^geajdnu MARJA-plc ;
+Ruoŧŧa SUOPMA-plc ;
+Troandin:Troandim ANAR-plc ;
+Ruoŧ0ŧa+Use/Sub:Ruoŧ'ŧa SUOPMA-plc ; !
 Sápmi+CmpN/SgG:Sápmi SUOPMA-plc ; !
 Ipmil LONDON-mal ;
 Oslo:Oslo9 ACCRA-plc ;
+Trønde^lag:Trønde^lag9 BERN-LOAN-plc ;
+Trond:Trond9 BERN-mal ;
+Ei0ra:Ej'ra MARJA-sur ;
+Eira ACCRA-femsur ;
 ! Divvun & Giellatekno - open source grammars for Sámi and other languages
 ! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
 ! http://giellatekno.uit.no & http://divvun.no

@@ -2519,7 +2519,7 @@ LEXICON ÅARAJEHTEDH ! row A - Group I
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»iej@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAg:%»iej@C.NeedNoun@     IJE_ODD ;
  +V+Der1+Der/NomAct:%»iem@C.NeedNoun@    NomActOdd ;
   +V+Der1+Der/les:%»%^1UMLales NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
@@ -3109,6 +3109,7 @@ bïepmehtidh:bïepmeht DÅAJVOEHTIDH "mata" ;
  bïssedh:bïss TJOEHPEDH "tvätta" ; ! column 1 !V56
 bïssedidh:bïssed GOLTELIDH "tvätta sig" ;
 böörhkedh:böörhk GÖÖLEDH "slita av (en gång), dela renflock (om hund)" ;
+daajhtodh:daajht TJEARODH ;
 daanhtsodh:daanhts TJEARODH "dansa" ;
 davvodh:davv TJEARODH "reparera" ;
 deemedh:deem GÖÖLEDH "tämja (körren, hund)" ;
@@ -3148,6 +3149,7 @@ gurredh:gurr BÅETEDH "sticka" ;
  gåarodh:gåar TJEARODH "bränna fast, fastna på botten" ; ! column 6 !V52
 gåaskodh:gåask TJEARODH "väcka" ;
 gåatodh:gåat TJEARODH "beta" ;
+gåhtjodh:gåhtj TJEARODH "kalla" ;
 gårrodh:gårr TJEARODH "leka" ;
 gïehtjedidh:gïehtjed GOLTELIDH "se över, se grundligt efter, undersöka (om alla renar er där, om främmande renar kommit in i hjorden)" ;
 gïjkedh:gïjk TJOEHPEDH "lysa" ;
@@ -3292,6 +3294,7 @@ aarhte:aarht NIEJTE ;
  aarke+CmpN/SgN+CmpN/SgG+CmpN/PlG:aark NIEJTE ; !
  aarpije+CmpN/SgN+CmpN/SgG+CmpN/PlG:aarpij IJE_ODD ; !
  aehtjie+CmpN/SgN+CmpN/SgG+CmpN/PlG:aehtj TJIDTJIE ; !
+ aejkie+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft:aejk N_IE ; !
  aejlege+CmpN/SgN+CmpN/SgG+CmpN/PlG:aejlieg N_ODD ; !
  aerede+CmpN/SgN+CmpN/SgG+CmpN/PlG:aeried N_ODD ; !
 aerpie:aerp N_IE ;
@@ -3308,6 +3311,7 @@ bangseme:bangsem N_ODD ;
  barkoe#dåehkie+CmpN/SgN+CmpN/SgG+CmpN/PlG:barkoe#dåehk N_IE ; !
  bearjadahke+CmpN/SgN+CmpN/SgG+CmpN/PlG:bearjadahk NIEJTE ; !
 biejjie#gærja:biejjie#gærj MAANA ;
+ biejjie+CmpN/SgN+CmpN/SgG+CmpN/PlG:biejj N_IE ; !
 bietsie:biets N_IE ;
 budsjedte:budsjedt NIEJTE ;
 busse:buss NIEJTE ;
@@ -3370,6 +3374,7 @@ govne:govn NIEJTE ;
 guapa:guap MAANA ;
  guedtede+CmpN/SgN+CmpN/SgG+CmpN/PlG:guedtied N_ODD ; !
  guedtije+CmpN/SgN+CmpN/SgG+CmpN/PlG:guedtiej IJE_ODD ; !
+ guelie+CmpN/SgN+CmpN/SgG+CmpN/PlG:guel N_IE ; !
  guhtsije+CmpN/SgN+CmpN/SgG+CmpN/PlG:guhtsiej IJE_ODD ; !
 guvvie#raajroe:guvvie#raajr N_OE_UML ;
 gåahta:gåaht MAANA ;
@@ -3398,9 +3403,12 @@ hælloe:hæll N_OE_UML ;
  in^stitusjovne+CmpN/SgN+CmpN/SgG+CmpN/PlG:in^stitusjovn NIEJTE ; !
  jaepie#boelhke+CmpN/SgN+CmpN/SgG+CmpN/PlG:jaepie#boelhk NIEJTE ; !
 jeestere:jeester N_ODD ;
+ jemhkelde+CmpN/SgN+CmpN/SgG+CmpN/PlG:jemhkield N_ODD ; !
+ jemhkele+CmpN/SgN+CmpN/SgG+CmpN/PlG:jemhkiel N_ODD ; !
 jiehtege:jiehtieg N_ODD ;
 jielie#guvvie:jielie#guvv N_IE ;
 jiermie:jierm N_IE ;
+ johke+CmpN/SgN+CmpN/SgG+CmpN/PlG:johk NIEJTE ; !
 joptse:jopts NIEJTE ;
  jupmele+CmpN/SgN+CmpN/SgG+CmpN/PlG:jupmiel N_ODD ; !
 jåvle#vadtese:jåvle#vadtes N_ODD ;
@@ -3558,7 +3566,9 @@ tjöödtjestimmie#sijjie:tjöödtjestimmie#sijj N_IE ;
  åarjel#saemie+CmpN/SgN+CmpN/SgG+CmpN/PlG:åarjel#saem N_IE ; !
 åasa:åas MAANA ;
 åedtjie:åedtj N_IE ;
+ ïelje+CmpN/SgN+CmpN/SgG+CmpN/PlG:ïelj NIEJTE ; !
  unnebe#låhkoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:unnebe#låhk N_OE ; !
+Hedmarhke:Hedmarhk NIEJTE ; 
 råase:råas NIEJTE; 
 predikative:predikati IVE ; 
 ! Divvun & Giellatekno - open source grammars for Sámi and other languages
@@ -4186,7 +4196,17 @@ LEXICON TJIRREDS
 LEXICON ProperNoun
 Saemie:Saem PN_IE "21 TERRTX" ; ! XXX added by FMT, check !
 Jupmele:Jupmiel SNAME_ODD ;
+Nöörje:Nöörj SNAME_NIEJTE ;
+ Tråante:Tråant SNAME_NIEJTE ; ! Trondheim
+Sveerje:Sveerj SNAME_NIEJTE ;
+Is^laante:Is^laant SNAME_NIEJTE ;
+Russ^laante:Russ^laant SNAME_NIEJTE ;
+Finn^marhke:Finn^marhk SNAME_NIEJTE ; 
+Novr^laante:Novr^laant SNAME_NIEJTE ; 
+Kauto^keino ONAME ;
 Oslove:Oslov VNAME_ODD ;
+Trond CNAME_EVEN ;
+Eira:Eir SNAME_MAANA ;
 ! Divvun & Giellatekno - open source grammars for Sámi and other languages
 ! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
 ! http://giellatekno.uit.no & http://divvun.no

@@ -32,17 +32,17 @@ TARGETS_COMMON = \
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-lexc $(BASENAME).$(LANG1).lexc -o $@
 
-.deps/$(BASENAME).$(LANG1).hfst: .deps/$(LANG1).lexc.hfst .deps/$(LANG1).twol.hfst dev/apertium.relabel
+.deps/$(BASENAME).$(LANG1).hfst: .deps/$(LANG1).lexc.hfst .deps/$(LANG1).twol.hfst dev/apertium.analysis.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-compose-intersect -l .deps/$(LANG1).lexc.hfst .deps/$(LANG1).twol.hfst -o $@
 
 #
 # The default form of the transducer is optimised
 #
-$(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.relabel
+$(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.analysis.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-invert .deps/$(BASENAME).$(LANG1).hfst -o .deps/$(PREFIX1).automorf.hfst.tmp
-	hfst-substitute -F dev/apertium.relabel -i .deps/$(PREFIX1).automorf.hfst.tmp -o .deps/$(PREFIX1).automorf.hfst
+	hfst-substitute -F dev/apertium.analysis.relabel -i .deps/$(PREFIX1).automorf.hfst.tmp -o .deps/$(PREFIX1).automorf.hfst
 	hfst-lookup-optimize .deps/$(PREFIX1).automorf.hfst -o $@
 	rm .deps/$(PREFIX1).automorf.hfst.tmp
 
@@ -58,22 +58,22 @@ $(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-lexc $(BASENAME).$(LANG2).lexc -o $@
 
-.deps/$(BASENAME).$(LANG2).hfst: .deps/$(LANG2).lexc.hfst .deps/$(LANG2).twol.hfst dev/apertium.relabel
+.deps/$(BASENAME).$(LANG2).hfst: .deps/$(LANG2).lexc.hfst .deps/$(LANG2).twol.hfst dev/apertium.generation.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-compose-intersect -l .deps/$(LANG2).lexc.hfst .deps/$(LANG2).twol.hfst -o $@
 
 #
 # The default form of the transducer is optimised
 #
-$(PREFIX1).autogen.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.relabel
+$(PREFIX1).autogen.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.generation.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-substitute -F dev/apertium.relabel -i .deps/$(BASENAME).$(LANG2).hfst -o .deps/$(PREFIX1).autogen.hfst
+	hfst-substitute -F dev/apertium.generation.relabel -i .deps/$(BASENAME).$(LANG2).hfst -o .deps/$(PREFIX1).autogen.hfst
 	hfst-lookup-optimize .deps/$(PREFIX1).autogen.hfst -o $@
 
-$(PREFIX2).automorf.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.relabel
+$(PREFIX2).automorf.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.analysis.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-invert .deps/$(BASENAME).$(LANG2).hfst -o .deps/$(PREFIX2).automorf.hfst.tmp
-	hfst-substitute -F dev/apertium.relabel -i .deps/$(PREFIX2).automorf.hfst.tmp -o .deps/$(PREFIX2).automorf.hfst
+	hfst-substitute -F dev/apertium.analysis.relabel -i .deps/$(PREFIX2).automorf.hfst.tmp -o .deps/$(PREFIX2).automorf.hfst
 	hfst-lookup-optimize .deps/$(PREFIX2).automorf.hfst -o $@
 	rm .deps/$(PREFIX2).automorf.hfst.tmp
 
