@@ -96,12 +96,10 @@ Multiple bidix entries for a single source language lexical form
 Tag mismatch between transfer and generation
 ===============================================================================
     835 #satne	^satne<Pron><Pers><Sg3><Gen>$
-    449 #excl	^excl<CLB>$
     400 #manne	^manne<Pron><Pers><Sg1><Gen>$
     290 #gåajka	^gåajka<Po>$
     272 #lea	^lea<V><Ind><Prs><ConNeg>$
     173 #datne	^datne<Pron><Pers><Sg2><Gen>$
-    150 #excl»	^excl<CLB>$»
     117 #joem	^joem<Adv>$
      98 #Joem	^Joem<Adv>$
      92 #gie	^gie<Pron><Sg><Gen>$
@@ -352,5 +350,5 @@ Summary
 ===============================================================================
    85 /tmp/sme-sma.multiform
     0 /tmp/sme-sma.multibidix
-  251 /tmp/sme-sma.tagmismatch
-  336 total
+  249 /tmp/sme-sma.tagmismatch
+  334 total
