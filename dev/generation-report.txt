@@ -51,6 +51,7 @@ Multiple surface forms for a single lexical form
       3 daajhtoejidien/daajhtoden	^daajhtodh<V><Ind><Prs><Du2>$
       2 uvtebe/uvtiejibie	^uvtedh<V><Ind><Prs><Pl1>$
       2 tjelkieh/tjalkah/tjalkoeh	^tjalkedh<V><Ind><Prs><Pl3>$
+      2 mej/maj	^mij<Pron><Rel><Pl><Gen>$
       2 gæstose/gystese	^gæstoe<N><Sg><Ill>$
       2 Edtjebe/Edtjijibie	^Edtjedh<V><Ind><Prs><Pl1>$
       2 beerkebe/beerkijibie	^beerkedh<V><Ind><Prs><Pl1>$
@@ -94,12 +95,12 @@ Multiple bidix entries for a single source language lexical form
 ===============================================================================
 Tag mismatch between transfer and generation
 ===============================================================================
-    833 #satne	^satne<Pron><Pers><Sg3><Gen>$
+    835 #satne	^satne<Pron><Pers><Sg3><Gen>$
     449 #excl	^excl<CLB>$
-    397 #manne	^manne<Pron><Pers><Sg1><Gen>$
+    400 #manne	^manne<Pron><Pers><Sg1><Gen>$
     290 #gåajka	^gåajka<Po>$
     272 #lea	^lea<V><Ind><Prs><ConNeg>$
-    171 #datne	^datne<Pron><Pers><Sg2><Gen>$
+    173 #datne	^datne<Pron><Pers><Sg2><Gen>$
     150 #excl»	^excl<CLB>$»
     117 #joem	^joem<Adv>$
      98 #Joem	^Joem<Adv>$
@@ -108,25 +109,25 @@ Tag mismatch between transfer and generation
      47 #aalkoelistie	^aalkoelistie<Po>$
      45 #lea	^lea<V><PrfPrc>$
      41 #mietelen	^mietelen<Po>$
-     36 #tjahkasjidh	^tjahkasjidh<N><Ess>$
+     36 #tjahkasjidh	^tjahkasjidh<V><Der3><Der_n><N><Ess>$
      35 #lea	^lea<V><Cond><Prs><Sg3>$
-     34 #lea	^lea<V><Inf>$
      34 #edtjedh	^edtjedh<V><Ind><ConNeg>$
-     28 #tjåadtjodh	^tjåadtjodh<N><Ess>$
+     32 #lea	^lea<V><Inf>$
+     28 #tjåadtjodh	^tjåadtjodh<V><Der3><Der_n><N><Ess>$
      28 #snihkiestidh	^snihkiestidh<V>$
      26 #hijven	^hijven<A><Sg><Nom>$
      24 #Snihkiestidh	^Snihkiestidh<V>$
+     22 #bealan	^bealan<Po>$
      20 #hijven	^hijven<A><Pl><Gen>$
-     20 #båetedh	^båetedh<N><Ess>$
+     20 #båetedh	^båetedh<V><Der3><Der_n><N><Ess>$
      19 #garre	^garre<A><Der2><Der_at><Adv>$
      19 #daajhtodh	^daajhtodh<V><Ind><ConNeg>$
      18 #lea	^lea<V><Cond><Prs><ConNeg>$
-     18 #bealan	^bealan<Po>$
+     18 #bieleste	^bieleste<Po>$
      17 #Bïssedh	^Bïssedh<V>$
      16 #lea	^lea<V><Imprt><Sg3>$
      16 #govledh	^govledh<V><Ind><ConNeg>$
      16 #båetedh	^båetedh<V><Ind><ConNeg>$
-     15 #Bïssedh	^Bïssedh<N><Sg><Gen>$
      14 #hijven	^hijven<A><Pl><Acc>$
      13 #vuejnedh	^vuejnedh<V><Ind><ConNeg>$
      13 #Manne	^Manne<Pron><Pers><Sg1><Gen>$
@@ -135,8 +136,6 @@ Tag mismatch between transfer and generation
      10 #Satne	^Satne<Gen>$
      10 #lea	^lea<V><Pot><Prs><Sg2>$
      10 #lea	^lea<V><Pot><Prs><Pl3>$
-     10 #bïssedh	^bïssedh<N><Sg><Nom>$
-      9 #voeledh	^voeledh<N><Sg><Ill>$
       9 #lea	^lea<V><Cond><Prs><Sg1>$
       9 #lea	^lea<V><Cond><Prs><Pl2>$
       9 #Hijven	^Hijven<A><Sg><Nom>$
@@ -150,84 +149,63 @@ Tag mismatch between transfer and generation
       8 #elmie	^elmie<N>$
       8 #Datne	^Datne<Pron><Pers><Sg2><Gen>$
       8 #bïssedh	^bïssedh<V>$
-      8 #bieleste	^bieleste<Po>$
       7 #Manne	^Manne<Gen>$
       7 #jiehtedh	^jiehtedh<V><Ind><ConNeg>$
       7 #jååkedidh	^jååkedidh<V><Ind><Prs><Sg3>$
-      6 #snåhkaridh	^snåhkaridh<N><Pl><Gen>$
       6 #reakadidh	^reakadidh<V>$
       6 #gie	^gie<Pron><Pl><Gen>$
       6 #daajhtodh	^daajhtodh<V><Imprt><ConNeg>$
-      6 #daajhtodh	^daajhtodh<N><Ess>$
-      6 #Bïssedh	^Bïssedh<N><Sg><Nom>$
-      6 #beerkedh	^beerkedh<N><Pl><Nom>$
-      5 #vuejnedh	^vuejnedh<N><Sg><Nom>$
-      5 #snåhkaridh	^snåhkaridh<N><Ess>$
+      5 #vuejnedh	^vuejnedh<V><Der3><Der_n><N><Sg><Nom>$
       5 #pruvredh	^pruvredh<V>$
       5 #murrie	^murrie<N><Sg><Ill>$
       5 #hijven	^hijven<A><Superl><Sg><Nom>$
       5 #hijven	^hijven<A><Sg><Acc>$
       5 #elmie	^elmie<N><Attr>$
       5 #Daate	^Daate<Sg><Gen>$
-      5 #beerkedh	^beerkedh<N><Sg><Nom>$
+      5 #daajhtodh	^daajhtodh<V><Der3><Der_n><N><Ess>$
       5 #båetedh	^båetedh<V><Pot><Prs><Sg3>$
       5 #aareh	^aareh<A><Sg><Nom>$
+      5 #aaltere	^aaltere<N><Attr>$
       4 #stoere	^stoere<A><Superl>$
-      4 #snåhkaridh	^snåhkaridh<N><Pl><Nom>$
       4 #miehtjies	^miehtjies<A><Ess>$
       4 #lea	^lea<V>$
       4 #jïrreden	^jïrreden<Adv>$
-      4 #jiehtedh	^jiehtedh<N><Sg><Nom>$
       4 #hijven	^hijven<A><Sg><Gen>$
-      4 #heannadidh	^heannadidh<N><Ess>$
+      4 #heannadidh	^heannadidh<V><Der3><Der_n><N><Ess>$
       4 #govledh	^govledh<V>$
       4 #Gie	^Gie<Pron><Interr><Ess>$
-      4 #gïehtjedidh	^gïehtjedidh<N><Ess>$
-      4 #buektedh	^buektedh<N><Sg><Nom>$
+      4 #gïehtjedidh	^gïehtjedidh<V><Der3><Der_n><N><Ess>$
       4 #båetedh	^båetedh<V><Pot><Prs><Pl2>$
       4 #baalteli	^baalteli<Po>$
-      4 #aaltere	^aaltere<N><Attr>$
       3 #vuejnedh	^vuejnedh<V><Imprt><Pl1>$
-      3 #snåhkaridh	^snåhkaridh<N><Sg><Ill>$
-      3 #snåhkaridh	^snåhkaridh<N><Pl><Acc>$
       3 #pruvredh	^pruvredh<V><Ind><ConNeg>$
       3 #nannoes	^nannoes<A><Ess>$
       3 #mujhtedh	^mujhtedh<V><Ind><ConNeg>$
-      3 #mujhtedh	^mujhtedh<N><Sg><Ill>$
       3 #moenedidh	^moenedidh<V><Ind><ConNeg>$
       3 #luhpiedidh	^luhpiedidh<V><Ind><ConNeg>$
       3 #lea	^lea<V><Pot><Prs><Sg1>$
       3 #lea	^lea<V><Cond><Prs><Sg2>$
       3 #jöörtedh	^jöörtedh<V>$
       3 #joekedidh	^joekedidh<V><Cond><Prs><Pl3>$
+      3 #jiehtedh	^jiehtedh<V><Der3><Der_n><N><Ess>$
       3 #jiehtedh	^jiehtedh<V><Cond><Prs><Sg1>$
-      3 #jiehtedh	^jiehtedh<N><Ess>$
       3 #hijven	^hijven<A><Ess>$
       3 #goltelidh	^goltelidh<V><Ind><ConNeg>$
       3 #gie	^gie<Pron><Rel><Ess>$
       3 #gïehtjedidh	^gïehtjedidh<V><Ind><ConNeg>$
-      3 #gåatodh	^gåatodh<N><Ess>$
-      3 #doekedh	^doekedh<N><Ess>$
-      3 #bïssedh	^bïssedh<N><Sg><Gen>$
-      3 #bïssedh	^bïssedh<N><Sg><Acc>$
+      3 #gåatodh	^gåatodh<V><Der3><Der_n><N><Ess>$
+      3 #doekedh	^doekedh<V><Der3><Der_n><N><Ess>$
       3 #Båetedh	^Båetedh<V><Imprt><Sg3>$
       3 #båetedh	^båetedh<V><Cond><Prs><Sg3>$
-      3 #båetedh	^båetedh<N><Sg><Nom>$
       3 #baajedh	^baajedh<V><Imprt><ConNeg>$
       2 #vuejnedh	^vuejnedh<V><Cond><Prs><Pl3>$
       2 #viehkiehtidh	^viehkiehtidh<V>$
       2 #vaestiedidh	^vaestiedidh<V><Ind><ConNeg>$
       2 #stoere	^stoere<A><Pl><Loc>$
       2 #stoere	^stoere<A><Comp>$
-      2 #snåhkaridh	^snåhkaridh<N><Sg><Nom>$
-      2 #snåhkaridh	^snåhkaridh<N><Sg><Ine>$
-      2 #snåhkaridh	^snåhkaridh<N><Pl><Ela>$
       2 #sjugniedidh	^sjugniedidh<V>$
       2 #ryöjnesjidh	^ryöjnesjidh<V>$
-      2 #Ryöjnesjidh	^Ryöjnesjidh<N><Pl><Nom>$
-      2 #ryöjnesjidh	^ryöjnesjidh<N><Pl><Nom>$
       2 #reakadidh	^reakadidh<V><Ind><ConNeg>$
-      2 #raejkiemdidh	^raejkiemdidh<N><Sg><Nom>$
       2 #orre	^orre<A><Der2><Der_at><Adv>$
       2 #mij	^mij<Pron><Sg><Gen>$
       2 #mieriedidh	^mieriedidh<V><Ind><ConNeg>$
@@ -238,20 +216,15 @@ Tag mismatch between transfer and generation
       2 #lea	^lea<V><Cond><Prs><Du3>$
       2 #latjkes	^latjkes<A><Sg><Ill>$
       2 #krïevedh	^krïevedh<V><Imprt><ConNeg>$
-      2 #jiehtedh	^jiehtedh<N><Sg><Acc>$
+      2 #jiehtedh	^jiehtedh<V><Der3><Der_n><N><Sg><Acc>$
       2 #jååkedidh	^jååkedidh<V><PrfPrc>$
       2 #håhkesjidh	^håhkesjidh<V>$
       2 #guhtsedh	^guhtsedh<V><Cond><Prs><Sg3>$
       2 #govledh	^govledh<V><Pot><Prs><Sg3>$
       2 #govledh	^govledh<V><Imprt><Pl1>$
-      2 #govledh	^govledh<N><Ess>$
       2 #Gie	^Gie<Sg><Gen>$
-      2 #gïehtjedidh	^gïehtjedidh<N><Sg><Nom>$
-      2 #gïehtjedidh	^gïehtjedidh<N><Sg><Gen>$
-      2 #gïehtjedidh	^gïehtjedidh<N><Sg><Acc>$
       2 #gahtjedh	^gahtjedh<V><Ind><ConNeg>$
       2 #Gaaktsede	^Gaaktsede<A><Ord><Attr>$
-      2 #fååtesidh	^fååtesidh<N><Sg><Nom>$
       2 #edtjedh	^edtjedh<V><Cond><Prs><Sg2>$
       2 #edtjedh	^edtjedh<V><Cond><Prs><Pl2>$
       2 #duekelen	^duekelen<Po>$
@@ -261,16 +234,16 @@ Tag mismatch between transfer and generation
       2 #daajhtodh	^daajhtodh<V><Cond><Prs><Sg3>$
       2 #daajhtodh	^daajhtodh<V>$
       2 #bïssedh	^bïssedh<V><Ind><ConNeg>$
-      2 #bïssedh	^bïssedh<N><Ess>$
       2 #biejstedh	^biejstedh<V><Ind><ConNeg>$
-      2 #biejstedh	^biejstedh<N><Sg><Acc>$
-      2 #beavkodh	^beavkodh<N><Sg><Nom>$
+      2 #beerkedh	^beerkedh<V><Der3><Der_n><N><Sg><Nom>$
+      2 #beavkodh	^beavkodh<V>$
+      2 #båetedh	^båetedh<V><Der3><Der_n><N><Sg><Nom>$
+      2 #båetedh	^båetedh<V><Der3><Der_n><N><Sg><Acc>$
       2 #båetedh	^båetedh<V><Cond><Prs><Sg2>$
-      2 #båetedh	^båetedh<N><Sg><Acc>$
-      2 #åestedh	^åestedh<N><Ess>$
+      2 #åestedh	^åestedh<V><Der3><Der_n><N><Ess>$
       1 #vuejnedh	^vuejnedh<V><Imprt><Du1>$
+      1 #vuejnedh	^vuejnedh<V><Der3><Der_n><N><Ess>$
       1 #vuejnedh	^vuejnedh<V><Cond><Prs><Pl1>$
-      1 #vuejnedh	^vuejnedh<N><Ess>$
       1 #voejedh	^voejedh<V><Imprt>$
       1 #viehkiehtidh	^viehkiehtidh<V><Cond><Prs><Sg3>$
       1 #viehkiehtidh	^viehkiehtidh<V><Cond><ConNeg>$
@@ -281,23 +254,19 @@ Tag mismatch between transfer and generation
       1 #tjaeledh	^tjaeledh<V><Imprt><ConNeg>$
       1 #tjaeledh	^tjaeledh<V><Cond><Prs><Pl3>$
       1 #tjaeledh	^tjaeledh<V>$
-      1 #tjåadtjodh	^tjåadtjodh<N><Sg><Nom>$
       1 #sualadidh	^sualadidh<V><Ind><ConNeg>$
-      1 #soptsesovvedh	^soptsesovvedh<N><Sg><Nom>$
-      1 #snåhkaridh	^snåhkaridh<N><Pl><Ill>$
+      1 #soptsesovvedh	^soptsesovvedh<V><Der3><Der_n><N><Sg><Nom>$
       1 #Sjugniedidh	^Sjugniedidh<V>$
-      1 #sjuehkiehtidh	^sjuehkiehtidh<N><Pl><Acc>$
+      1 #sjuehkiehtidh	^sjuehkiehtidh<V><Der3><Der_n><N><Pl><Acc>$
       1 #satne	^satne<Gen>$
       1 #rastah	^rastah<Pr>$
       1 #nïekedidh	^nïekedidh<V><Ind><Prs><Pl3>$
       1 #mohtedidh	^mohtedidh<V><Cond><Prs><Pl1>$
       1 #mïnngesne	^mïnngesne<Pr>$
       1 #mij	^mij<Pron><Rel><Ess>$
+      1 #luhpiedidh	^luhpiedidh<V><Der2><Actor><N><Sg><Nom>$
       1 #luhpiedidh	^luhpiedidh<V><Cond><Prs><Sg3>$
-      1 #luhpiedidh	^luhpiedidh<N><Sg><Nom>$
       1 #löövles	^löövles$
-      1 #lohkedh	^lohkedh<N><Sg><Nom>$
-      1 #lohkedh	^lohkedh<N><Sg><Ine>$
       1 #Lea	^Lea<V><Pot><Prs><Sg3>$
       1 #Lea	^Lea<V><Inf>$
       1 #Lea	^Lea<V><Cond><Prs><Sg3>$
@@ -309,9 +278,9 @@ Tag mismatch between transfer and generation
       1 #joekedidh	^joekedidh<V><Imprt><Sg3>$
       1 #jiermie	^jiermie<N><Attr>$
       1 #jiehtedh	^jiehtedh<V><Imprt><ConNeg>$
+      1 #jiehtedh	^jiehtedh<V><Der3><Der_n><N><Sg><Nom>$
       1 #jiehtedh	^jiehtedh<V><Cond><Prs><Sg3>$
       1 #jiehtedh	^jiehtedh<V>$
-      1 #jiehtedh	^jiehtedh<N><Pl><Nom>$
       1 #jiehtedh	^jiehtedh<Inf>$
       1 #jååkedidh	^jååkedidh<V><Inf>$
       1 #jååkedidh	^jååkedidh<V><Ind><Prt><Sg3>$
@@ -326,23 +295,23 @@ Tag mismatch between transfer and generation
       1 #heannadidh	^heannadidh<V><Cond><Prs><Sg3>$
       1 #gurkedh	^gurkedh<V><Cond><Prs><Sg3>$
       1 #gujmie	^gujmie<Adv>$
-      1 #guhtsedh	^guhtsedh<N><Ess>$
+      1 #guhtsedh	^guhtsedh<V><Der3><Der_n><N><Ess>$
       1 #govledh	^govledh<V><Imprt><Pl3>$
+      1 #govledh	^govledh<V><Der3><Der_n><N><Sg><Nom>$
+      1 #govledh	^govledh<V><Der3><Der_n><N><Ess>$
       1 #govledh	^govledh<V><Cond><Prs><Pl2>$
       1 #Govledh	^Govledh<V>$
-      1 #govledh	^govledh<N><Sg><Nom>$
       1 #göökte	^göökte<Num><Sg><Loc>$
       1 #goltelidh	^goltelidh<V><Cond><Prs><Sg3>$
-      1 #Gïehtjedidh	^Gïehtjedidh<N><Sg><Nom>$
-      1 #gïehtjedidh	^gïehtjedidh<N><Ine>$
+      1 #gïehtjedidh	^gïehtjedidh<V><Der3><Der_n><N><Ine>$
       1 #garre	^garre<A><Comp>$
       1 #gånka	^gånka<N>$
       1 #gåhtjodh	^gåhtjodh<V><Ind><ConNeg>$
       1 #gåhtjodh	^gåhtjodh<V><Imprt><ConNeg>$
+      1 #gahtjedh	^gahtjedh<V><Der3><Der_n><N><Ess>$
       1 #gahtjedh	^gahtjedh<V><Cond><Prs><Sg3>$
       1 #gahtjedh	^gahtjedh<V><Cond><ConNeg>$
-      1 #gahtjedh	^gahtjedh<N><Ess>$
-      1 #gåatodh	^gåatodh<N><Sg><Gen>$
+      1 #gåatodh	^gåatodh<V><Der3><Der_n><N><Sg><Gen>$
       1 #Gåalmede	^Gåalmede<A><Ord><Attr>$
       1 #gaaktsede	^gaaktsede<A><Ord><Attr>$
       1 #fïjnedh	^fïjnedh<V><Ind><ConNeg>$
@@ -353,13 +322,13 @@ Tag mismatch between transfer and generation
       1 #dïhte	^dïhte<Pron><Pers><Ess>$
       1 #Datne	^Datne<Gen>$
       1 #daajhtodh	^daajhtodh<V><Imprt><Sg3>$
+      1 #daajhtodh	^daajhtodh<V><Der3><Der_n><N><Sg><Nom>$
+      1 #daajhtodh	^daajhtodh<V><Der3><Der_n><N><Sg><Gen>$
       1 #daajhtodh	^daajhtodh<V><Cond><Prs><Sg2>$
       1 #daajhtodh	^daajhtodh<V><Cond><Prs><Pl2>$
-      1 #daajhtodh	^daajhtodh<N><Sg><Nom>$
-      1 #daajhtodh	^daajhtodh<N><Sg><Gen>$
-      1 #buektedh	^buektedh<N><Pl><Nom>$
-      1 #buektedh	^buektedh<N><Ess>$
+      1 #buektedh	^buektedh<V><Der3><Der_n><N><Ess>$
       1 #bïssedh	^bïssedh<V><Imprt><ConNeg>$
+      1 #bïssedh	^bïssedh<V><Der3><Der_n><N><Ess>$
       1 #biesmedh	^biesmedh<V><Ind><ConNeg>$
       1 #bïepmehtidh	^bïepmehtidh<V><Ind><ConNeg>$
       1 #beerkedh	^beerkedh<V><Imprt><Sg3>$
@@ -369,7 +338,6 @@ Tag mismatch between transfer and generation
       1 #båetedh	^båetedh<V><Imprt><Sg3>$
       1 #båetedh	^båetedh<V><Cond><ConNeg>$
       1 #båetedh	^båetedh<V>$
-      1 #Båetedh	^Båetedh<N><Sg><Acc>$
       1 #baajedh	^baajedh<V><Ind><ConNeg>$
       1 #baajedh	^baajedh<V><Cond><Prs><Sg2>$
       1 #baajedh	^baajedh<V><Cond><ConNeg>$
@@ -382,7 +350,7 @@ Tag mismatch between transfer and generation
 ===============================================================================
 Summary
 ===============================================================================
-   84 /tmp/sme-sma.multiform
+   85 /tmp/sme-sma.multiform
     0 /tmp/sme-sma.multibidix
-  284 /tmp/sme-sma.tagmismatch
-  368 total
+  251 /tmp/sme-sma.tagmismatch
+  336 total
