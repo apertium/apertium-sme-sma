@@ -758,5 +758,8 @@
     <!-- Punctuation -->
     <e><re>[;:,.\?]+</re><p><l><s n="CLB"/></l><r><s n="CLB"/></r></p></e>
     <e><p><l>excl<s n="CLB"/></l><r>excl<s n="CLB"/></r></p></e>
+
+    <e><re>[0-9]+([., ][0-9]+)?</re><p><l><s n="Num"/></l><r><s n="Num"/></r></p></e>
+
   </section>
 </dictionary>
