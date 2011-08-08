@@ -26,15 +26,15 @@ TARGETS_COMMON = \
 # First we compile the twol and lexc files.
 .deps/$(LANG1).twol.hfst: $(BASENAME).$(LANG1).twol
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc -r -i $(BASENAME).$(LANG1).twol -o $@
+	hfst-twolc -R -i $(BASENAME).$(LANG1).twol -o $@
 
 .deps/$(LANG1).lexc.hfst: $(BASENAME).$(LANG1).lexc
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-lexc $(BASENAME).$(LANG1).lexc -o $@
+	hfst-lexc -o $@ $(BASENAME).$(LANG1).lexc
 
 .deps/$(BASENAME).$(LANG1).hfst: .deps/$(LANG1).lexc.hfst .deps/$(LANG1).twol.hfst dev/apertium.analysis.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-compose-intersect -l .deps/$(LANG1).lexc.hfst .deps/$(LANG1).twol.hfst -o $@
+	hfst-compose-intersect -1 .deps/$(LANG1).lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
 
 #
 # The default form of the transducer is optimised
@@ -43,7 +43,7 @@ $(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.analysis.
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-invert .deps/$(BASENAME).$(LANG1).hfst -o .deps/$(PREFIX1).automorf.hfst.tmp
 	hfst-substitute -F dev/apertium.analysis.relabel -i .deps/$(PREFIX1).automorf.hfst.tmp -o .deps/$(PREFIX1).automorf.hfst
-	hfst-lookup-optimize .deps/$(PREFIX1).automorf.hfst -o $@
+	hfst-fst2fst -O -i  .deps/$(PREFIX1).automorf.hfst -o $@
 	rm .deps/$(PREFIX1).automorf.hfst.tmp
 
 #
@@ -52,7 +52,7 @@ $(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.analysis.
 
 .deps/$(LANG2).twol.hfst: $(BASENAME).$(LANG2).twol
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc -r -i $(BASENAME).$(LANG2).twol -o $@
+	hfst-twolc -R -i $(BASENAME).$(LANG2).twol -o $@
 
 .deps/$(LANG2).lexc.hfst: $(BASENAME).$(LANG2).lexc
 	if [ ! -d .deps ]; then mkdir .deps; fi
@@ -60,7 +60,7 @@ $(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.analysis.
 
 .deps/$(BASENAME).$(LANG2).hfst: .deps/$(LANG2).lexc.hfst .deps/$(LANG2).twol.hfst dev/apertium.generation.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-compose-intersect -l .deps/$(LANG2).lexc.hfst .deps/$(LANG2).twol.hfst -o $@
+	hfst-compose-intersect -1 .deps/$(LANG2).lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
 
 #
 # The default form of the transducer is optimised
@@ -68,13 +68,13 @@ $(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.analysis.
 $(PREFIX1).autogen.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.generation.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-substitute -F dev/apertium.generation.relabel -i .deps/$(BASENAME).$(LANG2).hfst -o .deps/$(PREFIX1).autogen.hfst
-	hfst-lookup-optimize .deps/$(PREFIX1).autogen.hfst -o $@
+	hfst-fst2fst -O -i  .deps/$(PREFIX1).autogen.hfst -o $@
 
 $(PREFIX2).automorf.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.analysis.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	hfst-invert .deps/$(BASENAME).$(LANG2).hfst -o .deps/$(PREFIX2).automorf.hfst.tmp
 	hfst-substitute -F dev/apertium.analysis.relabel -i .deps/$(PREFIX2).automorf.hfst.tmp -o .deps/$(PREFIX2).automorf.hfst
-	hfst-lookup-optimize .deps/$(PREFIX2).automorf.hfst -o $@
+	hfst-fst2fst -O -i  .deps/$(PREFIX2).automorf.hfst -o $@
 	rm .deps/$(PREFIX2).automorf.hfst.tmp
 
 #
