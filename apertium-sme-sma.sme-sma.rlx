@@ -3336,7 +3336,7 @@ SELECT:r722 ("láhka" Loc) IF (0 ("lága"))(*-1 BOC LINK *1 LAHKA-V-PASS LINK 0 
 	## Dat lea mearriduvvon lágas 33.
   	## Ii adnon norgga lágas daid attáldagaid birra maid dáččat mákse iežaset gonagassii.
 
-SELECT:r723 ("láhka") IF (0 ("lága" Loc))(*-1 ("reguleret") OR ("sihkkarastit") OR ("ovdanboahtit") OR (Der_Pass + "oaidnit") BARRIER VERB OR S-BOUNDARY) ;
+SELECT:r723 ("láhka") IF (0 ("lága" Loc))(*-1 ("reguleret") OR ("sihkkarastit") OR ("ovdanboahtit") OR (Der_Pass "oaidnit") BARRIER VERB OR S-BOUNDARY) ;
      ## Dan ferte reguleret lágain.
      
 SELECT:r724 ("láhka") IF (0 ("lága"))(1 ("guoskat") OR ("gustot")) ; 
@@ -7413,7 +7413,7 @@ REMOVE:r1723 Adv IF (NEGATE *-1 VERB BARRIER S-BOUNDARY2)(NEGATE 0 ("gosa") OR (
 	## Diehtojuohkin divššohasa lagamuš oapmahažžii.
 	## Stuorát guolit mat eai bisán čalmmiide, mannet čađa.
 
-SELECT: (A Attr) IF (*-1 BOC2 BARRIER NPNHA)(NEGATE 0 VERB)(NEGATE 1 Dem OR VERB OR Prop)(NEGATE 0 Prop LINK -1 (Prop Attr) LINK 2 CC)(NEGATE 0 Prop LINK 1 CC LINK 1 Prop LINK NOT 1 Prop)(*1 N BARRIER NPNH LINK NOT 1 Po)(NEGATE 1 COMMA LINK 1 N);
+SELECT (A Attr) IF (*-1 BOC2 BARRIER NPNHA)(NEGATE 0 VERB)(NEGATE 1 Dem OR VERB OR Prop)(NEGATE 0 Prop LINK -1 (Prop Attr) LINK 2 CC)(NEGATE 0 Prop LINK 1 CC LINK 1 Prop LINK NOT 1 Prop)(*1 N BARRIER NPNH LINK NOT 1 Po)(NEGATE 1 COMMA LINK 1 N);
 	## Golbma čáppa, doaimmalaš nieidda livžo áhčiset riegádanbeaivve.
 
 SELECT:r1725 (A Attr) IF (*-1 COPULAS BARRIER NOT-ADV)(NEGATE 0 Adv LINK 1 A)(1 A OR N LINK NOT 0 Acc OR Superl OR Ord)(NEGATE 1 Gen LINK *1 Po OR Loc OR Inf BARRIER NP-BOUNDARY)(NEGATE 1 Adv OR VERB OR ADVLCASE)(*2 go OR EOC OR Neg BARRIER NOT-NP);
@@ -8038,7 +8038,7 @@ REMOVE:r1842 VGen IF (0 (VGen));
 	# Supinum vs. potential
 	# --------------------
 SELECT:r3584 Pot IF (NEGATE *-1 VFIN BARRIER SV-BOUNDARY OR COMMA)(0 Sup);
-REMOVE: Pot IF (*-1 VFIN BARRIER SV-BOUNDARY OR COMMA)(0 Sup);	
+REMOVE Pot IF (*-1 VFIN BARRIER SV-BOUNDARY OR COMMA)(0 Sup);	
 	
 	## Eat dieđe, vuoššažit go bierggu dál.   (Pot)
 	## Son bođii sisa biepmu vieččažit.    (Sup)
@@ -8434,11 +8434,11 @@ MAP (@←ADVL) TARGET Inf (-1 Acc LINK -1 V-TRANS-ACT + Imprt LINK -1 BOS)(NEGAT
 MAP:r360 (@←ADVL) TARGET Inf IF (-1 ADVLCASE LINK NOT 0 NP-HEAD-NOM LINK *-1 V-NOT-AUX BARRIER NPNH1 LINK NOT 0 V-TRANS-ACT)(NEGATE 0 ("leat"))(*-2 VFIN BARRIER S-BOUNDARY2);
 
 
-MAP (@←ADVL) TARGET Inf IF (-1 (N Nom) LINK NOT 0 GEN-CONCEPT OR MIELLA OR (A Nom) OR Inf OR (Der_n) OR VERB OR (Px + Nom) LINK *-1 ("leat") BARRIER NPNH)(NEGATE 0 ("leat")) ;
+MAP (@←ADVL) TARGET Inf IF (-1 (N Nom) LINK NOT 0 GEN-CONCEPT OR MIELLA OR (A Nom) OR Inf OR (Der_n) OR VERB OR Px + Nom LINK *-1 ("leat") BARRIER NPNH)(NEGATE 0 ("leat")) ;
 	## Odne lea goalki, nu ahte lea buorre dálki vuolgit fávlái.
 	## Dán golbmasis ii leat ruhta oastit bileahta.
 	
-MAP:InfADVL (@←ADVL) TARGET Inf IF (-1 (N Nom) LINK NOT 0 GEN-CONCEPT OR MIELLA OR (A Nom) OR Inf OR (Der_n) OR VERB OR (Px + Nom) LINK *-1 ("leat") BARRIER NPNH)(0 V-TRANS-ACT LINK NOT *1 Acc BARRIER NPNH)(NEGATE 0 ("leat")) ;
+MAP:InfADVL (@←ADVL) TARGET Inf IF (-1 (N Nom) LINK NOT 0 GEN-CONCEPT OR MIELLA OR (A Nom) OR Inf OR (Der_n) OR VERB OR Px + Nom LINK *-1 ("leat") BARRIER NPNH)(0 V-TRANS-ACT LINK NOT *1 Acc BARRIER NPNH)(NEGATE 0 ("leat")) ;
 	## Mus lea biergu vuoššat. 
 	## Mus livčče guolit viežžat.  # Nickel s. 471
 
@@ -10648,7 +10648,7 @@ REMOVE:r2437 Acc IF (*-1 COPULAS BARRIER NOT-ADV-PCLE)(0 Gen)(*1 Po BARRIER NPNH
 REMOVE:r2438 Acc IF (*-1C Der_Pass BARRIER Inf OR SV-BOUNDARY2 LINK 0 VERB)(0 Gen)(NEGATE -1 Der_Pass LINK 0 PrfPrc LINK -1 CC LINK -1 Acc)(NEGATE *-1 (Der_Pass PrfPrc) BARRIER NPNH LINK *-1 V-TRANS-ACT-NOT-ACT);		
 	## ...mii lea celkojuvvon profehta Jesaja bokte.
 
-REMOVE:r2439 Nom IF (*-1C Nom BARRIER S-BOUNDARY2 OR ("dego") OR ("dugo") OR ("/") OR )(*-1 V-NOT-AUX BARRIER S-BOUNDARY2 LINK NOT 0 PrsPrc)(NEGATE 0 Num LINK -1 N OR ("§"))(NEGATE *-1 Nom BARRIER NAPP)(NEGATE 1 CC LINK 1 Nom)(NEGATE *-1 VFIN BARRIER S-BOUNDARY2 LINK *-1 VFIN BARRIER S-BOUNDARY2)(NEGATE -1 Attr OR CS)(NEGATE 0 Nom LINK *1 VFIN BARRIER S-BOUNDARY2);
+REMOVE:r2439 Nom IF (*-1C Nom BARRIER S-BOUNDARY2 OR ("dego") OR ("dugo") OR ("/") )(*-1 V-NOT-AUX BARRIER S-BOUNDARY2 LINK NOT 0 PrsPrc)(NEGATE 0 Num LINK -1 N OR ("§"))(NEGATE *-1 Nom BARRIER NAPP)(NEGATE 1 CC LINK 1 Nom)(NEGATE *-1 VFIN BARRIER S-BOUNDARY2 LINK *-1 VFIN BARRIER S-BOUNDARY2)(NEGATE -1 Attr OR CS)(NEGATE 0 Nom LINK *1 VFIN BARRIER S-BOUNDARY2);
 	## Na mun váccán joatkkaskuvlla doppe.
 	## Go Min Áigi áiggošii fitnat govvesteame luosa, lohká Tretnes iežas smávven juo duovi.
  # Two finite verbs, two Nom: "Nu guhkás go Gonagas mearrida gusto láhka..." 
@@ -13608,8 +13608,8 @@ REMOVE:r3258 V-DER; # Removes only if there is another reading.
 	## Mánáin lea vuoigatvuohta oažžut dearvvašvuođaiskkadeami.
 	## Dat ihte johtilit.
 
-REMOVE:r3259 (Der_Pass + IV) IF (*-1 (N Nom) OR (Num Nom) BARRIER VFIN)(0 (Der_Pass + TV)); 
-REMOVE:r3260 (Der_Pass + IV) IF (*1 (N Nom) OR (Num Nom) BARRIER VFIN)(0 (Der_Pass + TV)); 
+REMOVE:r3259 Der_Pass + IV IF (*-1 (N Nom) OR (Num Nom) BARRIER VFIN)(0 Der_Pass + TV); 
+REMOVE:r3260 Der_Pass + IV IF (*1 (N Nom) OR (Num Nom) BARRIER VFIN)(0 Der_Pass + TV); 
 
 REMOVE:r3262 Inf IF (*-1 BOS BARRIER VFIN)(0 VFIN)(*1 EOS BARRIER VFIN);
 	## Muhto baice geahččat ovddas guvlui.
@@ -14750,7 +14750,7 @@ MAP (@←ADVL) TARGET ADVL (*-1 @COMP-CS← BARRIER VERB OR S-BOUNDARY2) ;
     ## Sápmelaččat guđet orrot Norgga bealde Deanu, geavahit seammá gávtti go sápmelaččat Suoma bealde Deanu.
 
 MAP:r503 (@→ADVL) TARGET ("dás" Adv) IF (1 ("ovdal"));
-MAP (@→ADVL) TARGET (TIME-UNIT + Acc) IF (1 ("áigi" Adv));
+MAP (@→ADVL) TARGET TIME-UNIT + Acc IF (1 ("áigi" Adv));
 
 
 	
