@@ -396,7 +396,16 @@ LEXICON Root
  Rmiddle ; ! gaskbeaivi, this is the "new" R, not Rreal
 
 
+! 3 Ad hoc lexcica
 
+LEXICON Acronym
+NRK+ACR:NRK # ;
+
+LEXICON Interjection
+aj+Interj:aj # ;
+
+LEXICON PRSPRCTOADJ
+čálli+A+PrsPrc:čálli # ;
 
 ! Prefixing and compounding
 ! =========================
