@@ -30,7 +30,7 @@ TARGETS_COMMON = \
 
 .deps/$(LANG1).lexc.hfst: $(BASENAME).$(LANG1).lexc
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-lexc -o $@ $(BASENAME).$(LANG1).lexc
+	hfst-lexc --format foma -o $@ $(BASENAME).$(LANG1).lexc
 
 .deps/$(BASENAME).$(LANG1).hfst: .deps/$(LANG1).lexc.hfst .deps/$(LANG1).twol.hfst dev/apertium.analysis.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
@@ -56,7 +56,7 @@ $(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.analysis.
 
 .deps/$(LANG2).lexc.hfst: $(BASENAME).$(LANG2).lexc
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-lexc $(BASENAME).$(LANG2).lexc -o $@
+	hfst-lexc --format foma $(BASENAME).$(LANG2).lexc -o $@
 
 .deps/$(BASENAME).$(LANG2).hfst: .deps/$(LANG2).lexc.hfst .deps/$(LANG2).twol.hfst dev/apertium.generation.relabel
 	if [ ! -d .deps ]; then mkdir .deps; fi
@@ -81,13 +81,9 @@ $(PREFIX2).automorf.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.analysis.
 #	BILINGUAL DICTIONARY
 #
 
-.deps/$(BASENAME).$(PREFIX1).dix: $(BASENAME).$(PREFIX1).dix lexchoicebil.xsl
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	xsltproc lexchoicebil.xsl $(BASENAME).$(PREFIX1).dix > $@
-
-$(PREFIX1).autobil.bin: .deps/$(BASENAME).$(PREFIX1).dix
-	apertium-validate-dictionary .deps/$(BASENAME).$(PREFIX1).dix
-	lt-comp lr .deps/$(BASENAME).$(PREFIX1).dix $@
+$(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
+	apertium-validate-dictionary $(BASENAME).$(PREFIX1).dix
+	lt-comp lr $(BASENAME).$(PREFIX1).dix $@
 
 #
 #	CONSTRAINT GRAMMARS
