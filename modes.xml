@@ -15,10 +15,15 @@
         <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
-      <program name="apertium-transfer">
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
         <file name="apertium-sme-sma.sme-sma.t1x"/>
         <file name="sme-sma.t1x.bin"/>
-        <file name="sme-sma.autobil.bin"/>
       </program>
       <program name="apertium-interchunk">
         <file name="apertium-sme-sma.sme-sma.t2x"/>
@@ -85,6 +90,53 @@
 
 
 
+  <mode name="sme-sma-biltrans" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="sme-sma.automorf.hfst"/>
+      </program>
+      <program name="cg-proc">
+        <file name="sme-sma.rlx.bin"/> 
+      </program>
+      <program name="cg-proc -w">
+        <file name="sme-sma.lex.bin"/> 
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="sme-sma.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/> 
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="sme-sma-lextor" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="sme-sma.automorf.hfst"/>
+      </program>
+      <program name="cg-proc">
+        <file name="sme-sma.rlx.bin"/> 
+      </program>
+      <program name="cg-proc -w">
+        <file name="sme-sma.lex.bin"/> 
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="sme-sma.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/> 
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -t">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
   <mode name="sme-sma-chunker" install="no">
     <pipeline>
       <program name="hfst-proc -w">
@@ -100,10 +152,15 @@
         <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
-      <program name="apertium-transfer">
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
         <file name="apertium-sme-sma.sme-sma.t1x"/>
         <file name="sme-sma.t1x.bin"/>
-        <file name="sme-sma.autobil.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -152,10 +209,15 @@
         <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
-      <program name="apertium-transfer">
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
         <file name="apertium-sme-sma.sme-sma.t1x"/>
         <file name="sme-sma.t1x.bin"/>
-        <file name="sme-sma.autobil.bin"/>
       </program>
       <program name="apertium-interchunk">
         <file name="apertium-sme-sma.sme-sma.t2x"/>
@@ -183,10 +245,15 @@
         <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
-      <program name="apertium-transfer">
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
         <file name="apertium-sme-sma.sme-sma.t1x"/>
         <file name="sme-sma.t1x.bin"/>
-        <file name="sme-sma.autobil.bin"/>
       </program>
       <program name="apertium-interchunk">
         <file name="apertium-sme-sma.sme-sma.t2x"/>
@@ -219,10 +286,15 @@
         <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
-      <program name="apertium-transfer">
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
         <file name="apertium-sme-sma.sme-sma.t1x"/>
         <file name="sme-sma.t1x.bin"/>
-        <file name="sme-sma.autobil.bin"/>
       </program>
       <program name="apertium-interchunk">
         <file name="apertium-sme-sma.sme-sma.t2x"/>
