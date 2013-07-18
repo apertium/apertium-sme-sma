@@ -9,6 +9,7 @@ BASENAME=apertium-$(PREFIX1)
 TARGETS_COMMON = \
 	$(PREFIX1).automorf.hfst \
 	$(PREFIX1).autobil.bin \
+	$(PREFIX1).autolex.bin \
 	$(PREFIX1).autogen.hfst \
 	$(PREFIX2).automorf.hfst \
 	$(PREFIX1).rlx.bin \
@@ -96,6 +97,16 @@ $(PREFIX1).lex.bin: $(BASENAME).$(PREFIX1).lex
 	cg-comp $(BASENAME).$(PREFIX1).lex $@
 
 #
+#	LEXICAL SELECTION RULES
+#
+
+
+
+$(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
+	lrx-comp $(BASENAME).$(PREFIX1).lrx $@
+
+
+#
 #	TRANSFER RULES
 #
 
@@ -138,6 +149,7 @@ apertium_sme_modesdir=$(prefix)/share/apertium/modes/
 
 apertium_sme_sma_DATA=$(PREFIX1).automorf.hfst \
 		    $(PREFIX1).autobil.bin \
+		    $(PREFIX1).autolex.bin \
 		    $(PREFIX1).autogen.hfst \
 		    $(PREFIX2).automorf.hfst \
 		    $(PREFIX1).rlx.bin \

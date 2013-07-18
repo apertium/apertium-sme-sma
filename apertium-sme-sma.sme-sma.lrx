@@ -1,0 +1,5 @@
+<rules>
+  <rule>
+    <match lemma="bealgi" tags="N.*"><select lemma="bealketje" tags="N.*"/></match> 
+  </rule>
+</rules>

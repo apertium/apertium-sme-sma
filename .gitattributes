@@ -9,6 +9,7 @@
 /apertium-sme-sma.sma.twol -text
 /apertium-sme-sma.sme-sma.dix -text
 /apertium-sme-sma.sme-sma.lex -text
+/apertium-sme-sma.sme-sma.lrx -text
 /apertium-sme-sma.sme-sma.rlx -text
 /apertium-sme-sma.sme-sma.t1x -text
 /apertium-sme-sma.sme-sma.t2x -text
@@ -26,7 +27,6 @@ dev/generation-test.sh -text
 dev/langs.cfg.in -text
 dev/phrase -text
 dev/update-lexc.py -text
-/lexchoicebil.xsl -text
 /modes.xml -text
 /pending-tests.sh -text
 /sme-sma.prob -text
