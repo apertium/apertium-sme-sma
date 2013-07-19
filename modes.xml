@@ -5,11 +5,8 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
@@ -56,31 +53,13 @@
     </pipeline>
   </mode>
 
-  <mode name="sme-sma-lex" install="no">
-    <pipeline>
-      <program name="hfst-proc -w">
-        <file name="sme-sma.automorf.hfst"/>
-      </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
-      <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
-      </program>
-    </pipeline>
-  </mode>
-
-
   <mode name="sme-sma-tagger" install="no">
     <pipeline>
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
@@ -95,13 +74,10 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
+      <program name="cg-proc -w">
         <file name="sme-sma.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
+      <program name="apertium-tagger -g $3">
         <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
@@ -117,11 +93,8 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
@@ -142,11 +115,8 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
@@ -170,11 +140,8 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
@@ -199,11 +166,8 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
@@ -235,11 +199,8 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
@@ -276,11 +237,8 @@
       <program name="hfst-proc -w">
         <file name="sme-sma.automorf.hfst"/>
       </program>
-      <program name="cg-proc">
-        <file name="sme-sma.rlx.bin"/> 
-      </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.lex.bin"/> 
+        <file name="sme-sma.rlx.bin"/> 
       </program>
       <program name="apertium-tagger -g $2">
         <file name="sme-sma.prob"/>
