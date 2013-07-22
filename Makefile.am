@@ -40,32 +40,11 @@ $(PREFIX1).automorf.hfst: $(BASENAME).$(LANG1).att.gz .deps/$(PREFIX1).autobil.p
 #	SOUTH SÁMI TRANSDUCERS
 #
 
-.deps/$(LANG2).twol.hfst: $(BASENAME).$(LANG2).twol
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc -R -i $(BASENAME).$(LANG2).twol -o $@
+$(PREFIX1).autogen.hfst: $(BASENAME).$(LANG2).att.gz 
+	zcat $< | hfst-txt2fst | hfst-invert | hfst-fst2fst -O > $@
 
-.deps/$(LANG2).lexc.hfst: $(BASENAME).$(LANG2).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-lexc --format foma $(BASENAME).$(LANG2).lexc -o $@
-
-.deps/$(BASENAME).$(LANG2).hfst: .deps/$(LANG2).lexc.hfst .deps/$(LANG2).twol.hfst dev/apertium.generation.relabel
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-compose-intersect -1 .deps/$(LANG2).lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-#
-# The default form of the transducer is optimised
-#
-$(PREFIX1).autogen.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.generation.relabel
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-substitute -F dev/apertium.generation.relabel -i .deps/$(BASENAME).$(LANG2).hfst -o .deps/$(PREFIX1).autogen.hfst
-	hfst-fst2fst -O -i  .deps/$(PREFIX1).autogen.hfst -o $@
-
-$(PREFIX2).automorf.hfst: .deps/$(BASENAME).$(LANG2).hfst dev/apertium.analysis.relabel
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-invert .deps/$(BASENAME).$(LANG2).hfst -o .deps/$(PREFIX2).automorf.hfst.tmp
-	hfst-substitute -F dev/apertium.analysis.relabel -i .deps/$(PREFIX2).automorf.hfst.tmp -o .deps/$(PREFIX2).automorf.hfst
-	hfst-fst2fst -O -i  .deps/$(PREFIX2).automorf.hfst -o $@
-	rm .deps/$(PREFIX2).automorf.hfst.tmp
+$(PREFIX2).automorf.hfst: $(BASENAME).$(LANG2).att.gz 
+	zcat $< | hfst-txt2fst | hfst-fst2fst -O > $@
 
 #
 #	BILINGUAL DICTIONARY

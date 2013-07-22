@@ -3358,10 +3358,10 @@
 
 
     <!-- Punctuation -->
-<!--    <e><re>[;:,.\?]+</re><p><l><s n="clb"/></l><r><s n="clb"/></r></p></e>-->
+    <e><re>[;:,.\?]+</re><p><l><s n="clb"/></l><r><s n="clb"/></r></p></e>
     <e><p><l>excl<s n="clb"/></l><r>excl<s n="clb"/></r></p></e>
 
-<!--    <e><re>[0-9]+([., ][0-9]+)?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>-->
+    <e><re>[0-9]+([., ][0-9]+)?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 
   </section>
 </dictionary>

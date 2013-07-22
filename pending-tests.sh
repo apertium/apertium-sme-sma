@@ -8,6 +8,6 @@ then
     GREP='WORKS'
 fi
 
-sh wiki-tests.sh Pending sme sma update | grep -C $C "$GREP"
+bash wiki-tests.sh Pending sme sma update | grep -C $C "$GREP"
 
 
