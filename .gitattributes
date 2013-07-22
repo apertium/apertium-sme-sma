@@ -17,13 +17,9 @@
 /apertium-sme-sma.sme.att.gz -text
 /autogen.sh -text
 /configure.ac -text
-dev/apertium.analysis.relabel -text
-dev/apertium.generation.relabel -text
 dev/generation-report.txt -text
 dev/generation-test.sh -text
-dev/langs.cfg.in -text
 dev/phrase -text
-dev/update-lexc.py -text
 /modes.xml -text
 /pending-tests.sh -text
 /sme-sma.prob -text

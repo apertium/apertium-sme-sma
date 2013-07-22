@@ -2,7 +2,7 @@
 <modes>
   <mode name="sme-sma" install="yes">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -47,7 +47,7 @@
 
   <mode name="sme-sma-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
     </pipeline>
@@ -55,7 +55,7 @@
 
   <mode name="sme-sma-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -71,7 +71,7 @@
 
   <mode name="sme-sma-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -90,7 +90,7 @@
 
   <mode name="sme-sma-lextor" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -112,7 +112,7 @@
 
   <mode name="sme-sma-chunker" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -137,7 +137,7 @@
 
   <mode name="sme-sma-interchunk1" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -163,7 +163,7 @@
 
   <mode name="sme-sma-interchunk2" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -196,7 +196,7 @@
 
   <mode name="sme-sma-interchunk3" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
@@ -234,7 +234,7 @@
 
   <mode name="sme-sma-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
