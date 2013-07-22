@@ -27,13 +27,14 @@ TARGETS_COMMON = \
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	lt-print $(PREFIX1).autobil.bin | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX1).autobil.att
 	hfst-txt2fst -e ε <  .deps/$(PREFIX1).autobil.att > .deps/$(PREFIX1).autobil.hfst
-	echo " ?* " | hfst-regexp2fst > .deps/any-symbol.hfst
 	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper
+	echo " ?* " | hfst-regexp2fst > .deps/any-symbol.hfst
 	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-symbol.hfst -o .deps/$(PREFIX1).autobil.prefixes
 
 $(PREFIX1).automorf.hfst: $(BASENAME).$(LANG1).att.gz .deps/$(PREFIX1).autobil.prefixes
-	zcat $< | hfst-txt2fst | hfst-invert > .deps/$(BASENAME).$(LANG1).hfst
-	hfst-compose-intersect -1 .deps/$(PREFIX1).autobil.prefixes -2 .deps/$(BASENAME).$(LANG1).hfst -o - | hfst-invert | hfst-fst2fst -O -i - -o $@
+	zcat $< | hfst-txt2fst > .deps/$(BASENAME).$(LANG1).hfst
+	hfst-compose-intersect -1 .deps/$(BASENAME).$(LANG1).hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.trimmed
+	hfst-fst2fst -O -i .deps/$(PREFIX1).automorf.trimmed -o $@
 	
 #
 #	SOUTH SÁMI TRANSDUCERS
