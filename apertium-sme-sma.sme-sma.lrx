@@ -1,770 +1,773 @@
 <rules>
   <rule>
-    <match lemma="doarjja" tags="N.*"><select lemma="dåarjoe" tags="N.*"/></match>
+    <match lemma="son" tags="pron.*"><select lemma="dïhte" tags="pron.*"/></match>
   </rule>
   <rule>
-    <match lemma="áddejupmi" tags="N.*"><select lemma="goerkelimmie" tags="N.*"/></match>
+    <match lemma="doarjja" tags="n.*"><select lemma="dåarjoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="ahte" tags="CC"><select lemma="ahte" tags="CC"/></match>
+    <match lemma="áddejupmi" tags="n.*"><select lemma="goerkelimmie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="ahte" tags="CS"><select lemma="ahte" tags="CS"/></match>
+    <match lemma="ahte" tags="cc"><select lemma="ahte" tags="cc"/></match>
   </rule>
   <rule>
-    <match lemma="áidna" tags="Adv"><select lemma="vaajhkoen" tags="Adv"/></match>
+    <match lemma="ahte" tags="cs"><select lemma="ahte" tags="cs"/></match>
   </rule>
   <rule>
-    <match lemma="áidna" tags="A.*"><select lemma="aajnehke" tags="A.*"/></match>
+    <match lemma="áidna" tags="adv"><select lemma="vaajhkoen" tags="adv"/></match>
   </rule>
   <rule>
-    <match lemma="áigodat" tags="N.*"><select lemma="gohkedæjja" tags="N.*"/></match>
+    <match lemma="áidna" tags="a.*"><select lemma="aajnehke" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="áigumuš" tags="N.*"><select lemma="aajkoe" tags="N.*"/></match>
+    <match lemma="áigodat" tags="n.*"><select lemma="gohkedæjja" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="áigut" tags="V.TV.*"><select lemma="edtjedh" tags="V.*"/></match>
+    <match lemma="áigumuš" tags="n.*"><select lemma="aajkoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="áŋgir" tags="A.*"><select lemma="eadtjohke" tags="A.*"/></match>
+    <match lemma="áigut" tags="v.tv.*"><select lemma="edtjedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="árvvoštallan" tags="N.*"><select lemma="vierhtiedimmie" tags="N.*"/></match>
+    <match lemma="áŋgir" tags="a.*"><select lemma="eadtjohke" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="árvvoštallat" tags="V.TV.*"><select lemma="laejhtedh" tags="V.*"/></match>
+    <match lemma="árvvoštallan" tags="n.*"><select lemma="vierhtiedimmie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="ásahus" tags="N.*"><select lemma="institusjovne" tags="N.*"/></match>
+    <match lemma="árvvoštallat" tags="v.tv.*"><select lemma="laejhtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ávnnaldit" tags="V.TV.*"><select lemma="sigkestidh" tags="V.*"/></match>
+    <match lemma="ásahus" tags="n.*"><select lemma="institusjovne" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="badjel" tags="Adv"><select lemma="aatsolen" tags="Adv"/></match>
+    <match lemma="ávnnaldit" tags="v.tv.*"><select lemma="sigkestidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="badjel" tags="Po"><select lemma="bijjelen" tags="Po"/></match>
+    <match lemma="badjel" tags="adv"><select lemma="aatsolen" tags="adv"/></match>
   </rule>
   <rule>
-    <match lemma="báhčit" tags="V.TV.*"><select lemma="vuetjedh" tags="V.*"/></match>
+    <match lemma="badjel" tags="po"><select lemma="bijjelen" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="bálká" tags="N.*"><select lemma="baalhka" tags="N.*"/></match>
+    <match lemma="báhčit" tags="v.tv.*"><select lemma="vuetjedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="bálvaleaddji" tags="N.*"><select lemma="gaagkije" tags="N.*"/></match>
+    <match lemma="bálká" tags="n.*"><select lemma="baalhka" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="bárdni" tags="N.*"><select lemma="baernie" tags="N.*"/></match>
+    <match lemma="bálvaleaddji" tags="n.*"><select lemma="gaagkije" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="bargat" tags="V.TV.*"><select lemma="daajhtodh" tags="V.*"/></match>
+    <match lemma="bárdni" tags="n.*"><select lemma="baernie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="bassi" tags="A.*"><select lemma="aejlies" tags="A.*"/></match>
+    <match lemma="bargat" tags="v.tv.*"><select lemma="daajhtodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="bassi" tags="N.*"><select lemma="bissiebiejjie" tags="N.*"/></match>
+    <match lemma="bassi" tags="a.*"><select lemma="aejlies" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="bávččas" tags="A.*"><select lemma="bååktjehke" tags="A.*"/></match>
+    <match lemma="bassi" tags="n.*"><select lemma="bissiebiejjie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="bávččas" tags="N.*"><select lemma="haerhpie" tags="N.*"/></match>
+    <match lemma="bávččas" tags="a.*"><select lemma="bååktjehke" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="beahttit" tags="V.TV.*"><select lemma="biehtedh" tags="V.*"/></match>
+    <match lemma="bávččas" tags="n.*"><select lemma="haerhpie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="bealgi" tags="N.*"><select lemma="bealketje" tags="N.*"/></match>
+    <match lemma="beahttit" tags="v.tv.*"><select lemma="biehtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="bealli" tags="N.*"><select lemma="bielie" tags="N.*"/></match>
+    <match lemma="bealgi" tags="n.*"><select lemma="bealketje" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="beassi" tags="N.*"><select lemma="biesie" tags="N.*"/></match>
+    <match lemma="bealli" tags="n.*"><select lemma="bielie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="beastit" tags="V.TV.*"><select lemma="beerkedh" tags="V.*"/></match>
+    <match lemma="beassi" tags="n.*"><select lemma="biesie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="beroštupmi" tags="N.*"><select lemma="ïedtje" tags="N.*"/></match>
+    <match lemma="beastit" tags="v.tv.*"><select lemma="beerkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="biehkut" tags="V.IV.*"><select lemma="hanhkedidh" tags="V.*"/></match>
+    <match lemma="beroštupmi" tags="n.*"><select lemma="ïedtje" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="bihttá" tags="N.*"><select lemma="leaksoe" tags="N.*"/></match>
+    <match lemma="biehkut" tags="v.iv.*"><select lemma="hanhkedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="bivdit" tags="V.TV.*"><select lemma="maedtedh" tags="V.*"/></match>
+    <match lemma="bihttá" tags="n.*"><select lemma="leaksoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="bivval" tags="A.*"><select lemma="bïjveles" tags="A.*"/></match>
+    <match lemma="bivdit" tags="v.tv.*"><select lemma="maedtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="bivval" tags="N.*"><select lemma="bïjvele" tags="N.*"/></match>
+    <match lemma="bivval" tags="a.*"><select lemma="bïjveles" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="borrat" tags="V.TV.*"><select lemma="byöpmedidh" tags="V.*"/></match>
+    <match lemma="bivval" tags="n.*"><select lemma="bïjvele" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="botkalit" tags="V.TV.*"><select lemma="birhkehtidh" tags="V.*"/></match>
+    <match lemma="borrat" tags="v.tv.*"><select lemma="byöpmedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="buorre" tags="A.*"><select lemma="buerie" tags="A.*"/></match>
+    <match lemma="botkalit" tags="v.tv.*"><select lemma="birhkehtidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="cáhpat" tags="V.TV.*"><select lemma="tsaapedh" tags="V.*"/></match>
+    <match lemma="buorre" tags="a.*"><select lemma="buerie" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="čálli" tags="N.*"><select lemma="tjaelije" tags="N.*"/></match>
+    <match lemma="cáhpat" tags="v.tv.*"><select lemma="tsaapedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="čállit" tags="V.TV.*"><select lemma="tjaeledh" tags="V.*"/></match>
+    <match lemma="čálli" tags="n.*"><select lemma="tjaelije" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="čanastat" tags="N.*"><select lemma="baadtehtahke" tags="N.*"/></match>
+    <match lemma="čállit" tags="v.tv.*"><select lemma="tjaeledh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ceahkki" tags="N.*"><select lemma="daltese" tags="N.*"/></match>
+    <match lemma="čanastat" tags="n.*"><select lemma="baadtehtahke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="cealkka" tags="N.*"><select lemma="jiehtege" tags="N.*"/></match>
+    <match lemma="ceahkki" tags="n.*"><select lemma="daltese" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="čeargut" tags="V.IV.*"><select lemma="laakedh" tags="V.*"/></match>
+    <match lemma="cealkka" tags="n.*"><select lemma="jiehtege" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="čeassat" tags="V.IV.*"><select lemma="njabpedidh" tags="V.*"/></match>
+    <match lemma="čeargut" tags="v.iv.*"><select lemma="laakedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="čiehka" tags="N.*"><select lemma="gaave" tags="N.*"/></match>
+    <match lemma="čeassat" tags="v.iv.*"><select lemma="njabpedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="čielgat" tags="V.IV.*"><select lemma="tjïelkedh" tags="V.*"/></match>
+    <match lemma="čiehka" tags="n.*"><select lemma="gaave" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="čielggas" tags="A.*"><select lemma="tjïelke" tags="A.*"/></match>
+    <match lemma="čielgat" tags="v.iv.*"><select lemma="tjïelkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="čoahkkin" tags="N.*"><select lemma="tjåanghkoe" tags="N.*"/></match>
+    <match lemma="čielggas" tags="a.*"><select lemma="tjïelke" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="čohkka" tags="N.*"><select lemma="tjahke" tags="N.*"/></match>
+    <match lemma="čoahkkin" tags="n.*"><select lemma="tjåanghkoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="čuodjat" tags="V.IV.*"><select lemma="bååjhtedh" tags="V.*"/></match>
+    <match lemma="čohkka" tags="n.*"><select lemma="tjahke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="čuorvut" tags="V.TV.*"><select lemma="tjåarvodh" tags="V.*"/></match>
+    <match lemma="čuodjat" tags="v.iv.*"><select lemma="bååjhtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="čuovgat" tags="A.*"><select lemma="tjuavkeds" tags="A.*"/></match>
+    <match lemma="čuorvut" tags="v.tv.*"><select lemma="tjåarvodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="čuovgat" tags="V.TV.*"><select lemma="goekedh" tags="V.*"/></match>
+    <match lemma="čuovgat" tags="a.*"><select lemma="tjuavkeds" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="cuvket" tags="V.TV.*"><select lemma="murhkedh" tags="V.*"/></match>
+    <match lemma="čuovgat" tags="v.tv.*"><select lemma="goekedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="dáhpáhuvvat" tags="V.IV.*"><select lemma="sjugniehtovvedh" tags="V.*"/></match>
+    <match lemma="cuvket" tags="v.tv.*"><select lemma="murhkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="dahppat" tags="V.TV.*"><select lemma="dahpedh" tags="V.*"/></match>
+    <match lemma="dáhpáhuvvat" tags="v.iv.*"><select lemma="sjugniehtovvedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="dállu" tags="N.*"><select lemma="gåetie" tags="N.*"/></match>
+    <match lemma="dahppat" tags="v.tv.*"><select lemma="dahpedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="darvehit" tags="V.TV.*"><select lemma="njamkedh" tags="V.*"/></match>
+    <match lemma="dállu" tags="n.*"><select lemma="gåetie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="deaddit" tags="V.TV.*"><select lemma="dïebtjestehtedh" tags="V.*"/></match>
+    <match lemma="darvehit" tags="v.tv.*"><select lemma="njamkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="deavdit" tags="V.TV.*"><select lemma="dievhtedh" tags="V.*"/></match>
+    <match lemma="deaddit" tags="v.tv.*"><select lemma="dïebtjestehtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="diehtu" tags="N.*"><select lemma="daajroe" tags="N.*"/></match>
+    <match lemma="deavdit" tags="v.tv.*"><select lemma="dievhtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="diggot" tags="V.TV.*"><select lemma="dongkedh" tags="V.*"/></match>
+    <match lemma="diehtu" tags="n.*"><select lemma="daajroe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="diibmu" tags="N.*"><select lemma="tæjma" tags="N.*"/></match>
+    <match lemma="diggot" tags="v.tv.*"><select lemma="dongkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="dilálašvuohta" tags="N.*"><select lemma="nuepie" tags="N.*"/></match>
+    <match lemma="diibmu" tags="n.*"><select lemma="tæjma" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="divvut" tags="V.TV.*"><select lemma="staeriedidh" tags="V.*"/></match>
+    <match lemma="dilálašvuohta" tags="n.*"><select lemma="nuepie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="doadjit" tags="V.TV.*"><select lemma="tsåapkodh" tags="V.*"/></match>
+    <match lemma="divvut" tags="v.tv.*"><select lemma="staeriedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="doaibmabidju" tags="N.*"><select lemma="råajvarimmie" tags="N.*"/></match>
+    <match lemma="doadjit" tags="v.tv.*"><select lemma="tsåapkodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="doaibmaguovlu" tags="N.*"><select lemma="vierhkiedajve" tags="N.*"/></match>
+    <match lemma="doaibmabidju" tags="n.*"><select lemma="råajvarimmie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="doaibma" tags="N.*"><select lemma="darjome" tags="N.*"/></match>
+    <match lemma="doaibmaguovlu" tags="n.*"><select lemma="vierhkiedajve" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="doarrut" tags="V.TV.*"><select lemma="dåarodh" tags="V.*"/></match>
+    <match lemma="doaibma" tags="n.*"><select lemma="darjome" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="doavttir" tags="N.*"><select lemma="dåaktere" tags="N.*"/></match>
+    <match lemma="doarrut" tags="v.tv.*"><select lemma="dåarodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="dohkkehit" tags="V.IV.*"><select lemma="dåhkasjehtedh" tags="V.*"/></match>
+    <match lemma="doavttir" tags="n.*"><select lemma="dåaktere" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="dovdat" tags="V.TV.*"><select lemma="damtedh" tags="V.*"/></match>
+    <match lemma="dohkkehit" tags="v.iv.*"><select lemma="dåhkasjehtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="dovdot" tags="V.IV.*"><select lemma="domtedh" tags="V.*"/></match>
+    <match lemma="dovdat" tags="v.tv.*"><select lemma="damtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="dovdu" tags="N.*"><select lemma="domtese" tags="N.*"/></match>
+    <match lemma="dovdot" tags="v.iv.*"><select lemma="domtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="duogŋat" tags="V.TV.*"><select lemma="doengedh" tags="V.*"/></match>
+    <match lemma="dovdu" tags="n.*"><select lemma="domtese" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="eadni" tags="N.*"><select lemma="tjidtjie" tags="N.*"/></match>
+    <match lemma="duogŋat" tags="v.tv.*"><select lemma="doengedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ealga" tags="N.*"><select lemma="jollejuelkie" tags="N.*"/></match>
+    <match lemma="eadni" tags="n.*"><select lemma="tjidtjie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="eallin" tags="N.*"><select lemma="hïegke" tags="N.*"/></match>
+    <match lemma="ealga" tags="n.*"><select lemma="jollejuelkie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="eallit" tags="V.IV.*"><select lemma="jieledh" tags="V.*"/></match>
+    <match lemma="eallin" tags="n.*"><select lemma="hïegke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="eana" tags="N.*"><select lemma="eatneme" tags="N.*"/></match>
+    <match lemma="eallit" tags="v.iv.*"><select lemma="jieledh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="earránit" tags="V.IV.*"><select lemma="juakadidh" tags="V.*"/></match>
+    <match lemma="eana" tags="n.*"><select lemma="eatneme" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="fárrui" tags="Adv"><select lemma="gujmie" tags="Adv"/></match>
+    <match lemma="earránit" tags="v.iv.*"><select lemma="juakadidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="fárrui" tags="Po"><select lemma="mieteli" tags="Po"/></match>
+    <match lemma="fárrui" tags="adv"><select lemma="gujmie" tags="adv"/></match>
   </rule>
   <rule>
-    <match lemma="fertet" tags="V.IV.*"><select lemma="tjoeredh" tags="V.*"/></match>
+    <match lemma="fárrui" tags="po"><select lemma="mieteli" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="gahččat" tags="V.IV.*"><select lemma="gahtjedh" tags="V.*"/></match>
+    <match lemma="fertet" tags="v.iv.*"><select lemma="tjoeredh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="gáibi" tags="N.*"><select lemma="gaejpie" tags="N.*"/></match>
+    <match lemma="gahččat" tags="v.iv.*"><select lemma="gahtjedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="galgat" tags="V.IV.*"><select lemma="byöredh" tags="V.*"/></match>
+    <match lemma="gáibi" tags="n.*"><select lemma="gaejpie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="gállu" tags="N.*"><select lemma="gaalloe" tags="N.*"/></match>
+    <match lemma="galgat" tags="v.iv.*"><select lemma="byöredh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="gárri" tags="N.*"><select lemma="lihtie" tags="N.*"/></match>
+    <match lemma="gállu" tags="n.*"><select lemma="gaalloe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="garrudit" tags="V.TV.*"><select lemma="våarnodh" tags="V.*"/></match>
+    <match lemma="gárri" tags="n.*"><select lemma="lihtie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="gaskan" tags="A.*"><select lemma="byölehts" tags="A.*"/></match>
+    <match lemma="garrudit" tags="v.tv.*"><select lemma="våarnodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="gaskan" tags="Pr.*"><select lemma="gaskoeh" tags="Pr.*"/></match>
+    <match lemma="gaskan" tags="a.*"><select lemma="byölehts" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="gaska" tags="N.*"><select lemma="dajve" tags="N.*"/></match>
+    <match lemma="gaskan" tags="pr.*"><select lemma="gaskoeh" tags="pr.*"/></match>
   </rule>
   <rule>
-    <match lemma="gaska" tags="N.*"><select lemma="gåhkaldahke" tags="N.*"/></match>
+    <match lemma="gaska" tags="n.*"><select lemma="dajve" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="gaskkas" tags="N.*"><select lemma="gasngese" tags="N.*"/></match>
+    <match lemma="gaska" tags="n.*"><select lemma="gåhkaldahke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="gaskkas" tags="Po"><select lemma="gaskeste" tags="Po"/></match>
+    <match lemma="gaskkas" tags="n.*"><select lemma="gasngese" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="geallat" tags="V.TV.*"><select lemma="sohkesjidh" tags="V.*"/></match>
+    <match lemma="gaskkas" tags="po"><select lemma="gaskeste" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="gii" tags="Pron.Interr.*"><select lemma="gie" tags="Pron.Interr.*"/></match>
+    <match lemma="geallat" tags="v.tv.*"><select lemma="sohkesjidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="gii" tags="Pron.Rel.*"><select lemma="gie" tags="Pron.Rel.*"/></match>
+    <match lemma="gii" tags="pron.interr.*"><select lemma="gie" tags="pron.interr.*"/></match>
   </rule>
   <rule>
-    <match lemma="giitit" tags="V.TV.*"><select lemma="gijhtedh" tags="V.*"/></match>
+    <match lemma="gii" tags="pron.rel.*"><select lemma="gie" tags="pron.rel.*"/></match>
   </rule>
   <rule>
-    <match lemma="gilvu" tags="N.*"><select lemma="gaahtjeme" tags="N.*"/></match>
+    <match lemma="giitit" tags="v.tv.*"><select lemma="gijhtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="girji" tags="N.*"><select lemma="gærja" tags="N.*"/></match>
+    <match lemma="gilvu" tags="n.*"><select lemma="gaahtjeme" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="givssidit" tags="V.TV.*"><select lemma="irhkedh" tags="V.*"/></match>
+    <match lemma="girji" tags="n.*"><select lemma="gærja" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="goaivut" tags="V.TV.*"><select lemma="beavkodh" tags="V.*"/></match>
+    <match lemma="givssidit" tags="v.tv.*"><select lemma="irhkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="goaivut" tags="V.TV.*"><select lemma="berkedh" tags="V.*"/></match>
+    <match lemma="goaivut" tags="v.tv.*"><select lemma="beavkodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="goarránit" tags="V.IV.*"><select lemma="ovmurriedidh" tags="V.*"/></match>
+    <match lemma="goaivut" tags="v.tv.*"><select lemma="berkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="gohččut" tags="V.TV.*"><select lemma="gohtjedidh" tags="V.*"/></match>
+    <match lemma="goarránit" tags="v.iv.*"><select lemma="ovmurriedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="govdat" tags="A.*"><select lemma="gamte" tags="A.*"/></match>
+    <match lemma="gohččut" tags="v.tv.*"><select lemma="gohtjedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="guoibmi" tags="N.*"><select lemma="guejmie" tags="N.*"/></match>
+    <match lemma="govdat" tags="a.*"><select lemma="gamte" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="guossohit" tags="V.TV.*"><select lemma="gåassoehtidh" tags="V.*"/></match>
+    <match lemma="guoibmi" tags="n.*"><select lemma="guejmie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="guovdelas" tags="Po"><select lemma="gaskoeh" tags="Po"/></match>
+    <match lemma="guossohit" tags="v.tv.*"><select lemma="gåassoehtidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="guovdelas" tags="Pr.*"><select lemma="gaskoeh" tags="Po"/></match>
+    <match lemma="guovdelas" tags="po"><select lemma="gaskoeh" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="guovdu" tags="Pr.*"><select lemma="gaskoeh" tags="Po"/></match>
+    <match lemma="guovdelas" tags="pr.*"><select lemma="gaskoeh" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="guovlu" tags="N.*"><select lemma="dajve" tags="N.*"/></match>
+    <match lemma="guovdu" tags="pr.*"><select lemma="gaskoeh" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="hálddašit" tags="V.TV.*"><select lemma="reeredh" tags="V.*"/></match>
+    <match lemma="guovlu" tags="n.*"><select lemma="dajve" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="hállan" tags="N.*"><select lemma="syjje" tags="N.*"/></match>
+    <match lemma="hálddašit" tags="v.tv.*"><select lemma="reeredh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="hápmi" tags="N.*"><select lemma="haamoe" tags="N.*"/></match>
+    <match lemma="hállan" tags="n.*"><select lemma="syjje" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="hárdit" tags="V.TV.*"><select lemma="væssjastehtedh" tags="V.*"/></match>
+    <match lemma="hápmi" tags="n.*"><select lemma="haamoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="hehttet" tags="V.TV.*"><select lemma="hööptedh" tags="V.*"/></match>
+    <match lemma="hárdit" tags="v.tv.*"><select lemma="væssjastehtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="hilgut" tags="V.TV.*"><select lemma="beelhkedh" tags="V.*"/></match>
+    <match lemma="hehttet" tags="v.tv.*"><select lemma="hööptedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="hoavda" tags="N.*"><select lemma="åvtehke" tags="N.*"/></match>
+    <match lemma="hilgut" tags="v.tv.*"><select lemma="beelhkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="jáhkkit" tags="V.TV.*"><select lemma="aerviedidh" tags="V.*"/></match>
+    <match lemma="hoavda" tags="n.*"><select lemma="åvtehke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="Jáhkot" tags="N.Prop.Mal.*"><select lemma="Jåhha" tags="N.Prop.*"/></match>
+    <match lemma="jáhkkit" tags="v.tv.*"><select lemma="aerviedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="jápmit" tags="V.IV.*"><select lemma="jaemedh" tags="V.*"/></match>
+    <match lemma="Jáhkot" tags="n.prop.mal.*"><select lemma="Jåhha" tags="n.prop.*"/></match>
   </rule>
   <rule>
-    <match lemma="jaskat" tags="A.*"><select lemma="sjeavohth" tags="A.*"/></match>
+    <match lemma="jápmit" tags="v.iv.*"><select lemma="jaemedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="jávkat" tags="V.IV.*"><select lemma="daajkedh" tags="V.*"/></match>
+    <match lemma="jaskat" tags="a.*"><select lemma="sjeavohth" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="jearahallan" tags="N.*"><select lemma="byjrehtimmie" tags="N.*"/></match>
+    <match lemma="jávkat" tags="v.iv.*"><select lemma="daajkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="jearrat" tags="V.TV.*"><select lemma="darhkelidh" tags="V.*"/></match>
+    <match lemma="jearahallan" tags="n.*"><select lemma="byjrehtimmie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="jietna" tags="N.*"><select lemma="tjoeje" tags="N.*"/></match>
+    <match lemma="jearrat" tags="v.tv.*"><select lemma="darhkelidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="joavku" tags="N.*"><select lemma="dåehkie" tags="N.*"/></match>
+    <match lemma="jietna" tags="n.*"><select lemma="tjoeje" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="jođihit" tags="V.IV.*"><select lemma="lijrehtidh" tags="V.*"/></match>
+    <match lemma="joavku" tags="n.*"><select lemma="dåehkie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="jurddašit" tags="V.TV.*"><select lemma="ussjedidh" tags="V.*"/></match>
+    <match lemma="jođihit" tags="v.iv.*"><select lemma="lijrehtidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="lagas" tags="A.*"><select lemma="gietskies" tags="A.*"/></match>
+    <match lemma="jurddašit" tags="v.tv.*"><select lemma="ussjedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="láhka" tags="N.*"><select lemma="laake" tags="N.*"/></match>
+    <match lemma="lagas" tags="a.*"><select lemma="gietskies" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="lahka" tags="Po"><select lemma="lïhke" tags="Po"/></match>
+    <match lemma="láhka" tags="n.*"><select lemma="laake" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="lahka" tags="Pr.*"><select lemma="lïhke" tags="Po"/></match>
+    <match lemma="lahka" tags="po"><select lemma="lïhke" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="lámis" tags="A.*"><select lemma="laemies" tags="A.*"/></match>
+    <match lemma="lahka" tags="pr.*"><select lemma="lïhke" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="lámis" tags="N.*"><select lemma="laemies" tags="N.*"/></match>
+    <match lemma="lámis" tags="a.*"><select lemma="laemies" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="lapmat" tags="V.IV.*"><select lemma="suejielidh" tags="V.*"/></match>
+    <match lemma="lámis" tags="n.*"><select lemma="laemies" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="láppis" tags="A.*"><select lemma="laemies" tags="A.*"/></match>
+    <match lemma="lapmat" tags="v.iv.*"><select lemma="suejielidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="láppis" tags="N.*"><select lemma="laemies" tags="N.*"/></match>
+    <match lemma="láppis" tags="a.*"><select lemma="laemies" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="latnja" tags="N.*"><select lemma="tjïehtjele" tags="N.*"/></match>
+    <match lemma="láppis" tags="n.*"><select lemma="laemies" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="lávet" tags="N.*"><select lemma="tsietsehthmuerjie" tags="N.*"/></match>
+    <match lemma="latnja" tags="n.*"><select lemma="tjïehtjele" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="lávet" tags="V.TV.*"><select lemma="provhkedh" tags="V.*"/></match>
+    <match lemma="lávet" tags="n.*"><select lemma="tsietsehthmuerjie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="lávki" tags="N.*"><select lemma="sïlle" tags="N.*"/></match>
+    <match lemma="lávet" tags="v.tv.*"><select lemma="provhkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="lihtti" tags="N.*"><select lemma="lihtie" tags="N.*"/></match>
+    <match lemma="lávki" tags="n.*"><select lemma="sïlle" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="liidni" tags="N.*"><select lemma="tyjje" tags="N.*"/></match>
+    <match lemma="lihtti" tags="n.*"><select lemma="lihtie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="loahppa" tags="N.*"><select lemma="minngiegietjie" tags="N.*"/></match>
+    <match lemma="liidni" tags="n.*"><select lemma="tyjje" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="lohkat" tags="V.TV.*"><select lemma="jiehtedh" tags="V.*"/></match>
+    <match lemma="loahppa" tags="n.*"><select lemma="minngiegietjie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="lohkki" tags="N.*"><select lemma="lohkije" tags="N.*"/></match>
+    <match lemma="lohkat" tags="v.tv.*"><select lemma="jiehtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="luoddanit" tags="V.IV.*"><select lemma="gajhkanidh" tags="V.*"/></match>
+    <match lemma="lohkki" tags="n.*"><select lemma="lohkije" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="luoddanit" tags="V.IV.*"><select lemma="loedtenidh" tags="V.*"/></match>
+    <match lemma="luoddanit" tags="v.iv.*"><select lemma="gajhkanidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="máhttájeaddji" tags="N.*"><select lemma="learohke" tags="N.*"/></match>
+    <match lemma="luoddanit" tags="v.iv.*"><select lemma="loedtenidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="máihli" tags="N.*"><select lemma="aaloe" tags="N.*"/></match>
+    <match lemma="máhttájeaddji" tags="n.*"><select lemma="learohke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="málle" tags="N.*"><select lemma="goere" tags="N.*"/></match>
+    <match lemma="máihli" tags="n.*"><select lemma="aaloe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="maŋŋá" tags="Po"><select lemma="mænngan" tags="Po"/></match>
+    <match lemma="málle" tags="n.*"><select lemma="goere" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="maŋŋá" tags="Pr.*"><select lemma="mænngan" tags="Pr.*"/></match>
+    <match lemma="maŋŋá" tags="po"><select lemma="mænngan" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="maŋŋel" tags="Po"><select lemma="mïnngesne" tags="Po"/></match>
+    <match lemma="maŋŋá" tags="pr.*"><select lemma="mænngan" tags="pr.*"/></match>
   </rule>
   <rule>
-    <match lemma="maŋŋel" tags="Pr.*"><select lemma="mïnngesne" tags="Po"/></match>
+    <match lemma="maŋŋel" tags="po"><select lemma="mïnngesne" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="maŋŋil" tags="Po"><select lemma="mïnngesne" tags="Po"/></match>
+    <match lemma="maŋŋel" tags="pr.*"><select lemma="mïnngesne" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="maŋŋil" tags="Pr.*"><select lemma="mïnngesne" tags="Pr.*"/></match>
+    <match lemma="maŋŋil" tags="po"><select lemma="mïnngesne" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="mannat" tags="V.IV.*"><select lemma="mïnnedh" tags="V.*"/></match>
+    <match lemma="maŋŋil" tags="pr.*"><select lemma="mïnngesne" tags="pr.*"/></match>
   </rule>
   <rule>
-    <match lemma="mearka" tags="N.*"><select lemma="væhta" tags="N.*"/></match>
+    <match lemma="mannat" tags="v.iv.*"><select lemma="mïnnedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="mearridit" tags="V.TV.*"><select lemma="mieriedidh" tags="V.*"/></match>
+    <match lemma="mearka" tags="n.*"><select lemma="væhta" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="mearri" tags="N.*"><select lemma="mierie" tags="N.*"/></match>
+    <match lemma="mearridit" tags="v.tv.*"><select lemma="mieriedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="meattá" tags="Po"><select lemma="baalteli" tags="Po"/></match>
+    <match lemma="mearri" tags="n.*"><select lemma="mierie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="meattá" tags="Pr.*"><select lemma="baalteli" tags="Po"/></match>
+    <match lemma="meattá" tags="po"><select lemma="baalteli" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="miella" tags="N.*"><select lemma="mïele" tags="N.*"/></match>
+    <match lemma="meattá" tags="pr.*"><select lemma="baalteli" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="mii" tags="Pron.Interr.*"><select lemma="mij" tags="Pron.Interr.*"/></match>
+    <match lemma="miella" tags="n.*"><select lemma="mïele" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="mii" tags="Pron.Pers.*"><select lemma="manne" tags="Pron.Pers.*"/></match>
+    <match lemma="mii" tags="pron.interr.*"><select lemma="mij" tags="pron.interr.*"/></match>
   </rule>
   <rule>
-    <match lemma="mii" tags="Pron.Rel.*"><select lemma="mij" tags="Pron.Rel.*"/></match>
+    <match lemma="mii" tags="pron.pers.*"><select lemma="manne" tags="pron.pers.*"/></match>
   </rule>
   <rule>
-    <match lemma="moalla" tags="N.*"><select lemma="aamhtese" tags="N.*"/></match>
+    <match lemma="mii" tags="pron.rel.*"><select lemma="mij" tags="pron.rel.*"/></match>
   </rule>
   <rule>
-    <match lemma="moarsi" tags="N.*"><select lemma="mïelehke" tags="N.*"/></match>
+    <match lemma="moalla" tags="n.*"><select lemma="aamhtese" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="mohkastit" tags="V.TV.*"><select lemma="gajvedh" tags="V.*"/></match>
+    <match lemma="moarsi" tags="n.*"><select lemma="mïelehke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="mohkki" tags="N.*"><select lemma="gaave" tags="N.*"/></match>
+    <match lemma="mohkastit" tags="v.tv.*"><select lemma="gajvedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="movttiidahttit" tags="V.IV.*"><select lemma="eadtjaldehtedh" tags="V.*"/></match>
+    <match lemma="mohkki" tags="n.*"><select lemma="gaave" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="muitalit" tags="V.TV.*"><select lemma="bïeljelidh" tags="V.*"/></match>
+    <match lemma="movttiidahttit" tags="v.iv.*"><select lemma="eadtjaldehtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="nammadit" tags="V.TV.*"><select lemma="moenesovvedh" tags="V.*"/></match>
+    <match lemma="muitalit" tags="v.tv.*"><select lemma="bïeljelidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="nannet" tags="V.TV.*"><select lemma="nænnoestidh" tags="V.*"/></match>
+    <match lemma="nammadit" tags="v.tv.*"><select lemma="moenesovvedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="navdit" tags="V.TV.*"><select lemma="vïenhtedh" tags="V.*"/></match>
+    <match lemma="nannet" tags="v.tv.*"><select lemma="nænnoestidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="nieida" tags="N.*"><select lemma="nïejte" tags="N.*"/></match>
+    <match lemma="navdit" tags="v.tv.*"><select lemma="vïenhtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="njálggat" tags="A.*"><select lemma="hearskoes" tags="A.*"/></match>
+    <match lemma="nieida" tags="n.*"><select lemma="nïejte" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="njammat" tags="V.TV.*"><select lemma="njammedh" tags="V.*"/></match>
+    <match lemma="njálggat" tags="a.*"><select lemma="hearskoes" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="njámmat" tags="V.TV.*"><select lemma="sööpedh" tags="V.*"/></match>
+    <match lemma="njammat" tags="v.tv.*"><select lemma="njammedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="njárga" tags="N.*"><select lemma="njaarke" tags="N.*"/></match>
+    <match lemma="njámmat" tags="v.tv.*"><select lemma="sööpedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="njoammut" tags="V.IV.*"><select lemma="goegkerdidh" tags="V.*"/></match>
+    <match lemma="njárga" tags="n.*"><select lemma="njaarke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="njuovvat" tags="V.TV.*"><select lemma="gahtjehtidh" tags="V.*"/></match>
+    <match lemma="njoammut" tags="v.iv.*"><select lemma="goegkerdidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="nuorra" tags="A.*"><select lemma="noere" tags="A.*"/></match>
+    <match lemma="njuovvat" tags="v.tv.*"><select lemma="gahtjehtidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="nuorra" tags="N.*"><select lemma="fijrie" tags="N.*"/></match>
+    <match lemma="nuorra" tags="a.*"><select lemma="noere" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="oahcudit" tags="V.TV.*"><select lemma="seereldehtedh" tags="V.*"/></match>
+    <match lemma="nuorra" tags="n.*"><select lemma="fijrie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="oahppa" tags="N.*"><select lemma="leara" tags="N.*"/></match>
+    <match lemma="oahcudit" tags="v.tv.*"><select lemma="seereldehtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="oassi" tags="N.*"><select lemma="boelhke" tags="N.*"/></match>
+    <match lemma="oahppa" tags="n.*"><select lemma="leara" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="oažži" tags="N.*"><select lemma="bearkoe" tags="N.*"/></match>
+    <match lemma="oassi" tags="n.*"><select lemma="boelhke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="oažžut" tags="V.TV.*"><select lemma="åadtjodh" tags="V.*"/></match>
+    <match lemma="oažži" tags="n.*"><select lemma="bearkoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="ođas" tags="A.*"><select lemma="orre" tags="A.*"/></match>
+    <match lemma="oažžut" tags="v.tv.*"><select lemma="åadtjodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ođas" tags="N.*"><select lemma="saernie" tags="N.*"/></match>
+    <match lemma="ođas" tags="a.*"><select lemma="orre" tags="a.*"/></match>
   </rule>
   <rule>
-    <match lemma="ohcat" tags="V.TV.*"><select lemma="ohtsedh" tags="V.*"/></match>
+    <match lemma="ođas" tags="n.*"><select lemma="saernie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="orohat" tags="N.*"><select lemma="sïjte" tags="N.*"/></match>
+    <match lemma="ohcat" tags="v.tv.*"><select lemma="ohtsedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="orrut" tags="V.IV.*"><select lemma="årrodh" tags="V.*"/></match>
+    <match lemma="orohat" tags="n.*"><select lemma="sïjte" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="ossodat" tags="N.*"><select lemma="goevtese" tags="N.*"/></match>
+    <match lemma="orrut" tags="v.iv.*"><select lemma="årrodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ovdal" tags="Pr.*"><select lemma="aarebi" tags="Po"/></match>
+    <match lemma="ossodat" tags="n.*"><select lemma="goevtese" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="raddi" tags="N.*"><select lemma="boenge" tags="N.*"/></match>
+    <match lemma="ovdal" tags="pr.*"><select lemma="aarebi" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="ráhkadit" tags="V.TV.*"><select lemma="darjodh" tags="V.*"/></match>
+    <match lemma="raddi" tags="n.*"><select lemma="boenge" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="ráhput" tags="V.TV.*"><select lemma="gaarkoehtidh" tags="V.*"/></match>
+    <match lemma="ráhkadit" tags="v.tv.*"><select lemma="darjodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="rámidit" tags="V.TV.*"><select lemma="garmerdidh" tags="V.*"/></match>
+    <match lemma="ráhput" tags="v.tv.*"><select lemma="gaarkoehtidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="rastá" tags="Po"><select lemma="rastah" tags="Po"/></match>
+    <match lemma="rámidit" tags="v.tv.*"><select lemma="garmerdidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="rastá" tags="Pr.*"><select lemma="rastah" tags="Pr.*"/></match>
+    <match lemma="rastá" tags="po"><select lemma="rastah" tags="po"/></match>
   </rule>
   <rule>
-    <match lemma="reaidu" tags="N.*"><select lemma="dïrrege" tags="N.*"/></match>
+    <match lemma="rastá" tags="pr.*"><select lemma="rastah" tags="pr.*"/></match>
   </rule>
   <rule>
-    <match lemma="riekti" tags="N.*"><select lemma="rïekte" tags="N.*"/></match>
+    <match lemma="reaidu" tags="n.*"><select lemma="dïrrege" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="riššat" tags="V.IV.*"><select lemma="frårrodh" tags="V.*"/></match>
+    <match lemma="riekti" tags="n.*"><select lemma="rïekte" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="rissi" tags="N.*"><select lemma="båskoe" tags="N.*"/></match>
+    <match lemma="riššat" tags="v.iv.*"><select lemma="frårrodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ruovgat" tags="V.TV.*"><select lemma="snahkadidh" tags="V.*"/></match>
+    <match lemma="rissi" tags="n.*"><select lemma="båskoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="ruvdno" tags="N.*"><select lemma="kråvna" tags="N.*"/></match>
+    <match lemma="ruovgat" tags="v.tv.*"><select lemma="snahkadidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ruvvet" tags="V.TV.*"><select lemma="knugkedh" tags="V.*"/></match>
+    <match lemma="ruvdno" tags="n.*"><select lemma="kråvna" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="šaddat" tags="V.IV.*"><select lemma="sjïdtedh" tags="V.*"/></match>
+    <match lemma="ruvvet" tags="v.tv.*"><select lemma="knugkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="sadji" tags="N.*"><select lemma="sijjie" tags="N.*"/></match>
+    <match lemma="šaddat" tags="v.iv.*"><select lemma="sjïdtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="sadjit" tags="V.TV.*"><select lemma="fïjledidh" tags="V.*"/></match>
+    <match lemma="sadji" tags="n.*"><select lemma="sijjie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="salla" tags="N.*"><select lemma="eskie" tags="N.*"/></match>
+    <match lemma="sadjit" tags="v.tv.*"><select lemma="fïjledidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="sárdnut" tags="V.TV.*"><select lemma="saarnodh" tags="V.*"/></match>
+    <match lemma="salla" tags="n.*"><select lemma="eskie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="sárgut" tags="V.TV.*"><select lemma="naajedh" tags="V.*"/></match>
+    <match lemma="sárdnut" tags="v.tv.*"><select lemma="saarnodh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="seakti" tags="N.*"><select lemma="sieptie" tags="N.*"/></match>
+    <match lemma="sárgut" tags="v.tv.*"><select lemma="naajedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="šleađgut" tags="V.IV.*"><select lemma="pleajhkasjidh" tags="V.*"/></match>
+    <match lemma="seakti" tags="n.*"><select lemma="sieptie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="soadji" tags="N.*"><select lemma="såaja" tags="N.*"/></match>
+    <match lemma="šleađgut" tags="v.iv.*"><select lemma="pleajhkasjidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="sodji" tags="N.*"><select lemma="sojjedimmie" tags="N.*"/></match>
+    <match lemma="soadji" tags="n.*"><select lemma="såaja" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="stoahkat" tags="V.IV.*"><select lemma="rajjadidh" tags="V.*"/></match>
+    <match lemma="sodji" tags="n.*"><select lemma="sojjedimmie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="suddat" tags="V.IV.*"><select lemma="sjalkedh" tags="V.*"/></match>
+    <match lemma="stoahkat" tags="v.iv.*"><select lemma="rajjadidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="suoibut" tags="V.IV.*"><select lemma="gåvnjerdidh" tags="V.*"/></match>
+    <match lemma="suddat" tags="v.iv.*"><select lemma="sjalkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="ulbmil" tags="N.*"><select lemma="ulmie" tags="N.*"/></match>
+    <match lemma="suoibut" tags="v.iv.*"><select lemma="gåvnjerdidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="urbi" tags="N.*"><select lemma="urpie" tags="N.*"/></match>
+    <match lemma="ulbmil" tags="n.*"><select lemma="ulmie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vahágahttit" tags="N.*"><select lemma="skaara" tags="N.*"/></match>
+    <match lemma="urbi" tags="n.*"><select lemma="urpie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vahágahttit" tags="V.TV.*"><select lemma="irhkedh" tags="V.*"/></match>
+    <match lemma="vahágahttit" tags="n.*"><select lemma="skaara" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vahát" tags="N.*"><select lemma="goerpe" tags="N.*"/></match>
+    <match lemma="vahágahttit" tags="v.tv.*"><select lemma="irhkedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="váidit" tags="V.TV.*"><select lemma="gïelkerdidh" tags="V.*"/></match>
+    <match lemma="vahát" tags="n.*"><select lemma="goerpe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="váivi" tags="N.*"><select lemma="barkoestradtje" tags="N.*"/></match>
+    <match lemma="váidit" tags="v.tv.*"><select lemma="gïelkerdidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="váldit" tags="V.TV.*"><select lemma="bïksedh" tags="V.*"/></match>
+    <match lemma="váivi" tags="n.*"><select lemma="barkoestradtje" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vásihit" tags="V.TV.*"><select lemma="damtedh" tags="V.*"/></match>
+    <match lemma="váldit" tags="v.tv.*"><select lemma="bïksedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="vástidit" tags="V.TV.*"><select lemma="vaestiedidh" tags="V.*"/></match>
+    <match lemma="vásihit" tags="v.tv.*"><select lemma="damtedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="vavdat" tags="V.IV.*"><select lemma="dulhtjestidh" tags="V.*"/></match>
+    <match lemma="vástidit" tags="v.tv.*"><select lemma="vaestiedidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="veahka" tags="N.*"><select lemma="faamoe" tags="N.*"/></match>
+    <match lemma="vavdat" tags="v.iv.*"><select lemma="dulhtjestidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="verdde" tags="N.*"><select lemma="båanta" tags="N.*"/></match>
+    <match lemma="veahka" tags="n.*"><select lemma="faamoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vielti" tags="N.*"><select lemma="bahke" tags="N.*"/></match>
+    <match lemma="verdde" tags="n.*"><select lemma="båanta" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="viidna" tags="N.*"><select lemma="vijne" tags="N.*"/></match>
+    <match lemma="vielti" tags="n.*"><select lemma="bahke" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="visti" tags="N.*"><select lemma="gåetie" tags="N.*"/></match>
+    <match lemma="viidna" tags="n.*"><select lemma="vijne" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuodja" tags="N.*"><select lemma="voeje" tags="N.*"/></match>
+    <match lemma="visti" tags="n.*"><select lemma="gåetie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuodjit" tags="V.TV.*"><select lemma="vuejedh" tags="V.*"/></match>
+    <match lemma="vuodja" tags="n.*"><select lemma="voeje" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuohppát" tags="V.IV.*"><select lemma="haampeldidh" tags="V.*"/></match>
+    <match lemma="vuodjit" tags="v.tv.*"><select lemma="vuejedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuoigŋa" tags="N.*"><select lemma="aajmoe" tags="N.*"/></match>
+    <match lemma="vuohppát" tags="v.iv.*"><select lemma="haampeldidh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuordit" tags="V.TV.*"><select lemma="vuertedh" tags="V.*"/></match>
+    <match lemma="vuoigŋa" tags="n.*"><select lemma="aajmoe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuorru" tags="N.*"><select lemma="våaroe" tags="N.*"/></match>
+    <match lemma="vuordit" tags="v.tv.*"><select lemma="vuertedh" tags="v.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuostá" tags="N.*"><select lemma="vuasta" tags="N.*"/></match>
+    <match lemma="vuorru" tags="n.*"><select lemma="våaroe" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuostá" tags="Po"><select lemma="vuestie" tags="Po"/></match>
+    <match lemma="vuostá" tags="n.*"><select lemma="vuasta" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="vuovdnái" tags="A.*"><select lemma="naarpehke" tags="A.*"/></match>
+    <match lemma="vuostá" tags="po"><select lemma="vuestie" tags="po"/></match>
+  </rule>
+  <rule>
+    <match lemma="vuovdnái" tags="a.*"><select lemma="naarpehke" tags="a.*"/></match>
   </rule>
 </rules> 

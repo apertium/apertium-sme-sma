@@ -15,7 +15,7 @@
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="sme-sma.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -103,7 +103,7 @@
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
-      <program name="lrx-proc -t">
+      <program name="lrx-proc -m -t">
         <file name="sme-sma.autolex.bin"/>
       </program>
     </pipeline>
@@ -125,7 +125,7 @@
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="sme-sma.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -176,7 +176,7 @@
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="sme-sma.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -209,7 +209,7 @@
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="sme-sma.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -247,7 +247,7 @@
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="sme-sma.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
