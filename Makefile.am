@@ -23,29 +23,18 @@ TARGETS_COMMON = \
 #	NORTHERN SÁMI TRANSDUCERS
 #
 
-# First we compile the twol and lexc files.
-.deps/$(LANG1).twol.hfst: $(BASENAME).$(LANG1).twol
+.deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin
 	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc -R -i $(BASENAME).$(LANG1).twol -o $@
+	lt-print $(PREFIX1).autobil.bin | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX1).autobil.att
+	hfst-txt2fst -e ε <  .deps/$(PREFIX1).autobil.att > .deps/$(PREFIX1).autobil.hfst
+	echo " ?* " | hfst-regexp2fst > .deps/any-symbol.hfst
+	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper
+	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-symbol.hfst -o .deps/$(PREFIX1).autobil.prefixes
 
-.deps/$(LANG1).lexc.hfst: $(BASENAME).$(LANG1).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-lexc --format foma -o $@ $(BASENAME).$(LANG1).lexc
-
-.deps/$(BASENAME).$(LANG1).hfst: .deps/$(LANG1).lexc.hfst .deps/$(LANG1).twol.hfst dev/apertium.analysis.relabel
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-compose-intersect -1 .deps/$(LANG1).lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
-
-#
-# The default form of the transducer is optimised
-#
-$(PREFIX1).automorf.hfst: .deps/$(BASENAME).$(LANG1).hfst dev/apertium.analysis.relabel
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-invert .deps/$(BASENAME).$(LANG1).hfst -o .deps/$(PREFIX1).automorf.hfst.tmp
-	hfst-substitute -F dev/apertium.analysis.relabel -i .deps/$(PREFIX1).automorf.hfst.tmp -o .deps/$(PREFIX1).automorf.hfst
-	hfst-fst2fst -O -i  .deps/$(PREFIX1).automorf.hfst -o $@
-	rm .deps/$(PREFIX1).automorf.hfst.tmp
-
+$(PREFIX1).automorf.hfst: $(BASENAME).$(LANG1).att.gz .deps/$(PREFIX1).autobil.prefixes
+	zcat $< | hfst-txt2fst | hfst-invert > .deps/$(BASENAME).$(LANG1).hfst
+	hfst-compose-intersect -1 .deps/$(PREFIX1).autobil.prefixes -2 .deps/$(BASENAME).$(LANG1).hfst -o - | hfst-invert | hfst-fst2fst -O -i - -o $@
+	
 #
 #	SOUTH SÁMI TRANSDUCERS
 #
