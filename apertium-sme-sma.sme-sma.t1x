@@ -4,8 +4,9 @@
 <section-def-cats>
   <def-cat n="nom">
      <cat-item tags="n.*"/>
-     <cat-item tags="v.*.der3.der_n.N.*"/>
-     <cat-item tags="v.*.der2.actor.N.*"/>
+     <cat-item tags="v.*.der_n.n.*"/>
+     <cat-item tags="v.*.actor.n.*"/>
+     <cat-item tags="v.*.der_nomag.n.*"/>
   </def-cat>
   <def-cat n="genmod">
      <cat-item tags="n.*.gen.@→N"/>
@@ -112,13 +113,16 @@
      <attr-item tags="n.prop.mal"/>
      <attr-item tags="n.prop.sur"/>
      <attr-item tags="n.prop.plc"/>
-     <attr-item tags="v.iv.der3.der_n.n"/>
-     <attr-item tags="v.tv.der3.der_n.n"/>
-     <attr-item tags="v.iv.der2.actor.n"/>
-     <attr-item tags="v.tv.der2.actor.n"/>
-     <attr-item tags="v.der3.der_n.n"/>
-     <attr-item tags="v.der2.actor.n"/>
-     <attr-item tags="v.der1.der_nomag.n"/>
+     <attr-item tags="v.iv.der_n.n"/>
+     <attr-item tags="v.tv.der_n.n"/>
+     <attr-item tags="v.iv.actor.n"/>
+     <attr-item tags="v.tv.actor.n"/>
+     <attr-item tags="v.iv.der_n.n"/>
+     <attr-item tags="v.iv.actor.n"/>
+     <attr-item tags="v.iv.der_nomag.n"/>
+     <attr-item tags="v.tv.der_n.n"/>
+     <attr-item tags="v.tv.actor.n"/>
+     <attr-item tags="v.tv.der_nomag.n"/>
   </def-attr>
   
   <def-attr n="a_genmod">

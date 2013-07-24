@@ -32,7 +32,7 @@ TARGETS_COMMON = \
 	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-symbol.hfst -o .deps/$(PREFIX1).autobil.prefixes
 
 $(PREFIX1).automorf.hfst: $(BASENAME).$(LANG1).att.gz .deps/$(PREFIX1).autobil.prefixes
-	gzcat $< | hfst-txt2fst > .deps/$(BASENAME).$(LANG1).hfst
+	$(ZCAT) $< | hfst-txt2fst > .deps/$(BASENAME).$(LANG1).hfst
 	hfst-compose-intersect -1 .deps/$(BASENAME).$(LANG1).hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.trimmed
 	hfst-fst2fst -O -i .deps/$(PREFIX1).automorf.trimmed -o $@
 	
@@ -41,10 +41,10 @@ $(PREFIX1).automorf.hfst: $(BASENAME).$(LANG1).att.gz .deps/$(PREFIX1).autobil.p
 #
 
 $(PREFIX1).autogen.hfst: $(BASENAME).$(LANG2).att.gz 
-	gzcat $< | hfst-txt2fst | hfst-invert | hfst-fst2fst -O > $@
+	$(ZCAT) $< | hfst-txt2fst | hfst-invert | hfst-fst2fst -O > $@
 
 $(PREFIX2).automorf.hfst: $(BASENAME).$(LANG2).att.gz 
-	gzcat $< | hfst-txt2fst | hfst-fst2fst -O > $@
+	$(ZCAT) $< | hfst-txt2fst | hfst-fst2fst -O > $@
 
 #
 #	BILINGUAL DICTIONARY
