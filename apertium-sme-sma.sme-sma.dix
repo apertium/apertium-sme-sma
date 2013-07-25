@@ -17,6 +17,7 @@
 
     <sdef n="pers"/>
     <sdef n="logo"/>
+    <sdef n="refl"/>
     <sdef n="rel"/>
     <sdef n="interr"/>
     <sdef n="dem"/>
@@ -71,14 +72,17 @@
     <e><p><l>ja<s n="cc"/></l><r>jïh<s n="cc"/></r></p></e>
     <e><p><l>muhto<s n="cc"/></l><r>mohte<s n="cc"/></r></p></e>
     <e><p><l>vai<s n="cc"/></l><r>vuj<s n="cc"/></r></p></e>
+    <e><p><l>dahje<s n="cc"/></l><r>jallh<s n="cc"/></r></p></e>
 
     <!-- SECTION: Subjunctions -->
 
     <e><p><l>ahte<s n="cs"/></l><r>ahte<s n="cs"/></r></p></e>
     <e><p><l>go<s n="cs"/></l><r>goh<s n="cs"/></r></p></e>
     <e><p><l>jos<s n="cs"/></l><r>jis<s n="cs"/></r></p></e>
+    <e r="LR"><p><l>jus<s n="cs"/></l><r>jis<s n="cs"/></r></p></e>
     <e><p><l>mađe<s n="cs"/></l><r>medtie<s n="cs"/></r></p></e>
     <e><p><l>mo<s n="cs"/></l><r>maaje<s n="cs"/></r></p></e>
+    <e><p><l>vaikko<s n="cs"/></l><r>jalhts<s n="cs"/></r></p></e>
 
     <!-- SECTION: Adpositions -->
 
@@ -185,6 +189,8 @@
     <e><p><l>mii<s n="pron"/><s n="rel"/></l><r>mij<s n="pron"/><s n="rel"/></r></p></e>
     <e><p><l>gii<s n="pron"/><s n="rel"/></l><r>gie<s n="pron"/><s n="rel"/></r></p></e>
     <e><p><l>guhte<s n="pron"/><s n="rel"/></l><r>gie<s n="pron"/><s n="rel"/></r></p></e>
+
+    <e><p><l>ieš<s n="pron"/><s n="refl"/></l><r>jïjtje<s n="pron"/><s n="refl"/></r></p></e>
 
     <e><p><l>dát<s n="pron"/><s n="dem"/></l><r>daate<s n="pron"/><s n="dem"/></r></p></e>
 
@@ -1532,6 +1538,7 @@
     <e><p><l>rohttu<s n="n"/></l><r>sohte<s n="n"/></r></p></e>
     <e><p><l>rolla<s n="n"/></l><r>rolle<s n="n"/></r></p></e>
     <e><p><l>rotnu<s n="n"/></l><r>råtnoe<s n="n"/></r></p></e>
+    <e><p><l>ruhta<s n="n"/></l><r>beetnege<s n="n"/></r></p></e>
     <e><p><l>ruhtabursa<s n="n"/></l><r>bongke<s n="n"/></r></p></e>
     <e><p><l>ruhtadilli<s n="n"/></l><r>ekonomije<s n="n"/></r></p></e>
     <e><p><l>ruitu<s n="n"/></l><r>baetie<s n="n"/></r></p></e>
@@ -2492,6 +2499,8 @@
     <!-- SECTION: Adverbs -->
 
  
+    <e><p><l>sihke<s n="adv"/></l><r>dovne<s n="adv"/></r></p></e>
+    <e><p><l>vel<s n="adv"/></l><r>annje<s n="adv"/></r></p></e>
     <e><p><l>de<s n="adv"/></l><r>dellie<s n="adv"/></r></p></e>
     <!--<e><p><l>odne<s n="adv"/></l><r>daenbiejjien<s n="adv"/></r></p></e>-->
     <e><p><l>badjel<s n="adv"/></l><r>aatsolen<s n="adv"/></r></p></e>
