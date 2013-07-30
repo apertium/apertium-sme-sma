@@ -7,6 +7,7 @@
      <cat-item tags="v.*.der_n.n.*"/>
      <cat-item tags="v.*.actor.n.*"/>
      <cat-item tags="v.*.der_nomag.n.*"/>
+     <cat-item tags="v.*.actio.*"/>
   </def-cat>
   <def-cat n="genmod">
      <cat-item tags="n.*.gen.@→N"/>
@@ -117,6 +118,8 @@
      <attr-item tags="v.tv.der_n.n"/>
      <attr-item tags="v.iv.actor.n"/>
      <attr-item tags="v.tv.actor.n"/>
+     <attr-item tags="v.tv.actio"/>
+     <attr-item tags="v.iv.actio"/>
      <attr-item tags="v.iv.der_n.n"/>
      <attr-item tags="v.iv.actor.n"/>
      <attr-item tags="v.iv.der_nomag.n"/>
@@ -185,6 +188,7 @@
      <attr-item tags="pron.pers"/>
      <attr-item tags="pron.rel"/>
      <attr-item tags="pron.refl"/>
+     <attr-item tags="pron.logo"/>
      <attr-item tags="pron.interr"/>
      <attr-item tags="pron.dem"/>
      <attr-item tags="pron.indef"/>
@@ -585,8 +589,51 @@
     </choose>
   </def-macro>
 
+  <def-macro n="convert-poss1" npar="1">
+    <choose>
+      <when>
+        <test>
+          <equal>
+            <clip pos="1" side="sl" part="poss"/>
+            <lit-tag v="pxdu1"/>
+          </equal>
+        </test>
+        <let>
+          <clip pos="1" side="tl" part="poss"/>
+          <lit-tag v="pxsg1"/>
+        </let>
+      </when>
+      <when>
+        <test>
+          <equal>
+            <clip pos="1" side="sl" part="poss"/>
+            <lit-tag v="pxdu2"/>
+          </equal>
+        </test>
+        <let>
+          <clip pos="1" side="tl" part="poss"/>
+          <lit-tag v="pxsg2"/>
+        </let>
+      </when>
+      <when>
+        <test>
+          <equal>
+            <clip pos="1" side="sl" part="poss"/>
+            <lit-tag v="pxdu3"/>
+          </equal>
+        </test>
+        <let>
+          <clip pos="1" side="tl" part="poss"/>
+          <lit-tag v="pxsg3"/>
+        </let>
+      </when>
+    </choose>
+  </def-macro>
 
   <def-macro n="assign_case1" npar="1">
+    <call-macro n="convert-poss1">
+      <with-param pos="1"/>
+    </call-macro>
     <choose>
       <when>
         <test>

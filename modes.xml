@@ -273,4 +273,49 @@
     </pipeline>
   </mode>
 
+  <mode name="sme-sma-debug">
+    <pipeline>
+      <program name="hfst-proc -w -e">
+        <file name="sme-sma.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="sme-sma.rlx.bin"/> 
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="sme-sma.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/> 
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-sme-sma.sme-sma.t1x"/>
+        <file name="sme-sma.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-sme-sma.sme-sma.t2x"/>
+        <file name="sme-sma.t2x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-sme-sma.sme-sma.t3x"/>
+        <file name="sme-sma.t3x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-sme-sma.sme-sma.t4x"/>
+        <file name="sme-sma.t4x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-sme-sma.sme-sma.t5x"/>
+        <file name="sme-sma.t5x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="sme-sma.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
 </modes>
