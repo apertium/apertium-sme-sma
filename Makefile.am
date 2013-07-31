@@ -32,8 +32,8 @@ TARGETS_COMMON = \
 	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-symbol.hfst -o .deps/$(PREFIX1).autobil.prefixes
 
 $(PREFIX1).automorf.hfst: $(BASENAME).$(LANG1).att.gz .deps/$(PREFIX1).autobil.prefixes
-	$(ZCAT) $< | hfst-txt2fst > .deps/$(BASENAME).$(LANG1).hfst
-	hfst-compose-intersect -1 .deps/$(BASENAME).$(LANG1).hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.trimmed
+	$(ZCAT) $< | hfst-txt2fst > .deps/$(LANG1).automorf.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1).automorf.hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.trimmed
 	hfst-fst2fst -O -i .deps/$(PREFIX1).automorf.trimmed -o $@
 	
 #
