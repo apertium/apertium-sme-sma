@@ -481,6 +481,12 @@
             <lit v=""/>
         </let>
       </when>
+      <otherwise> <!-- delete focus particle by default -->
+        <let>
+            <clip pos="1" side="tl" part="foc"/>
+            <lit v=""/>
+        </let>
+      </otherwise>
     </choose> 
   </def-macro>
 
