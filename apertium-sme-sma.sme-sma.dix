@@ -22,6 +22,19 @@
     <sdef n="interr"/>
     <sdef n="dem"/>
 
+    <sdef n="sg1"/>
+    <sdef n="sg2"/>
+    <sdef n="sg3"/>
+
+    <sdef n="du1"/>
+    <sdef n="du2"/>
+    <sdef n="du3"/>
+
+    <sdef n="pl1"/>
+    <sdef n="pl2"/>
+    <sdef n="pl3"/>
+
+
     <sdef n="prop"/>
     <sdef n="plc"/>
     <sdef n="mal"/>
@@ -170,21 +183,21 @@
 
     <!-- SECTION: Pronouns -->
 
-    <e><p><l>mun<s n="pron"/><s n="pers"/></l><r>manne<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>don<s n="pron"/><s n="pers"/></l><r>datne<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>dat<s n="pron"/><s n="pers"/></l><r>dïhte<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>son<s n="pron"/><s n="pers"/></l><r>dïhte<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>son<s n="pron"/><s n="pers"/></l><r>satne<s n="pron"/><s n="logo"/></r></p></e>
+    <e><p><l>mun<s n="pron"/><s n="pers"/><s n="sg1"/></l><r>manne<s n="pron"/><s n="pers"/><s n="sg1"/></r></p></e>
+    <e><p><l>don<s n="pron"/><s n="pers"/><s n="sg2"/></l><r>datne<s n="pron"/><s n="pers"/><s n="sg2"/></r></p></e>
+    <e><p><l>dat<s n="pron"/><s n="pers"/><s n="sg3"/></l><r>dïhte<s n="pron"/><s n="pers"/><s n="sg3"/></r></p></e>
+    <e><p><l>son<s n="pron"/><s n="pers"/><s n="sg3"/></l><r>dïhte<s n="pron"/><s n="pers"/><s n="sg3"/></r></p></e>
+    <e><p><l>son<s n="pron"/><s n="pers"/><s n="sg3"/></l><r>satne<s n="pron"/><s n="logo"/><s n="sg3"/></r></p></e>
 
-    <e><p><l>mun<s n="pron"/><s n="pers"/></l><r>månnoeh<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>don<s n="pron"/><s n="pers"/></l><r>dåtnoeh<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>son<s n="pron"/><s n="pers"/></l><r>dïhte<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>son<s n="pron"/><s n="pers"/></l><r>såtnoeh<s n="pron"/><s n="logo"/></r></p></e>
+    <e><p><l>mun<s n="pron"/><s n="pers"/><s n="du1"/></l><r>månnoeh<s n="pron"/><s n="pers"/><s n="du1"/></r></p></e>
+    <e><p><l>don<s n="pron"/><s n="pers"/><s n="du1"/></l><r>dåtnoeh<s n="pron"/><s n="pers"/><s n="du2"/></r></p></e>
+    <e><p><l>son<s n="pron"/><s n="pers"/><s n="du1"/></l><r>dïhte<s n="pron"/><s n="pers"/><s n="du3"/></r></p></e>
+    <e><p><l>son<s n="pron"/><s n="pers"/><s n="du1"/></l><r>såtnoeh<s n="pron"/><s n="logo"/><s n="du3"/></r></p></e>
 
-    <e><p><l>mun<s n="pron"/><s n="pers"/></l><r>mijjieh<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>don<s n="pron"/><s n="pers"/></l><r>dijjieh<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>son<s n="pron"/><s n="pers"/></l><r>dïhte<s n="pron"/><s n="pers"/></r></p></e>
-    <e><p><l>son<s n="pron"/><s n="pers"/></l><r>sijjieh<s n="pron"/><s n="logo"/></r></p></e>
+    <e><p><l>mun<s n="pron"/><s n="pers"/><s n="pl1"/></l><r>mijjieh<s n="pron"/><s n="pers"/><s n="pl1"/></r></p></e>
+    <e><p><l>don<s n="pron"/><s n="pers"/><s n="pl2"/></l><r>dijjieh<s n="pron"/><s n="pers"/><s n="pl2"/></r></p></e>
+    <e><p><l>son<s n="pron"/><s n="pers"/><s n="pl3"/></l><r>dïhte<s n="pron"/><s n="pers"/><s n="pl3"/></r></p></e>
+    <e><p><l>son<s n="pron"/><s n="pers"/><s n="pl3"/></l><r>sijjieh<s n="pron"/><s n="logo"/><s n="pl3"/></r></p></e>
 
     <e><p><l>mii<s n="pron"/><s n="rel"/></l><r>mij<s n="pron"/><s n="rel"/></r></p></e>
     <e><p><l>gii<s n="pron"/><s n="rel"/></l><r>gie<s n="pron"/><s n="rel"/></r></p></e>
