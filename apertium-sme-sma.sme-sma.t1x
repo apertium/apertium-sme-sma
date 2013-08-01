@@ -2,6 +2,10 @@
 <transfer default="chunk">
 
 <section-def-cats>
+  <def-cat n="n-prop-ant">
+     <cat-item tags="n.prop.mal.*"/>
+     <cat-item tags="n.prop.fem.*"/>
+  </def-cat>
   <def-cat n="nom">
      <cat-item tags="n.*"/>
      <cat-item tags="v.*.der_n.n.*"/>
@@ -111,7 +115,6 @@
      <attr-item tags="n"/>
      <attr-item tags="n.prop"/>
      <attr-item tags="n.prop.org"/>
-     <attr-item tags="n.prop.mal"/>
      <attr-item tags="n.prop.sur"/>
      <attr-item tags="n.prop.plc"/>
      <attr-item tags="v.iv.der_n.n"/>
@@ -705,6 +708,46 @@
   </rule>
 
     <!-- Noun is the head -->
+
+  <rule comment="REGLA: PROP">
+     <pattern>
+       <pattern-item n="n-prop-ant"/>
+     </pattern>
+     <action>
+       <call-macro n="set_syntag1">
+         <with-param pos="1"/>
+       </call-macro>
+       <call-macro n="assign_case1">
+         <with-param pos="1"/>
+       </call-macro>
+       <call-macro n="magic_number1">
+         <with-param pos="1"/>
+       </call-macro>
+       <call-macro n="convert_focus1">
+         <with-param pos="1"/>
+       </call-macro>
+       <out>
+         <chunk name="nom" case="caseFirstWord">
+           <tags>
+             <tag><lit-tag v="SN"/></tag>
+             <tag><var n="current_syntag"/></tag>
+             <tag><clip pos="1" side="tl" part="nbr"/></tag>
+             <tag><clip pos="1" side="tl" part="case"/></tag>
+           </tags>
+           <lu>
+             <clip pos="1" side="tl" part="lemh"/> 
+             <clip pos="1" side="tl" part="a_nom"/>
+             <clip pos="1" side="tl" part="gen"/>
+             <clip pos="1" side="tl" part="case"/>
+             <clip pos="1" side="tl" part="poss"/>
+             <clip pos="1" side="tl" part="a_attr"/>
+             <clip pos="1" side="tl" part="lemq"/>
+           </lu>
+           <var n="focus_pcle"/>
+         </chunk>
+       </out>
+     </action>
+  </rule>
 
   <rule comment="REGLA: NOM">
      <pattern>
