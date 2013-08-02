@@ -11,6 +11,7 @@
     <sdef n="v"/>
     <sdef n="a"/>
     <sdef n="adv"/>
+    <sdef n="pcle"/>
 
     <sdef n="tv"/>
     <sdef n="iv"/>
@@ -110,6 +111,10 @@
     <e r="LR"><p><l>vaikke<s n="cs"/></l><r>jalhts<s n="cs"/></r></p></e>
     <e r="LR"><p><l>váikke<s n="cs"/></l><r>jalhts<s n="cs"/></r></p></e>
     <e><p><l>daningo<s n="cs"/></l><r>juhkoe<s n="cs"/></r></p></e>
+
+    <!-- SECTION: Particles -->
+
+    <e><p><l>nai<s n="pcle"/></l><r>aaj<s n="adv"/></r></p></e>
 
     <!-- SECTION: Adpositions -->
 
