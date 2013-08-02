@@ -1,0 +1,14 @@
+
+To update the morphological analysers/generators:
+
+	apertium-sme-sma.sma.att.gz
+	apertium-sme-sma.sme.att.gz
+	
+You need to check out the source from the Giellatekno SVN repository.
+
+	svn co https://victorio.uit.no/langtech/trunk/langs/sma giellatekno-sma
+	svn co https://victorio.uit.no/langtech/trunk/langs/sme giellatekno-sme
+
+And also the core:
+	
+	https://victorio.uit.no/langtech/trunk/gtcore/ giellatekno-core
