@@ -21,6 +21,8 @@
     <sdef n="rel"/>
     <sdef n="interr"/>
     <sdef n="dem"/>
+    <sdef n="indef"/>
+    <sdef n="coll"/>
 
     <sdef n="sg1"/>
     <sdef n="sg2"/>
@@ -84,18 +86,30 @@
     <e><p><l>ahte<s n="cc"/></l><r>ahte<s n="cc"/></r></p></e>
     <e><p><l>ja<s n="cc"/></l><r>jïh<s n="cc"/></r></p></e>
     <e><p><l>muhto<s n="cc"/></l><r>mohte<s n="cc"/></r></p></e>
+    <e r="LR"><p><l>muhte<s n="cc"/></l><r>mohte<s n="cc"/></r></p></e>
     <e><p><l>vai<s n="cc"/></l><r>vuj<s n="cc"/></r></p></e>
     <e><p><l>dahje<s n="cc"/></l><r>jallh<s n="cc"/></r></p></e>
+    <e r="LR"><p><l>dahje<s n="cc"/></l><r>jallh<s n="cc"/></r></p></e>
+    <e r="LR"><p><l>dahe<s n="cc"/></l><r>jallh<s n="cc"/></r></p></e>
+    <e r="LR"><p><l>dehe<s n="cc"/></l><r>jallh<s n="cc"/></r></p></e>
+    <e r="LR"><p><l>dahjege<s n="cc"/></l><r>jallh<s n="cc"/></r></p></e>
+    <e><p><l>sihke<s n="cc"/></l><r>dovne<s n="cc"/></r></p></e>
 
     <!-- SECTION: Subjunctions -->
 
     <e><p><l>ahte<s n="cs"/></l><r>ahte<s n="cs"/></r></p></e>
     <e><p><l>go<s n="cs"/></l><r>goh<s n="cs"/></r></p></e>
     <e><p><l>jos<s n="cs"/></l><r>jis<s n="cs"/></r></p></e>
+    <e r="LR"><p><l>jis<s n="cs"/></l><r>jis<s n="cs"/></r></p></e>
     <e r="LR"><p><l>jus<s n="cs"/></l><r>jis<s n="cs"/></r></p></e>
+    <e r="LR"><p><l>juos<s n="cs"/></l><r>jis<s n="cs"/></r></p></e>
     <e><p><l>mađe<s n="cs"/></l><r>medtie<s n="cs"/></r></p></e>
     <e><p><l>mo<s n="cs"/></l><r>maaje<s n="cs"/></r></p></e>
     <e><p><l>vaikko<s n="cs"/></l><r>jalhts<s n="cs"/></r></p></e>
+    <e r="LR"><p><l>váikko<s n="cs"/></l><r>jalhts<s n="cs"/></r></p></e>
+    <e r="LR"><p><l>vaikke<s n="cs"/></l><r>jalhts<s n="cs"/></r></p></e>
+    <e r="LR"><p><l>váikke<s n="cs"/></l><r>jalhts<s n="cs"/></r></p></e>
+    <e><p><l>daningo<s n="cs"/></l><r>juhkoe<s n="cs"/></r></p></e>
 
     <!-- SECTION: Adpositions -->
 
@@ -205,10 +219,35 @@
 
     <e><p><l>ieš<s n="pron"/><s n="refl"/></l><r>jïjtje<s n="pron"/><s n="refl"/></r></p></e>
 
+    <e><p><l>dakkár<s n="pron"/><s n="dem"/></l><r>dagkeres<s n="pron"/><s n="dem"/></r></p></e>
+    <e r="LR"><p><l>dákkár<s n="pron"/><s n="dem"/></l><r>dagkeres<s n="pron"/><s n="dem"/></r></p></e>
+
+    <e><p><l>diet<s n="pron"/><s n="dem"/></l><r>doete<s n="pron"/><s n="dem"/></r></p></e>
+
+    <e><p><l>makkár<s n="pron"/><s n="indef"/></l><r>magkeres<s n="pron"/><s n="interr"/></r></p></e>
+    <e r="LR"><p><l>mákkár<s n="pron"/><s n="indef"/></l><r>magkeres<s n="pron"/><s n="interr"/></r></p></e>
+
     <e><p><l>dát<s n="pron"/><s n="dem"/></l><r>daate<s n="pron"/><s n="dem"/></r></p></e>
+
+    <e><p><l>buot<s n="pron"/><s n="indef"/></l><r>gaajhke<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>buohkat<s n="pron"/><s n="indef"/></l><r>gaajhkesh<s n="pron"/><s n="coll"/></r></p></e>
+    <e><p><l>eará<s n="pron"/><s n="indef"/></l><r>jeatjebe<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>muhtun<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
+    <e r="LR"><p><l>muhtin<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>oktage<s n="pron"/><s n="indef"/></l><r>giekh<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhten<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>iešguhtet<s n="pron"/><s n="indef"/></l><r>geahkh<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>mihkkege<s n="pron"/><s n="indef"/></l><r>maamkh<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>galle<s n="pron"/><s n="indef"/></l><r>gellie<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>seammá<s n="pron"/><s n="indef"/></l><r>seamma<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>soames<s n="pron"/><s n="indef"/></l><r>naaken<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>juoga<s n="pron"/><s n="indef"/></l><r>naakene<s n="pron"/><s n="indef"/></r></p></e>
 
     <e><p><l>mii<s n="pron"/><s n="interr"/></l><r>mij<s n="pron"/><s n="interr"/></r></p></e>
     <e><p><l>gii<s n="pron"/><s n="interr"/></l><r>gie<s n="pron"/><s n="interr"/></r></p></e>
+
+    <e><p><l>makkár<s n="pron"/><s n="interr"/></l><r>magkeres<s n="pron"/><s n="interr"/></r></p></e>
+    <e r="LR"><p><l>mákkár<s n="pron"/><s n="interr"/></l><r>magkeres<s n="pron"/><s n="interr"/></r></p></e>
 
     <!-- SECTION: Numerals -->
 
@@ -2546,6 +2585,9 @@
     <e><p><l>ilá<s n="adv"/></l><r>ååpsen<s n="adv"/></r></p></e>
     <e><p><l>iđđes<s n="adv"/></l><r>aereden<s n="adv"/></r></p></e>
     <e><p><l>maid<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
+    <e r="LR"><p><l>mo<s n="adv"/></l><r>nåtsh<s n="adv"/></r></p></e>
+    <e r="LR"><p><l>mot<s n="adv"/></l><r>nåtsh<s n="adv"/></r></p></e>
+    <e><p><l>movt<s n="adv"/></l><r>nåtsh<s n="adv"/></r></p></e>
     <e><p><l>nu<s n="adv"/></l><r>nimhtie<s n="adv"/></r></p></e>
     <e><p><l>nuorttas<s n="adv"/></l><r>luvlelen<s n="adv"/></r></p></e>
     <e><p><l>oarjjás<s n="adv"/></l><r>jallese<s n="adv"/></r></p></e>
