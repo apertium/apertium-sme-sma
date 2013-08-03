@@ -770,4 +770,8 @@
   <rule>
     <match lemma="vuovdnái" tags="a.*"><select lemma="naarpehke" tags="a.*"/></match>
   </rule>
+  <rule>
+    <match lemma="sáhttit" tags="v.*"><select lemma="maehtedh" tags="v.*"/></match>
+    <match lemma="leat" tags="v.*"/>
+  </rule>
 </rules> 

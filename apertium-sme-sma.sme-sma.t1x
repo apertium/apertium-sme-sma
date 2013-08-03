@@ -1696,6 +1696,15 @@
        <choose>
          <when>
            <test>
+               <equal><clip pos="1" side="sl" part="mood"/><lit-tag v="cond"/></equal>
+           </test>
+           <let><clip pos="1" side="tl" part="mood"/><lit-tag v="ind"/></let>
+         </when>
+       </choose>
+
+       <choose>
+         <when>
+           <test>
              <or>
                <equal>
                  <clip pos="1" side="sl" part="syntag"/>
