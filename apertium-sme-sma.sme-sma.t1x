@@ -1481,6 +1481,9 @@
        <pattern-item n="num"/>
      </pattern>
      <action>
+       <call-macro n="assign_case1">
+         <with-param pos="1"/>
+       </call-macro>
        <out>
          <chunk name="num" case="caseFirstWord">
            <tags>
