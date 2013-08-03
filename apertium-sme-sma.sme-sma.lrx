@@ -3,6 +3,10 @@
     <match lemma="son" tags="pron.*"><select lemma="dïhte" tags="pron.*"/></match>
   </rule>
   <rule>
+    <match lemma="son" tags="pron.pers.du3.*"><select lemma="dah guaktah" tags="pron.*"/></match>
+  </rule>
+
+  <rule>
     <match lemma="doarjja" tags="n.*"><select lemma="dåarjoe" tags="n.*"/></match>
   </rule>
   <rule>
