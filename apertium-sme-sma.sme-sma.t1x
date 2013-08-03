@@ -98,7 +98,15 @@
      <cat-item tags="*.*.*.*.*.@P←"/>
      <cat-item tags="*.*.*.@P←"/>
   </def-cat>
-  
+   
+  <def-cat n="neg-verb">
+    <cat-item lemma="ii" tags="v.iv.neg.*"/>
+  </def-cat>
+
+  <def-cat n="v-conneg">
+    <cat-item tags="v.*.*.*.conneg"/>
+  </def-cat>
+
   <def-cat n="copula">
     <cat-item lemma="leat" tags="v.iv.*"/>
   </def-cat>
@@ -542,7 +550,6 @@
       </when>
     </choose>
   </def-macro>
-  
    <def-macro n="assign_neg_tense" npar="1">
     <let>
       <var n="cur_verb_temps"/>
@@ -597,6 +604,7 @@
         </when>
     </choose>
   </def-macro>
+
 
   <def-macro n="convert-poss1" npar="1">
     <choose>
@@ -1603,6 +1611,73 @@
        </out>
      </action>
   </rule>
+
+  <rule comment="REGLA: neg-verb conneg">
+     <pattern>
+       <pattern-item n="neg-verb"/>
+       <pattern-item n="v-conneg"/>
+     </pattern>
+     <action>
+<!--
+       <call-macro n="assign_neg_tense">
+         <with-param pos="1"/>
+       </call-macro>
+-->
+       <call-macro n="convert_focus1">
+         <with-param pos="1"/>
+       </call-macro>
+       <choose>
+         <when>
+           <test>
+             <or>
+               <equal>
+                 <clip pos="1" side="sl" part="syntag"/>
+                 <lit-tag v="@+FMAINV"/>
+               </equal>
+               <equal>
+                 <clip pos="1" side="sl" part="syntag"/>
+                 <lit-tag v="@-FMAINV"/>
+               </equal>
+             </or>
+           </test> 
+           <let>
+             <var n="main_verb"/>
+             <clip pos="1" side="sl" part="lemh"/>
+           </let>
+         </when>
+       </choose>  
+       <out>
+         <chunk name="neg_verb" case="caseFirstWord">
+           <tags>
+             <tag><lit-tag v="SV"/></tag>
+             <tag><clip pos="1" side="sl" part="syntag"/></tag>
+             <tag><clip pos="1" side="sl" part="mood"/></tag>
+             <tag><clip pos="1" side="sl" part="foc"/></tag>
+           </tags>
+           <lu>
+             <clip pos="1" side="tl" part="lemh"/>
+             <clip pos="1" side="tl" part="a_verb"/>
+             <clip pos="1" side="tl" part="lemq"/>
+             <clip pos="1" side="tl" part="voice"/>
+             <clip pos="2" side="tl" part="mood"/>
+             <clip pos="2" side="tl" part="temps"/>
+             <!--<var n="cur_verb_temps"/>-->
+             <clip pos="1" side="tl" part="pers"/>
+             <clip pos="1" side="tl" part="foc"/>
+           </lu>
+           <b pos="1"/>
+           <lu>
+             <clip pos="2" side="tl" part="lemh"/>
+             <clip pos="2" side="tl" part="a_verb"/>
+             <clip pos="2" side="tl" part="conneg"/>
+             <clip pos="2" side="tl" part="lemq"/>
+           </lu>
+           <var n="focus_pcle"/>
+         </chunk>
+       </out>
+     </action>
+  </rule>
+  
 
   <rule comment="REGLA: VERB">
      <pattern>

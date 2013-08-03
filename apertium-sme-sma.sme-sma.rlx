@@ -464,8 +464,8 @@ LIST Pl2 = Pl2 ;
 LIST Pl3 = Pl3 ;
 
 LIST Inf = Inf ;
-LIST ConNeg = ConNeg ;
-LIST Neg = Neg ;
+LIST ConNeg = ConNeg conneg ;
+LIST Neg = Neg neg ;
 
 LIST PrfPrc = PrfPrc ;
 LIST VGen = VGen ;
