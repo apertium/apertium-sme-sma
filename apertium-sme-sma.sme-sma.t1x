@@ -1539,6 +1539,19 @@
        <call-macro n="convert_focus1">
          <with-param pos="1"/>
        </call-macro>
+       <choose>
+         <when>
+           <test>
+             <and>
+               <equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal>
+               <not><equal><clip pos="1" side="sl" part="case"/><lit v=""/></equal></not>
+             </and>
+           </test>
+           <let><clip pos="1" side="tl" part="case"/><lit v=""/></let>
+           <let><clip pos="1" side="tl" part="nbr"/><lit v=""/></let>
+           <let><clip pos="1" side="tl" part="a_adj"/><lit-tag v="a.attr"/></let>
+         </when>
+       </choose>
        <out>
          <chunk name="adj" case="caseFirstWord">
            <tags>
