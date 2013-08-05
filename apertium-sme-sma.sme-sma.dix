@@ -248,6 +248,8 @@
     <e><p><l>oktage<s n="pron"/><s n="indef"/></l><r>giekh<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhten<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtet<s n="pron"/><s n="indef"/></l><r>geahkh<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>iešguhtege<s n="pron"/><s n="indef"/></l><r>ovmessie<s n="a"/></r></p></e>
+
     <e><p><l>mihkkege<s n="pron"/><s n="indef"/></l><r>maamkh<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>galle<s n="pron"/><s n="indef"/></l><r>gellie<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>seammá<s n="pron"/><s n="indef"/></l><r>seamma<s n="pron"/><s n="indef"/></r></p></e>
@@ -327,6 +329,7 @@
     <!-- SECTION: Nouns -->
 
 
+    <e><p><l>dilli<s n="n"/></l><r>tsiehkie<s n="n"/></r></p></e>
     <e><p><l>dieđáhus<s n="n"/></l><r>bïevnese<s n="n"/></r></p></e>
     <e><p><l>eiseváldi<s n="n"/></l><r>åejvieladtjh<s n="n"/></r></p></e>
     <e><p><l>ovdamearka<s n="n"/></l><r>vuesiehtimmien<s n="n"/></r></p></e>
@@ -2263,6 +2266,7 @@
     <!-- SECTION: Proper Nouns -->
 
     <e r="LR"><p><l>Trøndelága<s n="n"/><s n="prop"/><s n="plc"/></l><r>Trööndelage<s n="n"/><s n="prop"/></r></p></e>
+    <e><p><l>Romsa<s n="n"/><s n="prop"/><s n="mal"/></l><r>TromsøAbimelek<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Abimelek<s n="n"/><s n="prop"/><s n="mal"/></l><r>Abimelek<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Duommá<s n="n"/><s n="prop"/><s n="mal"/></l><r>Duommá<s n="n"/><s n="prop"/><s n="mal"/></r></p></e>
     <e><p><l>Máret<s n="n"/><s n="prop"/><s n="fem"/></l><r>Máret<s n="n"/><s n="prop"/><s n="fem"/></r></p></e>
@@ -2311,6 +2315,7 @@
     <e><p><l>Trond<s n="n"/><s n="prop"/><s n="mal"/></l><r>Trond<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Trøndelag<s n="n"/><s n="prop"/><s n="plc"/></l><r>Trööndelage<s n="n"/><s n="prop"/></r></p></e>
     
+    <e r="LR"><p><l>Alta<s n="n"/><s n="prop"/><s n="plc"/></l><r>Alta<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Berlin<s n="n"/><s n="prop"/><s n="plc"/></l><r>Beerlijne<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Dánmárku<s n="n"/><s n="prop"/><s n="plc"/></l><r>Danmarhke<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Engerdal<s n="n"/><s n="prop"/><s n="plc"/></l><r>Eengerdaelie<s n="n"/><s n="prop"/></r></p></e>
@@ -2643,7 +2648,6 @@
     <e><p><l>aktiivvalaččat<s n="adv"/></l><r>eadtjohkelaakan<s n="a"/></r></p></e>
     <e><p><l>seammás<s n="adv"/></l><r>seamma<b/>tïjjen<s n="a"/></r></p></e>
     <e><p><l>danne<s n="adv"/></l><r>dannasinie<s n="a"/></r></p></e>
-    <e><p><l>iešguđetge<s n="adv"/></l><r>ovmessie<s n="a"/></r></p></e>
     <e><p><l>dárkilit<s n="adv"/></l><r>veele<s n="adv"/></r></p></e>
     <e><p><l>hihtásit<s n="adv"/></l><r>soejmi<s n="adv"/></r></p></e>
     <e><p><l>lagabui<s n="adv"/></l><r>lïhkebe<s n="adv"/></r></p></e>
@@ -2769,6 +2773,7 @@
     <!-- SECTION: Verbs -->
 
 
+    <e><p><l>lássanit<s n="v"/><s n="iv"/></l><r>sjïdtedh<s n="v"/><s n="iv"/></r></p><par n="V_V"/></e>
     <e><p><l>mielddisbuktit<s n="v"/><s n="tv"/></l><r>sïjhtedh<b/>jiehtedh<s n="v"/><s n="tv"/></r></p><par n="V_V"/></e>
     <e><p><l>čaibmat<s n="v"/><s n="tv"/></l><r>båakoestidh<s n="v"/><s n="tv"/></r></p><par n="V_V"/></e>
     <e><p><l>addit<s n="v"/><s n="tv"/></l><r>vedtedh<s n="v"/><s n="tv"/></r></p><par n="V_V"/></e>
