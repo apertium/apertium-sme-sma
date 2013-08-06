@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+This is the second pass. Responsibilities of this file include:
+
+* tbw.
+
+The file contains many macros and some rules:
+
+Macros:
+
+ No macros.
+ 
+Rules:
+
+- empty rule?
+- REGLA: SN_Po Adp
+- REGLA: Adp SN_Pr
+- REGLA: SN_Obj CNP SN_Obj
+- REGLA: SN_Subj CNP SN_Subj
+- REGLA: SN_Advl CNP SN_Advl Son liikui munnje ja sutnje. Son liikui mu áhččái ja mu eatnái.
+
+DEF-CAT NAMING SCHEME:
+                       lemma-pos.tag.tag_SYNTAG
+
+where the SYNTAG part may have an l or r before or after to signify the arrow
+(where l corresponds to ← and r to →);
+alternatively the SYNTAG part is something like "mod", "attr" or "head".
+And then there are some categories like "month", with all the months.
+
+
+-->
+
+
 <interchunk>
 
   <section-def-cats>

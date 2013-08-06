@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+This is the fifth pass. Responsibilities of this file include:
+
+* tbw.
+
+The file contains no macros and two rules:
+
+Macros:
+
+ No macros.
+ 
+Rules:
+
+    <rule comment="CHUNK:">
+    <rule comment="CHUNK:">
+    
+Not much to write home about...    
+        
+DEF-CAT NAMING SCHEME:
+                       lemma-pos.tag.tag_SYNTAG
+
+where the SYNTAG part may have an l or r before or after to signify the arrow
+(where l corresponds to ← and r to →);
+alternatively the SYNTAG part is something like "mod", "attr" or "head".
+And then there are some categories like "month", with all the months.
+
+
+-->
+
+
 <!-- -*- nxml -*- -->
 <postchunk>
   <section-def-cats>
