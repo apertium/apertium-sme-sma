@@ -57,6 +57,10 @@
 
     <!-- Punctuation -->
     <sdef n="clb"/>
+
+    <!-- Transfer -->
+    <sdef n="ND"/>
+    <sdef n="CD"/>
   </sdefs>
   <pardefs>
     <pardef n="V_V">
@@ -249,6 +253,9 @@
     <e><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhte<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtet<s n="pron"/><s n="indef"/></l><r>geahkh<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtege<s n="pron"/><s n="indef"/></l><r>ovmessie<s n="a"/></r></p></e>
+
+    <e r="LR"><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhten<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></r></p></e>
+    <e r="RL"><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhten<s n="pron"/><s n="indef"/></r></p></e>
 
     <e><p><l>mihkkege<s n="pron"/><s n="indef"/></l><r>maamkh<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>galle<s n="pron"/><s n="indef"/></l><r>gellie<s n="pron"/><s n="indef"/></r></p></e>

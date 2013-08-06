@@ -17,9 +17,9 @@
 /apertium-sme-sma.sme.att.gz -text
 /autogen.sh -text
 /configure.ac -text
+dev/cg-tag-convertor.py -text
 dev/generation-report.txt -text
 dev/generation-test.sh -text
-dev/gtcg2apertium.py -text
 dev/phrase -text
 /modes.xml -text
 /pending-tests.sh -text
