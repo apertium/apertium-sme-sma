@@ -2,6 +2,15 @@
 
 
 <!--
+
+t1x local chunking NP, VP
+t2x localcoordination NP+NP, etc.
+t3x empty, but for adpositional phrases + Rel clauses
+t4x Constituent mvm, SVO -> SOV
+t5x Cleanup
+
+
+
 This is the first pass. Responsibilities of this file include:
 
 * tbw.
@@ -11,30 +20,37 @@ The file contains many macros and some rules:
 Macros:
 
  macro: convert_focus1 = sme focus particles to sma smth or delete them
- macro: set_syntag1 = 
- macro: magic_number1 = 
+ macro: set_syntag1 = sets a variable with the current synfunction, to use later
+ macro: magic_number1 = some things in sme don't have number but have in sma
+                        perhaps: no number on modifyer in sme but in sma
  macro: assign_neg_tense = number for verb and conneg
  macro: convert-poss1 = pxdu to pxsg (hmm, not to pl?)
  macro: assign_case1 = HAB from loc to gen, otherwise loc to ela (hmm, where is ine?)
 
 Rules:
 
-- REGLA: ADV
+- REGLA: ADV = introduces tolerant tagging for adverbs in sme
 - REGLA: PROP
 - REGLA: NOM
+
 - REGLA: genMod Nom     Su mánná lea girkus.  Mun oainnán su mánáid. WORKS
 - REGLA: genMod genMod Nom  Su máná mánná lea girkus.  Mun oainnán su máná máná. WORKS
 - REGLA: genMod genMod genMod Nom Su máná máná mánná lea girkus.  Mun oainnán su máná máná máná. WORKS
+
 - REGLA: attrMod Nom  Mun oainnán 1 máná.  Mun oainnán boares máná. WORKS Mun oainnán vuosttaš máná. 
 - REGLA: attrMod attrMod Nom Mun oainnán 1 boares máná.  Mun oainnán boares boares máná. 
 - REGLA: attrMod attrMod attrMod Nom Mun oainnán 1 boares boares máná.  Mun oainnán boares boares boares máná. 
+
 - REGLA: genMod attrMod Nom Mun oainnán su boares ádjá. WORKS
 - REGLA: genMod attrMod CNP attrMod Nom Mun oainnán su boares ja hávskes áddjá. 
+
 - REGLA: NUM NomMod  Áhčis leat 2 máná. WORKS
 - REGLA: NUM NomMod NumMod Áhčis leat 2 máná máná. WORKS
 - REGLA: NUM NomMod NomMod NumMod
 - REGLA: NUM NomMod NomMod NomMod NumMod Áhčis leat 2 máná máná máná.
+
 - REGLA: NUM
+
 - REGLA: PRONOM
 - REGLA: ADJ
 - REGLA: COPULA
