@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
+
+t1x local chunking NP, VP
+t2x localcoordination NP+NP, etc.
+t3x empty, but for adpositional phrases + Rel clauses
+t4x Constituent mvm, SVO -> SOV
+t5x Cleanup
+
+
 This is the fifth pass. Responsibilities of this file include:
 
 * tbw.
