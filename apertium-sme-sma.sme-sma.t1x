@@ -629,9 +629,11 @@ And then there are some categories like "month", with all the months.
     </choose>
   </def-macro>
   
+  
+  
    <def-macro n="assign_neg_tense" npar="1">
     <let>
-      <var n="cur_verb_temps"/>
+      <var n="cur_verb_temps"/> <!--current verb-->
       <clip pos="1" side="tl" part="temps"/>
     </let>
     <choose>
