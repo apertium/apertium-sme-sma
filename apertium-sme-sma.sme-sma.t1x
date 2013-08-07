@@ -442,6 +442,7 @@
         <call-macro n="proc-syn-label-and-qst1">
           <with-param pos="1"/>
         </call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="ind"/></let>
         <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
