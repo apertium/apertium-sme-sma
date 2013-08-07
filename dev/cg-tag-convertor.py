@@ -97,6 +97,7 @@ for line in sys.stdin.readlines(): #{
 		ntoken = 0;
 		first_block = True;
 		seen_position = False;
+		inside = False;
 		total_par = 0;
 		for token in tokens: #{
 			if token == '(': total_par = total_par + 1;
@@ -108,12 +109,16 @@ for line in sys.stdin.readlines(): #{
 			if token == ')': par = par - 1;
 			if token == ')' or (not seen_par and ntoken == 2): first_block = False;
 
+			if token.strip('C*- ').isnumeric() or token == 'NOT' or token == 'NEGATE' or token == 'OR': #{
+				inside = True;	
+				par = 0;
+			#}
 
 			if ntoken == 1: #{
 				outline = outline + token;
 			elif par == 1 and first_block and token[0] != '"' and token[0] != '@': #{
 				outline = outline + token.lower();
-			elif par > 1 and par == total_par and not first_block and token[0] != '"' and token[0] != '@': #{
+			elif inside == True and par == 1 and token[0] != '"' and token[0] != '@': #{
 				outline = outline + token.lower();
 			else: #{
 				outline = outline + token;
@@ -122,9 +127,96 @@ for line in sys.stdin.readlines(): #{
 			ntoken = ntoken + 1;
 		#}
 	elif oper == 'SUBSTITUTE': #{
-		outline = '#';
+		#SUBSTITUTE:PlcSur5 (Prop Plc) (Prop Sur) TARGET (Prop Plc Gen) IF (1 ("lusa") OR ("luhtte") OR ("geahčai") OR ("geahčen"));
+		par = 0;
+		inside = False;
+		ntoken = 0;
+		first_block = True;
+		
+		for token in tokens: #{
+			if token == '(':  par = par + 1;
+			if token == ')':  
+				par = par - 1 ;
+				inside = False;
+	
+			if token == 'IF': #{
+				first_block = False;
+			#}
+
+			if token.strip('C*- ').isnumeric() or token == 'NOT' or token == 'NEGATE' or token == 'OR': #{
+				inside = True;	
+				par = 0;
+			#}
+
+			if ntoken == 1: #{
+				outline = outline + token;
+			elif par == 1 and first_block and token[0] != '"' and token[0] != '@': #{
+				outline = outline + token.lower();
+			elif inside == True and par == 1 and token[0] != '"' and token[0] != '@': #{
+				outline = outline + token.lower();
+			else: #{
+				outline = outline + token;
+			#}
+			outline = outline + ' ';
+			ntoken = ntoken + 1;
+		#}
+
 	elif oper == 'MAP': #{
-		outline = '#';
+		# MAP:veahkki (@<ADVL) TARGET Inf IF (-1 ("veahkki" Acc) LINK *-1 NOT-AUX-V + TRANS-V BARRIER NOT-NPMOD)(NEGATE 0 ("leat")) ;
+		# MAP:compInf (@COMP-CS<) TARGET Inf ((*-1 ("go" CS) BARRIER NOT-ADV LINK -1 Inf) OR (*-1 ("go" CS) BARRIER NOT-ADV LINK *-1 Comp LINK *-1 Inf))(NEGATE *1 VFIN BARRIER NOT-ADV-PCLE)(NEGATE 0 AUX + VFIN LINK *1 PrfPrc OR (Actio Ess)) ;
+
+		# MAP:compInf (@COMP-CS←) TARGET Inf ((*-1 ("go" CS) BARRIER NOT-ADV LINK -1 Inf) OR (*-1 ("go" CS) BARRIER NOT-ADV LINK *-1 Comp LINK *-1 Inf)) (NEGATE *1 VFIN BARRIER NOT-ADV-PCLE) (NEGATE 0 AUX + VFIN LINK *1 PrfPrc OR (Actio Ess)) ;
+		# MAP:compEss (@COMP-CS←) TARGET (N Ess) (-1 ("go" cs) LINK -1 Nom LINK -1 Comp LINK *-1 (n ess) BARRIER S-BOUNDARY) ;
+
+		par = 0;
+		ntoken = 0;
+		first_block = True;
+		seen_position = False;
+		inside = False;
+		seen_target = False;
+		max_par = 0;
+		for token in tokens: #{
+			if token == '(': par = par + 1;
+			if token == ')': par = par - 1;
+			if par > max_par: max_par = par;	
+		#}
+		par = 0;
+		for token in tokens: #{
+			if token == '(': 
+				par = par + 1;
+
+			if token == ')': 
+				if seen_target: first_block = False;
+				inside = False;
+				par = par - 1;
+
+			if token == 'TARGET': #{
+				seen_target = True;
+			#}
+
+			if token.strip('C*- ').isnumeric() or token == 'NOT' or token == 'NEGATE' or token == 'OR': #{
+				seen_position = True;
+				inside = True;
+				par = 0;
+				first_block = False;
+			#} 
+
+			print('***', par, inside, token, file=sys.stderr);
+
+			if ntoken == 1: #{
+				outline = outline + token;
+			elif par == 1 and first_block and seen_position == False and token[0] != '"' and token[0] != '@': #{
+				outline = outline + token.lower();
+#			elif par > 1 and par == max_par and not first_block and token[0] != '"' and token[0] != '@': #{
+			elif inside == True and par == 1 and token[0] != '"' and token[0] != '@': #{
+				outline = outline + token.lower();
+			else: #{
+				outline = outline + token;
+			#}
+			outline = outline + ' ';
+			ntoken = ntoken + 1;
+		#}
+
 	elif oper == 'IFF': #{
 		outline = '#';
 	#}
