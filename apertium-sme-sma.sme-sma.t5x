@@ -41,6 +41,9 @@ And then there are some categories like "month", with all the months.
 <!-- -*- nxml -*- -->
 <postchunk>
   <section-def-cats>
+    <def-cat n="ii">
+      <cat-item name="ii"/>
+    </def-cat>
     <def-cat n="nom2">
       <cat-item name="genmod_nom"/>
     </def-cat>
@@ -61,6 +64,11 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="pl"/>
       <attr-item tags="NN"/>
     </def-attr>
+    <def-attr n="a_tense">
+      <attr-item tags="prt"/>
+      <attr-item tags="prs"/>
+      <attr-item tags="XD"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -69,6 +77,33 @@ And then there are some categories like "month", with all the months.
 
 
   <section-rules>
+
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="ii"/>
+      </pattern>
+      <action>
+      <choose>
+        <when>
+          <test>
+                <equal>
+                  <clip pos="1" part="a_tense"/>
+                  <lit-tag v="XD"/>
+                </equal>
+          </test>
+          <let>
+            <clip pos="1" part="a_tense"/>
+            <lit-tag v="prs"/>
+          </let>
+        </when>
+      </choose>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="CHUNK:">
       <pattern>

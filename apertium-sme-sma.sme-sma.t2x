@@ -26,7 +26,7 @@ Rules:
 - REGLA: Adp SN_Pr
 - REGLA: SN_Obj CNP SN_Obj
 - REGLA: SN_Subj CNP SN_Subj
-- REGLA: SN_Advl CNP SN_Advl Son liikui munnje ja sutnje. Son liikui mu áhččái ja mu eatnái.
+- REGLA: ADVL CNP ADVL Son liikui munnje ja sutnje. Son liikui mu áhččái ja mu eatnái.
 
 DEF-CAT NAMING SCHEME:
                        lemma-pos.tag.tag_SYNTAG
@@ -43,7 +43,15 @@ And then there are some categories like "month", with all the months.
 <interchunk>
 
   <section-def-cats>
-    <def-cat n="SN">
+    <def-cat n="ii">
+      <cat-item lemma="ii" tags="SV.*"/>
+    </def-cat>
+
+    <def-cat n="CONNEG">
+      <cat-item lemma="conneg" tags="SV.*"/>
+    </def-cat>
+
+     <def-cat n="SN">
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
@@ -58,10 +66,11 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SN.@←OBJ.*"/>
     </def-cat>
     
-    <def-cat n="SN_Advl">
+    <def-cat n="ADVL">
         <cat-item tags="SN.@ADVL→.*"/>
         <cat-item tags="SN.@←ADVL.*"/>
         <cat-item tags="SN.@ADVL.*"/>
+        <cat-item tags="ADV.*"/>
     </def-cat>
     
     <def-cat n="SN_Po">
@@ -152,22 +161,29 @@ And then there are some categories like "month", with all the months.
      <attr-item tags="@-FOBJ→"/>
      <attr-item tags="@-F←OBJ"/>
     </def-attr>
+
+    <def-attr n="a_tense">
+      <attr-item tags="prt"/>
+      <attr-item tags="prs"/>
+      <attr-item tags="XD"/>
+    </def-attr>
+
     <def-attr n="nbr">
-      <attr-item tags="Sg"/>
-      <attr-item tags="Pl"/>
-      <attr-item tags="Sp"/>
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
     <def-attr n="case">
-     <attr-item tags="Nom"/>
-     <attr-item tags="Acc"/>
-     <attr-item tags="Gen"/>
-     <attr-item tags="Com"/>
-     <attr-item tags="Ess"/>
-     <attr-item tags="Ill"/>
-     <attr-item tags="Loc"/>
-     <attr-item tags="Ine"/>
-     <attr-item tags="Ela"/>
+     <attr-item tags="nom"/>
+     <attr-item tags="acc"/>
+     <attr-item tags="gen"/>
+     <attr-item tags="com"/>
+     <attr-item tags="ess"/>
+     <attr-item tags="ill"/>
+     <attr-item tags="loc"/>
+     <attr-item tags="ine"/>
+     <attr-item tags="ela"/>
   </def-attr>
   </section-def-attrs>
 
@@ -177,7 +193,39 @@ And then there are some categories like "month", with all the months.
   </section-def-vars>
 
   <section-rules>
-
+    <rule>
+      <pattern>
+        <pattern-item n="ii"/>
+        <pattern-item n="ADVL"/>
+        <pattern-item n="CONNEG"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" part="a_tense"/><clip pos="3" part="a_tense"/></let>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
     <rule>
       <pattern>
         <pattern-item n="SN"/>
@@ -284,11 +332,11 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule> 
 
-    <rule comment="REGLA: SN_Advl CNP SN_Advl"><!--Son liikui munnje ja sutnje.--><!--Son liikui mu áhččái ja mu eatnái.-->
+    <rule comment="REGLA: ADVL CNP ADVL"><!--Son liikui munnje ja sutnje.--><!--Son liikui mu áhččái ja mu eatnái.-->
      <pattern>
-       <pattern-item n="SN_Advl"/>
+       <pattern-item n="ADVL"/>
        <pattern-item n="CNP"/>
-       <pattern-item n="SN_Advl"/>
+       <pattern-item n="ADVL"/>
      </pattern>
      <action>
        <out>
