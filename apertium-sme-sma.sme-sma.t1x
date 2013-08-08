@@ -4,6 +4,7 @@
   <section-def-cats>
     <def-cat n="n">
       <cat-item tags="n.*"/>
+      <cat-item tags="v.*.der_nomact.n.*"/>
     </def-cat>
     <def-cat n="pron-indef">
       <cat-item tags="pron.indef.*"/>
@@ -66,6 +67,8 @@
       <cat-item tags="adv.*"/>
       <cat-item tags="v.*.vgen"/>
       <cat-item tags="v.*.vgen.*"/>
+      <cat-item tags="v.*.vabess"/>
+      <cat-item tags="v.*.vabess.*"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="clb"/>
@@ -75,6 +78,8 @@
   <section-def-attrs>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
+      <attr-item tags="v.iv.der_nomact.n"/>
+      <attr-item tags="v.tv.der_nomact.n"/>
     </def-attr>
 
     <def-attr n="a_pron">
@@ -176,7 +181,7 @@
        <attr-item tags="@HNOUN"/>
        <attr-item tags="@CNP"/>
        <attr-item tags="@CVP"/>
-       <attr-item tags="@→N"/>
+       <attr-item tags="@N←"/>
        <attr-item tags="@←OBJ"/>
        <attr-item tags="@OBJ"/>
        <attr-item tags="@-F←OBJ"/>
