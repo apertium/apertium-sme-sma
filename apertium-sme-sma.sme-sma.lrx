@@ -277,12 +277,7 @@
     <match lemma="gáibi" tags="n.*"><select lemma="gaejpie" tags="n.*"/></match>
   </rule>
   <rule>
-    <match lemma="galgat" tags="v.iv.*"><select lemma="byöredh" tags="v.*"/></match>
-  </rule>
-  <rule>
-    <match lemma="galgat" tags="v.iv.*"><select lemma="edtjedh" tags="v.*"/></match>
-    <match/>
-    <match lemma="riŋget" tags="v.*"/>
+    <match lemma="galgat" tags="v.iv.*"><select lemma="edtjedh" tags="v.*"/></match> <!-- was byöredh-->
   </rule>
   <rule>
     <match lemma="gállu" tags="n.*"><select lemma="gaalloe" tags="n.*"/></match>
