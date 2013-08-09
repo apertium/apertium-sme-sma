@@ -5,6 +5,19 @@
     <def-cat n="n">
       <cat-item tags="n.*"/>
       <cat-item tags="v.*.der_nomact.n.*"/>
+      <cat-item tags="v.*.der_nomag.n.*"/>
+    </def-cat>
+    <def-cat n="adj">
+      <cat-item tags="a.*"/>
+    </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num.*"/>
+    </def-cat>
+    <def-cat n="pron-rel">
+      <cat-item tags="pron.rel.*"/>
+    </def-cat>
+    <def-cat n="pron-dem">
+      <cat-item tags="pron.dem.*"/>
     </def-cat>
     <def-cat n="pron-indef">
       <cat-item tags="pron.indef.*"/>
@@ -65,6 +78,10 @@
     <def-cat n="adv">
       <cat-item tags="adv"/>
       <cat-item tags="adv.*"/>
+      <cat-item tags="a.der_at.adv"/>
+      <cat-item tags="a.der_at.adv.*"/>
+      <cat-item tags="v.*.ger"/>
+      <cat-item tags="v.*.ger.*"/>
       <cat-item tags="v.*.vgen"/>
       <cat-item tags="v.*.vgen.*"/>
       <cat-item tags="v.*.vabess"/>
@@ -157,6 +174,8 @@
     </def-attr>
 
     <def-attr n="a_deriv">
+       <attr-item tags="der_at"/>
+       <attr-item tags="der_lakaan"/>
        <attr-item tags="der_l"/>
        <attr-item tags="der_lidh"/>
     </def-attr>
@@ -182,6 +201,7 @@
        <attr-item tags="@CNP"/>
        <attr-item tags="@CVP"/>
        <attr-item tags="@N←"/>
+       <attr-item tags="@→N"/>
        <attr-item tags="@←OBJ"/>
        <attr-item tags="@OBJ"/>
        <attr-item tags="@-F←OBJ"/>
@@ -192,6 +212,9 @@
        <attr-item tags="@\+FMAINV"/>
        <attr-item tags="@-FMAINV"/>
        <attr-item tags="@\+FAUXV"/>
+       <attr-item tags="@-FAUXV"/>
+       <attr-item tags="@A←"/>
+       <attr-item tags="@COMP-CS←"/>
        <attr-item tags="@ADVL"/>
        <attr-item tags="@←ADVL"/>
        <attr-item tags="@ADVL→"/>
@@ -242,7 +265,22 @@
     </def-list>
   </section-def-lists>
   <section-def-macros>
+
+    <def-macro n="convert-deriv1" npar="1">
+      <choose>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_at"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_lakaan"/></let>
+        </when>
+      </choose>
+    </def-macro>  
+
     <def-macro n="proc-syn-foc-qst1" npar="1">
+          <call-macro n="convert-deriv1">
+            <with-param pos="1"/>
+          </call-macro>
           <!-- If the word has a syntactic function label, set the variable with that 
                label, if not, set the label to @X. 
                Remove question particle. -->
@@ -346,6 +384,59 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: pron-rel">
+      <pattern>
+        <pattern-item n="pron-rel"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-and-poss1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="rel" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="REL"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: pron-dem">
+      <pattern>
+        <pattern-item n="pron-dem"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-and-poss1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="pron-dem" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
     <rule comment="REGLA: pron-indef">
       <pattern>
         <pattern-item n="pron-indef"/>
@@ -372,6 +463,32 @@
     </rule>
 
 
+
+
+    <rule comment="REGLA: num">
+      <pattern>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-and-poss1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="num" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="REGLA: n">
@@ -662,6 +779,40 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: leat-fin adv verb-prfprc">
+      <pattern>
+        <pattern-item n="leat-fin"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="verb-prfprc"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst3">
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: verb-inf">
       <pattern>
         <pattern-item n="verb-inf"/>
@@ -675,6 +826,32 @@
         </call-macro>
         <out>
           <chunk name="inf" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: verb-prfprc">
+      <pattern>
+        <pattern-item n="verb-prfprc"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-verb-deriv1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="prfprc" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -739,7 +916,30 @@
 
 
 
+    <!-- SECTION: Adjective groups -->
 
+
+    <rule comment="REGLA: adj">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="a" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SA"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <!-- SECTION: Adverbial groups -->
 
