@@ -305,6 +305,18 @@
       <call-macro n="proc-syn-foc-qst1">
         <with-param pos="1"/>
       </call-macro>
+      <!-- Sometimes a combintion of syntactic labels results in a new label for the chunk -->
+      <choose>
+        <when>
+          <test>
+            <and>
+              <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@-FMAINV"/></equal>
+              <equal><clip pos="2" side="sl" part="a_synlabel"/><lit-tag v="@+FAUXV"/></equal>
+            </and>
+          </test>
+          <let><var n="synlabel"/><lit-tag v="@+FMAINV"/></let>
+        </when>
+      </choose>
     </def-macro>
 
     <def-macro n="proc-syn-foc-qst3" npar="2">

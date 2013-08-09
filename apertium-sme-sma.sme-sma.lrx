@@ -280,6 +280,11 @@
     <match lemma="galgat" tags="v.iv.*"><select lemma="byöredh" tags="v.*"/></match>
   </rule>
   <rule>
+    <match lemma="galgat" tags="v.iv.*"><select lemma="edtjedh" tags="v.*"/></match>
+    <match/>
+    <match lemma="riŋget" tags="v.*"/>
+  </rule>
+  <rule>
     <match lemma="gállu" tags="n.*"><select lemma="gaalloe" tags="n.*"/></match>
   </rule>
   <rule>
