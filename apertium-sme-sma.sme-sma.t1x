@@ -2,6 +2,9 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="n-cmp">
+      <cat-item tags="n.*.cmp"/>
+    </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
       <cat-item tags="v.*.der_nomact.n.*"/>
@@ -502,6 +505,37 @@
       </action>
     </rule>
 
+
+    <rule comment="REGLA: n-cmp n">
+      <pattern>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="convert-case-and-poss1">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: n">
       <pattern>
