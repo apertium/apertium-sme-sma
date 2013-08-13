@@ -10,6 +10,7 @@
       <cat-item tags="n.*"/>
       <cat-item tags="v.*.der_nomact.n.*"/>
       <cat-item tags="v.*.der_nomag.n.*"/>
+      <cat-item tags="a.der_vuohta.n.*"/>
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="a.*"/>
@@ -47,6 +48,9 @@
       <cat-item tags="v.*.inf.*"/>
       <cat-item tags="v.*.der_l.v.inf.*"/>
       <cat-item tags="v.*.der_d.v.inf.*"/>
+      <cat-item tags="v.*.der_ahtti.v.inf.*"/>
+      <cat-item tags="v.*.der_ahtti.v.*.inf.*"/>
+      <cat-item tags="v.*.der_goahti.v.inf.*"/>
     </def-cat>
     <def-cat n="verb-prfprc">
       <cat-item tags="v.*.prfprc.*"/>
@@ -102,6 +106,8 @@
       <attr-item tags="n"/>
       <attr-item tags="v.iv.der_nomact.n"/>
       <attr-item tags="v.tv.der_nomact.n"/>
+      <attr-item tags="a.der_vuohta.n"/>
+      <attr-item tags="a.der_voete.n"/>
     </def-attr>
 
     <def-attr n="a_pron">
@@ -180,8 +186,13 @@
 
     <def-attr n="a_deriv">
        <attr-item tags="der_at"/>
-       <attr-item tags="der_lakaan"/>
+       <attr-item tags="der_laakan"/>
+       <attr-item tags="attr.der_laakan"/>
        <attr-item tags="der_l"/>
+       <attr-item tags="der_ahtti"/>
+       <attr-item tags="der_ahtje"/>
+       <attr-item tags="der_vuohta"/>
+       <attr-item tags="der_voete"/>
        <attr-item tags="der_lidh"/>
        <attr-item tags="der_d"/>
        <attr-item tags="der_didh"/>
@@ -279,7 +290,13 @@
           <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_at"/></equal>
           </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_lakaan"/></let>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="attr.der_laakan"/></let>
+        </when>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_vuohta"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_voete"/></let>
         </when>
       </choose>
     </def-macro>  
@@ -338,7 +355,7 @@
       </call-macro>
     </def-macro>
 
-    <def-macro n="convert-case-and-poss1" npar="1">
+    <def-macro n="convert-case-nbr-poss1" npar="1">
       <choose>
         <when>
           <test>
@@ -357,6 +374,17 @@
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
         </when>
       </choose>
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="ND"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+        </when>
+
+
+      </choose>
+
     </def-macro>  
 
     <def-macro n="convert-verb-deriv1" npar="1">
@@ -372,6 +400,18 @@
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_l"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_lidh"/></let>
+        </when>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_ahtti"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ahtje"/></let>
+        </when>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_goahti"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_gåete"/></let>
         </when>
       </choose>
     </def-macro>  
@@ -392,7 +432,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -417,7 +457,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -443,7 +483,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -470,7 +510,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -498,7 +538,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -525,7 +565,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="2"/>
         </call-macro>
         <out>
@@ -555,7 +595,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -581,7 +621,7 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -611,7 +651,7 @@
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="3"/>
         </call-macro>
         <out>
@@ -654,7 +694,7 @@
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-and-poss1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="2"/>
         </call-macro>
         <out>
@@ -823,10 +863,12 @@
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="synlabel"/></tag>
             </tags>
+<!--
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
             <b pos="1"/>
+-->
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
