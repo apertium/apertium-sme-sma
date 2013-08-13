@@ -19,7 +19,9 @@
 /configure.ac -text
 dev/apertium-sme-sma.sme-sma.t1x.BACKUP -text
 dev/cg-tag-convertor.py -text
-dev/generation-report.txt -text
+dev/generation-errors.sh -text
+dev/generation-history.log -text
+dev/generation-report.sme-sma.txt -text
 dev/generation-test.sh -text
 dev/phrase -text
 /modes.xml -text
