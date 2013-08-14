@@ -1554,7 +1554,8 @@
     <e><p><l>oahppogirji<s n="n"/></l><r>learoegærja<s n="n"/></r></p></e>
     <e><p><l>oahpponeavvu<s n="n"/></l><r>learoevierhtie<s n="n"/></r></p></e>
     <e><p><l>oahppoplána<s n="n"/></l><r>learoesoejkesje<s n="n"/></r></p></e>
-    <e><p><l>oahppu<s n="n"/></l><r>learoe<s n="n"/></r></p></e>
+    <e slr="1"><p><l>oahppu<s n="n"/></l><r>ööhpehtimmie<s n="n"/></r></p></e>
+    <e slr="2"><p><l>oahppu<s n="n"/></l><r>learoe<s n="n"/></r></p></e>
     <e><p><l>oaidnu<s n="n"/></l><r>vuajnoe<s n="n"/></r></p></e>
     <e><p><l>oaivi<s n="n"/></l><r>åejjie<s n="n"/></r></p></e>
     <e><p><l>oaivil<s n="n"/></l><r>aarvoe<s n="n"/></r></p></e>
@@ -1952,6 +1953,7 @@
     <e><p><l>sámegiella<s n="n"/></l><r>saemiengïele<s n="n"/></r></p></e>
     <e><p><l>sámegielfága<s n="n"/></l><r>saemienfaage<s n="n"/></r></p></e>
     <e><p><l>sámegieloahppu<s n="n"/></l><r>saemienööhpehtimmie<s n="n"/></r></p></e>
+    <e><p><l>sámegieloahpahus<s n="n"/></l><r>saemienööhpehtimmie<s n="n"/></r></p></e>
     <e><p><l>sámekultuvra<s n="n"/></l><r>saemienkultuvre<s n="n"/></r></p></e>
     <e><p><l>sámeláhka<s n="n"/></l><r>saemienlaake<s n="n"/></r></p></e>
     <e><p><l>sámeskuvla<s n="n"/></l><r>saemienskåvloe<s n="n"/></r></p></e>
@@ -2388,11 +2390,62 @@
     <e><p><l>virgelohpi<s n="n"/></l><r>permisjovne<s n="n"/></r></p></e> 
     <e><p><l>árbemáhttu<s n="n"/></l><r>aerpiemaahtoe<s n="n"/></r></p></e>
     <e><p><l>suorgi<s n="n"/></l><r>såelie<s n="n"/></r></p></e>
+    <e><p><l>suorgi<s n="n"/></l><r>sektore<s n="n"/></r></p></e>
     <e><p><l>váldosuorgi<s n="n"/></l><r>åejviesåelie<s n="n"/></r></p></e>
     <e><p><l>bargoeallin<s n="n"/></l><r>barkoejieleme<s n="n"/></r></p></e>
     <e><p><l>gáldogeavaheapmi<s n="n"/></l><r>gaaltijeåtnoe<s n="n"/></r></p></e>
     <e><p><l>gáldo<s n="n"/></l><r>gaaltije<s n="n"/></r></p></e>
-
+    <e><p><l>fágaplána<s n="n"/></l><r>faageplaane<s n="n"/></r></p></e>
+    <e><p><l>kulturskuvla<s n="n"/></l><r>kultuvreskuvle<s n="n"/></r></p></e>
+    <e><p><l>mánáidskuvla<s n="n"/></l><r>maanaskuvle<s n="n"/></r></p></e>
+    <e><p><l>sámeskuvla<s n="n"/></l><r>saemienskuvle<s n="n"/></r></p></e>
+    <e><p><l>skuvladirektevra<s n="n"/></l><r>skuvledirektööre<s n="n"/></r></p></e>
+    <e><p><l>skuvlagrammatihkka<s n="n"/></l><r>skuvlegrammatihke<s n="n"/></r></p></e>
+    <e><p><l>skuvlahistorjá<s n="n"/></l><r>skuvlehistovrije<s n="n"/></r></p></e>
+    <e><p><l>skuvlaruoktu<s n="n"/></l><r>skuvlehïejme<s n="n"/></r></p></e>
+    <e><p><l>skuvlainspektevra<s n="n"/></l><r>skuvleinspektööre<s n="n"/></r></p></e>
+    <e><p><l>skuvlakonferánsa<s n="n"/></l><r>skuvlekonferaanse<s n="n"/></r></p></e>
+    <e><p><l>skuvlamatematihkka<s n="n"/></l><r>skuvlematematihke<s n="n"/></r></p></e>
+    <e><p><l>skuvlamusihkka<s n="n"/></l><r>skuvlemusihke<s n="n"/></r></p></e>
+    <e><p><l>skuvlaneahtta<s n="n"/></l><r>skuvleviermie<s n="n"/></r></p></e>
+    <e><p><l>skuvlajođiheaddji<s n="n"/></l><r>skuvlenåejvie<s n="n"/></r></p></e>
+    <e><p><l>skuvlasuorgi<s n="n"/></l><r>skuvlesektore<s n="n"/></r></p></e>
+    <e><p><l>skuvlabivttas<s n="n"/></l><r>skuvlevaarjoe<s n="n"/></r></p></e>
+    <e><p><l>eatnigiellaoahpahus<s n="n"/></l><r>ietniengïeleööhpehtimmie<s n="n"/></r></p></e>
+    <e><p><l>vuođđooahppu<s n="n"/></l><r>maadthööhpehtimmie<s n="n"/></r></p></e>
+    <e><p><l>vuođđooahpahus<s n="n"/></l><r>maadthööhpehtimmie<s n="n"/></r></p></e>
+    <e><p><l>gáiddusoahppu<s n="n"/></l><r>maajeööhpehtimmie<s n="n"/></r></p></e>
+    <e><p><l>oahppoprográmma<s n="n"/></l><r>ööhpehtimmieprogramme<s n="n"/></r></p></e>
+    <e><p><l>lohkkiidreive<s n="n"/></l><r>lohkemelahtese<s n="n"/></r></p></e>
+    <e><p><l>lohkkireive<s n="n"/></l><r>lohkemelahtese<s n="n"/></r></p></e>
+    <e><p><l>aviisačálus<s n="n"/></l><r>plaerietjaeleme<s n="n"/></r></p></e>
+    <e><p><l>čállinnjuolggadus<s n="n"/></l><r>tjaelemenjoelkedasse<s n="n"/></r></p></e>
+    <e><p><l>čállinvuohki<s n="n"/></l><r>tjaelemevuekie<s n="n"/></r></p></e>
+    <e><p><l>diplomastudeanta<s n="n"/></l><r>diplomstudeente<s n="n"/></r></p></e>
+    <e><p><l>ekonomiijastudeanta<s n="n"/></l><r>ekonomistudeente<s n="n"/></r></p></e>
+    <e><p><l>filosofiijastudeanta<s n="n"/></l><r>filosofistudeente<s n="n"/></r></p></e>
+    <e><p><l>fysihkkastudeanta<s n="n"/></l><r>fysikkstudeente<s n="n"/></r></p></e>
+    <e><p><l>inšenevrastudeanta<s n="n"/></l><r>ingeniørstudeente<s n="n"/></r></p></e>
+    <e><p><l>keramihkkastudeanta<s n="n"/></l><r>keramikkstudeente<s n="n"/></r></p></e>
+    <e><p><l>kemiijastudeanta<s n="n"/></l><r>kjemistudeente<s n="n"/></r></p></e>
+    <e><p><l>doavttirstudeanta<s n="n"/></l><r>medisinstudeente<s n="n"/></r></p></e>
+    <e><p><l>musihkkastudeanta<s n="n"/></l><r>musikkstudeente<s n="n"/></r></p></e>
+    <e><p><l>psykologiijastudeanta<s n="n"/></l><r>psykologistudeente<s n="n"/></r></p></e>
+    <e><p><l>siviilainšenevrastudeanta<s n="n"/></l><r>sivilingeniørstudeente<s n="n"/></r></p></e>
+    <e><p><l>sosiologiijastudeanta<s n="n"/></l><r>sosiologistudeente<s n="n"/></r></p></e>
+    <e><p><l>studeantafabrihkka<s n="n"/></l><r>studeentefabrihke<s n="n"/></r></p></e>
+    <e><p><l>studeantačálus<s n="n"/></l><r>studeentelaavenjasse<s n="n"/></r></p></e>
+    <e><p><l>studeantapolitihkka<s n="n"/></l><r>studeentepolitihke<s n="n"/></r></p></e>
+    <e><p><l>studeantaáirras<s n="n"/></l><r>studeenterepresentaante<s n="n"/></r></p></e>
+    <e><p><l>studeantasearvi<s n="n"/></l><r>studeentesiebrie<s n="n"/></r></p></e>
+    <e><p><l>lohkangelbbolašvuohta<s n="n"/></l><r>studiekompetaanse<s n="n"/></r></p></e>
+    <e><p><l>oahppokonsuleanta<s n="n"/></l><r>studiekonsuleente<s n="n"/></r></p></e>
+    <e><p><l>oahppobagadalli<s n="n"/></l><r>studiekonsuleente<s n="n"/></r></p></e>
+    <e><p><l>oahpporektor<s n="n"/></l><r>studierektovre<s n="n"/></r></p></e>
+    <e><p><l>lohkanteknihkka<s n="n"/></l><r>studieteknihke<s n="n"/></r></p></e>
+    <e><p><l>teologiijastudeanta<s n="n"/></l><r>teologistudeente<s n="n"/></r></p></e>
+    <e><p><l>šibitdoavttirstudeanta<s n="n"/></l><r>veterinærstudeente<s n="n"/></r></p></e>
+    <e><p><l>veterinearastudeanta<s n="n"/></l><r>veterinærstudeente<s n="n"/></r></p></e>
  
     <!-- SECTION: Proper Nouns -->
 
