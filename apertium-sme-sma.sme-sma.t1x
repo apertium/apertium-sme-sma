@@ -191,12 +191,12 @@
     <def-attr n="a_deriv">
        <attr-item tags="der_at"/>
        <attr-item tags="der_laakan"/>
-       <attr-item tags="attr.der_laakan"/>
        <attr-item tags="der_l"/>
        <attr-item tags="der_ahtti"/>
        <attr-item tags="der_ahtje"/>
        <attr-item tags="der_vuohta"/>
        <attr-item tags="der_voete"/>
+       <attr-item tags="attr.der_voete"/>
        <attr-item tags="der_lidh"/>
        <attr-item tags="der_d"/>
        <attr-item tags="der_didh"/>
@@ -294,13 +294,13 @@
           <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_at"/></equal>
           </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="attr.der_laakan"/></let>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_laakan"/></let>
         </when>
         <when>
           <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_vuohta"/></equal>
           </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_voete"/></let>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="attr.der_voete"/></let> <!-- FIXME: Why 'attr' ? :( ~FMT -->
         </when>
       </choose>
     </def-macro>  
@@ -554,6 +554,41 @@
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: n-cmp n-cmp n">
+      <pattern>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+            </mlu>
           </chunk>
         </out>
       </action>
