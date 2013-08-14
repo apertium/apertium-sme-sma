@@ -5,6 +5,7 @@
     <def-cat n="n-cmp">
       <cat-item tags="n.cmp"/>
       <cat-item tags="n.*.cmp"/>
+      <cat-item tags="v.*.der_nomact.n.*.cmp"/>
     </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
@@ -676,6 +677,48 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: pron-attr n-cmp n">
+      <pattern>
+        <pattern-item n="pron-attr"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst2">
+          <with-param pos="3"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="attr-cmp-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_pron"/>
+              <clip pos="3" side="tl" part="a_nbr"/>
+              <clip pos="3" side="tl" part="a_case"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+            <b pos="1"/>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
     <rule comment="REGLA: pron-attr pron-attr n">
