@@ -1482,6 +1482,7 @@
     <e><p><l>neahti<s n="n"/></l><r>maarhte<s n="n"/></r></p></e>
     <e><p><l>neahttasiidu<s n="n"/></l><r>nehtesæjroe<s n="n"/></r></p></e>
     <e><p><l>ruovttusiidu<s n="n"/></l><r>nehtesæjroe<s n="n"/></r></p></e>
+    <e><p><l>siidu<s n="n"/></l><r>sæjroe<s n="n"/></r></p></e>
     <e><p><l>nealgi<s n="n"/></l><r>nielkie<s n="n"/></r></p></e>
     <e><p><l>neavttár<s n="n"/></l><r>dorjehtæjja<s n="n"/></r></p></e>
     <e><p><l>neavva<s n="n"/></l><r>raerie<s n="n"/></r></p></e>
@@ -1828,7 +1829,6 @@
     <e><p><l>sihkaldat<s n="n"/></l><r>njaamelijnie<s n="n"/></r></p></e>
     <e><p><l>sihkkungumme<s n="n"/></l><r>skubpehke<s n="n"/></r></p></e>
     <e><p><l>siidaguoibmi<s n="n"/></l><r>graanna<s n="n"/></r></p></e>
-    <e><p><l>siidu<s n="n"/></l><r>baahkoe<s n="n"/></r></p></e>
     <e><p><l>siivu<s n="n"/></l><r>daelhkie<s n="n"/></r></p></e>
     <e><p><l>silba<s n="n"/></l><r>sïlpe<s n="n"/></r></p></e>
     <e><p><l>silbamedállja<s n="n"/></l><r>sïlpevæhta<s n="n"/></r></p></e>
@@ -2503,6 +2503,11 @@
     <e><p><l>čielggadeapmi<s n="n"/></l><r>salkehtimmie<s n="n"/></r></p></e>
     <e><p><l>boađus<s n="n"/></l><r>illedahke<s n="n"/></r></p></e>
     <e><p><l>váldofokus<s n="n"/></l><r>åejviefokuse<s n="n"/></r></p></e>
+    <e><p><l>dáhpáhus<s n="n"/></l><r>heannadimmie<s n="n"/></r></p></e>
+    <e><p><l>almmolašvuohta<s n="n"/></l><r>byögkelesvoete<s n="n"/></r></p></e>
+    <e><p><l>harjehalli<s n="n"/></l><r>lïerehtæjjaæjja<s n="n"/></r></p></e>
+    <e><p><l>ohcanskovvi<s n="n"/></l><r>ohtsemegoere<s n="n"/></r></p></e>
+    <e><p><l>doarjjaortnet<s n="n"/></l><r>dåarjoeöörnege<s n="n"/></r></p></e>
  
     <!-- SECTION: Proper Nouns -->
 
@@ -2828,7 +2833,8 @@
     <e><p><l>rákkis<s n="a"/></l><r>sööjmes<s n="a"/></r></p></e>
     <e><p><l>ránis<s n="a"/></l><r>kraevies<s n="a"/></r></p></e>
     <e><p><l>rávesolmmoš<s n="a"/></l><r>geerve<s n="a"/></r></p></e>
-    <e><p><l>rávis<s n="a"/></l><r>njoetseldh<s n="a"/></r></p></e>
+    <e><p><l>rávis<s n="a"/></l><r>geerve<s n="a"/></r></p></e>
+    <e><p><l>láddan<s n="a"/></l><r>njoetseldh<s n="a"/></r></p></e>
     <e><p><l>saŋas<s n="a"/></l><r>latjkes<s n="a"/></r></p></e>
     <e><p><l>seaggi<s n="a"/></l><r>jissehts<s n="a"/></r></p></e>
     <e><p><l>seavdnjat<s n="a"/></l><r>sjuevnjeds<s n="a"/></r></p></e>
@@ -2920,6 +2926,7 @@
     <e><p><l>ollislaš<s n="a"/></l><r>ellies<s n="a"/></r></p></e>
     <e><p><l>guovttegielalaš<s n="a"/></l><r>guektiengïeleldh<s n="a"/></r></p></e>
     <e><p><l>sámegielalaš<s n="a"/></l><r>saemiengïeleldh<s n="a"/></r></p></e>
+    <e><p><l>eatnigielalaš<s n="a"/></l><r>tjidtjiengïeleldh<s n="a"/></r></p></e>
     <e><p><l>sámegielat<s n="a"/></l><r>saemiengïeleldh<s n="a"/></r></p></e>
     <e><p><l>fágalaš<s n="a"/></l><r>faageles<s n="a"/></r></p></e>
     <e><p><l>stáhtalaš<s n="a"/></l><r>staateles<s n="a"/></r></p></e>
@@ -3225,6 +3232,7 @@
     <e><p><l>dearpat<s n="v"/><s n="tv"/></l><r>beenghkedh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>deavdit<s n="v"/><s n="tv"/></l><r>dievhtedh<s n="v"/><s n="tv"/></r></p></e>
     <e slr="1"><p><l>deavdit<s n="v"/><s n="tv"/></l><r>gurkedh<s n="v"/><s n="tv"/></r></p></e>
+    <e slr="2"><p><l>deavdit<s n="v"/><s n="tv"/></l><r>illedh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>diehtit<s n="v"/><s n="tv"/></l><r>daejredh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>dievvat<s n="v"/><s n="iv"/></l><r>flåarodh<s n="v"/><s n="iv"/></r></p></e>
     <e><p><l>dieđihit<s n="v"/><s n="tv"/></l><r>bïeljelidh<s n="v"/><s n="tv"/></r></p></e>
