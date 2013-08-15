@@ -144,6 +144,7 @@
        <attr-item tags="loc"/>
        <attr-item tags="ine"/>
        <attr-item tags="ela"/>
+       <attr-item tags="CD"/>
     </def-attr>
 
     <def-attr n="a_adj">
@@ -250,6 +251,12 @@
     <def-attr n="a_foc">
       <attr-item tags="foc_ba"/>
       <attr-item tags="foc_ban"/>
+      <attr-item tags="foc_bason"/>
+      <attr-item tags="foc_bahan"/>
+      <attr-item tags="foc_bahal"/>
+      <attr-item tags="foc_beson"/>
+      <attr-item tags="foc_behan"/>
+      <attr-item tags="foc_behal"/>
       <attr-item tags="foc_bat"/>
       <attr-item tags="foc_be"/>
       <attr-item tags="foc_ge"/>
@@ -431,7 +438,11 @@
           <test>
             <or>
               <and><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-                   <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@HAB"/></equal></and>
+                   <or>
+                   <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@HAB"/></equal>
+                   <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@HAB→"/></equal>
+                   <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@←HAB"/></equal></or>
+              </and>
               <in caseless="yes"><var n="main-verb-lemma"/><list n="stative-verbs"/></in>
             </or>
           </test>
@@ -444,6 +455,7 @@
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
         </when>
       </choose>
+
       <choose>
         <when>
           <test>
@@ -452,6 +464,16 @@
           <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
         </when>
       </choose>
+
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="CD"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+        </when>
+      </choose>
+
 
       <choose> <!-- For adjectives -->
         <when>
