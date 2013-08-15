@@ -12,7 +12,8 @@ TARGETS_COMMON = \
 	$(PREFIX1).autolex.bin \
 	$(PREFIX1).autogen.hfst \
 	$(PREFIX2).automorf.hfst \
-	$(PREFIX1).rlx.bin \
+	$(PREFIX1).dis.rlx.bin \
+	$(PREFIX1).syn.rlx.bin \
 	$(PREFIX1).t1x.bin \
 	$(PREFIX1).t2x.bin \
 	$(PREFIX1).t3x.bin \
@@ -58,8 +59,12 @@ $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 #	CONSTRAINT GRAMMARS
 #
 
-$(PREFIX1).rlx.bin: $(BASENAME).$(PREFIX1).rlx
-	cg-comp $(BASENAME).$(PREFIX1).rlx $@
+$(PREFIX1).dis.rlx.bin: $(BASENAME).$(PREFIX1).dis.rlx
+	cg-comp $(BASENAME).$(PREFIX1).dis.rlx $@
+
+$(PREFIX1).syn.rlx.bin: $(BASENAME).$(PREFIX1).syn.rlx
+	cg-comp $(BASENAME).$(PREFIX1).syn.rlx $@
+
 
 #
 #	LEXICAL SELECTION RULES
@@ -114,7 +119,8 @@ apertium_sme_sma_DATA=$(PREFIX1).automorf.hfst \
 		    $(PREFIX1).autolex.bin \
 		    $(PREFIX1).autogen.hfst \
 		    $(PREFIX2).automorf.hfst \
-		    $(PREFIX1).rlx.bin \
+		    $(PREFIX1).dis.rlx.bin \
+		    $(PREFIX1).syn.rlx.bin \
 		    $(PREFIX1).t1x.bin \
 		    $(PREFIX1).t2x.bin \
 		    $(PREFIX1).t3x.bin \
