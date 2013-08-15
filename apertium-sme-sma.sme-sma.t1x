@@ -91,6 +91,10 @@
       <cat-item tags="cs"/>
       <cat-item tags="cs.*"/>
     </def-cat>
+    <def-cat n="pr">
+      <cat-item tags="pr"/>
+      <cat-item tags="pr.*"/>
+    </def-cat>
     <def-cat n="po">
       <cat-item tags="po"/>
       <cat-item tags="po.*"/>
@@ -98,6 +102,8 @@
     <def-cat n="adv">
       <cat-item tags="adv"/>
       <cat-item tags="adv.*"/>
+      <cat-item tags="pcle"/>
+      <cat-item tags="pcle.*"/>
       <cat-item tags="a.der_at.adv"/>
       <cat-item tags="a.der_at.adv.*"/>
       <cat-item tags="v.*.ger"/>
@@ -283,10 +289,15 @@
        <attr-item tags="@HNOUN"/>
        <attr-item tags="@CNP"/>
        <attr-item tags="@CVP"/>
+       <attr-item tags="@→CC"/>
        <attr-item tags="@N←"/>
        <attr-item tags="@→N"/>
        <attr-item tags="@←OBJ"/>
        <attr-item tags="@OBJ"/>
+       <attr-item tags="@PCLE"/>
+       <attr-item tags="@→A"/>
+       <attr-item tags="@APP-N←"/>
+       <attr-item tags="@OBJ→"/>
        <attr-item tags="@-F←OBJ"/>
        <attr-item tags="@SUBJ→"/>
        <attr-item tags="@←SUBJ"/>
@@ -315,6 +326,7 @@
        <attr-item tags="@-FSUBJ→"/>
        <attr-item tags="@-FOBJ→"/>
        <attr-item tags="@-F←OBJ"/>
+       <attr-item tags="@-F←ADVL"/>
     </def-attr>
   
 
@@ -541,6 +553,19 @@
       </call-macro>
     </def-macro>  
 
+
+    <def-macro n="convert-compounds3" npar="3">
+      <call-macro n="convert-compounds1">
+        <with-param pos="1"/>
+      </call-macro>
+      <call-macro n="convert-compounds1">
+        <with-param pos="2"/>
+      </call-macro>
+      <call-macro n="convert-compounds1">
+        <with-param pos="3"/>
+      </call-macro>
+    </def-macro>  
+
     <def-macro n="convert-verb-deriv1" npar="1">
       <choose>
         <when>
@@ -740,6 +765,52 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: n-cmp n-cmp n-cmp n">
+      <pattern>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-compounds3">
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
+          <with-param pos="4"/>
+        </call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: n-cmp n-cmp n">
       <pattern>
@@ -1356,6 +1427,29 @@
     </rule>
 
     <!-- SECTION: Adpositions -->
+
+    <rule comment="REGLA: pr">
+      <pattern>
+        <pattern-item n="pr"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="pr" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PREP"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: po">
       <pattern>
