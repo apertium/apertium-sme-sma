@@ -60,6 +60,8 @@
     </def-cat>
     <def-cat n="verb-prfprc">
       <cat-item tags="v.*.prfprc.*"/>
+      <cat-item tags="v.*.der_goahti.v.prfprc.*"/>
+      <cat-item tags="v.*.der_goahti.v.prfprc"/>
     </def-cat>
     <def-cat n="leat-fin">
       <cat-item lemma="leat" tags="v.*.ind.*"/>
@@ -77,6 +79,9 @@
       <cat-item tags="v.*.ind.*"/>
       <cat-item tags="v.*.cond.*"/>
       <cat-item tags="v.*.pot.*"/>
+      <cat-item tags="v.*.der_goahti.v.ind.*"/>
+      <cat-item tags="v.*.der_goahti.v.cond.*"/>
+      <cat-item tags="v.*.der_goahti.v.pot.*"/>
     </def-cat>
     <def-cat n="cc">
       <cat-item tags="cc"/>
@@ -154,6 +159,8 @@
    
     <def-attr n="a_verb">
        <attr-item tags="v"/>
+       <attr-item tags="v.iv.der_goahti.v"/>
+       <attr-item tags="v.tv.der_goahti.v"/>
     </def-attr>
  
     <def-attr n="a_trans">
@@ -237,6 +244,8 @@
     <def-attr n="a_deriv">
        <attr-item tags="der_at"/>
        <attr-item tags="der_laakan"/>
+       <attr-item tags="der_goahti"/>
+       <attr-item tags="der_gåete"/>
        <attr-item tags="der_l"/>
        <attr-item tags="der_ahtti"/>
        <attr-item tags="der_ahtje"/>
@@ -1102,6 +1111,9 @@
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="convert-verb-deriv1">
+          <with-param pos="1"/>
+        </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="ind"/></let>
         <out>
           <chunk name="v" case="caseFirstWord">
@@ -1127,6 +1139,9 @@
         <call-macro n="proc-syn-foc-qst2">
           <with-param pos="2"/>
           <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-verb-deriv1">
+          <with-param pos="2"/>
         </call-macro>
         <out>
           <chunk name="v" case="caseFirstWord">
@@ -1159,6 +1174,9 @@
           <with-param pos="3"/>
           <with-param pos="2"/>
           <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-verb-deriv1">
+          <with-param pos="3"/>
         </call-macro>
         <out>
           <chunk name="v" case="caseFirstWord">

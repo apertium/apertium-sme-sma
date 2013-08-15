@@ -17,6 +17,7 @@
     <sdef n="tv"/>
     <sdef n="iv"/>
 
+    <sdef n="actio"/>
     <sdef n="pers"/>
     <sdef n="logo"/>
     <sdef n="refl"/>
@@ -44,6 +45,7 @@
 
     <sdef n="gen"/>
     <sdef n="nom"/>
+    <sdef n="ess"/>
 
     <sdef n="inf"/>
     <sdef n="ger"/>
@@ -243,13 +245,10 @@
 
     <e><p><l>giige<s n="pron"/><s n="indef"/><s n="sg"/></l><r>giege<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>makkár<s n="pron"/><s n="interr"/></l><r>magkeres<s n="pron"/><s n="interr"/></r></p></e> <!-- TODO -->
-    <e r="LR"><p><l>makkár<s n="pron"/><s n="interr"/></l><r>magkeres<s n="pron"/><s n="interr"/></r></p></e> <!-- TODO -->
 
     <e><p><l>dát<s n="pron"/><s n="dem"/></l><r>daate<s n="pron"/><s n="dem"/></r></p></e>
 
-    <e r="LR"><p><l>ieš<s n="pron"/><s n="refl"/></l><r>jïjtje<s n="pron"/><s n="refl"/><s n="ND"/></r></p></e>
-    <e r="RL"><p><l>ieš<s n="pron"/><s n="refl"/></l><r>jïjtje<s n="pron"/><s n="refl"/><s n="sg"/></r></p></e>
-    <e r="RL"><p><l>ieš<s n="pron"/><s n="refl"/></l><r>jïjtje<s n="pron"/><s n="refl"/><s n="pl"/></r></p></e>
+    <e><p><l>ieš<s n="pron"/><s n="refl"/></l><r>jïjtje<s n="pron"/><s n="refl"/></r></p></e>
 
     <e r="LR"><p><l>buot<s n="pron"/><s n="indef"/></l><r>gaajhke<s n="pron"/><s n="indef"/><s n="ND"/></r></p></e>
     <e r="RL"><p><l>buot<s n="pron"/><s n="indef"/></l><r>gaajhke<s n="pron"/><s n="indef"/><s n="sg"/></r></p></e>
@@ -257,6 +256,7 @@
 
     <e><p><l>buohkat<s n="pron"/><s n="indef"/></l><r>gaajhkesh<s n="pron"/><s n="coll"/></r></p></e>
     <e><p><l>eará<s n="pron"/><s n="indef"/></l><r>jeatjebe<s n="pron"/><s n="indef"/></r></p></e>
+    <e r="LR"><p><l>eará<s n="pron"/><s n="indef"/><s n="attr"/></l><r>jeatjebe<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></r></p></e>
     <e><p><l>muhtun<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
     <e r="LR"><p><l>muhtin<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>oktage<s n="pron"/><s n="indef"/></l><r>giekh<s n="pron"/><s n="indef"/></r></p></e>
@@ -3095,6 +3095,7 @@
     <e><p><l>leat<s n="v"/><s n="iv"/></l><r>lea<s n="v"/></r></p></e>
     <e><p><l>leat<s n="v"/><s n="iv"/><s n="inf"/></l><r>årrodh<s n="v"/><s n="iv"/><s n="inf"/></r></p></e>
     <e><p><l>leat<s n="v"/><s n="iv"/><s n="ger"/></l><r>årrodh<s n="v"/><s n="iv"/><s n="ger"/></r></p></e>
+    <e><p><l>leat<s n="v"/><s n="iv"/><s n="actio"/><s n="ess"/></l><r>årrodh<s n="v"/><s n="iv"/><s n="ger"/></r></p></e>
     <e><p><l>leat<s n="v"/><s n="iv"/><s n="prfprc"/></l><r>årrodh<s n="v"/><s n="iv"/><s n="prfprc"/></r></p></e>
 
     <e><p><l>lassánit<s n="v"/><s n="iv"/></l><r>sjïdtedh<s n="v"/><s n="iv"/></r></p></e>
