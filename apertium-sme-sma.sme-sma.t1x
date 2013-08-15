@@ -146,6 +146,11 @@
        <attr-item tags="neg"/>
     </def-attr>
 
+    <def-attr n="a_indecl">
+       <attr-item tags="indecl"/>
+    </def-attr>
+
+
     <def-attr n="a_attr">
        <attr-item tags="attr"/>
     </def-attr>
@@ -393,9 +398,30 @@
           </test>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
         </when>
-
-
       </choose>
+
+      <choose> <!-- For adjectives -->
+        <when>
+          <test>
+            <and>
+              <not><equal><clip pos="1" side="sl" part="a_nbr"/><lit v=""/></equal></not>
+              <not><equal><clip pos="1" side="sl" part="a_case"/><lit v=""/></equal></not>
+              <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
+          <let>
+            <clip pos="1" side="tl" part="whole"/>
+            <concat>
+              <clip pos="1" side="tl" part="whole"/>
+              <lit-tag v="attr"/>
+            </concat>
+          </let>
+        </when>
+      </choose>
+
+      <let><clip pos="1" side="tl" part="a_indecl"/><lit v=""/></let>
 
     </def-macro>  
 
@@ -1112,6 +1138,9 @@
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
         <out>
