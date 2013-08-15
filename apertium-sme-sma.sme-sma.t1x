@@ -21,6 +21,9 @@
     <def-cat n="num">
       <cat-item tags="num.*"/>
     </def-cat>
+    <def-cat n="pron-refl">
+      <cat-item tags="pron.refl.*"/>
+    </def-cat>
     <def-cat n="pron-rel">
       <cat-item tags="pron.rel.*"/>
     </def-cat>
@@ -126,6 +129,8 @@
     <def-attr n="a_pron">
        <attr-item tags="pron.indef"/>
        <attr-item tags="pron.dem"/>
+       <attr-item tags="pron.refl"/>
+       <attr-item tags="pron.rel"/>
        <attr-item tags="pron.interr"/>
     </def-attr>
 
@@ -197,6 +202,19 @@
        <attr-item tags="prt"/>
        <attr-item tags="prs"/>
     </def-attr>
+
+    <def-attr n="a_poss">
+       <attr-item tags="pxsg1"/>
+       <attr-item tags="pxsg2"/>
+       <attr-item tags="pxsg3"/>
+       <attr-item tags="pxdu1"/>
+       <attr-item tags="pxdu2"/>
+       <attr-item tags="pxdu3"/>
+       <attr-item tags="pxpl1"/>
+       <attr-item tags="pxpl2"/>
+       <attr-item tags="pxpl3"/>
+    </def-attr>
+
 
     <def-attr n="a_pers">
        <attr-item tags="sg1"/>
@@ -289,6 +307,7 @@
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="synlabel"/>
+    <def-var n="poss"/>
     <def-var n="main-verb-lemma"/>
   </section-def-vars>
   <section-def-lists>
@@ -390,6 +409,23 @@
     </def-macro>
 
     <def-macro n="convert-case-nbr-poss1" npar="1">
+      <let><var n="poss"/><lit-tag v="PX"/></let>
+      <choose>
+        <when>
+          <test>
+            <not><equal><clip pos="1" side="sl" part="a_poss"/><lit v=""/></equal></not>
+          </test>
+          <let><var n="poss"/><clip pos="1" side="sl" part="a_poss"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test>
+            <not><equal><clip pos="1" side="sl" part="a_pron"/><lit-tag v="pron.refl"/></equal></not>
+          </test>
+          <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
+        </when>
+      </choose>
       <choose>
         <when>
           <test>
@@ -527,6 +563,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -535,6 +572,33 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: pron-refl">
+      <pattern>
+        <pattern-item n="pron-refl"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="refl" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="REFL"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: pron-rel">
       <pattern>
@@ -552,6 +616,7 @@
             <tags>
               <tag><lit-tag v="REL"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -578,6 +643,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -605,6 +671,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -633,6 +700,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -664,6 +732,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <mlu>
               <lu>
@@ -702,6 +771,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <mlu>
               <lu>
@@ -732,6 +802,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -758,6 +829,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -789,6 +861,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -833,6 +906,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -876,6 +950,7 @@
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
