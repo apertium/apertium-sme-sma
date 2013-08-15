@@ -5,7 +5,9 @@
     <def-cat n="n-cmp">
       <cat-item tags="n.cmp"/>
       <cat-item tags="n.*.cmp"/>
+      <cat-item tags="a.*.cmp"/>
       <cat-item tags="v.*.der_nomact.n.*.cmp"/>
+      <cat-item tags="v.*.der_nomag.n.*.cmp"/>
     </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
@@ -103,8 +105,18 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_cmp">
+      <attr-item tags="sgcmp"/>
+      <attr-item tags="sgnomcmp"/>
+      <attr-item tags="attr"/>
+      <attr-item tags="sggencmp"/>
+      <attr-item tags="plgencmp"/>
+    </def-attr>
+
     <def-attr n="a_nom">
       <attr-item tags="n"/>
+      <attr-item tags="v.iv.der_nomag.n"/>
+      <attr-item tags="v.tv.der_nomag.n"/>
       <attr-item tags="v.iv.der_nomact.n"/>
       <attr-item tags="v.tv.der_nomact.n"/>
       <attr-item tags="a.der_vuohta.n"/>
@@ -127,6 +139,11 @@
        <attr-item tags="loc"/>
        <attr-item tags="ine"/>
        <attr-item tags="ela"/>
+    </def-attr>
+
+    <def-attr n="a_adj">
+       <attr-item tags="a"/>
+       <attr-item tags="a.ord"/>
     </def-attr>
    
     <def-attr n="a_verb">
@@ -423,6 +440,38 @@
 
       <let><clip pos="1" side="tl" part="a_indecl"/><lit v=""/></let>
 
+    </def-macro>
+
+    <def-macro n="convert-compounds1" npar="1">
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="sgcmp"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="sgnomcmp"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test>
+            <and>
+              <equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="a"/></equal>
+              <not><equal><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></equal></not>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="attr"/></let>
+        </when>
+
+      </choose>
+    </def-macro>  
+
+    <def-macro n="convert-compounds2" npar="2">
+      <call-macro n="convert-compounds1">
+        <with-param pos="1"/>
+      </call-macro>
+      <call-macro n="convert-compounds1">
+        <with-param pos="2"/>
+      </call-macro>
     </def-macro>  
 
     <def-macro n="convert-verb-deriv1" npar="1">
@@ -600,6 +649,10 @@
         <pattern-item n="n"/>
       </pattern>
       <action>
+        <call-macro n="convert-compounds2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="3"/>
         </call-macro>
@@ -635,6 +688,9 @@
         <pattern-item n="n"/>
       </pattern>
       <action>
+        <call-macro n="convert-compounds1">
+          <with-param pos="1"/>
+        </call-macro>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="2"/>
         </call-macro>
@@ -718,6 +774,9 @@
         <pattern-item n="n"/>
       </pattern>
       <action>
+        <call-macro n="convert-compounds1">
+          <with-param pos="2"/>
+        </call-macro>
         <call-macro n="proc-syn-foc-qst2">
           <with-param pos="3"/>
           <with-param pos="1"/>

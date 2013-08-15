@@ -42,12 +42,14 @@
     <sdef n="pl"/>
 
     <sdef n="gen"/>
+    <sdef n="nom"/>
 
     <sdef n="inf"/>
     <sdef n="prfprc"/>
 
     <sdef n="indecl"/>
 
+    <sdef n="ord"/>
     <sdef n="attr"/>
     <sdef n="prop"/>
     <sdef n="plc"/>
@@ -2488,6 +2490,7 @@
 
     <e r="LR"><p><l>Trøndeláhka<s n="n"/><s n="prop"/><s n="plc"/></l><r>Trööndelaage<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Davvi-Trøndeláhka<s n="n"/><s n="prop"/><s n="plc"/></l><r>Noerhte-Trööndelaage<s n="n"/><s n="prop"/></r></p></e>
+    <!--<e><p><l>Davviriikkat<s n="n"/><s n="prop"/><s n="plc"/></l><r>Norden<s n="n"/><s n="prop"/><s n="plc"/></r></p></e>-->
     <e><p><l>Romsa<s n="n"/><s n="prop"/><s n="plc"/></l><r>Tromsø<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Abimelek<s n="n"/><s n="prop"/><s n="mal"/></l><r>Abimelek<s n="n"/><s n="prop"/></r></p></e>
     <e><p><l>Duommá<s n="n"/><s n="prop"/><s n="mal"/></l><r>Duommá<s n="n"/><s n="prop"/><s n="mal"/></r></p></e>
@@ -2587,6 +2590,9 @@
     <e r="RL"><p><l>boaris<s n="a"/></l><r>båeries<s n="a"/></r></p></e>
     <e r="LR"><p><l>vuoras<s n="a"/></l><r>båeries<s n="a"/><s n="indecl"/></r></p></e>
     <e r="RL"><p><l>vuoras<s n="a"/></l><r>båeries<s n="a"/></r></p></e>
+
+    <e r="LR"><p><l>nubbi<s n="a"/><s n="ord"/><s n="attr"/></l><r>mubpie<s n="a"/><s n="ord"/><s n="sg"/><s n="nom"/></r></p></e>
+    <e><p><l>nubbi<s n="a"/><s n="ord"/></l><r>mubpie<s n="a"/><s n="ord"/></r></p></e>
 
     <e><p><l>prinsihpalaš<s n="a"/></l><r>prinsihpeles<s n="a"/></r></p></e>
     <e><p><l>vuosttas<s n="a"/></l><r>voestes<s n="a"/></r></p></e>
@@ -2765,7 +2771,8 @@
     <e slr="1"><p><l>njálggat<s n="a"/></l><r>sieties<s n="a"/></r></p></e>
     <e><p><l>máŋggagielalaš<s n="a"/></l><r>gelliegïeleldh<s n="a"/></r></p></e>
     <e><p><l>njárbat<s n="a"/></l><r>njeerpes<s n="a"/></r></p></e>
-    <e><p><l>nubbi<s n="a"/></l><r>mubpie<s n="a"/></r></p></e>
+
+
     <e><p><l>nuorra<s n="a"/></l><r>noere<s n="a"/></r></p></e>
     <e><p><l>nuppát<s n="a"/></l><r>ovmessie<s n="a"/></r></p></e>
     <e><p><l>nationála<s n="a"/></l><r>nasjonaale<s n="a"/></r></p></e>
