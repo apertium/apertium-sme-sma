@@ -15,18 +15,18 @@ grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 |
 grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"dem"' | tr "<" ">" | cut -d ">" -f7 | sort -u > smedem1
 cat smen1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "N+" | cut -f2 | cut -d "+" -f1 | sort -u > smen2
 cat smea1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "A+" | cut -f2 | cut -d "+" -f1 | sort -u > smea2
-cat smeadv1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Adv+" | cut -f2 | cut -d "+" -f1 | sort -u > smeadv2
+cat smeadv1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "+Adv" | cut -f2 | cut -d "+" -f1 | sort -u > smeadv2
 cat smev1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "V+" | cut -f2 | cut -d "+" -f1 | sort -u > smev2
 cat smepcle1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Pcle+" | cut -f2 | cut -d "+" -f1 | sort -u > smepcle2
 cat smeindef1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Indef+" | cut -f2 | cut -d "+" -f1 | sort -u > smeindef2
 cat smenum1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Num+" | cut -f2 | cut -d "+" -f1 | sort -u > smenum2
 cat smedem1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Dem+" | cut -f2 | cut -d "+" -f1 | sort -u > smedem2
 cat smepers1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Pers+" | cut -f2 | cut -d "+" -f1 | sort -u > smepers2
-cat smecc1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "CC+" | cut -f2 | cut -d "+" -f1 | sort -u > smecc2
-cat smecs1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "CS+" | cut -f2 | cut -d "+" -f1 | sort -u > smecs2
+cat smecc1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "+CC" | cut -f2 | cut -d "+" -f1 | sort -u > smecc2
+cat smecs1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "+CS" | cut -f2 | cut -d "+" -f1 | sort -u > smecs2
 cat smeinterr1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Interr+" | cut -f2 | cut -d "+" -f1 | sort -u > smeinterr2
-cat smepr1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Pr+" | cut -f2 | cut -d "+" -f1 | sort -u > smepr2
-cat smepo1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Po+" | cut -f2 | cut -d "+" -f1 | sort -u > smepo2
+cat smepr1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "+Pr" | cut -f2 | cut -d "+" -f1 | sort -u > smepr2
+cat smepo1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "+Po" | cut -f2 | cut -d "+" -f1 | sort -u > smepo2
 cat smerefl1 | $LOOKUP $GTHOME/gt/sme/bin/sme.fst | grep "Refl+" | cut -f2 | cut -d "+" -f1 | sort -u > smerefl2
 echo "MISSING nouns" > lemmatest-sme.txt
 comm -23 smen1 smen2 >> lemmatest-sme.txt
@@ -59,35 +59,35 @@ comm -23 smeinterr1 smeinterr2 >> lemmatest-sme.txt
 echo "MISSING dem" >> lemmatest-sme.txt
 comm -23 smedem1 smedem2 >> lemmatest-sme.txt
 see lemmatest-sme.txt
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |grep '"n"' | cut -d "<" -f1 | sort -u > sman1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"a"' |  cut -d "<" -f1 | sort -u > smaa1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"adv"' |  cut -d "<" -f1 | sort -u > smaadv1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"v"' |  cut -d "<" -f1 | sort -u > smav1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"cc"' |  cut -d "<" -f1 | sort -u > smacc1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"cs"' |  cut -d "<" -f1 | sort -u > smacs1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"num"' |  cut -d "<" -f1 | sort -u > smanum1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"indef"' |  cut -d "<" -f1 | sort -u > smaindef1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"pers"' |  cut -d "<" -f1 | sort -u > smapers1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"pcle"' |  cut -d "<" -f1 | sort -u > smapcle1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"po"' |  cut -d "<" -f1 | sort -u > smapo1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"pr"' |  cut -d "<" -f1 | sort -u > smapr1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"interr"' |  cut -d "<" -f1 | sort -u > smainterr1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"refl"' |  cut -d "<" -f1 | sort -u > smarefl1
-grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep '"dem"' |  cut -d "<" -f1 | sort -u > smadem1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"n"' | cut -d "<" -f1 | sort -u > sman1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"a"' |  cut -d "<" -f1 | sort -u > smaa1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"adv"' |  cut -d "<" -f1 | sort -u > smaadv1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"v"' |  cut -d "<" -f1 | sort -u > smav1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"cc"' |  cut -d "<" -f1 | sort -u > smacc1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"cs"' |  cut -d "<" -f1 | sort -u > smacs1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"num"' |  cut -d "<" -f1 | sort -u > smanum1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"indef"' |  cut -d "<" -f1 | sort -u > smaindef1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"pers"' |  cut -d "<" -f1 | sort -u > smapers1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"pcle"' |  cut -d "<" -f1 | sort -u > smapcle1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"po"' |  cut -d "<" -f1 | sort -u > smapo1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"pr"' |  cut -d "<" -f1 | sort -u > smapr1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"interr"' |  cut -d "<" -f1 | sort -u > smainterr1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"refl"' |  cut -d "<" -f1 | sort -u > smarefl1
+grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"dem"' |  cut -d "<" -f1 | sort -u > smadem1
 cat sman1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "N+" | cut -f2 | cut -d "+" -f1 | sort -u > sman2
 cat smaa1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "A+" | cut -f2 | cut -d "+" -f1 | sort -u > smaa2
-cat smaadv1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Adv+" | cut -f2 | cut -d "+" -f1 | sort -u > smaadv2
+cat smaadv1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+Adv" | cut -f2 | cut -d "+" -f1 | sort -u > smaadv2
 cat smav1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "V+" | cut -f2 | cut -d "+" -f1 | sort -u > smav2
 cat smapcle1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Pcle+" | cut -f2 | cut -d "+" -f1 | sort -u > smapcle2
 cat smaindef1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Indef+" | cut -f2 | cut -d "+" -f1 | sort -u > smaindef2
 cat smanum1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Num+" | cut -f2 | cut -d "+" -f1 | sort -u > smanum2
 cat smadem1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Dem+" | cut -f2 | cut -d "+" -f1 | sort -u > smadem2
 cat smapers1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Pers+" | cut -f2 | cut -d "+" -f1 | sort -u > smapers2
-cat smacc1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "CC+" | cut -f2 | cut -d "+" -f1 | sort -u > smacc2
-cat smacs1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "CS+" | cut -f2 | cut -d "+" -f1 | sort -u > smacs2
+cat smacc1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+CC" | cut -f2 | cut -d "+" -f1 | sort -u > smacc2
+cat smacs1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+CS" | cut -f2 | cut -d "+" -f1 | sort -u > smacs2
 cat smainterr1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Interr+" | cut -f2 | cut -d "+" -f1 | sort -u > smainterr2
-cat smapr1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Pr+" | cut -f2 | cut -d "+" -f1 | sort -u > smapr2
-cat smapo1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Po+" | cut -f2 | cut -d "+" -f1 | sort -u > smapo2
+cat smapr1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+Pr" | cut -f2 | cut -d "+" -f1 | sort -u > smapr2
+cat smapo1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+Po" | cut -f2 | cut -d "+" -f1 | sort -u > smapo2
 cat smarefl1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Refl+" | cut -f2 | cut -d "+" -f1 | sort -u > smarefl2
 echo "MISSING nouns" > lemmatest-sma.txt
 comm -23 sman1 sman2 >> lemmatest-sma.txt
