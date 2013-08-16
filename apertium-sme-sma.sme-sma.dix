@@ -44,6 +44,11 @@
     <sdef n="pl"/>
 
     <sdef n="gen"/>
+    <sdef n="ill"/>
+    <sdef n="com"/>
+    <sdef n="acc"/>
+    <sdef n="loc"/>
+    <sdef n="ine"/>
     <sdef n="nom"/>
     <sdef n="ess"/>
 
@@ -253,8 +258,7 @@
     <e><p><l>buohkat<s n="pron"/><s n="indef"/></l><r>gaajhkesh<s n="pron"/><s n="coll"/></r></p></e>
     <e><p><l>eará<s n="pron"/><s n="indef"/></l><r>jeatjebe<s n="pron"/><s n="indef"/></r></p></e>
     <e r="LR"><p><l>eará<s n="pron"/><s n="indef"/><s n="attr"/></l><r>jeatjebe<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></r></p></e>
-    <e><p><l>muhtun<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
-    <e r="LR"><p><l>muhtin<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
+
     <e><p><l>oktage<s n="pron"/><s n="indef"/></l><r>giekh<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhte<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtet<s n="pron"/><s n="indef"/></l><r>geahkh<s n="pron"/><s n="indef"/></r></p></e>
@@ -272,6 +276,9 @@
     <e><p><l>mii<s n="pron"/><s n="interr"/></l><r>mij<s n="pron"/><s n="interr"/></r></p></e>
     <e><p><l>gii<s n="pron"/><s n="interr"/></l><r>gie<s n="pron"/><s n="interr"/></r></p></e>
 
+
+    <e><p><l>muhtun<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
+    <e r="LR"><p><l>muhtin<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
 
     <!-- SECTION: Numerals -->
 
@@ -2432,13 +2439,13 @@
     <e><p><l>ekonomiijastudeanta<s n="n"/></l><r>ekonomistudeente<s n="n"/></r></p></e>
     <e><p><l>filosofiijastudeanta<s n="n"/></l><r>filosofistudeente<s n="n"/></r></p></e>
     <e><p><l>fysihkkastudeanta<s n="n"/></l><r>fysikkstudeente<s n="n"/></r></p></e>
-    <e><p><l>inšenevrastudeanta<s n="n"/></l><r>ingeniørstudeente<s n="n"/></r></p></e>
+    <e><p><l>inšenevrastudeanta<s n="n"/></l><r>ingeniörstudeente<s n="n"/></r></p></e>
     <e><p><l>keramihkkastudeanta<s n="n"/></l><r>keramikkstudeente<s n="n"/></r></p></e>
     <e><p><l>kemiijastudeanta<s n="n"/></l><r>kjemistudeente<s n="n"/></r></p></e>
     <e><p><l>doavttirstudeanta<s n="n"/></l><r>medisinstudeente<s n="n"/></r></p></e>
     <e><p><l>musihkkastudeanta<s n="n"/></l><r>musikkstudeente<s n="n"/></r></p></e>
     <e><p><l>psykologiijastudeanta<s n="n"/></l><r>psykologistudeente<s n="n"/></r></p></e>
-    <e><p><l>siviilainšenevrastudeanta<s n="n"/></l><r>sivilingeniørstudeente<s n="n"/></r></p></e>
+    <e><p><l>siviilainšenevrastudeanta<s n="n"/></l><r>sivilingeniörstudeente<s n="n"/></r></p></e>
     <e><p><l>sosiologiijastudeanta<s n="n"/></l><r>sosiologistudeente<s n="n"/></r></p></e>
     <e><p><l>studeantafabrihkka<s n="n"/></l><r>studeentefabrihke<s n="n"/></r></p></e>
     <e><p><l>studeantačálus<s n="n"/></l><r>studeentelaavenjasse<s n="n"/></r></p></e>
@@ -2458,7 +2465,7 @@
     <e><p><l>šibitdoavttir<s n="n"/></l><r>veterinæære<s n="n"/></r></p></e>
     <e><p><l>eanandoalloskuvla<s n="n"/></l><r>laanteburrieskuvle<s n="n"/></r></p></e>
     <e><p><l>teoriija<s n="n"/></l><r>teorije<s n="n"/></r></p></e>
-    <e><p><l>oahpahusgiella<s n="n"/></l><r>øøhpehtimmiegïele<s n="n"/></r></p></e>
+    <e><p><l>oahpahusgiella<s n="n"/></l><r>ööhpehtimmiegïele<s n="n"/></r></p></e>
     <e><p><l>instituhtta<s n="n"/></l><r>instituhte<s n="n"/></r></p></e>
     <e><p><l>dutki<s n="n"/></l><r>dotkije<s n="n"/></r></p></e>
     <e><p><l>dutkan<s n="n"/></l><r>dotkeme<s n="n"/></r></p></e>
