@@ -6,7 +6,7 @@ if [[ $? -eq 1 ]]; then
 	SED="sed";
 fi
 
-TMPSCRIPT=`mktemp`;
+TMPSCRIPT=`mktemp tmp.XXXXXXXXXX`;
 echo "import sys;
 tag = False;
 c = sys.stdin.read(1);
@@ -29,13 +29,13 @@ while c != '':
                 break;
 " > $TMPSCRIPT;
 
-TMPREGEX=`mktemp`;
-TMPOUT=`mktemp`;
-TMP0=`mktemp`;
-TMP1=`mktemp`;
-TMP2=`mktemp`;
-TMP3=`mktemp`;
-TMP4=`mktemp`;
+TMPREGEX=`mktemp tmp.XXXXXXXXXX`;
+TMPOUT=`mktemp tmp.XXXXXXXXXX`;
+TMP0=`mktemp tmp.XXXXXXXXXX`;
+TMP1=`mktemp tmp.XXXXXXXXXX`;
+TMP2=`mktemp tmp.XXXXXXXXXX`;
+TMP3=`mktemp tmp.XXXXXXXXXX`;
+TMP4=`mktemp tmp.XXXXXXXXXX`;
 
 printf "$1" | python3 $TMPSCRIPT | $SED 's/^/"/g' | $SED 's/$/?*"/g';
 echo ""
