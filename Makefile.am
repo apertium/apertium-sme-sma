@@ -41,11 +41,12 @@ $(PREFIX1).automorf.hfst: $(BASENAME).$(LANG1).att.gz .deps/$(PREFIX1).autobil.p
 #	SOUTH SÁMI TRANSDUCERS
 #
 
-$(PREFIX1).autogen.hfst: $(BASENAME).$(LANG2).att.gz 
-	$(ZCAT) $< | hfst-txt2fst | hfst-invert | hfst-fst2fst -O > $@
-
-$(PREFIX2).automorf.hfst: $(BASENAME).$(LANG2).att.gz 
+$(PREFIX1).autogen.hfst: $(BASENAME).$(PREFIX1).att.gz 
 	$(ZCAT) $< | hfst-txt2fst | hfst-fst2fst -O > $@
+
+# Here PREFIX1 should be replaced eventually with PREFIX2
+$(PREFIX2).automorf.hfst: $(BASENAME).$(PREFIX1).att.gz 
+	$(ZCAT) $< | hfst-txt2fst | hfst-invert | hfst-fst2fst -O > $@
 
 #
 #	BILINGUAL DICTIONARY
