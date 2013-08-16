@@ -37,9 +37,9 @@ TMP2=`mktemp tmp.XXXXXXXXXX`;
 TMP3=`mktemp tmp.XXXXXXXXXX`;
 TMP4=`mktemp tmp.XXXXXXXXXX`;
 
-printf "$1" | python3 $TMPSCRIPT | $SED 's/^/"/g' | $SED 's/$/?*"/g';
+printf "$1" | python3.2 $TMPSCRIPT | $SED 's/^/"/g' | $SED 's/$/?*"/g';
 echo ""
-printf $1 | python3 $TMPSCRIPT | $SED 's/$/?*/g' |  hfst-regexp2fst -o $TMPREGEX
+printf $1 | python3.2 $TMPSCRIPT | $SED 's/$/?*/g' |  hfst-regexp2fst -o $TMPREGEX
 hfst-compose-intersect -1 .deps/sme.automorf.hfst -2 $TMPREGEX -o $TMPOUT
 hfst-fst2strings $TMPOUT  | grep -v 'foc' | grep -v 'qst' > $TMP0 
 
