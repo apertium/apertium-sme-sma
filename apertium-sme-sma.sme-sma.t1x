@@ -36,6 +36,7 @@
     <def-cat n="pron-attr">
       <cat-item tags="pron.indef.attr"/>
       <cat-item tags="pron.indef.attr.*"/>
+      <cat-item tags="pron.interr.attr.*"/>
     </def-cat>
     <def-cat n="verb-actio">
       <cat-item tags="v.*.actio.*"/>
@@ -294,6 +295,7 @@
        <attr-item tags="@→N"/>
        <attr-item tags="@←OBJ"/>
        <attr-item tags="@OBJ"/>
+       <attr-item tags="@→Pron"/>
        <attr-item tags="@PCLE"/>
        <attr-item tags="@→A"/>
        <attr-item tags="@APP-N←"/>
@@ -310,6 +312,7 @@
        <attr-item tags="@A←"/>
        <attr-item tags="@COMP-CS←"/>
        <attr-item tags="@ADVL"/>
+       <attr-item tags="@→ADVL"/>
        <attr-item tags="@←ADVL"/>
        <attr-item tags="@ADVL→"/>
        <attr-item tags="@HAB"/>
