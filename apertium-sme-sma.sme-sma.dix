@@ -20,6 +20,7 @@
     <sdef n="actio"/>
     <sdef n="pers"/>
     <sdef n="logo"/>
+    <sdef n="comp"/>
     <sdef n="refl"/>
     <sdef n="rel"/>
     <sdef n="interr"/>
@@ -263,6 +264,7 @@
     <e><p><l>iešguhtege<s n="pron"/><s n="indef"/></l><r>ovmessie<s n="a"/></r></p></e>
 
 <!--    <e><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhte<s n="pron"/><s n="indef"/></r></p></e>-->
+    <e r="LR"><p><l>juohke<s n="pron"/><s n="indef"/><s n="attr"/></l><r>fïerhte<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></r></p></e>
     <e r="LR"><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhte<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></r></p></e>
     <e r="RL"><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhte<s n="pron"/><s n="indef"/></r></p></e>
 
@@ -2630,6 +2632,8 @@
     <e><p><l>davviriikkalaš<s n="a"/><s n="attr"/></l><r>noerhtelaante<s n="n"/><s n="pl"/><s n="gen"/></r></p></e>
     <e><p><l>eambbo<s n="a"/></l><r>jienebe<s n="a"/></r></p></e>
     <e><p><l>eanet<s n="a"/></l><r>jienebe<s n="a"/></r></p></e>
+    <e><p><l>eanet<s n="a"/><s n="comp"/></l><r>jeene<s n="a"/><s n="comp"/></r></p></e>
+
     <e r="LR"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/><s n="attr"/></r></p></e>
     <e r="RL"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/></r></p></e>
     <e><p><l>áhpeheapme<s n="a"/></l><r>nåajsan<s n="a"/></r></p></e>
