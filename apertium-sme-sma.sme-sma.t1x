@@ -339,6 +339,8 @@
     <def-var n="number"/>
     <def-var n="synlabel"/>
     <def-var n="poss"/>
+    <def-var n="case"/>
+    <def-var n="nmbr"/>
     <def-var n="main-verb-lemma"/>
   </section-def-vars>
   <section-def-lists>
@@ -449,6 +451,20 @@
           <let><var n="poss"/><clip pos="1" side="sl" part="a_poss"/></let>
         </when>
       </choose>
+
+      <choose> <!-- For seammá:seamma -->
+        <when>
+          <test>
+            <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
+          </test>
+          <let><var n="case"/><lit v=""/></let>
+          <let><var n="nmbr"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+        </when>
+      </choose>
+
       <choose>
         <when>
           <test>
@@ -503,6 +519,7 @@
         <when>
           <test>
             <and>
+              <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="a"/></equal>
               <not><equal><clip pos="1" side="sl" part="a_nbr"/><lit v=""/></equal></not>
               <not><equal><clip pos="1" side="sl" part="a_case"/><lit v=""/></equal></not>
               <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
@@ -522,6 +539,36 @@
 
       <let><clip pos="1" side="tl" part="a_indecl"/><lit v=""/></let>
 
+    </def-macro>
+
+    <def-macro n="convert-case-nbr-poss2" npar="2">
+      <let><var n="case"/><lit v=""/></let>
+      <let><var n="nmbr"/><lit v=""/></let>
+      <call-macro n="convert-case-nbr-poss1"> 
+        <with-param pos="1"/>
+      </call-macro>
+      <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
+      <let><var n="nmbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+      <call-macro n="convert-case-nbr-poss1"> 
+        <with-param pos="2"/>
+      </call-macro>
+    </def-macro>
+
+
+    <def-macro n="convert-case-nbr-poss3" npar="3">
+      <let><var n="case"/><lit v=""/></let>
+      <let><var n="nmbr"/><lit v=""/></let>
+      <call-macro n="convert-case-nbr-poss1"> 
+        <with-param pos="1"/>
+      </call-macro>
+      <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
+      <let><var n="nmbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+      <call-macro n="convert-case-nbr-poss1"> 
+        <with-param pos="2"/>
+      </call-macro>
+      <call-macro n="convert-case-nbr-poss1"> 
+        <with-param pos="3"/>
+      </call-macro>
     </def-macro>
 
     <def-macro n="convert-compounds1" npar="1">
@@ -958,8 +1005,9 @@
           <with-param pos="3"/>
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-nbr-poss1">
+        <call-macro n="convert-case-nbr-poss2">
           <with-param pos="3"/>
+          <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="attr-cmp-n" case="caseFirstWord">
@@ -971,8 +1019,8 @@
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_pron"/>
-              <clip pos="3" side="tl" part="a_nbr"/>
-              <clip pos="3" side="tl" part="a_case"/>
+              <var n="nmbr"/>
+              <var n="case"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
@@ -1003,8 +1051,10 @@
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-nbr-poss1">
+        <call-macro n="convert-case-nbr-poss3">
           <with-param pos="3"/>
+          <with-param pos="2"/>
+          <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="attr-attr-n" case="caseFirstWord">
@@ -1016,16 +1066,16 @@
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_pron"/>
-              <clip pos="3" side="tl" part="a_nbr"/>
-              <clip pos="3" side="tl" part="a_case"/>
+              <var n="nmbr"/>
+              <var n="case"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lemh"/>
               <clip pos="2" side="tl" part="a_pron"/>
-              <clip pos="3" side="tl" part="a_nbr"/>
-              <clip pos="3" side="tl" part="a_case"/>
+              <var n="nmbr"/>
+              <var n="case"/>
               <clip pos="2" side="tl" part="lemq"/>
             </lu>
             <b pos="2"/>
@@ -1047,8 +1097,9 @@
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-nbr-poss1">
+        <call-macro n="convert-case-nbr-poss2">
           <with-param pos="2"/>
+          <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="attr-n" case="caseFirstWord">
@@ -1060,8 +1111,8 @@
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_pron"/>
-              <clip pos="2" side="tl" part="a_nbr"/>
-              <clip pos="2" side="tl" part="a_case"/>
+              <var n="nmbr"/>
+              <var n="case"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
