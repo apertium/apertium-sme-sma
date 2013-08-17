@@ -29,19 +29,29 @@ while c != '':
                 break;
 " > $TMPSCRIPT;
 
-TMPREGEX=`mktemp tmp.XXXXXXXXXX`;
-TMPOUT=`mktemp tmp.XXXXXXXXXX`;
-TMP0=`mktemp tmp.XXXXXXXXXX`;
-TMP1=`mktemp tmp.XXXXXXXXXX`;
-TMP2=`mktemp tmp.XXXXXXXXXX`;
-TMP3=`mktemp tmp.XXXXXXXXXX`;
-TMP4=`mktemp tmp.XXXXXXXXXX`;
+TMPFILTER=`mktemp tmp.f.XXXXXXXXXX`;
+TMPREGEX=`mktemp tmp.r.XXXXXXXXXX`;
+TMPOUT1=`mktemp tmp.o1.XXXXXXXXXX`;
+TMPOUT2=`mktemp tmp.o2.XXXXXXXXXX`;
+TMP0=`mktemp tmp.0.XXXXXXXXXX`;
+TMP1=`mktemp tmp.1.XXXXXXXXXX`;
+TMP2=`mktemp tmp.2.XXXXXXXXXX`;
+TMP3=`mktemp tmp.3.XXXXXXXXXX`;
+TMP4=`mktemp tmp.4.XXXXXXXXXX`;
 
+echo "~[ \$[ %<cmp%> ] | 
+\$[ %<rcmpnd%> ] | 
+\$[ %<plgencmp%> ] | 
+\$[ %<sgnomcmp%> ] | 
+\$[ %<sggencmp%> ] |
+\$[ %<attrcmp%> ] 
+] ;" | hfst-regexp2fst -S -o $TMPFILTER
 printf "$1" | python3.2 $TMPSCRIPT | $SED 's/^/"/g' | $SED 's/$/?*"/g';
 echo ""
 printf $1 | python3.2 $TMPSCRIPT | $SED 's/$/?*/g' |  hfst-regexp2fst -o $TMPREGEX
-hfst-compose-intersect -1 .deps/sme.automorf.hfst -2 $TMPREGEX -o $TMPOUT
-hfst-fst2strings $TMPOUT  | grep -v 'foc' | grep -v 'qst' > $TMP0 
+hfst-compose-intersect -1 .deps/sme.automorf.hfst -2 $TMPREGEX -o $TMPOUT1
+hfst-compose-intersect -1 $TMPOUT1 -2 $TMPFILTER -o $TMPOUT2
+hfst-fst2strings $TMPOUT2  | grep -v 'foc' | grep -v 'qst' > $TMP0 
 
 cat $TMP0 | cut -f2 -d':' | $SED 's/^/^/g' | $SED 's/$/$/g' |\
  lt-proc -b sme-sma.autobil.bin | tee $TMP1 | apertium-transfer -b apertium-sme-sma.sme-sma.t1x sme-sma.t1x.bin | tee $TMP2 |\
@@ -52,4 +62,5 @@ cat $TMP0 | cut -f2 -d':' | $SED 's/^/^/g' | $SED 's/$/$/g' |\
 
 paste $TMP0 $TMP1 $TMP2 $TMP3 $TMP4
 
-rm $TMPREGEX $TMPOUT $TMP0 $TMP1 $TMP2 $TMP3 $TMP4
+
+#rm $TMPREGEX $TMPOUT $TMP0 $TMP1 $TMP2 $TMP3 $TMP4
