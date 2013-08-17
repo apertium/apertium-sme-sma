@@ -63,4 +63,4 @@ cat $TMP0 | cut -f2 -d':' | $SED 's/^/^/g' | $SED 's/$/$/g' |\
 paste $TMP0 $TMP1 $TMP2 $TMP3 $TMP4
 
 
-#rm $TMPREGEX $TMPOUT $TMP0 $TMP1 $TMP2 $TMP3 $TMP4
+rm $TMPREGEX $TMPFILTER $TMPOUT1 $TMPOUT2 $TMP0 $TMP1 $TMP2 $TMP3 $TMP4
