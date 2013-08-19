@@ -74,21 +74,21 @@ grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |
 grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"interr"' |  cut -d "<" -f1 | sort -u > smainterr1
 grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"refl"' |  cut -d "<" -f1 | sort -u > smarefl1
 grep '<r>' ../apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 | grep -v "<b" | grep '"dem"' |  cut -d "<" -f1 | sort -u > smadem1
-cat sman1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "N+" | cut -f2 | cut -d "+" -f1 | sort -u > sman2
-cat smaa1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "A+" | cut -f2 | cut -d "+" -f1 | sort -u > smaa2
-cat smaadv1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "+Adv" | cut -f2 | cut -d "+" -f1 | sort -u > smaadv2
-cat smav1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "V+" | cut -f2 | cut -d "+" -f1 | sort -u > smav2
-cat smapcle1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "+Pcle" | cut -f2 | cut -d "+" -f1 | sort -u > smapcle2
-cat smaindef1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "+Indef" | cut -f2 | cut -d "+" -f1 | sort -u > smaindef2
-cat smanum1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "Num+" | cut -f2 | cut -d "+" -f1 | sort -u > smanum2
-cat smadem1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "Dem+" | cut -f2 | cut -d "+" -f1 | sort -u > smadem2
-cat smapers1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "Pers+" | cut -f2 | cut -d "+" -f1 | sort -u > smapers2
-cat smacc1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "+CC" | cut -f2 | cut -d "+" -f1 | sort -u > smacc2
-cat smacs1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "+CS" | cut -f2 | cut -d "+" -f1 | sort -u > smacs2
-cat smainterr1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "Interr+" | cut -f2 | cut -d "+" -f1 | sort -u > smainterr2
-cat smapr1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "+Pr" | cut -f2 | cut -d "+" -f1 | sort -u > smapr2
-cat smapo1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "+Po" | cut -f2 | cut -d "+" -f1 | sort -u > smapo2
-cat smarefl1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-desc.xfst | grep "Refl+" | cut -f2 | cut -d "+" -f1 | sort -u > smarefl2
+cat sman1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "N+" | cut -f2 | cut -d "+" -f1 | sort -u > sman2
+cat smaa1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "A+" | cut -f2 | cut -d "+" -f1 | sort -u > smaa2
+cat smaadv1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "+Adv" | cut -f2 | cut -d "+" -f1 | sort -u > smaadv2
+cat smav1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "V+" | cut -f2 | cut -d "+" -f1 | sort -u > smav2
+cat smapcle1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "+Pcle" | cut -f2 | cut -d "+" -f1 | sort -u > smapcle2
+cat smaindef1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "+Indef" | cut -f2 | cut -d "+" -f1 | sort -u > smaindef2
+cat smanum1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "Num+" | cut -f2 | cut -d "+" -f1 | sort -u > smanum2
+cat smadem1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "Dem+" | cut -f2 | cut -d "+" -f1 | sort -u > smadem2
+cat smapers1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "Pers+" | cut -f2 | cut -d "+" -f1 | sort -u > smapers2
+cat smacc1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "+CC" | cut -f2 | cut -d "+" -f1 | sort -u > smacc2
+cat smacs1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "+CS" | cut -f2 | cut -d "+" -f1 | sort -u > smacs2
+cat smainterr1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "Interr+" | cut -f2 | cut -d "+" -f1 | sort -u > smainterr2
+cat smapr1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "+Pr" | cut -f2 | cut -d "+" -f1 | sort -u > smapr2
+cat smapo1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "+Po" | cut -f2 | cut -d "+" -f1 | sort -u > smapo2
+cat smarefl1 | $LOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.xfst | grep "Refl+" | cut -f2 | cut -d "+" -f1 | sort -u > smarefl2
 echo "MISSING nouns" > lemmatest-sma.txt
 comm -23 sman1 sman2 >> lemmatest-sma.txt
 echo "MISSING verbs" >> lemmatest-sma.txt
