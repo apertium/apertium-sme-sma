@@ -455,7 +455,10 @@
       <choose> <!-- For seammá:seamma -->
         <when>
           <test>
-            <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
+            <and>
+              <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
+              <not><equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="a"/></equal></not>
+            </and>
           </test>
           <let><var n="case"/><lit v=""/></let>
           <let><var n="nmbr"/><lit v=""/></let>
