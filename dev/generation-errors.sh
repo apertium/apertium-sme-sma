@@ -32,5 +32,5 @@ echo $STAR | sed 's/^/ * /g'
 
 if [[ $1 == "new" ]]; then 
 	DATE=`date +"%Y-%m-%d %H:%M:%S"`;
-	printf "$DATE\t$HASH $SLASH $AT $STAR\n" >> generation-history.log
+	printf "$DATE\t$HASH\t$SLASH\t$AT\t$STAR\n" >> generation-history.log
 fi
