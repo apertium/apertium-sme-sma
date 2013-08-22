@@ -8,11 +8,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">
@@ -96,9 +93,6 @@
       <program name="cg-proc -w">
         <file name="sme-sma.syn.rlx.bin"/> 
       </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
-      </program>
     </pipeline>
   </mode>
 
@@ -112,11 +106,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $3">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">
@@ -134,11 +125,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">
@@ -159,11 +147,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">
@@ -187,11 +172,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="apertium-transfer">
@@ -216,11 +198,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">
@@ -252,11 +231,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">
@@ -293,11 +269,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">
@@ -337,11 +310,8 @@
       <program name="cg-proc -w">
         <file name="sme-sma.dis.rlx.bin"/> 
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -n -1 -w">
         <file name="sme-sma.syn.rlx.bin"/> 
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="sme-sma.prob"/>
       </program>
       <program name="apertium-pretransfer"/> 
       <program name="lt-proc -b">

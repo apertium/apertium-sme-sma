@@ -21,6 +21,7 @@
     <sdef n="pers"/>
     <sdef n="logo"/>
     <sdef n="comp"/>
+    <sdef n="superl"/>
     <sdef n="refl"/>
     <sdef n="rel"/>
     <sdef n="interr"/>
@@ -2772,9 +2773,8 @@
     <e><p><l>sámegiel<s n="a"/><s n="attr"/></l><r>saemiengïele<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>davviriikkalaš<s n="a"/><s n="attr"/></l><r>noerhtelaante<s n="n"/><s n="pl"/><s n="gen"/></r></p></e>
 
-    <e><p><l>eambbo<s n="a"/></l><r>jeene<s n="a"/><s n="comp"/></r></p></e>
-    <e><p><l>eanet<s n="a"/></l><r>jeene<s n="a"/><s n="comp"/></r></p></e>
-    <e><p><l>eanet<s n="a"/><s n="comp"/></l><r>jeene<s n="a"/><s n="comp"/></r></p></e>
+    <e><p><l>eambbo<s n="a"/></l><r>jeene<s n="a"/></r></p></e>
+    <e><p><l>eanet<s n="a"/></l><r>jeene<s n="a"/></r></p></e>
 
     <e r="LR"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/><s n="attr"/></r></p></e>
     <e r="RL"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/></r></p></e>
@@ -2818,6 +2818,14 @@
     <e r="RL"><p><l>sámegielalaš<s n="a"/></l><r>saemiengïeleldh<s n="a"/></r></p></e>
     <e r="LR"><p><l>sámegielat<s n="a"/></l><r>saemiengïeleldh<s n="a"/><s n="indecl"/></r></p></e>
     <e r="RL"><p><l>sámegielat<s n="a"/></l><r>saemiengïeleldh<s n="a"/></r></p></e>
+    <e r="LR"><p><l>earálágan<s n="a"/></l><r>ovmese<s n="a"/><s n="indecl"/></r></p></e>
+    <e r="RL"><p><l>earálágan<s n="a"/></l><r>ovmese<s n="a"/></r></p></e>
+    <e r="LR"><p><l>báikkálaš<s n="a"/></l><r>voenges<s n="a"/><s n="indecl"/></r></p></e>
+    <e r="RL"><p><l>báikkálaš<s n="a"/></l><r>voenges<s n="a"/></r></p></e>
+    <e r="LR"><p><l>dihtomielalaš<s n="a"/></l><r>voerkes<s n="a"/><s n="indecl"/></r></p></e>
+    <e r="RL"><p><l>dihtomielalaš<s n="a"/></l><r>voerkes<s n="a"/></r></p></e>
+    <e r="LR"><p><l>diđolaš<s n="a"/></l><r>voerkes<s n="a"/><s n="indecl"/></r></p></e>
+    <e r="RL"><p><l>diđolaš<s n="a"/></l><r>voerkes<s n="a"/></r></p></e>
 
     <e r="LR"><p><l>nubbi<s n="a"/><s n="ord"/><s n="attr"/></l><r>mubpie<s n="a"/><s n="ord"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>nubbi<s n="a"/><s n="ord"/></l><r>mubpie<s n="a"/><s n="ord"/></r></p></e>
@@ -2881,7 +2889,6 @@
     <e><p><l>dáiddolaš<s n="a"/></l><r>maehtehtje<s n="a"/></r></p></e>
     <e><p><l>dálá<s n="a"/></l><r>daaletje<s n="a"/></r></p></e>
     <e><p><l>dárbbašlaš<s n="a"/></l><r>daerpies<s n="a"/></r></p></e>
-    <e><p><l>earálágan<s n="a"/></l><r>ovmese<s n="a"/></r></p></e>
     <e><p><l>eaŋkil<s n="a"/></l><r>aelhkies<s n="a"/></r></p></e>
     <e><p><l>ekonomalaš<s n="a"/></l><r>ekonomeles<s n="a"/></r></p></e>
     <e><p><l>elektrovnnalaš<s n="a"/></l><r>elektrovneles<s n="a"/></r></p></e>
@@ -3000,7 +3007,7 @@
     <e><p><l>olmmošlaš<s n="a"/></l><r>garkeles<s n="a"/></r></p></e>
     <e><p><l>oskkáldas<s n="a"/></l><r>stinkes<s n="a"/></r></p></e>
     <e><p><l>ovccát<s n="a"/></l><r>åktsede<s n="a"/></r></p></e>
-    <e><p><l>ovddeš<s n="a"/></l><r>evtebe<s n="a"/></r></p></e>
+    <e><p><l>ovddeš<s n="a"/></l><r>evtebe<s n="a"/><s n="comp"/></r></p></e>
     <e><p><l>ovddolaš<s n="a"/></l><r>rovnegs<s n="a"/></r></p></e>
     <e><p><l>ođas<s n="a"/></l><r>orre<s n="a"/></r></p></e>
     <e><p><l>ođđaáigásaš<s n="a"/></l><r>daaletje<s n="a"/></r></p></e>
@@ -3118,9 +3125,6 @@
     <e><p><l>demokráhtalaš<s n="a"/></l><r>demokraateles<s n="a"/></r></p></e>
     <e><p><l>girkolaš<s n="a"/></l><r>gyrhkeles<s n="a"/></r></p></e>
     <e><p><l>sosiála<s n="a"/></l><r>sosijaale<s n="a"/></r></p></e>
-    <e><p><l>báikkálaš<s n="a"/></l><r>voenges<s n="a"/></r></p></e>
-    <e><p><l>dihtomielalaš<s n="a"/></l><r>voerkes<s n="a"/></r></p></e>
-    <e><p><l>diđolaš<s n="a"/></l><r>voerkes<s n="a"/></r></p></e>
     <e><p><l>persovnnalaš<s n="a"/></l><r>persovneles<s n="a"/></r></p></e>
     <e><p><l>psykologalaš<s n="a"/></l><r>psykologeles<s n="a"/></r></p></e>
     <e><p><l>pedagogalaš<s n="a"/></l><r>pedagogeles<s n="a"/></r></p></e>
@@ -3139,7 +3143,7 @@
     <e><p><l>dattetge<s n="adv"/></l><r>darhkan<s n="pcle"/></r></p></e>
     <e><p><l>nappo<s n="adv"/></l><r>nagke<s n="pcle"/></r></p></e>
     <e><p><l>duođalaččat<s n="adv"/></l><r>aalvere<s n="adv"/></r></p></e>
-    <e><p><l>maŋimus<s n="adv"/></l><r>minngemes<s n="adv"/></r></p></e>
+    <e><p><l>maŋimus<s n="adv"/></l><r>minngemes<s n="adv"/><s n="superl"/></r></p></e>
     <e><p><l>vuolágeahčen<s n="adv"/></l><r>vuelielisnie<s n="adv"/></r></p></e>
     <e><p><l>rabas<s n="adv"/></l><r>gaahpode<s n="adv"/></r></p></e>
 
