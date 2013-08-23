@@ -283,6 +283,7 @@
     <e><p><l>moanat<s n="pron"/><s n="indef"/></l><r>gellie<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>mii<s n="pron"/><s n="interr"/></l><r>mij<s n="pron"/><s n="interr"/></r></p></e>
     <e><p><l>gii<s n="pron"/><s n="interr"/></l><r>gie<s n="pron"/><s n="interr"/></r></p></e>
+    <e><p><l>oallugat<s n="pron"/><s n="indef"/></l><r>jïjnje<s n="pron"/><s n="indef"/><s n="pl"/></r></p></e>
 
 
     <e><p><l>muhtun<s n="pron"/><s n="indef"/></l><r>måedtie<s n="pron"/><s n="indef"/></r></p></e>
@@ -2164,6 +2165,7 @@
     <e><p><l>várrehus<s n="n"/></l><r>væhta<s n="n"/></r></p></e>
     <e><p><l>várri<s n="n"/><s n="plc"/></l><r>tjahke<s n="n"/></r></p></e>
     <e><p><l>vásihus<s n="n"/></l><r>dååjrehtimmie<s n="n"/></r></p></e>
+    <e><p><l>vásáhus<s n="n"/></l><r>dååjrehtimmie<s n="n"/></r></p></e>
     <e><p><l>vástádus<s n="n"/></l><r>vaestiedasse<s n="n"/></r></p></e>
     <e><p><l>váttisvuohta<s n="n"/></l><r>tsagkese<s n="n"/></r></p></e>
     <e><p><l>áddejupmi<s n="n"/></l><r>goerkelimmie<s n="n"/></r></p></e>
@@ -2730,7 +2732,7 @@
     <e><p><l>riibma<s n="n"/></l><r>rijme<s n="n"/></r></p></e>
     <e><p><l>hoahkan<s n="n"/></l><r>raajroe<s n="n"/></r></p></e>
     <e><p><l>tearbma<s n="n"/></l><r>teerme<s n="n"/></r></p></e>    <e><p><l>cealkkaanalysa<s n="n"/></l><r>raajesejoekedimmie<s n="n"/></r></p></e>
-    <e><p><l>fágatearbma<s n="n"/></l><r>faagetearme<s n="n"/></r></p></e>
+    <e><p><l>fágatearbma<s n="n"/></l><r>faageteerme<s n="n"/></r></p></e>
     <e><p><l>tv-prográmma<s n="n"/></l><r>tv-programme<s n="n"/></r></p></e>
     <e><p><l>sojaheapmi<s n="n"/></l><r>syjjehtimmie<s n="n"/></r></p></e>
     <e><p><l>sojahanoahppa<s n="n"/></l><r>syjjehtimmielearoe<s n="n"/></r></p></e>
@@ -2771,6 +2773,8 @@
     <e><p><l>ekspeartajoavku<s n="n"/></l><r>ekspertedåehkie<s n="n"/></r></p></e>
     <e><p><l>stivrendokumeanta<s n="n"/></l><r>stuvremetjaatsege<s n="n"/></r></p></e>
     <e><p><l>válgaáigodat<s n="n"/></l><r>veeljemeboelhke<s n="n"/></r></p></e>
+    <e><p><l>rámma<s n="n"/></l><r>mierie<s n="n"/></r></p></e>
+    <e><p><l>rámmajuolludeapmi<s n="n"/></l><r>mieriesertiestimmie<s n="n"/></r></p></e>
 
     <!-- SECTION: Proper Nouns -->
 
@@ -13896,6 +13900,16 @@
     <e><p><l>giellateknologalaš<s n="a"/></l><r>gïeleteknologeles<s n="a"/></r></p></e>
     <e><p><l>teknologalaš<s n="a"/></l><r>teknologeles<s n="a"/></r></p></e>
     <e><p><l>máŋggabealat<s n="a"/></l><r>gelliesåarts<s n="a"/></r></p></e>
+    <e><p><l>fásta<s n="a"/></l><r>ihkuve<s n="a"/></r></p></e>
+    <e><p><l>geatnegahtton<s n="a"/></l><r>dïedtem<b/>utnedh<s n="v"/><s n="tv/></r></p></e>
+    <e><p><l>váilevaš<s n="a"/></l><r>fååtesidh<s n="v"/><s n="tv/></r></p></e>
+    <e><p><l>suohkanlaš<s n="a"/></l><r>tjïelte<s n="n"/><s n="sg/><s n="gen"/></r></p></e>
+    <e><p><l>mávssolaš<s n="a"/></l><r>vyörtegs<s n="a"/></r></p></e>
+    <e><p><l>aktiivvalaš<s n="a"/></l><r>eadtjohke<s n="a"/></r></p></e>
+    <e><p><l>oktagaslaš<s n="a"/></l><r>individuelle<s n="a"/></r></p></e>
+    <e><p><l>geográfalaš<s n="a"/></l><r>geograafeles<s n="a"/></r></p></e>
+    <e><p><l>formálalaš<s n="a"/></l><r>byjjes<s n="a"/></r></p></e>
+    <e><p><l>eahpeformálalaš<s n="a"/></l><r>ovbyjjes<s n="a"/></r></p></e>
 
 
 
@@ -14025,7 +14039,7 @@
     <e><p><l>aiddo<s n="adv"/></l><r>aadtjege<s n="adv"/></r></p></e>
     <e><p><l>okto<s n="adv"/></l><r>oktegh<s n="adv"/></r></p></e>
     <e><p><l>guhkás<s n="adv"/></l><r>gåhkese<s n="adv"/></r></p></e>
-    <e><p><l>bajás<s n="adv"/></l><r>bæjjese<s n="adv"/></r></p></e>
+    <e><p><l>bajás<s n="adv"/><s n="plc"/></l><r>bæjjese<s n="adv"/></r></p></e>
     <e><p><l>almmá<s n="adv"/></l><r>namhtah<s n="adv"/></r></p></e>
     <e><p><l>otne<s n="adv"/></l><r>daenbiejjien<s n="adv"/></r></p></e>
     <e><p><l>aŋkke<s n="adv"/></l><r>læjhkan<s n="adv"/></r></p></e>
@@ -14048,6 +14062,7 @@
     <e><p><l>álkit<s n="adv"/></l><r>aelhkieslaakan<s n="adv"/></r></p></e>
     <e><p><l>dađistaga<s n="adv"/></l><r>daamtaj<s n="adv"/></r></p></e>
     <e><p><l>viidáseappot<s n="adv"/></l><r>vijriesåbpoe<s n="adv"/></r></p></e>
+    <e><p><l>jahkásaččat<s n="adv"/></l><r>fïerhten<b/>jaepien<s n="adv"/></r></p></e>
 
     <!-- SECTION: Verbs -->
 
@@ -15000,6 +15015,9 @@
     <e><p><l>namuhit<s n="v"/><s n="tv"/></l><r>neebnedh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>ohcat<s n="v"/><s n="tv"/></l><r>syökedh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>áimmahuššat<s n="v"/><s n="tv"/></l><r>voebnesjidh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>lasihit<s n="v"/><s n="tv"/></l><r>lissiehtidh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>suddjet<s n="v"/><s n="tv"/></l><r>vaarjelidh<s n="v"/><s n="tv"/></r></p></e>
+
 
    
     <!-- SECTION: Punctuation -->
@@ -15007,6 +15025,7 @@
     <e><p><l>excl<s n="clb"/></l><r>excl<s n="clb"/></r></p></e>
 
     <e><re>[0-9]+([., ][0-9]+)?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+    <e><p><l>miljovdna<s n="num"/></l><r>millijovne<s n="num"/></r></p></e>
 
   </section>
 </dictionary>
