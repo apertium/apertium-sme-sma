@@ -29,6 +29,7 @@
     <sdef n="indef"/>
     <sdef n="coll"/>
     <sdef n="der_passl"/>
+    <sdef n="der_a"/>
 
     <sdef n="sg1"/>
     <sdef n="sg2"/>
@@ -504,7 +505,7 @@
     <e><p><l>boazodoalloláhka<s n="n"/></l><r>båatsoelaake<s n="n"/></r></p></e>
     <e><p><l>boazodoalloskuvla<s n="n"/></l><r>båatsoeburrieskuvle<s n="n"/></r></p></e>
     <e><p><l>boazodoallu<s n="n"/></l><r>båatsoe<s n="n"/></r></p></e>
-    <e><p><l>boazodoallooahppu<s n="n"/></l><r>båatsoejielemen<b/>learoe<s n="n"/></r></p></e>
+    <e><p><l>boazodoallooahppu<s n="n"/></l><r>båatsoejielemelearoe<s n="n"/></r></p></e>
     <e><p><l>boazoeaiggát<s n="n"/></l><r>bovtsealmetje<s n="n"/></r></p></e>
     <e><p><l>boazoisit<s n="n"/></l><r>bovtsealmetje<s n="n"/></r></p></e>
     <e><p><l>boazomearka<s n="n"/></l><r>mïerhke<s n="n"/></r></p></e>
@@ -2744,7 +2745,7 @@
     <e><p><l>girječálli<s n="n"/></l><r>tjaelije<s n="n"/></r></p></e>
     <e><p><l>vahkkobeaivi<s n="n"/></l><r>våhkoebiejjie<s n="n"/></r></p></e>
     <e><p><l>ruhtadeapmi<s n="n"/></l><r>beetnehdåarjoe<s n="n"/></r></p></e>
-    <e><p><l>pasienta<s n="n"/></l><r>skïemtjije<s n="n"/></r></p></e>
+    <e><p><l>pasieanta<s n="n"/></l><r>skïemtjije<s n="n"/></r></p></e>
     <e><p><l>buohcci<s n="n"/></l><r>skïemtjije<s n="n"/></r></p></e>
     <e><p><l>minoritehtagiella<s n="n"/></l><r>unnebelåhkoengïele<s n="n"/></r></p></e>
     <e><p><l>jienastuslohku<s n="n"/></l><r>veeljemelåhkoe<s n="n"/></r></p></e>
@@ -13712,7 +13713,7 @@
     <e><p><l>liekkas<s n="a"/></l><r>bïjveles<s n="a"/></r></p></e>
     <e><p><l>liekkus<s n="a"/></l><r>lustes<s n="a"/></r></p></e>
     <e><p><l>lihkolaš<s n="a"/></l><r>aavrehke<s n="a"/></r></p></e>
-    <e><p><l>loahpalaš<s n="a"/></l><r>dellie<b/>maajetjh<s n="a"/></r></p></e>
+    <e><p><l>loahpalaš<s n="a"/></l><r>minngie<s n="n"/><s n="der_a"/><s n="a"/><s n="superl"/></r></p></e>
     <e><p><l>lobiheapme<s n="a"/></l><r>ovluhpehts<s n="a"/></r></p></e>
     <e><p><l>lodji<s n="a"/></l><r>daemies<s n="a"/></r></p></e>
     <e><p><l>logát<s n="a"/></l><r>låhkede<s n="a"/></r></p></e>
@@ -13912,7 +13913,7 @@
 
     <e><p><l>mihá<s n="adv"/></l><r>sagki<s n="adv"/></r></p></e>
     <e><p><l>aktiivvalaččat<s n="adv"/></l><r>eadtjohkelaakan<s n="adv"/></r></p></e>
-    <e><p><l>seammá<s n="adv"/></l><r>seamma<b/>tïjjen<s n="adv"/></r></p></e>
+    <e><p><l>seammá<s n="adv"/></l><r>seamma<s n="adv"/></r></p></e>
     <e><p><l>seammás<s n="adv"/></l><r>seamma<b/>tïjjen<s n="adv"/></r></p></e>
     <e><p><l>danne<s n="adv"/></l><r>dannasinie<s n="adv"/></r></p></e>
     <e><p><l>dárkilit<s n="adv"/></l><r>veele<s n="adv"/></r></p></e>
