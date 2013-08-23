@@ -42,7 +42,9 @@ TMP4=`mktemp tmp.4.XXXXXXXXXX`;
 echo "~[ \$[ %<cmp%> ] | 
 \$[ %<rcmpnd%> ] | 
 \$[ %<plgencmp%> ] | 
+\$[ %+ ] | 
 \$[ %<sgnomcmp%> ] | 
+\$[ %<sgcmp%> ] | 
 \$[ %<sggencmp%> ] |
 \$[ %<attrcmp%> ] 
 ] ;" | hfst-regexp2fst -S -o $TMPFILTER
