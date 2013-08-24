@@ -21,6 +21,7 @@
 dev/apertium-sme-sma.sme-sma.t1x.BACKUP -text
 dev/cg-tag-convertor.py -text
 dev/dixtest.sh -text
+dev/find-contlex-combos.py -text
 dev/generation-errors.sh -text
 dev/generation-history.log -text
 dev/generation-report.sme-sma.txt -text
