@@ -32,6 +32,8 @@
     <sdef n="der_a"/>
     <sdef n="foc_ge"/>
 
+    <sdef n="g3"/>
+
     <sdef n="sg1"/>
     <sdef n="sg2"/>
     <sdef n="sg3"/>
@@ -297,7 +299,7 @@
     <e r="RL"><p><l>oktage<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></l><r>aktege<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtet<s n="pron"/><s n="indef"/></l><r>geahkese<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtege<s n="pron"/><s n="indef"/></l><r>geahkese<s n="pron"/><s n="indef"/></r></p></e>
-    <e><p><l>veaháš<s n="pron"/><s n="indef"/><s n="Sg"/><s n="foc_ge"/></l><r>naan<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>veaháš<s n="pron"/><s n="indef"/><s n="sg"/><s n="foc_ge"/></l><r>naan<s n="pron"/><s n="indef"/></r></p></e>
 
 <!--    <e><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhte<s n="pron"/><s n="indef"/></r></p></e>-->
     <e r="LR"><p><l>juohke<s n="pron"/><s n="indef"/><s n="attr"/></l><r>fïerhte<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></r></p></e>
