@@ -30,6 +30,7 @@
     <sdef n="coll"/>
     <sdef n="der_passl"/>
     <sdef n="der_a"/>
+    <sdef n="foc_ge"/>
 
     <sdef n="sg1"/>
     <sdef n="sg2"/>
@@ -159,6 +160,8 @@
     <!-- SECTION: Particles -->
 
     <e><p><l>nai<s n="pcle"/></l><r>aaj<s n="adv"/></r></p></e>
+    <e><p><l>ge<s n="pcle"/></l><r>gænnah<s n="pcle"/></r></p></e>
+    <e><p><l>goit<s n="pcle"/></l><r>gujht<s n="pcle"/></r></p></e>
 
     <!-- SECTION: Adpositions -->
 
@@ -275,6 +278,7 @@
 
     <e><p><l>giige<s n="pron"/><s n="indef"/><s n="sg"/></l><r>giege<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>makkár<s n="pron"/><s n="interr"/></l><r>magkeres<s n="pron"/><s n="interr"/></r></p></e> <!-- TODO -->
+    <e><p><l>makkárge<s n="pron"/><s n="indef"/><s n="attr"/></l><r>naan<s n="pron"/><s n="indef"/></r></p></e>
 
     <e><p><l>dát<s n="pron"/><s n="dem"/></l><r>daate<s n="pron"/><s n="dem"/></r></p></e>
 
@@ -293,6 +297,7 @@
     <e r="RL"><p><l>oktage<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></l><r>aktege<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtet<s n="pron"/><s n="indef"/></l><r>geahkese<s n="pron"/><s n="indef"/></r></p></e>
     <e><p><l>iešguhtege<s n="pron"/><s n="indef"/></l><r>geahkese<s n="pron"/><s n="indef"/></r></p></e>
+    <e><p><l>veaháš<s n="pron"/><s n="indef"/><s n="Sg"/><s n="foc_ge"/></l><r>naan<s n="pron"/><s n="indef"/></r></p></e>
 
 <!--    <e><p><l>juohke<s n="pron"/><s n="indef"/></l><r>fïerhte<s n="pron"/><s n="indef"/></r></p></e>-->
     <e r="LR"><p><l>juohke<s n="pron"/><s n="indef"/><s n="attr"/></l><r>fïerhte<s n="pron"/><s n="indef"/><s n="ND"/><s n="CD"/></r></p></e>
@@ -14051,6 +14056,7 @@
     <e><p><l>easkka<s n="adv"/></l><r>voestegh<s n="adv"/></r></p></e>
     <e><p><l>vuos<s n="adv"/></l><r>voestegh<s n="adv"/></r></p></e>
     <e><p><l>beare<s n="adv"/></l><r>ajve<s n="adv"/></r></p></e>
+    <e><p><l>dušše<s n="adv"/></l><r>ajve<s n="adv"/></r></p></e>
     <e><p><l>dávjá<s n="adv"/></l><r>daamhtah<s n="adv"/></r></p></e>
     <e><p><l>olu<s n="adv"/></l><r>jïjnje<s n="adv"/></r></p></e>
     <e><p><l>álo<s n="adv"/></l><r>iktesth<s n="adv"/></r></p></e>
@@ -14504,7 +14510,7 @@
     <e><p><l>joksat<s n="v"/><s n="tv"/></l><r>jaksedh<s n="v"/><s n="tv"/></r></p></e>
     <e slr="1"><p><l>jorgalit<s n="v"/><s n="tv"/></l><r>jarkoestidh<s n="v"/><s n="tv"/></r></p></e>
     <e slr="2"><p><l>jorgalit<s n="v"/><s n="tv"/></l><r>jarkoestehtedh<s n="v"/><s n="tv"/></r></p></e>
-    <e><p><l>jođihit<s n="v"/><s n="iv"/></l><r>lijrehtidh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>jođihit<s n="v"/><s n="iv"/></l><r>öörnedh<s n="v"/><s n="tv"/></r></p></e>
     <e slr="1"><p><l>jođihit<s n="v"/><s n="tv"/></l><r>mietiedidh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>juhkat<s n="v"/><s n="tv"/></l><r>jovkedh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>julggaštit<s n="v"/><s n="tv"/></l><r>bæjhkoehtidh<s n="v"/><s n="iv"/></r></p></e>
