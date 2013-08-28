@@ -2,6 +2,8 @@ grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"a"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smea1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"adv"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smeadv1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"v"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smev1
+grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"iv"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smeiv1
+grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"tv"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smetv1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"cc"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smecc1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"cs"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smecs1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f1 | grep '"num"' |sed 's/<b\/>/ /' | tr "<" ">" | cut -d ">" -f7 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smenum1
@@ -16,7 +18,8 @@ grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's
 cat $HOME/apertium/apertium-sme-sma/dev/smen1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "N+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smen2
 cat $HOME/apertium/apertium-sme-sma/dev/smea1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "A+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smea2
 cat $HOME/apertium/apertium-sme-sma/dev/smeadv1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "+Adv" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smeadv2
-cat $HOME/apertium/apertium-sme-sma/dev/smev1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "V+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smev2
+cat $HOME/apertium/apertium-sme-sma/dev/smeiv1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "IV+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smeiv2
+cat $HOME/apertium/apertium-sme-sma/dev/smetv1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "TV+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smetv2
 cat $HOME/apertium/apertium-sme-sma/dev/smepcle1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "+Pcle" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smepcle2
 cat $HOME/apertium/apertium-sme-sma/dev/smeindef1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "+Indef" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smeindef2
 cat $HOME/apertium/apertium-sme-sma/dev/smenum1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "Num+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smenum2
@@ -30,8 +33,10 @@ cat $HOME/apertium/apertium-sme-sma/dev/smepo1 | $HLOOKUP $GTHOME/langs/sme/src/
 cat $HOME/apertium/apertium-sme-sma/dev/smerefl1 | $HLOOKUP $GTHOME/langs/sme/src/analyser-gt-desc.hfst | grep "Refl+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smerefl2
 echo "MISSING nouns" > $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
 comm -23 $HOME/apertium/apertium-sme-sma/dev/smen1 $HOME/apertium/apertium-sme-sma/dev/smen2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
-echo "MISSING verbs" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
-comm -23 $HOME/apertium/apertium-sme-sma/dev/smev1 $HOME/apertium/apertium-sme-sma/dev/smev2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
+echo "MISSING IV verbs" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
+comm -23 $HOME/apertium/apertium-sme-sma/dev/smeiv1 $HOME/apertium/apertium-sme-sma/dev/smeiv2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
+echo "MISSING TV verbs" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
+comm -23 $HOME/apertium/apertium-sme-sma/dev/smetv1 $HOME/apertium/apertium-sme-sma/dev/smetv2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
 echo "MISSING adj" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
 comm -23 $HOME/apertium/apertium-sme-sma/dev/smea1 $HOME/apertium/apertium-sme-sma/dev/smea2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
 echo "MISSING num" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
@@ -62,7 +67,8 @@ see $HOME/apertium/apertium-sme-sma/dev/lemmatest-sme.txt
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"n"' | sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/sman1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"a"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smaa1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"adv"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smaadv1
-grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"v"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smav1
+grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"iv"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smaiv1
+grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"tv"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smatv1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"cc"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smacc1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"cs"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smacs1
 grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's/<r>/¢/' | cut -d "¢" -f2 |  grep '"num"' |  sed 's/<b\/>/ /' | cut -d "<" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smanum1
@@ -77,7 +83,8 @@ grep '<r>' $HOME/apertium/apertium-sme-sma/apertium-sme-sma.sme-sma.dix | sed 's
 cat $HOME/apertium/apertium-sme-sma/dev/sman1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "N+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/sman2
 cat $HOME/apertium/apertium-sme-sma/dev/smaa1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "A+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smaa2
 cat $HOME/apertium/apertium-sme-sma/dev/smaadv1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+Adv" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smaadv2
-cat $HOME/apertium/apertium-sme-sma/dev/smav1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "V+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smav2
+cat $HOME/apertium/apertium-sme-sma/dev/smaiv1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "IV+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smaiv2
+cat $HOME/apertium/apertium-sme-sma/dev/smatv1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "TV+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smatv2
 cat $HOME/apertium/apertium-sme-sma/dev/smapcle1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+Pcle" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smapcle2
 cat $HOME/apertium/apertium-sme-sma/dev/smaindef1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "+Indef" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smaindef2
 cat $HOME/apertium/apertium-sme-sma/dev/smanum1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Num+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smanum2
@@ -91,8 +98,10 @@ cat $HOME/apertium/apertium-sme-sma/dev/smapo1 | $HLOOKUP $GTHOME/langs/sma/src/
 cat $HOME/apertium/apertium-sme-sma/dev/smarefl1 | $HLOOKUP $GTHOME/langs/sma/src/analyser-gt-norm.hfst | grep "Refl+" | cut -f2 | cut -d "+" -f1 | sort -u > $HOME/apertium/apertium-sme-sma/dev/smarefl2
 echo "MISSING nouns" > $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
 comm -23 $HOME/apertium/apertium-sme-sma/dev/sman1 $HOME/apertium/apertium-sme-sma/dev/sman2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
-echo "MISSING verbs" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
-comm -23 $HOME/apertium/apertium-sme-sma/dev/smav1 $HOME/apertium/apertium-sme-sma/dev/smav2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
+echo "MISSING IV verbs" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
+comm -23 $HOME/apertium/apertium-sme-sma/dev/smaiv1 $HOME/apertium/apertium-sme-sma/dev/smaiv2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
+echo "MISSING TV verbs" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
+comm -23 $HOME/apertium/apertium-sme-sma/dev/smatv1 $HOME/apertium/apertium-sme-sma/dev/smatv2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
 echo "MISSING adj" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
 comm -23 $HOME/apertium/apertium-sme-sma/dev/smaa1 $HOME/apertium/apertium-sme-sma/dev/smaa2 >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
 echo "MISSING num" >> $HOME/apertium/apertium-sme-sma/dev/lemmatest-sma.txt
