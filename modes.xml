@@ -253,7 +253,7 @@
         <file name="apertium-sme-sma.sme-sma.t3x"/>
         <file name="sme-sma.t3x.bin"/>
       </program>
-      <program name="apertium-interchunk">
+      <program name="apertium-interchunk -t">
         <file name="apertium-sme-sma.sme-sma.t4x"/>
         <file name="sme-sma.t4x.bin"/>
       </program>

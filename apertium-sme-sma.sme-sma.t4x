@@ -76,6 +76,9 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="SN_Advl">
+        <cat-item tags="ADV.@ADVL→"/>
+        <cat-item tags="ADV.@←ADVL"/>
+        <cat-item tags="ADV.@ADVL"/>
         <cat-item tags="SN.@ADVL→.*"/>
         <cat-item tags="SN.@←ADVL.*"/>
         <cat-item tags="SN.@ADVL.*"/>
