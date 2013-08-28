@@ -20,6 +20,9 @@
     <def-cat n="adj">
       <cat-item tags="a.*"/>
     </def-cat>
+    <def-cat n="adj-rdep">
+      <cat-item tags="a.*.@→N"/>
+    </def-cat>
     <def-cat n="num">
       <cat-item tags="num.*"/>
     </def-cat>
@@ -369,6 +372,9 @@
       <list-item v="veallahit"/>
       <list-item v="eallit"/>
     </def-list>
+    <def-list n="movement-verbs">
+      <list-item v="boahtit"/>
+    </def-list>
   </section-def-lists>
   <section-def-macros>
 
@@ -501,10 +507,23 @@
         </when>
         <when>
           <test>
+            <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+              <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+            <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
+            </and>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
         </when>
+
       </choose>
 
       <choose>
@@ -980,6 +999,40 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: adj-rdep n">
+      <pattern>
+        <pattern-item n="adj-rdep"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="a-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
