@@ -687,6 +687,32 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule> <!--VA becomes AV -->
+      <pattern>
+        <pattern-item n="IMainV"/>
+        <pattern-item n="SN_Advl"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
 
 
   </section-rules>

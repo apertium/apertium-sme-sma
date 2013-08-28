@@ -23,6 +23,9 @@
     <def-cat n="num">
       <cat-item tags="num.*"/>
     </def-cat>
+    <def-cat n="num-ldep">
+      <cat-item tags="num.*.*.*.@N←"/>
+    </def-cat>
     <def-cat n="pron-refl">
       <cat-item tags="pron.refl.*"/>
     </def-cat>
@@ -966,6 +969,39 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: n num-ldep">
+      <pattern>
+        <pattern-item n="n"/>
+        <pattern-item n="num-ldep"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="n-num" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
