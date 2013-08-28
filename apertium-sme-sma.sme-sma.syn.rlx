@@ -1204,6 +1204,7 @@ SUBSTITUTE (sem_plc) (*) TARGET (sem_plc) ;
 SUBSTITUTE (sem_sur) (*) TARGET (sem_sur) ;
 SUBSTITUTE (sem_route) (*) TARGET (sem_route) ;
 SUBSTITUTE (sem_semcon) (*) TARGET (sem_semcon) ;
+SUBSTITUTE (sem_txt) (*) TARGET (sem_txt) ;
 SUBSTITUTE (sem_time) (*) TARGET (sem_time) ;
 SUBSTITUTE (sem_txt) (*) TARGET (sem_txt) ;
 SUBSTITUTE (sem_veh) (*) TARGET (sem_veh) ;
