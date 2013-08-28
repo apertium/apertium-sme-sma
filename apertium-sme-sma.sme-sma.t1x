@@ -396,13 +396,22 @@
     </def-macro>  
 
     <def-macro n="proc-syn-foc-qst1" npar="1">
+      <choose>
+        <when>
+          <test>
+            <or>
+               <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@-FMAINV"/></equal>
+               <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@\+FMAINV"/></equal>
+            </or>
+          </test>
+          <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
+        </when>
+      </choose>
+
           <!-- Set the +Allegro tag to nothing for now -->
           <let><clip pos="1" side="tl" part="a_allegro"/><lit v=""/></let>
 
           <call-macro n="convert-deriv1">
-            <with-param pos="1"/>
-          </call-macro>
-          <call-macro n="convert-verb-deriv1">
             <with-param pos="1"/>
           </call-macro>
           <!-- If the word has a syntactic function label, set the variable with that 
@@ -658,6 +667,7 @@
     </def-macro>  
 
     <def-macro n="convert-verb-deriv1" npar="1">
+
       <choose>
         <when>
           <test>
@@ -1028,7 +1038,11 @@
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_adj"/>
+              <var n="nmbr"/>
+              <var n="case"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
             <lu>
@@ -1341,10 +1355,10 @@
         <pattern-item n="verb-fin"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst1">
+        <call-macro n="convert-verb-deriv1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-verb-deriv1">
+        <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="ind"/></let>
@@ -1357,6 +1371,7 @@
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
+            <var n="main-verb-lemma"/>
           </chunk>
         </out>
       </action>
