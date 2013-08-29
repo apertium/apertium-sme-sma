@@ -1,6 +1,6 @@
 <rules>
   <rule weight="1.0">
-    <match lemma="boahtteáigi" tags="n.sg.loc"><select lemma="båetije<b/>aejkie" tags="n.sg.gen"/></match>
+    <match lemma="boahtteáigi" tags="n.sg.loc"><select lemma="båetije aejkie" tags="n.sg.gen"/></match>
   </rule>
   <rule weight="1.0">
     <match lemma="boahtit" tags="v.*"><select lemma="båetedh" tags="v.*"/></match>
