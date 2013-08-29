@@ -233,6 +233,10 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="CD"/>
     </def-attr>
 
+    <def-attr n="a_attr">
+       <attr-item tags="attr"/>
+    </def-attr>
+
     <def-attr n="a_adj">
        <attr-item tags="a"/>
        <attr-item tags="a.ord"/>
@@ -260,11 +264,6 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_indecl">
        <attr-item tags="indecl"/>
-    </def-attr>
-
-
-    <def-attr n="a_attr">
-       <attr-item tags="attr"/>
     </def-attr>
 
     <def-attr n="a_conneg">
@@ -1136,6 +1135,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_adj"/>
               <var n="nmbr"/>
               <var n="case"/>
+              <clip pos="1" side="tl" part="a_attr"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
