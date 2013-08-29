@@ -652,6 +652,8 @@ And then there are some categories like "month", with all the months.
               <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
             </and>
           </test>
+          <let><var n="case"/><lit v=""/></let>
+          <let><var n="nmbr"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
           <let>
