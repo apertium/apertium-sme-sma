@@ -1,5 +1,8 @@
 <rules>
   <rule weight="1.0">
+    <match lemma="boahtteáigi" tags="n.sg.loc"><select lemma="båetije<b/>aejkie" tags="n.sg.gen"/></match>
+  </rule>
+  <rule weight="1.0">
     <match lemma="boahtit" tags="v.*"><select lemma="båetedh" tags="v.*"/></match>
   </rule>
   <rule weight="2.0">
