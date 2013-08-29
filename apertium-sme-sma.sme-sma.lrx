@@ -40,9 +40,11 @@
   <rule weight="1.0">
     <match lemma="áigumuš" tags="n.*"><select lemma="aajkoe" tags="n.*"/></match>
   </rule>
+  <!--
   <rule weight="1.0">
     <match lemma="áigut" tags="v.tv.*"><select lemma="edtjedh" tags="v.*"/></match>
   </rule>
+  -->
   <rule weight="1.0">
     <match lemma="áŋgir" tags="a.*"><select lemma="eadtjohke" tags="a.*"/></match>
   </rule>
