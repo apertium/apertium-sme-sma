@@ -23,7 +23,9 @@ dev/cg-tag-convertor.py -text
 dev/dixtest.sh -text
 dev/find-contlex-combos.py -text
 dev/generation-errors.sh -text
+dev/generation-history-schoolcorpus.log -text
 dev/generation-history.log -text
+dev/generation-report-schoolcorpus.sme-sma.txt -text
 dev/generation-report.sme-sma.txt -text
 dev/generation-schoolcorpus-errors.sh -text
 dev/generation-test.sh -text
