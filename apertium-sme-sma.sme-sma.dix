@@ -2044,6 +2044,7 @@
     <e><p><l>sátnevuorru<s n="n"/></l><r>lahtese<s n="n"/></r></p></e>
     <e><p><l>sátnevájas<s n="n"/></l><r>dïejvese<s n="n"/></r></p></e>
     <e><p><l>sátni<s n="n"/></l><r>baakoe<s n="n"/></r></p></e>
+    <e><p><l>sámegielsátni<s n="n"/></l><r>saemien</b>baakoe<s n="n"/></r></p></e>
     <e><p><l>sátta<s n="n"/></l><r>saadtege<s n="n"/></r></p></e>
     <e><p><l>sáttagoddi<s n="n"/></l><r>delegasjovne<s n="n"/></r></p></e>
     <e><p><l>sáttobábir<s n="n"/></l><r>saedtiepaehpere<s n="n"/></r></p></e>
@@ -2508,6 +2509,7 @@
     <e><p><l>studeantaáirras<s n="n"/></l><r>studeenterepresentaante<s n="n"/></r></p></e>
     <e><p><l>studeantasearvi<s n="n"/></l><r>studeentesiebrie<s n="n"/></r></p></e>
     <e><p><l>lohkangelbbolašvuohta<s n="n"/></l><r>studijemaahtoe<s n="n"/></r></p></e>
+    <e><p><l>studerengelbbolašvuohta<s n="n"/></l><r>studijemaahtoe<s n="n"/></r></p></e>
     <e><p><l>oahppokonsuleanta<s n="n"/></l><r>studiekonsuleente<s n="n"/></r></p></e>
 	<e><p><l>oahppobagadalli<s n="n"/><s n="nomag"/></l><r>studiekonsuleente<s n="n"/></r></p></e>
     <e><p><l>oahpporektor<s n="n"/></l><r>studierektovre<s n="n"/></r></p></e>
@@ -2958,6 +2960,9 @@
     <e><p><l>nubbigiellafága<s n="n"/></l><r>mubpiengïelefaage<s n="n"/></r></p></e>
     <e><p><l>ákkasteapmi<s n="n"/></l><r>digkiedimmie<s n="n"/></r></p></e>
     <e><p><l>láhkaásahus<s n="n"/></l><r>njoelkedasse<s n="n"/></r></p></e>
+    <e><p><l>muosáhus<s n="n"/></l><r>dååjrehts<s n="n"/></r></p></e>
+    <e><p><l>váldoáigodat<s n="n"/></l><r>åejvieboelhke<s n="n"/></r></p></e>
+    <e><p><l>namahus<s n="n"/></l><r>nomme<s n="n"/></r></p></e>
 
     <!-- SECTION: Adjectives -->
 
@@ -3400,7 +3405,11 @@
     <e><p><l>lahka<s n="a"/></l><r>lïhkes<s n="a"/></r></p></e>
     <e><p><l>studerenráhkkanahtti<s n="a"/></l><r>studijeryöjredimmie<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>fidnofágalaš<s n="a"/></l><r>barkoefaage<s n="n"/><s n="pl"/><s n="gen"/></r></p></e>
-
+    <e><p><l>ollislaš<s n="a"/></l><r>ellies<s n="a"/></r></p></e>
+    <e><p><l>relevánta<s n="a"/></l><r>relevaante<s n="a"/></r></p></e>
+    <e><p><l>árgabeaivválaš<s n="a"/></l><r>fïerhtenbeajjetji<s n="a"/></r></p></e>
+    <e><p><l>positiivvalaš<s n="a"/></l><r>positïjve<s n="a"/></r></p></e>
+    <e><p><l>grammatihkalaš<s n="a"/></l><r>grammatihkeles<s n="a"/></r></p></e>
 
 
     <!-- SECTION: Adverbs -->
@@ -3577,6 +3586,7 @@
     <e><p><l>ruoŧabealde<s n="adv"/></l><r>Sveerjen<b/>raedtesne<s n="adv"/></r></p></e>
     <e><p><l>davábealde<s n="adv"/></l><r>noerhtelen<s n="adv"/></r></p></e>
     <e><p><l>árbevirolaččat<s n="adv"/></l><r>aerpievuekien<b/>mietie<s n="adv"/></r></p></e>
+    <e><p><l>áššálaččat<s n="adv"/></l><r>aamhtesen<b/>mietie<s n="adv"/></r></p></e>
 
     <!-- SECTION: Verbs -->
 
@@ -4569,7 +4579,14 @@
     <e><p><l>suokkardit<s n="v"/><s n="tv"/></l><r>goerehtalledh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>konkretiseret<s n="v"/><s n="tv"/></l><r>tjyölkehke<b/>darjodh<s n="v"/><s n="tv"/></r></p></e>
     <e><p><l>dramatiseret<s n="v"/><s n="tv"/></l><r>draamine<b/>vuesiehtidh<s n="v"/><s n="tv"/></r></p></e>
-
+    <e><p><l>vuorbádit<s n="v"/><s n="tv"/></l><r>vuerpiem<b/>giesedh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>ainovdánahttit<s n="v"/><s n="tv"/></l><r>evtiedidh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>ákkastallat<s n="v"/><s n="iv"/></l><r>dïejveldidh<s n="v"/><s n="iv"/></r></p></e>
+    <e><p><l>reflekteret<s n="v"/><s n="tv"/></l><r>jïermestalledh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>máinnastit<s n="v"/><s n="tv"/></l><r>vaajesh<b/>soptsestidh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>gaskkustit<s n="v"/><s n="tv"/></l><r>åvtese<b/>buektedh<s n="v"/><s n="tv"/></r></p></e>
+    <e><p><l>čujuhit<s n="v"/><s n="tv"/></l><r>tjaatsestidh<s n="v"/><s n="tv"/></r></p></e> <!-- tjuvtjiedidh -->
+    <e><p><l>vurket<s n="v"/><s n="tv"/></l><r>vöörhkedh<s n="v"/><s n="tv"/></r></p></e> 
    
     <!-- SECTION: Punctuation -->
     <e><re>[;:,.\?]+</re><p><l><s n="clb"/></l><r><s n="clb"/></r></p></e>
