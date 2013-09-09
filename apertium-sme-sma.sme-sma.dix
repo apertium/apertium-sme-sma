@@ -943,7 +943,7 @@
     <e><p><l>giehtaduodji<s n="n"/></l><r>vytnesjimmie<s n="n"/></r></p></e>
     <e><p><l>giehtačeahppi<s n="n"/></l><r>hammoedæjja<s n="n"/></r></p></e>
     <e><p><l>giehtačála<s n="n"/></l><r>tjaeleme<s n="n"/></r></p></e>
-    <e><p><l>gielas<s n="n"/></l><r>mïelkese<s n="n"/></r></p></e>
+<!--    <e><p><l>gielas<s n="n"/></l><r>mïelkese<s n="n"/></r></p></e> -->
     <e><p><l>gielda<s n="n"/></l><r>tjïelte<s n="n"/></r></p></e>
     <e><p><l>gielddakantuvra<s n="n"/></l><r>tjïeltekontovre<s n="n"/></r></p></e>
     <e><p><l>gielis<s n="n"/></l><r>slaarve<s n="n"/></r></p></e>
@@ -1945,6 +1945,7 @@
     <e><p><l>soagŋu<s n="n"/></l><r>såangoe<s n="n"/></r></p></e>
     <e><p><l>soahki<s n="n"/></l><r>såekie<s n="n"/></r></p></e>
     <e><p><l>soahpamuš<s n="n"/></l><r>latjkoe<s n="n"/></r></p></e>
+    <e><p><l>tariffasoahpamuš<s n="n"/></l><r>tariffelatjkoe<s n="n"/></r></p></e>
     <e><p><l>soahti<s n="n"/></l><r>dåara<s n="n"/></r></p></e>
     <e><p><l>soalddát<s n="n"/></l><r>dåaroenïere<s n="n"/></r></p></e>
     <e><p><l>soarpa<s n="n"/></l><r>sapte<s n="n"/></r></p></e>
@@ -2604,7 +2605,7 @@
     <e><p><l>bargosoahpamuš<s n="n"/></l><r>barkoelatjkoe<s n="n"/></r></p></e>
     <e><p><l>oahppokandidáhta<s n="n"/></l><r>learoekandidaate<s n="n"/></r></p></e>
     <e><p><l>kandidáhta<s n="n"/></l><r>kandidaate<s n="n"/></r></p></e>
-    <e><p><l>praksiskandidáhta<s n="n"/></l><r>praksiskandidaate<s n="n"/></r></p></e>
+    <e><p><l>praksiskandidáhta<s n="n"/></l><r>praksisekandidaate<s n="n"/></r></p></e>
     <e><p><l>oahppoáigodat<s n="n"/></l><r>lïerehtimmieboelhke<s n="n"/></r></p></e>
     <e><p><l>loatnakássa<s n="n"/><s n="g3"/></l><r>löönemekaasse<s n="n"/></r></p></e>
     <e><p><l>gelbbolašvuođaiskkus<s n="n"/></l><r>maahtoepryövenasse<s n="n"/></r></p></e>
@@ -4619,6 +4620,8 @@
     <e><p><l>struktureret<s n="v"/><s n="tv"/></l><r>öörnedh<s n="v"/><s n="tv"/></r></p></e> 
     <e><p><l>juksat<s n="v"/><s n="tv"/></l><r>jaksedh<s n="v"/><s n="tv"/></r></p></e> 
     <e><p><l>vuođđudit<s n="v"/><s n="tv"/></l><r>våaromem<b/>vaeltedh<s n="v"/><s n="tv"/></r></p></e> 
+    <e><p><l>vuođđuduvvat<s n="v"/><s n="iv"/></l><r>betnesne<b/>årrodh<s n="v"/><s n="iv"/></r></p></e>   
+    <e><p><l>fáhtet<s n="v"/><s n="tv"/></l><r>reebledh<s n="v"/><s n="tv"/></r></p></e>   
    
     <!-- SECTION: Punctuation -->
     <e><re>[;:,.\?]+</re><p><l><s n="clb"/></l><r><s n="clb"/></r></p></e>
