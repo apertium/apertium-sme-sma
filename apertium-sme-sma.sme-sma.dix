@@ -36,6 +36,8 @@
     <sdef n="foc_ge"/>
 
     <sdef n="g3"/>
+    <sdef n="prs"/>
+    <sdef n="ind"/>
 
     <sdef n="sg1"/>
     <sdef n="sg2"/>
@@ -2467,8 +2469,7 @@
     <e><p><l>virgelohpi<s n="n"/></l><r>permisjovne<s n="n"/></r></p></e> 
     <e><p><l>árbemáhttu<s n="n"/></l><r>aerpiemaahtoe<s n="n"/></r></p></e>
     <e><p><l>suorgi<s n="n"/></l><r>suerkie<s n="n"/></r></p></e>
-    <e><p><l>bargosuorgi<s n="n"/></l><r>barkoesuerkie<s n="n"/></r></p></e>
-<!--    <e><p><l>suorgi<s n="n"/></l><r>sektore<s n="n"/></r></p></e> -->
+    <e><p><l>bargosuorgi<s n="n"/></l><r>barkoesuerkie<s n="n"/></r></p></e> <!--  sektore -->
     <e><p><l>váldosuorgi<s n="n"/></l><r>åejviesuerkie<s n="n"/></r></p></e> <!-- åejviesåelie -->
     <e><p><l>bargoeallin<s n="n"/></l><r>barkoejieleme<s n="n"/></r></p></e>
     <e><p><l>gáldogeavaheapmi<s n="n"/></l><r>gaaltijeåtnoe<s n="n"/></r></p></e>
@@ -3001,7 +3002,7 @@
     <e><p><l>eanet<s n="a"/></l><r>jeene<s n="a"/><s n="comp"/></r></p></e>
     <e><p><l>eanaš<s n="a"/><s n="attr"/></l><r>jeene<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
     <e><p><l>eanas<s n="a"/><s n="attr"/></l><r>jeene<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
-    <e><p><l>vejolaš<s n="a"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="v"/><s n="iv"/><s n="ind"/><s n="prs"/><s n="sg3"/></r></p></e>
+<e><p><l>vejolaš<s n="a"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="v"/><s n="iv"/><s n="ind"/><s n="prs"/><s n="sg3"/></r></p></e>
 
     <e r="LR"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/><s n="attr"/></r></p></e>
     <e r="RL"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/></r></p></e>
