@@ -3,6 +3,9 @@
 \usepackage[small,bf]{caption}
 \usepackage{xltxtra}
 \usepackage{times}
+\usepackage{natbib}
+
+\bibdata{paper}
 
 
 \title{North Sámi to South Sámi machine translation}
@@ -14,6 +17,9 @@
 \maketitle
 
 \section{Introduction}
+
+% Previous work
+\cite{tyers09} \cite{wiechetek10}
 
 \section{Languages}
 
@@ -50,6 +56,8 @@
 
 \section*{Acknowledgements}
 
-\section{References}
+\bibliographystyle{apalike}
+\bibliography{paper}
+
 
 \end{document}
