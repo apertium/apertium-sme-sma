@@ -2,14 +2,24 @@
 
 \usepackage[small,bf]{caption}
 \usepackage{xltxtra}
+\usepackage{fontspec}
+
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+
 \usepackage{times}
 \usepackage{natbib}
+
+\setromanfont{Times New Roman}
+\setmonofont{FreeMono}
+
 
 \bibdata{paper}
 
 
-\title{North Sámi to South Sámi machine translation}
-\author{Lene Antonsen \and Francis Tyers \and Trond Trosterud}
+\title{A North Sámi to South Sámi machine translation prototype}
+\author{Lene Antonsen,\\Giellatekno,\\Tromsø\\{\tt lene.antonsen@uit.no}
+\and Francis Tyers,\\Giellatekno,\\Tromsø\\{\tt ftyers@dlsi.ua.es}
+\and Trond Trosterud,\\Giellatekno,\\Tromsø\\{\tt trond.trosterud@uit.no}}
 \date{}
 
 \begin{document}
@@ -43,6 +53,33 @@
 
 \subsection{Statistics}
 
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|l|r|}
+      \hline
+      Bilingual dictionary ({\tt sme}$\rightarrow${\tt sma}) & 15,204 \\ % 10776 proper names
+      Transfer rules ({\tt sme}$\rightarrow${\tt sma}) & 57 \\
+      \hline
+    \end{tabular}
+    \label{table:transfer}
+    \caption{Number of bilingual dictionary entries and transfer rules}
+  \end{center}
+\end{table}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|l|r|}
+      \hline
+      \textbf{Corpus} & \textbf{Coverage}  \\
+      \hline
+      Schoolbooks     & 0.0 $\pm$ 0.0 \\
+      General         & 0.0 $\pm$ 0.0 \\
+      \hline
+    \end{tabular}
+    \label{table:coverage}
+    \caption{Vocabulary coverage of the system}
+  \end{center}
+\end{table}
 
 \subsection{Quantitative}
 
