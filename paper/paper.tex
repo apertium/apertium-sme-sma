@@ -204,11 +204,13 @@ Norwegian `å presentere' is in North Saami \textit{ovdanbuktit} but in South Sa
 
 These are solved by adding giving the translation as MWE to the morpological analyser.
 
-The pivot model causes some lexical problems. Even if the lexical conceptualisation often is similar in South Saami and North Saami, as for the trivial ‘to rain, to calcute’ pair, there are also counter examples, like the Norwegian verbs \textit{lese, telle, uttale} ‘read, count, utter’, which all three can be expressed with the North Saami verb \textit{lohkat}. But in South Saami there is no common verb for these concepts, and the lexical distribution is like the one for Norwegian: \textit{lohkedh, ryöknehtidh, jiehtedh}. 
 
 
 \subsubsection{Lexical selection}
-Because we were adapting the MT system to a special domain, we have not made many rules for lexical selection. How many rules? But an MT-system for more domains, will certainly need more such rules. 
+Because we were adapting the MT system to a special domain, we only made xxx rules for lexical selection. An MT-system for more domains, will certainly need more such rules. 
+
+The pivot model causes some extra lexical selection. Even if the lexical conceptualisation often is similar in South Saami and North Saami, as for the trivial ‘to rain, to calcute’ pair, there are also counter examples, like the Norwegian verbs \textit{lese, telle, uttale} ‘read, count, utter’, which all three can be expressed with the North Saami verb \textit{lohkat}. But in South Saami there is no common verb for these concepts, and the lexical distribution is like the one for Norwegian: \textit{lohkedh, ryöknehtidh, jiehtedh}. 
+
 
 \subsubsection{Structural transfer}
 
@@ -276,7 +278,23 @@ and the surface form is output.
 \end{table}
 
 \subsection{Quantitative}
-%@lene
+
+WER -- word error rate
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|l|r|r|r|}
+      \hline
+      \textbf{ } & \textbf{Eval. A} & \textbf{Eval. B} & \textbf{Eval. C}  \\
+      \hline
+word order in account & 62,37  &  49,46  &  52,69 \\
+word order not in account  &  36,20   &  28,32  &  28,32 \\
+      \hline
+    \end{tabular}
+    \label{table:coverage}
+    \caption{Vocabulary coverage of the system}
+  \end{center}
+\end{table}
+
 \subsection{Qualitative}
 %@lene
 
