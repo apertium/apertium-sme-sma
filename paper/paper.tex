@@ -95,7 +95,7 @@ also some differences in case usage, plural objects are accusative
 in North Saami, but nominative for indefinite and accusative for 
 definite objects in South Saami.
 
-For a machine translation system the ortographic differences 
+For a machine translation system the orthographic differences 
 imply that apart from person
 names and acronyms there will be no free rides during the conversion 
 process. The core vocabulary is distinct, even recent loans from
@@ -110,12 +110,48 @@ be found in \cite{sammallahti98}.
 %@fran
 % [Pipeline image]
 
+The translator was implemented using the Apertium platform \cite{forcada2011}. Apertium 
+provides a highly modular set of tools for building rule-based
+machine translation systems. Apertium language pairs are set up as Unix pipelines, where the
+typical pipeline consists of:
+
+\begin{itemize}
+\item deformatting (encapsulating formatting/markup from the engine),
+\item source-language (SL) morphological analysis with a finite-state
+  transducer (FST),
+\item disambiguation using a Hidden Markov Model (HMM) and/or
+  Constraint Grammar (CG), 
+\item lexical transfer (word-translation on the disambiguated source),
+\item lexical selection (choosing the appropriate word out of a set of possible
+   translations),
+\item one or more levels of finite-state based structural transfer
+  (reordering, and changes to morphological features),
+\item target-language (TL) generation with an FST
+\item reformatting (unencapsulating format information)
+\end{itemize}
+
+See Figure~\ref{fig:pipeline} for an overview of the modules used
+in this particular language pair.
+
+\begin{figure*}
+ \centering
+ \includegraphics[width=0.75\textwidth]{architecture-overview.pdf}
+ \caption{Overview of the translation pipeline.}
+ \label{fig:pipeline}
+\end{figure*}
+
 \subsection{Analysis}
 
-\subsubsection{Transfer}
-
+\subsection{Transfer}
 
 \textbf{Bilingual dictionary}
+
+Large syntactic differences also have consequences for the bidix, because there are many examples of sme-verb has go be translated into object+verb og adverb+verb in sma.
+ex: nob `å trekke lodd' sme \textit{vuorbádit} sma \textit{vuerpiem giesedh}, 
+nob `å presentere' sme \textit{ovdanbuktit} sma \textit{åvtese buektedh}. 
+I mange tilfeller er grunnen til denne  forskjellen at man på sme har fått utviklet flere termer som matcher de norske teremene, mens man på sma
+fremdeles må forklare innholdet.
+
 
 
 The bilingual dictionary
@@ -135,14 +171,29 @@ This was done, it had to be manually edited because of nob-words with more than 
 Example: nob \textit{regne} means both 'to rain' and ‘to calculate’, 
 which are two different verbs both in sme \textit{arvit, rehkenastit} and in sma \textit{abrodh, ryöknedh}
 
-\textbf{Rules}
+\subsubsection{Rules}
 
-larger syntactic differences between SL an TL than usually done in Apertium? \\
-This also has consequences for the bidix, because there are many examples of sme-verb has go be translated into object+verb og adverb+verb in sma.
-ex: nob ‘å trekke lodd’ sme \textit{vuorbádit} sma \textit{vuerpiem giesedh}, 
-nob ‘å presentere’ sme \textit{ovdanbuktit} sma \textit{åvtese buektedh}. 
-I mange tilfeller er grunnen til denne  forskjellen at man på sme har fått utviklet flere termer som matcher de norske teremene, mens man på sma
-fremdeles må forklare innholdet.
+The syntactic differences between North Saami and South Saami are
+greater than are usually dealt with between related language pairs
+in Apertium. 
+In order to be able to transfer VO structures to OV more reliably,
+the transfer phase is split into five parts instead of the three
+more typically used in Apertium:
+
+%t1x local chunking NP, VP
+%t2x localcoordination NP+NP, etc.
+%t3x empty, but for adpositional phrases + Rel clauses
+%t4x Constituent mvm, SVO -> SOV
+%t5x Cleanup
+
+
+\begin{itemize} 
+  \item \texttt{chunker}: Chunk input words into groups, e.g. noun groups, verb chains
+  \item \texttt{interchunk1}: Merge chunks which have local coordination, e.g. the sequence [NP $x$] [CC and] [NP $y$] is merged into [NP $x$ and $y$]
+  \item \texttt{interchunk2}: Merges relative clauses and adpositional phrases.
+  \item \texttt{interchunk3}: Reorder constituents, e.g. SVO $\rightarrow$ SOV.
+  \item \texttt{postchunk}: Cleanup
+\end{itemize}
 
 
 \subsubsection{Generation}

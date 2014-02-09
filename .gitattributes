@@ -51,6 +51,8 @@ dev/test-prefix.sh -text
 eval/evaluation_results.txt -text
 /modes.xml -text
 paper/Makefile -text
+paper/architecture-overview.obj -text
+paper/architecture-overview.pdf -text
 paper/paper.bib -text
 paper/paper.tex -text
 /pending-tests.sh -text
