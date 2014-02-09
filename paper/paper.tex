@@ -72,7 +72,7 @@ finally comes a conclusion.
 \cite{babych2007}
 
 \section{Motivation}
-sma sociolinguistic situation \cite{Todalsvahken2007}
+sma sociolinguistic situation \citep{Todalsvahken2007}
 
 
 \section{Languages}
@@ -187,7 +187,7 @@ analysis a syntactic tag denoting its syntactic function (subject, object,
 main verb, \ldots).
 
 The North Saami analyser has an F-score of 0.93 for morphological disambiguation
-and assignment fof grammatical functions \cite{AntonsenEtalReusing2010}.
+and assignment fof grammatical functions \citep{AntonsenEtalReusing2010}.
 
 \subsection{Transfer}
 
@@ -202,7 +202,7 @@ The bilingual dictionary: Some numbers
 \item added: 10 721 proper nouns
 \end{itemize}
 
-There is no North Saami-South Saami dictionary, so we made one by making word pairs by combining the Norwegian words in a general North Saami-Norwegian dictionary and a general South Saami-Norwegian dictionary. The word pairs were manually edited and the work revealed many incorrect pairs because of Norwegian words with more than one meaning. Example is the Norwegian verb \textit{regne}, which means both 'to rain' and ‘to calculate’, which are two different verbs both in North Saami, \textit{arvit} and \textit{rehkenastit}, and in South Saami \textit{abrodh} and \textit{ryöknedh}. The result of this work was 3,568 general word pairs and 61 proper nouns.
+There is no North Saami-South Saami dictionary, so we made one by making word pairs by combining the Norwegian words in a general North Saami-Norwegian dictionary and a general South Saami-Norwegian dictionary. The word pairs were manually edited and the work revealed many incorrect pairs because of Norwegian words with more than one meaning. Example is the Norwegian verb `regne', which means both `to rain' and `to calculate', which are two different verbs both in North Saami, \textit{arvit} and \textit{rehkenastit}, and in South Saami \textit{abrodh} and \textit{ryöknedh}. The result of this work was 3,568 general word pairs and 61 proper nouns.
 
 The existing Norwegian-South Saami lexical resources are poor, with little terminology from the modern society. South Saami has been used more for giving information to the Saami people especially during the last two years, and there are some texts especially about school administration and curriculum on Internet. By comparing Norwegian texts with the translations to North Saami and South Saami, we added 873 special domain word pairs to the bilingual dictionary.
 
@@ -217,7 +217,7 @@ These are solved by adding giving the translation as MWE to the morpological ana
 \subsubsection{Lexical selection}
 Because we were adapting the MT system to a special domain, we only made xxx rules for lexical selection. An MT-system for more domains, will certainly need more such rules. 
 
-The pivot model causes some extra lexical selection. Even if the lexical conceptualisation often is similar in South Saami and North Saami, as for the trivial ‘to rain, to calculate’ pair, there are also counter examples, like the Norwegian verbs \textit{lese, telle, uttale} ‘read, count, utter’, which all three can be expressed with the North Saami verb \textit{lohkat}. But in South Saami there is no common verb for these concepts, and the lexical distribution is like the one for Norwegian: \textit{lohkedh, ryöknehtidh, jiehtedh}. 
+The pivot model causes some extra lexical selection. Even if the lexical conceptualisation often is similar in South Saami and North Saami, as for the trivial `to rain, to calculate' pair, there are also counter examples, like the Norwegian verbs `lese, telle, uttale' («read, count, utter») which all three can be expressed with the North Saami verb \textit{lohkat}. But in South Saami there is no common verb for these concepts, and the lexical distribution is like the one for Norwegian: \textit{lohkedh, ryöknehtidh, jiehtedh}. 
 
 
 \subsubsection{Structural transfer}
@@ -250,7 +250,7 @@ compiled using HFST. Each lexical unit which is output by
 the postchunk module is looked up in the generation transducer
 and the surface form is output.
 
-Here is some facts about the South Saami analyser, if we need it \cite{smadis2011}.
+Here is some facts about the South Saami analyser, if we need it \citep{smadis2011}.
 
 \section{Evaluation}
 %@ lene,fran
@@ -319,14 +319,28 @@ WER -- word error rate
 
 \subsection{Qualitative}
 %@lene
-\subsubsection{Lexicon}
-The Norwegian text consisted of 288 words. The three evaluators had chosen respectively 42, 30 and 23 other words than the mt-system, for only for 9 words all the evaluators had chosen another word.
+\subsubsection{Lexicon and morphology}
+The Norwegian text consisted of 288 words. The three evaluators had chosen respectively 42, 30 and 23 other words than the MT-system, for only for 9 words all the evaluators had chosen another word.
 
-
-\subsubsection{Morphology}
-
+The morphology is quite good, but in four cases an incorrect or lack of disambiguation of the North Saami text has resultet in wrong morphological form to be generated. Some North Saami verbs require a certain case, which is not the right one for the corresponding South Saami verb.
 
 \subsubsection{Syntax}
+The evaluation revealed that the syntax was the poorest part of the MT-translation.
+
+SOV: The evaluators used 10--12 SOV or SAdvlV constructions in there texts, in the MT-text there were only 4, because of ....
+
+The MT-system generated only the construction \textit{genitive possessor + copula + possessed in nominative} for possessive, but the evaluators preferred to some extent also using the verb \text{nominative possessor + utnedh + possessed in accusative}, one of the evaluators five times, the others twice. The MT-text didn't generate indefinite articles, but one of the evaluators used it six times, another one used it once and the last one didn't use it at all. In all cases there was indefinite article in the Norwegian source text. 
+
+In North Saami there is no defiteness expressed in the morphology of the noun. But in South Saami it can be expressed in the object by choosing plural nominative instead of plural accusative. This is something which was not made rules for in the MT-system, and in one such case all the evaluators disagree with the MT-text.
+
+A complement in Norwegian, like ‘tilbud fra en lærebedrift’ is usually in North Saami tranlated to a genitive modifyer \textit{oahppofitnodaga+Gen fálaldaga+Acc}, but in South Saami translations it is quite usual to translate it with a complement \textit{faalenassem+Acc aktede+Art learoesïelteste+Ela}, but we see from the translations that also the North Saami construction is possible: learoesïelten faalenassem
+
+\ex.
+\a. Norwegian: tilbud (Obj) fra en lærebedrift ‘offer from a xxxxcompany’\\
+\a. North Saami: \textit{oahppofitnodaga+Gen fálaldaga+Acc}\\
+\a. South Saami 1: \textit{faalenassem+Acc aktede+Art learoesïelteste+Ela}
+\a. South Saami 2: \textit{learoesïelten+Gen faalenassem+Acc}
+
 
 
 From the oovtast-presentation:
@@ -336,7 +350,7 @@ From the oovtast-presentation:
 \hline
 \textbf{ }  & \textbf{MT} &  \textbf{A} & \textbf{B} & \textbf{C} \\
 \hline
-Lexical differences: & &   42 & 30 & 23 \\
+Lexical differences: & &   43 & 30 & 23 \\
 \hline
 Morphological differences: & &   7 & 7 & 6 \\
 \hline
@@ -347,7 +361,7 @@ SOV/SAdvlV & 4 &  10 & 12 & 12 \\
 \hline
 Det pronomen & 4 &   7 & 4 & 7 \\
 \hline
-Ind. articles & 0 &   7 & 0 & 1 \\
+Ind. articles & 0 &   6 & 0 & 1 \\
 \hline
 Complement instead of genitive mod. & -- &   2 & 2 & 0 \\
 \hline
