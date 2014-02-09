@@ -142,9 +142,20 @@ in this particular language pair.
 
 \subsection{Analysis}
 
+Morphological analysis is done on the input using the Helsinki Finite-State
+Toolkit \cite{linden2011}. For each surface form, a finite-state transducer
+returns a set of the possible analyses, where an analysis is a combination
+of lemma, and a sequence of tags which describe the morphological structure
+of the surface form.
+
+A Constraint Grammar-based disambiguator then selects the most appropriate 
+analysis for each surface form according to the context, and assigns to each 
+analysis a syntactic tag denoting its syntactic function (subject, object, 
+main verb, \ldots).
+
 \subsection{Transfer}
 
-\textbf{Bilingual dictionary}
+\subsubsection{Lexical transfer}
 
 Large syntactic differences also have consequences for the bidix, because there are many examples of sme-verb has go be translated into object+verb og adverb+verb in sma.
 ex: nob `å trekke lodd' sme \textit{vuorbádit} sma \textit{vuerpiem giesedh}, 
@@ -159,19 +170,21 @@ general dictionary
 general words
 special domain
 
-\subsubsection{Problems caused by this model: ex from two terms to one term to two terms}
+\textbf{Problems caused by this model: ex from two terms to one term to two terms}
 
 Example: nob-1,2   sme-x   sma-1,2
 example the verbs ‘read, count, say’, nob: \textit{lese, telle, uttale}, sme: \textit{lohkat} can be used about all three, sma: \textit{lohkedh, ryöknehtidh, jiehtedh} 
 
 Little nob-sma lexical resources, and total lack of sme-sma, we have to find words by comparing translated texts (nob-sme with nob-sma)
 
-\subsubsection{Problems combining sma-nob and sme-nob dictionary}
+\textbf{Problems combining sma-nob and sme-nob dictionary}
 This was done, it had to be manually edited because of nob-words with more than one meaning. 
 Example: nob \textit{regne} means both 'to rain' and ‘to calculate’, 
 which are two different verbs both in sme \textit{arvit, rehkenastit} and in sma \textit{abrodh, ryöknedh}
 
-\subsubsection{Rules}
+\subsubsection{Lexical selection}
+
+\subsubsection{Structural transfer}
 
 The syntactic differences between North Saami and South Saami are
 greater than are usually dealt with between related language pairs
@@ -197,6 +210,11 @@ more typically used in Apertium:
 
 
 \subsubsection{Generation}
+
+Generation is done using a finite-state transducer, also 
+compiled using HFST. Each lexical unit which is output by
+the postchunk module is looked up in the generation transducer
+and the surface form is output.
 
 \section{Evaluation}
 %@ lene,fran
@@ -252,6 +270,8 @@ more typically used in Apertium:
 
 
 \section*{Acknowledgements}
+
+Linda Wiechetek, Divvun
 
 \bibliographystyle{apalike}
 \bibliography{paper}
