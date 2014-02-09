@@ -33,8 +33,9 @@
 \begin{abstract}
 This paper describes the development of a rule-based
 machine translation system from North Sámi to South
-Sámi, and its evaluation in the setting of translation
-from Norwegian to South Sámi. 
+Sámi, and its evaluation in a setting where North Sámi
+functions as pivot translation via manual translation
+from Norwegian North Sámi, and thereafter MT to South Sámi. 
 \end{abstract}
 
 \section{Introduction}
@@ -73,32 +74,48 @@ finally comes a conclusion.
 %@trond
 % [Sámi language area map]
 
-Norwegian North Germanic. The Saami languages constitute the
-westernmost branch of the Uralic language family. They possess most of
-the classical Uralic characteristica: A rich verbal morphology (3
-numbers and persons, a rich repertoire of infinite forms), and a
-medium-size case system with both grammatical and adverbial functions,
-and no gender distinction. They also show extensive contact with their
-Germanic neighbours. Many grammatical structures are head-initial
+As a Germanic language, Norwegian differs from the Saami languages
+in numerous respects. It has definiteness as a morphological category,
+no case, prepositions and verb / particle constructions, and a 
+relatively strict word order, with V2 in main clauses. Norwegian
+and the Saami languages also show Sprachbund phenomena, though.
+Most notably, they have the same tense system. Whereas the Saami
+languages also possess a number of infinite verb construction, the
+Norwegian embedded clause pattern is in most cases a possible option
+for the Saami languages as well.
+
+The Saami languages constitute the westernmost branch of the Uralic
+language family. They possess most of the classical Uralic
+characteristica: A rich verbal morphology (3 numbers and persons, a
+rich repertoire of infinite forms), and a medium-size case system with
+both grammatical and adverbial functions, and no gender
+distinction. They also show extensive contact with their Germanic
+neighbours. Many grammatical structures are head-initial
 constructions, as compared to the classical Uralic pattern, and the
 tense system is compatible with the North Germanic one.
 
 North and South Saami are not mutually intellegible, due both to
 linguistic distance and to radically different prinicples for their
-literary languages. An analogy would be the difference between English 
-and Frisian. 
+literary languages. An analogy would be the difference between English
+and Frisian.
 
-Grammatical similarities between North and South Saami include the 
-following: Both languages have 3 persons and numbers, they have a similar
-system for postpositions and verb derivation. Noun phrase syntax is 
-similar, and the case systems are almost identical.
+Grammatical similarities between North and South Saami include the
+following: Both languages have 3 persons and numbers, they have a
+similar system for postpositions and verb derivation. Noun phrase
+syntax is similar, and the case systems are almost identical.
 
 Taking a closer look, there are still differences. In both North and
 South Saami, negation is expressed with a negation verb which inflects
-for person and number, but in 
-South Saami, this verb is inflected for Tense as well. South Saami
-has OV word order and lacks a copula in predicative constructions, 
-whereas North Saami uses VO in simple sentences, and requires a copula.
+for person and number, but in South Saami, this verb is inflected for
+Tense as well. South Saami has OV word order and lacks a copula in
+predicative constructions, whereas North Saami uses VO in simple
+sentences, and requires a copula.  The possession construction is
+different from the Norwegian one, normally using copula rather than
+possessor subject + a verb \textit{to have}. In North Saami, the
+construction is 
+\textit{locative possessor + copula + possessed in nominative}, 
+whereas the possessor is in the genitive in South
+Saami.
 
 Although the case systems are similar, North Saami has a locative case
 that covers the semantic field of both inessive and elative in 
@@ -107,12 +124,11 @@ also some differences in case usage, plural objects are accusative
 in North Saami, but nominative for indefinite and accusative for 
 definite objects in South Saami.
 
-For a machine translation system the orthographic differences 
-imply that apart from person
-names and acronyms there will be no free rides during the conversion 
-process. The core vocabulary is distinct, even recent loans from
-the same donor languages are different, and the vocabulary coverage
-for a working system must thus be very good.
+For a machine translation system the orthographic differences imply
+that apart from person names and acronyms there will be no free rides
+during the conversion process. The core vocabulary is distinct, even
+recent loans from the same donor languages are different, and the
+vocabulary coverage for a working system must thus be very good.
 
 An overview over the differences between the two languages can
 be found in \cite{sammallahti98}.
@@ -173,6 +189,7 @@ ex: nob `å trekke lodd' sme \textit{vuorbádit} sma \textit{vuerpiem giesedh},
 nob `å presentere' sme \textit{ovdanbuktit} sma \textit{åvtese buektedh}. 
 I mange tilfeller er grunnen til denne  forskjellen at man på sme har fått utviklet flere termer som matcher de norske teremene, mens man på sma
 fremdeles må forklare innholdet.
+
 
 
 
