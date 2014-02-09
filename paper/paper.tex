@@ -120,7 +120,6 @@ be found in \cite{sammallahti98}.
 
 \section{Implementation}
 %@fran
-% [Pipeline image]
 
 The translator was implemented using the Apertium platform \cite{forcada2011}. Apertium 
 provides a highly modular set of tools for building rule-based
@@ -168,7 +167,7 @@ main verb, \ldots).
 \subsection{Transfer}
 
 \subsubsection{Lexical transfer}
-
+%@lene
 Large syntactic differences also have consequences for the bidix, because there are many examples of sme-verb has go be translated into object+verb og adverb+verb in sma.
 ex: nob `å trekke lodd' sme \textit{vuorbádit} sma \textit{vuerpiem giesedh}, 
 nob `å presentere' sme \textit{ovdanbuktit} sma \textit{åvtese buektedh}. 
@@ -211,7 +210,6 @@ more typically used in Apertium:
 %t4x Constituent mvm, SVO -> SOV
 %t5x Cleanup
 
-
 \begin{itemize} 
   \item \texttt{chunker}: Chunk input words into groups, e.g. noun groups, verb chains
   \item \texttt{interchunk1}: Merge chunks which have local coordination, e.g. the sequence [NP $x$] [CC and] [NP $y$] is merged into [NP $x$ and $y$]
@@ -219,7 +217,6 @@ more typically used in Apertium:
   \item \texttt{interchunk3}: Reorder constituents, e.g. SVO $\rightarrow$ SOV.
   \item \texttt{postchunk}: Cleanup
 \end{itemize}
-
 
 \subsubsection{Generation}
 
