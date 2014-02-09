@@ -71,6 +71,10 @@ finally comes a conclusion.
 %pivot translation references --babych paper
 \cite{babych2007}
 
+\section{Motivation}
+sma sociolinguistic situation \cite{Todalsvahken2007}
+
+
 \section{Languages}
 %@trond
 % [Sámi language area map]
@@ -135,6 +139,7 @@ An overview over the differences between the two languages can
 be found in \cite{sammallahti98}.
 
 
+
 \section{Implementation}
 %@fran
 
@@ -180,6 +185,9 @@ A Constraint Grammar-based disambiguator then selects the most appropriate
 analysis for each surface form according to the context, and assigns to each 
 analysis a syntactic tag denoting its syntactic function (subject, object, 
 main verb, \ldots).
+
+The North Saami analyser has an F-score of 0.93 for morphological disambiguation
+and assignment fof grammatical functions \cite{AntonsenEtalReusing2010}.
 
 \subsection{Transfer}
 
@@ -241,6 +249,8 @@ Generation is done using a finite-state transducer, also
 compiled using HFST. Each lexical unit which is output by
 the postchunk module is looked up in the generation transducer
 and the surface form is output.
+
+Here is some facts about the South Saami analyser, if we need it \cite{smadis2011}.
 
 \section{Evaluation}
 %@ lene,fran
@@ -309,17 +319,26 @@ WER -- word error rate
 
 \subsection{Qualitative}
 %@lene
+\subsubsection{Lexicon}
+The Norwegian text consisted of 288 words. The three evaluators had chosen respectively 42, 30 and 23 other words than the mt-system, for only for 9 words all the evaluators had chosen another word.
+
+
+\subsubsection{Morphology}
+
+
+\subsubsection{Syntax}
+
 
 From the oovtast-presentation:
-\begin{table*} 
+\begin{table*}[h] 
 \begin{center}
 \begin{tabular}{|l|r||r|r|r|}
 \hline
 \textbf{ }  & \textbf{MT} &  \textbf{A} & \textbf{B} & \textbf{C} \\
 \hline
-Lexical differences: & &   37 & 27 & 19 \\
+Lexical differences: & &   42 & 30 & 23 \\
 \hline
-Morphological differences: & &   15 & 14 & 16 \\
+Morphological differences: & &   7 & 7 & 6 \\
 \hline
 \hline
 \multicolumn{5}{|l|} {\textbf{Syntax} }   \\
@@ -334,8 +353,6 @@ Complement instead of genitive mod. & -- &   2 & 2 & 0 \\
 \hline
 Habitive \textit{utnedh} & 0 &  5 & 2 & 2 \\
 \hline
-\hline
-All together & 8 &   31 & 20 & 21 \\
 \hline
 \end{tabular}
 \end{center}
