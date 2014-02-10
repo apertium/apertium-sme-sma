@@ -10,6 +10,7 @@
 
 \usepackage[small,bf]{caption}
 
+\usepackage{covington}
 
 \setmainfont[BoldFont={Times New Roman}]{Times New Roman}
 \setromanfont{Times New Roman}
@@ -31,11 +32,13 @@
 
 
 \begin{abstract}
+
 This paper describes the development of a rule-based
 machine translation system from North Sámi to South
 Sámi, and its evaluation in a setting where North Sámi
 functions as pivot translation via manual translation
 from Norwegian North Sámi, and thereafter MT to South Sámi. 
+
 \end{abstract}
 
 \section{Introduction}
@@ -63,16 +66,22 @@ actually translated from North Saami.
 finally comes a conclusion.
 
 
-% Previous work
-\cite{tyers09} \cite{wiechetek10} \cite{trosterud12}
-% LREC for numbers for the sme-analyser:
+Previous work
+
+\cite{tyers09} and \cite{wiechetek10} and \cite{trosterud12}
+
+LREC for numbers for the sme-analyser:
+
 \cite{AntonsenEtalReusing2010}
 
-%pivot translation references --babych paper
+
+pivot translation references --babych paper
+
 \cite{babych2007}
 
 \section{Motivation}
-sma sociolinguistic situation \citep{Todalsvahken2007}
+
+sma sociolinguistic situation \cite{Todalsvahken2007}
 
 
 \section{Languages}
@@ -187,7 +196,7 @@ analysis a syntactic tag denoting its syntactic function (subject, object,
 main verb, \ldots).
 
 The North Saami analyser has an F-score of 0.93 for morphological disambiguation
-and assignment fof grammatical functions \citep{AntonsenEtalReusing2010}.
+and assignment fof grammatical functions \cite{AntonsenEtalReusing2010}.
 
 \subsection{Transfer}
 
@@ -250,7 +259,7 @@ compiled using HFST. Each lexical unit which is output by
 the postchunk module is looked up in the generation transducer
 and the surface form is output.
 
-Here is some facts about the South Saami analyser, if we need it \citep{smadis2011}.
+Here is some facts about the South Saami analyser, if we need it \cite{smadis2011}.
 
 \section{Evaluation}
 %@ lene,fran
@@ -312,7 +321,7 @@ WER -- word error rate
 \textbf{PER} (\%) &  36.20   &  28.32  &  28.32 \\
       \hline
     \end{tabular}
-    \label{table:coverage}
+    \label{table:coverage2}
     \caption{Evaluation metrics.}
   \end{center}
 \end{table}
