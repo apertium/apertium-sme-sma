@@ -12,6 +12,7 @@ BASENAME=apertium-$(PREFIX1)
 
 TARGETS_COMMON =			\
 	$(PREFIX1).automorf.hfst	\
+	$(PREFIX1).automorf-untrimmed.hfst \
 	$(PREFIX1).mor.rlx.bin		\
 	$(PREFIX1).syn.rlx.bin		\
 	$(PREFIX1).autobil.bin		\
@@ -23,6 +24,7 @@ TARGETS_COMMON =			\
 	$(PREFIX1).t4x.bin		\
 	$(PREFIX1).t5x.bin		\
 	$(PREFIX2).automorf.hfst	\
+	$(PREFIX2).automorf-untrimmed.hfst \
 	$(PREFIX2).mor.rlx.bin		\
 	$(PREFIX2).syn.rlx.bin		\
 	$(PREFIX2).autobil.bin		\

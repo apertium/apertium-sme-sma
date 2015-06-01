@@ -74,13 +74,13 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*.*.cmp"/>
       <cat-item tags="n.*.*.*.cmp"/>
       <cat-item tags="a.*.cmp"/>
-      <cat-item tags="v.*.der_nomact.n.*.cmp"/>
-      <cat-item tags="v.*.der_nomag.n.*.cmp"/>
+      <cat-item tags="vblex.*.der_nomact.n.*.cmp"/>
+      <cat-item tags="vblex.*.der_nomag.n.*.cmp"/>
     </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
-      <cat-item tags="v.*.der_nomact.n.*"/>
-      <cat-item tags="v.*.der_nomag.n.*"/>
+      <cat-item tags="vblex.*.der_nomact.n.*"/>
+      <cat-item tags="vblex.*.der_nomag.n.*"/>
       <cat-item tags="a.der_vuohta.n.*"/>
     </def-cat>
     <def-cat n="adj">
@@ -95,76 +95,76 @@ And then there are some categories like "month", with all the months.
     <def-cat n="num-ldep">
       <cat-item tags="num.*.*.*.@N←"/>
     </def-cat>
-    <def-cat n="pron-refl">
-      <cat-item tags="pron.refl.*"/>
+    <def-cat n="prn-refl">
+      <cat-item tags="prn.refl.*"/>
     </def-cat>
-    <def-cat n="pron-rel">
-      <cat-item tags="pron.rel.*"/>
+    <def-cat n="prn-rel">
+      <cat-item tags="prn.rel.*"/>
     </def-cat>
-    <def-cat n="pron-dem">
-      <cat-item tags="pron.dem.*"/>
+    <def-cat n="prn-dem">
+      <cat-item tags="prn.dem.*"/>
     </def-cat>
-    <def-cat n="pron-indef">
-      <cat-item tags="pron.indef.*"/>
+    <def-cat n="prn-indef">
+      <cat-item tags="prn.indef.*"/>
     </def-cat>
-    <def-cat n="pron-attr">
-      <cat-item tags="pron.indef.attr"/>
-      <cat-item tags="pron.indef.attr.*"/>
-      <cat-item tags="pron.interr.attr.*"/>
+    <def-cat n="prn-attr">
+      <cat-item tags="prn.indef.attr"/>
+      <cat-item tags="prn.indef.attr.*"/>
+      <cat-item tags="prn.interr.attr.*"/>
     </def-cat>
     <def-cat n="verb-actio">
-      <cat-item tags="v.*.actio.*"/>
+      <cat-item tags="vblex.*.actio.*"/>
     </def-cat>
-    <def-cat n="pron-pers">
-      <cat-item tags="pron.pers.*"/>
+    <def-cat n="prn-pers">
+      <cat-item tags="prn.pers.*"/>
     </def-cat>
     <def-cat n="n-prop-pers">
       <cat-item tags="n.prop.mal.*"/>
       <cat-item tags="n.prop.fem.*"/>
     </def-cat>
     <def-cat n="verb-imprt">
-      <cat-item tags="v.*.imprt.*"/>
+      <cat-item tags="vblex.*.imprt.*"/>
     </def-cat>
     <def-cat n="verb-inf">
-      <cat-item tags="v.*.inf.*"/>
-      <cat-item tags="v.*.der_l.v.inf.*"/>
-      <cat-item tags="v.*.der_d.v.inf.*"/>
-      <cat-item tags="v.*.der_ahtti.v.inf.*"/>
-      <cat-item tags="v.*.der_ahtti.v.*.inf.*"/>
-      <cat-item tags="v.*.der_goahti.v.inf.*"/>
+      <cat-item tags="vblex.*.inf.*"/>
+      <cat-item tags="vblex.*.der_l.v.inf.*"/>
+      <cat-item tags="vblex.*.der_d.v.inf.*"/>
+      <cat-item tags="vblex.*.der_ahtti.v.inf.*"/>
+      <cat-item tags="vblex.*.der_ahtti.v.*.inf.*"/>
+      <cat-item tags="vblex.*.der_goahti.v.inf.*"/>
     </def-cat>
     <def-cat n="verb-prfprc">
-      <cat-item tags="v.*.prfprc.*"/>
-      <cat-item tags="v.*.der_goahti.v.prfprc.*"/>
-      <cat-item tags="v.*.der_goahti.v.prfprc"/>
+      <cat-item tags="vblex.*.prfprc.*"/>
+      <cat-item tags="vblex.*.der_goahti.v.prfprc.*"/>
+      <cat-item tags="vblex.*.der_goahti.v.prfprc"/>
     </def-cat>
     <def-cat n="leat-fin">
-      <cat-item lemma="leat" tags="v.*.ind.*"/>
-      <cat-item lemma="leat" tags="v.*.cond.*"/>
-      <cat-item lemma="leat" tags="v.*.pot.*"/>
+      <cat-item lemma="leat" tags="vblex.*.ind.*"/>
+      <cat-item lemma="leat" tags="vblex.*.cond.*"/>
+      <cat-item lemma="leat" tags="vblex.*.pot.*"/>
     </def-cat>
     <def-cat n="ii">
-      <cat-item lemma="ii" tags="v.iv.neg.*"/>
+      <cat-item lemma="ii" tags="vblex.iv.neg.*"/>
     </def-cat>
     <def-cat n="conneg">
-      <cat-item tags="v.*.conneg.*"/>
-      <cat-item tags="v.*.*.*.conneg.*"/>
+      <cat-item tags="vblex.*.conneg.*"/>
+      <cat-item tags="vblex.*.*.*.conneg.*"/>
     </def-cat>
     <def-cat n="verb-fin">
-      <cat-item tags="v.*.ind.*"/>
-      <cat-item tags="v.*.cond.*"/>
-      <cat-item tags="v.*.pot.*"/>
-      <cat-item tags="v.*.der_goahti.v.ind.*"/>
-      <cat-item tags="v.*.der_goahti.v.cond.*"/>
-      <cat-item tags="v.*.der_goahti.v.pot.*"/>
+      <cat-item tags="vblex.*.ind.*"/>
+      <cat-item tags="vblex.*.cond.*"/>
+      <cat-item tags="vblex.*.pot.*"/>
+      <cat-item tags="vblex.*.der_goahti.v.ind.*"/>
+      <cat-item tags="vblex.*.der_goahti.v.cond.*"/>
+      <cat-item tags="vblex.*.der_goahti.v.pot.*"/>
     </def-cat>
-    <def-cat n="cc">
-      <cat-item tags="cc"/>
-      <cat-item tags="cc.*"/>
+    <def-cat n="cnjcoo">
+      <cat-item tags="cnjcoo"/>
+      <cat-item tags="cnjcoo.*"/>
     </def-cat>
-    <def-cat n="cs">
-      <cat-item tags="cs"/>
-      <cat-item tags="cs.*"/>
+    <def-cat n="cnjsub">
+      <cat-item tags="cnjsub"/>
+      <cat-item tags="cnjsub.*"/>
     </def-cat>
     <def-cat n="pr">
       <cat-item tags="pr"/>
@@ -181,12 +181,12 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="pcle.*"/>
       <cat-item tags="a.der_at.adv"/>
       <cat-item tags="a.der_at.adv.*"/>
-      <cat-item tags="v.*.ger"/>
-      <cat-item tags="v.*.ger.*"/>
-      <cat-item tags="v.*.vgen"/>
-      <cat-item tags="v.*.vgen.*"/>
-      <cat-item tags="v.*.vabess"/>
-      <cat-item tags="v.*.vabess.*"/>
+      <cat-item tags="vblex.*.ger"/>
+      <cat-item tags="vblex.*.ger.*"/>
+      <cat-item tags="vblex.*.vgen"/>
+      <cat-item tags="vblex.*.vgen.*"/>
+      <cat-item tags="vblex.*.vabess"/>
+      <cat-item tags="vblex.*.vabess.*"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="clb"/>
@@ -204,20 +204,20 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_nom">
       <attr-item tags="n"/>
-      <attr-item tags="v.iv.der_nomag.n"/>
-      <attr-item tags="v.tv.der_nomag.n"/>
-      <attr-item tags="v.iv.der_nomact.n"/>
-      <attr-item tags="v.tv.der_nomact.n"/>
+      <attr-item tags="vblex.iv.der_nomag.n"/>
+      <attr-item tags="vblex.tv.der_nomag.n"/>
+      <attr-item tags="vblex.iv.der_nomact.n"/>
+      <attr-item tags="vblex.tv.der_nomact.n"/>
       <attr-item tags="a.der_vuohta.n"/>
       <attr-item tags="a.der_voete.n"/>
     </def-attr>
 
     <def-attr n="a_pron">
-       <attr-item tags="pron.indef"/>
-       <attr-item tags="pron.dem"/>
-       <attr-item tags="pron.refl"/>
-       <attr-item tags="pron.rel"/>
-       <attr-item tags="pron.interr"/>
+       <attr-item tags="prn.indef"/>
+       <attr-item tags="prn.dem"/>
+       <attr-item tags="prn.refl"/>
+       <attr-item tags="prn.rel"/>
+       <attr-item tags="prn.interr"/>
     </def-attr>
 
     <def-attr n="a_case">
@@ -244,9 +244,9 @@ And then there are some categories like "month", with all the months.
     </def-attr>
    
     <def-attr n="a_verb">
-       <attr-item tags="v"/>
-       <attr-item tags="v.iv.der_goahti.v"/>
-       <attr-item tags="v.tv.der_goahti.v"/>
+       <attr-item tags="vblex"/>
+       <attr-item tags="vblex.iv.der_goahti.v"/>
+       <attr-item tags="vblex.tv.der_goahti.v"/>
     </def-attr>
  
     <def-attr n="a_trans">
@@ -571,7 +571,7 @@ And then there are some categories like "month", with all the months.
       <choose>
         <when>
           <test>
-            <not><equal><clip pos="1" side="sl" part="a_pron"/><lit-tag v="pron.refl"/></equal></not>
+            <not><equal><clip pos="1" side="sl" part="a_pron"/><lit-tag v="prn.refl"/></equal></not>
           </test>
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
@@ -802,7 +802,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: pron-pers">
       <pattern>
-        <pattern-item n="pron-pers"/>
+        <pattern-item n="prn-pers"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -812,7 +812,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="pron-pers" case="caseFirstWord">
+          <chunk name="prn-pers" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -828,7 +828,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: pron-refl">
       <pattern>
-        <pattern-item n="pron-refl"/>
+        <pattern-item n="prn-refl"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -855,7 +855,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: pron-rel">
       <pattern>
-        <pattern-item n="pron-rel"/>
+        <pattern-item n="prn-rel"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -882,7 +882,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: pron-dem">
       <pattern>
-        <pattern-item n="pron-dem"/>
+        <pattern-item n="prn-dem"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -892,7 +892,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="pron-dem" case="caseFirstWord">
+          <chunk name="prn-dem" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -910,7 +910,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: pron-indef">
       <pattern>
-        <pattern-item n="pron-indef"/>
+        <pattern-item n="prn-indef"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -920,7 +920,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="pron-indef" case="caseFirstWord">
+          <chunk name="prn-indef" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1212,7 +1212,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: pron-attr n-cmp n">
       <pattern>
-        <pattern-item n="pron-attr"/>
+        <pattern-item n="prn-attr"/>
         <pattern-item n="n-cmp"/>
         <pattern-item n="n"/>
       </pattern>
@@ -1260,8 +1260,8 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: pron-attr pron-attr n">
       <pattern>
-        <pattern-item n="pron-attr"/>
-        <pattern-item n="pron-attr"/>
+        <pattern-item n="prn-attr"/>
+        <pattern-item n="prn-attr"/>
         <pattern-item n="n"/>
       </pattern>
       <action>
@@ -1424,7 +1424,7 @@ And then there are some categories like "month", with all the months.
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="ind"/></let>
         <out>
-          <chunk name="v" case="caseFirstWord">
+          <chunk name="vblex" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1453,7 +1453,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="v" case="caseFirstWord">
+          <chunk name="vblex" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1488,7 +1488,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="v" case="caseFirstWord">
+          <chunk name="vblex" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1715,16 +1715,16 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: cs">
       <pattern>
-        <pattern-item n="cs"/>
+        <pattern-item n="cnjsub"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="cs" case="caseFirstWord">
+          <chunk name="cnjsub" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="CS"/></tag>
+              <tag><lit-tag v="cnjsub"/></tag>
               <tag><var n="synlabel"/></tag>
             </tags>
             <lu>
@@ -1738,16 +1738,16 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: cc">
       <pattern>
-        <pattern-item n="cc"/>
+        <pattern-item n="cnjcoo"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="cc" case="caseFirstWord">
+          <chunk name="cnjcoo" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="CC"/></tag>
+              <tag><lit-tag v="cnjcoo"/></tag>
               <tag><var n="synlabel"/></tag>
             </tags>
             <lu>
