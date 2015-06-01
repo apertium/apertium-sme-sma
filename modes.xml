@@ -6,12 +6,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
@@ -59,7 +59,7 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -72,10 +72,10 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -88,10 +88,10 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -104,12 +104,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
@@ -123,12 +123,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
@@ -145,12 +145,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
@@ -170,12 +170,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="apertium-transfer">
         <file name="apertium-sme-sma.sme-sma.t1x"/>
         <file name="sme-sma.t1x.bin"/>
@@ -196,12 +196,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
@@ -229,12 +229,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
@@ -267,12 +267,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>
@@ -308,12 +308,12 @@
         <file name="sme-sma.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
-        <file name="sme-sma.dis.rlx.bin"/> 
+        <file name="sme-sma.mor.rlx.bin"/>
       </program>
       <program name="cg-proc -n -1 -w">
-        <file name="sme-sma.syn.rlx.bin"/> 
+        <file name="sme-sma.syn.rlx.bin"/>
       </program>
-      <program name="apertium-pretransfer"/> 
+      <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="sme-sma.autobil.bin"/>
       </program>

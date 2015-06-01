@@ -1,3 +1,7 @@
+###############################################################################
+## Makefile for Northern Sami--Southern Sami
+###############################################################################
+
 VERSION=0.1.0
 LANG1=sme
 LANG2=sma
@@ -6,129 +10,249 @@ PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=apertium-$(PREFIX1)
 
-TARGETS_COMMON = \
-	$(PREFIX1).automorf.hfst \
-	$(PREFIX1).autobil.bin \
-	$(PREFIX1).autolex.bin \
-	$(PREFIX1).autogen.hfst \
-	$(PREFIX2).automorf.hfst \
-	$(PREFIX1).dis.rlx.bin \
-	$(PREFIX1).syn.rlx.bin \
-	$(PREFIX1).t1x.bin \
-	$(PREFIX1).t2x.bin \
-	$(PREFIX1).t3x.bin \
-	$(PREFIX1).t4x.bin \
-	$(PREFIX1).t5x.bin 
+TARGETS_COMMON =			\
+	$(PREFIX1).automorf.hfst	\
+	$(PREFIX1).mor.rlx.bin		\
+	$(PREFIX1).syn.rlx.bin		\
+	$(PREFIX1).autobil.bin		\
+	$(PREFIX1).autolex.bin		\
+	$(PREFIX1).autogen.hfst		\
+	$(PREFIX1).t1x.bin		\
+	$(PREFIX1).t2x.bin		\
+	$(PREFIX1).t3x.bin		\
+	$(PREFIX1).t4x.bin		\
+	$(PREFIX1).t5x.bin		\
+	$(PREFIX2).automorf.hfst	\
+	$(PREFIX2).mor.rlx.bin		\
+	$(PREFIX2).syn.rlx.bin		\
+	$(PREFIX2).autobil.bin		\
+	$(PREFIX2).autolex.bin		\
+	$(PREFIX2).autogen.hfst		\
+	$(PREFIX2).t1x.bin		\
+	$(PREFIX2).t2x.bin		\
+	$(PREFIX2).t3x.bin
 
-#
-#	NORTHERN SÁMI TRANSDUCERS
-#
 
-.deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	lt-print $(PREFIX1).autobil.bin | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX1).autobil.att
+# This include defines goals for install-modes, .deps/.d and .mode files:
+@ap_include@
+
+###############################################################################
+## Monolingual transducers
+###############################################################################
+
+# -------------------
+# Northern Sami analysis:
+# -------------------
+
+.deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin .deps/.d
+	lt-print $< | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX1).autobil.att
 	hfst-txt2fst -e ε <  .deps/$(PREFIX1).autobil.att > .deps/$(PREFIX1).autobil.hfst
-	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper
-	echo " ?* " | hfst-regexp2fst > .deps/any-symbol.hfst
-	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-symbol.hfst -o .deps/$(PREFIX1).autobil.prefixes
+	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper                                   # bidix
+	echo ' [ ? - %+ ]* ' | hfst-regexp2fst > .deps/any-nonplus.hfst                                                        # [^+]*
+	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX1).autobil.nonplussed    # bidix [^+]*
+	echo ' %+ ' | hfst-regexp2fst > .deps/single-plus.hfst                                                                 # +
+	hfst-concatenate -1 .deps/single-plus.hfst -2 .deps/$(PREFIX1).autobil.nonplussed -o .deps/$(PREFIX1).autobil.postplus # + bidix [^+]*
+	hfst-repeat -f0 -t1 -i .deps/$(PREFIX1).autobil.postplus -o .deps/$(PREFIX1).autobil.postplus.0,1                      # (+ bidix [^+]*){0,1} -- gives at most one +
+	hfst-concatenate -1 .deps/$(PREFIX1).autobil.nonplussed -2 .deps/$(PREFIX1).autobil.postplus.0,1 -o $@                 # bidix [^+]* (+ bidix [^+]*){0,1}
 
-$(PREFIX1).automorf.hfst: $(BASENAME).$(PREFIX1).LR.att.gz .deps/$(PREFIX1).autobil.prefixes
-	$(ZCAT) $< | hfst-txt2fst > .deps/$(LANG1).automorf.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).automorf.hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.trimmed
-	hfst-fst2fst -O -i .deps/$(PREFIX1).automorf.trimmed -o $@
-	
-#
-#	SOUTH SÁMI TRANSDUCERS
-#
+.deps/$(LANG1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/.d
+	$(ZCAT) $< | hfst-txt2fst > $@
 
-$(PREFIX1).autogen.hfst: $(BASENAME).$(PREFIX1).RL.att.gz 
-	$(ZCAT) $< | hfst-txt2fst | hfst-fst2fst -O > $@
+.deps/$(LANG1).autogen.hfst: .deps/$(LANG1).automorf.hfst
+	hfst-invert -i $< -o $@
 
-# Here PREFIX1.RL should be replaced eventually with PREFIX2.LR
-$(PREFIX2).automorf.hfst: $(BASENAME).$(PREFIX1).RL.att.gz 
-	$(ZCAT) $< | hfst-txt2fst | hfst-invert | hfst-fst2fst -O > $@
+.deps/$(PREFIX1).automorf-trimmed.hfst: .deps/$(LANG1).automorf.hfst .deps/$(PREFIX1).autobil.prefixes
+	hfst-compose-intersect -1 $< -2 .deps/$(PREFIX1).autobil.prefixes -o $@
 
-#
-#	BILINGUAL DICTIONARY
-#
+$(PREFIX1).automorf.hfst: .deps/$(PREFIX1).automorf-trimmed.hfst
+	hfst-fst2fst -O -i $< -o $@
 
-$(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
-	apertium-validate-dictionary $(BASENAME).$(PREFIX1).dix
-	lt-comp lr $(BASENAME).$(PREFIX1).dix $@
+$(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
+	hfst-fst2fst -O -i $< -o $@
 
-#
-#	CONSTRAINT GRAMMARS
-#
+# -------------------
+# Northern Sami generation:
+# ---------------------
 
-$(PREFIX1).dis.rlx.bin: $(BASENAME).$(PREFIX1).dis.rlx
-	cg-comp $(BASENAME).$(PREFIX1).dis.rlx $@
+$(PREFIX2).autogen.hfst: .deps/$(LANG1).autogen.hfst
+	hfst-fst2fst -O -i $< -o $@
+
+
+# -------------------
+# Southern Sami analysis:
+# -------------------
+
+.deps/$(PREFIX2).autobil.prefixes: $(PREFIX2).autobil.bin .deps/.d
+	lt-print $< | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX2).autobil.att
+	hfst-txt2fst -e ε <  .deps/$(PREFIX2).autobil.att > .deps/$(PREFIX2).autobil.hfst
+	hfst-project -p upper .deps/$(PREFIX2).autobil.hfst > .deps/$(PREFIX2).autobil.upper                                   # bidix
+	echo ' [ ? - %+ ]* ' | hfst-regexp2fst > .deps/any-nonplus.hfst                                                        # [^+]*
+	hfst-concatenate -1 .deps/$(PREFIX2).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX2).autobil.nonplussed    # bidix [^+]*
+	echo ' %+ ' | hfst-regexp2fst > .deps/single-plus.hfst                                                                 # +
+	hfst-concatenate -1 .deps/single-plus.hfst -2 .deps/$(PREFIX2).autobil.nonplussed -o .deps/$(PREFIX2).autobil.postplus # + bidix [^+]*
+	hfst-repeat -f0 -t1 -i .deps/$(PREFIX2).autobil.postplus -o .deps/$(PREFIX2).autobil.postplus.0,1                      # (+ bidix [^+]*){0,1} -- gives at most one +
+	hfst-concatenate -1 .deps/$(PREFIX2).autobil.nonplussed -2 .deps/$(PREFIX2).autobil.postplus.0,1 -o $@                 # bidix [^+]* (+ bidix [^+]*){0,1}
+
+# TODO: giella-sma probably should make a sme-sma analyser, for consistency?
+#.deps/$(LANG2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/.d
+.deps/$(LANG2).automorf.hfst: $(AP_SRC2)/apertium-und.$(LANG2)-und.LR.att.gz .deps/.d
+	$(ZCAT) $< | hfst-txt2fst > $@
+
+.deps/$(LANG2).autogen.hfst: .deps/$(LANG2).automorf.hfst
+	hfst-invert -i $< -o $@
+
+.deps/$(PREFIX2).automorf-trimmed.hfst: .deps/$(LANG2).automorf.hfst .deps/$(PREFIX2).autobil.prefixes
+	hfst-compose-intersect -1 $< -2 .deps/$(PREFIX2).autobil.prefixes -o $@
+
+$(PREFIX2).automorf.hfst: .deps/$(PREFIX2).automorf-trimmed.hfst
+	hfst-fst2fst -O -i $< -o $@
+
+$(PREFIX2).automorf-untrimmed.hfst: .deps/$(LANG2).automorf.hfst
+	hfst-fst2fst -O -i $< -o $@
+
+# -------------------
+# Southern Sami generation:
+# ---------------------
+
+$(PREFIX1).autogen.hfst: .deps/$(LANG2).autogen.hfst
+	hfst-fst2fst -O -i $< -o $@
+
+
+###############################################################################
+## Disambiguation rules
+###############################################################################
+
+$(PREFIX1).mor.rlx.bin: $(BASENAME).$(PREFIX1).mor.rlx
+	cg-comp $< $@
 
 $(PREFIX1).syn.rlx.bin: $(BASENAME).$(PREFIX1).syn.rlx
-	cg-comp $(BASENAME).$(PREFIX1).syn.rlx $@
+	cg-comp $< $@
 
+# TODO: use rlx from giella-sme
 
-#
-#	LEXICAL SELECTION RULES
-#
+# $(PREFIX1).rlx.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).rlx
+# 	cg-comp $< $@
+
+$(PREFIX2).mor.rlx.bin: $(AP_SRC2)/$(LANG2).mor.rlx.bin
+	cp $< $@
+
+$(PREFIX2).syn.rlx.bin: $(AP_SRC2)/$(LANG2).syn.rlx.bin
+	cp $< $@
+
+###############################################################################
+## Bilingual dictionaries
+###############################################################################
+
+$(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
+	apertium-validate-dictionary $<
+	lt-comp lr $< $@
+
+$(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
+	apertium-validate-dictionary $<
+	lt-comp rl $< $@
+
+###############################################################################
+## Lexical selection rules
+###############################################################################
 
 $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
-	lrx-comp $(BASENAME).$(PREFIX1).lrx $@
+	lrx-comp $< $@
 
-#
-#	TRANSFER RULES
-#
+$(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
+	lrx-comp $< $@
+
+###############################################################################
+## Structural transfer rules
+###############################################################################
 
 $(PREFIX1).t1x.bin: $(BASENAME).$(PREFIX1).t1x
-	apertium-validate-transfer $(BASENAME).$(PREFIX1).t1x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t1x $@
+	apertium-validate-transfer $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX1).t2x.bin: $(BASENAME).$(PREFIX1).t2x
-	apertium-validate-interchunk $(BASENAME).$(PREFIX1).t2x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t2x $@
+	apertium-validate-interchunk $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX1).t3x.bin: $(BASENAME).$(PREFIX1).t3x
-	apertium-validate-interchunk $(BASENAME).$(PREFIX1).t3x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t3x $@
+	apertium-validate-interchunk $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX1).t4x.bin: $(BASENAME).$(PREFIX1).t4x
-	apertium-validate-interchunk $(BASENAME).$(PREFIX1).t4x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t4x $@
+	apertium-validate-interchunk $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX1).t5x.bin: $(BASENAME).$(PREFIX1).t5x
-	apertium-validate-postchunk $(BASENAME).$(PREFIX1).t5x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t5x $@
+	apertium-validate-postchunk $<
+	apertium-preprocess-transfer $< $@
 
 
-#
-#	MODES FILES
-#
+$(PREFIX2).t1x.bin: $(BASENAME).$(PREFIX2).t1x
+	apertium-validate-transfer $<
+	apertium-preprocess-transfer $< $@
 
-$(PREFIX1).mode: modes.xml
-	apertium-gen-modes modes.xml
-	cp *.mode modes/
+$(PREFIX2).t2x.bin: $(BASENAME).$(PREFIX2).t2x
+	apertium-validate-interchunk $<
+	apertium-preprocess-transfer $< $@
 
-#
-#	MISCELLANEOUS CONFIGURATION
-#
+$(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
+	apertium-validate-postchunk $<
+	apertium-preprocess-transfer $< $@
 
-apertium_sme_smadir=$(prefix)/share/apertium/apertium-$(PREFIX1)/
-apertium_sme_modesdir=$(prefix)/share/apertium/modes/
+###############################################################################
+## Distribution
+###############################################################################
 
+EXTRA_DIST=					\
+		$(BASENAME).$(PREFIX1).lrx	\
+		$(BASENAME).$(PREFIX1).dix	\
+		$(BASENAME).$(PREFIX2).lrx	\
+		$(BASENAME).$(PREFIX1).t1x	\
+		$(BASENAME).$(PREFIX1).t2x	\
+		$(BASENAME).$(PREFIX1).t3x	\
+		$(BASENAME).$(PREFIX2).t1x	\
+		$(BASENAME).$(PREFIX2).t2x	\
+		$(BASENAME).$(PREFIX2).t3x	\
+		modes.xml
 
-apertium_sme_sma_DATA=$(PREFIX1).automorf.hfst \
-		    $(PREFIX1).autobil.bin \
-		    $(PREFIX1).autolex.bin \
-		    $(PREFIX1).autogen.hfst \
-		    $(PREFIX2).automorf.hfst \
-		    $(PREFIX1).dis.rlx.bin \
-		    $(PREFIX1).syn.rlx.bin \
-		    $(PREFIX1).t1x.bin \
-		    $(PREFIX1).t2x.bin \
-		    $(PREFIX1).t3x.bin \
-		    $(PREFIX1).t4x.bin \
-		    $(PREFIX1).t5x.bin \
-		    $(PREFIX1).mode
+###############################################################################
+## Installation
+###############################################################################
 
+apertium_sme_smadir=$(prefix)/share/apertium/$(BASENAME)/
 
-CLEANFILES = -rf $(TARGETS_COMMON) modes
+# Files which should be installed to $(prefix)/share/apertium/$(BASENAME)/:
+apertium_sme_sma_DATA=	\
+	$(TARGETS_COMMON)				\
+	$(BASENAME).$(PREFIX1).t1x			\
+	$(BASENAME).$(PREFIX1).t2x			\
+	$(BASENAME).$(PREFIX1).t3x			\
+	$(BASENAME).$(PREFIX2).t1x			\
+	$(BASENAME).$(PREFIX2).t2x			\
+	$(BASENAME).$(PREFIX2).t3x
+
+# All modes are created by the same goal, listing several will just give problems with make -j2
+noinst_DATA=modes/$(PREFIX1).mode
+
+install-data-local: install-modes
+
+###############################################################################
+## Cleanup
+###############################################################################
+
+CLEANFILES = $(TARGETS_COMMON)
+clean-local:
+	-rm -rf .deps modes
+
+###############################################################################
+## Test
+###############################################################################
+
+test: all
+	echo "ja" | apertium -d . sme-sma | tee .test-mt
+	@echo "jïh" > .test-ref
+	@diff .test-ref .test-mt
+	echo "jïh" | apertium -d . sma-sme | tee .test-mt
+	@echo "ja" > .test-ref
+	@diff .test-ref .test-mt
+	@rm .test-ref .test-mt
 

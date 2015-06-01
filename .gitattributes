@@ -5,22 +5,26 @@
 /Makefile.am -text
 /NEWS -text
 /README -text
-/apertium-sme-sma.sme-sma.LR.att.gz -text
-/apertium-sme-sma.sme-sma.RL.att.gz -text
-/apertium-sme-sma.sme-sma.dis.rlx -text
+/apertium-sme-sma.sma-sme.lrx -text
+/apertium-sme-sma.sma-sme.t1x -text svneol=unset#text/plain
+/apertium-sme-sma.sma-sme.t2x -text svneol=unset#text/plain
+/apertium-sme-sma.sma-sme.t3x -text svneol=unset#text/plain
 /apertium-sme-sma.sme-sma.dix -text
 /apertium-sme-sma.sme-sma.lrx -text
+/apertium-sme-sma.sme-sma.mor.rlx -text
 /apertium-sme-sma.sme-sma.syn.rlx -text
-/apertium-sme-sma.sme-sma.t1x -text
-/apertium-sme-sma.sme-sma.t2x -text
-/apertium-sme-sma.sme-sma.t3x -text
-/apertium-sme-sma.sme-sma.t4x -text
-/apertium-sme-sma.sme-sma.t5x -text
+/apertium-sme-sma.sme-sma.t1x -text svneol=unset#text/plain
+/apertium-sme-sma.sme-sma.t2x -text svneol=unset#text/plain
+/apertium-sme-sma.sme-sma.t3x -text svneol=unset#text/plain
+/apertium-sme-sma.sme-sma.t4x -text svneol=unset#text/plain
+/apertium-sme-sma.sme-sma.t5x -text svneol=unset#text/plain
 /autogen.sh -text
-/bidix46360.dix -text
-/bidix47269.dix -text
 /configure.ac -text
 dev/apertium-sme-sma.sme-sma.t1x.BACKUP -text
+dev/archive/apertium-sme-sma.sme-sma.LR.att.gz -text
+dev/archive/apertium-sme-sma.sme-sma.RL.att.gz -text
+dev/archive/bidix46360.dix -text
+dev/archive/bidix47269.dix -text
 dev/cg-tag-convertor.py -text
 dev/dixtest.sh -text
 dev/find-contlex-combos.py -text
