@@ -85,6 +85,14 @@ paper/paper.pdf -text svneol=unset#application/pdf
 paper/paper.tex -text
 /pending-tests.sh -text
 /sme-sma.prob -text
+t/README.org -text
+t/config.sh -text
+t/latest-pending.results -text
+t/latest-regression.results -text
+t/pending-tests -text
+t/regression-tests -text
+t/update-latest -text
+t/wiki-tests -text
 texts/albert-sma.txt -text
 texts/albert-sma.txt.mt2 -text
 texts/albert-sma.txt_mt -text
