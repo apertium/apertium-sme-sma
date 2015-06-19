@@ -211,6 +211,8 @@ EXTRA_DIST=					\
 		$(BASENAME).$(PREFIX1).t1x	\
 		$(BASENAME).$(PREFIX1).t2x	\
 		$(BASENAME).$(PREFIX1).t3x	\
+		$(BASENAME).$(PREFIX1).t4x	\
+		$(BASENAME).$(PREFIX1).t5x	\
 		$(BASENAME).$(PREFIX2).t1x	\
 		$(BASENAME).$(PREFIX2).t2x	\
 		$(BASENAME).$(PREFIX2).t3x	\
@@ -228,6 +230,8 @@ apertium_sme_sma_DATA=	\
 	$(BASENAME).$(PREFIX1).t1x			\
 	$(BASENAME).$(PREFIX1).t2x			\
 	$(BASENAME).$(PREFIX1).t3x			\
+	$(BASENAME).$(PREFIX1).t4x			\
+	$(BASENAME).$(PREFIX1).t5x			\
 	$(BASENAME).$(PREFIX2).t1x			\
 	$(BASENAME).$(PREFIX2).t2x			\
 	$(BASENAME).$(PREFIX2).t3x
