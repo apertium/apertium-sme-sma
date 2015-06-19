@@ -82,3 +82,19 @@ Then do
 and check that it works with
 
   make test
+
+* Regression tests
+
+To run the regression tests, do
+
+  t/update-latest
+
+This will overwrite the files named t/latest-pending.results and
+t/latest-regression.results. You can view the differences with
+
+  svn diff
+
+Test results are kept in SVN since that means we don't have to keep
+moving things back and forth between "Pending" and "Regression" in the
+wiki whenever we pass a new test (or fail an old one), and we get a
+nice log of our progression.
