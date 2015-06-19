@@ -1,5 +1,5 @@
 ###############################################################################
-## Makefile for Northern Sami--Southern Sami
+## Makefile for Northern Saami--Southern Saami
 ###############################################################################
 
 VERSION=0.1.0
@@ -43,7 +43,7 @@ TARGETS_COMMON =			\
 ###############################################################################
 
 # -------------------
-# Northern Sami analysis:
+# Northern Saami analysis:
 # -------------------
 
 .deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin .deps/.d
@@ -73,7 +73,7 @@ $(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
 	hfst-fst2fst -O -i $< -o $@
 
 # -------------------
-# Northern Sami generation:
+# Northern Saami generation:
 # ---------------------
 
 $(PREFIX2).autogen.hfst: .deps/$(LANG1).autogen.hfst
@@ -81,7 +81,7 @@ $(PREFIX2).autogen.hfst: .deps/$(LANG1).autogen.hfst
 
 
 # -------------------
-# Southern Sami analysis:
+# Southern Saami analysis:
 # -------------------
 
 .deps/$(PREFIX2).autobil.prefixes: $(PREFIX2).autobil.bin .deps/.d
@@ -113,7 +113,7 @@ $(PREFIX2).automorf-untrimmed.hfst: .deps/$(LANG2).automorf.hfst
 	hfst-fst2fst -O -i $< -o $@
 
 # -------------------
-# Southern Sami generation:
+# Southern Saami generation:
 # ---------------------
 
 $(PREFIX1).autogen.hfst: .deps/$(LANG2).autogen.hfst
