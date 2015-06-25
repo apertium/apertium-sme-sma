@@ -78,7 +78,7 @@ And then there are some categories like "month", with all the months.
 
   <section-rules>
 
-    <rule comment="CHUNK: ii">
+    <rule comment="CHUNK:">
       <pattern>
         <pattern-item n="ii"/>
       </pattern>
@@ -105,7 +105,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="CHUNK: nom1">
+    <rule comment="CHUNK:">
       <pattern>
         <pattern-item n="nom1"/>
       </pattern>
@@ -142,7 +142,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="CHUNK: nom2">
+    <rule comment="CHUNK:">
       <pattern>
         <pattern-item n="nom2"/>
       </pattern>
