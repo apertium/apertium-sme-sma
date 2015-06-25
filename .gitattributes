@@ -56,9 +56,9 @@ dev/tekstMTBsmalemma.txt -text
 dev/test-prefix.sh -text
 eval/evaluation_results.txt -text
 inc/00_readme.txt -text
-inc/A_cross_ana_00_multis_sme -text
-inc/A_intersection_multis -text
-inc/A_intersection_singles -text
+inc/A_cross_ana_00 -text
+inc/A_intersection -text
+inc/A_loan_ana_00 -text
 inc/A_syn_ana_00 -text
 inc/N_cross_ana_00_multis_sme -text
 inc/N_cross_ana_00_singles_sme -text
@@ -66,6 +66,9 @@ inc/N_decomp_ana_00_multis_nob -text
 inc/N_decomp_ana_00_singles_nob -text
 inc/N_intersection_multis -text
 inc/N_intersection_singles -text
+inc/N_loan_ana_00_multis_nob -text
+inc/N_loan_ana_00_singles_nob -text
+inc/N_loan_ana_00_singles_sme -text
 inc/N_precomp_ana_00_multis_nob -text
 inc/N_precomp_ana_00_singles_nob -text
 inc/N_syn_ana_00_multis_nob -text
