@@ -15,31 +15,32 @@ bilidit earáid ovddas	skilkedh mubpiej åvteste
 @iskat	kraanskodh	prøve/undersøke	312	1	107	0
 iskat	goerehtidh	prøve/undersøke	
 
-čuollat	tjurhkedh	hogge/hugge/felle	28	0	196	0
-čuollat	tjurhkedh	hogge	28	0	7	0
-čuollat	tjetskedh	hogge	28	7	7	0
-čuollat	tjaesjmedh	hogge	28	0	7	0
-čuollat	tsaepmedh	hogge	28	36	7	0
-čuollat	håasedh	hogge	28	4	7	0
-čuollat	skajkelidh	hogge	28	1	7	0
-čuollat	tsealhkahtidh	hogge	28	1	7	0
-čuollat	slaamehtidh	hogge/hugge/felle	28	9	196	0
-čuollat	slaamehtidh	hogge	28	9	7	0
+@čuollat	tjurhkedh	hogge/hugge/felle	28	0	196	0
+@čuollat	tjurhkedh	hogge	28	0	7	0
+@čuollat	tjetskedh	hogge	28	7	7	0
+@čuollat	tjaesjmedh	hogge	28	0	7	0
+@čuollat	tsaepmedh	hogge	28	36	7	0
+@čuollat	håasedh	hogge	28	4	7	0
+@čuollat	skajkelidh	hogge	28	1	7	0
+@čuollat	tsealhkahtidh	hogge	28	1	7	0
+@čuollat	slaamehtidh	hogge/hugge/felle	28	9	196	0
+@čuollat	slaamehtidh	hogge	28	9	7	0
+čuollat	tjoehpedh	
 
 geavvat	vaasedh	gå/skje	1833	162	813	7
 geavvat	vaesedh	gå/skje	1833	131	813	7
 geavvat	easalovvedh	gå/skje	1833	0	813	0
 geavvat	slebpiehtidh	gå/skje	1833	1	813	0
 
+@ásaiduvvat	orrijidh	bosette	26	319	109	2
 ásaiduvvat	orrijidh	bosette	26	319	109	2
-ásaiduvvat	orrijidh	bosette	26	319	109	2
-ásaiduvvat	veasastidh	bosette	26	0	109	0
-ásaiduvvat	hööllestidh	bosette	26	1	109	0
-ásaiduvvat	veasoestidh	bosette	26	0	109	0
-ásaiduvvat	hööltestidh	bosette	26	10	109	0
+@ásaiduvvat	veasastidh	bosette	26	0	109	0
+@ásaiduvvat	hööllestidh	bosette	26	1	109	0
+@ásaiduvvat	veasoestidh	bosette	26	0	109	0
+@ásaiduvvat	hööltestidh	bosette	26	10	109	0
 
 billašuvvat	slahtjegidh	ødelegges	21	1	4	0
-billašuvvat	öölegidh	ødelegges	21	7	4	0
+@billašuvvat	öölegidh	ødelegges	21	7	4	0
 @billašuvvat	smalhtjaridh	ødelegges	21	4	4	0
 
 @čugget	guddedh	stikke	12	0	14	0
@@ -83,12 +84,14 @@ geahčadit	vuartasjidh	    forhåndsgranske/se	238	2	1317	0
 @vuosttaldit	vuastalestedh	bekjempe	53	9	23	0
 vuosttaldit	vuastalidh	bekjempe	53	74	23	3
 
-rasttildit	dååjestalledh	overskride	38	0	5	0
-rasttildit	vaasedh	krysse/overskride/passere	38	162	23	0
-rasttildit	vaasedh	krysse/overskride	38	162	17	0
-rasttildit	rastadehtedh	krysse/overskride/passere	38	0	23	0
-rasttildit	rastadehtedh	krysse/overskride	38	0	17	0
-rasttildit	håajpodh	overskride	38	12	5	0
+@rasttildit	dååjestalledh	overskride	38	0	5	0
+@rasttildit	vaasedh	krysse/overskride/passere	38	162	23	0
+@rasttildit	vaasedh	krysse/overskride	38	162	17	0
+@rasttildit	rastadehtedh	krysse/overskride/passere	38	0	23	0
+@rasttildit	rastadehtedh	krysse/overskride	38	0	17	0
+@rasttildit	håajpodh	overskride	38	12	5	0
+rasttildit	restiedidh	
+
 
 @gárvodit	noljedidh	kle	33	0	42	0
 @gárvodit	nuljedidh	kle	33	0	42	0
@@ -120,62 +123,66 @@ gávnnahit	guajhtsadidh	konstatere	226	4	60	0
 gávnnahit	vueptiestidh	konstatere	226	99	60	0
 @gávnnahit	rantestidh	konstatere	226	0	60	0
 
-nahkehit	guddedh	putte/stikke	13	0	8	0
-nahkehit	tsaekedh	putte/stikke	13	142	8	0
-nahkehit	tsagkedh	putte/stikke	13	51	8	0
-nahkehit	skorpedh	putte/stikke	13	8	8	0
-nahkehit	skööhtedh	putte/stikke	13	6	8	0
+@nahkehit	guddedh	putte/stikke	13	0	8	0
+@nahkehit	tsaekedh	putte/stikke	13	142	8	0
+@nahkehit	tsagkedh	putte/stikke	13	51	8	0
+@nahkehit	skorpedh	putte/stikke	13	8	8	0
+@nahkehit	skööhtedh	putte/stikke	13	6	8	0
 nahkehit	rïjtedh	putte/stikke	13	26	8	0
-nahkehit	tsaekiehtidh	putte/stikke	13	0	8	0
-nahkehit	baskehtidh	putte/stikke	13	4	8	0
+@nahkehit	tsaekiehtidh	putte/stikke	13	0	8	0
+@nahkehit	baskehtidh	putte/stikke	13	4	8	0
 
 gozihit	geehtedh	overvåke	161	299	23	0
 
-bidjalit	sedtedh	sette	10	62	985	0
-bidjalit	såarhkodh	sette	10	2	985	0
+@bidjalit	sedtedh	sette	10	62	985	0
+@bidjalit	såarhkodh	sette	10	2	985	0
+bidjalit	bïejedh	sette	
 
-lahkonit	geaktjamidh	nærme	39	0	14	0
-lahkonit	geaktjamidh	nærme	39	0	14	0
+@lahkonit	geaktjamidh	nærme	39	0	14	0
+@lahkonit	geaktjamidh	nærme	39	0	14	0
+@lahkonit	geatskanidh	nærme	39	23	14	2
 lahkonit	geatskanidh	nærme	39	23	14	2
-lahkonit	geatskanidh	nærme	39	23	14	2
-lahkonit	geaktsanidh	nærme	39	0	14	0
-lahkonit	geaktsanidh	nærme	39	0	14	0
+@lahkonit	geaktsanidh	nærme	39	0	14	0
+@lahkonit	geaktsanidh	nærme	39	0	14	0
 
-viidánit	sarhkedh	utvide	15	2	165	0
-viidánit	sarhkedh	utvide	15	2	165	0
-viidánit	stueriedidh	utvide	15	59	165	0
-viidánit	treekeldidh	utvide	15	2	165	0
-viidánit	jeananidh	utvide	15	27	165	0
-viidánit	jeananidh	utvide	15	27	165	0
-viidánit	bårranidh	utvide	15	6	165	0
-viidánit	bårranidh	utvide	15	6	165	0
-viidánit	saajenidh	utvide	15	2	165	0
-viidánit	saajenidh	utvide	15	2	165	0
-viidánit	haasenidh	utvide	15	9	165	0
-viidánit	haasenidh	utvide	15	9	165	0
-viidánit	joevenidh	utvide	15	0	165	0
-viidánit	joevenidh	utvide	15	0	165	0
-viidánit	saaseridh	utvide	15	2	165	0
-viidánit	saaseridh	utvide	15	2	165	0
+@viidánit	sarhkedh	utvide	15	2	165	0
+@viidánit	sarhkedh	utvide	15	2	165	0
+@viidánit	stueriedidh	utvide	15	59	165	0
+@viidánit	treekeldidh	utvide	15	2	165	0
+@viidánit	jeananidh	utvide	15	27	165	0
+@viidánit	jeananidh	utvide	15	27	165	0
+@viidánit	bårranidh	utvide	15	6	165	0
+@viidánit	bårranidh	utvide	15	6	165	0
+@viidánit	saajenidh	utvide	15	2	165	0
+@viidánit	saajenidh	utvide	15	2	165	0
+@viidánit	haasenidh	utvide	15	9	165	0
+@viidánit	haasenidh	utvide	15	9	165	0
+@viidánit	joevenidh	utvide	15	0	165	0
+@viidánit	joevenidh	utvide	15	0	165	0
+@viidánit	saaseridh	utvide	15	2	165	0
+@viidánit	saaseridh	utvide	15	2	165	0
+viidánit	vijriedidh	utvide	15	2	165	0
 
-jienastit	tjoejedh	votere/stemme/nedstemme	349	72	155	0
+
+@jienastit	tjoejedh	votere/stemme/nedstemme	349	72	155	0
+jienastit	gïelem vedtedh	
 
 earáhuhttit	jyötjedehtedh	endre	6	1	611	0
 @earáhuhttit	laavkedehtedh	endre	6	0	611	0
-earáhuhttit	eatjahtehtedh	endre	6	0	611	0
+earáhuhttit	jeatjahtehtedh	endre	6	0	611	0
 @earáhuhttit	tjoehpedistedh	endre	6	6	611	0
 earáhuhttit	sjïehtedidh	endre	6	310	611	1
 @earáhuhttit	varhtodidh	endre	6	1	611	0
-earáhuhttit	sjïehtesjidh	endre	6	330	611	3
+@earáhuhttit	sjïehtesjidh	endre	6	330	611	3
 @earáhuhttit	jarkelidh	endre	6	319	611	22
 @earáhuhttit	mådtoestidh	endre	6	1	611	0
 @earáhuhttit	målsodh	endre	6	275	611	0
 @earáhuhttit	varhtodh	endre	6	17	611	0
 @earáhuhttit	værhtodh	endre	6	19	611	0
 
-muhttit	jyötjedehtedh	forandre	21	1	27	0
-muhttit	eatjahtehtedh	forandre	21	0	27	0
-muhttit	jarkelidh	forandre	21	319	27	1
+@muhttit	jyötjedehtedh	forandre	21	1	27	0
+muhttit	jeatjahtehtedh	forandre	21	0	27	0
+@muhttit	jarkelidh	forandre	21	319	27	1
 
 goddot	båvvasidh	bli drept/drepes	30	5	1	0
 
@@ -188,5 +195,5 @@ oidnot	vååjnedh	synes	155	558	267	14
 huškut	skajkelidh	banke/slå	10	1	93	0
 @huškut	tsealhkahtidh	banke/slå	10	1	93	0
 
-vuoddját	vuajajidh	kjøre avsted	25	13	0	0
+@vuoddját	vuajajidh	kjøre avsted	25	13	0	0
 vuoddját	vuajajidh	kjøre avsted	25	13	0	0
