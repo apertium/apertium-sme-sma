@@ -119,7 +119,7 @@
   </mode>
 
 
-  <mode name="sme-sma-lextor" install="no">
+  <mode name="sme-sma-lex" install="no">
     <pipeline>
       <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf.hfst"/>
@@ -460,7 +460,7 @@
     </pipeline>
   </mode>
 
-  <mode name="usme-sma-lextor" install="no">
+  <mode name="usme-sma-lex" install="no">
     <pipeline>
       <program name="hfst-proc -w -e">
         <file name="sme-sma.automorf-untrimmed.hfst"/>
