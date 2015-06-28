@@ -1,10 +1,38 @@
-Revision: 61055
+Revision: 61113
 AP_SRC1 Revision: 116392
-AP_SRC2 Revision: 116392
+AP_SRC2 Revision: 116480
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
 sme-sma	  ja.
 WORKS	  jïh.
 
 
-1 / 1, 100%
+sme-sma	  min.
+WORKS	  mijjem.
+
+
+sme-sma	  biila.
+WORKS	  bïjle.
+
+
+sme-sma	  biilla.
+WORKS	  bïjlem.
+
+
+sme-sma	  biillat.
+WORKS	  bïjlh.
+
+
+sme-sma	  máná.
+WORKS	  maanam.
+
+
+sme-sma	  Dat lea máná biilla.
+WORKS	  Dah lea maanan bïjlem.
+
+
+sme-sma	  Gonagas Harald.
+WORKS	  Gånka Harald.
+
+
+8 / 8, 100%
