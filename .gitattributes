@@ -21,6 +21,7 @@
 /apertium-sme-sma.sme-sma.t5x -text svneol=unset#text/plain
 /autogen.sh -text
 /configure.ac -text
+dev/analyse-all-stages.sh -text
 dev/apertium-sme-sma.sme-sma.t1x.BACKUP -text
 dev/archive/apertium-sme-sma.sme-sma.LR.att.gz -text
 dev/archive/apertium-sme-sma.sme-sma.RL.att.gz -text
