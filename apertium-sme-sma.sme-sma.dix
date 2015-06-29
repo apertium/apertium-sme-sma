@@ -159,7 +159,6 @@
 
 
 
-<!--    <e><p><l>ahte<s n="cnjcoo"/></l><r>jïh<s n="cnjcoo"/></r></p></e> -->
     <e><p><l>ja<s n="cnjcoo"/></l><r>jïh<s n="cnjcoo"/></r></p></e>
     <e><p><l>muhto<s n="cnjcoo"/></l><r>mohte<s n="cnjcoo"/></r></p></e>
     <e r="LR"><p><l>muhte<s n="cnjsub"/></l><r>mohte<s n="cnjcoo"/></r></p></e>
@@ -169,7 +168,10 @@
     <e r="LR"><p><l>dahe<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
     <e r="LR"><p><l>dehe<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
     <e r="LR"><p><l>dahjege<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
-    <e><p><l>ahte<s n="cnjcoo"/></l><r>ahte<s n="cnjcoo"/></r></p></e>
+
+    <!-- TODO: ahte<cnjcoo> doesn't exist in the sma analyser, what's the best translation? -->
+    <!-- <e><p><l>ahte<s n="cnjcoo"/></l><r>jïh<s n="cnjcoo"/></r></p></e> -->
+    <!-- <e><p><l>ahte<s n="cnjcoo"/></l><r>ahte<s n="cnjcoo"/></r></p></e> -->
 
     <!-- SECTION: Subjunctions -->
 
@@ -3036,11 +3038,11 @@
     <e><p><l>norgalaš<s n="a"/></l><r>daaroe<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>sosiálalaš<s n="a"/></l><r>sosijaale<s n="a"/></r></p></e>
 
-    <e><p><l>eambbo<s n="a"/></l><r>jeene<s n="a"/><s n="comp"/></r></p></e>
-    <e><p><l>eanet<s n="a"/></l><r>jeene<s n="a"/><s n="comp"/></r></p></e>
-    <e><p><l>eanaš<s n="a"/><s n="attr"/></l><r>jeene<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
-    <e><p><l>eanas<s n="a"/><s n="attr"/></l><r>jeene<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
-<e><p><l>vejolaš<s n="a"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="iv"/><s n="ind"/><s n="prs"/><s n="sg3"/></r></p></e>
+    <e><p><l>eambbo<s n="a"/></l><r>jeenje<s n="a"/><s n="comp"/></r></p></e>
+    <e><p><l>eanet<s n="a"/></l><r>jeenje<s n="a"/><s n="comp"/></r></p></e>
+    <e><p><l>eanaš<s n="a"/><s n="attr"/></l><r>jeenje<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
+    <e><p><l>eanas<s n="a"/><s n="attr"/></l><r>jeenje<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
+    <e><p><l>vejolaš<s n="a"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="iv"/><s n="ind"/><s n="prs"/><s n="sg3"/></r></p></e>
 
     <e r="LR"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/><s n="attr"/></r></p></e>
     <e r="RL"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/></r></p></e>
