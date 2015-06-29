@@ -18,7 +18,7 @@ The file contains many macros and some rules:
 Macros:
 
  No macros.
- 
+
 Rules:
 
 - empty rule?
@@ -55,71 +55,71 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Subj">
         <cat-item tags="SN.@SUBJ→.*"/>
         <cat-item tags="SN.@←SUBJ.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Obj">
         <cat-item tags="SN.@OBJ→.*"/>
         <cat-item tags="SN.@←OBJ.*"/>
     </def-cat>
-    
+
     <def-cat n="ADVL">
         <cat-item tags="SN.@ADVL→.*"/>
         <cat-item tags="SN.@←ADVL.*"/>
         <cat-item tags="SN.@ADVL.*"/>
         <cat-item tags="ADV.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Po">
         <cat-item tags="SN.@→P.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Pr">
         <cat-item tags="SN.@←ADVL.*"/>
     </def-cat>
-    
+
     <def-cat n="FMainV">
         <cat-item tags="SV.@+FMAINV"/>
         <cat-item tags="SV.@+FMAINV.*"/>
         <cat-item tags="SV.*.@+FMAINV.*"/>
         <cat-item tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
-    
+
     <def-cat n="FAuxV">
         <cat-item tags="SV.@+FMAUXV"/>
         <cat-item tags="SV.@+FMAUXV.*"/>
         <cat-item tags="SV.*.@+FMAUXV.*"/>
         <cat-item tags="SV.*.*.@+FMAUXV.*"/>
     </def-cat>
-    
+
     <def-cat n="CC">
         <cat-item tags="CC.@CNP"/>
         <cat-item tags="CC.*"/> <!--should be removed when we fix CG -->
         <cat-item tags="SV.*.Neg.Foc_ge"/>
         <cat-item tags="SV.*.Neg.Foc_ge.*"/>
     </def-cat>
-    
+
     <def-cat n="CNP">
         <cat-item tags="CC.@CNP"/>
     </def-cat>
-    
+
     <def-cat n="Vcop">
         <cat-item lemma="copula" tags="SV"/>
         <cat-item lemma="copula" tags="SV.*"/>
     </def-cat>
-    
+
     <def-cat n="Ine_adverb">
         <cat-item lemma="gitta" tags="Adv"/>
         <cat-item lemma="gitta" tags="Adv.*"/>
     </def-cat>
-    
+
     <def-cat n="Pcle">
         <cat-item tags="Pcle.@PCLE"/>
     </def-cat>
-    
+
     <def-cat n="Adp">
         <cat-item tags="Pr.*"/>
         <cat-item tags="Pr"/>
@@ -225,7 +225,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    
+
     <rule>
       <pattern>
         <pattern-item n="SN"/>
@@ -241,7 +241,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    
+
    <rule comment="REGLA: SN_Po Adp">
      <pattern>
        <pattern-item n="SN_Po"/>
@@ -261,7 +261,7 @@ And then there are some categories like "month", with all the months.
          </chunk>
        </out>
      </action>
-    </rule> 
+    </rule>
 
    <rule comment="REGLA: Adp SN_Pr">
      <pattern>
@@ -282,8 +282,8 @@ And then there are some categories like "month", with all the months.
          </chunk>
        </out>
      </action>
-    </rule> 
-    
+    </rule>
+
     <rule comment="REGLA: SN_Obj CNP SN_Obj">
      <pattern>
        <pattern-item n="SN_Obj"/>
@@ -306,7 +306,7 @@ And then there are some categories like "month", with all the months.
          </chunk>
        </out>
      </action>
-    </rule> 
+    </rule>
 
     <rule comment="REGLA: SN_Subj CNP SN_Subj">
      <pattern>
@@ -330,7 +330,7 @@ And then there are some categories like "month", with all the months.
          </chunk>
        </out>
      </action>
-    </rule> 
+    </rule>
 
     <rule comment="REGLA: ADVL CNP ADVL"><!--Son liikui munnje ja sutnje.--><!--Son liikui mu áhččái ja mu eatnái.-->
      <pattern>
@@ -354,7 +354,7 @@ And then there are some categories like "month", with all the months.
          </chunk>
        </out>
      </action>
-    </rule> 
+    </rule>
 
   </section-rules>
 </interchunk>

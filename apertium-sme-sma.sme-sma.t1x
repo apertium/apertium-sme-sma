@@ -30,14 +30,14 @@ convert-verb-deriv1	   =
 While awaiting documentation, here is a list of the REGLA rules:
 
 Section: Nominal groups:
-Rules: pron-pers, pron-refl, pron-rel, pron-dem, pron-indef, 
-       num, n-cmp n-cmp n-cmp n, n-cmp n-cmp n, n-cmp n, n, 
-       adj-rdep n, n num-ldep, n-prop-pers, pron-attr n-cmp n, 
+Rules: pron-pers, pron-refl, pron-rel, pron-dem, pron-indef,
+       num, n-cmp n-cmp n-cmp n, n-cmp n-cmp n, n-cmp n, n,
+       adj-rdep n, n num-ldep, n-prop-pers, pron-attr n-cmp n,
        pron-attr pron-attr n, pron-attr n
 
 Section: Verbal groups:
-Rules: ii, conneg, ii conneg, verb-fin, leat-fin verb-prfprc, 
-       leat-fin adv verb-prfprc, verb-inf, verb-prfprc, verb-actio, 
+Rules: ii, conneg, ii conneg, verb-fin, leat-fin verb-prfprc,
+       leat-fin adv verb-prfprc, verb-inf, verb-prfprc, verb-actio,
        verb-imprt
 
 Section: Adjective groups:
@@ -52,7 +52,7 @@ Rules: pr, po, cs, cc
 Section: Miscellaneous:
 Rules: sent
 
-        
+
 DEF-CAT NAMING SCHEME:
                        lemma-pos.tag.tag_SYNTAG
 
@@ -242,18 +242,18 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="a.ord"/>
        <attr-item tags="n"/>
     </def-attr>
-   
+
     <def-attr n="a_verb">
        <attr-item tags="vblex"/>
        <attr-item tags="vblex.iv.der_goahti.v"/>
        <attr-item tags="vblex.tv.der_goahti.v"/>
     </def-attr>
- 
+
     <def-attr n="a_trans">
        <attr-item tags="iv"/>
        <attr-item tags="tv"/>
     </def-attr>
- 
+
     <def-attr n="a_qst">
        <attr-item tags="qst"/>
     </def-attr>
@@ -405,9 +405,9 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="@-F←OBJ"/>
        <attr-item tags="@-F←ADVL"/>
     </def-attr>
-  
 
-  
+
+
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
@@ -470,7 +470,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="attr.der_voete"/></let> <!-- FIXME: Why 'attr' ? :( ~FMT -->
         </when>
       </choose>
-    </def-macro>  
+    </def-macro>
 
     <def-macro n="proc-syn-foc-qst1" npar="1">
       <choose>
@@ -491,8 +491,8 @@ And then there are some categories like "month", with all the months.
           <call-macro n="convert-deriv1">
             <with-param pos="1"/>
           </call-macro>
-          <!-- If the word has a syntactic function label, set the variable with that 
-               label, if not, set the label to @X. 
+          <!-- If the word has a syntactic function label, set the variable with that
+               label, if not, set the label to @X.
                Remove question particle. -->
           <let><var n="synlabel"/><lit-tag v="@X"/></let>
           <choose>
@@ -674,11 +674,11 @@ And then there are some categories like "month", with all the months.
     <def-macro n="convert-case-nbr-poss2" npar="2">
       <let><var n="case"/><lit v=""/></let>
       <let><var n="nmbr"/><lit v=""/></let>
-      <call-macro n="convert-case-nbr-poss1"> 
+      <call-macro n="convert-case-nbr-poss1">
         <with-param pos="1"/>
       </call-macro>
       <choose>
-        <when> 
+        <when>
           <test>
             <and>
             <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="a"/></equal>
@@ -695,7 +695,7 @@ And then there are some categories like "month", with all the months.
           <let><var n="nmbr"/><clip pos="2" side="tl" part="a_nbr"/></let>
         </otherwise>
       </choose>
-      <call-macro n="convert-case-nbr-poss1"> 
+      <call-macro n="convert-case-nbr-poss1">
         <with-param pos="2"/>
       </call-macro>
     </def-macro>
@@ -704,15 +704,15 @@ And then there are some categories like "month", with all the months.
     <def-macro n="convert-case-nbr-poss3" npar="3">
       <let><var n="case"/><lit v=""/></let>
       <let><var n="nmbr"/><lit v=""/></let>
-      <call-macro n="convert-case-nbr-poss1"> 
+      <call-macro n="convert-case-nbr-poss1">
         <with-param pos="1"/>
       </call-macro>
       <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
       <let><var n="nmbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
-      <call-macro n="convert-case-nbr-poss1"> 
+      <call-macro n="convert-case-nbr-poss1">
         <with-param pos="2"/>
       </call-macro>
-      <call-macro n="convert-case-nbr-poss1"> 
+      <call-macro n="convert-case-nbr-poss1">
         <with-param pos="3"/>
       </call-macro>
     </def-macro>
@@ -738,7 +738,7 @@ And then there are some categories like "month", with all the months.
         </when>
 
       </choose>
-    </def-macro>  
+    </def-macro>
 
     <def-macro n="convert-compounds2" npar="2">
       <call-macro n="convert-compounds1">
@@ -747,7 +747,7 @@ And then there are some categories like "month", with all the months.
       <call-macro n="convert-compounds1">
         <with-param pos="2"/>
       </call-macro>
-    </def-macro>  
+    </def-macro>
 
 
     <def-macro n="convert-compounds3" npar="3">
@@ -760,7 +760,7 @@ And then there are some categories like "month", with all the months.
       <call-macro n="convert-compounds1">
         <with-param pos="3"/>
       </call-macro>
-    </def-macro>  
+    </def-macro>
 
     <def-macro n="convert-verb-deriv1" npar="1">
 
@@ -790,10 +790,10 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_gåete"/></let>
         </when>
       </choose>
-    </def-macro>  
+    </def-macro>
 
 
-    
+
 
   </section-def-macros>
   <section-rules>
