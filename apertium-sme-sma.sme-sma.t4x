@@ -18,21 +18,21 @@ The file contains no macros and some rules:
 Macros:
 
  No macros.
- 
+
 Rules:
 
- - rule: inessive instead of elative in habitive constructions 
- - rule: inessive instead of elative before inessive adverbs 
- - rule:  coordinated inessive NPs 
- - rule:  double coordinated inessive NPs 
- - rule: SVO becomes SOV 
+ - rule: inessive instead of elative in habitive constructions
+ - rule: inessive instead of elative before inessive adverbs
+ - rule:  coordinated inessive NPs
+ - rule:  double coordinated inessive NPs
+ - rule: SVO becomes SOV
  - rule: SVO becomes SOV, verbal objects - Mun oahpan lohkat girjjiid.
- - rule: AVO becomes AOV 
+ - rule: AVO becomes AOV
  - rule: SVO becomes SOV in questions
  - rule: SVO becomes SOV in questions without subject
- - rule: no SOV with complex coordinated objects 
- - rule: SVA becomes SAV 
-    
+ - rule: no SOV with complex coordinated objects
+ - rule: SVA becomes SAV
+
 DEF-CAT NAMING SCHEME:
                        lemma-pos.tag.tag_SYNTAG
 
@@ -54,7 +54,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
-    
+
     <def-cat n="SV_Obj">
         <cat-item tags="SV.@OBJ→.*"/>
         <cat-item tags="SV.@←OBJ.*"/>
@@ -65,16 +65,16 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SN.@SUBJ→.*"/>
         <cat-item tags="SN.@←SUBJ.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Obj">
         <cat-item tags="SN.@OBJ→.*"/>
         <cat-item tags="SN.@←OBJ.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Pr">
         <cat-item tags="SN.@←ADVL.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Advl">
         <cat-item tags="ADV.@ADVL→"/>
         <cat-item tags="ADV.@←ADVL"/>
@@ -83,25 +83,25 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SN.@←ADVL.*"/>
         <cat-item tags="SN.@ADVL.*"/>
     </def-cat>
-    
+
     <def-cat n="SN_Po">
         <cat-item tags="SN.@→P.*"/>
     </def-cat>
-    
+
     <def-cat n="IMainV">
         <cat-item tags="SV.@-FMAINV"/>
         <cat-item tags="SV.@-FMAINV.*"/>
         <cat-item tags="SV.*.@-FMAINV.*"/>
         <cat-item tags="SV.*.*.@-FMAINV.*"/>
     </def-cat>
- 
+
     <def-cat n="FMainV">
         <cat-item tags="SV.@+FMAINV"/>
         <cat-item tags="SV.@+FMAINV.*"/>
         <cat-item tags="SV.*.@+FMAINV.*"/>
         <cat-item tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
-    
+
     <def-cat n="FAuxV">
         <cat-item tags="SV.@+FAUXV"/>
         <cat-item tags="SV.@+FAUXV.*"/>
@@ -112,38 +112,39 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.*.@+FMAUXV.*"/>
         <cat-item tags="SV.*.*.@+FMAUXV.*"/>
     </def-cat>
-    
+
     <def-cat n="CC">
         <cat-item tags="CC.@CNP"/>
         <cat-item tags="CC.*"/> <!--should be removed when we fix CG -->
         <cat-item tags="SV.*.Neg.Foc_ge"/>
         <cat-item tags="SV.*.Neg.Foc_ge.*"/>
     </def-cat>
-    
+
     <def-cat n="CNP">
         <cat-item tags="CC.@CNP"/>
     </def-cat>
-    
+
     <def-cat n="Vcop">
         <cat-item lemma="copula" tags="SV"/>
         <cat-item lemma="copula" tags="SV.*"/>
     </def-cat>
-    
+
     <def-cat n="Ine_adverb">
         <cat-item lemma="gitta" tags="Adv"/>
         <cat-item lemma="gitta" tags="Adv.*"/>
     </def-cat>
-    
+
     <def-cat n="Pcle">
         <cat-item tags="Pcle.@PCLE"/>
     </def-cat>
-    
+
     <def-cat n="Adp">
         <cat-item tags="Pr.*"/>
         <cat-item tags="Pr"/>
         <cat-item tags="Po.*"/>
         <cat-item tags="Po"/>
     </def-cat>
+
 
   </section-def-cats>
 
@@ -180,22 +181,22 @@ And then there are some categories like "month", with all the months.
      <attr-item tags="@-F←OBJ"/>
     </def-attr>
     <def-attr n="nbr">
-      <attr-item tags="Sg"/>
-      <attr-item tags="Pl"/>
-      <attr-item tags="Sp"/>
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
     <def-attr n="case">
-     <attr-item tags="Nom"/>
-     <attr-item tags="Acc"/>
-     <attr-item tags="Gen"/>
-     <attr-item tags="Com"/>
-     <attr-item tags="Ess"/>
-     <attr-item tags="Ill"/>
-     <attr-item tags="Loc"/>
-     <attr-item tags="Ine"/>
-     <attr-item tags="Ela"/>
-  </def-attr>
+     <attr-item tags="nom"/>
+     <attr-item tags="acc"/>
+     <attr-item tags="gen"/>
+     <attr-item tags="com"/>
+     <attr-item tags="ess"/>
+     <attr-item tags="ill"/>
+     <attr-item tags="loc"/>
+     <attr-item tags="ine"/>
+     <attr-item tags="ela"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -211,16 +212,16 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <choose>
-          <when> 
+          <when>
             <test>
               <equal>
                 <clip pos="1" part="case"/>
-                <lit-tag v="Ela"/>
+                <lit-tag v="ela"/>
               </equal>
-            </test> 
+            </test>
             <let>
               <clip pos="1" part="case"/>
-              <lit-tag v="Ine"/>
+              <lit-tag v="ine"/>
             </let>
           </when>
         </choose>
@@ -249,16 +250,16 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <choose>
-          <when> 
+          <when>
             <test>
               <equal>
                 <clip pos="1" part="case"/>
-                <lit-tag v="Ela"/>
+                <lit-tag v="ela"/>
               </equal>
-            </test> 
+            </test>
             <let>
               <clip pos="1" part="case"/>
-              <lit-tag v="Ine"/>
+              <lit-tag v="ine"/>
             </let>
           </when>
         </choose>
@@ -279,7 +280,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    
+
      <rule> <!-- coordinated inessive NPs -->
       <pattern>
         <pattern-item n="SN"/>
@@ -289,26 +290,26 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
       <choose>
-          <when> 
+          <when>
             <test>
              <and>
               <equal>
                 <clip pos="1" part="case"/>
-                <lit-tag v="Ela"/>
+                <lit-tag v="ela"/>
               </equal>
               <equal>
                 <clip pos="3" part="case"/>
-                <lit-tag v="Ela"/>
+                <lit-tag v="ela"/>
               </equal>
              </and>
-            </test> 
+            </test>
             <let>
               <clip pos="1" part="case"/>
-              <lit-tag v="Ine"/>
+              <lit-tag v="ine"/>
             </let>
             <let>
               <clip pos="3" part="case"/>
-              <lit-tag v="Ine"/>
+              <lit-tag v="ine"/>
             </let>
           </when>
         </choose>
@@ -355,34 +356,34 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
       <choose>
-          <when> 
+          <when>
             <test>
              <and>
               <equal>
                 <clip pos="1" part="case"/>
-                <lit-tag v="Ela"/>
+                <lit-tag v="ela"/>
               </equal>
               <equal>
                 <clip pos="3" part="case"/>
-                <lit-tag v="Ela"/>
+                <lit-tag v="ela"/>
               </equal>
               <equal>
                 <clip pos="5" part="case"/>
-                <lit-tag v="Ela"/>
+                <lit-tag v="ela"/>
               </equal>
              </and>
-            </test> 
+            </test>
             <let>
               <clip pos="1" part="case"/>
-              <lit-tag v="Ine"/>
+              <lit-tag v="ine"/>
             </let>
             <let>
               <clip pos="3" part="case"/>
-              <lit-tag v="Ine"/>
+              <lit-tag v="ine"/>
             </let>
             <let>
               <clip pos="5" part="case"/>
-              <lit-tag v="Ine"/>
+              <lit-tag v="ine"/>
             </let>
           </when>
         </choose>
@@ -432,7 +433,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    
+
     <rule> <!--SVO becomes SOV -->
       <pattern>
         <pattern-item n="SN_Subj"/>
@@ -464,12 +465,12 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    
+
         <rule> <!--SVO becomes SOV, verbal objects--><!-- Mun oahpan lohkat girjjiid.-->
       <pattern>
         <pattern-item n="SN_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SV_Obj"/> 
+        <pattern-item n="SV_Obj"/>
       </pattern>
       <action>
         <out>
@@ -496,7 +497,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
- 
+
     <rule> <!--AVO becomes AOV -->
       <pattern>
         <pattern-item n="FAuxV"/>
@@ -529,7 +530,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    
+
     <rule> <!--SVO becomes SOV in questions-->
       <pattern>
         <pattern-item n="FAuxV"/>
@@ -577,7 +578,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    
+
         <rule> <!--SVO becomes SOV in questions without subject-->
       <pattern>
         <pattern-item n="FAuxV"/>
@@ -617,7 +618,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    
+
     <rule> <!--no SOV with complex coordinated objects -->
       <pattern>
         <pattern-item n="SN_Subj"/>

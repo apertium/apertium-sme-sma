@@ -154,21 +154,21 @@ And then there are some categories like "month", with all the months.
      <attr-item tags="@-F←OBJ"/>
     </def-attr>
     <def-attr n="nbr">
-      <attr-item tags="Sg"/>
-      <attr-item tags="Pl"/>
-      <attr-item tags="Sp"/>
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
     <def-attr n="case">
-     <attr-item tags="Nom"/>
-     <attr-item tags="Acc"/>
-     <attr-item tags="Gen"/>
-     <attr-item tags="Com"/>
-     <attr-item tags="Ess"/>
-     <attr-item tags="Ill"/>
-     <attr-item tags="Loc"/>
-     <attr-item tags="Ine"/>
-     <attr-item tags="Ela"/>
+     <attr-item tags="nom"/>
+     <attr-item tags="acc"/>
+     <attr-item tags="gen"/>
+     <attr-item tags="com"/>
+     <attr-item tags="ess"/>
+     <attr-item tags="ill"/>
+     <attr-item tags="loc"/>
+     <attr-item tags="ine"/>
+     <attr-item tags="ela"/>
   </def-attr>
   </section-def-attrs>
 
