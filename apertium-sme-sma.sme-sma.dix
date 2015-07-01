@@ -36,7 +36,7 @@
     <sdef n="nomag"/>
     <sdef n="g3"/>
     <sdef n="prs"/>
-    <sdef n="ind"/>
+    <sdef n="indic"/>
 
     <sdef n="sg1"/>
     <sdef n="sg2"/>
@@ -443,7 +443,7 @@
     <e><p><l>bargodilli<s n="n"/></l><r>barkoetsiehkie<s n="n"/></r></p><par n="n"/></e>
     <e><p><l>sámediggedieđáhus<s n="n"/></l><r>saemiedigkiebïevnese<s n="n"/></r></p><par n="n"/></e>
     <e><p><l>dieđáhus<s n="n"/></l><r>bïevnese<s n="n"/></r></p><par n="n"/></e>
-    <e><p><l>eiseváldi<s n="n"/></l><r>åejvieladtjh<s n="n"/></r></p><par n="n"/></e>
+    <e><p><l>eiseváldi<s n="n"/></l><r>åejvieladtjh<s n="n"/></r></p><par n="n"/></e> <!-- TODO: sme can give sg, sma can't generate sg -->
     <e><p><l>ovdamearka<s n="n"/></l><r>vuesiehtimmie<s n="n"/></r></p><par n="n"/></e>
     <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="nom"/></l><r>båetije<b/>aejkie<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="gen"/></l><r>båetije<b/>aejkie<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
@@ -3045,7 +3045,7 @@
     <e><p><l>eanet<s n="a"/></l><r>jeenje<s n="a"/><s n="comp"/></r></p></e>
     <e><p><l>eanaš<s n="a"/><s n="attr"/></l><r>jeenje<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
     <e><p><l>eanas<s n="a"/><s n="attr"/></l><r>jeenje<s n="a"/><s n="superl"/><s n="attr"/></r></p></e>
-    <e><p><l>vejolaš<s n="a"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="iv"/><s n="ind"/><s n="prs"/><s n="sg3"/></r></p></e>
+    <e><p><l>vejolaš<s n="a"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="iv"/><s n="indic"/><s n="prs"/><s n="sg3"/></r></p></e>
 
     <e r="LR"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/><s n="attr"/></r></p></e>
     <e r="RL"><p><l>iešguhtet<s n="indef"/></l><r>joekehts<s n="a"/></r></p></e>

@@ -276,7 +276,7 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_mood">
        <attr-item tags="pot"/>
-       <attr-item tags="ind"/>
+       <attr-item tags="indic"/>
        <attr-item tags="cond"/>
        <attr-item tags="imprt"/>
     </def-attr>
@@ -1422,7 +1422,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="ind"/></let>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
           <chunk name="vblex" case="caseFirstWord">
             <tags>
