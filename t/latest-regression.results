@@ -1,6 +1,6 @@
 Revision: 61128
 AP_SRC1 Revision: 116627
-AP_SRC2 Revision: 116480
+AP_SRC2 Revision: 116726
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
 sme-sma	  ja.
@@ -21,6 +21,10 @@ WORKS	  bïjlem.
 
 sme-sma	  biillat.
 WORKS	  bïjlh.
+
+
+sme-sma	  Politihkka lea don ja mun.
+WORKS	  Politihke lea datne jïh manne.
 
 
 sme-sma	  máná.
@@ -48,4 +52,4 @@ sme-sma	  Gonagas Harald.
 	+ Gånka Haralden.
 
 
-10 / 11, ~90.90909090909090909091%
+11 / 12, ~91.66666666666666666667%
