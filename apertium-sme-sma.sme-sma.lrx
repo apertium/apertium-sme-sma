@@ -786,4 +786,8 @@
     <match lemma="sáhttit" tags="v.*"><select lemma="maehtedh" tags="v.*"/></match>
     <match lemma="leat" tags="v.*"/>
   </rule>
+
+  <rule weight="1.0">
+    <match lemma="báhkka" tags="n.*"><select lemma="aeskie"/></match>
+  </rule>
 </rules> 
