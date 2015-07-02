@@ -424,7 +424,7 @@ LIST go = "go" ;
 # Initials
 # --------
 
-LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
+LIST INITIAL = "adj" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
 "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
 "á" "æ" "ø" "å" "ö" "ä" ;
 
@@ -7037,7 +7037,7 @@ SELECT:SEMsamegiella Gen IF (0 LANGUAGE + Gen) (*1 LESSON OR ("analysa") BARRIER
 #SELECT:SEMr2120 Gen IF (0 LANGUAGE LINK 0 Acc)(1 SATNI);
 	#$
 
-#SELECT:SEMr2121 Gen IF (0 LANGUAGE LINK 0 Acc)(1 ("nubbi") OR ("vuosttaš") OR Ord OR ("a") OR ("b") OR ("c"))(2 ("giella") LINK NOT 0 Ess);
+#SELECT:SEMr2121 Gen IF (0 LANGUAGE LINK 0 Acc)(1 ("nubbi") OR ("vuosttaš") OR Ord OR ("adj") OR ("b") OR ("c"))(2 ("giella") LINK NOT 0 Ess);
 	#$
 
 #!! * __SEMlang__ removes Gen if LANGUAGE is to the right, but not if you are ACTOR-ROLE and so on ''oahpponeavvuid sámegillii'' 

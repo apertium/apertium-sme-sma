@@ -73,7 +73,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*.cmp"/>
       <cat-item tags="n.*.*.cmp"/>
       <cat-item tags="n.*.*.*.cmp"/>
-      <cat-item tags="a.*.cmp"/>
+      <cat-item tags="adj.*.cmp"/>
       <cat-item tags="vblex.*.der_nomact.n.*.cmp"/>
       <cat-item tags="vblex.*.der_nomag.n.*.cmp"/>
     </def-cat>
@@ -81,13 +81,13 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*"/>
       <cat-item tags="vblex.*.der_nomact.n.*"/>
       <cat-item tags="vblex.*.der_nomag.n.*"/>
-      <cat-item tags="a.der_vuohta.n.*"/>
+      <cat-item tags="adj.der_vuohta.n.*"/>
     </def-cat>
     <def-cat n="adj">
-      <cat-item tags="a.*"/>
+      <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="adj-rdep">
-      <cat-item tags="a.*.@→N"/>
+      <cat-item tags="adj.*.@→N"/>
     </def-cat>
     <def-cat n="num">
       <cat-item tags="num.*"/>
@@ -96,7 +96,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="num.*.*.*.@N←"/>
     </def-cat>
     <def-cat n="prn-refl">
-      <cat-item tags="prn.refl.*"/>
+      <cat-item tags="prn.ref.*"/>
     </def-cat>
     <def-cat n="prn-rel">
       <cat-item tags="prn.rel.*"/>
@@ -105,11 +105,11 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="prn.dem.*"/>
     </def-cat>
     <def-cat n="prn-indef">
-      <cat-item tags="prn.indef.*"/>
+      <cat-item tags="prn.ind.*"/>
     </def-cat>
     <def-cat n="prn-attr">
-      <cat-item tags="prn.indef.attr"/>
-      <cat-item tags="prn.indef.attr.*"/>
+      <cat-item tags="prn.ind.attr"/>
+      <cat-item tags="prn.ind.attr.*"/>
       <cat-item tags="prn.itg.attr.*"/>
     </def-cat>
     <def-cat n="verb-actio">
@@ -179,8 +179,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adv.*"/>
       <cat-item tags="pcle"/>
       <cat-item tags="pcle.*"/>
-      <cat-item tags="a.der_at.adv"/>
-      <cat-item tags="a.der_at.adv.*"/>
+      <cat-item tags="adj.der_at.adv"/>
+      <cat-item tags="adj.der_at.adv.*"/>
       <cat-item tags="vblex.*.ger"/>
       <cat-item tags="vblex.*.ger.*"/>
       <cat-item tags="vblex.*.vgen"/>
@@ -208,14 +208,14 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="vblex.tv.der_nomag.n"/>
       <attr-item tags="vblex.iv.der_nomact.n"/>
       <attr-item tags="vblex.tv.der_nomact.n"/>
-      <attr-item tags="a.der_vuohta.n"/>
-      <attr-item tags="a.der_voete.n"/>
+      <attr-item tags="adj.der_vuohta.n"/>
+      <attr-item tags="adj.der_voete.n"/>
     </def-attr>
 
     <def-attr n="a_pron">
-       <attr-item tags="prn.indef"/>
+       <attr-item tags="prn.ind"/>
        <attr-item tags="prn.dem"/>
-       <attr-item tags="prn.refl"/>
+       <attr-item tags="prn.ref"/>
        <attr-item tags="prn.rel"/>
        <attr-item tags="prn.itg"/>
     </def-attr>
@@ -238,8 +238,8 @@ And then there are some categories like "month", with all the months.
     </def-attr>
 
     <def-attr n="a_adj">
-       <attr-item tags="a"/>
-       <attr-item tags="a.ord"/>
+       <attr-item tags="adj"/>
+       <attr-item tags="adj.ord"/>
        <attr-item tags="n"/>
     </def-attr>
 
@@ -288,8 +288,8 @@ And then there are some categories like "month", with all the months.
     </def-attr>
 
     <def-attr n="a_tense">
-       <attr-item tags="prt"/>
-       <attr-item tags="prs"/>
+       <attr-item tags="pret"/>
+       <attr-item tags="pres"/>
     </def-attr>
 
     <def-attr n="a_poss">
@@ -557,7 +557,7 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
               <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
-              <not><equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="a"/></equal></not>
+              <not><equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj"/></equal></not>
             </and>
           </test>
           <let><var n="case"/><lit v=""/></let>
@@ -571,7 +571,7 @@ And then there are some categories like "month", with all the months.
       <choose>
         <when>
           <test>
-            <not><equal><clip pos="1" side="sl" part="a_pron"/><lit-tag v="prn.refl"/></equal></not>
+            <not><equal><clip pos="1" side="sl" part="a_pron"/><lit-tag v="prn.ref"/></equal></not>
           </test>
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
@@ -635,7 +635,7 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
               <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@←SPRED"/></equal>
-              <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="a"/></equal>
+              <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj"/></equal>
             </and>
           </test>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
@@ -646,7 +646,7 @@ And then there are some categories like "month", with all the months.
         <when>
           <test>
             <and>
-              <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="a"/></equal>
+              <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj"/></equal>
               <not><equal><clip pos="1" side="sl" part="a_nbr"/><lit v=""/></equal></not>
               <not><equal><clip pos="1" side="sl" part="a_case"/><lit v=""/></equal></not>
               <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
@@ -681,7 +681,7 @@ And then there are some categories like "month", with all the months.
         <when>
           <test>
             <and>
-            <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="a"/></equal>
+            <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj"/></equal>
             <not>
             <and>
             <equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal>
@@ -730,7 +730,7 @@ And then there are some categories like "month", with all the months.
         <when>
           <test>
             <and>
-              <equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="a"/></equal>
+              <equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj"/></equal>
               <not><equal><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></equal></not>
             </and>
           </test>
@@ -838,7 +838,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="refl" case="caseFirstWord">
+          <chunk name="ref" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="REFL"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1627,7 +1627,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="a" case="caseFirstWord">
+          <chunk name="adj" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SA"/></tag>
               <tag><var n="synlabel"/></tag>
