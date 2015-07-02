@@ -318,7 +318,7 @@
     <match lemma="geallat" tags="v.tv.*"><select lemma="sohkesjidh" tags="v.*"/></match>
   </rule>
   <rule weight="1.0">
-    <match lemma="gii" tags="pron.interr.*"><select lemma="gie" tags="pron.interr.*"/></match>
+    <match lemma="gii" tags="pron.itg.*"><select lemma="gie" tags="pron.itg.*"/></match>
   </rule>
   <rule weight="1.0">
     <match lemma="gii" tags="pron.rel.*"><select lemma="gie" tags="pron.rel.*"/></match>
@@ -531,7 +531,7 @@
     <match lemma="miella" tags="n.*"><select lemma="mïele" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-    <match lemma="mii" tags="pron.interr.*"><select lemma="mij" tags="pron.interr.*"/></match>
+    <match lemma="mii" tags="pron.itg.*"><select lemma="mij" tags="pron.itg.*"/></match>
   </rule>
   <rule weight="1.0">
     <match lemma="mii" tags="pron.pers.*"><select lemma="manne" tags="pron.pers.*"/></match>

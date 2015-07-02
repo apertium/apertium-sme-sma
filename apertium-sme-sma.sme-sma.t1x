@@ -110,7 +110,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prn-attr">
       <cat-item tags="prn.indef.attr"/>
       <cat-item tags="prn.indef.attr.*"/>
-      <cat-item tags="prn.interr.attr.*"/>
+      <cat-item tags="prn.itg.attr.*"/>
     </def-cat>
     <def-cat n="verb-actio">
       <cat-item tags="vblex.*.actio.*"/>
@@ -217,7 +217,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="prn.dem"/>
        <attr-item tags="prn.refl"/>
        <attr-item tags="prn.rel"/>
-       <attr-item tags="prn.interr"/>
+       <attr-item tags="prn.itg"/>
     </def-attr>
 
     <def-attr n="a_case">
