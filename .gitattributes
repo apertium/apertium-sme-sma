@@ -12,8 +12,6 @@
 /apertium-sme-sma.sma-sme.t3x -text svneol=unset#text/plain
 /apertium-sme-sma.sme-sma.dix -text
 /apertium-sme-sma.sme-sma.lrx -text
-/apertium-sme-sma.sme-sma.mor.rlx -text
-/apertium-sme-sma.sme-sma.syn.rlx -text
 /apertium-sme-sma.sme-sma.t1x -text svneol=unset#text/plain
 /apertium-sme-sma.sme-sma.t2x -text svneol=unset#text/plain
 /apertium-sme-sma.sme-sma.t3x -text svneol=unset#text/plain
@@ -25,9 +23,11 @@ dev/analyse-all-stages.sh -text
 dev/apertium-sme-sma.sme-sma.t1x.BACKUP -text
 dev/archive/apertium-sme-sma.sme-sma.LR.att.gz -text
 dev/archive/apertium-sme-sma.sme-sma.RL.att.gz -text
+dev/archive/apertium-sme-sma.sme-sma.mor.rlx -text
+dev/archive/apertium-sme-sma.sme-sma.syn.rlx -text
 dev/archive/bidix46360.dix -text
 dev/archive/bidix47269.dix -text
-dev/cg-tag-convertor.py -text
+dev/archive/cg-tag-convertor.py -text
 dev/dixtest.sh -text
 dev/find-contlex-combos.py -text
 dev/generation-errors.sh -text
@@ -56,6 +56,7 @@ dev/tekst3Bsmalemma.txt -text
 dev/tekstMTBsmalemma.txt -text
 dev/test-prefix.sh -text
 eval/evaluation_results.txt -text
+/gt2apertium.cg3r -text
 inc/00_readme.txt -text
 inc/A_cross_ana_00 -text
 inc/A_intersection -text

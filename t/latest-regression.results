@@ -1,5 +1,5 @@
-Revision: 61158
-AP_SRC1 Revision: 116842
+Revision: 61552
+AP_SRC1 Revision: 118535
 AP_SRC2 Revision: 116726
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
@@ -40,7 +40,8 @@ WORKS	  maanam.
 
 
 sme-sma	  Dat lea máná biilla.
-WORKS	  Dah lea maanan bïjlem.
+	- Dah lea maanan bïjlem.
+	+ Dïhte lea maanan bïjlen.
 
 
 sme-sma	  Válga ja jienastuslohku.
@@ -56,8 +57,7 @@ WORKS	  Hotellen aajhtere.
 
 
 sme-sma	  Gonagas Harald.
-	- Gånka Harald.
-	+ Gånka Haralden.
+WORKS	  Gånka Harald.
 
 
 13 / 14, ~92.85714285714285714286%
