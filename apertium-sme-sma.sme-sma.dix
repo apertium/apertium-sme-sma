@@ -108,6 +108,8 @@
     <sdef n="rcmpnd"/>
     <sdef n="sggencmp"/>
     <sdef n="sgnomcmp"/>
+    <sdef n="cmp_sggen"/>
+    <sdef n="cmp_sgnom"/>
 
     <!-- Derivations -->
 
@@ -131,8 +133,10 @@
       <e><p><l><s n="pl"/></l>       <r><s n="pl"/></r></p></e>
       <e><p><l><s n="rcmpnd"/></l>   <r><s n="rcmpnd"/></r></p></e>
       <e><p><l><s n="sg"/></l>       <r><s n="sg"/></r></p></e>
-      <e><p><l><s n="sggencmp"/></l> <r><s n="sggencmp"/></r></p></e>
-      <e><p><l><s n="sgnomcmp"/></l> <r><s n="sgnomcmp"/></r></p></e>
+      <e><p><l><s n="sggencmp"/></l> <r><s n="sggencmp"/></r></p></e> <!-- deprecated?-->
+      <e><p><l><s n="sgnomcmp"/></l> <r><s n="sgnomcmp"/></r></p></e> <!-- deprecated?-->
+      <e><p><l><s n="cmp_sggen"/></l> <r><s n="cmp_sggen"/></r></p></e>
+      <e><p><l><s n="cmp_sgnom"/></l> <r><s n="cmp_sgnom"/></r></p></e>
     </pardef>
     <pardef n=":LR_indecl" c="Tag it for transfer (removed by transfer before generation)">
       <e r="LR"><p><l></l> <r><s n="indecl"/></r></p></e>
@@ -205,7 +209,7 @@
     <e><p><l>davábealde<s n="po"/></l><r>noerhtelen<s n="po"/></r></p></e>
     <e><p><l>davábealde<s n="pr"/></l><r>noerhtelen<s n="pr"/></r></p></e>
     <e><p><l>ovddabealde<s n="po"/></l><r>åvtelisnie<s n="po"/></r></p></e>
-    <e><p><l>ovddabealde<s n="po"/></l>åvtebielie<r><s n="po"/></r></p></e> <!-- time -->
+    <e><p><l>ovddabealde<s n="po"/></l><r>åvtebielie<s n="po"/></r></p></e> <!-- time -->
 
     <e><p><l>miehtá<s n="pr"/></l><r>mietie<s n="po"/></r></p></e> <!-- @FIXME@: was 'pr' -->
     <e><p><l>aisttan<s n="pr"/></l><r>mietie<s n="po"/></r></p></e> <!-- @FIXME@: was 'pr' -->
