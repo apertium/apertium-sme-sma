@@ -284,6 +284,7 @@ And then there are some categories like "month", with all the months.
     <def-attr n="a_nbr">
        <attr-item tags="sg"/>
        <attr-item tags="pl"/>
+       <attr-item tags="du"/>
        <attr-item tags="ND"/>
     </def-attr>
 
@@ -293,28 +294,22 @@ And then there are some categories like "month", with all the months.
     </def-attr>
 
     <def-attr n="a_poss">
-       <attr-item tags="pxsg1"/>
-       <attr-item tags="pxsg2"/>
-       <attr-item tags="pxsg3"/>
-       <attr-item tags="pxdu1"/>
-       <attr-item tags="pxdu2"/>
-       <attr-item tags="pxdu3"/>
-       <attr-item tags="pxpl1"/>
-       <attr-item tags="pxpl2"/>
-       <attr-item tags="pxpl3"/>
+       <attr-item tags="px1sg"/>
+       <attr-item tags="px2sg"/>
+       <attr-item tags="px3sg"/>
+       <attr-item tags="px1du"/>
+       <attr-item tags="px2du"/>
+       <attr-item tags="px3du"/>
+       <attr-item tags="px1pl"/>
+       <attr-item tags="px2pl"/>
+       <attr-item tags="px3pl"/>
     </def-attr>
 
 
     <def-attr n="a_pers">
-       <attr-item tags="sg1"/>
-       <attr-item tags="sg2"/>
-       <attr-item tags="sg3"/>
-       <attr-item tags="du1"/>
-       <attr-item tags="du2"/>
-       <attr-item tags="du3"/>
-       <attr-item tags="pl1"/>
-       <attr-item tags="pl2"/>
-       <attr-item tags="pl3"/>
+       <attr-item tags="p1"/>
+       <attr-item tags="p2"/>
+       <attr-item tags="p3"/>
     </def-attr>
 
     <def-attr n="a_degr">
@@ -1327,6 +1322,7 @@ And then there are some categories like "month", with all the months.
               <tag><clip pos="1" side="tl" part="a_mood"/></tag>
               <tag><lit-tag v="XD"/></tag>
               <tag><clip pos="1" side="tl" part="a_pers"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -1336,6 +1332,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_mood"/>
               <lit-tag v="4"/>
               <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
@@ -1359,6 +1356,7 @@ And then there are some categories like "month", with all the months.
               <tag><clip pos="1" side="tl" part="a_mood"/></tag>
               <tag><clip pos="1" side="tl" part="a_tense"/></tag>
               <tag><clip pos="1" side="tl" part="a_pers"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -1396,6 +1394,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="2" side="tl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
