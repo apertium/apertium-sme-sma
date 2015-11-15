@@ -38,18 +38,6 @@
     <sdef n="pres"/>
     <sdef n="indic"/>
 
-    <sdef n="sg1"/>
-    <sdef n="sg2"/>
-    <sdef n="sg3"/>
-
-    <sdef n="du1"/>
-    <sdef n="du2"/>
-    <sdef n="du3"/>
-
-    <sdef n="pl1"/>
-    <sdef n="pl2"/>
-    <sdef n="pl3"/>
-
     <sdef n="sg"/>
     <sdef n="pl"/>
 
@@ -293,20 +281,20 @@
 
     <!-- SECTION: Pronouns -->
 
-    <e><p><l>mun<s n="prn"/><s n="pers"/><s n="sg1"/></l><r>manne<s n="prn"/><s n="pers"/><s n="sg1"/></r></p></e>
-    <e><p><l>don<s n="prn"/><s n="pers"/><s n="sg2"/></l><r>datne<s n="prn"/><s n="pers"/><s n="sg2"/></r></p></e>
-    <e><p><l>son<s n="prn"/><s n="pers"/><s n="sg3"/></l><r>dïhte<s n="prn"/><s n="pers"/><s n="sg3"/></r></p></e>
-    <e><p><l>son<s n="prn"/><s n="pers"/><s n="sg3"/></l><r>satne<s n="prn"/><s n="logo"/><s n="sg3"/></r></p></e>
+    <e><p><l>mun<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>manne<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
+    <e><p><l>don<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></l><r>datne<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></r></p></e>
+    <e><p><l>son<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>dïhte<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></r></p></e>
+    <e><p><l>son<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>satne<s n="prn"/><s n="logo"/><s n="p3"/><s n="sg"/></r></p></e>
 
-    <e><p><l>mun<s n="prn"/><s n="pers"/><s n="du1"/></l><r>månnoeh<s n="prn"/><s n="pers"/><s n="du1"/></r></p></e>
-    <e><p><l>don<s n="prn"/><s n="pers"/><s n="du2"/></l><r>dåtnoeh<s n="prn"/><s n="pers"/><s n="du2"/></r></p></e>
-    <e><p><l>son<s n="prn"/><s n="pers"/><s n="du3"/></l><r>dah<b/>guaktah<s n="prn"/><s n="pers"/><s n="du3"/></r></p></e>
-    <e><p><l>son<s n="prn"/><s n="pers"/><s n="du3"/></l><r>såtnoeh<s n="prn"/><s n="logo"/><s n="du3"/></r></p></e>
+    <e><p><l>mun<s n="prn"/><s n="pers"/><s n="p1"/><s n="du"/></l><r>månnoeh<s n="prn"/><s n="pers"/><s n="p1"/><s n="du"/></r></p></e>
+    <e><p><l>don<s n="prn"/><s n="pers"/><s n="p2"/><s n="du"/></l><r>dåtnoeh<s n="prn"/><s n="pers"/><s n="p2"/><s n="du"/></r></p></e>
+    <e><p><l>son<s n="prn"/><s n="pers"/><s n="p3"/><s n="du"/></l><r>dah<b/>guaktah<s n="prn"/><s n="pers"/><s n="p3"/><s n="du"/></r></p></e>
+    <e><p><l>son<s n="prn"/><s n="pers"/><s n="p3"/><s n="du"/></l><r>såtnoeh<s n="prn"/><s n="logo"/><s n="p3"/><s n="du"/></r></p></e>
 
-    <e><p><l>mun<s n="prn"/><s n="pers"/><s n="pl1"/></l><r>mijjieh<s n="prn"/><s n="pers"/><s n="pl1"/></r></p></e>
-    <e><p><l>don<s n="prn"/><s n="pers"/><s n="pl2"/></l><r>dijjieh<s n="prn"/><s n="pers"/><s n="pl2"/></r></p></e>
-    <e><p><l>son<s n="prn"/><s n="pers"/><s n="pl3"/></l><r>dah<s n="prn"/><s n="pers"/><s n="pl3"/></r></p></e>
-    <e><p><l>son<s n="prn"/><s n="pers"/><s n="pl3"/></l><r>sijjieh<s n="prn"/><s n="logo"/><s n="pl3"/></r></p></e>
+    <e><p><l>mun<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></l><r>mijjieh<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
+    <e><p><l>don<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/></l><r>dijjieh<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/></r></p></e>
+    <e><p><l>son<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>dah<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></r></p></e>
+    <e><p><l>son<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>sijjieh<s n="prn"/><s n="logo"/><s n="p3"/><s n="pl"/></r></p></e>
 
     <e><p><l>mii<s n="prn"/><s n="rel"/></l><r>mij<s n="prn"/><s n="rel"/></r></p></e>
     <e><p><l>gii<s n="prn"/><s n="rel"/></l><r>gie<s n="prn"/><s n="rel"/></r></p></e>
@@ -3051,7 +3039,7 @@
     <e><p><l>eanet<s n="adj"/></l><r>jeenje<s n="adj"/><s n="comp"/></r></p></e>
     <e><p><l>eanaš<s n="adj"/><s n="attr"/></l><r>jeenje<s n="adj"/><s n="superl"/><s n="attr"/></r></p></e>
     <e><p><l>eanas<s n="adj"/><s n="attr"/></l><r>jeenje<s n="adj"/><s n="superl"/><s n="attr"/></r></p></e>
-    <e><p><l>vejolaš<s n="adj"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="iv"/><s n="indic"/><s n="pres"/><s n="sg3"/></r></p></e>
+    <e><p><l>vejolaš<s n="adj"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="iv"/><s n="indic"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e>
 
     <e r="LR"><p><l>iešguhtet<s n="ind"/></l><r>joekehts<s n="adj"/><s n="attr"/></r></p></e>
     <e r="RL"><p><l>iešguhtet<s n="ind"/></l><r>joekehts<s n="adj"/></r></p></e>
