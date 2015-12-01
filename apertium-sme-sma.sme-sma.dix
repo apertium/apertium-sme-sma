@@ -112,6 +112,7 @@
 
     <!-- Punctuation -->
     <sdef n="clb"/>
+    <sdef n="sent"/>
     <sdef n="punct"/>
     <sdef n="left"/>
     <sdef n="right"/>
@@ -3940,7 +3941,7 @@
     <e><p><l>guhkidit<s n="vblex"/><s n="tv"/></l><r>guhkiedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>gulahallat<s n="vblex"/><s n="tv"/></l><r>gaskestalledh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>guldalit<s n="vblex"/><s n="tv"/></l><r>goltelidh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>gullat<s n="vblex"/><s n="tv"/></l><r>govledh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>gullat<s n="vblex"/><s n="tv"/></l><r>govledh¹<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>gullot<s n="vblex"/><s n="iv"/></l><r>govlesovvedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>gullát<s n="vblex"/><s n="tv"/></l><r>fahkedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>guoddit<s n="vblex"/><s n="tv"/></l><r>guedtedh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -4644,8 +4645,7 @@
     <e><p><l>logget<s n="vblex"/><s n="tv"/></l><r>loggedh<s n="vblex"/><s n="tv"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
-    <e><re>[…;:,.\?¿¶]+</re><p><l><s n="clb"/></l><r><s n="clb"/></r></p></e>
-    <e><p><l>excl<s n="clb"/></l><r>excl<s n="clb"/></r></p></e>
+    <e><re>[…;:,.\?!¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
     <e><p><l>pipe<s n="clb"/></l><r>pipe<s n="clb"/></r></p></e>
     <e><re>[±´&amp;\+`%@=\-"'·–]+</re><p><l><s n="punct"/></l><r><s n="punct"/></r></p></e>
     <e><re>[«\(‘“„]</re><p><l><s n="punct"/><s n="left"/></l><r><s n="punct"/><s n="left"/></r></p></e>
