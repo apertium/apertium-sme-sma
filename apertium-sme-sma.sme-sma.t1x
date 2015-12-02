@@ -79,6 +79,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
       <cat-item tags="vblex.*.der_nomact.n.*"/>
       <cat-item tags="vblex.*.der_nomag.n.*"/>
       <cat-item tags="adj.der_vuohta.n.*"/>

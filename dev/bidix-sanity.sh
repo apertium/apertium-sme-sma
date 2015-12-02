@@ -7,7 +7,7 @@ lang2=`echo $dir | cut -f2 -d'-'`
 gtdir=`echo $GTCORE | sed 's/\(gtcore\|core\)//g'`;
 analysator=$gtdir"/langs/"$lang2"/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol"
 
-lt-expand ../$dix | sed 's/\(<[^>]\+>\)\(<[^>]\+>\)\+/\1/g' | sed 's/:[><]:/:/g'  | grep -v ':\([[:punct:]]\|[[:space:]]\)' | grep -v -- '-<' | sort -u > /tmp/$dir.exp
+lt-expand ../$dix | sed 's/\(<[^>]\+>\)\(<[^>]\+>\)\+/\1/g' | sed 's/:[><]:/:/g'  | grep -v ':\([[:punct:]]\|[[:space:]]\)' | grep -v -- '-<' | grep -v '\/' | sort -u > /tmp/$dir.exp
 
 cat /tmp/$dir.exp | cut -f2- -d':' | cut -f1 -d'<' | hfst-proc -w $analysator > /tmp/$dir.a
 
