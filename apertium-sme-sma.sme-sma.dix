@@ -3,6 +3,7 @@
   <sdefs>
     <sdef n="n"/>
     <sdef n="num"/>
+    <sdef n="cm"/>
     <sdef n="po"/>
     <sdef n="pr"/>
     <sdef n="prn"/>
@@ -4645,7 +4646,8 @@
     <e><p><l>logget<s n="vblex"/><s n="tv"/></l><r>loggedh<s n="vblex"/><s n="tv"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
-    <e><re>[…;:,.\?!¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+    <e><re>[…;:.\?!¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+    <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
     <e><p><l>pipe<s n="clb"/></l><r>pipe<s n="clb"/></r></p></e>
     <e><re>[±´&amp;\+`%@=\-"'·–]+</re><p><l><s n="punct"/></l><r><s n="punct"/></r></p></e>
     <e><re>[«\(‘“„]</re><p><l><s n="punct"/><s n="left"/></l><r><s n="punct"/><s n="left"/></r></p></e>
