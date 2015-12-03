@@ -105,6 +105,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prn-dem">
       <cat-item tags="prn.dem.*"/>
     </def-cat>
+    <def-cat n="prn-itg">
+      <cat-item tags="prn.itg.*"/>
+    </def-cat>
     <def-cat n="prn-indef">
       <cat-item tags="prn.ind.*"/>
     </def-cat>
@@ -1075,6 +1078,35 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+
+
+    <rule comment="REGLA: pron-itg">
+      <pattern>
+        <pattern-item n="prn-itg"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="prn-itg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
 
