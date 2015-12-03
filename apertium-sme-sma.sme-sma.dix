@@ -64,15 +64,14 @@
 
     <sdef n="ord"/>
     <sdef n="attr"/>
-    <sdef n="prop"/>
     <sdef n="np"/>
-    <sdef n="plc"/>
-    <sdef n="mal"/>
-    <sdef n="fem"/>
-    <sdef n="sur"/>
-    <sdef n="org"/>
+    <sdef n="top"/>
+    <sdef n="m"/>
+    <sdef n="f"/>
 
-
+    <sdef n="sem_plc"/>
+    <sdef n="sem_sur"/>
+    <sdef n="sem_org"/>
     <sdef n="sem_mat"/>
     <sdef n="sem_semcon"/>
     <sdef n="sem_ctain"/>
@@ -113,11 +112,12 @@
     <sdef n="der_a"/>
 
     <!-- Punctuation -->
-    <sdef n="clb"/>
-    <sdef n="sent"/>
-    <sdef n="punct"/>
-    <sdef n="left"/>
-    <sdef n="right"/>
+    <sdef n="punct"   c="Punctuation"/>
+    <sdef n="sent"    c="Sentence boundary"/>
+    <sdef n="cm"      c="Comma"/>
+    <sdef n="guio"     c="Dash"/>
+    <sdef n="lquot"   c="Left quotation mark"/>
+    <sdef n="rquot"   c="Right quotation mark"/>
 
     <!-- Transfer -->
     <sdef n="ND"/>
@@ -4634,15 +4634,18 @@
     <e><p><l>logget<s n="vblex"/><s n="tv"/></l><r>loggedh<s n="vblex"/><s n="tv"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
-    <e><re>[…;:.\?!¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+    <e><re>[…;:.\?¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
     <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
-    <e><p><l>pipe<s n="clb"/></l><r>pipe<s n="clb"/></r></p></e>
-    <e><re>[±´&amp;\+`%@=\-"'·–]+</re><p><l><s n="punct"/></l><r><s n="punct"/></r></p></e>
-    <e><re>[«\(‘“„]</re><p><l><s n="punct"/><s n="left"/></l><r><s n="punct"/><s n="left"/></r></p></e>
-    <e><re>[»\)’”]</re><p><l><s n="punct"/><s n="right"/></l><r><s n="punct"/><s n="right"/></r></p></e>
+    <e><p><l>!<s n="sent"/></l><r>!<s n="sent"/></r></p></e>
+    <e><p><l>|<s n="sent"/></l><r>|<s n="sent"/></r></p></e>
+    <e><p><l>-<s n="guio"/></l><r>-<s n="guio"/></r></p></e>
+    <e><re>[±´&amp;\+`%@="'·–]+</re><p><l><s n="punct"/></l><r><s n="punct"/></r></p></e>
+    <e><re>[«\(‘“„]</re><p><l><s n="lquot"/></l><r><s n="lquot"/></r></p></e>
+    <e><re>[»\)’”]</re><p><l><s n="rquot"/></l><r><s n="rquot"/></r></p></e>
 
     <e><re>[0-9]+([., \-–]+[0-9]+)*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
     <e><re>[0-9]+([., \-–]+[0-9]+)*</re><p><l><s n="adj"/></l><r><s n="adj"/></r></p></e>
+
     <e><p><l>miljovdna<s n="num"/></l><r>millijovne<s n="num"/></r></p></e>
     <e><p><l>moadde<s n="num"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e>
 
@@ -15436,7 +15439,7 @@
 
 
 
-<e><p><l>bilidit earáid ovddas<s n="vblex"/></l><r>skilkedh mubpiej åvteste<s n="vblex"/></r></p></e>
+<e><p><l>bilidit<b/>earáid<b/>ovddas<s n="vblex"/></l><r>skilkedh<b/>mubpiej<b/>åvteste<s n="vblex"/></r></p></e>
 <e><p><l>iskat<s n="vblex"/></l><r>goerehtidh<s n="vblex"/></r></p></e>
 <e><p><l>čuollat<s n="vblex"/></l><r>tjoehpedh<s n="vblex"/></r></p></e>
 <e><p><l>geavvat<s n="vblex"/></l><r>vaasedh<s n="vblex"/></r></p></e>

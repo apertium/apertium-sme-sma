@@ -393,7 +393,7 @@
     <match lemma="jáhkkit" tags="v.tv.*"><select lemma="aerviedidh" tags="v.*"/></match>
   </rule>
   <rule weight="1.0">
-    <match lemma="Jáhkot" tags="n.prop.mal.*"><select lemma="Jåhha" tags="n.prop.*"/></match>
+    <match lemma="Jáhkot" tags="np.ant.m.*"><select lemma="Jåhha" tags="np.*"/></match>
   </rule>
   <rule weight="1.0">
     <match lemma="jápmit" tags="v.iv.*"><select lemma="jaemedh" tags="v.*"/></match>

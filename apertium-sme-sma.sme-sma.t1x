@@ -123,8 +123,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="prn.pers.*"/>
     </def-cat>
     <def-cat n="n-prop-pers">
-      <cat-item tags="n.prop.mal.*"/>
-      <cat-item tags="n.prop.fem.*"/>
+      <cat-item tags="np.ant.*"/>
     </def-cat>
     <def-cat n="verb-imprt">
       <cat-item tags="vblex.*.imprt.*"/>
