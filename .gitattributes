@@ -103,20 +103,21 @@ t/regression-tests -text
 t/update-latest -text
 t/wiki-tests -text
 texts/albert-sma.txt -text
-texts/albert-sma.txt.mt2 -text
-texts/albert-sma.txt_mt -text
-texts/albert-sma.txt_mt3 -text
 texts/albert-sme.txt -text
 texts/brosjyre_foresatte_np08_norsam.pdf -text svneol=unset#unset
 texts/brosjyre_foresatte_np08_sma.txt -text
-texts/brosjyre_foresatte_np08_sma_mt.txt -text
 texts/brosjyre_foresatte_np08_sme.txt -text
 texts/brosjyre_foresatte_np08_sorsam.pdf -text svneol=unset#unset
 texts/ebbasofie-s-sma.txt -text
 texts/ebbasofie-s-sme.txt -text
 texts/elga-sma.htm -text
+texts/eval/2013/albert-sma.txt.mt2 -text
+texts/eval/2013/albert-sma.txt_mt -text
+texts/eval/2013/albert-sma.txt_mt3 -text
+texts/eval/2013/brosjyre_foresatte_np08_sma_mt.txt -text
 texts/eval/2013/ebbasofie-s-sma.txt_mt -text
 texts/eval/2013/ebbasofie-s-sma.txt_mt2 -text
+texts/eval/2013/fjellheim-sma.txt_mt -text
 texts/eval/2013/fordypning_i_samisk_sma.txt_mt -text
 texts/eval/2013/jonar-sma.txt_mt -text
 texts/eval/2013/jonar-sma.txt_mt2 -text
@@ -125,6 +126,7 @@ texts/eval/2013/samediggi_sma.txt.mt1 -text
 texts/eval/2013/samediggi_sma.txt.mt2 -text
 texts/eval/2013/samediggi_sma.txt.mt3 -text
 texts/eval/2013/samediggidiedadus_samegiela_birra_2012.mt -text
+texts/eval/2013/schoolcorpus.mt -text
 texts/eval/2013/sma_schooltexts.txt.mt -text
 texts/eval/2013/sma_schooltexts.txt.mt10 -text
 texts/eval/2013/sma_schooltexts.txt.mt3 -text
@@ -133,10 +135,10 @@ texts/eval/2013/sma_schooltexts.txt.mt5 -text
 texts/eval/2013/sma_schooltexts.txt.mt8 -text
 texts/eval/2013/snasa-sma.txt_mt -text
 texts/eval/2013/story.sma.mt -text
+texts/eval/2013/tekstBsma_mt.txt -text
 texts/eval/2013/thorbj-sma.txt_mt -text
 texts/eval/2013/villmo-sma.txt_mt -text
 texts/fjellheim-sma.txt -text
-texts/fjellheim-sma.txt_mt -text
 texts/fjellheim-sme.txt -text
 texts/fordypning_i_samisk_sma.txt -text
 texts/fordypning_i_samisk_sme.txt -text
@@ -152,7 +154,6 @@ texts/samisk_som_andresprak_sma.txt -text
 texts/samisk_som_andresprak_sme.txt -text
 texts/samisk_som_forstesprak_sma.txt -text
 texts/samisk_som_forstesprak_sme.txt -text
-texts/schoolcorpus.mt -text
 texts/sme_schooltexts.txt -text
 texts/sme_schooltexts_an.txt -text
 texts/snasa-sma.txt -text
@@ -162,7 +163,6 @@ texts/tekstAsma_ref1.txt -text
 texts/tekstAsma_ref2.txt -text
 texts/tekstBnob.txt -text
 texts/tekstBsma_maja_red.txt -text
-texts/tekstBsma_mt.txt -text
 texts/tekstBsma_mtclose.txt -text
 texts/tekstBsma_ref1.txt -text
 texts/tekstBsma_ref2.txt -text
