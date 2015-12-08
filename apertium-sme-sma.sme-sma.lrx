@@ -822,13 +822,6 @@
        <match lemma="báhkka" tags="n.*"><select lemma="aeskie"/></match>
   </rule>
   
-   <rule weight="1.0">
-     <match tags = "num.*" />
-     <match lemma ="laetjedh">
-       <select lemma="seangkoe"/>
-       <select lemma="leahta"/>
-     </match>
-   </rule>
    
 <!--   seangkoem laedtjedh  = seaŋgga láhčit    
    leahtam laetjedh  = leahtam láhčit -->
@@ -838,27 +831,19 @@
        <select lemma="laetjedh"/>
      </match>
       <or>
-      <match lemma="seaŋga"/><match lemma="leahta"/><match lemma="boagán"/><match lemma="veasku"/>
+        <match lemma="seaŋga"/>
+        <match lemma="rađđeleahppi"/>
+        <match lemma="boagán"/>
+        <match lemma="veasku"/>
        </or>
    </rule>
    
    <rule weight="0.5">
      <match lemma="láhčit">
-       <select lemma="sjïehtesjidh"/>
+       <select lemma="sjïehtesjadtedh"/>
      </match>
    </rule> 
-   
-   <rule weight="0.5">
-     <match lemma="time">
-       select lemma ="sjïehtesjadtedh"/>
-     </match>
-   </rule>      
--->
 
-</rules>
-
-  
-  
   
   
   
