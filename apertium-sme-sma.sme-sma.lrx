@@ -844,7 +844,8 @@
      </match>
    </rule> 
 
-     <rule weight="0.5">
+<!--  
+    <rule weight="0.5">
      <match lemma="vuoras">
        <select lemma="voeres"/>
      </match>
@@ -858,6 +859,7 @@
      <match lemma="vuoras">
        <select lemma="båeries"/>
      </match>
-   </rule>   
+   </rule>     
+-->
   
 </rules> 
