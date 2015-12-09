@@ -844,8 +844,20 @@
      </match>
    </rule> 
 
-  
-  
-  
+     <rule weight="0.5">
+     <match lemma="vuoras">
+       <select lemma="voeres"/>
+     </match>
+      <or>
+        <match lemma="áhkku"/>
+        <match lemma="áddjá"/>
+       </or>
+   </rule>
+   
+   <rule weight="0.5">
+     <match lemma="vuoras">
+       <select lemma="båeries"/>
+     </match>
+   </rule>   
   
 </rules> 
