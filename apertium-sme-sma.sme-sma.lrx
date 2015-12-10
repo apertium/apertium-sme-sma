@@ -827,9 +827,7 @@
    leahtam laetjedh  = leahtam láhčit -->
    
      <rule weight="0.5">
-     <match lemma="láhčit">
-       <select lemma="laetjedh"/>
-     </match>
+     <match lemma="láhčit"><select lemma="laetjedh"/></match>
       <or>
         <match lemma="seaŋga"/>
         <match lemma="rađđeleahppi"/>
@@ -839,9 +837,7 @@
    </rule>
    
    <rule weight="0.5">
-     <match lemma="láhčit">
-       <select lemma="sjïehtesjadtedh"/>
-     </match>
+     <match lemma="láhčit"><select lemma="sjïehtesjadtedh"/></match>
    </rule> 
 
 <!--  
@@ -862,6 +858,7 @@
    </rule>     
 -->
  
+ <!-- borrat bårredh -->
     <rule weight="0.5">
      <match lemma="borrat">
        <select lemma="bårredh"/>
@@ -882,7 +879,7 @@
         <match lemma="beana"/>
         <match lemma="albbas"/>
        </or>
-     <match lemma="leat"/>
+     <match/>
      <match lemma="borrat">
        <select lemma="bårredh"/>
      </match>
@@ -892,15 +889,57 @@
         <match lemma="beana"/>
         <match lemma="albbas"/>
        </or>
-     <match lemma="ii"/>
-     <match lemma="leat"/>
+     <match/>
+     <match/>
+     <match lemma="borrat"><select lemma="bårredh"/></match>
+   </rule>
+
+
+ <!-- borrat gåatodh -->
+   
+     <rule weight="0.5">
      <match lemma="borrat">
-       <select lemma="bårredh"/>
+       <select lemma="gåatodh"/>
      </match>
    </rule>
+   
+   <rule weight="0.6">
+          <or>
+        <match lemma="heasta"/>
+        <match lemma="boazu"/>
+        <match lemma="miessi"/>
+        <match lemma="heargi"/>
+       </or>
+     <match lemma="borrat"><select lemma="gåatodh"/></match>
+   </rule>
+   <rule weight="0.6">
+      <or>
+        <match lemma="heasta"/>
+        <match lemma="boazu"/>
+        <match lemma="miessi"/>
+        <match lemma="heargi"/>
+     </or>
+     <match/>
+     <match lemma="borrat"><select lemma="gåatodh"/></match>
+   </rule>
+   <rule weight="0.6">
+      <or>
+        <match lemma="heasta"/>
+        <match lemma="boazu"/>
+        <match lemma="miessi"/>
+        <match lemma="heargi"/>
+     </or>
+     <match/>
+     <match/>
+     <match lemma="borrat"><select lemma="gåatodh"/></match>
+   </rule>
+   
+       <!-- borrat byöpmedidh -->
     <rule weight="1.0">
      <match lemma="borrat">
        <select lemma="byöpmedidh"/>
      </match>
    </rule> 
+   
+   
 </rules> 
