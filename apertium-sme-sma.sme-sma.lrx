@@ -861,5 +861,24 @@
      </match>
    </rule>     
 -->
-  
+ 
+    <rule weight="0.5">
+     <match lemma="borrat">
+       <select lemma="bårredh"/>
+     </match>
+   </rule>
+   <rule weight="0.6">
+          <or>
+        <match lemma="beana"/>
+        <match lemma="albbas"/>
+       </or>
+     <match lemma="borrat">
+       <select lemma="bårredh"/>
+     </match>
+   </rule>
+    <rule weight="1.0">
+     <match lemma="borrat">
+       <select lemma="byöpmedidh"/>
+     </match>
+   </rule> 
 </rules> 
