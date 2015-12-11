@@ -15474,6 +15474,13 @@
 <e><p><l>oidnot<s n="vblex"/></l><r>vååjnedh<s n="vblex"/></r></p></e>
 <e><p><l>huškut<s n="vblex"/></l><r>skajkelidh<s n="vblex"/></r></p></e>
 <e><p><l>vuoddját<s n="vblex"/></l><r>vuajajidh<s n="vblex"/></r></p></e>
+<e><p><l>viidánit<s n="vblex"/></l><r>væjranidh<s n="vblex"/></r></p></e>
+<e><p><l>rasttildit<s n="vblex"/></l><r>restiedidh<s n="vblex"/></r></p></e>
+<e><p><l>earáhuhttit<s n="vblex"/></l><r>jeatjahtehtedh<s n="vblex"/></r></p></e>
+<e><p><l>jávkadit<s n="vblex"/></l><r>nåhkehtidh<s n="vblex"/></r></p></e>
+<e><p><l>lahkonit<s n="vblex"/></l><r>geatskanidh<s n="vblex"/></r></p></e>
+<e><p><l>nahkehit<s n="vblex"/></l><r>tsagkedh<s n="vblex"/></r></p></e>
+
 
 <!-- Bad suggestions, remove next time round: 
 gávnnahit ::: voelestehtedh ::: vblex
@@ -15483,24 +15490,11 @@ gávnnahit ::: tjalmahtidh ::: vblex
 gávnnahit ::: mïerhkesjidh ::: vblex
 gávnnahit ::: mïerhkedh ::: vblex
 gávnnahit ::: voeredidh ::: vblex
-rasttildit ::: vaasedh ::: vblex
-rasttildit ::: dååjestalledh ::: vblex
-rasttildit ::: rastadehtedh ::: vblex
-rasttildit ::: håajpodh ::: vblex
 ásaiduvvat ::: veasastidh ::: vblex
 ásaiduvvat ::: orrijidh ::: vblex
 ásaiduvvat ::: hööltestidh ::: vblex
 ásaiduvvat ::: hööllestidh ::: vblex
 ásaiduvvat ::: veasoestidh ::: vblex
-viidánit ::: joevenidh ::: vblex
-viidánit ::: sarhkedh ::: vblex
-viidánit ::: saaseridh ::: vblex
-viidánit ::: bårranidh ::: vblex
-viidánit ::: stueriedidh ::: vblex
-viidánit ::: treekeldidh ::: vblex
-viidánit ::: saajenidh ::: vblex
-viidánit ::: jeananidh ::: vblex
-viidánit ::: haasenidh ::: vblex
 bilidit earáid ovddas ::: jalloedidh ::: vblex
 bilidit earáid ovddas ::: veajkodh ::: vblex
 bilidit earáid ovddas ::: heeptedidh ::: vblex
@@ -15511,9 +15505,6 @@ bilidit earáid ovddas ::: jarhpoedidh ::: vblex
 bilidit earáid ovddas ::: heerredidh ::: vblex
 bilidit earáid ovddas ::: aededh ::: vblex
 jienastit ::: tjoejedh ::: vblex
-lahkonit ::: geatskanidh ::: vblex
-lahkonit ::: geaktjamidh ::: vblex
-lahkonit ::: geaktsanidh ::: vblex
 jienádit ::: såårnedh ::: vblex
 fuolahit ::: gïetedidh ::: vblex
 fuolahit ::: sorkedh ::: vblex
@@ -15523,23 +15514,6 @@ bidjalit ::: såarhkodh ::: vblex
 iskat ::: kraanskodh ::: vblex
 iskat ::: aatskadidh ::: vblex
 iskat ::: voejhkelidh ::: vblex
-earáhuhttit ::: jarkelidh ::: vblex
-earáhuhttit ::: sjïehtesjidh ::: vblex
-earáhuhttit ::: mådtoestidh ::: vblex
-earáhuhttit ::: målsodh ::: vblex
-earáhuhttit ::: værhtodh ::: vblex
-earáhuhttit ::: varhtodh ::: vblex
-earáhuhttit ::: tjoehpedistedh ::: vblex
-earáhuhttit ::: varhtodidh ::: vblex
-earáhuhttit ::: laavkedehtedh ::: vblex
-čuollat ::: håasedh ::: vblex
-čuollat ::: tjurhkedh ::: vblex
-čuollat ::: tjaesjmedh ::: vblex
-čuollat ::: tsaepmedh ::: vblex
-čuollat ::: skajkelidh ::: vblex
-čuollat ::: tsealhkahtidh ::: vblex
-čuollat ::: slaamehtidh ::: vblex
-čuollat ::: tjetskedh ::: vblex
 billašuvvat ::: öölegidh ::: vblex
 billašuvvat ::: smalhtjaridh ::: vblex
 čugget ::: skööhtedh ::: vblex
@@ -15549,18 +15523,6 @@ billašuvvat ::: smalhtjaridh ::: vblex
 vuosttaldit ::: vuastalestedh ::: vblex
 muhttit ::: jarkelidh ::: vblex
 muhttit ::: jyötjedehtedh ::: vblex
-nahkehit ::: skööhtedh ::: vblex
-nahkehit ::: skorpedh ::: vblex
-nahkehit ::: tsaekedh ::: vblex
-nahkehit ::: tsagkedh ::: vblex
-nahkehit ::: tsaekiehtidh ::: vblex
-nahkehit ::: guddedh ::: vblex
-nahkehit ::: baskehtidh ::: vblex
-gárvodit ::: gaarvoehtidh ::: vblex
-gárvodit ::: noelehtidh ::: vblex
-gárvodit ::: gåårvedidh ::: vblex
-gárvodit ::: noljedidh ::: vblex
-gárvodit ::: nuljedidh ::: vblex
 šaddadit ::: jieliehtidh ::: vblex
 šaddadit ::: sedtedh ::: vblex
 šaddadit ::: reakadehtedh ::: vblex
@@ -15574,19 +15536,7 @@ huškut ::: tsaepmedh ::: vblex
 huškut ::: tsealhkahtidh ::: vblex
 huškut ::: tjetskedh ::: vblex
 geahčadit ::: vuejniestidh ::: vblex
-jávkadit ::: sjyjjedehtedh ::: vblex
-jávkadit ::: nåhkehtidh ::: vblex
-jávkadit ::: deehkehtidh ::: vblex
-jávkadit ::: strovhkesjidh ::: vblex
-jávkadit ::: gapsjedh ::: vblex
-jávkadit ::: gïerehtehtedh ::: vblex
-jávkadit ::: sjyjjehtehtedh ::: vblex
-jávkadit ::: jimhkelidh ::: vblex
-jávkadit ::: båarkadehtedh ::: vblex
-jávkadit ::: gajhkestehtedh ::: vblex
-jávkadit ::: gajhkesjidh ::: vblex
-jávkadit ::: gajhkedidh ::: vblex
- -->
+-->
 
 <e><p><l>máŋga<s n="adj"/></l><r>jeenje<s n="adj"/></r></p></e>
 <e><p><l>oppa<s n="adj"/></l><r>abpe<s n="adj"/></r></p></e>
