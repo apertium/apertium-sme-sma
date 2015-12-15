@@ -38,7 +38,7 @@ Rules: pron-pers, pron-refl, pron-rel, pron-dem, pron-indef,
 Section: Verbal groups:
 Rules: ii, conneg, ii conneg, verb-fin, leat-fin verb-prfprc,
        leat-fin adv verb-prfprc, verb-inf, verb-prfprc, verb-actio,
-       verb-imprt
+       verb-imp
 
 Section: Adjective groups:
 Rules:  adj
@@ -47,7 +47,7 @@ Section: Adverbial groups:
 Rules:  adv
 
 Section: Adpositions
-Rules: pr, po, cs, cc
+Rules: pr, post, cs, cc
 
 Section: Miscellaneous:
 Rules: sent
@@ -125,8 +125,8 @@ And then there are some categories like "month", with all the months.
     <def-cat n="n-prop-pers">
       <cat-item tags="np.ant.*"/>
     </def-cat>
-    <def-cat n="verb-imprt">
-      <cat-item tags="vblex.*.imprt.*"/>
+    <def-cat n="verb-imp">
+      <cat-item tags="vblex.*.imp.*"/>
     </def-cat>
     <def-cat n="verb-inf">
       <cat-item tags="vblex.*.inf.*"/>
@@ -173,9 +173,9 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="pr"/>
       <cat-item tags="pr.*"/>
     </def-cat>
-    <def-cat n="po">
-      <cat-item tags="po"/>
-      <cat-item tags="po.*"/>
+    <def-cat n="post">
+      <cat-item tags="post"/>
+      <cat-item tags="post.*"/>
     </def-cat>
     <def-cat n="adv">
       <cat-item tags="adv"/>
@@ -281,7 +281,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="pot"/>
        <attr-item tags="indic"/>
        <attr-item tags="cond"/>
-       <attr-item tags="imprt"/>
+       <attr-item tags="imp"/>
     </def-attr>
 
     <def-attr n="a_nbr">
@@ -1793,16 +1793,16 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: verb-imprt">
+    <rule comment="REGLA: verb-imp">
       <pattern>
-        <pattern-item n="verb-imprt"/>
+        <pattern-item n="verb-imp"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="imprt" case="caseFirstWord">
+          <chunk name="imp" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1894,16 +1894,16 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: po">
+    <rule comment="REGLA: post">
       <pattern>
-        <pattern-item n="po"/>
+        <pattern-item n="post"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="po" case="caseFirstWord">
+          <chunk name="post" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="POST"/></tag>
               <tag><var n="synlabel"/></tag>
