@@ -1280,7 +1280,10 @@
     <e><p><l>juovlamánnu<s n="n"/></l><r>goeve<s n="n"/></r></p><par n="n"/></e>
     <e><p><l>juovlaruohtta<s n="n"/></l><r>stroehte<s n="n"/></r></p><par n="n"/></e>
     <e><p><l>juovlaskeaŋka<s n="n"/></l><r>jåvlevadtese<s n="n"/></r></p><par n="n"/></e>
+
     <e><p><l>juovlastállu<s n="n"/></l><r>jåvleaajja<s n="n"/></r></p><par n="n"/></e>
+      
+    <e><p><l>stállu<s n="n"/></l><r>staaloe<s n="n"/></r></p><par n="n"/></e> 
     <e><p><l>juovllat<s n="n"/><s n="pl"/></l><r>jåvle<s n="n"/></r></p></e>
     <e><p><l>juovva<s n="n"/></l><r>aarege<s n="n"/></r></p><par n="n"/></e>
     <e><p><l>jurdda<s n="n"/></l><r>åssjalommes<s n="n"/></r></p><par n="n"/></e>
@@ -15421,11 +15424,15 @@
     <e><p><l>Hápmir<s n="np"/></l><r>Hammarøy<s n="np"/></r></p></e>
     <e><p><l>Eurohpá<s n="np"/></l><r>Europa<s n="np"/></r></p></e>
     <e><p><l>Gáisi<s n="np"/></l><r>Gáisi<s n="np"/></r></p></e>
-    <e><p><l>Várjjat<s n="np"/></l><r>Varanger<s n="np"/></r></p></e>
-    <e><p><l>Ástávuotna<s n="np"/></l><r>Astafjord<s n="np"/></r></p></e>
-    <e><p><l>Ájluokta<s n="np"/></l><r>Drag<s n="np"/></r></p></e>
+    <e><p><l>Várjjat<s n="np"/></l><r>Várjjat<s n="np"/></r></p></e>
+    <e><p><l>Ástávuotna<s n="np"/></l><r>Ástávuotna<s n="np"/></r></p></e>
+    <e><p><l>Ájluokta<s n="np"/></l><r>Ájluokta<s n="np"/></r></p></e>
     <e><p><l>Davviriikkat<s n="np"/></l><r>Noerhtelaanth<s n="np"/></r></p></e>
     <e><p><l>Biertavárri<s n="np"/></l><r>Birtavarre<s n="np"/></r></p></e>
+    <e><p><l>Bådåddjo<s n="np"/></l><r>Bådåddjo<s n="np"/></r></p></e>
+      
+      
+      <!-- Jeg tror vi bare skal oversette propernouns fra samisk til samisk. dvs. når det ikke finnes en sörsamisk navn for navnet, settes usme.  -->
 <!--
     <e><p><l> <s n="np"/></l><r> <s n="np"/></r></p></e>
     <e><p><l> <s n="np"/></l><r> <s n="np"/></r></p></e>
@@ -15435,9 +15442,6 @@
     <e><p><l> <s n="np"/></l><r> <s n="np"/></r></p></e>
     <e><p><l> <s n="np"/></l><r> <s n="np"/></r></p></e>
 -->
-
-
-
 
 <e><p><l>bilidit<b/>earáid<b/>ovddas<s n="vblex"/></l><r>skilkedh<b/>mubpiej<b/>åvteste<s n="vblex"/></r></p></e>
 <e><p><l>iskat<s n="vblex"/></l><r>goerehtidh<s n="vblex"/></r></p></e>
@@ -15721,14 +15725,19 @@ guoibmái ::: vietseles ::: a
       
 <e><p><l>hábmen<s n="n"/></l><r>hammoehtimmie<s n="n"/></r></p></e>
 
+<e><p><l>arvevuovdi<s n="n"/></l><r>såafoe<s n="n"/></r></p></e>
+      
+<e><p><l>lojalitehta<s n="n"/></l><r>lojaliteete<s n="n"/></r></p></e>
+<e><p><l>váhnenpára<s n="n"/></l><r>eejhtegh<s n="n"/></r></p></e>
+
+
+
+      
 <e><p><l>ruohtas<s n="n"/></l><r>maadtoe<s n="n"/></r></p></e>
 <e><p><l>festivála<s n="n"/></l><r>festivaale<s n="n"/></r></p></e>
 
 <e><p><l>ráŋggáštus<s n="n"/></l><r>bysvehts<s n="n"/></r></p></e>
 
-      
-
-      
 
 <e><p><l>ovttaoaivilis<s n="adj"/></l><r>sïemes<s n="adj"/></r></p></e>
 <e><p><l>bivnnuhis<s n="adj"/></l><r>byögkeles<s n="adj"/></r></p></e>
@@ -15739,8 +15748,11 @@ guoibmái ::: vietseles ::: a
 
 <e><p><l>várra<s n="adv"/></l><r>kaanne<s n="adv"/></r></p></e>
   
+
+      
       
 <!--
+gaskaneaset
 <e><p><l>girjjis<s n="n"/></l><r>girjjis<s n="n"/></r></p></e>
 <e><p><l>barggolašvuohta<s n="n"/></l><r>barggolašvuohta<s n="n"/></r></p></e>
 <e><p><l>eallásit<s n="vblex"/></l><r>eallásit<s n="vblex"/></r></p></e>
@@ -15755,42 +15767,14 @@ guoibmái ::: vietseles ::: a
 meannu ::: darjomes ::: n
 soahpameahttunvuohta ::: dåaroe ::: n
 fievrrideapmi ::: vuelkeme ::: n
-
 gieldda ::: åvtebåvroe ::: n
 gieldda ::: aeredsbåvroe ::: n
-
-
-
-
-
 eanaspábba ::: laante ::: n
 eanaspábba ::: mueltie ::: n
-
-
-
 doallu ::: darjomes ::: n
-
-vuođul ::: maadthlaage ::: n
-vuođul ::: eabnoenlaage ::: n
-vuođul ::: fåantoelaage ::: n
-vuođul ::: eabnoelaage ::: n
-
-fylkkadiggeválga ::: fylhkedigkieveeljeme ::: n
-fylkkadiggeválga ::: fylhkedigkienveeljeme ::: n
-fylkkadiggeválga ::: fylhkendigkieveeljeme ::: n
-
-arvevuovdi ::: ebrienskoeke ::: n
-arvevuovdi ::: ebrieskååve ::: n
-arvevuovdi ::: ebrieskoeke ::: n
-arvevuovdi ::: ebrieskåajje ::: n
-arvevuovdi ::: ebrieskåake ::: n
-
+vuođul ::: eabnoelaage ::: 
 davvinuorta ::: noerhtenluvlie ::: n
 davvinuorta ::: noerhteluvlie ::: n
-
-
-
-
  -->
 </section>
 </dictionary>
