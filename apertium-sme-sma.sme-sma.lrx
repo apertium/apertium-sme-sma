@@ -867,6 +867,7 @@
    
    <rule weight="0.6">
           <or>
+        <match lemma="stállu"/>
         <match lemma="beana"/>
         <match lemma="albbas"/>
        </or>
@@ -876,6 +877,7 @@
    </rule>
    <rule weight="0.6">
           <or>
+        <match lemma="stállu"/>
         <match lemma="beana"/>
         <match lemma="albbas"/>
        </or>
@@ -886,6 +888,7 @@
    </rule>
    <rule weight="0.6">
           <or>
+        <match lemma="stállu"/>
         <match lemma="beana"/>
         <match lemma="albbas"/>
        </or>
