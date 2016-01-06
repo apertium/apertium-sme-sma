@@ -334,6 +334,10 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="der_lidh"/>
        <attr-item tags="der_d"/>
        <attr-item tags="der_didh"/>
+	   
+       <attr-item tags="der_st"/>
+       <attr-item tags="der_stidh"/>
+	   
     </def-attr>
 
     <def-attr n="a_foc">
@@ -625,6 +629,12 @@ And then there are some categories like "month", with all the months.
 
     <def-macro n="convert-deriv1" npar="1">
       <choose>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_st"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_stidh"/></let>
+        </when>
         <when>
           <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_at"/></equal>
