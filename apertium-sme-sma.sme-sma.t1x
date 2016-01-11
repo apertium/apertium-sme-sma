@@ -70,6 +70,8 @@ And then there are some categories like "month", with all the months.
   <section-def-cats>
     <def-cat n="n-cmp">
       <cat-item tags="n.cmp"/>
+      <cat-item tags="n.*.*.cmp.guio"/>
+      <cat-item tags="n.*.*.*.cmp.guio"/>
       <cat-item tags="n.*.cmp"/>
       <cat-item tags="n.*.*.cmp"/>
       <cat-item tags="n.*.*.*.cmp"/>
@@ -412,6 +414,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="@-FOBJ→"/>
        <attr-item tags="@-F←OBJ"/>
        <attr-item tags="@-F←ADVL"/>
+       <attr-item tags="@VOC"/>
     </def-attr>
 
 
