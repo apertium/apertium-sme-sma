@@ -18,6 +18,7 @@
 /apertium-sme-sma.sme-sma.t4x -text svneol=unset#text/plain
 /apertium-sme-sma.sme-sma.t5x -text svneol=unset#text/plain
 /autogen.sh -text
+/check_mt-otpt.py -text
 /configure.ac -text
 dev/analyse-all-stages.sh -text
 dev/apertium-sme-sma.sme-sma.t1x.BACKUP -text
