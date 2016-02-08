@@ -8,11 +8,11 @@
   </rule>
   
   <rule weight="1.0">
-       <match lemma="son" tags="pron.*"><select lemma="dïhte" tags="pron.*"/></match>
+       <match lemma="son" tags="prn.*"><select lemma="dïhte" tags="prn.*"/></match>
   </rule>
   
   <rule weight="1.0">
-       <match lemma="son" tags="pron.pers.du3.*"><select lemma="dah guaktah" tags="pron.*"/></match>
+       <match lemma="son" tags="prn.pers.du3.*"><select lemma="dah guaktah" tags="prn.*"/></match>
   </rule>
 
   <rule weight="1.0">
