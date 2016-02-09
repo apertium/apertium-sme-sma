@@ -43,10 +43,8 @@ dev/generation-test.sh -text
 dev/lemmatizingcommand.txt -text
 dev/missing_freq_a -text
 dev/missing_freq_adv -text
-dev/missing_freq_n -text
 dev/missing_freq_n_cmp -text
 dev/missing_freq_n_nocmp -text
-dev/missing_freq_v -text
 dev/missing_freq_v_der -text
 dev/missing_freq_v_noder -text
 dev/missing_from_fst_samediggediedahus.txt -text
