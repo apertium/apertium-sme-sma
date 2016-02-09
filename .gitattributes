@@ -42,6 +42,8 @@ dev/generation-schoolcorpus-errors.sh -text
 dev/generation-test.sh -text
 dev/lemmatizingcommand.txt -text
 dev/missing_freq_a -text
+dev/missing_freq_a_cmp -text
+dev/missing_freq_a_nocmp -text
 dev/missing_freq_adv -text
 dev/missing_freq_n_cmp -text
 dev/missing_freq_n_nocmp -text
