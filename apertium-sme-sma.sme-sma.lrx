@@ -857,6 +857,33 @@
      </match>
    </rule>     
 -->
+<!-- ckommdfs  --> 
+   <rule weight="1.0">
+     <match lemma="čuovvut">
+       <select lemma="dåeriedidh"/>
+     </match>
+   </rule>     
+ 
+   <rule weight="0.5">
+     <match lemma="čuovvut">
+       <select lemma="seatadidh"/>
+     </match>
+   </rule>     
+ 
+   <rule weight="0.6">
+     <match tags="sem_rule"/>
+     <match lemma="čuovvut">
+       <select lemma="seatadidh"/>
+     </match>
+   </rule>     
+ 
+   <rule weight="0.6">
+     <match tags="sem_rule"/>
+     <match/>
+    <match lemma="čuovvut">
+       <select lemma="seatadidh"/>
+     </match>
+   </rule>     
  
  <!-- borrat bårredh -->
     <rule weight="0.5">
