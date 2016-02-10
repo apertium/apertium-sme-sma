@@ -855,7 +855,45 @@
      <match lemma="vuoras">
        <select lemma="båeries"/>
      </match>
-   </rule>     
+   </rule> 
+  
+   -->
+   <!-- ja as jïh and gonnoeh/gon  = eadni ja áhčči => tjidtjie gonnoeh aehtjieh-->
+   
+ <rule weight="1.0">
+   <match lemma="ja">
+     <select lemma="jïh"/>
+   </match>
+ </rule>     
+
+ <rule weight="0.5">
+   <match lemma="ja">
+     <select lemma="gonnoeh"/>
+   </match>
+ </rule>     
+
+ <rule weight="0.6">
+   <match lemma="eadni"/>
+   <match lemma="ja">
+     <select lemma="gonnoeh"/>
+   </match>
+   <match lemma="áhčči"/>
+ </rule>     
+
+ <rule weight="0.6">
+   <match lemma="áhkku"/>
+   <match lemma="ja">
+     <select lemma="gonnoeh"/>
+   </match>
+   <match lemma="áddjá"/>
+ </rule>     
+
+   
+
+   <!-- vaj as jallh and vuj  -->
+      
+   
+       
 -->
 <!-- čuovvut as dåeriedidh or seatadidh  --> 
    <rule weight="1.0">
