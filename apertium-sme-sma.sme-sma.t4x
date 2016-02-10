@@ -205,7 +205,7 @@ And then there are some categories like "month", with all the months.
   </section-def-vars>
 
   <section-rules>
-    <rule> <!--inessive instead of elative in habitive constructions -->
+    <rule> <!--genitiv instead of elative in habitive constructions -->
       <pattern>
         <pattern-item n="SN"/>
         <pattern-item n="Vcop"/>
@@ -221,7 +221,7 @@ And then there are some categories like "month", with all the months.
             </test>
             <let>
               <clip pos="1" part="case"/>
-              <lit-tag v="ine"/>
+              <lit-tag v="gen"/>
             </let>
           </when>
         </choose>
