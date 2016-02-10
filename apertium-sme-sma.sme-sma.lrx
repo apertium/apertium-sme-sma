@@ -871,14 +871,20 @@
    </rule>     
  
    <rule weight="0.6">
-     <match tags="n.sem_rule.*"/>
+   <or>
+     <match lemma="láhka"/>
+	 <match lemma="njuolggadus"/>
+	 </or>
      <match lemma="čuovvut">
        <select lemma="seatadidh"/>
      </match>
    </rule>     
  
    <rule weight="0.6">
-     <match tags="n.sem_rule.*"/>
+   <or>
+     <match lemma="láhka"/>
+	 <match lemma="njuolggadus"/>
+	 </or>
      <match/>
     <match lemma="čuovvut">
        <select lemma="seatadidh"/>
