@@ -84,7 +84,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="np.*"/>
       <cat-item tags="vblex.*.der_nomact.n.*"/>
       <cat-item tags="vblex.*.der_nomag.n.*"/>
-      <cat-item tags="adj.der_vuohta.n.*"/>
+      <cat-item tags="adj.der_vuota.n.*"/>
     </def-cat>
     <def-cat n="verb_to_adv">
       <cat-item lemma="oassálastit" tags="vblex.*"/>
@@ -141,14 +141,14 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.inf.*"/>
       <cat-item tags="vblex.*.der_l.v.inf.*"/>
       <cat-item tags="vblex.*.der_d.v.inf.*"/>
-      <cat-item tags="vblex.*.der_ahtti.v.inf.*"/>
-      <cat-item tags="vblex.*.der_ahtti.v.*.inf.*"/>
-      <cat-item tags="vblex.*.der_goahti.v.inf.*"/>
+      <cat-item tags="vblex.*.der_caus.v.inf.*"/>
+      <cat-item tags="vblex.*.der_caus.v.*.inf.*"/>
+      <cat-item tags="vblex.*.der_inchl.v.inf.*"/>
     </def-cat>
     <def-cat n="verb-prfprc">
       <cat-item tags="vblex.*.prfprc.*"/>
-      <cat-item tags="vblex.*.der_goahti.v.prfprc.*"/>
-      <cat-item tags="vblex.*.der_goahti.v.prfprc"/>
+      <cat-item tags="vblex.*.der_inchl.v.prfprc.*"/>
+      <cat-item tags="vblex.*.der_inchl.v.prfprc"/>
     </def-cat>
     <def-cat n="leat-fin">
       <cat-item lemma="leat" tags="vblex.*.indic.*"/>
@@ -166,9 +166,9 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.indic.*"/>
       <cat-item tags="vblex.*.cond.*"/>
       <cat-item tags="vblex.*.pot.*"/>
-      <cat-item tags="vblex.*.der_goahti.vblex.indic.*"/>
-      <cat-item tags="vblex.*.der_goahti.vblex.cond.*"/>
-      <cat-item tags="vblex.*.der_goahti.vblex.pot.*"/>
+      <cat-item tags="vblex.*.der_inchl.vblex.indic.*"/>
+      <cat-item tags="vblex.*.der_inchl.vblex.cond.*"/>
+      <cat-item tags="vblex.*.der_inchl.vblex.pot.*"/>
     </def-cat>
     <def-cat n="cnjcoo">
       <cat-item tags="cnjcoo"/>
@@ -220,8 +220,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="vblex.tv.der_nomag.n"/>
       <attr-item tags="vblex.iv.der_nomact.n"/>
       <attr-item tags="vblex.tv.der_nomact.n"/>
-      <attr-item tags="adj.der_vuohta.n"/>
-      <attr-item tags="adj.der_voete.n"/>
+      <attr-item tags="adj.der_vuota.n"/>
     </def-attr>
 
     <def-attr n="a_pron">
@@ -257,8 +256,8 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_verb">
        <attr-item tags="vblex"/>
-       <attr-item tags="vblex.iv.der_goahti.v"/>
-       <attr-item tags="vblex.tv.der_goahti.v"/>
+       <attr-item tags="vblex.iv.der_inchl.v"/>
+       <attr-item tags="vblex.tv.der_inchl.v"/>
     </def-attr>
 
     <def-attr n="a_trans">
@@ -332,22 +331,11 @@ And then there are some categories like "month", with all the months.
     <def-attr n="a_deriv">
        <attr-item tags="der_at"/>
        <attr-item tags="der_laakan"/>
-       <attr-item tags="der_goahti"/>
-       <attr-item tags="der_gåete"/>
        <attr-item tags="der_l"/>
-       <attr-item tags="der_ahtti"/>
+       <attr-item tags="der_caus"/>
        <attr-item tags="der_ahtje"/>
-       <attr-item tags="der_vuohta"/>
-       <attr-item tags="der_voete"/>
-       <attr-item tags="attr.der_voete"/>
-       <attr-item tags="der_lidh"/>
        <attr-item tags="der_d"/>
-       <attr-item tags="der_didh"/>
-	   
        <attr-item tags="der_st"/>
-       <attr-item tags="der_stidh"/>
-       <attr-item tags="der_alla"/>
-       <attr-item tags="der_alle"/>
 	   
     </def-attr>
 
@@ -643,27 +631,9 @@ And then there are some categories like "month", with all the months.
       <choose>  
         <when>
           <test>
-               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_alla"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_alle"/></let>
-        </when>		
-        <when>
-          <test>
-               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_st"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_stidh"/></let>
-        </when>
-        <when>
-          <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_at"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_laakan"/></let>
-        </when>
-        <when>
-          <test>
-               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_vuohta"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="attr.der_voete"/></let> <!-- FIXME: Why 'attr' ? :( ~FMT -->
         </when>
       </choose>
     </def-macro>
@@ -967,27 +937,9 @@ And then there are some categories like "month", with all the months.
       <choose>
         <when>
           <test>
-               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_d"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_didh"/></let>
-        </when>
-        <when>
-          <test>
-               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_l"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_lidh"/></let>
-        </when>
-        <when>
-          <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_ahtti"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ahtje"/></let>
-        </when>
-        <when>
-          <test>
-               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_goahti"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_gåete"/></let>
         </when>
       </choose>
     </def-macro>
