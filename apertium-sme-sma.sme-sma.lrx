@@ -7,11 +7,11 @@
        <match lemma="boahtit" tags="v.*"><select lemma="båetedh" tags="v.*"/></match>
   </rule>
   
-  <rule weight="1.0">
+  <rule weight="1.1">
        <match lemma="son" tags="prn.*"><select lemma="dïhte" tags="prn.*"/></match>
   </rule>
   
-  <rule weight="1.0">
+  <rule weight="1.1">
        <match lemma="son" tags="prn.pers.du3.*"><select lemma="dah guaktah" tags="prn.*"/></match>
   </rule>
 
@@ -349,10 +349,10 @@
        <match lemma="geallat" tags="v.tv.*"><select lemma="sohkesjidh" tags="v.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="gii" tags="pron.itg.*"><select lemma="gie" tags="pron.itg.*"/></match>
+       <match lemma="gii" tags="prn.itg.*"><select lemma="gie" tags="prn.itg.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="gii" tags="pron.rel.*"><select lemma="gie" tags="pron.rel.*"/></match>
+       <match lemma="gii" tags="prn.rel.*"><select lemma="gie" tags="prn.rel.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="giitit" tags="v.tv.*"><select lemma="gijhtedh" tags="v.*"/></match>
@@ -562,13 +562,13 @@
        <match lemma="miella" tags="n.*"><select lemma="mïele" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="mii" tags="pron.itg.*"><select lemma="mij" tags="pron.itg.*"/></match>
+       <match lemma="mii" tags="prn.itg.*"><select lemma="mij" tags="prn.itg.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="mii" tags="pron.pers.*"><select lemma="manne" tags="pron.pers.*"/></match>
+       <match lemma="mii" tags="prn.pers.*"><select lemma="manne" tags="prn.pers.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="mii" tags="pron.rel.*"><select lemma="mij" tags="pron.rel.*"/></match>
+       <match lemma="mii" tags="prn.rel.*"><select lemma="mij" tags="prn.rel.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="moalla" tags="n.*"><select lemma="aamhtese" tags="n.*"/></match>
