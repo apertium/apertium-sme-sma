@@ -86,7 +86,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="nominative">
-      <cat-item tags="n.@←SPRED"/>
+      <cat-item tags="*.@←SPRED"/>
     </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
