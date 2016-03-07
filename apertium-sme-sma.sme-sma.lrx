@@ -1020,4 +1020,37 @@
    </rule> 
    
    
+    <rule weight="1.0">
+   <match lemma="ge">
+     <select lemma="aaj"/>
+   </match>
+ </rule>     
+
+       <rule weight="0.5">
+   <match lemma="ge">
+     <select lemma="gænnah"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii"/>
+   <match lemma="ge">
+     <select lemma="gænnah"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii"/>
+   <match />
+   <match lemma="ge">
+     <select lemma="gænnah"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii"/>
+   <match />
+   <match />
+   <match lemma="ge">
+     <select lemma="gænnah"/>
+   </match>
+ </rule>     
+
 </rules> 
