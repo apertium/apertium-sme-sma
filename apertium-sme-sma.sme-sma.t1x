@@ -85,7 +85,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adv.*"/>
       <cat-item tags="adj.*"/>
     </def-cat>
-    <def-cat n="nominative">
+    <def-cat n="subpred">
       <cat-item tags="*.@←SPRED"/>
     </def-cat>
     <def-cat n="n">
@@ -164,7 +164,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="leat" tags="*.@-FAUXV"/>
     </def-cat>
     <def-cat n="leat-main">
-      <cat-item lemma="leat" tags="*.@+FMAINV"/>
+      <cat-item lemma="leat" tags="vblex.*.*.pres.*.*.@+FMAINV"/>
       <cat-item lemma="leat" tags="*.@-FMAINV"/>
     </def-cat>
     <def-cat n="ii">
@@ -185,6 +185,10 @@ And then there are some categories like "month", with all the months.
     <def-cat n="cnjcoo">
       <cat-item tags="cnjcoo"/>
       <cat-item tags="cnjcoo.*"/>
+    </def-cat>
+    <def-cat n="ahte">
+      <cat-item lemma="ahte" tags="cnjsub"/>
+      <cat-item lemma="ahte" tags="cnjsub.*"/>
     </def-cat>
     <def-cat n="cnjsub">
       <cat-item tags="cnjsub"/>
@@ -1653,6 +1657,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+
+
     <rule comment="REGLA: verb-fin">
       <pattern>
         <pattern-item n="verb-fin"/>
@@ -1751,10 +1757,10 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-    <rule comment="REGLA: leat-main nominative">
+    <rule comment="REGLA: leat-main subpred">
       <pattern>
         <pattern-item n="leat-main"/>
-        <pattern-item n="nominative"/>
+        <pattern-item n="subpred"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst2">
@@ -1781,11 +1787,11 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: leat-main nominative">
+    <rule comment="REGLA: leat-main subpred">
       <pattern>
         <pattern-item n="leat-main"/>
         <pattern-item n="adj"/>
-        <pattern-item n="nominative"/>
+        <pattern-item n="subpred"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst2">
@@ -2022,6 +2028,28 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Conjunctions -->
 
+    <rule comment="REGLA: ahte">
+      <pattern>
+        <pattern-item n="ahte"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="ahte" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="cnjsub"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
     <rule comment="REGLA: cs">
       <pattern>
         <pattern-item n="cnjsub"/>

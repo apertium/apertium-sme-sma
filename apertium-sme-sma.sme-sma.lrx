@@ -1052,5 +1052,25 @@
      <select lemma="gænnah"/>
    </match>
  </rule>     
+    <rule weight="1.0">
+   <match lemma="buorre">
+     <select lemma="buerie" tags="*.@→N"/>
+   </match>
+ </rule>     
+
+
+       <rule weight="0.5">
+   <match lemma="buorre">
+     <select lemma="hijven" tags="adv.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="dat"/>
+   <match lemma="leat"/>
+   <match lemma="buorre" tags="adj.*.*.*.@←SPRED">
+     <select lemma="hijven" tags="adv.*"/>
+   </match>
+ </rule>     
+
 
 </rules> 

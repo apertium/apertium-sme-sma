@@ -65,14 +65,23 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SN.@SUBJ→.*"/>
         <cat-item tags="SN.@←SUBJ.*"/>
     </def-cat>
+    <def-cat n="SN_Subj_r">
+        <cat-item tags="SN.@SUBJ→.*"/>
+    </def-cat>
 
     <def-cat n="SN_Obj">
         <cat-item tags="SN.@OBJ→.*"/>
         <cat-item tags="SN.@←OBJ.*"/>
     </def-cat>
+    <def-cat n="SN_Obj_l">
+        <cat-item tags="SN.@←OBJ.*"/>
+    </def-cat>
 
-    <def-cat n="SN_Pr">
-        <cat-item tags="SN.@←ADVL.*"/>
+
+
+    <def-cat n="SN_Po">
+        <cat-item tags="POST.@←ADVL.*"/>
+        <cat-item tags="POST.@←ADVL"/>
     </def-cat>
 
     <def-cat n="SN_Advl">
@@ -84,7 +93,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SN.@ADVL.*"/>
     </def-cat>
 
-    <def-cat n="SN_Po">
+    <def-cat n="SN_Po_compl">
         <cat-item tags="SN.@→P.*"/>
     </def-cat>
 
@@ -101,6 +110,11 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.*.@+FMAINV.*"/>
         <cat-item tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
+
+    <def-cat n="iiverb">
+        <cat-item lemma="ii" tags="SV.@+FAUXV"/>
+    </def-cat>
+
 
     <def-cat n="FAuxV">
         <cat-item tags="SV.@+FAUXV"/>
@@ -123,7 +137,13 @@ And then there are some categories like "month", with all the months.
     <def-cat n="CNP">
         <cat-item tags="CC.@CNP"/>
     </def-cat>
+    <def-cat n="ahte">
+        <cat-item lemma="ahte" tags="cnjsub.@CVP"/>
+    </def-cat>
 
+    <def-cat n="prn-dem">
+        <cat-item lemma="prn-dem" tags="SN.@SUBJ→.*"/>
+    </def-cat>
     <def-cat n="Vcop">
         <cat-item lemma="copula" tags="SV"/>
         <cat-item lemma="copula" tags="SV.*"/>
@@ -143,6 +163,9 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="Pr"/>
         <cat-item tags="Po.*"/>
         <cat-item tags="Po"/>
+    </def-cat>
+    <def-cat n="ADV">
+        <cat-item tags="ADV.@ADVL→"/>
     </def-cat>
 
 
@@ -242,6 +265,25 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+
+ <rule> <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
+      <pattern>
+        <pattern-item n="ahte"/>
+        <pattern-item n="prn-dem"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
  <rule> <!--inessive instead of elative before inessive adverbs -->
       <pattern>
@@ -438,7 +480,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="SN_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj"/>
+        <pattern-item n="SN_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -454,6 +496,76 @@ And then there are some categories like "month", with all the months.
             <clip pos="3" part="tags"/>
             <clip pos="3" part="chcontent"/>
             <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule> <!--SVO becomes SOV, Daenbiejjien gærjam tjaaleme. -->
+      <pattern>
+        <pattern-item n="ADV"/>
+        <pattern-item n="FMainV"/>
+        <pattern-item n="SN_Obj_l"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule> <!--SVO becomes SOV, Odne čálán dálu birra.. -->
+      <pattern>
+        <pattern-item n="ADV"/>
+        <pattern-item n="FMainV"/>
+        <pattern-item n="SN_Po_compl"/>
+        <pattern-item n="SN_Po"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="lemh"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
+            <clip pos="4" part="lemq"/>
           </chunk>
           <b pos="2"/>
         <chunk>
@@ -502,7 +614,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="IMainV"/>
-        <pattern-item n="SN_Obj"/>
+        <pattern-item n="SN_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -537,7 +649,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="Pcle"/>
         <pattern-item n="SN_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj"/>
+        <pattern-item n="SN_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -584,7 +696,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="FAuxV"/>
         <pattern-item n="Pcle"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj"/>
+        <pattern-item n="SN_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -623,7 +735,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="SN_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj"/>
+        <pattern-item n="SN_Obj_l"/>
         <pattern-item n="CC"/>
       </pattern>
       <action>
@@ -691,7 +803,30 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule> <!--VA becomes AV -->
+     <rule> <!-- mun in - im manne -->
+      <pattern>
+        <pattern-item n="SN_Subj_r"/>
+        <pattern-item n="iiverb"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   <rule> <!--VA becomes AV -->
       <pattern>
         <pattern-item n="IMainV"/>
         <pattern-item n="SN_Advl"/>
