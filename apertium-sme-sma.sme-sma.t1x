@@ -79,6 +79,15 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_nomact.n.*.cmp"/>
       <cat-item tags="vblex.*.der_nomag.n.*.cmp"/>
     </def-cat>
+    <def-cat n="prfprcword">
+      <cat-item tags="*.prfprc.*"/>
+      <cat-item tags="n.*"/>
+      <cat-item tags="adv.*"/>
+      <cat-item tags="adj.*"/>
+    </def-cat>
+    <def-cat n="nominative">
+      <cat-item tags="n.@←SPRED"/>
+    </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
       <cat-item tags="np.*"/>
@@ -150,10 +159,13 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_inchl.v.prfprc.*"/>
       <cat-item tags="vblex.*.der_inchl.v.prfprc"/>
     </def-cat>
-    <def-cat n="leat-fin">
-      <cat-item lemma="leat" tags="vblex.*.indic.*"/>
-      <cat-item lemma="leat" tags="vblex.*.cond.*"/>
-      <cat-item lemma="leat" tags="vblex.*.pot.*"/>
+    <def-cat n="leat-aux">
+      <cat-item lemma="leat" tags="*.@+FAUXV"/>
+      <cat-item lemma="leat" tags="*.@-FAUXV"/>
+    </def-cat>
+    <def-cat n="leat-main">
+      <cat-item lemma="leat" tags="*.@+FMAINV"/>
+      <cat-item lemma="leat" tags="*.@-FMAINV"/>
     </def-cat>
     <def-cat n="ii">
       <cat-item lemma="ii" tags="vblex.iv.neg.*"/>
@@ -351,7 +363,9 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="foc_bat"/>
       <attr-item tags="foc_be"/>
       <attr-item tags="foc_ge"/>
-      <attr-item tags="foc_gen"/>
+      <attr-item tags="foc_ge-pos"/>
+      <attr-item tags="foc_ge-neg"/>
+     <attr-item tags="foc_gen"/>
       <attr-item tags="foc_ges"/>
       <attr-item tags="foc_gis"/>
       <attr-item tags="foc_hal"/>
@@ -1667,10 +1681,10 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: leat-fin verb-prfprc">
+    <rule comment="REGLA: leat-aux verb-prfprc">
       <pattern>
-        <pattern-item n="leat-fin"/>
-        <pattern-item n="verb-prfprc"/>
+        <pattern-item n="leat-aux"/>
+        <pattern-item n="prfprcword"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst2">
@@ -1700,9 +1714,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: leat-fin adv verb-prfprc">
+<!--    <rule comment="REGLA: leat-aux adv verb-prfprc">
       <pattern>
-        <pattern-item n="leat-fin"/>
+        <pattern-item n="leat-aux"/>
         <pattern-item n="adv"/>
         <pattern-item n="verb-prfprc"/>
       </pattern>
@@ -1735,7 +1749,74 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
+    </rule> -->
+
+    <rule comment="REGLA: leat-main nominative">
+      <pattern>
+        <pattern-item n="leat-main"/>
+        <pattern-item n="nominative"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="copnom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+<!--
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+-->
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
     </rule>
+
+    <rule comment="REGLA: leat-main nominative">
+      <pattern>
+        <pattern-item n="leat-main"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="nominative"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst2">
+          <with-param pos="3"/>
+           <with-param pos="2"/>
+         <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="vblex" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+<!--
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+-->
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: verb-inf">
       <pattern>
