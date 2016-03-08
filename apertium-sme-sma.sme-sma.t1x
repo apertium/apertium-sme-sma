@@ -85,8 +85,19 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adv.*"/>
       <cat-item tags="adj.*"/>
     </def-cat>
+    <def-cat n="goiku">
+      <cat-item lemma="borranmiella" tags="n.*.sg.nom.*"/>
+      <cat-item lemma="goiku" tags="n.*.sg.nom.*"/>
+      <cat-item lemma="nealgi" tags="n.*.sg.nom.*"/>
+    </def-cat>
+    <def-cat n="habitive">
+      <cat-item tags="*.←hab→.*"/>
+    </def-cat>
     <def-cat n="subpred">
       <cat-item tags="*.@←SPRED"/>
+    </def-cat>
+    <def-cat n="inessive">
+      <cat-item tags="*.loc.@←ADVL"/>
     </def-cat>
     <def-cat n="n">
       <cat-item tags="n.*"/>
@@ -764,21 +775,16 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
       </choose>
-      <choose>
+
+     <choose>
         <when>
           <test>
-            <or>
-              <and><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-                   <or>
-                   <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@HAB"/></equal>
-                   <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@HAB→"/></equal>
-                   <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@←HAB"/></equal></or>
-              </and>
-              <in caseless="yes"><var n="main-verb-lemma"/><list n="stative-verbs"/></in>
-            </or>
+              <equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
         </when>
+      </choose>
+      <choose>
         <when>
           <test>
             <and>
@@ -788,10 +794,13 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
         </when>
+      </choose>
+      <choose>
         <when>
           <test>
             <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
             <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
             </and>
           </test>
@@ -975,10 +984,10 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="prn-pers"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst1">
+        <call-macro n="convert-case-nbr-poss1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-nbr-poss1">
+        <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -1186,6 +1195,41 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: mus lea goiku"> <!-- mus lea borranmiella - manne bårrestovvem -->
+      <pattern>
+        <pattern-item n="habitive"/>
+        <pattern-item n="leat-main"/>
+        <pattern-item n="goiku"/>
+      </pattern>
+      <action>
+      <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+      <let><clip pos="3" side="tl" part="tags"/><concat><lit-tag v="vblex"/>
+      <clip pos="2" side="tl" part="a_mood"/>
+      <clip pos="2" side="tl" part="a_tense"/>
+      <clip pos="1" side="tl" part="a_pers"/>
+      <clip pos="1" side="tl" part="a_nbr"/>
+      </concat></let>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="goiku" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="RES"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+             <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b />
+            <lu>
+             <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: n-cmp n-cmp n-cmp n">
       <pattern>
@@ -1656,6 +1700,53 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+<!--    <rule comment="REGLA: son ii conneg"> it doesn't work properly yet
+      <pattern>
+        <pattern-item n="prn-pers"/>
+        <pattern-item n="ii"/>
+        <pattern-item n="conneg"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="ii-prn-conneg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_verb"/>
+              <clip pos="2" side="tl" part="a_trans"/>
+              <clip pos="2" side="tl" part="a_neg"/>
+              <clip pos="2" side="tl" part="a_mood"/>
+              <clip pos="3" side="tl" part="a_tense"/>
+              <clip pos="2" side="tl" part="a_pers"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="lemh"/>
+              <clip pos="3" side="tl" part="a_verb"/>
+              <clip pos="3" side="tl" part="a_trans"/>
+              <clip pos="3" side="tl" part="a_conneg"/>
+              <clip pos="3" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> -->
+
+
 
 
 
@@ -1756,6 +1847,37 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule> -->
+
+    <rule comment="REGLA: leat-main inessive"> <!-- áhčči lea ruovttus - aehtjie gåetesne -->
+      <pattern>
+        <pattern-item n="leat-main"/>
+        <pattern-item n="inessive"/>
+      </pattern>
+      <action>
+       <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ine"/></let>
+       <call-macro n="proc-syn-foc-qst2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+<!--
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+-->
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: leat-main subpred">
       <pattern>

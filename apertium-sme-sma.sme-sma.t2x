@@ -65,6 +65,9 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SN.@OBJ→.*"/>
         <cat-item tags="SN.@←OBJ.*"/>
     </def-cat>
+    <def-cat n="Obj_l">
+        <cat-item tags="SN.@←OBJ.*"/>
+    </def-cat>
 
     <def-cat n="ADVL">
         <cat-item tags="SN.@ADVL→.*"/>
@@ -97,13 +100,12 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="CC">
         <cat-item tags="CC.@CNP"/>
-        <cat-item tags="CC.*"/> <!--should be removed when we fix CG -->
         <cat-item tags="SV.*.Neg.Foc_ge"/>
         <cat-item tags="SV.*.Neg.Foc_ge.*"/>
     </def-cat>
 
     <def-cat n="CNP">
-        <cat-item tags="CC.@CNP"/>
+        <cat-item tags="cnjcoo.@CNP"/>
     </def-cat>
 
     <def-cat n="Vcop">
@@ -284,11 +286,11 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-    <rule comment="REGLA: SN_Obj CNP SN_Obj">
+    <rule comment="REGLA: SN_Obj CNP SN_Obj"> <!-- Aalkosne Jupmele elmiem jïh eatnemem sjugniedi. -->
      <pattern>
-       <pattern-item n="SN_Obj"/>
+       <pattern-item n="Obj_l"/>
        <pattern-item n="CNP"/>
-       <pattern-item n="SN_Obj"/>
+       <pattern-item n="Obj_l"/>
      </pattern>
      <action>
        <out>
