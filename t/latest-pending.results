@@ -1,21 +1,20 @@
-Revision: 66208
+Revision: 66210
 AP_SRC1 Revision: 130745
 AP_SRC2 Revision: 130745
 Running Pending-tests with mode "sme-sma" with updated tests ...
 
 sme-sma	  Dat lea buorre biila.
-	- Dïhte buerie bïjle.
-	+ Dïhte lea buerie bïjle.
+WORKS	  Dïhte buerie bïjle.
 
 
 sme-sma	  Mun oainnán du buriin niibbiin.
 	- Manne datnem vuajnam buerie nejpine.
-	+ Manne vuajnam datnem buerine nejpine.
+	+ Manne datnem vuajnam buerine nejpine.
 
 
 sme-sma	  Mun oainnán buori biilla.
 	- Manne buerie bïjlem vuajnam.
-	+ Manne vuajnam bueriem bïjlem.
+	+ Manne bueriem bïjlem vuajnam.
 
 
 sme-sma	  Mun in boađe.
@@ -44,8 +43,7 @@ sme-sma	  Mun in goassege boađe.
 
 
 sme-sma	  áhčči lea ruovttus.
-	- aehtjie gåetesne.
-	+ aehtjie lea gåeteste.
+WORKS	  aehtjie gåetesne.
 
 
 sme-sma	  Mus leat guokte láibbi.
@@ -55,7 +53,7 @@ sme-sma	  Mus leat guokte láibbi.
 
 sme-sma	  Álggus Ipmil sivdnidii almmi ja eatnama.
 	- Aalkovistie Jupmele elmiem jïh eatnemem sjugniedi.
-	+ Aalkoste Jupmele sjugniedi elmiem jïh eatnemem.
+	+ Aalkoste Jupmele elmiem jïh eatnemem sjugniedi.
 
 
 sme-sma	  Eanan lei ávdin ja guorus.
@@ -65,17 +63,17 @@ sme-sma	  Eanan lei ávdin ja guorus.
 
 sme-sma	  Ipmil gohčodii čuovgga beaivin ja seavdnjadasa idjan.
 	- Jupmele tjoevkem biejjine gåhtjoeji jïh jemhkelem jïjjine.
-	+ Jupmele gåhtjoeji tjoevkem biejjine/biejvine jïh jemhkelen jïjjine.
+	+ Jupmele tjoevkem gåhtjoeji biejjine/biejvine jïh jemhkelen jïjjine.
 
 
 sme-sma	  Ipmil gohčodii gomuvuođa albmin.
 	- Jupmele gåpmahtassem elmine gåhtjoeji.
-	+ Jupmele gåhtjoeji gåpmahtassem elmine.
+	+ Jupmele gåpmahtassem gåhtjoeji elmine.
 
 
 sme-sma	  Ipmil dagai guokte stuorra čuovgga.
 	- Jupmele dejtie göökte stoere tjoevkide sjugniedi.
-	+ Jupmele darjoeji gööktem stoere tjoevken.
+	+ Jupmele gööktem darjoeji stoere tjoevken.
 
 
 sme-sma	  eiseválddit.
@@ -94,18 +92,16 @@ sme-sma	  Mus lea beana.
 
 
 sme-sma	  Mus lea borranmiella.
-	- Manne bårrestovvem.
-	+ Manneste lea #bårrestovvedh.
+WORKS	  Manne bårrestovvem.
 
 
 sme-sma	  Mis lea borranmiella.
-	- Mijjieh bårrestovvebe.
-	+ Mijjeste lea #bårrestovvedh.
+WORKS	  Mijjieh bårrestovvebe.
 
 
 sme-sma	  Mus lea goiku.
 	- Manne gåjhkelovvem.
-	+ Manneste lea #gåjhkelovvedh.
+	+ Manne #gåjhkelovvedh.
 
 
 sme-sma	  Mun in boahtán.
@@ -115,12 +111,12 @@ sme-sma	  Mun in boahtán.
 
 sme-sma	  Orru leamen somá.
 	- Vååjnoe luste.
-	+ #Årrodh årroeminie luste.
+	+ #Årrodh luste.
 
 
 sme-sma	  Orru leamen somá.
 	- Govloe luste.
-	+ #Årrodh årroeminie luste.
+	+ #Årrodh luste.
 
 
-0 / 24, 0%
+4 / 24, 16.67%

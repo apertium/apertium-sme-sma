@@ -1,11 +1,10 @@
-Revision: 66208
+Revision: 66210
 AP_SRC1 Revision: 130745
 AP_SRC2 Revision: 130745
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
 sme-sma	  Ja Ipmil oinnii ahte dat lei buorre.
-	- Jïh Jupmele vööjni dïhte lij hijven.
-	+ Jïh Jupmele vööjni ahte dïhte lij buerie.
+WORKS	  Jïh Jupmele vööjni dïhte lij hijven.
 
 
 sme-sma	  in.
@@ -21,18 +20,16 @@ WORKS	  Aellieh båetieh.
 
 
 sme-sma	  Mun lean studeanta.
-	- Manne studeente.
-	+ Manne leam studeente.
+WORKS	  Manne studeente.
 
 
 sme-sma	  Dat lea biila.
-	- Dïhte bïjle.
-	+ Dïhte lea bïjle.
+WORKS	  Dïhte bïjle.
 
 
 sme-sma	  Dat lea fiskes biila.
 	- Dïhte viskes bïjle.
-	+ Dïhte lea #viskes bïjle.
+	+ Dïhte #viskes bïjle.
 
 
 sme-sma	  Goas don lihkat?
@@ -85,23 +82,19 @@ WORKS	  Hotellen aajhtere.
 
 
 sme-sma	  Gonagas Harald.
-	- Gånka Harald.
-	+ Gånka Haralden.
+WORKS	  Gånka Harald.
 
 
 sme-sma	  Mun čálán girjji.
-	- Manne gærjam tjaalam.
-	+ Manne tjaalam gærjam.
+WORKS	  Manne gærjam tjaalam.
 
 
 sme-sma	  Odne čálán dálu birra.
-	- Daenbiejjien gåetien bïjre tjaalam.
-	+ Daenbiejjien tjaalam gåetien bïjre.
+WORKS	  Daenbiejjien gåetien bïjre tjaalam.
 
 
 sme-sma	  Odne lean čállán girjji.
-	- Daenbiejjien gærjam tjaaleme.
-	+ Daenbiejjien tjaaleme gærjam.
+WORKS	  Daenbiejjien gærjam tjaaleme.
 
 
-14 / 23, 60.87%
+21 / 23, 91.3%
