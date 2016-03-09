@@ -1,10 +1,11 @@
-Revision: 62813
-AP_SRC1 Revision: 121849
-AP_SRC2 Revision: 119936
+Revision: 66187
+AP_SRC1 Revision: 130745
+AP_SRC2 Revision: 130745
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
-sme-sma	  ja.
-WORKS	  jïh.
+sme-sma	  Ja Ipmil oinnii ahte dat lei buorre.
+	- Jïh Jupmele vööjni dïhte lij hijven.
+	+ Jïh Jupmele vööjni ahte dïhte lij buerie.
 
 
 sme-sma	  in.
@@ -13,6 +14,38 @@ WORKS	  im.
 
 sme-sma	  ii leat ieš sápmelaš.
 WORKS	  ij leah jïjtje saemie.
+
+
+sme-sma	  Ale boađe.
+WORKS	  Aellieh båetieh.
+
+
+sme-sma	  Mun lean studeanta.
+	- Manne studeente.
+	+ Manne leam studeente.
+
+
+sme-sma	  Dat lea biila.
+	- Dïhte bïjle.
+	+ Dïhte lea bïjle.
+
+
+sme-sma	  Dat lea fiskes biila.
+	- Dïhte viskes bïjle.
+	+ Dïhte lea #viskes bïjle.
+
+
+sme-sma	  Goas don lihkat?
+WORKS	  Gåessie datne tjuedtjelh?
+
+
+sme-sma	  Goas lihkat?
+WORKS	  Gåessie tjuedtjelh?
+
+
+sme-sma	  Galggango riŋget?
+	- Edtjem ringkedh?
+	+ #Edtjedh ringkedh?
 
 
 sme-sma	  min.
@@ -39,11 +72,6 @@ sme-sma	  máná.
 WORKS	  maanam.
 
 
-sme-sma	  Dat lea máná biilla.
-	- Dah lea maanan bïjlem.
-	+ Dïhte lea maanan bïjlen.
-
-
 sme-sma	  Válga ja jienastuslohku.
 WORKS	  Veeljeme jïh veeljemelåhkoe.
 
@@ -57,7 +85,23 @@ WORKS	  Hotellen aajhtere.
 
 
 sme-sma	  Gonagas Harald.
-WORKS	  Gånka Harald.
+	- Gånka Harald.
+	+ Gånka Haralden.
 
 
-13 / 14, 92.86%
+sme-sma	  Mun čálán girjji.
+	- Manne gærjam tjaalam.
+	+ Manne tjaalam gærjam.
+
+
+sme-sma	  Odne čálán dálu birra.
+	- Daenbiejjien gåetien bïjre tjaalam.
+	+ Daenbiejjien tjaalam gåetien bïjre.
+
+
+sme-sma	  Odne lean čállán girjji.
+	- Daenbiejjien gærjam tjaaleme.
+	+ Daenbiejjien tjaaleme gærjam.
+
+
+14 / 23, 60.87%
