@@ -228,8 +228,8 @@ And then there are some categories like "month", with all the months.
   </section-def-vars>
 
   <section-rules>
-    <rule> <!--genitiv instead of elative in habitive constructions -->
-      <pattern>
+<!--    <rule> --> <!--genitiv instead of elative in habitive constructions -->
+<!--      <pattern>
         <pattern-item n="SN"/>
         <pattern-item n="Vcop"/>
       </pattern>
@@ -264,7 +264,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
  <rule> <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
