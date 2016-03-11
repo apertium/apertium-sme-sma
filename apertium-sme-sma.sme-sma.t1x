@@ -90,6 +90,9 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="goiku" tags="n.*.sg.nom.*"/>
       <cat-item lemma="nealgi" tags="n.*.sg.nom.*"/>
     </def-cat>
+    <def-cat n="buorre">
+      <cat-item tags="buorre.adj.*.@→N"/>
+    </def-cat>
     <def-cat n="habitive">
       <cat-item tags="*.←hab→.*"/>
     </def-cat>
@@ -105,6 +108,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_nomact.n.*"/>
       <cat-item tags="vblex.*.der_nomag.n.*"/>
       <cat-item tags="adj.der_vuota.n.*"/>
+      <cat-item tags="adj.*.der_vuota.n.*"/>
     </def-cat>
     <def-cat n="verb_to_adv">
       <cat-item lemma="oassálastit" tags="vblex.*"/>
@@ -112,6 +116,12 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
+    </def-cat>
+    <def-cat n="rdep">
+      <cat-item tags="adj.*.*.@→N"/>
+      <cat-item tags="adj.*.@→N"/>
+      <cat-item tags="n.*.@→N"/>
+      <cat-item tags="vblex.*.@→N"/>
     </def-cat>
     <def-cat n="adj-rdep">
       <cat-item tags="adj.*.@→N"/>
@@ -789,6 +799,7 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
               <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
             </and>
           </test>
@@ -808,6 +819,16 @@ And then there are some categories like "month", with all the months.
         </when>
 
       </choose>
+              <choose>  
+        <when><test><and>
+        <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@Num←"/></equal> <!-- göökte laejpieh -->
+        <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+        <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal></and>
+        </test>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+        </when>
+      </choose>  
 
       <choose>
         <when>
@@ -1379,7 +1400,6 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
     <rule comment="REGLA: adj-rdep n">
       <pattern>
         <pattern-item n="adj-rdep"/>
@@ -1394,6 +1414,12 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
+              <choose>  
+        <when><test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+        </when>
+      </choose>  
         <out>
           <chunk name="a-n" case="caseFirstWord">
             <tags>
@@ -1402,12 +1428,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="a_adj"/>
-              <var n="nmbr"/>
-              <var n="case"/>
-              <clip pos="1" side="tl" part="a_attr"/>
-              <clip pos="1" side="tl" part="lemq"/>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
             <b pos="1"/>
             <lu>
@@ -1909,20 +1930,19 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: leat-main subpred">
+    <rule comment="REGLA: leat-main subpred"> <!-- Dïhte maanan bïjle. -->
       <pattern>
         <pattern-item n="leat-main"/>
-        <pattern-item n="adj"/>
+        <pattern-item n="rdep"/>
         <pattern-item n="subpred"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst2">
-          <with-param pos="3"/>
            <with-param pos="2"/>
-         <with-param pos="1"/>
+          <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="vblex" case="caseFirstWord">
+          <chunk name="copnom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="synlabel"/></tag>
