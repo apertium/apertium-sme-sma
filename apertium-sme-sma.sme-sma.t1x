@@ -69,7 +69,8 @@ And then there are some categories like "month", with all the months.
 <transfer default="chunk">
   <section-def-cats>
     <def-cat n="n-cmp">
-      <cat-item tags="n.cmp"/>
+      <cat-item tags="n.*.cmp_sgnom.cmp"/>
+      <cat-item tags="n.cmp_sgnom.cmp"/>
       <cat-item tags="n.*.*.cmp.guio"/>
       <cat-item tags="n.*.*.*.cmp.guio"/>
       <cat-item tags="n.*.cmp"/>
@@ -496,6 +497,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_ctain_tool"/>
       <attr-item tags="sem_curr"/>
       <attr-item tags="sem_dance"/>
+      <attr-item tags="sem_date"/>
       <attr-item tags="sem_domain"/>
       <attr-item tags="sem_drink"/>
       <attr-item tags="sem_dummytag"/>
@@ -608,6 +610,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_veh"/>
       <attr-item tags="sem_wpn"/>
       <attr-item tags="sem_wthr"/>
+      <attr-item tags="sem_year"/>
     </def-attr>
 
 
@@ -1373,6 +1376,24 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    <rule comment="REGLA: verb to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
+      <pattern>
+        <pattern-item n="verb_to_adv"/>
+      </pattern>
+      <action>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+        <out>
+          <chunk name="adverb" case="caseFirstWord">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: n">
       <pattern>
@@ -1600,24 +1621,6 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Verbal groups -->
 
-    <rule comment="REGLA: verb to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
-      <pattern>
-        <pattern-item n="verb_to_adv"/>
-      </pattern>
-      <action>
-           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
-        <out>
-          <chunk name="adverb" case="caseFirstWord">
-             <tags>
-              <tag><lit-tag v="SV"/></tag>
-            </tags>
-           <lu>
-				<clip pos="1" side="tl" part="whole"/>            
-		  </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
   <rule comment="REGLA: ii">
       <pattern>
         <pattern-item n="ii"/>
