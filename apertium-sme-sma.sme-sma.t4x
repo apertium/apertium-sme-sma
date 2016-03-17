@@ -114,6 +114,12 @@ And then there are some categories like "month", with all the months.
     <def-cat n="iiverb">
         <cat-item lemma="ii" tags="SV.@+FAUXV"/>
     </def-cat>
+    <def-cat n="ii-conneg">
+      <cat-item lemma="ii-conneg" tags="SV.*"/>
+    </def-cat>
+    <def-cat n="prn-pers-subj">
+      <cat-item lemma="prn-pers" tags="SN.@SUBJ→.*"/>
+    </def-cat>
 
 
     <def-cat n="FAuxV">
@@ -802,6 +808,22 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+
+     <rule> <!-- mun in - im  -->
+      <pattern>
+        <pattern-item n="prn-pers-subj"/>
+        <pattern-item n="ii-conneg"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
      <rule> <!-- mun in - im manne -->
       <pattern>
