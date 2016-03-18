@@ -21,8 +21,9 @@
     <sdef n="tv"/>
     <sdef n="iv"/>
 
-    <sdef n="actio"/>
+    <sdef n="actio"/> 
     <sdef n="pers"/>
+    <sdef n="prsprc"/>
     <sdef n="res"/>
     <sdef n="logo"/>
     <sdef n="comp"/>
@@ -96,6 +97,7 @@
     <sdef n="sem_veh"/>
     <sdef n="sem_wpn"/>
     <sdef n="sem_wthr"/>
+    <sdef n="sem_dummytag"/>
 
 
     <!-- Compounds -->
@@ -3473,12 +3475,12 @@
     <e><p><l>ovttagielat<s n="adj"/></l><r>aktengïeleh<s n="adj"/></r></p></e>
     <e><p><l>politihkalaš<s n="adj"/></l><r>politihkeles<s n="adj"/></r></p></e>
     <e><p><l>giellapolitihkalaš<s n="adj"/></l><r>gïelepolitihkeles<s n="adj"/></r></p></e>
-    <e><p><l>hálddahuslaš<s n="adj"/></l><r>reerije<s n="adj"/></r></p></e>
+    <e><p><l>hálddahuslaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>reeredh<s n="vblex"/><s n="tv"/><s n="prsprc"/></r></p></e>
     <e><p><l>giellateknologalaš<s n="adj"/></l><r>gïeleteknologeles<s n="adj"/></r></p></e>
     <e><p><l>teknologalaš<s n="adj"/></l><r>teknologeles<s n="adj"/></r></p></e>
     <e><p><l>máŋggabealat<s n="adj"/></l><r>gelliesåarts<s n="adj"/></r></p></e>
     <e><p><l>fásta<s n="adj"/></l><r>vihties<s n="adj"/></r></p></e>
-    <e><p><l>geatnegahtton<s n="adj"/></l><r>vïedteldihkie<s n="adj"/></r></p></e>
+    <e><p><l>geatnegahtton<s n="adj"/></l><r>vïedteldihkie<s n="adj"/></r></p></e> <!-- obs -->
     <e><p><l>váilevaš<s n="adj"/></l><r>fååtesidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>suohkanlaš<s n="adj"/><s n="attr"/></l><r>tjïelte<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>fylkkasuohkanlaš<s n="adj"/><s n="attr"/></l><r>fylhketjïelte<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
