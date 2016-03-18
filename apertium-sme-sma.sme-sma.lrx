@@ -1079,5 +1079,22 @@
    </match>
  </rule>     
 
+    <rule weight="1.0">
+   <match lemma="álgu">
+     <select lemma="aalkoe" tags="n.*"/>
+   </match>
+ </rule>     
+
+
+       <rule weight="0.5">
+   <match lemma="álgu">
+     <select lemma="aalkove" tags="n.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="álgu" tags="n.*.sg.loc.*">
+     <select lemma="aalkove" tags="n.*"/>
+   </match>
+ </rule>     
 
 </rules> 
