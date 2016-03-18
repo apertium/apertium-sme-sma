@@ -246,12 +246,77 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.vabess"/>
       <cat-item tags="vblex.*.vabess.*"/>
     </def-cat>
+    <def-cat n="agreement-attr">                             
+      <cat-item lemma="muhtun" tags="prn.ind.attr.*"/> 
+      <cat-item lemma="muhtun" tags="prn.ind.*"/> 
+    </def-cat>
+    <def-cat n="agreem-attr-noun">                             
+      <cat-item tags="np.*.*.ill.*"/>                    
+      <cat-item tags="np.*.ill.*"/>                    
+      <cat-item tags="np.*.*.loc.*"/>                    
+      <cat-item tags="np.*.loc.*"/>                    
+      <cat-item tags="n.*.*.ill.*"/>                    
+      <cat-item tags="n.*.ill.*"/>                    
+      <cat-item tags="n.*.*.loc.*"/>                    
+      <cat-item tags="n.*.loc.*"/>                    
+      <cat-item tags="n.*.ess.*"/>                    
+      <cat-item tags="n.ess.*"/>                    
+      <cat-item tags="*.n.*.ill.*"/>                    
+      <cat-item tags="*.n.*.loc.*"/>                    
+      <cat-item tags="*.n.*.ess.*"/>                    
+    </def-cat>  
+    <def-cat n="agreem-sg">                             
+      <cat-item tags="n.*.sg.nom.*"/>                   
+      <cat-item tags="np.*.sg.nom.*"/>                   
+      <cat-item tags="np.sg.nom.*"/>                   
+      <cat-item tags="n.*.sg.acc.*"/>                    
+      <cat-item tags="n.*.sg.com.*"/>                    
+      <cat-item tags="n.sg.nom.*"/>                   
+      <cat-item tags="n.sg.acc.*"/>                    
+      <cat-item tags="n.sg.com.*"/>                    
+      <cat-item tags="*.n.sg.nom.*"/>                   
+      <cat-item tags="*.n.sg.acc.*"/>                    
+      <cat-item tags="*.n.sg.com.*"/>                    
+    </def-cat>  
+    <def-cat n="agreem-pl">                             
+      <cat-item tags="n.*.pl.nom.*"/>                    
+      <cat-item tags="n.*.pl.gen.*"/>                    
+      <cat-item tags="n.*.pl.acc.*"/>                    
+      <cat-item tags="n.*.pl.ill.*"/>                    
+      <cat-item tags="n.*.pl.loc.*"/>                    
+      <cat-item tags="n.*.pl.abe.*"/>                    
+      <cat-item tags="n.*.pl.com.*"/>      
+      <cat-item tags="n.pl.nom.*"/>                    
+      <cat-item tags="n.pl.gen.*"/>                    
+      <cat-item tags="n.pl.acc.*"/>                    
+      <cat-item tags="n.pl.ill.*"/>                    
+      <cat-item tags="n.pl.loc.*"/>                    
+      <cat-item tags="n.pl.abe.*"/>                    
+      <cat-item tags="n.pl.com.*"/>      
+      <cat-item tags="*.n.pl.nom.*"/>                    
+      <cat-item tags="*.n.pl.gen.*"/>                    
+      <cat-item tags="*.n.pl.acc.*"/>                    
+      <cat-item tags="*.n.pl.ill.*"/>                    
+      <cat-item tags="*.n.pl.loc.*"/>                    
+      <cat-item tags="*.n.pl.abe.*"/>                    
+      <cat-item tags="*.n.pl.com.*"/>      
+    </def-cat>  
+
+
+
     <def-cat n="sent">
       <cat-item tags="clb"/>
       <cat-item tags="clb.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+
+    <def-attr n="a_npagree_type">
+       <attr-item tags="prn.ind"/>
+    </def-attr>
+
+
+
     <def-attr n="a_cmp">
       <attr-item tags="sgcmp"/>
       <attr-item tags="sgnomcmp"/>
@@ -338,6 +403,9 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="imp"/>
     </def-attr>
 
+    <def-attr n="a_ntype">
+       <attr-item tags="nomag"/>
+    </def-attr>
     <def-attr n="a_nbr">
        <attr-item tags="sg"/>
        <attr-item tags="pl"/>
@@ -899,6 +967,7 @@ And then there are some categories like "month", with all the months.
 
     </def-macro>
 
+
     <def-macro n="convert-case-nbr-poss2" npar="2">
       <let><var n="case"/><lit v=""/></let>
       <let><var n="nmbr"/><lit v=""/></let>
@@ -945,50 +1014,177 @@ And then there are some categories like "month", with all the months.
       </call-macro>
     </def-macro>
 
-<!--    <def-macro n="convert-compounds1" npar="1">
-      <choose>
-        <when>
-          <test>
-            <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="sgcmp"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="sgnomcmp"/></let>
+
+    <def-macro n="agreement-attr-2Posit" npar="2"> <!-- pl prn, num, ord , full agreement, exc com -->
+       <choose>
+          <when>        <!-- with pl.com -->
+            <test>
+	      <and>
+		<equal>
+		  <clip pos="2" side="tl" part="a_case"/>
+		  <lit-tag v="com"/>
+		</equal>
+                <equal>
+		  <clip pos="2" side="tl" part="a_nbr"/>
+		  <lit-tag v="pl"/>
+		</equal>
+              </and>
+	    </test>
+         <let>
+            <clip pos="2" side="tl" part="tags"/>
+	    <concat>
+	      <lit-tag v="n"/>
+	      <clip pos="2" side="tl" part="a_ntype"/>
+	      <clip pos="2" side="tl" part="a_nbr"/>
+	      <clip pos="2" side="tl" part="a_case"/>
+	    </concat>  
+        </let> 
+        <let>
+          <clip pos="1" side="tl" part="tags"/>
+	  <concat>
+        <clip pos="1" side="tl" part="a_npagree_type"/>
+<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="gen"/> 
+	  </concat>                
+        </let> 
         </when>
-      </choose>
-      <choose>
         <when>
           <test>
             <and>
-              <equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj"/></equal>
-              <not><equal><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></equal></not>
+            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+              <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
             </and>
           </test>
-          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="attr"/></let>
+        <let><clip pos="1" side="tl" part="tags"/>
+	  <concat>
+	    <clip pos="1" side="tl" part="a_npagree_type"/>
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ine"/>
+	    <lit-tag v="attr"/>
+	  </concat>                
+        </let> 
+        <let>
+          <clip pos="2" side="tl" part="tags"/>
+	  <concat>
+	    <lit-tag v="n"/>
+        <clip pos="2" side="tl" part="a_type"/>
+<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ine"/>
+	  </concat>                
+        </let> 
+        </when>
+        <when>
+          <test>
+            <and>
+            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+            <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
+            </and>
+          </test>
+        <let><clip pos="1" side="tl" part="tags"/>
+	  <concat>
+	    <clip pos="1" side="tl" part="a_npagree_type"/>
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ela"/>
+	    <lit-tag v="attr"/>
+	  </concat>                
+        </let> 
+        <let>
+          <clip pos="2" side="tl" part="tags"/>
+	  <concat>
+	    <lit-tag v="n"/>
+        <clip pos="2" side="tl" part="a_type"/>
+<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ela"/>
+	  </concat>                
+        </let> 
         </when>
 
-      </choose>
-    </def-macro>  
+        <when>
+          <test>
+            <and>
+            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+              <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
+            </and>
+          </test>
+        <let><clip pos="1" side="tl" part="tags"/>
+	  <concat>
+	    <clip pos="1" side="tl" part="a_npagree_type"/>
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ine"/>
+	  </concat>                
+        </let> 
+        <let>
+          <clip pos="2" side="tl" part="tags"/>
+	  <concat>
+	    <lit-tag v="n"/>
+        <clip pos="2" side="tl" part="a_type"/>
+<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ine"/>
+	  </concat>                
+        </let> 
+        </when>
+        <when>
+          <test>
+            <and>
+            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+            <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
+            </and>
+          </test>
+        <let><clip pos="1" side="tl" part="tags"/>
+	  <concat>
+	    <clip pos="1" side="tl" part="a_npagree_type"/>
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ela"/>
+	  </concat>                
+        </let> 
+        <let>
+          <clip pos="2" side="tl" part="tags"/>
+	  <concat>
+	    <lit-tag v="n"/>
+        <clip pos="2" side="tl" part="a_type"/>
+<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <lit-tag v="ela"/>
+	  </concat>                
+        </let> 
+        </when>
 
-    <def-macro n="convert-compounds2" npar="2">
-      <call-macro n="convert-compounds1">
-        <with-param pos="1"/>
-      </call-macro>
-      <call-macro n="convert-compounds1">
-        <with-param pos="2"/>
-      </call-macro>
+
+        <otherwise>
+                <!-- default -->
+        <let>
+          <clip pos="1" side="tl" part="tags"/>
+	  <concat>
+        <clip pos="1" side="tl" part="a_npagree_type"/>
+<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <clip pos="2" side="tl" part="a_case"/> 
+	  </concat>                
+        </let> 
+        <let>
+       	  <clip pos="2" side="tl" part="tags"/>
+	  <concat>
+            <lit-tag v="n"/>
+	    <clip pos="2" side="tl" part="a_ntype"/>
+	    <clip pos="2" side="tl" part="a_nbr"/>
+	    <clip pos="2" side="tl" part="a_case"/> 
+	  </concat>                
+        </let> 
+        </otherwise>
+        </choose>
     </def-macro> 
-
-
-    <def-macro n="convert-compounds3" npar="3">
-      <call-macro n="convert-compounds1">
-        <with-param pos="1"/>
-      </call-macro>
-      <call-macro n="convert-compounds1">
-        <with-param pos="2"/>
-      </call-macro>
-      <call-macro n="convert-compounds1">
-        <with-param pos="3"/>
-      </call-macro>
-    </def-macro> -->
 
     <def-macro n="convert-verb-deriv1" npar="1">
 
@@ -1383,6 +1579,37 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: attr agreement">
+      <pattern>
+        <pattern-item n="agreement-attr"/>
+        <pattern-item n="agreem-attr-noun"/>
+      </pattern>
+      <action>
+        <call-macro n="agreement-attr-2Posit">
+         <with-param pos="1"/>
+         <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="a-n-agreement" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: verb to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
       <pattern>
         <pattern-item n="verb_to_adv"/>
