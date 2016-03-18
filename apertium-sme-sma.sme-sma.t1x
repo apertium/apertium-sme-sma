@@ -763,7 +763,6 @@ And then there are some categories like "month", with all the months.
           <let><var n="poss"/><clip pos="1" side="sl" part="a_poss"/></let>
         </when>
       </choose>
-
       <choose> <!-- For seammá:seamma -->
         <when>
           <test>
@@ -938,7 +937,7 @@ And then there are some categories like "month", with all the months.
       </call-macro>
     </def-macro>
 
-    <def-macro n="convert-compounds1" npar="1">
+<!--    <def-macro n="convert-compounds1" npar="1">
       <choose>
         <when>
           <test>
@@ -959,7 +958,7 @@ And then there are some categories like "month", with all the months.
         </when>
 
       </choose>
-    </def-macro>
+    </def-macro>  
 
     <def-macro n="convert-compounds2" npar="2">
       <call-macro n="convert-compounds1">
@@ -968,7 +967,7 @@ And then there are some categories like "month", with all the months.
       <call-macro n="convert-compounds1">
         <with-param pos="2"/>
       </call-macro>
-    </def-macro>
+    </def-macro> 
 
 
     <def-macro n="convert-compounds3" npar="3">
@@ -981,7 +980,7 @@ And then there are some categories like "month", with all the months.
       <call-macro n="convert-compounds1">
         <with-param pos="3"/>
       </call-macro>
-    </def-macro>
+    </def-macro> -->
 
     <def-macro n="convert-verb-deriv1" npar="1">
 
@@ -1263,11 +1262,9 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="n"/>
       </pattern>
       <action>
-        <call-macro n="convert-compounds3">
-          <with-param pos="3"/>
-          <with-param pos="2"/>
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="3"/></call-macro>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="4"/>
         </call-macro>
@@ -1308,9 +1305,11 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="n"/>
       </pattern>
       <action>
-        <call-macro n="convert-compounds2">
-          <with-param pos="2"/>
+        <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="2"/>
         </call-macro>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="3"/>
@@ -1348,7 +1347,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="n"/>
       </pattern>
       <action>
-        <call-macro n="convert-compounds1">
+        <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="proc-syn-foc-qst1">
@@ -1358,7 +1357,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="n" case="caseFirstWord">
+          <chunk name="ncmp" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1527,7 +1526,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="n"/>
       </pattern>
       <action>
-        <call-macro n="convert-compounds1">
+        <call-macro n="proc-syn-foc-qst1">
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="proc-syn-foc-qst2">
@@ -1779,10 +1778,10 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-fin"/>
       </pattern>
       <action>
-        <call-macro n="convert-verb-deriv1">
+        <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-syn-foc-qst1">
+        <call-macro n="convert-verb-deriv1">
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
@@ -2225,7 +2224,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
-        </call-macro>
+        </call-macro> 
         <out>
           <chunk name="cnjcoo" case="caseFirstWord">
             <tags>
