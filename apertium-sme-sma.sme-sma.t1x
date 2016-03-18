@@ -1055,7 +1055,7 @@ And then there are some categories like "month", with all the months.
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
             <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
-              <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
+              <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not> 
             </and>
           </test>
         <let><clip pos="1" side="tl" part="tags"/>
@@ -1083,7 +1083,7 @@ And then there are some categories like "month", with all the months.
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
             <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
-            <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
             </and>
           </test>
         <let><clip pos="1" side="tl" part="tags"/>
