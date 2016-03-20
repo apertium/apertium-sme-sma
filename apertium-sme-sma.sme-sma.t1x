@@ -190,11 +190,11 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_inchl.v.prfprc"/>
     </def-cat>
     <def-cat n="leat-aux">
-      <cat-item lemma="leat" tags="*.@+FAUXV"/>
+      <cat-item lemma="leat" tags="*.@\+FAUXV"/>
       <cat-item lemma="leat" tags="*.@-FAUXV"/>
     </def-cat>
     <def-cat n="leat-main">
-      <cat-item lemma="leat" tags="vblex.*.*.pres.*.*.@+FMAINV"/>
+      <cat-item lemma="leat" tags="vblex.*.*.pres.*.*.@\+FMAINV"/>
       <cat-item lemma="leat" tags="*.@-FMAINV"/>
     </def-cat>
     <def-cat n="ii">
@@ -247,23 +247,13 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.vabess.*"/>
     </def-cat>
     <def-cat n="agreement-attr">                             
-      <cat-item lemma="muhtun" tags="prn.ind.attr.*"/> 
       <cat-item lemma="muhtun" tags="prn.ind.*"/> 
+      <cat-item lemma="buot" tags="prn.ind.*"/> 
     </def-cat>
     <def-cat n="agreem-attr-noun">                             
-      <cat-item tags="np.*.*.ill.*"/>                    
-      <cat-item tags="np.*.ill.*"/>                    
-      <cat-item tags="np.*.*.loc.*"/>                    
-      <cat-item tags="np.*.loc.*"/>                    
-      <cat-item tags="n.*.*.ill.*"/>                    
-      <cat-item tags="n.*.ill.*"/>                    
-      <cat-item tags="n.*.*.loc.*"/>                    
-      <cat-item tags="n.*.loc.*"/>                    
-      <cat-item tags="n.*.ess.*"/>                    
-      <cat-item tags="n.ess.*"/>                    
-      <cat-item tags="*.n.*.ill.*"/>                    
-      <cat-item tags="*.n.*.loc.*"/>                    
-      <cat-item tags="*.n.*.ess.*"/>                    
+      <cat-item tags="np.*"/>                    
+      <cat-item tags="n.*"/>                    
+      <cat-item tags="*.n.*"/>                    
     </def-cat>  
     <def-cat n="agreem-sg">                             
       <cat-item tags="n.*.sg.nom.*"/>                   
@@ -477,52 +467,55 @@ And then there are some categories like "month", with all the months.
     </def-attr>
 
     <def-attr n="a_synlabel">
-       <attr-item tags="@X"/>
-       <attr-item tags="@HNOUN"/>
-       <attr-item tags="@CNP"/>
-       <attr-item tags="@CVP"/>
-       <attr-item tags="@→CC"/>
-       <attr-item tags="@N←"/>
-       <attr-item tags="@→N"/>
+       <attr-item tags="@\+FAUXV"/>
+       <attr-item tags="@\+FMAINV"/>
+       <attr-item tags="@-F←ADVL"/>
+       <attr-item tags="@-F←OBJ"/>
+       <attr-item tags="@-F←OPRED"/>
+       <attr-item tags="@-F←SUBJ"/>
+       <attr-item tags="@-FADVL→"/>
+       <attr-item tags="@-FAUXV"/>
+       <attr-item tags="@-FMAINV"/>
+       <attr-item tags="@-FOBJ→"/>
+       <attr-item tags="@-FSUBJ→"/>
+       <attr-item tags="@←ADVL"/>
        <attr-item tags="@←OBJ"/>
-       <attr-item tags="@OBJ"/>
-       <attr-item tags="@→Pron"/>
-       <attr-item tags="@PCLE"/>
+       <attr-item tags="@←OPRED"/>
+       <attr-item tags="@←PPRED"/>
+       <attr-item tags="@←SPRED"/>
+       <attr-item tags="@←SUBJ"/>
        <attr-item tags="@→A"/>
+       <attr-item tags="@→ADVL"/>
+       <attr-item tags="@→CC"/>
+       <attr-item tags="@→N"/>
+       <attr-item tags="@→Num"/>
+       <attr-item tags="@→P"/>
+       <attr-item tags="@→Pron"/>
+       <attr-item tags="@A←"/>
+       <attr-item tags="@ADVL"/>
+       <attr-item tags="@ADVL←"/>
+       <attr-item tags="@ADVL→"/>
+       <attr-item tags="@ADVL→CS"/>
+       <attr-item tags="@APP-ADVL←"/>
        <attr-item tags="@APP-N←"/>
        <attr-item tags="@APP-Pron←"/>
-       <attr-item tags="@OBJ→"/>
-       <attr-item tags="@-F←OBJ"/>
-       <attr-item tags="@SUBJ→"/>
-       <attr-item tags="@←SUBJ"/>
-       <attr-item tags="@SPRED→"/>
-       <attr-item tags="@←SPRED"/>
-       <attr-item tags="@\+FMAINV"/>
-       <attr-item tags="@-FMAINV"/>
-       <attr-item tags="@\+FAUXV"/>
-       <attr-item tags="@-FAUXV"/>
-       <attr-item tags="@A←"/>
+       <attr-item tags="@CNP"/>
        <attr-item tags="@COMP-CS←"/>
-       <attr-item tags="@ADVL"/>
-       <attr-item tags="@→ADVL"/>
-       <attr-item tags="@←ADVL"/>
-       <attr-item tags="@ADVL→"/>
-       <attr-item tags="@HAB"/>
-       <attr-item tags="@HAB→"/>
-       <attr-item tags="@←HAB"/>
-       <attr-item tags="@Num←"/>
-       <attr-item tags="@→Num"/>
+       <attr-item tags="@CVP"/>
+       <attr-item tags="@HNOUN"/>
        <attr-item tags="@INTERJ"/>
-       <attr-item tags="@PCLE"/>
+       <attr-item tags="@N←"/>
+       <attr-item tags="@Num←"/>
+       <attr-item tags="@OBJ→"/>
        <attr-item tags="@OPRED→"/>
-       <attr-item tags="@←OPRED"/>
-       <attr-item tags="@→P"/>
        <attr-item tags="@P←"/>
-       <attr-item tags="@-FSUBJ→"/>
-       <attr-item tags="@-FOBJ→"/>
-       <attr-item tags="@-F←OBJ"/>
-       <attr-item tags="@-F←ADVL"/>
+       <attr-item tags="@PCLE"/>
+       <attr-item tags="@Pron←"/>
+       <attr-item tags="@SPRED←OBJ"/>
+       <attr-item tags="@SPRED→"/>
+       <attr-item tags="@SUBJ→"/>
        <attr-item tags="@VOC"/>
+       <attr-item tags="@X"/>
     </def-attr>
 
 
@@ -941,6 +934,7 @@ And then there are some categories like "month", with all the months.
               <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
             </and>
           </test>
+          <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
         </when>
       </choose>
@@ -953,6 +947,7 @@ And then there are some categories like "month", with all the months.
             <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
             </and>
           </test>
+          <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
         </when>
 
@@ -2073,10 +2068,10 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-fin"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst1">
+        <call-macro n="convert-verb-deriv1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-verb-deriv1">
+        <call-macro n="proc-syn-foc-qst1">
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
