@@ -113,7 +113,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.sg.*"/>
       <cat-item tags="n.pl.*"/>
     </def-cat>
-    <def-cat n="n">
+    <def-cat n="noun">
       <cat-item tags="n.*"/>
       <cat-item tags="np.*"/>
       <cat-item tags="vblex.*.der_nomact.n.*"/>
@@ -1521,7 +1521,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="n-cmp"/>
         <pattern-item n="n-cmp"/>
         <pattern-item n="n-cmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
@@ -1564,7 +1564,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="n-cmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -1606,7 +1606,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: n-cmp n">
       <pattern>
         <pattern-item n="n-cmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -1642,7 +1642,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="agreement-attr"/>
         <pattern-item n="n-cmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="agreement-attr-2Posit">
@@ -1680,7 +1680,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: attr agreement">
       <pattern>
         <pattern-item n="agreement-attr"/>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="agreement-attr-2Posit">
@@ -1748,7 +1748,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: n">
       <pattern>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -1813,7 +1813,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: n num-ldep">
       <pattern>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
         <pattern-item n="num-ldep"/>
       </pattern>
       <action>
@@ -1875,7 +1875,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="prn-attr"/>
         <pattern-item n="n-cmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -1923,7 +1923,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="prn-attr"/>
         <pattern-item n="prn-attr"/>
-        <pattern-item n="n"/>
+        <pattern-item n="noun"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst3">
