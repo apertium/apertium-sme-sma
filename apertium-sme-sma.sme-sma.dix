@@ -17,6 +17,7 @@
     <sdef n="mwe"/>
     <sdef n="known"/>
     <sdef n="acr"/>
+    <sdef n="foc_neg-ge"/>
 
     <sdef n="tv"/>
     <sdef n="iv"/>
@@ -327,10 +328,12 @@
     <e><p><l>diet<s n="prn"/><s n="dem"/></l><r>doete<s n="prn"/><s n="dem"/></r></p></e>
     <e r="LR"><p><l>goappašat<s n="prn"/><s n="ind"/><s n="attr"/></l><r>gåabpegh<s n="prn"/><s n="ind"/><s n="ND"/><s n="CD"/></r></p></e>
     <e r="RL"><p><l>goappašat<s n="adj"/><s n="attr"/></l><r>gåabpegh<s n="prn"/><s n="ind"/></r></p></e>
+    <e><p><l>dihto<s n="adj"/><s n="attr"/></l><r>såemies<s n="prn"/><s n="ind"/></r></p></e>
+    <e><p><l>molssaevttolaš<s n="adj"/></l><r>alternatijve<s n="adj"/></r></p></e>
 
     <e><p><l>giige<s n="prn"/><s n="ind"/><s n="sg"/></l><r>giege<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>makkár<s n="prn"/><s n="itg"/></l><r>magkeres<s n="prn"/><s n="itg"/></r></p></e> <!-- TODO -->
-    <e><p><l>makkárge<s n="prn"/><s n="ind"/><s n="attr"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e>
+    <e><p><l>makkárge<s n="prn"/><s n="ind"/><s n="attr"/><s n="foc_neg-ge"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e>
 
     <e><p><l>dát<s n="prn"/><s n="dem"/></l><r>daate<s n="prn"/><s n="dem"/></r></p></e>
     <e><p><l>nubbi<s n="prn"/><s n="ind"/></l><r>mubpie<s n="prn"/><s n="ind"/></r></p></e>
@@ -3122,7 +3125,9 @@
     <e><p><l>geažos<s n="adj"/></l><r>ellies<s n="adj"/></r></p></e>
     <e><p><l>ollislaš<s n="adj"/></l><r>ellies<s n="adj"/></r></p></e>
     <e><p><l>sámegielalaš<s n="adj"/></l><r>saemiengïeleh<s n="adj"/></r></p></e>
-    <e><p><l>sámegielat<s n="adj"/></l><r>saemiengïeleh<s n="adj"/></r></p></e>
+    <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>saemiengïeleh<s n="adj"/><s n="attr"/></r></p></e>
+    <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="sg"/></l><r>saamastallije<s n="adj"/><s n="sg"/></r></p></e>
+    <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="pl"/></l><r>saamastallije<s n="adj"/><s n="pl"/></r></p></e>
     <e><p><l>dárogielat<s n="adj"/></l><r>daaroengïeleh<s n="adj"/></r></p></e>
     <e><p><l>minoritehtagielat<s n="adj"/></l><r>unnebelåhkoengïeleh<s n="adj"/></r></p></e>
     <e><p><l>earálágan<s n="adj"/></l><r>ovmese<s n="adj"/></r></p></e>
