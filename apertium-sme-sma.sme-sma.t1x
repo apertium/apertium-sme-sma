@@ -1534,7 +1534,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="4"/>
         </call-macro>
         <out>
-          <chunk name="n" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1580,7 +1580,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="n" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1758,7 +1758,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="n" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
