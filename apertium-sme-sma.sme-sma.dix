@@ -325,9 +325,8 @@
     <e><p><l>dakkár<s n="prn"/><s n="dem"/></l><r>dagkeres<s n="prn"/><s n="dem"/></r></p></e>
     <e r="LR"><p><l>dákkár<s n="prn"/><s n="dem"/></l><r>dagkeres<s n="prn"/><s n="dem"/></r></p></e>
 
+    <e><p><l>goappašat<s n="prn"/></l><r>gåabpegh<s n="prn"/><s n="dem"/></r></p></e>
     <e><p><l>diet<s n="prn"/><s n="dem"/></l><r>doete<s n="prn"/><s n="dem"/></r></p></e>
-    <e r="LR"><p><l>goappašat<s n="prn"/><s n="ind"/><s n="attr"/></l><r>gåabpegh<s n="prn"/><s n="ind"/><s n="ND"/><s n="CD"/></r></p></e>
-    <e r="RL"><p><l>goappašat<s n="adj"/><s n="attr"/></l><r>gåabpegh<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>dihto<s n="adj"/><s n="attr"/></l><r>såemies<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>molssaevttolaš<s n="adj"/></l><r>alternatijve<s n="adj"/></r></p></e>
 
@@ -848,6 +847,7 @@
     <e><p><l>dárbbaš<s n="n"/></l><r>daerpiesvoete<s n="n"/></r></p></e>
 <!--    <e><p><l>dárbu<s n="n"/></l><r>daerpiesvoete<s n="n"/></r></p></e> -->
     <e><p><l>dárju<s n="n"/><s n="nomag"/></l><r>hoksehtæjja<s n="n"/></r></p></e>
+    <e><p><l>minoriteahtagiella<s n="n"/></l><r>unnebelåhkoegïeli<s n="n"/></r></p></e>
 	
     <e><p><l>geologiija<s n="n"/></l><r>geologije<s n="n"/></r></p></e>
     <e><p><l>fálaldat<s n="n"/></l><r>faaleldahke<s n="n"/></r></p></e>
@@ -3103,7 +3103,7 @@
 <!--    <e><p><l>iešguđetlágan<s n="adj"/></l><r>joekehts<s n="adj"/></r></p></e> -->
 
     <e><p><l>iešguđetlágan<s n="adj"/></l><r>ovmessie<s n="adj"/></r></p></e>
-    <e><p><l>iešguhtege<s n="prn"/><s n="ind"/></l><r>ovmessie<s n="adj"/></r></p></e>
+    <e><p><l>iešguhte<s n="prn"/><s n="ind"/></l><r>ovmessie<s n="adj"/></r></p></e>
     <e><p><l>guhtege<s n="prn"/><s n="ind"/></l><r>fïereguhte<s n="prn"/><s n="ind"/></r></p></e>
  
     <e><p><l>goabbat<b/>guoibmi<s n="prn"/></l><r>sinsitniem<s n="prn"/></r></p></e>
@@ -3126,8 +3126,8 @@
     <e><p><l>ollislaš<s n="adj"/></l><r>ellies<s n="adj"/></r></p></e>
     <e><p><l>sámegielalaš<s n="adj"/></l><r>saemiengïeleh<s n="adj"/></r></p></e>
     <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>saemiengïeleh<s n="adj"/><s n="attr"/></r></p></e>
-    <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="sg"/></l><r>saamastallije<s n="adj"/><s n="sg"/></r></p></e>
-    <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="pl"/></l><r>saamastallije<s n="adj"/><s n="pl"/></r></p></e>
+    <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="sg"/></l><r>saamastallije<s n="n"/><s n="sg"/></r></p></e>
+    <e><p><l>sámegielat<s n="adj"/><s n="sem_hum"/><s n="pl"/></l><r>saamastallije<s n="n"/><s n="pl"/></r></p></e>
     <e><p><l>dárogielat<s n="adj"/></l><r>daaroengïeleh<s n="adj"/></r></p></e>
     <e><p><l>minoritehtagielat<s n="adj"/></l><r>unnebelåhkoengïeleh<s n="adj"/></r></p></e>
     <e><p><l>earálágan<s n="adj"/></l><r>ovmese<s n="adj"/></r></p></e>
@@ -3523,11 +3523,13 @@
     <e><p><l>positiivvalaš<s n="adj"/></l><r>positïjve<s n="adj"/></r></p></e>
     <e><p><l>grammatihkalaš<s n="adj"/></l><r>grammatihkeles<s n="adj"/></r></p></e>
     <e><p><l>bissovaš<s n="adj"/></l><r>vihties<s n="adj"/></r></p></e>
+    <e><p><l>guoskevaš<s n="adj"/></l><r>sjyöhtehke<s n="adj"/></r></p></e>
 
 
 
     <!-- SECTION: Adverbs -->
 
+    <e><p><l>iešalddis<s n="adv"/></l><r>oktegh<s n="adv"/></r></p></e>
     <e><p><l>dovdomassii<s n="adv"/></l><r>tjarki<s n="adv"/></r></p></e>
     <e><p><l>naba<s n="adv"/></l><r>nååts<s n="adv"/></r></p></e>
     <e><p><l>njuolgga<s n="adv"/></l><r>rïekte<s n="pcle"/></r></p></e>
@@ -51099,7 +51101,7 @@ buohccát ::: dåsmoes ::: a
 <e><p><l>presideanta<s n="n"/></l><r>presideente<s n="n"/></r></p></e>    
 <e><p><l>temperatuvra<s n="n"/></l><r>tsiehkie<s n="n"/></r></p></e>     
 <e><p><l>várrečohkka<s n="n"/></l><r>tjahke<s n="n"/></r></p></e>   
-<e><p><l>stimuleret<s n="vblex"/></l><r>skreejrehtidh<s n="vblex"/></r></p></e>
+<e><p><l>stimuleret<s n="vblex"/><s n="tv"/></l><r>skreejrehtidh<s n="vblex"/></r></p></e>
 <e><p><l>gorut<s n="n"/></l><r>niestie<s n="n"/></r></p></e>
 <e><p><l>administrašuvdna<s n="n"/></l><r>reereme<s n="n"/></r></p></e>
 <e><p><l>jođiheaddji<s n="n"/><s n="nomag"/></l><r>juhtiehtæjja<s n="n"/></r></p></e>
