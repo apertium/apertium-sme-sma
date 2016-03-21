@@ -15,11 +15,11 @@ Chunking words to phrases.
 
 Some important macros are defined here (to be documented):
 
-convert-deriv1		   =
-proc-syn-foc-qst1	   =
-proc-syn-foc-qst2	   =
-proc-syn-foc-qst3	   =
-convert-case-nbr-poss1 =
+convert-deriv1		   = der_aadv to der_laakan (referred to by the proc- macros)
+proc-syn-foc-qst1	   = deletes syn, foc, qst, sem; sets synlabel to a_synlabel
+proc-syn-foc-qst2	   = calls proc-syn-foc-qst1 for pos2, pos1
+proc-syn-foc-qst3	   = calls proc-syn-foc-qst1 for pos3, pos2, pos1
+convert-case-nbr-poss1 = delets case, nbr, attr for indecl adjs; sets poss to a_pos 
 convert-case-nbr-poss2 =
 convert-case-nbr-poss3 =
 convert-compounds1	   =
@@ -801,7 +801,7 @@ And then there are some categories like "month", with all the months.
   </section-def-lists>
   <section-def-macros>
 
-    <def-macro n="convert-deriv1" npar="1">
+    <def-macro n="convert-deriv1" npar="1"> <!-- der_aadv to der_laakan -->
       <choose>  
         <when>
           <test>
