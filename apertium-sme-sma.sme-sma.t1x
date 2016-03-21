@@ -77,6 +77,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*.*.cmp"/>
       <cat-item tags="n.*.*.*.cmp"/>
       <cat-item tags="adj.*.cmp"/>
+      <cat-item tags="adj.*.*.cmp"/>
+      <cat-item tags="adj.*.*.*.cmp"/>
       <cat-item tags="vblex.*.der_nomact.n.*.cmp"/>
       <cat-item tags="vblex.*.der_nomag.n.*.cmp"/>
     </def-cat>
@@ -123,8 +125,14 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="oassálastit" tags="vblex.*"/>
       <cat-item lemma="oasálastit" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="noun_to_adv">
+      <cat-item lemma="olámuddu" tags="n.*"/>
+    </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
+    </def-cat>
+    <def-cat n="prsprc">
+      <cat-item tags="*.prsprc.*"/>
     </def-cat>
     <def-cat n="rdep">
       <cat-item tags="adj.*.*.@→N"/>
@@ -250,11 +258,6 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="muhtun" tags="prn.ind.*"/> 
       <cat-item lemma="buot" tags="prn.ind.*"/> 
     </def-cat>
-    <def-cat n="agreem-attr-noun">                             
-      <cat-item tags="np.*"/>                    
-      <cat-item tags="n.*"/>                    
-      <cat-item tags="*.n.*"/>                    
-    </def-cat>  
     <def-cat n="agreem-sg">                             
       <cat-item tags="n.*.sg.nom.*"/>                   
       <cat-item tags="np.*.sg.nom.*"/>                   
@@ -1638,7 +1641,46 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: attr agreement">
       <pattern>
         <pattern-item n="agreement-attr"/>
-        <pattern-item n="agreem-attr-noun"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <call-macro n="agreement-attr-2Posit">
+         <with-param pos="1"/>
+         <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="a-n-agreement" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: attr agreement">
+      <pattern>
+        <pattern-item n="agreement-attr"/>
+        <pattern-item n="n"/>
       </pattern>
       <action>
         <call-macro n="agreement-attr-2Posit">
@@ -1683,6 +1725,26 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: noun to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
+      <pattern>
+        <pattern-item n="noun_to_adv"/>
+      </pattern>
+      <action>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+        <out>
+          <chunk name="adverb" case="caseFirstWord">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: n">
       <pattern>
@@ -2377,6 +2439,32 @@ And then there are some categories like "month", with all the months.
         </call-macro>
         <out>
           <chunk name="adj" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SA"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: prsprc">
+      <pattern>
+        <pattern-item n="prsprc"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="prsprc" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SA"/></tag>
               <tag><var n="synlabel"/></tag>
