@@ -1097,4 +1097,51 @@
    </match>
  </rule>     
 
+    <rule weight="1.0">
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="nuepie" tags="n.*"/>
+   </match>
+ </rule>     
+
+
+       <rule weight="0.5">
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="gåaradidh" tags="vblex.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="go" tags="cnjsub.*"/>
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="gåaradidh" tags="vblex.*"/>
+   </match>
+ </rule>     
+
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"/>
+   <match lemma="leat" tags="vblex.*"/>
+   <match lemma="vejolaš"  tags="adj.*">
+     <select lemma="gåaradidh" tags="vblex.*"/>
+   </match>
+ </rule>     
+
+
+       <rule weight="0.5">
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="kanne" tags="adv.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="vejolaš" tags="adj.*.attr.*">
+     <select lemma="kanne" tags="adv.*"/>
+   </match>
+   <match tags="n.*"/>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="vejolaš" tags="adj.attr.*">
+     <select lemma="kanne" tags="adv.*"/>
+   </match>
+   <match tags="n.*"/>
+ </rule>     
+
+
 </rules> 

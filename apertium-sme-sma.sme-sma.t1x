@@ -117,7 +117,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*"/>
       <cat-item tags="np.*"/>
       <cat-item tags="vblex.*.der_nomact.n.*"/>
-      <cat-item tags="vblex.*.der_nomag.n.*"/>
+      <cat-item tags="vblex.*.der_nomag.n.*"/> 
+      <cat-item tags="vblex.*.der_upmi.n.*"/> 
       <cat-item tags="adj.der_vuota.n.*"/>
       <cat-item tags="adj.*.der_vuota.n.*"/>
     </def-cat>
@@ -227,6 +228,13 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ahte">
       <cat-item lemma="ahte" tags="cnjsub"/>
       <cat-item lemma="ahte" tags="cnjsub.*"/>
+    </def-cat>
+    <def-cat n="go_cnjsub">
+      <cat-item lemma="go" tags="cnjsub"/>
+      <cat-item lemma="go" tags="cnjsub.*"/>
+    </def-cat>
+    <def-cat n="vejolaš">
+      <cat-item lemma="vejolaš" tags="adj.*"/>
     </def-cat>
     <def-cat n="cnjsub">
       <cat-item tags="cnjsub"/>
@@ -1638,7 +1646,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: attr agreement">
+    <rule comment="REGLA: attr agreement cmp">
       <pattern>
         <pattern-item n="agreement-attr"/>
         <pattern-item n="n-cmp"/>
@@ -1653,7 +1661,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="a-n-agreement" case="caseFirstWord">
+          <chunk name="attr-n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1688,7 +1696,7 @@ And then there are some categories like "month", with all the months.
          <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="a-n-agreement" case="caseFirstWord">
+          <chunk name="attr-n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1706,6 +1714,66 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: prn-indef noun">
+      <pattern>
+        <pattern-item n="prn-indef"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="attr-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: prn-indef noun cmp">
+      <pattern>
+        <pattern-item n="prn-indef"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="attr-n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: verb to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
       <pattern>
@@ -2549,6 +2617,33 @@ And then there are some categories like "month", with all the months.
     </rule>
 
     <!-- SECTION: Conjunctions -->
+
+<!--    <rule comment="REGLA: ahte">
+      <pattern>
+        <pattern-item n="go_cnjsub"/>
+        <pattern-item n="vejolaš"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
+        <let><clip pos="2" side="tl" part="lem"/><lit v="gåaradidh"/></let>
+        <out>
+          <chunk name="ahte" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="cnjsub"/></tag>
+              <tag><var n="synlabel"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> -->
 
     <rule comment="REGLA: ahte">
       <pattern>

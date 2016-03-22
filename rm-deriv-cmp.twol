@@ -140,8 +140,6 @@ HandledDerivations =
 %<der%_j%>
 %<der%_jagáš%>
 %<der%_l%>
-%<der%_lasj%>
-%<der%_laš%>
 %<der%_lágan%>
 %<der%_lágaš%>
 %<der%_meahttun%>
@@ -151,16 +149,10 @@ HandledDerivations =
 %<der%_náittot%>
 %<der%_seagat%>
 %<der%_st%>
-%<der%_stuvva%>
-%<der%_stávval%>
-%<der%_supmi%>
-%<der%_suttat%>
 %<der%_t%>
-%<der%_upmi%>
 %<der%_veara%>
 %<der%_viđá%>
 %<der%_vuota%>
-%<der%_ár%>
 ;
 
 ;				! end of Sets
@@ -180,14 +172,14 @@ Rules
 : /<= _ UnhandledDerivations ;
 
 ! TODO: do we want derivations as left-parts of compounds in sme-sma? if so, comment out this rule:
-"Don't allow derivations as left-compounds"
-: /<= _ Derivations :* Cmp ;
+!"Don't allow derivations as left-compounds"
+!: /<= _ Derivations :* Cmp ;
 
 "Don't allow more than two left-compounds"
 : /<= _ Cmp :* Cmp :* Cmp ;
 
 ! TODO: do we want double derivations in sme-sma? if so, comment out this rule:
-"Don't allow derivations of derivations"
-: /<= _ Derivations :* Derivations ;
+!"Don't allow derivations of derivations"
+!: /<= _ Derivations :* Derivations ;
 
 ;				! end of Rules
