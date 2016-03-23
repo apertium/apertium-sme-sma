@@ -1118,7 +1118,7 @@
 
        <rule weight="0.6">
    <match lemma="ii" tags="vblex.*"/>
-   <match lemma="leat" tags="vblex.*"/>
+   <match lemma="leat" tags="vblex.iv.indic.*.conneg.*"/>
    <match lemma="vejolaš"  tags="adj.*">
      <select lemma="gåaradidh" tags="vblex.*"/>
    </match>
@@ -1127,21 +1127,35 @@
 
        <rule weight="0.5">
    <match lemma="vejolaš" tags="adj.*">
-     <select lemma="kanne" tags="adv.*"/>
+     <select lemma="kaanne" tags="adv.*"/>
    </match>
  </rule>     
        <rule weight="0.6">
    <match lemma="vejolaš" tags="adj.*.attr.*">
-     <select lemma="kanne" tags="adv.*"/>
+     <select lemma="kaanne" tags="adv.*"/>
    </match>
    <match tags="n.*"/>
  </rule>     
        <rule weight="0.6">
    <match lemma="vejolaš" tags="adj.attr.*">
-     <select lemma="kanne" tags="adv.*"/>
+     <select lemma="kaanne" tags="adv.*"/>
    </match>
    <match tags="n.*"/>
  </rule>     
+
+       <rule weight="0.5">
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="buektiehtidh" tags="vblex.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="leat" tags="vblex.iv.prfprc.*"/>
+   <match lemma="vejolaš" tags="adj.*.sg.nom.*">
+     <select lemma="buektiehtidh" tags="vblex.*"/>
+   </match>
+   <match tags="vblex.*"/>
+ </rule>     
+
 
 
 </rules> 

@@ -760,6 +760,9 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="←hab→"/>
     </def-attr>
 
+    <def-attr n="a_PoS">
+      <attr-item tags="adv"/>
+    </def-attr>
 
 
   </section-def-attrs>
@@ -1052,6 +1055,13 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
           <let><var n="nmbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+        </when>
+        <when>
+          <test>
+            <equal><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="adv"/></equal>
+          </test>
+          <let><clip pos="2" side="tl" part="a_nbr"/><lit v=""/></let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit v=""/></let>
         </when>
         <otherwise>
           <let><var n="case"/><clip pos="2" side="tl" part="a_case"/></let>
