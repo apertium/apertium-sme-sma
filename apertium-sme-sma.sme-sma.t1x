@@ -101,6 +101,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="subpred">
       <cat-item tags="*.@←SPRED"/>
+      <cat-item tags="*.nom.@←SUBJ"/> <!-- not ext -->
     </def-cat>
     <def-cat n="inessive">
       <cat-item tags="*.loc.@←ADVL"/>
@@ -199,15 +200,22 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_inchl.v.prfprc"/>
     </def-cat>
     <def-cat n="leat-aux">
-      <cat-item lemma="leat" tags="*.@\+FAUXV"/>
+      <cat-item lemma="leat" tags="*.@+FAUXV"/>
       <cat-item lemma="leat" tags="*.@-FAUXV"/>
     </def-cat>
     <def-cat n="leat-main">
-      <cat-item lemma="leat" tags="vblex.*.*.pres.*.*.@\+FMAINV"/>
+      <cat-item lemma="leat" tags="*.@+FMAINV"/>
+      <cat-item lemma="leat" tags="*.@-FMAINV"/>
+    </def-cat>
+    <def-cat n="leat-drop">
+      <cat-item lemma="leat" tags="vblex.iv.*.pres.*.*.@+FMAINV"/>
       <cat-item lemma="leat" tags="*.@-FMAINV"/>
     </def-cat>
     <def-cat n="ii">
-      <cat-item lemma="ii" tags="vblex.iv.neg.*"/>
+      <cat-item lemma="ii" tags="vblex.iv.neg.indic.*"/>
+    </def-cat>
+    <def-cat n="ii-imp">
+      <cat-item lemma="ii" tags="vblex.iv.neg.imp.*"/>
     </def-cat>
     <def-cat n="conneg">
       <cat-item tags="vblex.*.conneg.*"/>
@@ -1502,7 +1510,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: mus lea goiku"> <!-- mus lea borranmiella - manne bårrestovvem -->
       <pattern>
         <pattern-item n="habitive"/>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-drop"/>
         <pattern-item n="goiku"/>
       </pattern>
       <action>
@@ -2114,7 +2122,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: ii conneg">
+<!--    <rule comment="REGLA: ii conneg">
       <pattern>
         <pattern-item n="ii"/>
         <pattern-item n="conneg"/>
@@ -2152,7 +2160,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 <!--    <rule comment="REGLA: son ii conneg"> it doesn't work properly yet
       <pattern>
         <pattern-item n="prn-pers"/>
@@ -2303,7 +2311,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: leat-main inessive"> <!-- áhčči lea ruovttus - aehtjie gåetesne -->
       <pattern>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-drop"/>
         <pattern-item n="inessive"/>
       </pattern>
       <action>
@@ -2334,7 +2342,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: leat-main subpred">
       <pattern>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-drop"/>
         <pattern-item n="subpred"/>
       </pattern>
       <action>
@@ -2364,7 +2372,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: leat-main subpred"> <!-- Dïhte maanan bïjle. -->
       <pattern>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-drop"/>
         <pattern-item n="rdep"/>
         <pattern-item n="subpred"/>
       </pattern>
@@ -2628,25 +2636,19 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Conjunctions -->
 
-<!--    <rule comment="REGLA: ahte">
+<!--   <rule comment="REGLA: vejolaš">
       <pattern>
-        <pattern-item n="go_cnjsub"/>
+        <pattern-item n="leat-main"/>
         <pattern-item n="vejolaš"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
         <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
-        <let><clip pos="2" side="tl" part="lem"/><lit v="gåaradidh"/></let>
         <out>
-          <chunk name="ahte" case="caseFirstWord">
+          <chunk name="vej" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="cnjsub"/></tag>
+              <tag><lit-tag v="VA"/></tag>
               <tag><var n="synlabel"/></tag>
             </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>

@@ -1109,20 +1109,22 @@
      <select lemma="gåaradidh" tags="vblex.*"/>
    </match>
  </rule>     
+
        <rule weight="0.6">
-   <match lemma="go" tags="cnjsub.*"/>
+   <or><match lemma="go" tags="cnjsub.*"/>
+   <match lemma="leat" tags="vblex.iv.indic.*.p3.sg.*"/></or>
    <match lemma="vejolaš" tags="adj.*">
-     <select lemma="gåaradidh" tags="vblex.*"/>
+     <select lemma="gåaradidh" tags="vblex.indic.*"/>
    </match>
  </rule>     
 
-       <rule weight="0.6">
+      <rule weight="0.6">
    <match lemma="ii" tags="vblex.*"/>
    <match lemma="leat" tags="vblex.iv.indic.*.conneg.*"/>
    <match lemma="vejolaš"  tags="adj.*">
-     <select lemma="gåaradidh" tags="vblex.*"/>
+     <select lemma="gåaradidh" tags="vblex.conneg"/>
    </match>
- </rule>     
+ </rule>      
 
 
        <rule weight="0.5">
@@ -1151,7 +1153,19 @@
        <rule weight="0.6">
    <match lemma="leat" tags="vblex.iv.prfprc.*"/>
    <match lemma="vejolaš" tags="adj.*.sg.nom.*">
-     <select lemma="buektiehtidh" tags="vblex.*"/>
+     <select lemma="buektiehtidh" tags="vblex.prfprc"/>
+   </match>
+   <match tags="vblex.*"/>
+ </rule>     
+       <rule weight="0.5">
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="nuepie" tags="vblex.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="leat" tags="vblex.iv.indic.sg.*"/>
+   <match lemma="vejolaš" tags="adj.*.sg.nom.*">
+     <select lemma="nuepie" tags="vblex.*"/>
    </match>
    <match tags="vblex.*"/>
  </rule>     
