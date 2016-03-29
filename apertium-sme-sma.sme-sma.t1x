@@ -1065,96 +1065,92 @@ And then there are some categories like "month", with all the months.
 
     <def-macro n="agreement-attr-2Posit" npar="2"> <!-- pl prn, num, ord , full agreement, exc com -->
        <choose>
-          <when>        <!-- with pl.com -->
-            <test>
-	      <and>
-		<equal>
-		  <clip pos="2" side="tl" part="a_case"/>
-		  <lit-tag v="com"/>
-		</equal>
-                <equal>
-		  <clip pos="2" side="tl" part="a_nbr"/>
-		  <lit-tag v="pl"/>
-		</equal>
-              </and>
-	    </test>
-         <let>
-            <clip pos="2" side="tl" part="tags"/>
-	    <concat>
-	      <lit-tag v="n"/>
-	      <clip pos="2" side="tl" part="a_ntype"/>
-	      <clip pos="2" side="tl" part="a_nbr"/>
-	      <clip pos="2" side="tl" part="a_case"/>
-	    </concat>  
-        </let> 
-        <let>
-          <clip pos="1" side="tl" part="tags"/>
-	  <concat>
-        <clip pos="1" side="tl" part="a_npagree_type"/>
-<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="gen"/> 
-	  </concat>                
-        </let> 
-        </when>
-        <when>
+
+        <when>        <!-- with pl.com -->
           <test>
             <and>
-            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
-            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+              <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="com"/></equal>
+              <equal><clip pos="2" side="tl" part="a_nbr"/> <lit-tag v="pl"/></equal>
+            </and>
+          </test>
+          <let>
+            <clip pos="2" side="tl" part="tags"/>
+             <concat>
+               <lit-tag v="n"/>
+               <clip pos="2" side="tl" part="a_ntype"/>
+               <clip pos="2" side="tl" part="a_nbr"/>
+               <clip pos="2" side="tl" part="a_case"/>
+             </concat>  
+           </let> 
+           <let>
+             <clip pos="1" side="tl" part="tags"/>
+             <concat>
+               <clip pos="1" side="tl" part="a_npagree_type"/><!--<clip pos="1" side="tl" part="a_comp-superl"/> -->
+               <clip pos="2" side="tl" part="a_nbr"/>
+               <lit-tag v="gen"/> 
+             </concat>                
+           </let> 
+         </when>
+         
+        <when>        <!-- with sg loc (not hab), littag ine -->
+          <test>
+            <and>
+              <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+              <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+              <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
               <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not> 
             </and>
           </test>
-        <let><clip pos="1" side="tl" part="tags"/>
-	  <concat>
-	    <clip pos="1" side="tl" part="a_npagree_type"/>
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ine"/>
-	    <lit-tag v="attr"/>
-	  </concat>                
-        </let> 
-        <let>
-          <clip pos="2" side="tl" part="tags"/>
-	  <concat>
-	    <lit-tag v="n"/>
-        <clip pos="2" side="tl" part="a_type"/>
-<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ine"/>
-	  </concat>                
-        </let> 
-        </when>
-        <when>
-          <test>
-            <and>
-            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
-            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
-            <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
-            </and>
-          </test>
-        <let><clip pos="1" side="tl" part="tags"/>
-	  <concat>
-	    <clip pos="1" side="tl" part="a_npagree_type"/>
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ela"/>
-	    <lit-tag v="attr"/>
-	  </concat>                
-        </let> 
-        <let>
-          <clip pos="2" side="tl" part="tags"/>
-	  <concat>
-	    <lit-tag v="n"/>
-        <clip pos="2" side="tl" part="a_type"/>
-<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ela"/>
-	  </concat>                
-        </let> 
+          <let>
+            <clip pos="1" side="tl" part="tags"/>
+            <concat>
+              <clip pos="1" side="tl" part="a_npagree_type"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <lit-tag v="ine"/>    <!-- ine here -->
+              <lit-tag v="attr"/>
+            </concat>                
+          </let> 
+          <let>
+            <clip pos="2" side="tl" part="tags"/>
+            <concat>
+              <lit-tag v="n"/>
+              <clip pos="2" side="tl" part="a_type"/><!--<clip pos="1" side="tl" part="a_comp-superl"/> -->
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <lit-tag v="ine"/>
+            </concat>                
+          </let> 
         </when>
 
-        <when>
+        <when>        <!-- with sg loc (not hab), littag ela -->
+          <test>
+            <and>
+              <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+              <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+              <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+              <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
+            </and>
+          </test>
+          <let>
+            <clip pos="1" side="tl" part="tags"/>
+            <concat>
+              <clip pos="1" side="tl" part="a_npagree_type"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <lit-tag v="ela"/>     <!-- ela here -->
+              <lit-tag v="attr"/>
+            </concat>                
+          </let> 
+          <let>
+            <clip pos="2" side="tl" part="tags"/>
+            <concat>
+              <lit-tag v="n"/>
+              <clip pos="2" side="tl" part="a_type"/><!--<clip pos="1" side="tl" part="a_comp-superl"/> -->
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <lit-tag v="ela"/>
+            </concat>                
+          </let> 
+        </when>
+
+        <when>        <!-- with pl loc (not hab), littag ela -->
           <test>
             <and>
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
@@ -1163,22 +1159,22 @@ And then there are some categories like "month", with all the months.
               <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
             </and>
           </test>
-        <let><clip pos="1" side="tl" part="tags"/>
-	  <concat>
-	    <clip pos="1" side="tl" part="a_npagree_type"/>
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ine"/>
-	  </concat>                
+        <let>
+	      <clip pos="1" side="tl" part="tags"/>
+          <concat>
+            <clip pos="1" side="tl" part="a_npagree_type"/>
+            <clip pos="2" side="tl" part="a_nbr"/>
+            <lit-tag v="ine"/>
+          </concat>                
         </let> 
         <let>
           <clip pos="2" side="tl" part="tags"/>
-	  <concat>
-	    <lit-tag v="n"/>
-        <clip pos="2" side="tl" part="a_type"/>
-<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ine"/>
-	  </concat>                
+          <concat>
+            <lit-tag v="n"/>
+            <clip pos="2" side="tl" part="a_type"/> <!--<clip pos="1" side="tl" part="a_comp-superl"/> -->
+            <clip pos="2" side="tl" part="a_nbr"/>
+            <lit-tag v="ine"/>
+          </concat>                
         </let> 
         </when>
         <when>
@@ -1191,48 +1187,45 @@ And then there are some categories like "month", with all the months.
             </and>
           </test>
         <let><clip pos="1" side="tl" part="tags"/>
-	  <concat>
-	    <clip pos="1" side="tl" part="a_npagree_type"/>
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ela"/>
-	  </concat>                
+          <concat>
+            <clip pos="1" side="tl" part="a_npagree_type"/>
+            <clip pos="2" side="tl" part="a_nbr"/>
+            <lit-tag v="ela"/>
+          </concat>                
         </let> 
         <let>
           <clip pos="2" side="tl" part="tags"/>
-	  <concat>
-	    <lit-tag v="n"/>
-        <clip pos="2" side="tl" part="a_type"/>
-<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <lit-tag v="ela"/>
-	  </concat>                
+          <concat>
+            <lit-tag v="n"/>
+            <clip pos="2" side="tl" part="a_type"/> <!--<clip pos="1" side="tl" part="a_comp-superl"/> -->
+            <clip pos="2" side="tl" part="a_nbr"/>
+            <lit-tag v="ela"/>
+          </concat>                
         </let> 
         </when>
-
-
-        <otherwise>
-                <!-- default -->
+  
+        <otherwise>         <!-- default -->
         <let>
           <clip pos="1" side="tl" part="tags"/>
-	  <concat>
-        <clip pos="1" side="tl" part="a_npagree_type"/>
-<!--                 <clip pos="1" side="tl" part="a_comp-superl"/> -->
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <clip pos="2" side="tl" part="a_case"/> 
-	  </concat>                
+          <concat>
+            <clip pos="1" side="tl" part="a_npagree_type"/> <!--<clip pos="1" side="tl" part="a_comp-superl"/> -->
+            <clip pos="2" side="tl" part="a_nbr"/>
+            <clip pos="2" side="tl" part="a_case"/> 
+          </concat>                
         </let> 
         <let>
-       	  <clip pos="2" side="tl" part="tags"/>
-	  <concat>
+          <clip pos="2" side="tl" part="tags"/>
+          <concat>
             <lit-tag v="n"/>
-	    <clip pos="2" side="tl" part="a_ntype"/>
-	    <clip pos="2" side="tl" part="a_nbr"/>
-	    <clip pos="2" side="tl" part="a_case"/> 
-	  </concat>                
+            <clip pos="2" side="tl" part="a_ntype"/>
+            <clip pos="2" side="tl" part="a_nbr"/>
+            <clip pos="2" side="tl" part="a_case"/> 
+          </concat>                
         </let> 
         </otherwise>
-        </choose>
+      </choose>
     </def-macro> 
+
 
     <def-macro n="convert-verb-deriv1" npar="1">
 
