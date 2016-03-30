@@ -1702,10 +1702,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="agreement-attr-2Posit">
-         <with-param pos="1"/>
-         <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="attr-n" case="caseFirstWord">
             <tags>

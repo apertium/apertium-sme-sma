@@ -42,6 +42,7 @@
     <sdef n="g3"/>
     <sdef n="pres"/>
     <sdef n="indic"/>
+    <sdef n="vabess"/>
 
     <sdef n="sg"/>
     <sdef n="du"/>
@@ -365,8 +366,7 @@
     <e r="LR"><p><l>juohke<s n="prn"/><s n="ind"/></l><r>fïerhte<s n="prn"/><s n="ind"/><s n="ND"/><s n="CD"/></r></p></e>
     <e r="RL"><p><l>juohke<s n="prn"/><s n="ind"/></l><r>fïerhte<s n="prn"/><s n="ind"/></r></p></e>
 
-<!--    <e><p><l>mihkkege<s n="prn"/><s n="ind"/></l><r>mijkh<s n="prn"/><s n="ind"/></r></p></e>--> <!-- maamkh -->
-    <e><p><l>mihkkege<s n="prn"/><s n="ind"/></l><r>mijkh<s n="prn"/><s n="rel"/></r></p></e> <!-- only exists as REL in sma-->
+    <e><p><l>mihkke<s n="prn"/><s n="ind"/></l><r>mijkh<s n="prn"/><s n="ind"/></r></p></e> <!-- maamkh -->
     <e><p><l>galle<s n="prn"/><s n="ind"/></l><r>gellie<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>seammá<s n="prn"/><s n="ind"/></l><r>seamma<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>soames<s n="prn"/><s n="ind"/></l><r>såemies<s n="prn"/><s n="ind"/></r></p></e>
@@ -3563,7 +3563,7 @@
 
 
     <!-- SECTION: Adverbs -->
-
+    <e><p><l>vaikko<s n="adv"/></l><r>saaht<s n="adv"/></r></p></e>
     <e><p><l>olis<s n="post"/></l><r>dïere<s n="post"/></r></p></e> <!-- ML: check this part -->
     <e><p><l>erenoamážit<s n="adv"/></l><r>joekoen<s n="adv"/></r></p></e> <!-- aave? -->
     <e><p><l>earret<b/>eará<s n="adv"/></l><r>gaskem<b/>jeatjah<s n="adv"/></r></p></e> 
@@ -3592,6 +3592,7 @@
     <e><p><l>báljo<s n="adv"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e> 
     <e><p><l>bieđgguid<s n="adv"/></l><r>bårrode<s n="adv"/></r></p></e> 
     <e><p><l>beaivválaččat<s n="adv"/></l><r>biejjieladtje<s n="adv"/></r></p></e> <!-- Gïele vaenie åtnasåvva biejjieladtje jïh hïejmesne. -->
+    <e><p><l>beroštit<s n="vblex"/><s n="iv"/><s n="vabess"/></l><r>saaht<s n="adv"/></r></p></e> 
 
 
     <e><p><l>iešalddis<s n="adv"/></l><r>oktegh<s n="adv"/></r></p></e>
@@ -3650,6 +3651,9 @@
     <e><p><l>giđđat<s n="adv"/></l><r>gïjrege<s n="adv"/></r></p></e>
     <e><p><l>goas<s n="adv"/></l><r>gåessie<s n="adv"/></r></p></e>
     <e><p><l>gos<s n="adv"/></l><r>gusnie<s n="adv"/></r></p></e>
+    <e><p><l>gosa<s n="adv"/></l><r>gosse<s n="adv"/></r></p></e>
+    <e><p><l>gosa<s n="adv"/></l><r>sijjie<s n="n"/><s n="sg"/><s n="ill"/></r></p></e> <!-- vaikko gosa -->
+    <e><p><l>gos<s n="adv"/></l><r>sijjie<s n="n"/><s n="sg"/><s n="ine"/></r></p></e> <!-- vaikko gos -->
     <e><p><l>guhká<s n="adv"/></l><r>guhkiem<s n="adv"/></r></p></e>
     <e><p><l>gaskkal<s n="pr"/></l><r>gaskem<s n="pr"/></r></p></e>
     <e><p><l>aivve<s n="adv"/></l><r>ajve<s n="adv"/></r></p></e>

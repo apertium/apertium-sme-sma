@@ -1098,6 +1098,45 @@
  </rule>     
 
     <rule weight="1.0">
+   <match lemma="gosa">
+     <select lemma="gosse" tags="adv.*"/>
+   </match>
+ </rule>     
+
+
+       <rule weight="0.5">
+   <match lemma="gosa">
+     <select lemma="sijjie" tags="n.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+    <match lemma="vaikko" tags="adv.*"/>
+  <match lemma="gosa">
+     <select lemma="sijjie" tags="n.*"/>
+   </match>
+ </rule>     
+
+    <rule weight="1.0">
+   <match lemma="gos">
+     <select lemma="gosse" tags="adv.*"/>
+   </match>
+ </rule>     
+
+
+       <rule weight="0.5">
+   <match lemma="gos">
+     <select lemma="sijjie" tags="n.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+    <match lemma="vaikko" tags="adv.*"/>
+  <match lemma="gos">
+     <select lemma="sijjie" tags="n.*"/>
+   </match>
+ </rule>     
+
+
+    <rule weight="1.0">
    <match lemma="vejolaš" tags="adj.*">
      <select lemma="nuepie" tags="n.*"/>
    </match>
@@ -1159,13 +1198,13 @@
  </rule>     
        <rule weight="0.5">
    <match lemma="vejolaš" tags="adj.*">
-     <select lemma="nuepie" tags="vblex.*"/>
+     <select lemma="nuepie" tags="n.*"/>
    </match>
  </rule>     
        <rule weight="0.6">
    <match lemma="leat" tags="vblex.iv.indic.sg.*"/>
    <match lemma="vejolaš" tags="adj.*.sg.nom.*">
-     <select lemma="nuepie" tags="vblex.*"/>
+     <select lemma="nuepie" tags="n.*"/>
    </match>
    <match tags="vblex.*"/>
  </rule>     
