@@ -127,9 +127,6 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="oassálastit" tags="vblex.*"/>
       <cat-item lemma="oasálastit" tags="vblex.*"/>
     </def-cat>
-    <def-cat n="noun_to_adv">
-      <cat-item lemma="olámuddu" tags="n.*"/>
-    </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
     </def-cat>
@@ -908,6 +905,13 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
+      </choose>
+      <choose>
+      <when><test><equal>
+       <clip pos="1" side="tl" part="a_PoS"/><lit-tag v="adv"/>
+       </equal></test>
+       <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       </when>
       </choose>
 
      <choose>
@@ -1760,25 +1764,6 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: verb to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
       <pattern>
         <pattern-item n="verb_to_adv"/>
-      </pattern>
-      <action>
-           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
-        <out>
-          <chunk name="adverb" case="caseFirstWord">
-             <tags>
-              <tag><lit-tag v="SV"/></tag>
-            </tags>
-           <lu>
-				<clip pos="1" side="tl" part="whole"/>            
-		  </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: noun to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
-      <pattern>
-        <pattern-item n="noun_to_adv"/>
       </pattern>
       <action>
            <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
