@@ -112,7 +112,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="iiverb">
-        <cat-item lemma="ii" tags="SV.@+FAUXV"/>
+        <cat-item lemma="ii" tags="SV.@+FAUXV.*"/>
     </def-cat>
     <def-cat n="ii-conneg">
       <cat-item lemma="ii-conneg" tags="SV.*"/>

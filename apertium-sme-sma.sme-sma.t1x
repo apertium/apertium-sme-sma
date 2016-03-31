@@ -2071,7 +2071,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment="REGLA: ii conneg">
+    <rule comment="REGLA: ii conneg">
       <pattern>
         <pattern-item n="ii"/>
         <pattern-item n="conneg"/>
@@ -2109,7 +2109,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule> -->
+    </rule> 
 <!--    <rule comment="REGLA: son ii conneg"> it doesn't work properly yet
       <pattern>
         <pattern-item n="prn-pers"/>
