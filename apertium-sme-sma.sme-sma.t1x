@@ -2303,7 +2303,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="copnom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="@←SPRED"/></tag> 
             </tags>
 <!--
             <lu>
@@ -2334,7 +2334,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="copnom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="@←SPRED"/></tag> 
             </tags>
 <!--
             <lu>

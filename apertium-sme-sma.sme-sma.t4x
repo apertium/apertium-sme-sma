@@ -76,6 +76,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="SN_Obj_l">
         <cat-item tags="SN.@←OBJ.*"/>
     </def-cat>
+    <def-cat n="SN_Spred_l">
+        <cat-item tags="*.@←SPRED"/>
+    </def-cat>
 
 
 
@@ -513,6 +516,33 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+
+    <rule> <!--SVP becomes SPV. Diet orru leamen somá. Doete luste vååjnoe -->
+      <pattern>
+        <pattern-item n="FAuxV"/>
+        <pattern-item n="SN_Spred_l"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b/>
+        <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule> <!--SVO becomes SOV, Daenbiejjien gærjam tjaaleme. -->
       <pattern>
         <pattern-item n="ADV"/>

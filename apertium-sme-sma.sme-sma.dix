@@ -217,9 +217,10 @@
     <e><p><l>ovddabealde<s n="post"/></l><r>åvtelisnie<s n="post"/></r></p></e>
     <!-- <e><p><l>ovddabealde<s n="post"/></l><r>åvtebielie<s n="post"/></r></p></e>  -->
     <!-- <e><p><l>gurutbealde<s n="post"/></l><r>gårroehbielie<s n="post"/></r></p></e>  -->  
+    <e><p><l>miehtá<s n="post"/></l><r>mietie<s n="post"/></r></p></e> 
 
-    <e><p><l>miehtá<s n="pr"/></l><r>mietie<s n="post"/></r></p></e> <!-- @FIXME@: was 'pr' -->
-    <e><p><l>aisttan<s n="pr"/></l><r>mietie<s n="post"/></r></p></e> <!-- @FIXME@: was 'pr' -->
+    <e><p><l>miehtá<s n="pr"/></l><r>abpe<s n="prn"/><s n="indic"/><s n="attr"/></r></p></e> 
+    <e><p><l>aisttan<s n="pr"/></l><r>mietie<s n="post"/></r></p></e> 
 
     <e><p><l>ala<s n="post"/></l><r>nelnie<s n="post"/></r></p></e>
     <e><p><l>alde<s n="post"/></l><r>nelhtie<s n="post"/></r></p></e>
@@ -3980,6 +3981,7 @@
     <e slr="2"><p><l>cáhpat<s n="vblex"/><s n="tv"/></l><r>tjåagkodh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dadjat<s n="vblex"/><s n="tv"/></l><r>jiehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dahkat<s n="vblex"/><s n="tv"/></l><r>darjodh<s n="vblex"/><s n="tv"/></r></p></e> <!-- daajhtodh -->
+    <e><p><l>dagahit<s n="vblex"/><s n="tv"/></l><r>darjodh<s n="vblex"/><s n="tv"/></r></p></e> <!-- daajhtodh -->
     <e><p><l>dahppat<s n="vblex"/><s n="tv"/></l><r>dahpedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e slr="1"><p><l>dahppat<s n="vblex"/><s n="tv"/></l><r>steegkedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>darvehit<s n="vblex"/><s n="tv"/></l><r>njamkedh<s n="vblex"/><s n="iv"/></r></p></e>
@@ -4694,7 +4696,7 @@
     <e><p><l>šállošit<s n="vblex"/><s n="tv"/></l><r>gaatelassjedh<s n="vblex"/><s n="tv"/></r></p></e>
 
     <e><p><l>arvat<s n="vblex"/><s n="iv"/></l><r>doestedh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>astat<s n="vblex"/><s n="tv"/></l><r>astedh<s n="vblex"/><s n="iv"/></r></p></e> <!-- @FIXME@: was tv -->
+    <e><p><l>astat<s n="vblex"/><s n="tv"/></l><r>astedh<s n="vblex"/><s n="iv"/></r></p></e> 
     <e><p><l>atnit<s n="vblex"/><s n="tv"/></l><r>utnedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>badjánit<s n="vblex"/><s n="iv"/></l><r>berkiestidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>bearráigeahččat<s n="vblex"/><s n="tv"/></l><r>vuartasjidh<s n="vblex"/><s n="tv"/></r></p></e>
