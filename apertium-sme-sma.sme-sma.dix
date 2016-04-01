@@ -478,7 +478,12 @@
     <e><p><l>dilli<s n="n"/></l><r>tsiehkie<s n="n"/></r></p></e>
     <e><p><l>bargodilli<s n="n"/></l><r>barkoetsiehkie<s n="n"/></r></p></e>
     <e><p><l>sámediggedieđáhus<s n="n"/></l><r>saemiedigkiebïevnese<s n="n"/></r></p></e>
-    <e><p><l>dieđáhus<s n="n"/></l><r>bïevnese<s n="n"/></r></p></e>
+    <e><p><l>dieđáhus<s n="n"/></l><r>bïevnese<s n="n"/></r></p></e> 
+    <e><p><l>fuolahus<s n="n"/></l><r>hokse<s n="n"/></r></p></e>
+    <e><p><l>friijavuohta<s n="n"/></l><r>frïjjevoete<s n="n"/></r></p></e>
+    <e><p><l>fierpmádat<s n="n"/></l><r>vearmadahke<s n="n"/></r></p></e>
+    <e><p><l>energiija<s n="n"/></l><r>energije<s n="n"/></r></p></e>
+    <e><p><l>psykiatriija<s n="n"/></l><r>psykiatrije<s n="n"/></r></p></e>
     <e><p><l>eiseváldi<s n="n"/></l><r>åejvieladtjh<s n="n"/></r></p></e> <!-- TODO: sme can give sg, sma can't generate sg -->
     <e><p><l>ovdamearka<s n="n"/></l><r>vuesiehtimmie<s n="n"/></r></p></e>
     <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="nom"/></l><r>båetije<b/>aejkie<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -2983,6 +2988,17 @@
     <e><p><l>buohtalasgiella<s n="n"/></l><r>baalteulmie<s n="n"/></r></p></e>
     <e><p><l>eallinoaidnu<s n="n"/></l><r>jielemevåajnoe<s n="n"/></r></p></e>
     <e><p><l>etihkka<s n="n"/></l><r>etihke<s n="n"/></r></p></e>
+
+    <e><p><l>stoahkanhearva<s n="n"/></l><r>stååkegaevnie<s n="n"/></r></p></e>
+    <e><p><l>siida<s n="n"/></l><r>sïjte<s n="n"/></r></p></e>
+    <e><p><l>stoahkanhearva<s n="n"/></l><r>stååkegaevnie<s n="n"/></r></p></e>
+    <e><p><l>rutiidna<s n="n"/></l><r>rutijne<s n="n"/></r></p></e>
+    <e><p><l>rusttet<s n="n"/></l><r>bægkoe<s n="n"/></r></p></e>
+    <e><p><l>sámegielmáhttu<s n="n"/></l><r>saemiengïelhmaahtoe<s n="n"/></r></p></e>
+    <e><p><l>rehketdoallu<s n="n"/></l><r>ryökneme<s n="n"/></r></p></e>
+
+
+    
     <e><p><l>servodatfága<s n="n"/></l><r>siebredahkenaamhtse<s n="n"/></r></p></e>
     <e><p><l>oahppoválljen<s n="n"/></l><r>lohkehtimmienveeljeme<s n="n"/></r></p></e>
     <e><p><l>duiskkagiella<s n="n"/></l><r>tyskegïele<s n="n"/></r></p></e>
@@ -3181,7 +3197,7 @@
     <e><p><l>ilolaš<s n="adj"/></l><r>feejjene<s n="adj"/></r></p></e>
     <e><p><l>ovttaskas<s n="adj"/></l><r>oktegs<s n="adj"/></r></p></e>
     <e><p><l>dákkáraš<s n="adj"/></l><r>dagkeres<s n="adj"/></r></p></e>
-    <e><p><l>agálaš<s n="adj"/></l><r>ihkuve<s n="adj"/></r></p></e>
+    <e><p><l>agálaš<s n="adj"/></l><r>ahkeds<s n="adj"/></r></p></e>
     <e><p><l>albma<s n="adj"/></l><r>eensi<s n="adj"/></r></p></e>
     <e><p><l>alit<s n="adj"/></l><r>plaave<s n="adj"/></r></p></e>
     <e><p><l>allat<s n="adj"/></l><r>jolle<s n="adj"/></r></p></e>
@@ -3566,33 +3582,43 @@
     <!-- SECTION: Adverbs -->
     <e><p><l>vaikko<s n="adv"/></l><r>saaht<s n="adv"/></r></p></e>
     <e><p><l>olis<s n="post"/></l><r>dïere<s n="post"/></r></p></e> <!-- ML: check this part -->
-    <e><p><l>erenoamážit<s n="adv"/></l><r>joekoen<s n="adv"/></r></p></e> <!-- aave? -->
+    <e><p><l>erenoamážit<s n="adv"/></l><r>joekoenlaakan<s n="adv"/></r></p></e> <!-- aave? -->
+    <e><p><l>dábálaččát<s n="adv"/></l><r>sïejhmede<s n="adv"/></r></p></e> <!-- aave? -->
+
     <e><p><l>earret<b/>eará<s n="adv"/></l><r>gaskem<b/>jeatjah<s n="adv"/></r></p></e> 
+    
     <e><p><l>iešguđetge<b/>ládje<s n="adv"/></l><r>joekehtslaakan<s n="adv"/></r></p></e> 
-    <e><p><l>fásta<s n="adv"/></l><r>ihkuve<s n="adj"/><s n="attr"/></r></p></e> 
+    <e><p><l>fásta<s n="adv"/></l><r>vihties<s n="adj"/><s n="attr"/></r></p></e>
+     
     <e><p><l>jeavddalaččat<s n="adv"/></l><r>jaabnan<s n="adv"/></r></p></e> 
+    <e><p><l>jeavddalaččat<s n="adv"/></l><r>jaabnoelaaketje<s n="adv"/></r></p></e> 
+
+    
     <e><p><l>jođáneappot<s n="adv"/></l><r>verkebe<s n="adv"/></r></p></e> 
     <e><p><l>sadjái<s n="post"/></l><r>sijjie<s n="n"/><s n="sg"/><s n="ela"/></r></p></e> 
     <e><p><l>váste<s n="post"/></l><r><s n="post"/></r></p></e> 
+    
     <e><p><l>oppalohkái<s n="adv"/></l><r>ållesthlaakan<s n="adv"/></r></p></e> 
-     <e><p><l>loahpageahčen<s n="post"/></l><r>minngiegietjesne<s n="post"/></r></p></e> 
+    
+   <e><p><l>loahpageahčen<s n="post"/></l><r>minngiegietjesne<s n="post"/></r></p></e> 
    <e><p><l>olggobealde<s n="post"/></l><r>ålkolen<s n="post"/></r></p></e> 
    <e><p><l>olggobealde<s n="pr"/></l><r>ålkolen<s n="post"/></r></p></e> 
     <e><p><l>áigges<b/>áigái<s n="vblex"/></l><r>daamtaj<s n="adv"/></r></p></e> 
     <e><p><l>njálmmálaččat<s n="adv"/></l><r>njaalmeldh<s n="adv"/></r></p></e> 
     <e><p><l>čálalaččat<s n="adv"/></l><r>tjaaleldh<s n="adv"/></r></p></e> 
-    <e><p><l>oktanis<s n="adv"/></l><r>seamma<b/>tïjjen<s n="adv"/></r></p></e> 
-    <e><p><l>dássážii<s n="adv"/></l><r>daan<b/>mearan<s n="adv"/></r></p></e> 
-    <e><p><l>dieđusge<s n="adv"/></l><r>numhtie<s n="adv"/></r></p></e>  <!-- Edtja hævvi numhtie årrodh. -->
+    <e><p><l>oktanis<s n="adv"/></l><r>seammasïenten<s n="adv"/></r></p></e> 
+    <e><p><l>dássážii<s n="adv"/></l><r>daan<b/>raajan<s n="adv"/></r></p></e> 
+    <e><p><l>dieđusge<s n="adv"/></l><r>hævvi<s n="adv"/></r></p></e>  
     <e><p><l>riikkaidgaskasaččat<s n="adv"/></l><r>gaskenasjovnaale<b/>daltesisnie<s n="adv"/></r></p></e> 
     <e><p><l>davviriikkalaččat<s n="adv"/></l><r>noerhtelaanti<b/>daltesisnie<s n="adv"/></r></p></e> 
+    
     <e><p><l>lulde<s n="adv"/></l><r>åarjene<s n="adv"/></r></p></e> 
     <e><p><l>lullin<s n="adv"/></l><r>åarjene<s n="adv"/></r></p></e> 
     <e><p><l>máddin<s n="adv"/></l><r>åarjene<s n="adv"/></r></p></e> 
     <e><p><l>davvin<s n="adv"/></l><r>noerhtene<s n="adv"/></r></p></e> 
     <e><p><l>báljo<s n="adv"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e> 
     <e><p><l>bieđgguid<s n="adv"/></l><r>bårrode<s n="adv"/></r></p></e> 
-    <e><p><l>beaivválaččat<s n="adv"/></l><r>biejjieladtje<s n="adv"/></r></p></e> <!-- Gïele vaenie åtnasåvva biejjieladtje jïh hïejmesne. -->
+    <e><p><l>beaivválaččat<s n="adv"/></l><r>biejjieladtje<s n="adv"/></r></p></e> <!-- Gïele vaeniem åtnasåvva biejjieladtje jïh hïejmesne. -->
     <e><p><l>beroštit<s n="vblex"/><s n="iv"/><s n="vabess"/></l><r>saaht<s n="adv"/></r></p></e> 
 
 
@@ -4881,6 +4907,7 @@
     <!-- SECTION: Proper Nouns -->
     <e><p><l>4H-searvi<s n="np"/></l><r>4H-searvi<s n="np"/></r></p></e>
     <e><p><l>Aahkavaerie<s n="np"/></l><r>Aahkavaerie<s n="np"/></r></p></e>
+    <e><p><l>Gáisi<s n="np"/></l><r>Gaejsie<s n="np"/></r></p></e>
     <e><p><l>Aajrie<s n="np"/></l><r>Aajrie<s n="np"/></r></p></e>
     <e><p><l>Aakenusduottar<s n="np"/></l><r>Aakenusduottar<s n="np"/></r></p></e>
     <e><p><l>Aakenusjohka<s n="np"/></l><r>Aakenusjohka<s n="np"/></r></p></e>
