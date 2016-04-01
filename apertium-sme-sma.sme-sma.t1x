@@ -123,12 +123,18 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.der_vuota.n.*"/>
       <cat-item tags="adj.*.der_vuota.n.*"/>
     </def-cat>
+    <def-cat n="gen">
+      <cat-item tags="*.gen.*"/>
+    </def-cat>
     <def-cat n="verb_to_adv">
       <cat-item lemma="oassálastit" tags="vblex.*"/>
       <cat-item lemma="oasálastit" tags="vblex.*"/>
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
+    </def-cat>
+    <def-cat n="váste">
+      <cat-item lemma="váste" tags="post.*"/>
     </def-cat>
     <def-cat n="prsprc">
       <cat-item tags="*.prsprc.*"/>
@@ -424,6 +430,8 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="der_l"/>
        <attr-item tags="der_caus"/>
        <attr-item tags="der_ahtje"/>
+       <attr-item tags="der_ht"/>
+       <attr-item tags="der_h"/>
        <attr-item tags="der_d"/>
        <attr-item tags="der_st"/>
 	   
@@ -1248,6 +1256,14 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ahtje"/></let>
         </when>
       </choose>
+      <choose>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_h"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ht"/></let>
+        </when>
+      </choose>
     </def-macro>
 
 
@@ -1708,6 +1724,8 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
         <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="attr-n" case="caseFirstWord">
             <tags>
@@ -1737,6 +1755,8 @@ And then there are some categories like "month", with all the months.
         <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
         <call-macro n="proc-syn-foc-qst1"><with-param pos="2"/></call-macro>
         <call-macro n="proc-syn-foc-qst1"><with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="3"/></call-macro>
         <out>
           <chunk name="attr-n" case="caseFirstWord">
             <tags>
@@ -1761,6 +1781,26 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: váste"> <!-- illative instead of pp with váste -->
+      <pattern>
+        <pattern-item n="gen"/>
+        <pattern-item n="váste"/>
+      </pattern>
+      <action>
+           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
+         <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="adverb" case="caseFirstWord">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: verb to adv"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
       <pattern>
         <pattern-item n="verb_to_adv"/>
