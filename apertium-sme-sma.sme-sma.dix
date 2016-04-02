@@ -3022,7 +3022,7 @@
     <e><p><l>sámegielkursa<s n="n"/></l><r>saemienkuvsje<s n="n"/></r></p></e>
     <e><p><l>sámegielhálli<s n="n"/><s n="nomag"/></l><r>saemiestæjja<s n="n"/></r></p></e>
     <e><p><l>fágakursa<s n="n"/></l><r>faagekuvsje<s n="n"/></r></p></e>
-    <e><p><l>guohtunguorahallankursa<s n="n"/></l><r>gåatomegiehtjedimmiekurse<s n="n"/></r></p></e>
+    <e><p><l>guohtunguorahallankursa<s n="n"/></l><r>gåatomegiehtjedimmiekuvsje<s n="n"/></r></p></e>
     <e><p><l>fuomášupmi<s n="n"/></l><r>åssjalommes<s n="n"/></r></p></e>
     <e><p><l>višuvdna<s n="n"/></l><r>visjovne<s n="n"/></r></p></e>
     <e><p><l>ruoŧŧelaš<s n="n"/></l><r>svïenske<s n="n"/></r></p></e>
@@ -3594,6 +3594,7 @@
 
 
     <!-- SECTION: Adverbs -->
+    <e><p><l>unnit<s n="adv"/></l><r>vaenebe<s n="adv"/></r></p></e>
     <e><p><l>vaikko<s n="adv"/></l><r>saaht<s n="adv"/></r></p></e>
     <e><p><l>olis<s n="post"/></l><r>dïere<s n="post"/></r></p></e> <!-- ML: check this part -->
     <e><p><l>erenoamážit<s n="adv"/></l><r>joekoenlaakan<s n="adv"/></r></p></e> <!-- aave? -->
@@ -3639,7 +3640,7 @@
     <e><p><l>iešalddis<s n="adv"/></l><r>oktegh<s n="adv"/></r></p></e>
     <e><p><l>dovdomassii<s n="adv"/></l><r>tjarki<s n="adv"/></r></p></e>
     <e><p><l>naba<s n="adv"/></l><r>nååts<s n="adv"/></r></p></e>
-    <e><p><l>njuolgga<s n="adv"/></l><r>rïekte<s n="pcle"/></r></p></e>
+    <e><p><l>njuolgga<s n="adv"/></l><r>rïekte<s n="adv"/></r></p></e>
     <e><p><l>duođai<s n="adv"/></l><r>darhkan<s n="pcle"/></r></p></e>
     <e><p><l>dattetge<s n="adv"/></l><r>darhkan<s n="pcle"/></r></p></e>
     <e><p><l>nappo<s n="adv"/></l><r>nagke<s n="pcle"/></r></p></e>
@@ -3661,7 +3662,7 @@
     <e><p><l>dárkilit<s n="adv"/></l><r>eensilaakan<s n="adv"/></r></p></e>
     <e><p><l>vuđolaččat<s n="adv"/></l><r>veele<s n="adv"/></r></p></e>
     <e><p><l>hihtásit<s n="adv"/></l><r>soejmi<s n="adv"/></r></p></e>
-    <e><p><l>lagabui<s n="adv"/></l><r>lïhkebe<s n="adv"/></r></p></e>
+    <e><p><l>lagabui<s n="adv"/></l><r>lïhkebe<s n="adv"/><s n="comp"/></r></p></e>
     <e><p><l>várra<s n="adv"/></l><r>kaanne<s n="adv"/></r></p></e>
     <e><p><l>veaháš<s n="adv"/></l><r>ohtje<s n="adv"/></r></p></e>
     <e><p><l>die<s n="adv"/></l><r>dagkoe<s n="adv"/></r></p></e>
@@ -4916,7 +4917,7 @@
     <e><re>[0-9]+([., \-–]+[0-9]+)*</re><p><l><s n="adj"/></l><r><s n="adj"/></r></p></e>
 
     <e><p><l>miljovdna<s n="num"/></l><r>millijovne<s n="num"/></r></p></e>
-    <e><p><l>moadde<s n="num"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e>
+    <e><p><l>moadde<s n="num"/></l><r>naan<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e>
 
     <!-- SECTION: Proper Nouns -->
     <e><p><l>4H-searvi<s n="np"/></l><r>4H-searvi<s n="np"/></r></p></e>
@@ -21669,7 +21670,7 @@
     <e><p><l>Davidsen<s n="np"/></l><r>Davidsen<s n="np"/></r></p></e>
     <e><p><l>Davisstredet<s n="np"/></l><r>Davisstredet<s n="np"/></r></p></e>
     <e><p><l>Davos<s n="np"/></l><r>Davos<s n="np"/></r></p></e>
-    <e><p><l>Davvi-Trøndeláhka<s n="np"/></l><r>Noerhte-Trööndelaage<s n="np"/></r></p></e>
+    <e><p><l>Davvi-Trøndeláhka<s n="np"/></l><r>Noerhte-Tröndelaage<s n="np"/></r></p></e>
     <e><p><l>Dawson<s n="np"/></l><r>Dawson<s n="np"/></r></p></e>
     <e><p><l>Dayton<s n="np"/></l><r>Dayton<s n="np"/></r></p></e>
     <e><p><l>Dean<s n="np"/></l><r>Dean<s n="np"/></r></p></e>
@@ -29790,8 +29791,8 @@
     <e><p><l>Trysil<s n="np"/></l><r>Trysil<s n="np"/></r></p></e>
     <e><p><l>Trålerkomiteen<s n="np"/></l><r>Trålerkomiteen<s n="np"/></r></p></e>
     <e><p><l>Trøgstad<s n="np"/></l><r>Trøgstad<s n="np"/></r></p></e>
-    <e><p><l>Trøndelag<s n="np"/></l><r>Trööndelaage<s n="np"/></r></p></e>
-    <e r="LR"><p><l>Trøndeláhka<s n="np"/></l><r>Trööndelaage<s n="np"/></r></p></e>
+    <e><p><l>Trøndelag<s n="np"/></l><r>Tröndelaage<s n="np"/></r></p></e>
+    <e r="LR"><p><l>Trøndeláhka<s n="np"/></l><r>Tröndelaage<s n="np"/></r></p></e>
     <e><p><l>Tsar<s n="np"/></l><r>Tsar<s n="np"/></r></p></e>
     <e><p><l>Tsjad<s n="np"/></l><r>Tsjad<s n="np"/></r></p></e>
     <e><p><l>Tsjekhov<s n="np"/></l><r>Tsjekhov<s n="np"/></r></p></e>
