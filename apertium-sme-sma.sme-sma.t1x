@@ -69,6 +69,8 @@ And then there are some categories like "month", with all the months.
 <transfer default="chunk">
   <section-def-cats>
     <def-cat n="n-cmp">
+      <cat-item tags="*.cmp.guio"/>
+      <cat-item tags="*.cmp"/>
       <cat-item tags="n.*.cmp_sgnom.cmp"/>
       <cat-item tags="n.cmp_sgnom.cmp"/>
       <cat-item tags="n.*.*.cmp.guio"/>
@@ -198,9 +200,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_inchl.v.inf.*"/>
     </def-cat>
     <def-cat n="verb-prfprc">
-      <cat-item tags="vblex.*.prfprc.*"/>
-      <cat-item tags="vblex.*.der_inchl.v.prfprc.*"/>
-      <cat-item tags="vblex.*.der_inchl.v.prfprc"/>
+      <cat-item tags="*.prfprc.*"/>
     </def-cat>
     <def-cat n="leat-aux">
       <cat-item lemma="leat" tags="*.@+FAUXV"/>
@@ -292,14 +292,18 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="adj"/>
     </def-attr>
 
+    <def-attr n="a_comp-superl">
+      <attr-item tags="comp"/>
+      <attr-item tags="sup"/>
+    </def-attr>
 
 
     <def-attr n="a_cmp">
-      <attr-item tags="sgcmp"/>
-      <attr-item tags="sgnomcmp"/>
-      <attr-item tags="attr"/>
-      <attr-item tags="sggencmp"/>
-      <attr-item tags="plgencmp"/>
+      <attr-item tags="cmp_sggen"/>
+      <attr-item tags="cmp_sgnom"/>
+      <attr-item tags="cmp_attr"/>
+      <attr-item tags="cmp_plgen"/>
+      <attr-item tags="cmp_sh"/>
     </def-attr>
 
     <def-attr n="a_nom">
@@ -914,13 +918,15 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
       </choose>
-      <choose>
+     <choose>
       <when><test><equal>
        <clip pos="1" side="tl" part="a_PoS"/><lit-tag v="adv"/>
        </equal></test>
-       <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+          <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
        </when>
-      </choose>
+      </choose> 
 
      <choose>
         <when>
@@ -1612,6 +1618,41 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+
+    <rule comment="REGLA: n-cmp n">
+      <pattern>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="proc-syn-foc-qst1">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss1">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="ncmp" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="synlabel"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: n-cmp n">
       <pattern>
@@ -2559,9 +2600,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst1">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="proc-syn-foc-qst1"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
