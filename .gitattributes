@@ -43,6 +43,7 @@ dev/generation-schoolcorpus-errors.sh -text
 dev/generation-test.sh -text
 dev/hash-report.freq -text
 dev/lemmatizingcommand.txt -text
+dev/lookatverbs.txt -text
 dev/missing_freq_a_cmp -text
 dev/missing_freq_a_nocmp -text
 dev/missing_freq_adv -text
