@@ -88,7 +88,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.prfprc.*"/>
       <cat-item tags="n.*"/>
       <cat-item tags="adv.*"/>
-      <cat-item tags="adj.*"/>
+      <cat-item tags="adj.*.attr.*"/>
+      <cat-item tags="adj.*.*.nom.*"/>
     </def-cat>
     <def-cat n="goiku">
       <cat-item lemma="borranmiella" tags="n.*.sg.nom.*"/>
@@ -2376,10 +2377,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="subpred"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst2">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="proc-syn-foc-qst2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="copnom" case="caseFirstWord">
             <tags>
@@ -2407,10 +2406,9 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="subpred"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst2">
-           <with-param pos="2"/>
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="proc-syn-foc-qst2"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="copnom" case="caseFirstWord">
             <tags>
