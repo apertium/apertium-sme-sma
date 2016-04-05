@@ -173,7 +173,7 @@
     <e><p><l>ja<s n="cnjcoo"/></l><r>jïh<s n="cnjcoo"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>gonnoeh<s n="cnjcoo"/></r></p></e>
     <e><p><l>muhto<s n="cnjcoo"/></l><r>mohte<s n="cnjcoo"/></r></p></e>
-    <e r="LR"><p><l>muhte<s n="cnjsub"/></l><r>mohte<s n="cnjcoo"/></r></p></e>
+    <e><p><l>muhte<s n="cnjcoo"/></l><r>mohte<s n="cnjcoo"/></r></p></e>
     <e><p><l>vai<s n="cnjcoo"/></l><r>vuj<s n="cnjcoo"/></r></p></e>
     <e><p><l>dahje<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
     <e r="LR"><p><l>dahje<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
@@ -696,7 +696,7 @@
     <e><p><l>bursa<s n="n"/></l><r>bongke<s n="n"/></r></p></e>
     <e><p><l>buser<s n="n"/></l><r>abpese<s n="n"/></r></p></e>
     <e><p><l>busse<s n="n"/><s n="g3"/></l><r>busse<s n="n"/></r></p></e>
-    <e slr="1"><p><l>busse<s n="n"/></l><r>voessetje<s n="n"/></r></p></e>
+    <e slr="1"><p><l>busse<s n="n"/><s n="g3"/></l><r>voessetje<s n="n"/></r></p></e>
     <e><p><l>bussá<s n="n"/><s n="g3"/></l><r>gaahtoe<s n="n"/></r></p></e>
     <e><p><l>buvda<s n="n"/></l><r>bovre<s n="n"/></r></p></e>
     <e><p><l>buvru<s n="n"/></l><r>kraavhtse<s n="n"/></r></p></e>
@@ -1894,7 +1894,7 @@
     <e><p><l>riikkabeaivi<s n="n"/></l><r>rïjhkebiejjie<s n="n"/></r></p></e>
     <e><p><l>riipu<s n="n"/></l><r>gyhtsele<s n="n"/></r></p></e>
     <e><p><l>rissi<s n="n"/><s n="g3"/></l><r>båskoe<s n="n"/></r></p></e>
-    <e slr="1"><p><l>rissi<s n="n"/></l><r>hïngse<s n="n"/></r></p></e>
+    <e slr="1"><p><l>rissi<s n="n"/><s n="g3"/></l><r>hïngse<s n="n"/></r></p></e>
     <e><p><l>risteadni<s n="n"/></l><r>krist’ietnie<s n="n"/></r></p></e>
     <e><p><l>ristáhčči<s n="n"/></l><r>krist’aehtjie<s n="n"/></r></p></e>
     <e><p><l>ritni<s n="n"/></l><r>jyjsege<s n="n"/></r></p></e>
@@ -3627,6 +3627,7 @@
     <e><p><l>bieđgguid<s n="adv"/></l><r>bårrode<s n="adv"/></r></p></e> 
     <e><p><l>beaivválaččat<s n="adv"/></l><r>biejjieladtje<s n="adv"/></r></p></e> <!-- Gïele vaeniem åtnasåvva biejjieladtje jïh hïejmesne. -->
     <e><p><l>beroštit<s n="vblex"/><s n="iv"/><s n="vabess"/></l><r>saaht<s n="adv"/></r></p></e> 
+    <e><p><l>boazodoallolinjá<s n="n"/></l><r>båatsoejielemedaltese<s n="n"/></r></p></e> 
 
 
     <e><p><l>iešalddis<s n="adv"/></l><r>oktegh<s n="adv"/></r></p></e>
@@ -4908,7 +4909,9 @@
     <e><re>[0-9]+([., \-–]+[0-9]+)*</re><p><l><s n="adj"/></l><r><s n="adj"/></r></p></e>
 
     <e><p><l>miljovdna<s n="num"/></l><r>millijovne<s n="num"/></r></p></e>
-    <e><p><l>moadde<s n="num"/></l><r>naan<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e>
+    <e><p><l>moadde<s n="num"/><s n="sg"/><s n="nom"/></l><r>naan<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e>
+    <e><p><l>moadde<s n="num"/><s n="sg"/><s n="acc"/></l><r>naan<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e>
+    <e><p><l>moadde<s n="num"/><s n="sg"/><s n="gen"/></l><r>naan<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e>
 
     <!-- SECTION: Proper Nouns -->
     <e><p><l>4H-searvi<s n="np"/></l><r>4H-searvi<s n="np"/></r></p></e>
@@ -12289,7 +12292,6 @@
     <e><p><l>Marmenjárga<s n="np"/></l><r>Marmenjárga<s n="np"/></r></p></e>
     <e><p><l>Marmenjárgohppi<s n="np"/></l><r>Marmenjárgohppi<s n="np"/></r></p></e>
     <e><p><l>Marranluokta<s n="np"/></l><r>Marranluokta<s n="np"/></r></p></e>
-    <e><p><l>Marshall<s n="np"/></l><r>Marshall<s n="np"/></r></p></e>
     <e><p><l>Marshallsullot<s n="np"/></l><r>Marshallsullot<s n="np"/></r></p></e>
     <e><p><l>Marššavárri<s n="np"/></l><r>Marššavárri<s n="np"/></r></p></e>
     <e><p><l>Marššačohkka<s n="np"/></l><r>Marššačohkka<s n="np"/></r></p></e>
@@ -21339,7 +21341,6 @@
     <e><p><l>Byglandsfjord<s n="np"/></l><r>Byglandsfjord<s n="np"/></r></p></e>
     <e><p><l>Bygningabalken<s n="np"/></l><r>Bygningabalken<s n="np"/></r></p></e>
     <e><p><l>Bykle<s n="np"/></l><r>Bykle<s n="np"/></r></p></e>
-    <e><p><l>Byrkije<s n="np"/></l><r>Byrkije<s n="np"/></r></p></e>
     <e><p><l>Bávlos<s n="np"/></l><r>Bávlos<s n="np"/></r></p></e>
     <e><p><l>Bávval<s n="np"/></l><r>Bávval<s n="np"/></r></p></e>
     <e><p><l>Bäckman<s n="np"/></l><r>Bäckman<s n="np"/></r></p></e>
@@ -27988,7 +27989,7 @@
     <e><p><l>Røthe<s n="np"/></l><r>Røthe<s n="np"/></r></p></e>
     <e><p><l>Røvik<s n="np"/></l><r>Røvik<s n="np"/></r></p></e>
     <e><p><l>Røyken<s n="np"/></l><r>Røyken<s n="np"/></r></p></e>
-    <e><p><l>Røyrvik<s n="np"/></l><r>Røyrvik<s n="np"/></r></p></e>
+    <e><p><l>Røyrvik<s n="np"/></l><r>Raavrhvijhke<s n="np"/></r></p></e>
     <e><p><l>Røyset<s n="np"/></l><r>Røyset<s n="np"/></r></p></e>
     <e><p><l>SMSAm<s n="np"/></l><r>SMSAm<s n="np"/></r></p></e>
     <e><p><l>Saab<s n="np"/></l><r>Saab<s n="np"/></r></p></e>
@@ -30737,7 +30738,6 @@
     <e><p><l>Selánda<s n="np"/></l><r>Zealaante<s n="np"/></r></p></e>
     <e><p><l>Várdobáiki<s n="np"/></l><r>Várdobáiki<s n="np"/></r></p></e>
     <e><p><l>Sáltoduottar<s n="np"/></l><r>Sáltoduottar<s n="np"/></r></p></e>
-    <e><p><l>Røyrviika<s n="np"/></l><r>Raavrhvijhke<s n="np"/></r></p></e>
     <e><p><l>Omasvuotna<s n="np"/></l><r>Omasvuotna<s n="np"/></r></p></e>
     <e><p><l>Loabát<s n="np"/></l><r>Loabát<s n="np"/></r></p></e>
     <e><p><l>Hápmir<s n="np"/></l><r>Hápmir<s n="np"/></r></p></e>
@@ -31968,8 +31968,6 @@
     <e><p><l>Baskerland<s n="np"/></l><r>Baskerland<s n="np"/></r></p></e>
     <e><p><l>Baskkes<s n="np"/></l><r>Baskkes<s n="np"/></r></p></e>
     <e><p><l>Basra<s n="np"/></l><r>Basra<s n="np"/></r></p></e>
-    <e><p><l>Bass-stredet<s n="np"/></l><r>Bass-stredet<s n="np"/></r></p></e>
-    <e><p><l>Bass-sundet<s n="np"/></l><r>Bass-sundet<s n="np"/></r></p></e>
     <e><p><l>Basseterre<s n="np"/></l><r>Basseterre<s n="np"/></r></p></e>
     <e><p><l>Bastiansen<s n="np"/></l><r>Bastiansen<s n="np"/></r></p></e>
     <e><p><l>Bastuträsk<s n="np"/></l><r>Bastuträsk<s n="np"/></r></p></e>
@@ -42765,7 +42763,6 @@
     <e><p><l>Noomi<s n="np"/></l><r>Noomi<s n="np"/></r></p></e>
     <e><p><l>Noomie<s n="np"/></l><r>Noomie<s n="np"/></r></p></e>
     <e><p><l>Noord-Brabant<s n="np"/></l><r>Noord-Brabant<s n="np"/></r></p></e>
-    <e><p><l>Noord-Holland<s n="np"/></l><r>Noord-Holland<s n="np"/></r></p></e>
     <e><p><l>Nopanen<s n="np"/></l><r>Nopanen<s n="np"/></r></p></e>
     <e><p><l>Noponen<s n="np"/></l><r>Noponen<s n="np"/></r></p></e>
     <e><p><l>NorACIA<s n="np"/></l><r>NorACIA<s n="np"/></r></p></e>
