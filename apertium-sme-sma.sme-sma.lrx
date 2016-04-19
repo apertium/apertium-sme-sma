@@ -1220,6 +1220,24 @@
    <match tags="vblex.*"/>
  </rule>     
 
+       <rule weight="1.0">
+   <match lemma="gitta" tags="adv.*">
+     <select lemma="öövre" tags="adv.*"/>
+   </match>
+ </rule>     
+
+       <rule weight="0.5">
+   <match lemma="gitta" tags="adv.*">
+     <select lemma="dahpeldihkie" tags="adv.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <or><match tags="n.sem_org.*"/><match tags="n.sem_build_org.*"/><match tags="n.sem_org.*"/><match tags="n.sem_edu_org.*"/></or>
+   <match />
+   <match lemma="gitta">
+     <select lemma="dahpeldihkie" tags="adv.*"/>
+   </match>
+ </rule>     
 
 
 </rules> 
