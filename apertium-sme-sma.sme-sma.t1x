@@ -120,9 +120,8 @@ And then there are some categories like "month", with all the months.
     <def-cat n="noun">
       <cat-item tags="n.*"/>
       <cat-item tags="np.*"/>
-      <cat-item tags="vblex.*.der_nomact.n.*"/>
-      <cat-item tags="vblex.*.der_nomag.n.*"/> 
-      <cat-item tags="vblex.*.der_upmi.n.*"/> 
+      <cat-item tags="vblex.*.n.*"/>
+      <cat-item tags="vblex.*.n.*"/> 
       <cat-item tags="adj.der_vuota.n.*"/>
       <cat-item tags="adj.*.der_vuota.n.*"/>
     </def-cat>
@@ -440,6 +439,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="der_h"/>
        <attr-item tags="der_d"/>
        <attr-item tags="der_st"/>
+       <attr-item tags="der_muš"/>
 	   
     </def-attr>
 
