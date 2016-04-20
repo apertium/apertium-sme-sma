@@ -151,7 +151,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adj-rdep">
       <cat-item tags="adj.*.@→N"/>
     </def-cat>
-    <def-cat n="num">
+    <def-cat n="numsem">
       <cat-item tags="num.*"/>
     </def-cat>
     <def-cat n="num-ldep">
@@ -1476,7 +1476,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: num">
       <pattern>
-        <pattern-item n="num"/>
+        <pattern-item n="numsem"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
@@ -1486,7 +1486,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="num" case="caseFirstWord">
+          <chunk name="numsem" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
@@ -1625,7 +1625,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: n-cmp n">
       <pattern>
         <pattern-item n="n-cmp"/>
-        <pattern-item n="num"/>
+        <pattern-item n="numsem"/>
       </pattern>
       <action>
         <call-macro n="proc-syn-foc-qst1">
