@@ -277,6 +277,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="agreement-attr">                             
       <cat-item lemma="muhtun" tags="prn.ind.*"/> 
       <cat-item lemma="buot" tags="prn.ind.*"/> 
+      <cat-item lemma="boahtte" tags="adj.*"/> 
     </def-cat>
 
 
@@ -860,7 +861,7 @@ And then there are some categories like "month", with all the months.
       <call-macro n="proc-syn-foc-qst1">
         <with-param pos="1"/>
       </call-macro>
-      <!-- Sometimes a combintion of syntactic labels results in a new label for the chunk -->
+      <!-- Sometimes a combination of syntactic labels results in a new label for the chunk -->
       <choose>
         <when>
           <test>
@@ -1637,7 +1638,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="ncmp" case="caseFirstWord">
+          <chunk name="numcmp" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="synlabel"/></tag>
