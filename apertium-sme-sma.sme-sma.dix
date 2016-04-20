@@ -376,6 +376,8 @@
     <e><p><l>juoga<s n="prn"/><s n="ind"/></l><r>naakene<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>moanat<s n="prn"/><s n="ind"/></l><r>gellie<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>mii<s n="prn"/><s n="itg"/></l><r>mij<s n="prn"/><s n="itg"/></r></p></e>
+    <e><p><l>mii<s n="prn"/><s n="itg"/><s n="sg"/><s n="nom"/></l><r>mij<s n="prn"/><s n="itg"/><s n="sg"/><s n="nom"/></r></p></e>
+    <e><p><l>mii<s n="prn"/><s n="itg"/><s n="sg"/><s n="nom"/></l><r>guktie<s n="adv"/></r></p></e>
     <e><p><l>gii<s n="prn"/><s n="itg"/></l><r>gie<s n="prn"/><s n="itg"/></r></p></e>
     <e><p><l>ollugat<s n="prn"/><s n="ind"/></l><r>jïjnje<s n="prn"/><s n="ind"/></r></p></e>
 
@@ -3198,7 +3200,7 @@
     <e><p><l>goabbat<b/>guoibmi<s n="prn"/></l><r>sinsitniem<s n="prn"/></r></p></e>
     <e><p><l>guhtet<b/>guoibmi<s n="prn"/></l><r>sinsitniem<s n="prn"/></r></p></e>	 
     <e><p><l>nubbi<s n="prn"/><s n="res"/></l><r>sinsitniem<s n="prn"/><s n="res"/></r></p></e>	 
-    <e><p><l>nubbi<s n="prn"/><s n="res"/>mubpie<s n="attr"/></l><r></r></p></e>	 
+    <e><p><l>nubbi<s n="prn"/><s n="res"/>mubpie<s n="prn"/></l><r></r></p></e>	 
     <e><p><l>čálalaš<s n="adj"/></l><r>tjaaleldh<s n="adj"/></r></p></e>
     <e><p><l>duohta<s n="adj"/></l><r>saetnies<s n="adj"/></r></p></e>
     <e><p><l>sullasaš<s n="adj"/></l><r>plearoeh<s n="adj"/></r></p></e>
@@ -3618,6 +3620,13 @@
 
 
     <!-- SECTION: Adverbs -->
+    <e><p><l>oktii<s n="adv"/></l><r>ikth<s n="adv"/></r></p></e>
+    <e><p><l>guktii<s n="adv"/></l><r>göökth<s n="adv"/></r></p></e>
+    <e><p><l>golbmii<s n="adv"/></l><r>gulmh<s n="adv"/></r></p></e>
+    <e><p><l>njelljii<s n="adv"/></l><r>njeeljh<s n="adv"/></r></p></e>
+    <e><p><l>vihttii<s n="adv"/></l><r>vijhth<s n="adv"/></r></p></e>
+    <e><p><l>guhttii<s n="adv"/></l><r>guvhth<s n="adv"/></r></p></e>
+    <e><p><l>čihččii<s n="adv"/></l><r>geektsh<s n="adv"/></r></p></e>
     <e><p><l>unnit<s n="adv"/></l><r>vaenebe<s n="adv"/></r></p></e>
     <e><p><l>vaikko<s n="adv"/></l><r>saaht<s n="adv"/></r></p></e>
     <e><p><l>olis<s n="post"/></l><r>dïere<s n="post"/></r></p></e> <!-- ML: check this part -->
@@ -16320,7 +16329,7 @@
     <e><p><l>Sorvošjávri<s n="np"/></l><r>Sorvošjávri<s n="np"/></r></p></e>
     <e><p><l>Sorvošskáidi<s n="np"/></l><r>Sorvošskáidi<s n="np"/></r></p></e>
     <e><p><l>Sorvvošjohka<s n="np"/></l><r>Sorvvošjohka<s n="np"/></r></p></e>
-    <e><p><l>sosiáladepartemeanta<s n="n"/></l><r>sosialdepartemeente<s n="n"/></r></p></e>
+    <e><p><l>sosiáladepartemeanta<s n="n"/></l><r>sosiaaledepartemeente<s n="n"/></r></p></e>
     <e><p><l>sosiálakantuvra<s n="n"/></l><r>sosiaalekontovre<s n="n"/></r></p></e>
     <e><p><l>Sosnoavki<s n="np"/></l><r>Sosnoavki<s n="np"/></r></p></e>
     <e><p><l>Sotnabeaijohka<s n="np"/></l><r>Sotnabeaijohka<s n="np"/></r></p></e>

@@ -564,6 +564,14 @@
   <rule weight="1.0">
        <match lemma="mii" tags="prn.itg.*"><select lemma="mij" tags="prn.itg.*"/></match>
   </rule>
+  <rule weight="0.5">
+       <match lemma="mii" tags="prn.itg.*"><select lemma="guktie" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="mii" tags="prn.itg.*"><select lemma="guktie" tags="adv.*"/></match>
+       <match/>
+       <match lemma="namma"/>
+  </rule>
   <rule weight="1.0">
        <match lemma="mii" tags="prn.pers.*"><select lemma="manne" tags="prn.pers.*"/></match>
   </rule>
