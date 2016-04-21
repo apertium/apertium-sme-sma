@@ -763,6 +763,7 @@ And then there are some categories like "month", with all the months.
     <def-var n="case"/>
     <def-var n="nmbr"/>
     <def-var n="main-verb-lemma"/>
+    <def-var n="caseFirstword"/>
   </section-def-vars>
   <section-def-lists>
     <def-list n="stative-verbs"><!--sme place-verbs, hope they work the same in sma -->
@@ -852,6 +853,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> <!-- Don't output focus particles -->
+         <let><var n="caseFirstword"/><case-of pos="1" side="sl" part="lem"/></let>
     </def-macro>
 
     <def-macro n="proc-syn-foc-qst-Param2" npar="2">
