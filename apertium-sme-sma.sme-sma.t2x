@@ -22,10 +22,10 @@ Macros:
 Rules:
 
 - empty rule?
-- REGLA: SN_Po Adp
-- REGLA: Adp SN_Pr
-- REGLA: SN_Obj CNP SN_Obj
-- REGLA: SN_Subj CNP SN_Subj
+- REGLA: NP_Po Adp
+- REGLA: Adp NP_Pr
+- REGLA: NP_Obj CNP NP_Obj
+- REGLA: NP_Subj CNP NP_Subj
 - REGLA: ADVL CNP ADVL Son liikui munnje ja sutnje. Son liikui mu áhččái ja mu eatnái.
 
 DEF-CAT NAMING SCHEME:
@@ -51,37 +51,37 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="conneg" tags="SV.*"/>
     </def-cat>
 
-     <def-cat n="SN">
-      <cat-item tags="SN"/>
-      <cat-item tags="SN.*"/>
+     <def-cat n="NP">
+      <cat-item tags="NP"/>
+      <cat-item tags="NP.*"/>
     </def-cat>
 
-    <def-cat n="SN_Subj">
-        <cat-item tags="SN.@SUBJ→.*"/>
-        <cat-item tags="SN.@←SUBJ.*"/>
+    <def-cat n="NP_Subj">
+        <cat-item tags="NP.@SUBJ→.*"/>
+        <cat-item tags="NP.@←SUBJ.*"/>
     </def-cat>
 
-    <def-cat n="SN_Obj">
-        <cat-item tags="SN.@OBJ→.*"/>
-        <cat-item tags="SN.@←OBJ.*"/>
+    <def-cat n="NP_Obj">
+        <cat-item tags="NP.@OBJ→.*"/>
+        <cat-item tags="NP.@←OBJ.*"/>
     </def-cat>
     <def-cat n="Obj_l">
-        <cat-item tags="SN.@←OBJ.*"/>
+        <cat-item tags="NP.@←OBJ.*"/>
     </def-cat>
 
     <def-cat n="ADVL">
-        <cat-item tags="SN.@ADVL→.*"/>
-        <cat-item tags="SN.@←ADVL.*"/>
-        <cat-item tags="SN.@ADVL.*"/>
+        <cat-item tags="NP.@ADVL→.*"/>
+        <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@ADVL.*"/>
         <cat-item tags="ADV.*"/>
     </def-cat>
 
-    <def-cat n="SN_Po">
-        <cat-item tags="SN.@→P.*"/>
+    <def-cat n="NP_Po">
+        <cat-item tags="NP.@→P.*"/>
     </def-cat>
 
-    <def-cat n="SN_Pr">
-        <cat-item tags="SN.@←ADVL.*"/>
+    <def-cat n="NP_Pr">
+        <cat-item tags="NP.@←ADVL.*"/>
     </def-cat>
 
     <def-cat n="FMainV">
@@ -230,7 +230,7 @@ And then there are some categories like "month", with all the months.
 
     <rule>
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
       </pattern>
       <action>
         <out>
@@ -244,9 +244,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA: SN_Po Adp">
+   <rule comment="REGLA: NP_Po Adp">
      <pattern>
-       <pattern-item n="SN_Po"/>
+       <pattern-item n="NP_Po"/>
        <pattern-item n="Adp"/>
      </pattern>
      <action>
@@ -265,10 +265,10 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-   <rule comment="REGLA: Adp SN_Pr">
+   <rule comment="REGLA: Adp NP_Pr">
      <pattern>
        <pattern-item n="Adp"/>
-       <pattern-item n="SN_Pr"/>
+       <pattern-item n="NP_Pr"/>
      </pattern>
      <action>
        <out>
@@ -286,7 +286,7 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-    <rule comment="REGLA: SN_Obj CNP SN_Obj"> <!-- Aalkosne Jupmele elmiem jïh eatnemem sjugniedi. -->
+    <rule comment="REGLA: NP_Obj CNP NP_Obj"> <!-- Aalkosne Jupmele elmiem jïh eatnemem sjugniedi. -->
      <pattern>
        <pattern-item n="Obj_l"/>
        <pattern-item n="CNP"/>
@@ -310,11 +310,11 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-    <rule comment="REGLA: SN_Subj CNP SN_Subj">
+    <rule comment="REGLA: NP_Subj CNP NP_Subj">
      <pattern>
-       <pattern-item n="SN_Subj"/>
+       <pattern-item n="NP_Subj"/>
        <pattern-item n="CNP"/>
-       <pattern-item n="SN_Subj"/>
+       <pattern-item n="NP_Subj"/>
      </pattern>
      <action>
        <out>

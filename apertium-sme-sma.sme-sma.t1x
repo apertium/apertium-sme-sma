@@ -157,6 +157,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="num-ldep">
       <cat-item tags="num.*.*.*.@N←"/>
     </def-cat>
+    <def-cat n="prn">
+      <cat-item tags="prn.*"/>
+    </def-cat>
     <def-cat n="prn-res">
       <cat-item tags="prn.res.*"/>
     </def-cat>
@@ -317,12 +320,23 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="adj.der_vuota.n"/>
     </def-attr>
 
-    <def-attr n="a_pron">
+    <def-attr n="a_prn">
        <attr-item tags="prn.ind"/>
        <attr-item tags="prn.dem"/>
        <attr-item tags="prn.ref"/>
        <attr-item tags="prn.rel"/>
        <attr-item tags="prn.itg"/>
+       <attr-item tags="prn.pers"/>
+    </def-attr>
+
+    <def-attr n="a_prn_type">
+       <attr-item tags="pers"/>
+       <attr-item tags="ind"/>
+       <attr-item tags="dem"/>
+       <attr-item tags="ref"/>
+       <attr-item tags="rel"/>
+       <attr-item tags="itg"/>
+       <attr-item tags="res"/>
     </def-attr>
 
     <def-attr n="a_case">
@@ -758,7 +772,7 @@ And then there are some categories like "month", with all the months.
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
-    <def-var n="synlabel"/>
+    <def-var n="func"/>
     <def-var n="poss"/>
     <def-var n="case"/>
     <def-var n="nmbr"/>
@@ -841,13 +855,13 @@ And then there are some categories like "month", with all the months.
           <!-- If the word has a syntactic function label, set the variable with that
                label, if not, set the label to @X.
                Remove question particle. -->
-          <let><var n="synlabel"/><lit-tag v="@X"/></let>
+          <let><var n="func"/><lit-tag v="@X"/></let>
           <choose>
             <when>
               <test>
                 <not><equal><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></equal></not>
               </test>
-              <let><var n="synlabel"/><clip pos="1" side="sl" part="a_synlabel"/></let>
+              <let><var n="func"/><clip pos="1" side="sl" part="a_synlabel"/></let>
             </when>
           </choose>
           <let><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></let>
@@ -872,7 +886,7 @@ And then there are some categories like "month", with all the months.
               <equal><clip pos="2" side="sl" part="a_synlabel"/><lit-tag v="@+FAUXV"/></equal>
             </and>
           </test>
-          <let><var n="synlabel"/><lit-tag v="@+FMAINV"/></let>
+          <let><var n="func"/><lit-tag v="@+FMAINV"/></let>
         </when>
       </choose>
     </def-macro>
@@ -918,7 +932,7 @@ And then there are some categories like "month", with all the months.
       <choose>
         <when>
           <test>
-            <not><equal><clip pos="1" side="sl" part="a_pron"/><lit-tag v="prn.ref"/></equal></not>
+            <not><equal><clip pos="1" side="sl" part="a_prn"/><lit-tag v="prn.ref"/></equal></not>
           </test>
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
@@ -1254,6 +1268,7 @@ And then there are some categories like "month", with all the months.
         </let> 
         </otherwise>
       </choose>
+              <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let>
     </def-macro> 
 
 
@@ -1285,9 +1300,9 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Nominal groups -->
 
-    <rule comment="REGLA: pron-pers">
+    <rule comment="REGLA: pronouns">
       <pattern>
-        <pattern-item n="prn-pers"/>
+        <pattern-item n="prn"/>
       </pattern>
       <action>
         <call-macro n="convert-case-nbr-poss-Param1">
@@ -1297,11 +1312,11 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="prn-pers" case="caseFirstWord">
+          <chunk name="prn" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
-              <tag><var n="poss"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><clip pos="1" side="tl" part="a_prn_type"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -1311,7 +1326,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: pron-refl">
+ <!--   <rule comment="REGLA: pron-refl">
       <pattern>
         <pattern-item n="prn-refl"/>
       </pattern>
@@ -1326,7 +1341,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="ref" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="REFL"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1352,7 +1367,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="ref" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="RES"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1378,7 +1393,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="rel" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="REL"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1405,7 +1420,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="prn-dem" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1433,7 +1448,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="prn-itg" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1462,7 +1477,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="prn-indef" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1471,7 +1486,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
 
@@ -1488,10 +1503,10 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="numsem" case="caseFirstWord">
+          <chunk name="num" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1519,10 +1534,10 @@ And then there are some categories like "month", with all the months.
         <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="3"/></call-macro>
         <out>
-          <chunk name="goiku" case="caseFirstWord">
+          <chunk name="phrase" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="RES"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="PH"/></tag>
+<!--              <tag><var n="func"/></tag> -->
             </tags>
             <lu>
              <clip pos="1" side="tl" part="whole"/>
@@ -1557,8 +1572,8 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -1603,8 +1618,8 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -1640,10 +1655,10 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="numcmp" case="caseFirstWord">
+          <chunk name="num" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -1675,10 +1690,10 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="ncmp" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -1709,10 +1724,10 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="attr-n" case="caseFirstWord">
+          <chunk name="attr-noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -1744,10 +1759,10 @@ And then there are some categories like "month", with all the months.
          <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="attr-n" case="caseFirstWord">
+          <chunk name="attr-noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -1773,10 +1788,10 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="2"/></call-macro>
         <out>
-          <chunk name="attr-n" case="caseFirstWord">
+          <chunk name="prn-noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -1804,10 +1819,10 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="3"/></call-macro>
         <out>
-          <chunk name="attr-n" case="caseFirstWord">
+          <chunk name="prn-noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -1835,10 +1850,12 @@ And then there are some categories like "month", with all the months.
       <action>
            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
          <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="1"/></call-macro>
+              <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let>
        <out>
-          <chunk name="adverb" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstWord">
              <tags>
-              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
            <lu>
 				<clip pos="1" side="tl" part="whole"/>            
@@ -1857,7 +1874,8 @@ And then there are some categories like "month", with all the months.
           <chunk name="adverb" case="caseFirstWord">
              <tags>
               <tag><lit-tag v="SV"/></tag>
-            </tags>
+               <tag><lit-tag v="@ADVL"/></tag>
+           </tags>
            <lu>
 				<clip pos="1" side="tl" part="whole"/>            
 		  </lu>
@@ -1867,7 +1885,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: n">
+    <rule comment="REGLA: noun">
       <pattern>
         <pattern-item n="noun"/>
       </pattern>
@@ -1881,8 +1899,8 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1914,10 +1932,10 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>  
         <out>
-          <chunk name="a-n" case="caseFirstWord">
+          <chunk name="adj-noun" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1950,7 +1968,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="n-num" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -1981,7 +1999,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="prop" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -2014,12 +2032,12 @@ And then there are some categories like "month", with all the months.
           <chunk name="attr-cmp-n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="a_pron"/>
+              <clip pos="1" side="tl" part="a_prn"/>
               <var n="nmbr"/>
               <var n="case"/>
               <clip pos="1" side="tl" part="lemq"/>
@@ -2061,12 +2079,12 @@ And then there are some categories like "month", with all the months.
           <chunk name="attr-attr-n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="a_pron"/>
+              <clip pos="1" side="tl" part="a_prn"/>
               <var n="nmbr"/>
               <var n="case"/>
               <clip pos="1" side="tl" part="lemq"/>
@@ -2074,7 +2092,7 @@ And then there are some categories like "month", with all the months.
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lemh"/>
-              <clip pos="2" side="tl" part="a_pron"/>
+              <clip pos="2" side="tl" part="a_prn"/>
               <var n="nmbr"/>
               <var n="case"/>
               <clip pos="2" side="tl" part="lemq"/>
@@ -2105,7 +2123,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="ii" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><clip pos="1" side="tl" part="a_mood"/></tag>
               <tag><lit-tag v="XD"/></tag>
               <tag><clip pos="1" side="tl" part="a_pers"/></tag>
@@ -2139,7 +2157,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="conneg" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
               <tag><clip pos="1" side="tl" part="a_mood"/></tag>
               <tag><clip pos="1" side="tl" part="a_tense"/></tag>
               <tag><clip pos="1" side="tl" part="a_pers"/></tag>
@@ -2171,7 +2189,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="ii-conneg" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -2212,7 +2230,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="ii-prn-conneg" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lemh"/>
@@ -2262,7 +2280,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="vblex" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2291,7 +2309,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="vblex" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
 <!--
             <lu>
@@ -2326,7 +2344,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="vblex" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2359,7 +2377,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="nom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
 <!--
             <lu>
@@ -2453,7 +2471,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="inf" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2479,7 +2497,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="prfprc" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2501,7 +2519,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="actio" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -2529,7 +2547,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="imp" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2559,7 +2577,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="adj" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SA"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2585,7 +2603,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="prsprc" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SA"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2608,7 +2626,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="adv" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2632,7 +2650,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="pr" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="PREP"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2655,7 +2673,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="post" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="POST"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2678,7 +2696,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="vej" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="VA"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
@@ -2700,7 +2718,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="ahte" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="cnjsub"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2722,7 +2740,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="cnjsub" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="cnjsub"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2745,7 +2763,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="cnjcoo" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="cnjcoo"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2770,7 +2788,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="sent" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SENT"/></tag>
-              <tag><var n="synlabel"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>

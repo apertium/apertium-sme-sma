@@ -50,9 +50,9 @@ And then there are some categories like "month", with all the months.
 <interchunk>
 
   <section-def-cats>
-    <def-cat n="SN">
-      <cat-item tags="SN"/>
-      <cat-item tags="SN.*"/>
+    <def-cat n="NP">
+      <cat-item tags="NP"/>
+      <cat-item tags="NP.*"/>
     </def-cat>
 
     <def-cat n="SV_Obj">
@@ -61,43 +61,43 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.@←OBJ"/>
     </def-cat>
 
-    <def-cat n="SN_Subj">
-        <cat-item tags="SN.@SUBJ→.*"/>
-        <cat-item tags="SN.@←SUBJ.*"/>
+    <def-cat n="NP_Subj">
+        <cat-item tags="NP.@SUBJ→.*"/>
+        <cat-item tags="NP.@←SUBJ.*"/>
     </def-cat>
-    <def-cat n="SN_Subj_r">
-        <cat-item tags="SN.@SUBJ→.*"/>
+    <def-cat n="NP_Subj_r">
+        <cat-item tags="NP.@SUBJ→.*"/>
     </def-cat>
 
-    <def-cat n="SN_Obj">
-        <cat-item tags="SN.@OBJ→.*"/>
-        <cat-item tags="SN.@←OBJ.*"/>
+    <def-cat n="NP_Obj">
+        <cat-item tags="NP.@OBJ→.*"/>
+        <cat-item tags="NP.@←OBJ.*"/>
     </def-cat>
-    <def-cat n="SN_Obj_l">
-        <cat-item tags="SN.@←OBJ.*"/>
+    <def-cat n="NP_Obj_l">
+        <cat-item tags="NP.@←OBJ.*"/>
     </def-cat>
-    <def-cat n="SN_Spred_l">
+    <def-cat n="NP_Spred_l">
         <cat-item tags="*.@←SPRED"/>
     </def-cat>
 
 
 
-    <def-cat n="SN_Po">
+    <def-cat n="NP_Po">
         <cat-item tags="POST.@←ADVL.*"/>
         <cat-item tags="POST.@←ADVL"/>
     </def-cat>
 
-    <def-cat n="SN_Advl">
+    <def-cat n="NP_Advl">
         <cat-item tags="ADV.@ADVL→"/>
         <cat-item tags="ADV.@←ADVL"/>
         <cat-item tags="ADV.@ADVL"/>
-        <cat-item tags="SN.@ADVL→.*"/>
-        <cat-item tags="SN.@←ADVL.*"/>
-        <cat-item tags="SN.@ADVL.*"/>
+        <cat-item tags="NP.@ADVL→.*"/>
+        <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@ADVL.*"/>
     </def-cat>
 
-    <def-cat n="SN_Po_compl">
-        <cat-item tags="SN.@→P.*"/>
+    <def-cat n="NP_Po_compl">
+        <cat-item tags="NP.@→P.*"/>
     </def-cat>
 
     <def-cat n="IMainV">
@@ -121,7 +121,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="ii-conneg" tags="SV.*"/>
     </def-cat>
     <def-cat n="prn-pers-subj">
-      <cat-item lemma="prn-pers" tags="SN.@SUBJ→.*"/>
+      <cat-item lemma="prn-pers" tags="NP.@SUBJ→.*"/>
     </def-cat>
 
 
@@ -151,7 +151,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="prn-dem">
-        <cat-item lemma="prn-dem" tags="SN.@SUBJ→.*"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.*"/>
     </def-cat>
     <def-cat n="Vcop">
         <cat-item lemma="copula" tags="SV"/>
@@ -239,7 +239,7 @@ And then there are some categories like "month", with all the months.
   <section-rules>
 <!--    <rule> --> <!--genitiv instead of elative in habitive constructions -->
 <!--      <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
         <pattern-item n="Vcop"/>
       </pattern>
       <action>
@@ -296,7 +296,7 @@ And then there are some categories like "month", with all the months.
 
  <rule> <!--inessive instead of elative before inessive adverbs -->
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
         <pattern-item n="Ine_adverb"/>
       </pattern>
       <action>
@@ -334,9 +334,9 @@ And then there are some categories like "month", with all the months.
 
      <rule> <!-- coordinated inessive NPs -->
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
         <pattern-item n="CC"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
         <pattern-item n="Ine_adverb"/>
       </pattern>
       <action>
@@ -398,11 +398,11 @@ And then there are some categories like "month", with all the months.
 
 <rule> <!-- double coordinated inessive NPs -->
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
         <pattern-item n="CC"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
         <pattern-item n="CC"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
         <pattern-item n="Ine_adverb"/>
       </pattern>
       <action>
@@ -487,9 +487,9 @@ And then there are some categories like "month", with all the months.
 
     <rule> <!--SVO becomes SOV -->
       <pattern>
-        <pattern-item n="SN_Subj"/>
+        <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj_l"/>
+        <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -521,7 +521,7 @@ And then there are some categories like "month", with all the months.
     <rule> <!--SVP becomes SPV. Diet orru leamen somá. Doete luste vååjnoe -->
       <pattern>
         <pattern-item n="FAuxV"/>
-        <pattern-item n="SN_Spred_l"/>
+        <pattern-item n="NP_Spred_l"/>
       </pattern>
       <action>
         <out>
@@ -547,7 +547,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="ADV"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj_l"/>
+        <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -578,8 +578,8 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="ADV"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Po_compl"/>
-        <pattern-item n="SN_Po"/>
+        <pattern-item n="NP_Po_compl"/>
+        <pattern-item n="NP_Po"/>
       </pattern>
       <action>
         <out>
@@ -616,7 +616,7 @@ And then there are some categories like "month", with all the months.
 
         <rule> <!--SVO becomes SOV, verbal objects--><!-- Mun oahpan lohkat girjjiid.-->
       <pattern>
-        <pattern-item n="SN_Subj"/>
+        <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
         <pattern-item n="SV_Obj"/>
       </pattern>
@@ -650,7 +650,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="IMainV"/>
-        <pattern-item n="SN_Obj_l"/>
+        <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -683,9 +683,9 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="Pcle"/>
-        <pattern-item n="SN_Subj"/>
+        <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj_l"/>
+        <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -732,7 +732,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="FAuxV"/>
         <pattern-item n="Pcle"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj_l"/>
+        <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
         <out>
@@ -769,9 +769,9 @@ And then there are some categories like "month", with all the months.
 
     <rule> <!--no SOV with complex coordinated objects -->
       <pattern>
-        <pattern-item n="SN_Subj"/>
+        <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Obj_l"/>
+        <pattern-item n="NP_Obj_l"/>
         <pattern-item n="CC"/>
       </pattern>
       <action>
@@ -809,9 +809,9 @@ And then there are some categories like "month", with all the months.
 
     <rule> <!--SVA becomes SAV -->
       <pattern>
-        <pattern-item n="SN_Subj"/>
+        <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
-        <pattern-item n="SN_Advl"/>
+        <pattern-item n="NP_Advl"/>
       </pattern>
       <action>
         <out>
@@ -857,7 +857,7 @@ And then there are some categories like "month", with all the months.
 
      <rule> <!-- mun in - im manne -->
       <pattern>
-        <pattern-item n="SN_Subj_r"/>
+        <pattern-item n="NP_Subj_r"/>
         <pattern-item n="iiverb"/>
       </pattern>
       <action>
@@ -881,7 +881,7 @@ And then there are some categories like "month", with all the months.
    <rule> <!--VA becomes AV -->
       <pattern>
         <pattern-item n="IMainV"/>
-        <pattern-item n="SN_Advl"/>
+        <pattern-item n="NP_Advl"/>
       </pattern>
       <action>
         <out>
