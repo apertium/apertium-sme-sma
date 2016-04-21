@@ -745,7 +745,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <def-attr n="x_func">
+    <def-attr n="a_exthab">
       <attr-item tags="←ext→"/>
       <attr-item tags="←hab→"/>
     </def-attr>
@@ -766,7 +766,7 @@ And then there are some categories like "month", with all the months.
     <def-var n="caseFirstword"/>
   </section-def-vars>
   <section-def-lists>
-    <def-list n="stative-verbs"><!--sme place-verbs, hope they work the same in sma -->
+    <def-list n="stative-verbs"> <!--sme place-verbs, hope they work the same in sma -->
       <list-item v="ássat"/>
       <list-item v="orrut"/>
       <list-item v="veallát"/>
@@ -830,7 +830,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_south"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
 
-          <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let>
 
           <!-- Set the +Allegro tag to nothing for now -->
           <let><clip pos="1" side="tl" part="a_allegro"/><lit v=""/></let>
@@ -936,7 +936,7 @@ And then there are some categories like "month", with all the months.
      <choose>
         <when>
           <test>
-              <equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal>
+              <equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
         </when>
@@ -946,7 +946,7 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+             <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
               <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
             </and>
           </test>
@@ -959,7 +959,7 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="1" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+             <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
             <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
             </and>
           </test>
@@ -1127,7 +1127,7 @@ And then there are some categories like "month", with all the months.
             <and>
               <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
               <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-              <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
               <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not> 
             </and>
           </test>
@@ -1156,7 +1156,7 @@ And then there are some categories like "month", with all the months.
             <and>
               <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
               <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-              <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
               <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
             </and>
           </test>
@@ -1185,7 +1185,7 @@ And then there are some categories like "month", with all the months.
             <and>
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
             <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+             <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
               <not><in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in></not>
             </and>
           </test>
@@ -1212,7 +1212,7 @@ And then there are some categories like "month", with all the months.
             <and>
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
             <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="2" side="sl" part="x_func"/><lit-tag v="←hab→"/></equal></not>
+             <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
             <in caseless="yes"><var n="main-verb-lemma"/><list n="movement-verbs"/></in>
             </and>
           </test>
