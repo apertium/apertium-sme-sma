@@ -1327,169 +1327,6 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
- <!--   <rule comment="REGLA: pron-refl">
-      <pattern>
-        <pattern-item n="prn-refl"/>
-      </pattern>
-      <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="convert-case-nbr-poss-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="ref" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="REFL"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: pron-res">
-      <pattern>
-        <pattern-item n="prn-res"/>
-      </pattern>
-      <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="convert-case-nbr-poss-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="ref" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="RES"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: pron-rel">
-      <pattern>
-        <pattern-item n="prn-rel"/>
-      </pattern>
-      <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="convert-case-nbr-poss-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="rel" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="REL"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-
-    <rule comment="REGLA: pron-dem">
-      <pattern>
-        <pattern-item n="prn-dem"/>
-      </pattern>
-      <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="convert-case-nbr-poss-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="prn-dem" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-
-
-    <rule comment="REGLA: pron-itg">
-      <pattern>
-        <pattern-item n="prn-itg"/>
-      </pattern>
-      <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="convert-case-nbr-poss-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="prn-itg" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-
-
-
-    <rule comment="REGLA: pron-indef">
-      <pattern>
-        <pattern-item n="prn-indef"/>
-      </pattern>
-      <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="convert-case-nbr-poss-Param1">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="prn-indef" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule> -->
-
-
 
 
     <rule comment="REGLA: num">
@@ -2004,18 +1841,17 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="attr-cmp-n" case="caseFirstWord">
+          <chunk name="attr-cmp-nnn" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_prn"/>
               <var n="nmbr"/>
               <var n="case"/>
-              <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
             <mlu>
@@ -2058,19 +1894,17 @@ And then there are some categories like "month", with all the months.
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_prn"/>
               <var n="nmbr"/>
               <var n="case"/>
-              <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
             <lu>
-              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_prn"/>
               <var n="nmbr"/>
               <var n="case"/>
-              <clip pos="2" side="tl" part="lemq"/>
             </lu>
             <b pos="2"/>
             <lu>
@@ -2105,7 +1939,7 @@ And then there are some categories like "month", with all the months.
               <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_verb"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_neg"/>
@@ -2113,7 +1947,6 @@ And then there are some categories like "month", with all the months.
               <lit-tag v="4"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
-              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -2139,11 +1972,10 @@ And then there are some categories like "month", with all the months.
               <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_verb"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_conneg"/>
-              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -2167,7 +1999,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_verb"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_neg"/>
@@ -2175,15 +2007,13 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
-              <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
             <lu>
-              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_verb"/>
               <clip pos="2" side="tl" part="a_trans"/>
               <clip pos="2" side="tl" part="a_conneg"/>
-              <clip pos="2" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -2208,7 +2038,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
             </tags>
             <lu>
-              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_verb"/>
               <clip pos="2" side="tl" part="a_trans"/>
               <clip pos="2" side="tl" part="a_neg"/>
@@ -2216,7 +2046,6 @@ And then there are some categories like "month", with all the months.
               <clip pos="3" side="tl" part="a_tense"/>
               <clip pos="2" side="tl" part="a_pers"/>
               <clip pos="2" side="tl" part="a_nbr"/>
-              <clip pos="2" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
             <lu>
@@ -2224,11 +2053,10 @@ And then there are some categories like "month", with all the months.
             </lu>
             <b pos="2"/>
             <lu>
-              <clip pos="3" side="tl" part="lemh"/>
+              <clip pos="3" side="tl" part="lem"/>
               <clip pos="3" side="tl" part="a_verb"/>
               <clip pos="3" side="tl" part="a_trans"/>
               <clip pos="3" side="tl" part="a_conneg"/>
-              <clip pos="3" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -2497,11 +2325,10 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_verb"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <lit-tag v="ger"/>
-              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
