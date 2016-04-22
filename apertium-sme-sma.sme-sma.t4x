@@ -238,7 +238,16 @@ And then there are some categories like "month", with all the months.
   <section-def-vars>
     <def-var n="nombre"/>
     <def-var n="genere"/>
+    <def-var n="caseFirstword"/>
   </section-def-vars>
+
+  <section-def-macros>
+    <def-macro n="switch_cases" npar="2">
+      <let><var n="caseFirstword"/><get-case-from pos="1"><clip pos="1" part="lem"/></get-case-from></let>
+      <let><clip pos="1" part="lem"/><get-case-from pos="2"><clip pos="1" part="lem"/></get-case-from></let>
+      <modify-case><clip pos="2" part="lem"/><var n="caseFirstword"/></modify-case>
+    </def-macro>
+  </section-def-macros>
 
   <section-rules>
 <!--    <rule> --> <!--genitiv instead of elative in habitive constructions -->
@@ -863,19 +872,19 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-     <rule comment="prn-pers-subj ii-conneg" > <!-- mun in - im  -->
-      <pattern>
-        <pattern-item n="prn-pers-subj"/>
-        <pattern-item n="ii-conneg"/>
-      </pattern>
-      <action>
-        <out>
-        <chunk>
-            <clip pos="2" part="whole"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
+    <!--  <rule comment="prn-pers-subj ii-conneg; mun in - im"> -->
+    <!--   <pattern> -->
+    <!--     <pattern-item n="prn-pers-subj"/> -->
+    <!--     <pattern-item n="ii-conneg"/> -->
+    <!--   </pattern> -->
+    <!--   <action> -->
+    <!--     <out> -->
+    <!--     <chunk> -->
+    <!--         <clip pos="2" part="whole"/> -->
+    <!--       </chunk> -->
+    <!--     </out> -->
+    <!--   </action> -->
+    <!-- </rule> -->
 
 
      <rule comment="NP_Subj_r iiverb" > <!-- mun in - im manne -->
@@ -884,8 +893,9 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="iiverb"/>
       </pattern>
       <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
-        <chunk>
+          <chunk>
             <clip pos="2" part="lemh"/>
             <clip pos="2" part="tags"/>
             <clip pos="2" part="chcontent"/>
