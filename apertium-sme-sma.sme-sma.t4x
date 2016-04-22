@@ -276,7 +276,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
 
- <rule> <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
+ <rule comment="AHTE PRN-DEM" > <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
       <pattern>
         <pattern-item n="ahte"/>
         <pattern-item n="prn-dem"/>
@@ -294,7 +294,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
- <rule> <!--inessive instead of elative before inessive adverbs -->
+ <rule comment="NP Ine_adverb" > <!--inessive instead of elative before inessive adverbs -->
       <pattern>
         <pattern-item n="NP"/>
         <pattern-item n="Ine_adverb"/>
@@ -332,7 +332,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-     <rule> <!-- coordinated inessive NPs -->
+     <rule comment="NP CC NP Ine_adverb" > <!-- coordinated inessive NPs -->
       <pattern>
         <pattern-item n="NP"/>
         <pattern-item n="CC"/>
@@ -396,7 +396,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<rule> <!-- double coordinated inessive NPs -->
+<rule comment="NP CC NP CC NP Ine_adverb" > <!-- double coordinated inessive NPs -->
       <pattern>
         <pattern-item n="NP"/>
         <pattern-item n="CC"/>
@@ -485,7 +485,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule> <!--SVO becomes SOV -->
+    <rule comment="NP_Subj FMainV NP_Obj_l" > <!--SVO becomes SOV -->
       <pattern>
         <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
@@ -518,7 +518,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule> <!--SVP becomes SPV. Diet orru leamen somá. Doete luste vååjnoe -->
+    <rule comment="FAuxV NP_Spred_l" > <!--SVP becomes SPV. Diet orru leamen somá. Doete luste vååjnoe -->
       <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="NP_Spred_l"/>
@@ -543,7 +543,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule> <!--SVO becomes SOV, Daenbiejjien gærjam tjaaleme. -->
+    <rule comment="ADV FMainV NP_Obj_l" > <!--SVO becomes SOV, Daenbiejjien gærjam tjaaleme. -->
       <pattern>
         <pattern-item n="ADV"/>
         <pattern-item n="FMainV"/>
@@ -574,7 +574,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule> <!--SVO becomes SOV, Odne čálán dálu birra.. -->
+    <rule comment="ADV FMainV NP_Po_compl NP_Po" > <!--SVO becomes SOV, Odne čálán dálu birra.. -->
       <pattern>
         <pattern-item n="ADV"/>
         <pattern-item n="FMainV"/>
@@ -614,7 +614,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-        <rule> <!--SVO becomes SOV, verbal objects--><!-- Mun oahpan lohkat girjjiid.-->
+        <rule comment="NP_Subj FMainV SV_Obj" > <!--SVO becomes SOV, verbal objects--><!-- Mun oahpan lohkat girjjiid.-->
       <pattern>
         <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
@@ -646,7 +646,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule> <!--AVO becomes AOV -->
+    <rule comment="FAuxV IMainV NP_Obj_l" > <!--AVO becomes AOV -->
       <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="IMainV"/>
@@ -679,7 +679,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule> <!--SVO becomes SOV in questions-->
+    <rule comment="FAuxV Pcle NP_Subj FMainV NP_Obj_l" > <!--SVO becomes SOV in questions-->
       <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="Pcle"/>
@@ -727,7 +727,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-        <rule> <!--SVO becomes SOV in questions without subject-->
+        <rule comment="FAuxV Pcle FMainV NP_Obj_l" > <!--SVO becomes SOV in questions without subject-->
       <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="Pcle"/>
@@ -767,7 +767,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule> <!--no SOV with complex coordinated objects -->
+    <rule comment="NP_Subj FMainV NP_Obj_l CC" > <!--no SOV with complex coordinated objects -->
       <pattern>
         <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
@@ -807,7 +807,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule> <!--SVA becomes SAV -->
+    <rule comment="NP_Subj FMainV NP_Advl" > <!--SVA becomes SAV -->
       <pattern>
         <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
@@ -840,7 +840,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-     <rule> <!-- mun in - im  -->
+     <rule comment="prn-pers-subj ii-conneg" > <!-- mun in - im  -->
       <pattern>
         <pattern-item n="prn-pers-subj"/>
         <pattern-item n="ii-conneg"/>
@@ -855,7 +855,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-     <rule> <!-- mun in - im manne -->
+     <rule comment="NP_Subj_r iiverb" > <!-- mun in - im manne -->
       <pattern>
         <pattern-item n="NP_Subj_r"/>
         <pattern-item n="iiverb"/>
@@ -878,7 +878,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule> <!--VA becomes AV -->
+   <rule comment="IMainV NP_Advl" > <!--VA becomes AV -->
       <pattern>
         <pattern-item n="IMainV"/>
         <pattern-item n="NP_Advl"/>
