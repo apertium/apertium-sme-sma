@@ -249,7 +249,7 @@ And then there are some categories like "month", with all the months.
            <clip pos="2" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
-           <lit v=" "/>
+           <b pos="1"/>
            <clip pos="2" part="content"/>
            <lit v="}"/>
            <clip pos="2" part="lemq"/>
@@ -270,7 +270,7 @@ And then there are some categories like "month", with all the months.
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
-           <lit v=" "/>
+           <b pos="1"/>
            <clip pos="2" part="content"/>
            <lit v="}"/>
            <clip pos="1" part="lemq"/>
@@ -292,9 +292,9 @@ And then there are some categories like "month", with all the months.
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
-           <lit v=" "/>
+           <b pos="1"/>
            <clip pos="2" part="content"/>
-           <lit v=" "/>
+           <b pos="2"/>
            <clip pos="3" part="content"/>
            <lit v="}"/>
            <clip pos="1" part="lemq"/>
@@ -316,9 +316,9 @@ And then there are some categories like "month", with all the months.
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
-           <lit v=" "/>
+           <b pos="1"/>
            <clip pos="2" part="content"/>
-           <lit v=" "/>
+           <b pos="2"/>
            <clip pos="3" part="content"/>
            <lit v="}"/>
            <clip pos="1" part="lemq"/>
@@ -340,9 +340,9 @@ And then there are some categories like "month", with all the months.
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
-           <lit v=" "/>
+           <b pos="1"/>
            <clip pos="2" part="content"/>
-           <lit v=" "/>
+           <b pos="2"/>
            <clip pos="3" part="content"/>
            <lit v="}"/>
            <clip pos="1" part="lemq"/>
