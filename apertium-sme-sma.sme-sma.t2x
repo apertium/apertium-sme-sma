@@ -195,7 +195,7 @@ And then there are some categories like "month", with all the months.
   </section-def-vars>
 
   <section-rules>
-    <rule>
+    <rule comment="ii ADVL CONNEG">
       <pattern>
         <pattern-item n="ii"/>
         <pattern-item n="ADVL"/>
@@ -228,7 +228,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule>
+    <rule comment="NP">
       <pattern>
         <pattern-item n="NP"/>
       </pattern>
