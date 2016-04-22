@@ -245,7 +245,7 @@ And then there are some categories like "month", with all the months.
      <action>
        <out>
          <chunk>
-           <lit v="adpp"/>
+           <get-case-from pos="1"><lit v="adpp"/></get-case-from>
            <clip pos="2" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
@@ -266,7 +266,7 @@ And then there are some categories like "month", with all the months.
      <action>
        <out>
          <chunk>
-           <lit v="adpp"/>
+           <get-case-from pos="1"><lit v="adpp"/></get-case-from>
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
@@ -288,7 +288,7 @@ And then there are some categories like "month", with all the months.
      <action>
        <out>
          <chunk>
-           <lit v="coor_obj"/>
+           <get-case-from pos="1"><lit v="coor_obj"/></get-case-from>
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
@@ -312,7 +312,7 @@ And then there are some categories like "month", with all the months.
      <action>
        <out>
          <chunk>
-           <lit v="coor_subj"/>
+           <get-case-from pos="1"><lit v="coor_subj"/></get-case-from>
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
@@ -336,7 +336,7 @@ And then there are some categories like "month", with all the months.
      <action>
        <out>
          <chunk>
-           <lit v="coor_obj"/>
+           <get-case-from pos="1"><lit v="coor_obj"/></get-case-from>
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>

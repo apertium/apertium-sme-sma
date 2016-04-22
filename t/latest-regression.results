@@ -4,8 +4,7 @@ AP_SRC2 (doesn't seem to be a repo)
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
 sme-sma	  Ja Ipmil oinnii ahte dat lei buorre.
-	- Jïh Jupmele vööjni dïhte lij hijven.
-	+ jïh #jupmele vööjni dïhte lij hijven.
+WORKS	  Jïh Jupmele vööjni dïhte lij hijven.
 
 
 sme-sma	  ii leat ieš sápmelaš.
@@ -13,8 +12,7 @@ WORKS	  ij leah jïjtje saemie.
 
 
 sme-sma	  Ale boađe.
-	- Aellieh båetieh.
-	+ aellieh båetieh.
+WORKS	  Aellieh båetieh.
 
 
 sme-sma	  Dat lea buorre biila.
@@ -32,8 +30,7 @@ sme-sma	  Mun oainnán buori biilla.
 
 
 sme-sma	  Áhčči lea ruovttus.
-	- Aehtjie gåetesne.
-	+ aehtjie gåetesne.
+WORKS	  Aehtjie gåetesne.
 
 
 sme-sma	  Mus leat guokte láibbi.
@@ -80,38 +77,32 @@ WORKS	  Dïhte viskes bïjle.
 
 
 sme-sma	  Goas don lihkat?
-	- Gåessie datne tjuedtjelh?
-	+ gåessie datne tjuedtjelh?
+WORKS	  Gåessie datne tjuedtjelh?
 
 
 sme-sma	  Goas lihkat?
-	- Gåessie tjuedtjelh?
-	+ gåessie tjuedtjelh?
+WORKS	  Gåessie tjuedtjelh?
 
 
 sme-sma	  Galggango riŋget?
-	- Edtjem ringkedh?
-	+ edtjem ringkedh?
+WORKS	  Edtjem ringkedh?
 
 
 sme-sma	  Politihkka lea don ja mun.
 	- Politihke lea datne jïh manne.
-	+ politihke datne jïh manne.
+	+ Politihke datne jïh manne.
 
 
 sme-sma	  Válga ja jienastuslohku.
-	- Veeljeme jïh veeljemelåhkoe.
-	+ veeljeme jïh veeljemelåhkoe.
+WORKS	  Veeljeme jïh veeljemelåhkoe.
 
 
 sme-sma	  Sámedikki birra.
-	- Saemiedigkien bïjre.
-	+ saemiedigkien bïjre.
+WORKS	  Saemiedigkien bïjre.
 
 
 sme-sma	  Hotealla eaiggát.
-	- Hotellen aajhtere.
-	+ hotellen aajhtere.
+WORKS	  Hotellen aajhtere.
 
 
 sme-sma	  Mun čálán girjji.
@@ -119,13 +110,12 @@ WORKS	  Manne gærjam tjaalam.
 
 
 sme-sma	  Odne čálán dálu birra.
-	- Daenbiejjien gåetien bïjre tjaalam.
-	+ daenbiejjien gåetien bïjre tjaalam.
+WORKS	  Daenbiejjien gåetien bïjre tjaalam.
 
 
 sme-sma	  Odne lean čállán girjji.
 	- Daenbiejjien gærjam tjaaleme.
-	+ daenbiejjien tjaaleme gærjam.
+	+ Daenbiejjien tjaaleme gærjam.
 
 
-10 / 27, 37.04%
+20 / 27, 74.07%
