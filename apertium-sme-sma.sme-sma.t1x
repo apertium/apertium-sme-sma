@@ -828,80 +828,67 @@ And then there are some categories like "month", with all the months.
       </choose>
     </def-macro>
 
-    <def-macro n="proc-syn-foc-qst-Param1" npar="1">
+    <def-macro n="general-macro-Param1" npar="1">
       <choose>
         <when>
           <test>
             <or>
-               <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@-FMAINV"/></equal>
-               <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@+FMAINV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@-FMAINV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@+FMAINV"/></equal>
             </or>
           </test>
           <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
         </when>
       </choose>
 
-          <let><clip pos="1" side="tl" part="a_south"/><lit v=""/></let>
-          <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_south"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
 
-          <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let>
 
-          <!-- Set the +Allegro tag to nothing for now -->
-          <let><clip pos="1" side="tl" part="a_allegro"/><lit v=""/></let>
+      <!-- Set the +Allegro tag to nothing for now -->
+      <let><clip pos="1" side="tl" part="a_allegro"/><lit v=""/></let>
 
-          <call-macro n="convert-deriv-Param1">
-            <with-param pos="1"/>
-          </call-macro>
-          <!-- If the word has a syntactic function label, set the variable with that
-               label, if not, set the label to @X.
-               Remove question particle. -->
-          <let><var n="func"/><lit-tag v="@X"/></let>
-          <choose>
-            <when>
-              <test>
-                <not><equal><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></equal></not>
-              </test>
-              <let><var n="func"/><clip pos="1" side="sl" part="a_synlabel"/></let>
-            </when>
-          </choose>
-          <let><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></let>
-          <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
-          <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> <!-- Don't output focus particles -->
-         <let><var n="caseFirstword"/><case-of pos="1" side="sl" part="lem"/></let>
-    </def-macro>
-
-    <def-macro n="proc-syn-foc-qst-Param2" npar="2">
-      <call-macro n="proc-syn-foc-qst-Param1">
-        <with-param pos="2"/>
-      </call-macro>
-      <call-macro n="proc-syn-foc-qst-Param1">
+      <call-macro n="convert-deriv-Param1">
         <with-param pos="1"/>
       </call-macro>
-      <!-- Sometimes a combination of syntactic labels results in a new label for the chunk -->
+      <!-- If the word has a syntactic function label, set the variable with that
+           label, if not, set the label to @X.
+           Remove question particle. -->
+      <let><var n="func"/><lit-tag v="@X"/></let>
       <choose>
         <when>
           <test>
-            <and>
-              <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@-FMAINV"/></equal>
-              <equal><clip pos="2" side="sl" part="a_synlabel"/><lit-tag v="@+FAUXV"/></equal>
-            </and>
+            <not><equal><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></equal></not>
           </test>
-          <let><var n="func"/><lit-tag v="@+FMAINV"/></let>
+          <let><var n="func"/><clip pos="1" side="sl" part="a_synlabel"/></let>
         </when>
       </choose>
+      <let><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> <!-- Don't output focus particles -->
+      <let><var n="caseFirstword"/><case-of pos="1" side="sl" part="lem"/></let>
     </def-macro>
 
-    <def-macro n="proc-syn-foc-qst-Param3" npar="3">
-      <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="3"/></call-macro>
-      <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="2"/></call-macro>
-      <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="1"/></call-macro>
+    <def-macro n="general-macro-Param2" npar="2">
+      <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-Param1"><with-param pos="2"/></call-macro>
+      <let><var n="caseFirstword"/><case-of pos="1" side="sl" part="lem"/></let>
     </def-macro>
 
-    <def-macro n="proc-syn-foc-qst-Param4" npar="4">
-      <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="4"/></call-macro>
-      <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="3"/></call-macro>
-      <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="2"/></call-macro>
-      <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="1"/></call-macro>
+    <def-macro n="general-macro-Param3" npar="3">
+      <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-Param1"><with-param pos="2"/></call-macro>
+      <call-macro n="general-macro-Param1"><with-param pos="3"/></call-macro>
+      <let><var n="caseFirstword"/><case-of pos="1" side="sl" part="lem"/></let>
+    </def-macro>
+
+    <def-macro n="general-macro-Param4" npar="4">
+      <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-Param1"><with-param pos="2"/></call-macro>
+      <call-macro n="general-macro-Param1"><with-param pos="3"/></call-macro>
+      <call-macro n="general-macro-Param1"><with-param pos="4"/></call-macro>
+      <let><var n="caseFirstword"/><case-of pos="1" side="sl" part="lem"/></let>
     </def-macro>
 
     <def-macro n="convert-case-nbr-poss-Param1" npar="1">
@@ -1309,11 +1296,9 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-Param1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="prn" case="caseFirstWord">
+          <chunk name="prn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1334,7 +1319,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="numsem"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
@@ -1369,8 +1354,8 @@ And then there are some categories like "month", with all the months.
       <clip pos="1" side="tl" part="a_pers"/>
       <clip pos="1" side="tl" part="a_nbr"/>
       </concat></let>
-        <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="1"/></call-macro>
-        <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="3"/></call-macro>
+        <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
+        <call-macro n="general-macro-Param1"><with-param pos="3"/></call-macro>
         <out>
           <chunk name="prn" case="caseFirstWord">
             <tags>
@@ -1402,7 +1387,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param4"><with-param pos="1"/><with-param pos="2"/>
+        <call-macro n="general-macro-Param4"><with-param pos="1"/><with-param pos="2"/>
         <with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk name="noun" case="caseFirstWord">
@@ -1438,7 +1423,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param3"><with-param pos="1"/><with-param pos="2"/>
+        <call-macro n="general-macro-Param3"><with-param pos="1"/><with-param pos="2"/>
         <with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
           <with-param pos="3"/>
@@ -1473,7 +1458,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="numsem"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
           <with-param pos="2"/>
         </call-macro>
@@ -1503,7 +1488,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
           <with-param pos="2"/>
         </call-macro>
@@ -1538,7 +1523,7 @@ And then there are some categories like "month", with all the months.
          <with-param pos="1"/>
          <with-param pos="3"/>
         </call-macro>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="2"/>
         </call-macro>
         <out>
@@ -1601,7 +1586,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="2"/></call-macro>
         <out>
@@ -1630,7 +1615,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param3"><with-param pos="1"/><with-param pos="2"/>
+        <call-macro n="general-macro-Param3"><with-param pos="1"/><with-param pos="2"/>
         <with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="3"/></call-macro>
@@ -1665,7 +1650,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
-         <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="1"/></call-macro>
+         <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
               <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let>
        <out>
           <chunk name="noun" case="caseFirstWord">
@@ -1706,7 +1691,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
@@ -1733,7 +1718,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="n-not-cmp"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2">
+        <call-macro n="general-macro-Param2">
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
@@ -1772,7 +1757,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="num-ldep"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2">
+        <call-macro n="general-macro-Param2">
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
@@ -1805,7 +1790,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="n-prop-pers"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
@@ -1833,10 +1818,10 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="proc-syn-foc-qst-Param2">
+        <call-macro n="general-macro-Param2">
           <with-param pos="3"/>
           <with-param pos="1"/>
         </call-macro>
@@ -1880,7 +1865,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param3">
+        <call-macro n="general-macro-Param3">
           <with-param pos="3"/>
           <with-param pos="2"/>
           <with-param pos="1"/>
@@ -1929,7 +1914,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="ii"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -1962,7 +1947,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="conneg"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -1992,10 +1977,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="conneg"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/> </call-macro>
         <out>
           <chunk name="ii-conneg" case="caseFirstWord">
             <tags>
@@ -2030,7 +2012,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="conneg"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2">
+        <call-macro n="general-macro-Param2">
           <with-param pos="1"/>
           <with-param pos="2"/>
           <with-param pos="3"/>
@@ -2079,7 +2061,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-verb-deriv-Param1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
@@ -2105,7 +2087,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="prfprcword"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2">
+        <call-macro n="general-macro-Param2">
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
@@ -2139,7 +2121,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-prfprc"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param3">
+        <call-macro n="general-macro-Param3">
           <with-param pos="3"/>
           <with-param pos="2"/>
           <with-param pos="1"/>
@@ -2176,7 +2158,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
        <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ine"/></let>
-       <call-macro n="proc-syn-foc-qst-Param2">
+       <call-macro n="general-macro-Param2">
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
@@ -2206,7 +2188,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="subpred"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="copnom" case="caseFirstWord">
@@ -2235,7 +2217,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="subpred"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param2"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="general-macro-Param2"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="2"/></call-macro>
         <out>
@@ -2268,7 +2250,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-inf"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="convert-verb-deriv-Param1">
@@ -2294,7 +2276,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-prfprc"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="convert-verb-deriv-Param1">
@@ -2319,7 +2301,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-actio"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -2346,7 +2328,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-imp"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -2373,7 +2355,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="adj"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
@@ -2399,7 +2381,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="prsprc"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param1">
@@ -2426,7 +2408,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="1"/></call-macro>
+        <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
@@ -2449,7 +2431,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="pr"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -2472,7 +2454,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="post"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -2497,7 +2479,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="vejolaš"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1"><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-Param1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="vej" case="caseFirstWord">
             <tags>
@@ -2517,7 +2499,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="ahte"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -2539,7 +2521,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="cnjsub"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -2562,7 +2544,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="cnjcoo"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
+        <call-macro n="general-macro-Param1">
           <with-param pos="1"/>
         </call-macro> 
         <out>
@@ -2587,9 +2569,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="sent"/>
       </pattern>
       <action>
-        <call-macro n="proc-syn-foc-qst-Param1">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="sent" case="caseFirstWord">
             <tags>
