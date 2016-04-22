@@ -1365,31 +1365,30 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="goiku"/>
       </pattern>
       <action>
-      <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-      <let><clip pos="3" side="tl" part="tags"/><concat><lit-tag v="vblex"/>
-      <clip pos="2" side="tl" part="a_mood"/>
-      <clip pos="2" side="tl" part="a_tense"/>
-      <clip pos="1" side="tl" part="a_pers"/>
-      <clip pos="1" side="tl" part="a_nbr"/>
-      </concat></let>
-        <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
-        <call-macro n="general-macro-Param1"><with-param pos="3"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+        <let><clip pos="3" side="tl" part="tags"/><concat><lit-tag v="vblex"/>
+        <clip pos="2" side="tl" part="a_mood"/>
+        <clip pos="2" side="tl" part="a_tense"/>
+        <clip pos="1" side="tl" part="a_pers"/>
+        <clip pos="1" side="tl" part="a_nbr"/>
+        </concat></let>
+        <call-macro n="general-macro-Param3"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="prn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
             <lu>
-             <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
-            <b />
-          <chunk name="vblex" case="caseFirstword">
+          <b />
+          <chunk name="vblex">
             <tags>
               <tag><lit-tag v="VP"/></tag>
             </tags>
             <lu>
-             <clip pos="3" side="tl" part="whole"/>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
