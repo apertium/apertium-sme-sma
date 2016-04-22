@@ -1940,9 +1940,9 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="n-num" case="caseFirstWord">
+          <chunk name="noun-num" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
@@ -1973,7 +1973,7 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="prop" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
@@ -2006,7 +2006,7 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="attr-cmp-n" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
@@ -2053,7 +2053,7 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="attr-attr-n" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
