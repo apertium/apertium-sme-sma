@@ -175,8 +175,8 @@ Rules
 !"Don't allow derivations as left-compounds"
 !: /<= _ Derivations :* Cmp ;
 
-"Don't allow more than two left-compounds"
-: /<= _ Cmp :* Cmp :* Cmp ;
+"Don't allow more than three left-compounds"
+: /<= _ Cmp :* Cmp :* Cmp :* Cmp ;
 
 ! TODO: do we want double derivations in sme-sma? if so, comment out this rule:
 !"Don't allow derivations of derivations"
