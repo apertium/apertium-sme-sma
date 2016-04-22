@@ -1,14 +1,11 @@
-Revision: 66210
-AP_SRC1 Revision: 130745
-AP_SRC2 Revision: 130745
+Revision: 67491
+AP_SRC1 (doesn't seem to be a repo)
+AP_SRC2 (doesn't seem to be a repo)
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
 sme-sma	  Ja Ipmil oinnii ahte dat lei buorre.
-WORKS	  Jïh Jupmele vööjni dïhte lij hijven.
-
-
-sme-sma	  in.
-WORKS	  im.
+	- Jïh Jupmele vööjni dïhte lij hijven.
+	+ jïh #jupmele vööjni dïhte lij hijven.
 
 
 sme-sma	  ii leat ieš sápmelaš.
@@ -16,73 +13,105 @@ WORKS	  ij leah jïjtje saemie.
 
 
 sme-sma	  Ale boađe.
-WORKS	  Aellieh båetieh.
+	- Aellieh båetieh.
+	+ aellieh båetieh.
+
+
+sme-sma	  Dat lea buorre biila.
+WORKS	  Dïhte buerie bïjle.
+
+
+sme-sma	  Mun vuoján buriin biillain.
+	- Manne buerie bïjline vuajam.
+	+ Manne vuajam buerie bïjline.
+
+
+sme-sma	  Mun oainnán buori biilla.
+	- Manne buerie bïjlem vuajnam.
+	+ Manne vuajnam buerie bïjlem.
+
+
+sme-sma	  Áhčči lea ruovttus.
+	- Aehtjie gåetesne.
+	+ aehtjie gåetesne.
+
+
+sme-sma	  Mus leat guokte láibbi.
+WORKS	  Mov leah göökte laejpieh.
+
+
+sme-sma	  Dat lea máná biila.
+WORKS	  Dïhte maanan bïjle.
+
+
+sme-sma	  Mus lea beana.
+WORKS	  Mov lea bïenje.
+
+
+sme-sma	  Mus lea beana.
+WORKS	  Mov lea bïenje.
+
+
+sme-sma	  Mus lea borranmiella.
+	- Manne bårrestovvem.
+	+ manne bårrestovvem.
+
+
+sme-sma	  Mis lea borranmiella.
+	- Mijjieh bårrestovvebe.
+	+ mijjieh bårrestovvebe.
+
+
+sme-sma	  Mus lea goiku.
+	- Manne gåjhkelovvem.
+	+ manne gåjhkelovvem.
+
+
+sme-sma	  Mun muitalin nu ollu go vejolaš.
+WORKS	  Manne bïeljelim nimhtie jeenjem goh gåarede.
 
 
 sme-sma	  Mun lean studeanta.
 WORKS	  Manne studeente.
 
 
-sme-sma	  Dat lea biila.
-WORKS	  Dïhte bïjle.
-
-
 sme-sma	  Dat lea fiskes biila.
-	- Dïhte viskes bïjle.
-	+ Dïhte #viskes bïjle.
+WORKS	  Dïhte viskes bïjle.
 
 
 sme-sma	  Goas don lihkat?
-WORKS	  Gåessie datne tjuedtjelh?
+	- Gåessie datne tjuedtjelh?
+	+ gåessie datne tjuedtjelh?
 
 
 sme-sma	  Goas lihkat?
-WORKS	  Gåessie tjuedtjelh?
+	- Gåessie tjuedtjelh?
+	+ gåessie tjuedtjelh?
 
 
 sme-sma	  Galggango riŋget?
 	- Edtjem ringkedh?
-	+ #Edtjedh ringkedh?
-
-
-sme-sma	  min.
-WORKS	  mijjem.
-
-
-sme-sma	  biila.
-WORKS	  bïjle.
-
-
-sme-sma	  biilla.
-WORKS	  bïjlem.
-
-
-sme-sma	  biillat.
-WORKS	  bïjlh.
+	+ edtjem ringkedh?
 
 
 sme-sma	  Politihkka lea don ja mun.
-WORKS	  Politihke lea datne jïh manne.
-
-
-sme-sma	  máná.
-WORKS	  maanam.
+	- Politihke lea datne jïh manne.
+	+ politihke datne jïh manne.
 
 
 sme-sma	  Válga ja jienastuslohku.
-WORKS	  Veeljeme jïh veeljemelåhkoe.
+	- Veeljeme jïh veeljemelåhkoe.
+	+ veeljeme jïh veeljemelåhkoe.
 
 
 sme-sma	  Sámedikki birra.
-WORKS	  Saemiedigkien bïjre.
+	- Saemiedigkien bïjre.
+	+ saemiedigkien bïjre.
 
 
 sme-sma	  Hotealla eaiggát.
-WORKS	  Hotellen aajhtere.
-
-
-sme-sma	  Gonagas Harald.
-WORKS	  Gånka Harald.
+	- Hotellen aajhtere.
+	+ hotellen aajhtere.
 
 
 sme-sma	  Mun čálán girjji.
@@ -90,11 +119,13 @@ WORKS	  Manne gærjam tjaalam.
 
 
 sme-sma	  Odne čálán dálu birra.
-WORKS	  Daenbiejjien gåetien bïjre tjaalam.
+	- Daenbiejjien gåetien bïjre tjaalam.
+	+ daenbiejjien gåetien bïjre tjaalam.
 
 
 sme-sma	  Odne lean čállán girjji.
-WORKS	  Daenbiejjien gærjam tjaaleme.
+	- Daenbiejjien gærjam tjaaleme.
+	+ daenbiejjien tjaaleme gærjam.
 
 
-21 / 23, 91.3%
+10 / 27, 37.04%

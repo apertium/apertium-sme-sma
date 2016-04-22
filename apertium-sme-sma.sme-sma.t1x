@@ -1344,7 +1344,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="num" case="caseFirstWord">
+          <chunk name="num" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1375,7 +1375,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="general-macro-Param1"><with-param pos="3"/></call-macro>
         <out>
-          <chunk name="prn" case="caseFirstWord">
+          <chunk name="prn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
             </tags>
@@ -1384,7 +1384,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
             <b />
-          <chunk name="vblex" case="caseFirstWord">
+          <chunk name="vblex" case="caseFirstword">
             <tags>
               <tag><lit-tag v="VP"/></tag>
             </tags>
@@ -1408,7 +1408,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-Param4"><with-param pos="1"/><with-param pos="2"/>
         <with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
-          <chunk name="noun" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1447,7 +1447,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="noun" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1481,7 +1481,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="num" case="caseFirstWord">
+          <chunk name="num" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1511,7 +1511,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="noun" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1545,7 +1545,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstWord">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1580,7 +1580,7 @@ And then there are some categories like "month", with all the months.
          <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstWord">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1608,7 +1608,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="2"/></call-macro>
         <out>
-          <chunk name="prn-noun" case="caseFirstWord">
+          <chunk name="prn-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1638,7 +1638,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="3"/></call-macro>
         <out>
-          <chunk name="prn-noun" case="caseFirstWord">
+          <chunk name="prn-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1671,7 +1671,7 @@ And then there are some categories like "month", with all the months.
          <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
               <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let>
        <out>
-          <chunk name="noun" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstword">
              <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1690,7 +1690,7 @@ And then there are some categories like "month", with all the months.
       <action>
            <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
         <out>
-          <chunk name="adverb" case="caseFirstWord">
+          <chunk name="adverb" case="caseFirstword">
              <tags>
               <tag><lit-tag v="SV"/></tag>
                <tag><lit-tag v="@ADVL"/></tag>
@@ -1716,7 +1716,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="noun" case="caseFirstWord">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1751,7 +1751,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>  
         <out>
-          <chunk name="adj-noun" case="caseFirstWord">
+          <chunk name="adj-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1784,7 +1784,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="noun-num" case="caseFirstWord">
+          <chunk name="noun-num" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1815,7 +1815,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="prop" case="caseFirstWord">
+          <chunk name="prop" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1848,7 +1848,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="attr-cmp-nnn" case="caseFirstWord">
+          <chunk name="attr-cmp-nnn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1894,7 +1894,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="attr-attr-n" case="caseFirstWord">
+          <chunk name="attr-attr-n" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1936,7 +1936,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="ii" case="caseFirstWord">
+          <chunk name="ii" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -1969,7 +1969,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="conneg" case="caseFirstWord">
+          <chunk name="conneg" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -1997,7 +1997,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/> </call-macro>
         <out>
-          <chunk name="ii-conneg" case="caseFirstWord">
+          <chunk name="ii-conneg" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2036,7 +2036,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="ii-prn-conneg" case="caseFirstWord">
+          <chunk name="ii-prn-conneg" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2084,7 +2084,7 @@ And then there are some categories like "month", with all the months.
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
-          <chunk name="vblex" case="caseFirstWord">
+          <chunk name="vblex" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2113,7 +2113,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="vblex" case="caseFirstWord">
+          <chunk name="vblex" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2148,7 +2148,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="vblex" case="caseFirstWord">
+          <chunk name="vblex" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2181,7 +2181,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="nom" case="caseFirstWord">
+          <chunk name="nom" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2209,7 +2209,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="2"/></call-macro>
         <out>
-          <chunk name="copnom" case="caseFirstWord">
+          <chunk name="copnom" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@←SPRED"/></tag> 
@@ -2239,7 +2239,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="2"/></call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstWord">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@←SPRED"/></tag> 
@@ -2275,7 +2275,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="inf" case="caseFirstWord">
+          <chunk name="inf" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2301,7 +2301,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="prfprc" case="caseFirstWord">
+          <chunk name="prfprc" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2323,7 +2323,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="actio" case="caseFirstWord">
+          <chunk name="actio" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2350,7 +2350,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="imp" case="caseFirstWord">
+          <chunk name="imp" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -2380,7 +2380,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="adj" case="caseFirstWord">
+          <chunk name="adj" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SA"/></tag>
               <tag><var n="func"/></tag>
@@ -2406,7 +2406,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="prsprc" case="caseFirstWord">
+          <chunk name="prsprc" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SA"/></tag>
               <tag><var n="func"/></tag>
@@ -2429,7 +2429,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="adv" case="caseFirstWord">
+          <chunk name="adv" case="caseFirstword">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
               <tag><var n="func"/></tag>
@@ -2453,7 +2453,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="pr" case="caseFirstWord">
+          <chunk name="pr" case="caseFirstword">
             <tags>
               <tag><lit-tag v="PREP"/></tag>
               <tag><var n="func"/></tag>
@@ -2476,7 +2476,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="post" case="caseFirstWord">
+          <chunk name="post" case="caseFirstword">
             <tags>
               <tag><lit-tag v="POST"/></tag>
               <tag><var n="func"/></tag>
@@ -2499,7 +2499,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-Param1"><with-param pos="2"/></call-macro>
         <out>
-          <chunk name="vej" case="caseFirstWord">
+          <chunk name="vej" case="caseFirstword">
             <tags>
               <tag><lit-tag v="VA"/></tag>
               <tag><var n="func"/></tag>
@@ -2521,7 +2521,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="ahte" case="caseFirstWord">
+          <chunk name="ahte" case="caseFirstword">
             <tags>
               <tag><lit-tag v="cnjsub"/></tag>
               <tag><var n="func"/></tag>
@@ -2543,7 +2543,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="cnjsub" case="caseFirstWord">
+          <chunk name="cnjsub" case="caseFirstword">
             <tags>
               <tag><lit-tag v="cnjsub"/></tag>
               <tag><var n="func"/></tag>
@@ -2566,7 +2566,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro> 
         <out>
-          <chunk name="cnjcoo" case="caseFirstWord">
+          <chunk name="cnjcoo" case="caseFirstword">
             <tags>
               <tag><lit-tag v="cnjcoo"/></tag>
               <tag><var n="func"/></tag>
@@ -2589,7 +2589,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-Param1"><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="sent" case="caseFirstWord">
+          <chunk name="sent" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SENT"/></tag>
               <tag><var n="func"/></tag>
