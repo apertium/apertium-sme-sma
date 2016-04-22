@@ -184,7 +184,7 @@
         <file name="sme-sma.t1x.bin"/>
         <file name="sme-sma.autobil.bin"/>
       </program>
-      <program name="apertium-interchunk">
+      <program name="apertium-interchunk -t">
         <file name="apertium-sme-sma.sme-sma.t2x"/>
         <file name="sme-sma.t2x.bin"/>
       </program>
