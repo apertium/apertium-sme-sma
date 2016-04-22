@@ -54,6 +54,10 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="NP"/>
       <cat-item tags="NP.*"/>
     </def-cat>
+    <def-cat n="ADVL_left">
+        <cat-item tags="*.@←ADVL.*"/>
+        <cat-item tags="*.@←ADVL"/>
+    </def-cat>
 
     <def-cat n="SV_Obj">
         <cat-item tags="SV.@OBJ→.*"/>
@@ -613,6 +617,25 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="FMainV ADVL_left" > <!--SVO becomes SOV, Odne čálán dálu birra.. -->
+      <pattern>
+        <pattern-item n="FMainV"/>
+        <pattern-item n="ADVL_left"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
         <rule comment="NP_Subj FMainV SV_Obj" > <!--SVO becomes SOV, verbal objects--><!-- Mun oahpan lohkat girjjiid.-->
       <pattern>

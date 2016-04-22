@@ -76,12 +76,14 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="ADV.*"/>
     </def-cat>
 
+    
     <def-cat n="NP_Po">
         <cat-item tags="NP.@→P.*"/>
     </def-cat>
 
     <def-cat n="NP_Pr">
         <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@P←.*"/>
     </def-cat>
 
     <def-cat n="FMainV">
@@ -123,10 +125,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="Adp">
-        <cat-item tags="Pr.*"/>
-        <cat-item tags="Pr"/>
-        <cat-item tags="Po.*"/>
-        <cat-item tags="Po"/>
+        <cat-item tags="PREP.*"/>
+        <cat-item tags="PREP"/>
+        <cat-item tags="POST.*"/>
+        <cat-item tags="POST"/>
     </def-cat>
 
   </section-def-cats>
@@ -205,30 +207,21 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" part="a_tense"/><clip pos="3" part="a_tense"/></let>
         <out>
           <chunk>
-            <clip pos="1" part="lemh"/>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-            <clip pos="1" part="lemq"/>
+            <clip pos="1" part="whole"/>
           </chunk>
           <b pos="1"/>
           <chunk>
-            <clip pos="2" part="lemh"/>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-            <clip pos="2" part="lemq"/>
+            <clip pos="2" part="whole"/>
           </chunk>
           <b pos="2"/>
           <chunk>
-            <clip pos="3" part="lemh"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-            <clip pos="3" part="lemq"/>
+            <clip pos="3" part="whole"/>
           </chunk>
         </out>
       </action>
     </rule>
 
-    <rule comment="NP">
+<!--    <rule comment="NP">
       <pattern>
         <pattern-item n="NP"/>
       </pattern>
@@ -242,7 +235,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
    <rule comment="REGLA: NP_Po Adp">
      <pattern>
