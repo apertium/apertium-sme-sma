@@ -919,11 +919,7 @@
    <!-- vaj as jallh and vuj  -->
    
    
-   
-    <!-- To run: fugl,mnsk,tobeinte=varredh and roehtedh, rein= tsuvvedh, rovdyr, dyr med klør= goetsedh, dyr med hover (seahkohkh):tsuvvedh, for hunden: hajkedh og goetsedh -->
-      
-   
-       
+        
 -->
 <!-- čuovvut as dåeriedidh or seatadidh  --> 
    <rule weight="1.0">
@@ -1246,6 +1242,27 @@
      <select lemma="dahpeldihkie" tags="adv.*"/>
    </match>
  </rule>     
+
+<!-- goddi=gedtie - moenehtse -->
+      
+       <rule weight="1.0">
+         <match lemma="goddi" tags="adv.*">
+            <select lemma="moenehtse" tags="adj*"/>
+         </match>
+ </rule>     
+
+    <rule weight="0.5">
+       <match tags="*.sem_ani.*"/>
+       <match lemma="goddi" tags="adv.*">
+         <select lemma="gedtie" tags="noun*"/>
+   </match>
+ </rule>    
+  
+
+
+  
+    <!-- To run: fugl,mnsk,tobeinte=varredh and roehtedh, rein= tsuvvedh, rovdyr, dyr med klør= goetsedh, dyr med hover (seahkohkh):tsuvvedh, for hunden: hajkedh og goetsedh -->
+      
 
 
 </rules> 
