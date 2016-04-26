@@ -2242,6 +2242,31 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
 
+    <rule comment="REGLA: verb-fin  - 1 position">
+      <pattern>
+        <pattern-item n="leat-drop"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-verb-deriv-Param1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="general-macro-Param1">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
+        <out>
+          <chunk name="cop-mainv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
 

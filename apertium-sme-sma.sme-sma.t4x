@@ -82,8 +82,12 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="NP_Spred_l">
         <cat-item tags="*.@←SPRED"/>
+        <cat-item tags="*.@←SPRED.*"/>
     </def-cat>
 
+    <def-cat n="modifyer">
+        <cat-item tags="*.@→N.*"/>
+    </def-cat>
 
 
     <def-cat n="NP_Po">
@@ -169,8 +173,8 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="prn" tags="NP.@SUBJ→.*"/>
     </def-cat>
     <def-cat n="Vcop">
-        <cat-item lemma="copula" tags="SV"/>
-        <cat-item lemma="copula" tags="SV.*"/>
+        <cat-item lemma="cop-mainv" tags="SV"/>
+        <cat-item lemma="cop-mainv" tags="SV.*"/>
     </def-cat>
 
     <def-cat n="Ine_adverb">
@@ -312,6 +316,64 @@ And then there are some categories like "month", with all the months.
             <clip pos="2" part="tags"/>
             <clip pos="2" part="chcontent"/>
             <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+ <rule comment="prn lea NP" > <!--  delete cop -->
+      <pattern>
+        <pattern-item n="prn-dem"/>
+        <pattern-item n="Vcop"/>
+        <pattern-item n="NP_Spred_l"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+            <b/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+ <rule comment="prn lea mod NP" > <!--  delete cop -->
+      <pattern>
+        <pattern-item n="prn-dem"/>
+        <pattern-item n="Vcop"/> 
+        <pattern-item n="modifyer"/>
+        <pattern-item n="NP_Spred_l"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+            <b/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+            <b/>
+          <chunk>
+            <clip pos="4" part="lemh"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
+            <clip pos="4" part="lemq"/>
           </chunk>
         </out>
       </action>
