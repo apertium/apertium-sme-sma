@@ -1282,7 +1282,8 @@
     <or>
        <match tags="n.sem_food.*"/>
        <match tags="n.sem_event_food.*"/>
-       <match tags="n.sme_ani.*"/> 
+       <match tags="n.sme_ani.*"/>
+       <match tags="n.sem_drink.*"/>
        <match lemma="čáhci"/>
        </or>
  </rule>    
