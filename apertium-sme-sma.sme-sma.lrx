@@ -1289,9 +1289,134 @@
  </rule>    
 
 
+<!-- Konjunksjon "ja" = jïh - gonnoeh -->
+      
+       <rule weight="1.0">
+         <match lemma="ja" tags="cnjcoo.*">
+            <select lemma="jïh" tags="cnjcoo.*"/>
+         </match>
+       </rule>     
+
+    <rule weight="0.5">
+        <match lemma="ja" tags="cnjcoo.*">
+            <select lemma="gonnoeh" tags="cnjcoo.*"/>
+        </match>
+ </rule>     
+
+    <rule weight="0.6">
+        <or>
+            <match lemma="eadni"/>
+             <match lemma="áhčči"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="eadni"/>
+             <match lemma="áhčči"/>
+        </or>
+     </rule>
+    
+    <rule weight="0.6">
+        <or>
+            <match lemma="áhkku"/>
+             <match lemma="áddja"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="áhkku"/>
+             <match lemma="áddja"/>
+        </or>
+     </rule>
+
+  <rule weight="0.6">
+        <or>
+            <match lemma="muoŧŧá"/>
+             <match lemma="máhka"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="muoŧŧá"/>
+             <match lemma="máhka"/>
+        </or>
+     </rule>
+     
+     <rule weight="0.6">
+        <or>
+            <match lemma="goaski"/>
+             <match lemma="máhka"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="goaski"/>
+             <match lemma="máhka"/>
+        </or>
+     </rule>
+     
+      <rule weight="0.6">
+        <or>
+            <match lemma="siessá"/>
+             <match lemma="máhka"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="siessá"/>
+             <match lemma="máhka"/>
+        </or>
+     </rule>
+
+     <rule weight="0.6">
+        <or>
+            <match lemma="čeahci"/>
+             <match lemma="ipmi"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="čeahci"/>
+             <match lemma="ipmi"/>
+        </or>
+      </rule>
+      
+      <rule weight="0.6">
+        <or>
+            <match lemma="eahki"/>
+             <match lemma="ipmi"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="eahki"/>
+             <match lemma="ipmi"/>
+        </or>
+      </rule>
+      
+      <rule weight="0.6">
+        <or>
+            <match lemma="eanu"/>
+             <match lemma="ipmi"/>
+        </or>
+         <match lemma="ja" tags="cnjcoo.*">
+         <select lemma="gonnoeh" tags="cnjcoo.*"/>
+         </match>
+         <or>
+            <match lemma="eanu"/>
+             <match lemma="ipmi"/>
+        </or>
+      </rule>
 
 
-  
+
     <!-- To run: fugl,mnsk,tobeinte=varredh and roehtedh, rein= tsuvvedh, rovdyr, dyr med klør= goetsedh, dyr med hover (seahkohkh):tsuvvedh, for hunden: hajkedh og goetsedh -->
       
 
