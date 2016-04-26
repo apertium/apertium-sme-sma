@@ -122,8 +122,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.←hab→.*"/>
     </def-cat>
     <def-cat n="subpred">
-      <cat-item tags="*.@←SPRED"/>
-      <cat-item tags="*.nom.@←SUBJ"/> <!-- not ext -->
+      <cat-item tags="adj.*.@←SPRED"/>
+<!--      <cat-item tags="*.nom.@←SUBJ"/> not ext -->
     </def-cat>
     <def-cat n="inessive">
       <cat-item tags="*.loc.@←ADVL"/>
@@ -1911,12 +1911,12 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-Param2">
-          <with-param pos="2"/>
           <with-param pos="1"/>
+          <with-param pos="2"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param2">
-          <with-param pos="2"/>
           <with-param pos="1"/>
+          <with-param pos="2"/>
         </call-macro>
               <choose>  
         <when><test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
@@ -1925,7 +1925,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>  
         <out>
-          <chunk name="adj-noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -1954,8 +1954,8 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param2">
-          <with-param pos="2"/>
           <with-param pos="1"/>
+          <with-param pos="2"/>
         </call-macro>
         <out>
           <chunk name="noun-num" case="caseFirstword">
@@ -2014,12 +2014,12 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="general-macro-Param2">
-          <with-param pos="3"/>
           <with-param pos="1"/>
+          <with-param pos="3"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param2">
-          <with-param pos="3"/>
           <with-param pos="1"/>
+          <with-param pos="3"/>
         </call-macro>
         <out>
           <chunk name="attr-cmp-nnn" case="caseFirstword">
@@ -2058,14 +2058,14 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-Param3">
-          <with-param pos="3"/>
-          <with-param pos="2"/>
           <with-param pos="1"/>
+          <with-param pos="2"/>
+          <with-param pos="3"/>
         </call-macro>
         <call-macro n="convert-case-nbr-poss-Param3">
-          <with-param pos="3"/>
-          <with-param pos="2"/>
           <with-param pos="1"/>
+          <with-param pos="2"/>
+          <with-param pos="3"/>
         </call-macro>
         <out>
           <chunk name="attr-attr-n" case="caseFirstword">
@@ -2280,13 +2280,13 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-Param2">
-          <with-param pos="2"/>
           <with-param pos="1"/>
+          <with-param pos="2"/>
         </call-macro>
         <call-macro n="convert-verb-deriv-Param1">
           <with-param pos="2"/>
         </call-macro>
-          <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let>
+ <!--         <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let> -->
         <out>
           <chunk name="vblex" case="caseFirstword">
             <tags>
@@ -2315,9 +2315,9 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-Param3">
-          <with-param pos="3"/>
-          <with-param pos="2"/>
           <with-param pos="1"/>
+          <with-param pos="2"/>
+          <with-param pos="3"/>
         </call-macro>
         <call-macro n="convert-verb-deriv-Param1">
           <with-param pos="3"/>
