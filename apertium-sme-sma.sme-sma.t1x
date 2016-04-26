@@ -128,6 +128,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="gen">
       <cat-item tags="*.gen.*"/>
     </def-cat>
+    <def-cat n="interj">
+      <cat-item tags="ij.*"/>
+    </def-cat>
     <def-cat n="verb_to_adv">
       <cat-item lemma="oassálastit" tags="vblex.*"/>
       <cat-item lemma="oasálastit" tags="vblex.*"/>
@@ -2111,6 +2114,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-verb-deriv-Param1">
           <with-param pos="2"/>
         </call-macro>
+          <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let>
         <out>
           <chunk name="vblex" case="caseFirstword">
             <tags>
@@ -2578,6 +2582,27 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: ij  - 1 position">
+      <pattern>
+        <pattern-item n="interj"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-Param1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="cnjsub" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ij"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <!-- SECTION: Miscellaneous -->
 

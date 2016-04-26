@@ -60,9 +60,9 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="SV_Obj">
-        <cat-item tags="SV.@OBJ→.*"/>
-        <cat-item tags="SV.@←OBJ.*"/>
-        <cat-item tags="SV.@←OBJ"/>
+        <cat-item tags="NP.@OBJ→.*"/>
+        <cat-item tags="NP.@←OBJ.*"/>
+        <cat-item tags="NP.@←OBJ"/>
     </def-cat>
 
     <def-cat n="NP_Subj">
@@ -117,6 +117,17 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.*.@+FMAINV.*"/>
         <cat-item tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
+
+    <def-cat n="IFMainV">
+        <cat-item tags="SV.@+FMAINV"/>
+        <cat-item tags="SV.@+FMAINV.*"/>
+        <cat-item tags="SV.*.@+FMAINV.*"/>
+        <cat-item tags="SV.*.*.@+FMAINV.*"/>
+        <cat-item tags="SV.@-FMAINV"/>
+        <cat-item tags="SV.@-FMAINV.*"/>
+        <cat-item tags="SV.*.@-FMAINV.*"/>
+    </def-cat>
+
 
     <def-cat n="iiverb">
         <cat-item lemma="ii" tags="SV.@+FAUXV.*"/>
@@ -501,7 +512,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="NP_Subj FMainV NP_Obj_l" > <!--SVO becomes SOV -->
       <pattern>
         <pattern-item n="NP_Subj"/>
-        <pattern-item n="FMainV"/>
+        <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
@@ -559,7 +570,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="ADV FMainV NP_Obj_l" > <!--SVO becomes SOV, Daenbiejjien gærjam tjaaleme. -->
       <pattern>
         <pattern-item n="ADV"/>
-        <pattern-item n="FMainV"/>
+        <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
@@ -646,8 +657,8 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-        <rule comment="NP_Subj FMainV SV_Obj" > <!--SVO becomes SOV, verbal objects--><!-- Mun oahpan lohkat girjjiid.-->
-      <pattern>
+<!--        <rule comment="NP_Subj FMainV SV_Obj" > --> <!--SVO becomes SOV, verbal objects--><!-- Mun oahpan lohkat girjjiid.-->
+<!--      <pattern>
         <pattern-item n="NP_Subj"/>
         <pattern-item n="FMainV"/>
         <pattern-item n="SV_Obj"/>
@@ -676,7 +687,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
     <rule comment="FAuxV IMainV NP_Obj_l" > <!--AVO becomes AOV -->
       <pattern>
