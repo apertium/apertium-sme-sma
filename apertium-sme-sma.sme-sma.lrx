@@ -1261,68 +1261,33 @@
 
 <!-- giitu= gæjhtoe - gudtsien -->
       
-       <rule weight="1.0">
-         <match lemma="giitu" tags="n.*">
-            <select lemma="gæjhtoe" tags="n.*"/>
-         </match>
-       </rule>     
-
-       <rule weight="0.5">
-         <match lemma="giitu" tags="n.*">
-            <select lemma="gudtsien" tags="n.*"/>
-         </match>
- </rule>     
-
-    <rule weight="0.6">
-    <or>
-       <match tags="*.sem_food.*"/>
-       <match tags="*.sem_event_food.*"/>
-       <match tags="*.sme_ani.*"/> 
-       </or>
-       <match lemma="giitu" tags="n.*">
-         <select lemma="gudtsien" tags="n"/>
-   </match>
- </rule>    
-
-
-    <rule weight="0.6">
-       <match lemma="čáhci"/>
-       <match lemma="giitu" tags="n.*">
-         <select lemma="gudtsien" tags="n"/>
-   </match>
- </rule>    
   
 
        <rule weight="1.0">
          <match lemma="giitu" tags="ij.*">
-            <select lemma="gæjhtoe" tags="ij"/>
+            <select lemma="gæjhtoe" tags="ij.*"/>
          </match>
        </rule>     
 
        <rule weight="0.5">
          <match lemma="giitu" tags="ij.*">
-            <select lemma="gudtsien" tags="ij"/>
+            <select lemma="gudtsien" tags="ij.*"/>
          </match>
  </rule>     
 
     <rule weight="0.6">
+       <match lemma="giitu" tags="ij.*">
+         <select lemma="gudtsien" tags="ij.*"/>
+   </match>
     <or>
-       <match tags="*.sem_food.*"/>
-       <match tags="*.sem_event_food.*"/>
-       <match tags="*.sme_ani.*"/> 
-       </or>
-       <match lemma="giitu" tags="ij.*">
-         <select lemma="gudtsien" tags="ij"/>
-   </match>
- </rule>    
-
-
-    <rule weight="0.6">
+       <match tags="n.sem_food.*"/>
+       <match tags="n.sem_event_food.*"/>
+       <match tags="n.sme_ani.*"/> 
        <match lemma="čáhci"/>
-       <match lemma="giitu" tags="ij.*">
-         <select lemma="gudtsien" tags="ij"/>
-   </match>
+       </or>
  </rule>    
+
+
 
 
   
