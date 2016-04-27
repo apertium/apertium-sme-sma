@@ -1502,4 +1502,49 @@
  </rule>    
 
 
+<!-- Regel for "varra" = mnsk:vïrre - rein, hjort, elg: maelie, kruemie: rovdyr, gaupe, albbas, gumpe, rieban:  -->
+      
+     
+       <rule weight="1.0">
+         <match lemma="varra" >
+            <select lemma="vïrre"/>
+         </match>
+       </rule>     
+       <rule weight="0.5">
+         <match lemma="varra">
+            <select lemma="maelie"/>
+         </match>
+ </rule>     
+    <rule weight="0.6">
+       <match lemma="varra">
+         <select lemma="maelie"/>
+   </match>
+    <or>
+       <match lemma="boazu"/>
+       <match lemma="ruoigu"/>
+       <match lemma="miessi"/>
+       <match lemma="heargi"/>
+       <match lemma="áldu"/>
+       <match lemma="ealga"/>
+       </or>
+ </rule>    
+    <rule weight="0.6">
+    <or>
+       <match lemma="boazu"/>
+       <match lemma="ruoigu"/>
+       <match lemma="miessi"/>
+       <match lemma="heargi"/>
+       <match lemma="áldu"/>
+       <match lemma="ealga"/>
+       
+       </or>
+       <match lemma="varra">
+         <select lemma="maelie"/>
+   </match>
+    
+ </rule>    
+
+
+
+
 </rules> 
