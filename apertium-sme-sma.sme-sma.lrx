@@ -1291,7 +1291,7 @@
 
 <!-- Konjunksjon "ja" = jïh - gonnoeh -->
       
-       <rule weight="1.0">
+    <rule weight="1.0">
          <match lemma="ja" tags="cnjcoo.*">
             <select lemma="jïh" tags="cnjcoo.*"/>
          </match>
@@ -1418,7 +1418,88 @@
 
 
     <!-- To run: fugl,mnsk,tobeinte=varredh and roehtedh, rein= tsuvvedh, rovdyr, dyr med klør= goetsedh, dyr med hover (seahkohkh):tsuvvedh, for hunden: hajkedh og goetsedh -->
+       
+    
+<!-- Regel for "biedju" =  rev, ulv, gaupe: pleasoe - Bjørn: gaavmoe -->
       
+     
+       <rule weight="1.0">
+         <match lemma="biedju">
+            <select lemma="gaavmoe"/>
+         </match>
+       </rule>     
+       <rule weight="0.5">
+         <match lemma="biedju">
+            <select lemma="pleasoe"/>
+         </match>
+ </rule>     
+    <rule weight="0.6">
+       <match lemma="biedju">
+         <select lemma="pleasoe"/>
+   </match>
+    <or>
+       <match lemma="gumpe"/>
+       <match lemma="rieban"/>
+       <match lemma="albbas"/>
+       </or>
+ </rule>    
+    <rule weight="0.6">
+    <or>
+       <match lemma="gumpe"/>
+       <match lemma="rieban"/>
+       <match lemma="albbas"/>
+       </or>
+       <match lemma="biedju">
+         <select lemma="pleasoe"/>
+   </match>
+ </rule>    
+
+
+<!-- Regel for "váibmu" = mnsk:vaajmoe - Dyr, dødt: baahtsege - Reinsimle, levende: vååjmese -->
+      
+     
+       <rule weight="1.0">
+         <match lemma="váibmu" >
+            <select lemma="vaajmoe"/>
+         </match>
+       </rule>     
+       <rule weight="0.5">
+         <match lemma="váibmu">
+            <select lemma="baahtsege"/>
+         </match>
+ </rule>     
+    <rule weight="0.6">
+       <match lemma="váibmu">
+         <select lemma="baahtsege"/>
+   </match>
+    <or>
+       <match lemma="boazu"/>
+       <match lemma="rieban"/>
+       <match lemma="albbas"/>
+       <match lemma="guovžža"/>
+       <match lemma="miessi"/>
+       <match lemma="heargi"/>
+       <match lemma="gumpe"/>
+       <match lemma="áldu"/>
+       
+       </or>
+ </rule>    
+    <rule weight="0.6">
+    <or>
+       <match lemma="boazu"/>
+       <match lemma="rieban"/>
+       <match lemma="albbas"/>
+       <match lemma="guovžža"/>
+       <match lemma="miessi"/>
+       <match lemma="heargi"/>
+       <match lemma="gumpe"/>
+       <match lemma="áldu"/>
+       </or>
+       <match lemma="váibmu">
+         <select lemma="baahtsege"/>
+   </match>
+    
+ </rule>    
 
 
 </rules> 
