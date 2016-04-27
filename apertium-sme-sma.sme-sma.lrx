@@ -1502,47 +1502,83 @@
  </rule>    
 
 
-<!-- Regel for "varra" = mnsk:vïrre - rein, hjort, elg: maelie, kruemie: rovdyr, gaupe, albbas, gumpe, rieban:  -->
+<!-- Regel for "varra":  mnsk: vïrre 
+                         rein, hjort, elg: maelie, 
+                         rovdyr gaupe, albbas, gumpe, rieban: kruemie
+                         -->
       
-     
-       <rule weight="1.0">
+<!-- default: vïrre -->     
+       <rule weight="1.0"> 
          <match lemma="varra" >
             <select lemma="vïrre"/>
          </match>
        </rule>     
-       <rule weight="0.5">
+
+<!-- maelie -->
+       <rule weight="0.5"> 
          <match lemma="varra">
             <select lemma="maelie"/>
          </match>
- </rule>     
-    <rule weight="0.6">
-       <match lemma="varra">
-         <select lemma="maelie"/>
-   </match>
-    <or>
-       <match lemma="boazu"/>
-       <match lemma="ruoigu"/>
-       <match lemma="miessi"/>
-       <match lemma="heargi"/>
-       <match lemma="áldu"/>
-       <match lemma="ealga"/>
-       </or>
- </rule>    
-    <rule weight="0.6">
-    <or>
-       <match lemma="boazu"/>
-       <match lemma="ruoigu"/>
-       <match lemma="miessi"/>
-       <match lemma="heargi"/>
-       <match lemma="áldu"/>
-       <match lemma="ealga"/>
+       </rule>     
        
+       <rule weight="0.6"> <!-- maelie + kontekst -->
+       <match lemma="varra">
+         <select lemma="maelie"/>
+       </match>
+       <or>
+          <match lemma="boazu"/>
+          <match lemma="ruoigu"/>
+          <match lemma="miessi"/>
+          <match lemma="heargi"/>
+          <match lemma="áldu"/>
+          <match lemma="ealga"/>
+       </or>
+     </rule>    
+    <rule weight="0.6">  <!-- kontekst + maelie  -->
+    <or>
+       <match lemma="boazu"/>
+       <match lemma="ruoigu"/>
+       <match lemma="miessi"/>
+       <match lemma="heargi"/>
+       <match lemma="áldu"/>
+       <match lemma="ealga"/>
        </or>
        <match lemma="varra">
          <select lemma="maelie"/>
+    </match>
+    </rule>    
+
+<!-- kruemie -->      
+       <rule weight="0.5"> 
+         <match lemma="varra">
+            <select lemma="kruemie"/>
+         </match>
+       </rule>     
+
+    <rule weight="0.6">
+       <match lemma="varra">
+         <select lemma="kruemie"/>
    </match>
-    
+    <or>
+       <match lemma="albbas"/>   
+       <match lemma="gumpe"/>
+       <match lemma="rieban"/>
+       <match lemma="guovžža"/>
+       <match lemma="geatki"/>
+       </or>
  </rule>    
+    <rule weight="0.6">
+    <or>
+       <match lemma="albbas"/>   
+       <match lemma="gumpe"/>
+       <match lemma="rieban"/>
+       <match lemma="guovžža"/>
+       <match lemma="geatki"/>
+       </or>
+       <match lemma="varra">
+         <select lemma="kruemie"/>
+   </match>
+   </rule> 
 
 
 
