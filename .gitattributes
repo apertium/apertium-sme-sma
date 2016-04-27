@@ -19,7 +19,6 @@
 /apertium-sme-sma.sme-sma.t5x -text svneol=unset#text/plain
 /autogen.sh -text
 /check_mt-otpt.py -text
-/check_mt-otpt_wer.py -text
 /configure.ac -text
 dev/analyse-all-stages.sh -text
 dev/apertium-sme-sma.sme-sma.t1x.BACKUP -text
@@ -222,4 +221,5 @@ tmx_data/fjellheim_sme2sma.tmx -text
 tmx_data/samediggeweb_sme2sma.tmx -text
 tmx_data/samediggi_sme2sma.tmx -text
 tmx_data/samediggidiedadus_samegiela_birra_2012_sme2sma.tmx -text
+/wercheck_mt-otpt.py -text
 /wiki-tests.sh -text
