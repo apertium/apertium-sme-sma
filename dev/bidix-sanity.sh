@@ -5,7 +5,7 @@ dir=`echo $pair | grep -o  -- '-[a-z][a-z][a-z]-[a-z][a-z][a-z]' | sed 's/^-//g'
 dix=$pair.$dir.dix
 lang2=`echo $dir | cut -f2 -d'-'`
 gtdir=`echo $GTCORE | sed 's/\(gtcore\|core\)//g'`;
-analysator=$gtdir"/langs/"$lang2"/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol"
+analysator="/Users/mka055/Documents/langtechsvn/gtsvn/langs/sma/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol"
 
 lt-expand ../$dix | sed 's/\(<[^>]\+>\)\(<[^>]\+>\)\+/\1/g' | sed 's/:[><]:/:/g'  | grep -v ':\([[:punct:]]\|[[:space:]]\)' | grep -v -- '-<' | grep -v '\/' | sort -u > /tmp/$dir.exp
 
