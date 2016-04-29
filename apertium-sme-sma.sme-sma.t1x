@@ -118,6 +118,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="buorre">
       <cat-item tags="buorre.adj.*.@→N"/>
     </def-cat>
+    <def-cat n="pl-words">
+      <cat-item lemma="mearridanváldi" tags="n.*.sg.*"/>
+    </def-cat>
     <def-cat n="habitive">
       <cat-item tags="*.←hab→.*"/>
     </def-cat>
@@ -2268,6 +2271,42 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: verb-fin  - 3 position">
+      <pattern>
+        <pattern-item n="habitive"/>
+        <pattern-item n="leat-main"/>
+        <pattern-item n="pl-words"/>
+      </pattern>
+      <action>
+         <call-macro n="convert-case-nbr-poss-Param1"><with-param pos="1"/></call-macro>
+       <call-macro n="general-macro-Param3">
+          <with-param pos="1"/><with-param pos="2"/><with-param pos="3"/>
+        </call-macro>
+        <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
 
 
 
