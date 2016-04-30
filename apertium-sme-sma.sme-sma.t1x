@@ -106,20 +106,19 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="maake">
       <cat-item lemma="muoŧŧá" tags="n.*.sg.*"/>
-      <cat-item lemma="máhka" tags="n.*.sg.*"/>
       <cat-item lemma="goaski" tags="n.*.sg.*"/>
       <cat-item lemma="siessá" tags="n.*.sg.*"/>
-    </def-cat>
-    <def-cat n="jijmie">
-      <cat-item lemma="eahki" tags="n.*.sg.*"/>
       <cat-item lemma="ipmi" tags="n.*.sg.*"/>
+      <cat-item lemma="eahki" tags="n.*.sg.*"/>
        <cat-item lemma="eanu" tags="n.*.sg.*"/>
+       <cat-item lemma="čeahci" tags="n.*.sg.*"/>
+      <cat-item lemma="máhka" tags="n.*.sg.*"/>
    </def-cat>
     <def-cat n="buorre">
       <cat-item tags="buorre.adj.*.@→N"/>
     </def-cat>
-    <def-cat n="pl-words">
-      <cat-item lemma="mearridanváldi" tags="n.*.sg.*"/>
+    <def-cat n="pl-words"> <!-- sme is sg, sma is pl, and the verb must agree when the noun is subject. -->
+      <cat-item lemma="mearridanváldi" tags="n.*.sg.nom.*"/>
     </def-cat>
     <def-cat n="habitive">
       <cat-item tags="*.←hab→.*"/>
@@ -476,6 +475,7 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_deriv">
        <attr-item tags="der_aadv"/>
+       <attr-item tags="der_passs"/>
        <attr-item tags="der_laakan"/>
        <attr-item tags="der_l"/>
        <attr-item tags="der_caus"/>
@@ -1333,6 +1333,17 @@ And then there are some categories like "month", with all the months.
 
     <def-macro n="convert-verb-deriv-Param1" npar="1">
 
+
+      <choose>
+        <when>
+          <test><and>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_passs"/></equal>
+               <equal><clip pos="1" side="tl" part="lem"/><lit v="orrestidh"/></equal>           
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_passl"/></let>
+        </when>
+      </choose>
+
       <choose>
         <when>
           <test>
@@ -1828,7 +1839,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="REGLA: jijmie gon jiekie">
+<!--     <rule comment="REGLA: jijmie gon jiekie">
       <pattern>
         <pattern-item n="jijmie"/>
         <pattern-item n="ja"/>
@@ -1857,7 +1868,7 @@ And then there are some categories like "month", with all the months.
          </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
      
     
@@ -2529,7 +2540,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: verb-prfprc  - 1 position">
+    <rule comment="REGLA: verb-prfprc  - 1 position"> <!-- OBS -->
       <pattern>
         <pattern-item n="verb-prfprc"/>
       </pattern>
