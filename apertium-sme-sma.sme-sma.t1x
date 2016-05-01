@@ -130,6 +130,12 @@ And then there are some categories like "month", with all the months.
     <def-cat n="inessive">
       <cat-item tags="*.loc.@←ADVL"/>
     </def-cat>
+    <def-cat n="moai">
+      <cat-item tags="prn.pers.*.du.*"/>
+    </def-cat>
+    <def-cat n="Laarain">
+      <cat-item tags="*.com.@Pron←"/>
+   </def-cat>
     <def-cat n="n-not-cmp">
       <cat-item tags="n.*.sg.*"/>
       <cat-item tags="n.*.pl.*"/>
@@ -787,6 +793,9 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_wthr"/>
     </def-attr>
 
+    <def-attr n="sem_year">
+      <attr-item tags="sem_year"/>
+    </def-attr>
 
 
     <def-attr n="a_exthab">
@@ -1394,6 +1403,36 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: pronouns  - 2 positions"> <!-- moai eatniin - månnoeh tjidtjieh -->
+      <pattern>
+        <pattern-item n="moai"/>
+        <pattern-item n="Laarain"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-case-nbr-poss-Param1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="general-macro-Param2"><with-param pos="1"/><with-param pos="2"/></call-macro>
+         <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+        <out>
+          <chunk name="xprn" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><clip pos="1" side="tl" part="a_prn_type"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="REGLA: numeral - 1 position in-out">
@@ -1407,6 +1446,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-Param1">
           <with-param pos="1"/>
         </call-macro>
+        <let><clip pos="1" side="tl" part="sem_year"/><lit-tag v="arab"/></let>
         <out>
           <chunk name="num" case="caseFirstword">
             <tags>
