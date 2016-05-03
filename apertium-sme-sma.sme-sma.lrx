@@ -1548,6 +1548,13 @@
     </match>
     </rule>    
 
+<!-- default: vïrre -->     
+       <rule weight="1.0"> 
+         <match lemma="varra" >
+            <select lemma="vïrre"/>
+         </match>
+       </rule>     
+
 <!-- kruemie -->      
        <rule weight="0.5"> 
          <match lemma="varra">
@@ -1558,29 +1565,108 @@
     <rule weight="0.6">
        <match lemma="varra">
          <select lemma="kruemie"/>
-   </match>
-    <or>
-       <match lemma="albbas"/>   
-       <match lemma="gumpe"/>
-       <match lemma="rieban"/>
-       <match lemma="guovžža"/>
-       <match lemma="geatki"/>
+       </match>
+       <or>
+         <match lemma="albbas"/>   
+         <match lemma="gumpe"/>
+         <match lemma="rieban"/>
+         <match lemma="guovžža"/>
+         <match lemma="geatki"/>
        </or>
- </rule>    
+    </rule>    
     <rule weight="0.6">
-    <or>
-       <match lemma="albbas"/>   
-       <match lemma="gumpe"/>
-       <match lemma="rieban"/>
-       <match lemma="guovžža"/>
-       <match lemma="geatki"/>
+       <or>
+         <match lemma="albbas"/>   
+         <match lemma="gumpe"/>
+         <match lemma="rieban"/>
+         <match lemma="guovžža"/>
+         <match lemma="geatki"/>
        </or>
        <match lemma="varra">
          <select lemma="kruemie"/>
    </match>
    </rule> 
+   
+
+<!-- default: oaivi -->     
+       <rule weight="1.0"> 
+         <match lemma="oaivi" >
+            <select lemma="åejjie"/>
+         </match>
+       </rule>     
+
+<!-- tsehkie -->
+       <rule weight="0.5"> 
+         <match lemma="oaivi">
+            <select lemma="tsehkie"/>
+         </match>
+       </rule>     
+       
+       <rule weight="0.6"> <!-- tsehkie+ kontekst  OBS! Ved kritikk av andre mennesker og ironi/sarkasme brukes "tsehkie" om mennesker også-->
+       <match lemma="oaivi">
+         <select lemma="tsehkie"/>
+       </match>
+       <or>
+         <match lemma="albbas"/>   
+         <match lemma="gumpe"/>
+         <match lemma="rieban"/>
+         <match lemma="guovžža"/>
+         <match lemma="geatki"/>
+       </or>
+     </rule>    
+    <rule weight="0.6">  <!-- tsehkie+ kontekst  OBS! Ved kritikk av andre mennesker og ironi/sarkasme brukes "tsehkie" om mennesker også -->
+    <or>
+       <match lemma="albbas"/>   
+         <match lemma="gumpe"/>
+         <match lemma="rieban"/>
+         <match lemma="guovžža"/>
+         <match lemma="geatki"/>
+       </or>
+       <match lemma="oaivi">
+         <select lemma="tsehkie"/>
+    </match>
+    </rule>    
 
 
+<!-- default: oaivi -->     
+       <rule weight="1.0"> 
+         <match lemma="oaivi" >
+            <select lemma="oaivi"/>
+         </match>
+       </rule>     
 
+<!-- tsehkie -->
+       <rule weight="0.5"> 
+         <match lemma="oaivi">
+            <select lemma="novpije"/>
+         </match>
+       </rule>     
+       
+       <rule weight="0.6"> <!-- novpije + kontekst -->
+       <match lemma="oaivi">
+         <select lemma="novpije"/>
+       </match>
+       <or>
+        <match lemma="boazu"/>
+          <match lemma="ruoigu"/>
+          <match lemma="miessi"/>
+          <match lemma="heargi"/>
+          <match lemma="áldu"/>
+          <match lemma="ealga"/>
+       </or>
+     </rule>    
+    <rule weight="0.6">  <!-- novpije  -->
+    <or>
+         <match lemma="boazu"/>
+          <match lemma="ruoigu"/>
+          <match lemma="miessi"/>
+          <match lemma="heargi"/>
+          <match lemma="áldu"/>
+          <match lemma="ealga"/>
+       </or>
+       <match lemma="oaivi">
+         <select lemma="novpije"/>
+    </match>
+    </rule>    
 
 </rules> 
