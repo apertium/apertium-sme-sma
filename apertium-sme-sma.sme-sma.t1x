@@ -145,12 +145,23 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.pl.*"/>
     </def-cat>
     <def-cat n="noun">
-      <cat-item tags="n.*"/>
+      <cat-item tags="*.n.*.sg.*"/>
+      <cat-item tags="*.n.*.pl.*"/>
+      <cat-item tags="*.n.*.ess.*"/>
+      <cat-item tags="*.n.sg.*"/>
+      <cat-item tags="*.n.pl.*"/>
+      <cat-item tags="*.n.ess.*"/>
+      <cat-item tags="n.*.sg.*"/>
+      <cat-item tags="n.*.pl.*"/>
+      <cat-item tags="n.*.ess.*"/>
+      <cat-item tags="n.*.*.sg.*"/>
+      <cat-item tags="n.*.*.pl.*"/>
+      <cat-item tags="n.*.*.ess.*"/>
+      <cat-item tags="n.sg.*"/>
+      <cat-item tags="n.pl.*"/>
+      <cat-item tags="n.ess.*"/>
       <cat-item tags="np.*"/>
-      <cat-item tags="vblex.*.n.*"/>
-      <cat-item tags="vblex.*.n.*"/> 
-      <cat-item tags="adj.der_vuota.n.*"/>
-      <cat-item tags="adj.*.der_vuota.n.*"/>
+      <cat-item tags="*.cmp_sgnom.cmp_splitr.*"/>
     </def-cat>
     <def-cat n="gen">
       <cat-item tags="*.gen.*"/>
