@@ -3527,7 +3527,16 @@
     <e><p><l>uhcci<s n="adj"/></l><r>onne<s n="adj"/></r></p></e>
     <e><p><l>unni<s n="adj"/></l><r>onne<s n="adj"/></r></p></e>
     <e><p><l>ustitlaš<s n="adj"/></l><r>vïenes<s n="adj"/></r></p></e>
-    <e><p><l>varas<s n="adj"/></l><r>baahke<s n="adj"/></r></p></e>
+    
+    <!-- fersk-adjektiver LRX-regler-->
+    <e><p><l>varas<s n="adj"/></l><r>njabre<s n="adj"/></r></p></e>
+    <e><p><l>varas<s n="adj"/></l><r>båajoes<s n="adj"/></r></p></e>
+    <e><p><l>varas<s n="adj"/></l><r>fïerske<s n="adj"/></r></p></e>
+    <e><p><l>varas<s n="adj"/></l><r>måajkoes<s n="adj"/></r></p></e>
+    <e><p><l>varas<s n="adj"/></l><r>varres<s n="adj"/></r></p></e>
+    <e><p><l>varas<s n="adj"/></l><r>latjke<s n="adj"/></r></p></e>
+
+    
     <e><p><l>veadjemeahttun<s n="adj"/></l><r>ovnuvhtege<s n="adj"/></r></p></e>
     <e><p><l>veajuheapme<s n="adj"/></l><r>faamohts<s n="adj"/></r></p></e>
     <e><p><l>veara<s n="adj"/></l><r>seatadihks<s n="adj"/></r></p></e>
@@ -3940,6 +3949,18 @@
     <e><p><l>geasuhit<s n="vblex"/><s n="tv"/></l><r>giesedh<s n="vblex"/></r></p></e>
     <e><p><l>hárjánit<s n="vblex"/><s n="iv"/></l><r>vaananidh<s n="vblex"/></r></p></e>
     
+    
+     <!-- It´s hurt-Verbs LRX-regler!!-->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>baektjiedidh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>jijledh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>saejriedidh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>vaarkedh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>jaadtedh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>beedtedh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>baskedh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>goeperdidh<s n="vblex"/></r></p></e>     -->
+    <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>speekedh<s n="vblex"/></r></p></e>     -->
+
     <e><p><l>ilbmat<s n="vblex"/><s n="iv"/></l><r>olkese<b/>båetedh<s n="vblex"/></r></p></e>
     
     <e><p><l>dassat<s n="vblex"/><s n="tv"/></l><r>nehkielidh<s n="vblex"/></r></p></e>
@@ -4003,7 +4024,7 @@
     <e><p><l>badjelgeahččat<s n="vblex"/><s n="tv"/></l><r>aassjoestidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>bagadit<s n="vblex"/><s n="tv"/></l><r>bijjiedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>bajidit<s n="vblex"/><s n="tv"/></l><r>bijjiedidh<s n="vblex"/><s n="tv"/></r></p></e>
-<!--    <e><p><l>bajásšaddat<s n="vblex"/><s n="iv"/></l><r>byjjenidh<s n="vblex"/><s n="iv"/></r></p></e> -->
+<!--    <e><p><l>bajásšaddat<s n="vblex"/><s n="iv"/></l><r>bijjiesovvedh<s n="vblex"/><s n="iv"/></r></p></e> -->
     <e><p><l>bajásšaddat<s n="vblex"/><s n="iv"/></l><r>byjjesovvedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>balahit<s n="vblex"/><s n="tv"/></l><r>beavnedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>baldit<s n="vblex"/><s n="tv"/></l><r>beltedh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -4712,14 +4733,14 @@
     <e><p><l>veiggodit<s n="vblex"/><s n="iv"/></l><r>tjearadehtedh<s n="vblex"/><s n="iv"/></r></p></e>
     
     
-    <e><p><l>viehkat<s n="vblex"/><s n="iv"/></l><r>vaarredh<s n="vblex"/><s n="iv"/></r></p></e> 
+    <e><p><l>viehkat<s n="vblex"/><s n="iv"/></l><r>vaarredh<s n="vblex"/><s n="iv"/></r></p></e> <!-- default: alle tobeinte --> 
     <e><p><l>ruohttat<s n="vblex"/><s n="iv"/></l><r>tsuvvedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ruohttat<s n="vblex"/><s n="iv"/></l><r>hajkedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ruohttat<s n="vblex"/><s n="iv"/></l><r>goetesedh<s n="vblex"/><s n="iv"/></r></p></e>
 
     
     <e><p><l>viežžat<s n="vblex"/><s n="tv"/></l><r>veedtjedh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>viggat<s n="vblex"/><s n="iv"/></l><r>baaverdidh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e><p><l>viggat<s n="vblex"/><s n="iv"/></l><r>pryövedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>vihkkedallat<s n="vblex"/><s n="tv"/></l><r>tsebpeldidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>vizardit<s n="vblex"/><s n="iv"/></l><r>njovhkedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>viššat<s n="vblex"/><s n="tv"/></l><r>vïssjedh<s n="vblex"/><s n="iv"/></r></p></e>
@@ -4730,7 +4751,7 @@
     <e><p><l>vuohppát<s n="vblex"/><s n="iv"/></l><r>haampeldidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>vuohppát<s n="vblex"/><s n="iv"/></l><r>earadidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>vuohttit<s n="vblex"/><s n="tv"/></l><r>vuehtedh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>vuoidat<s n="vblex"/><s n="tv"/></l><r>badtjadidh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>vuoidat<s n="vblex"/><s n="tv"/></l><r>bådtjadidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>vuoigŋat<s n="vblex"/><s n="tv"/></l><r>voejngehtidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>vuoitit<s n="vblex"/><s n="tv"/></l><r>vitnedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>vuoiŋŋastit<s n="vblex"/><s n="iv"/></l><r>lïegkedidh<s n="vblex"/><s n="iv"/></r></p></e>
