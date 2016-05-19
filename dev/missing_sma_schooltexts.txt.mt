@@ -7,7 +7,7 @@
  240 *dain
  235 *sámegielalaš
  228 *han
- 196 *báikkálaš
+ 19
  165 *makkárge
  164 *Lund
  159 *goit
@@ -22,7 +22,7 @@
  128 *omd
  125 *álggahit
  121 *i
- 117 *ulbmil
+ 117 
  116 *bajásšaddan
  115 *dađistaga
  114 *og
@@ -49,7 +49,7 @@
   79 *Romssas
   79 *Nils
   78 *suomagiela
-  77 *maŋimus
+  77 
   75 *Álttás
   75 *Hætta
   73 *oahppiid
@@ -57,12 +57,12 @@
   70 *oarjilsámegillii
   70 *našunála
   69 *Ákŋoluovtta
-  69 *baicca
+
   66 *velá
   66 *oarjilsámi
   66 *oarjilsámegiela
   66 *iežá
-  66 *dassážii
+  66 *
   66 *Buolbmát
   66 *A
   64 *Larsen
@@ -75,7 +75,7 @@
   59 *guđege
   59 *Marit
   59 *Fokstad
-  58 *oidnosii
+
   58 *for
   58 *Na
   57 *searvat
