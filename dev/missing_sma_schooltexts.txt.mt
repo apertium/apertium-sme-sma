@@ -77,9 +77,9 @@
   58 *for
   58 *Na
   57 *searvat
-  57 *heivehuvvon
-  57 *dagahii
-  56 *viehka
+
+  
+ 
   56 *dalá
   56 *Thomassen
   56 *Fálesnuori
@@ -87,12 +87,12 @@
   54 *praktihkalaš
   54 *politihkalaš
   54 *johtui
-  54 *jo
+
   54 *dassái
   54 *Trygve
   53 *ollugat
-  53 *dáruiduhttin
-  53 *baicce
+
+
   53 *Ráissa
   53 *Inger
   53 *Daid
