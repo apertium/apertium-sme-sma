@@ -24,13 +24,11 @@
  121 *i
  117 
  116 *bajásšaddan
- 115 *dađistaga
- 114 *og
- 113 *b
- 107 *Per
+
+ 1
  104 *Hans
- 100 *fágalaš
- 100 *dárogiel
+
+
   98 *Johan
   95 *ges
   87 *duogáš
@@ -122,15 +120,13 @@
   45 *Westen
   45 *Porsáŋggus
   44 *kveana
-  44 *jahkásaš
+
   44 *Hámmárfeasttas
-  43 *árbevirolaš
   43 *virgái
   43 *soaitá
   43 *nammasaš
   43 *moatti
-  43 *jur
-  43 *gč
+  
   43 *doalahit
   43 *bisttii
   43 *Mázes
