@@ -131,12 +131,12 @@
   43 *bisttii
   43 *Mázes
   42 *álggahuvvon
-  42 *álggahan
-  42 *virggi
+
+
   42 *sivva
   42 *našuvnnalaš
-  42 *maŋemus
-  42 *láttegiela
+
+
   42 *hárve
   42 *eatnasat
   42 *Ragnhild
@@ -2807,11 +2807,11 @@
    4 *Stbïevnese
    4 *Språkpolitikk
    4 *Sosialantropologiija
-   4 *Soleng
-   4 *Snåase
-   4 *Smeland
-   4 *Sletsjøe
-   4 *Skår
+
+
+
+
+
    4 *Skihččolis
    4 *Skiervvás
    4 *Sivert
