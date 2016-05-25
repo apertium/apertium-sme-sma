@@ -519,8 +519,6 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="foc_bat"/>
       <attr-item tags="foc_be"/>
       <attr-item tags="foc_ge"/>
-      <attr-item tags="foc_pos-ge"/>
-      <attr-item tags="foc_neg-ge"/>
      <attr-item tags="foc_gen"/>
       <attr-item tags="foc_ges"/>
       <attr-item tags="foc_gis"/>
@@ -528,6 +526,10 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="foc_han"/>
       <attr-item tags="foc_naj"/>
       <attr-item tags="foc_son"/>
+    </def-attr>
+    <def-attr n="a_foc-ge">
+      <attr-item tags="foc_neg-ge"/>
+      <attr-item tags="foc_pos-ge"/>
     </def-attr>
 
     <def-attr n="a_synlabel">
@@ -828,6 +830,7 @@ And then there are some categories like "month", with all the months.
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="func"/>
+    <def-var n="foc-ge"/>
     <def-var n="poss"/>
     <def-var n="case"/>
     <def-var n="nmbr"/>
@@ -960,9 +963,18 @@ And then there are some categories like "month", with all the months.
           <let><var n="func"/><clip pos="1" side="sl" part="a_synlabel"/></let>
         </when>
       </choose>
+      <choose>
+        <when>
+          <test>
+            <not><equal><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></equal></not>
+          </test>
+          <let><var n="foc-ge"/><clip pos="1" side="sl" part="a_foc-ge"/></let>
+        </when>
+      </choose>
       <let><clip pos="1" side="tl" part="a_synlabel"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> <!-- Don't output focus particles -->
+      <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
+      <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> 
       <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
 
@@ -2728,6 +2740,7 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Adverbial groups -->
 
+
     <rule comment="REGLA: adv  - 1 position">
       <pattern>
         <pattern-item n="adv"/>
@@ -2740,6 +2753,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="ADV"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="foc-ge"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>

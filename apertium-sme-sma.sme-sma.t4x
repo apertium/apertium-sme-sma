@@ -195,6 +195,14 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ADV">
         <cat-item tags="ADV.@ADVL→"/>
     </def-cat>
+    <def-cat n="foc-neg-word">
+        <cat-item tags="*.foc_neg-ge"/>
+        <cat-item tags="*.foc_neg-ge.*"/>
+    </def-cat>
+    <def-cat n="foc-pos-word">
+        <cat-item tags="*.foc_pos-ge"/>
+        <cat-item tags="*.foc_pos-ge.*"/>
+    </def-cat>
 
 
   </section-def-cats>
@@ -1009,7 +1017,57 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
+   <rule comment="add extra word gænnah" >  
+      <pattern>
+        <pattern-item n="foc-neg-word"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b />
+          <chunk>
+           <lit v="pcle"/>
+           <lit v="{"/>
+           <lit v="^"/>
+            <lit v="gænnah"/>
+            <lit-tag v="pcle"/>
+           <lit v="$"/>
+           <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
+   <rule comment="add extra word aaj" >  
+      <pattern>
+        <pattern-item n="foc-pos-word"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b />
+          <chunk>
+           <lit v="adv"/>
+           <lit v="{"/>
+           <lit v="^"/>
+            <lit v="aaj"/>
+            <lit-tag v="adv"/>
+           <lit v="$"/>
+           <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
   </section-rules>
