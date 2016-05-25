@@ -1751,6 +1751,45 @@
          <select lemma="tsuvvedh"/>
     </match>
     </rule>    
+    
+    
+<!-- default: ge-gænnah  -->  
+    
+       <rule weight="1.0"> 
+         <match lemma="ge" >
+            <select lemma="aaj"/>  <!        beana />  
+         </match>
+       </rule>     
+
+<!-- gænnah -->
+       <rule weight="0.5"> 
+         <match lemma="ge">
+            <select lemma="gænnah"/>
+         </match>
+       </rule>     
+<!-- tsuvvedh -->
+       <rule weight="0.6"> <!-- tsuvvedh-->
+       <match  tags="*.neg.*"/>
+          <match />
+       <match lemma="ge">
+         <select lemma="gænnah"/>
+       </match>
+     </rule>  
+     <rule weight="0.6"> <!-- tsuvvedh-->
+       <match  tags="*.neg.*"/>
+       <match lemma="ge">
+         <select lemma="gænnah"/>
+       </match>
+     </rule>    
+   
+    
+
+    
+    
+    
+    
+    
+    
 
 
 </rules> 

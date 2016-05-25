@@ -5,14 +5,14 @@
  270 *moadde
  244 *ee
  240 *dain
- 235 *sámegielalaš
+
  228 *han
  19
  165 *makkárge
- 164 *Lund
+
  159 *goit
  158 *eanaš
- 155 *Svein
+
  147 *norsk
  141 *muddui
  140 *álggahuvvui
@@ -26,19 +26,19 @@
  116 *bajásšaddan
 
  1
- 104 *Hans
 
 
-  98 *Johan
+
+
   95 *ges
   87 *duogáš
   85 *láhkai
   82 *searvadahttindepartemeanta
   82 *ovttasráđiid
   82 *dáruiduhttima
-  82 *Olsen
-  82 *Máze
-  82 *Anna
+
+
+
   81 *daidda
   80 *báljo
   80 *Johansen
@@ -2780,12 +2780,10 @@
    4 *Ulbmilat
    4 *UNNas
    4 *Troanddimis
-   4 *Triumf
-   4 *Torleif
-   4 *Torill
-   4 *Tone
-   4 *Tidende
-   4 *Thorleif
+ 
+ 
+
+
    4 *The
    4 *Teorehtalaš
    4 *Telemárkkus
@@ -2801,9 +2799,7 @@
    4 *Stáhpogiettis
    4 *Stránddas
    4 *Streaika
-   4 *Store
-   4 *Stein
-   4 *Steen
+
    4 *Stbïevnese
    4 *Språkpolitikk
    4 *Sosialantropologiija
@@ -2818,30 +2814,26 @@
    4 *Sisseliin
    4 *Signe
    4 *Sabbasen
-   4 *SGL
-   4 *SANKS
-   4 *Ryan
-   4 *Romsa
-   4 *Roald
-   4 *Riehppovutnii
-   4 *Riehppovuotna
-   4 *Riehppovuona
+   
+   
+
+ 
    4 *Rekruhttenáŋgiruššan
-   4 *Reaššvuotna
-   4 *Rapp
-   4 *Radios
-   4 *Qvigstada
-   4 *Qvigstad
-   4 *Quisling
-   4 *Pål
+
+
+
+
+
+
+
    4 *Proseassa
    4 *Program
    4 *Prenten
    4 *Post
-   4 *Petra
-   4 *Paulsen
+
+
    4 *Parlamentáralaš
-   4 *Palmer
+
    4 *Ovttasvástádus
    4 *Ovddabealde
    4 *Ovdalaš
