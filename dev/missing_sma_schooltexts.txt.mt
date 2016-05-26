@@ -1,8 +1,44 @@
+
+ 550 *daid
+
+ 328 *vejolaš
+ 270 *moadde
  244 *ee
  228 *han
- 141 *muddui
+ 19
+ 165 *makkárge
+
+
+ 158 *eanaš
+
+ 147 *norsk
+
   82 *searvadahttindepartemeanta
   82 *ovttasráđiid
+  82 *dáruiduhttima
+
+
+
+  81 *daidda
+  80 *báljo
+
+  79 *luoikan
+  79 *jna
+  79 *Romssas
+ 
+  78 *suomagiela
+  77 
+  75 *Álttás
+
+  73 *oahppiid
+  72 *nr
+  70 *oarjilsámegillii
+  70 *našunála
+  69 *Ákŋoluovtta
+
+  66 *velá
+  66 *oarjilsámi
+  66 *oarjilsámegiela
   66 *iežá
   58 *for
   54 *johtui
