@@ -4,6 +4,8 @@
  328 *vejolaš
  270 *moadde
  244 *ee
+ 240 *dain
+
  228 *han
  19
  165 *makkárge
@@ -13,62 +15,234 @@
 
  147 *norsk
 
+ 140 *álggahuvvui
+ 136 *oktasaš
+ 135 *eanas
+
+ 128 *omd
+ 125 *álggahit
+
+
+ 116 *bajásšaddan
+
+ 1
+
+
+
+
+  95 *ges
+  87 *duogáš
+  85 *láhkai
   82 *searvadahttindepartemeanta
   82 *ovttasráđiid
-  82 *dáruiduhttima
-
 
 
   81 *daidda
   80 *báljo
-
   79 *luoikan
   79 *jna
-  79 *Romssas
- 
-  78 *suomagiela
-  77 
   75 *Álttás
 
-  73 *oahppiid
-  72 *nr
   70 *oarjilsámegillii
   70 *našunála
   69 *Ákŋoluovtta
-
   66 *velá
   66 *oarjilsámi
   66 *oarjilsámegiela
   66 *iežá
+
+  66 *Buolbmát
+
+  63 *pedagogalaš
+  62 *sierranas
+  60 *dohkálaš
+  59 guđege
   58 *for
+  58 *Na
+  57 *searvat
+  56 *dalá
+  56 *Fálesnuori
+  55 *guovttegielat
+  54 *praktihkalaš
+  54 *politihkalaš
   54 *johtui
+
+  54 *dassái
+  54 *Trygve
+  53 *ollugat
+
+
+  53 *Ráissa
+  53 *Inger
+  53 *Daid
+  52 *sámegielagat
+  52 *heivehit
+  52 *Eriksen
+  51 *s
+  51 *Hámmárfeastta
+  50 *gaskaboddosaš
+  50 *Unjárgga
+  50 *Eanaš
+
+  49 *priváhta
+  48 *vásáhusaid
   48 *doaim
   48 *dađi
   47 *nogai
+
   46 *áinnas
+  46 *vásáhusat
   45 *von
+  45 *oaččuhit
   45 *eanáš
+  45 *badjelasas
+  45 *Westen
+  45 *Porsáŋggus
+  44 *kveana
+
+
+  43 *virgái
+  43 *soaitá
   43 *nammasaš
   43 *moatti
+  
+  43 *doalahit
+  43 *bisttii
+  42 *álggahuvvon
+
+
+  42 *sivva
+  42 *našuvnnalaš
+
+
+  42 *hárve
   42 *eatnasat
+  42 *Ragnhild
+  42 *Eanas
+  42 *Andersen
+  41 *viidáseappot
+  41 *hárjánan
+  41 *Ulf
+  41 *Ravna
+  41 *Láhpi
+  41 *Finnmark
+  41 *Aarseth
+  40 *virggis
   40 *viimmat
+  40 *stáhtalaš
+  40 *oarjilsámegielas
+  40 *Moadde
+  40 *J
+  40 *Dađistaga
+  40 *Anderssen
+  39 *váste
+  39 *dađe
+  39 *aivve
+  39 *Randi
+  38 *váilevaš
+  38 *til
   38 *oktiibuot
+  38 *geatnegahtton
+  38 *Unjárggas
+  38 *Stockfleth
+  38 *Sirpmás
+  38 *Ruth
+  38 *Pedersen
+  38 *Loabága
+  38 *John
+  38 *Henriksen
+  37 *norgalaš
   37 *ládje
+  37 *duššefal
+  37 *dohkkehuvvon
+  37 *doaimmai
+  37 *doaibmi
+  37 *bohtosiid
   37 *bisma
+  37 *Utsi
+  37 *Pavel
+  36 *Ulbmil
+  36 *Johnsen
+  36 *Jacobsena
+  35 *čujuha
+  35 *álggahii
+  35 *searvan
+  35 *dárostit
+  35 *Thomas
+  35 *Rønbeck
+  35 *Jens
+  35 *Fálesnuoris
+  35 *Einar
+  35 *Britt
+  34 *vuoruhit
+  34 *sivas
+  34 *oahppiide
   34 *maŋit
+  34 *dáruiduhttinpolitihka
+  34 *deattuhit
+  34 *deattuha
   34 *dakkaviđe
+  34 *Sverre
+  34 *Norsk
+  33 *mekánalaš
+  33 *bálvalusaid
+  32 *čearddalaš
+  32 *oahpaheaddjiid
   32 *jitnosit
   32 *gullevaš
   32 *duiskka
+  32 *doaimmahit
+  32 *Sámegielalaš
+  32 *Matheussen
+  32 *Dain
+  32 *Buolbmágis
+  31 *Ákŋoluovttas
+  31 *vuosttaldedje
   31 *oppalaš
   31 *norgga
+  31 *láddelaččat
+  31 *friddja
+  31 *dohkkehit
+  31 *Rasmussen
+  31 *Porsáŋggu
   31 *Mátta-*Várjjagis
+  31 *Ivar
+  31 *Inga
+  30 *vissa
   30 *sámevuođa
   30 *jogo
+  30 *geatnegasvuohta
+  30 *fuolahusdepartemeanta
   30 *diekkár
+  30 *Ruŋggu
+  30 *Klemet
+  30 *Jon
+  30 *Isak
+  30 *I
+  30 *Gunnar
+  29 *sámegieloahpaheaddji
   29 *oppanassiige
+  29 *historjjálaš
+  29 *gullevašvuođa
+  29 *formálalaš
+  29 *ealáskahttit
+  29 *cealkámuša
+  29 *Richard
+  29 *Madsen
+  29 *Guttorm
+  29 *Erna
+  29 *Bergh
+  29 *Balto
+  28 *Ánne
   28 *riikkalaš
+  28 *r
+  28 *oppa
+  28 *guovttegielalašvuođa
   28 *belohahkii
+  28 *Skeavvonjárgga
+  28 *Láhpis
+  27 *álggahuvvot
+  27 *sivvan
   27 *sadjásaš
   27 *ovdalis
   27 *gáibádusaid
