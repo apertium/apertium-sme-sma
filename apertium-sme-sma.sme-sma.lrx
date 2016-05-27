@@ -1669,14 +1669,10 @@
         </match>
         </rule>      
 
-
-
-
 <!-- default: viehkat vaarredh -->  
-       <or>
        <rule weight="1.0"> 
          <match lemma="ruohttat" >
-            <select lemma="hajkedh"/>  <!        beana />  
+            <select lemma="hajkedh"/>   
          </match>
        </rule>     
 
@@ -1700,13 +1696,13 @@
        </or>
      </rule>    
     <rule weight="0.6">  <!-- tsehkie+ kontekst  OBS! Ved kritikk av andre mennesker og ironi/sarkasme brukes "goetsedh" om mennesker også -->
-    <or>
+        <or>
        <match lemma="albbas"/>   
          <match lemma="gumpe"/>
          <match lemma="rieban"/>
          <match lemma="guovžža"/>
          <match lemma="geatki"/>
-       </or>
+        </or>
        <match lemma="ruohttat">
          <select lemma="goetsedh"/>
     </match>
@@ -1714,12 +1710,11 @@
 
 
 <!-- default: tsuvvedh -->  
-       <or>
        <rule weight="1.0"> 
          <match lemma="ruohttat" >
-            <select lemma="hajkedh"/>  <!        beana />  
+            <select lemma="hajkedh"/> 
          </match>
-       </rule>     
+       </rule>  
 
 <!-- tsuvvedh -->
        <rule weight="0.5"> 
@@ -1729,18 +1724,19 @@
        </rule>     
 <!-- tsuvvedh -->
        <rule weight="0.6"> <!-- tsuvvedh-->
-       <match lemma="ruohttat">
-         <select lemma="tsuvvedh"/>
-       </match>
+         <match lemma="ruohttat">
+           <select lemma="tsuvvedh"/>
+         </match>
        <or>
          <<match lemma="boazu"/>
           <match lemma="ruoigu"/>
           <match lemma="miessi"/>
           <match lemma="heargi"/>
-          <match lemma="áldu"/><!-- -->        </or>
+          <match lemma="áldu"/><!-- -->        
+       </or>
      </rule>    
     <rule weight="0.6">  <!-- tsuvvedh-->
-    <or>
+       <or>
           <match lemma="boazu"/>
           <match lemma="ruoigu"/>
           <match lemma="miessi"/>
@@ -1767,15 +1763,15 @@
             <select lemma="gænnah"/>
          </match>
        </rule>     
-<!-- tsuvvedh -->
-       <rule weight="0.6"> <!-- tsuvvedh-->
+<!-- gænnah -->
+       <rule weight="0.6"> <!-- gænnah-->
        <match  tags="*.neg.*"/>
           <match />
        <match lemma="ge">
          <select lemma="gænnah"/>
        </match>
      </rule>  
-     <rule weight="0.6"> <!-- tsuvvedh-->
+     <rule weight="0.6"> <!-- gænnah-->
        <match  tags="*.neg.*"/>
        <match lemma="ge">
          <select lemma="gænnah"/>
@@ -1784,12 +1780,39 @@
    
 <!-- gænnah slutt -->    
 
-<!-- bávccas- flere varianter av å ha det vondt på sma START -->    
-    
-    
-    
-    
-    
 
+<!-- bávččastit- flere varianter av å ha det vondt på sma START -->    
+<!-- default: bávččastit -->  
+       <or>
+       <rule weight="1.0"> 
+         <match lemma="bávččastit" >
+            <select lemma="baektjiedidh"/>  <!        baektjiedidh />  
+         </match>
+       </rule>     
+
+<!-- saejriedidh -->
+       <rule weight="0.5"> 
+         <match lemma="bávččastit">
+            <select lemma="saejriedidh"/>   <!-- saejriedidh-->
+         </match>
+       </rule>     
+<!-- saejriedidh -->
+       <rule weight="0.6">                <!-- saejriedidh-->
+       <match lemma="bávččastit">
+         <select lemma="saejriedidh"/>
+       </match>
+       <or>
+         <<match lemma="oaivi"/>
+               </rule>    
+    <rule weight="0.6">  <!-- saejriedidh-->
+    <or>
+          <match lemma="oaivi"/>   <!        oaivi skal  også bli "åejjieh" (plural) "Hodene har vondt på sma"/> 
+       </or>
+       <match lemma="bávččastit">
+         <select lemma="saejriedidh"/>
+    </match>
+    </rule>    
+
+<!-- bávččastit slutt -->  
 
 </rules> 
