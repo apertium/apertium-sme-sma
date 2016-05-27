@@ -13,7 +13,6 @@
 
  158 *eanaš
 
- 147 *norsk
 
  140 *álggahuvvui
  136 *oktasaš
@@ -77,8 +76,8 @@
   53 *Daid
   52 *sámegielagat
   52 *heivehit
-  52 *Eriksen
-  51 *s
+
+
   51 *Hámmárfeastta
   50 *gaskaboddosaš
   50 *Unjárgga
@@ -117,13 +116,13 @@
 
   42 *hárve
   42 *eatnasat
-  42 *Ragnhild
+
   42 *Eanas
-  42 *Andersen
+
   41 *viidáseappot
   41 *hárjánan
-  41 *Ulf
-  41 *Ravna
+
+
   41 *Láhpi
   41 *Finnmark
   41 *Aarseth
@@ -138,7 +137,7 @@
   39 *váste
   39 *dađe
   39 *aivve
-  39 *Randi
+
   38 *váilevaš
   38 *til
   38 *oktiibuot
