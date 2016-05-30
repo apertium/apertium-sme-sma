@@ -1826,4 +1826,33 @@
 
 <!-- bávččastit slutt -->  
 
+
+<!-- okta-  -->    
+<!-- default: okta --> 
+<!--  <rule weight="1.0"> --> 
+<!--   <match lemma="okta" > --> 
+<!--       <select lemma="akte"/> --> 
+<!--     </match>  --> 
+<!--     </rule>     --> 
+
+<!-- <!-- guhte -->
+<!--        <rule weight="0.5">  --> 
+<!--          <match lemma="okta">  --> 
+<!--             <select lemma="guhte"/>   <!-- olmmoš-->
+<!--          </match>  --> 
+<!--        </rule>    -->  
+<!-- <!-- guhte -->
+<!--        <rule weight="0.6">                <!-- olmmoš-->
+<!--        <match lemma="okta"> --> 
+<!--          <select lemma="guhte"/>  --> 
+<!--        </match>  --> 
+<!--          <match lemma=" .. "/>   --> 
+<!--       </rule>      --> 
+<!--     <rule weight="0.6">  <!-- -->
+<!--           <match lemma="oaivi"/>   <!--  --> 
+<!--        <match lemma="">  --> 
+<!--          <select lemma="guhte"/>  --> 
+<!--     </match>  --> 
+<!--     </rule>  -->    
+
 </rules> 
