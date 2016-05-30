@@ -1784,20 +1784,20 @@
 <!-- bávččastit- flere varianter av å ha det vondt på sma START -->    
 <!-- default: bávččastit -->  
        <rule weight="1.0"> 
-         <match lemma="bávččastit" >
-            <select lemma="baektjiedidh"/>  <!-- baektjiedidh -->  
+         <match lemma="bávččas" >
+            <select lemma="bååktjehke"/>  <!-- baektjiedidh -->  
          </match>
        </rule>     
 
 <!-- saejriedidh -->
        <rule weight="0.5"> 
-         <match lemma="bávččastit">
+         <match lemma="bávččas">
             <select lemma="saejriedidh"/>   <!-- saejriedidh-->
          </match>
        </rule>     
 <!-- saejriedidh -->
        <rule weight="0.6">                <!-- saejriedidh-->
-       <match lemma="bávččastit">
+       <match lemma="bávččas">
          <select lemma="saejriedidh"/>
        </match>
          <match lemma="oaivi"/>
