@@ -1728,7 +1728,7 @@
            <select lemma="tsuvvedh"/>
          </match>
        <or>
-         <<match lemma="boazu"/>
+          <match lemma="boazu"/>
           <match lemma="ruoigu"/>
           <match lemma="miessi"/>
           <match lemma="heargi"/>
@@ -1753,7 +1753,7 @@
     
        <rule weight="1.0"> 
          <match lemma="ge" >
-            <select lemma="aaj"/>  <!        beana />  
+            <select lemma="aaj"/>  <!-- beana -->  
          </match>
        </rule>     
 
@@ -1783,10 +1783,9 @@
 
 <!-- bávččastit- flere varianter av å ha det vondt på sma START -->    
 <!-- default: bávččastit -->  
-       <or>
        <rule weight="1.0"> 
          <match lemma="bávččastit" >
-            <select lemma="baektjiedidh"/>  <!        baektjiedidh />  
+            <select lemma="baektjiedidh"/>  <!-- baektjiedidh -->  
          </match>
        </rule>     
 
@@ -1801,13 +1800,10 @@
        <match lemma="bávččastit">
          <select lemma="saejriedidh"/>
        </match>
-       <or>
-         <<match lemma="oaivi"/>
-               </rule>    
+         <match lemma="oaivi"/>
+      </rule>    
     <rule weight="0.6">  <!-- saejriedidh-->
-    <or>
-          <match lemma="oaivi"/>   <!        oaivi skal  også bli "åejjieh" (plural) "Hodene har vondt på sma"/> 
-       </or>
+          <match lemma="oaivi"/>   <!--   oaivi skal  også bli "åejjieh" (plural) "Hodene har vondt på sma"--> 
        <match lemma="bávččastit">
          <select lemma="saejriedidh"/>
     </match>
