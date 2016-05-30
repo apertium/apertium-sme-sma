@@ -31,14 +31,10 @@ dev/archive/bidix47269.dix -text
 dev/archive/cg-tag-convertor.py -text
 dev/bidix-sanity.sh -text
 dev/dixtest.sh -text
-dev/find-contlex-combos.py -text
 dev/gaajhke.sma.txt -text
-dev/generation-errors.sh -text
-dev/generation-history-schoolcorpus.log -text
 dev/generation-history.log -text
 dev/generation-report-schoolcorpus.sme-sma.txt -text
 dev/generation-report.sme-sma.txt -text
-dev/generation-schoolcorpus-errors.sh -text
 dev/generation-test.sh -text
 dev/hash-report.freq -text
 dev/lemmatizingcommand.txt -text
@@ -57,6 +53,11 @@ dev/missing_sme_schooltexts.txt -text
 dev/missing_sme_schooltexts_rev.txt -text
 dev/missinglist.txt -text
 dev/missinglist_texts.txt -text
+dev/oldscripts/find-contlex-combos.py -text
+dev/oldscripts/generation-errors.sh -text
+dev/oldscripts/generation-history-schoolcorpus.log -text
+dev/oldscripts/generation-schoolcorpus-errors.sh -text
+dev/oldscripts/test-prefix.sh -text
 dev/phrase -text
 dev/prop_notinFST.txt -text
 dev/sametingsmissinglist.txt -text
@@ -69,7 +70,6 @@ dev/tekst1Bsmalemma.txt -text
 dev/tekst2Bsmalemma.txt -text
 dev/tekst3Bsmalemma.txt -text
 dev/tekstMTBsmalemma.txt -text
-dev/test-prefix.sh -text
 dev/tobefixed.txt -text
 doc/gt2apertium.cg3r -text
 eval/evaluation_results.txt -text
