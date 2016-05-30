@@ -1595,7 +1595,22 @@
          <match lemma="oaivi" >
             <select lemma="åejjie"/>
          </match>
-       </rule>     
+       </rule> 
+       
+       
+       <rule weight="0.5"> 
+         <match lemma="oaivi" >
+            <select lemma="åejjie" tags="n.pl.nom"/>
+         </match>
+       </rule>   
+       
+       <rule weight="0.6"> 
+         <match lemma="oaivi" >
+            <select lemma="åejjie" tags="n.pl.nom"/>
+         </match>
+      <match lemma="bávččas"/>  
+       </rule>       
+
 
 <!-- tsehkie -->
        <rule weight="0.5"> 
