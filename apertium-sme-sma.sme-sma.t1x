@@ -336,6 +336,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="agreement-attr">                             
       <cat-item lemma="muhtun" tags="prn.ind.*"/> 
+      <cat-item lemma="muhtin" tags="prn.ind.*"/> 
       <cat-item lemma="buot" tags="prn.ind.*"/> 
       <cat-item lemma="boahtte" tags="adj.*"/> 
     </def-cat>
@@ -1792,6 +1793,8 @@ And then there are some categories like "month", with all the months.
          <with-param pos="1"/>
          <with-param pos="2"/>
         </call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="attr-noun" case="caseFirstword">
             <tags>
