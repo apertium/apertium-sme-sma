@@ -1474,7 +1474,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: year - 1 position in-out">
+    <rule comment="REGLA: year - 1 position in-out"> <!-- Paul lea riegádan 1931:s -- Paul 1931. jaepien reakadamme -->
       <pattern>
         <pattern-item n="year"/>
       </pattern>
