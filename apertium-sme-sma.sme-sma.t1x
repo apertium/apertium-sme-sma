@@ -137,16 +137,21 @@ And then there are some categories like "month", with all the months.
     <def-cat n="moai">
       <cat-item tags="prn.pers.*.du.*"/>
     </def-cat>
+    <def-cat n="adj2verb">
+      <cat-item tags="adj.*"/>
+    </def-cat>
     <def-cat n="Laarain">
       <cat-item tags="*.com.@Pron←"/>
    </def-cat>
     <def-cat n="n-not-cmp">
       <cat-item tags="n.*.sg.*"/>
       <cat-item tags="n.*.pl.*"/>
+      <cat-item tags="n.*.ess.*"/>
       <cat-item tags="n.*.*.sg.*"/>
       <cat-item tags="n.*.*.pl.*"/>
       <cat-item tags="n.sg.*"/>
       <cat-item tags="n.pl.*"/>
+      <cat-item tags="n.ess.*"/>
     </def-cat>
     <def-cat n="noun">
       <cat-item tags="*.n.*.sg.*"/>
@@ -204,11 +209,13 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="num.arab.*"/>
       <cat-item tags="num.sg.*"/>
       <cat-item tags="num.pl.*"/>
+      <cat-item tags="num.ess.*"/>
     </def-cat>
     <def-cat n="num-ldep">
       <cat-item tags="num.arab.*.*.@N←"/>
       <cat-item tags="num.sg.*.*.@N←"/>
       <cat-item tags="num.pl.*.*.@N←"/>
+      <cat-item tags="num.ess.*.@N←"/>
     </def-cat>
     <def-cat n="prn">
       <cat-item tags="prn.*"/>
@@ -2458,6 +2465,40 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule> -->
+
+
+    <rule comment="REGLA: remove cop-mainv when adj is vfin  - 3 positions">
+      <pattern>
+        <pattern-item n="leat-drop"/>
+        <pattern-item n="noun"/>
+        <pattern-item n="adj2verb"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+            <b/>
+          <chunk name="verb" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="REGLA: verb-fin  - 1 position">
