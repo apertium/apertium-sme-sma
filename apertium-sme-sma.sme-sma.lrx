@@ -1835,24 +1835,40 @@
 <!--     </match>  --> 
 <!--     </rule>     --> 
 
-<!-- <!-- guhte -->
+<!-- guhte -->
 <!--        <rule weight="0.5">  --> 
 <!--          <match lemma="okta">  --> 
-<!--             <select lemma="guhte"/>   <!-- olmmoš-->
+<!--             <select lemma="guhte"/>    olmmoš-->
 <!--          </match>  --> 
 <!--        </rule>    -->  
-<!-- <!-- guhte -->
-<!--        <rule weight="0.6">                <!-- olmmoš-->
+<!--  guhte -->
+<!--        <rule weight="0.6">               olmmoš-->
 <!--        <match lemma="okta"> --> 
 <!--          <select lemma="guhte"/>  --> 
 <!--        </match>  --> 
 <!--          <match lemma=" .. "/>   --> 
 <!--       </rule>      --> 
-<!--     <rule weight="0.6">  <!-- -->
-<!--           <match lemma="oaivi"/>   <!--  --> 
+<!--     <rule weight="0.6">  -->
+<!--           <match lemma="oaivi"/>     --> 
 <!--        <match lemma="">  --> 
 <!--          <select lemma="guhte"/>  --> 
 <!--     </match>  --> 
 <!--     </rule>  -->    
+
+<!-- regel for Sápmi og saemien  --> 
+
+<!--  default: Saemie --> 
+  <rule weight="1.0"> 
+   <match lemma="Sápmi" > 
+       <select lemma="saemie"/>  
+     </match>   
+     </rule>     
+
+ <!-- Sápmi: temporarly; rule is comming -->
+     <rule weight="0.5">  
+       <match lemma="Sápmi">  
+           <select lemma="Sápmi"/>   <!-- Sápmi-->
+        </match>  
+        </rule>   
 
 </rules> 
