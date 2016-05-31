@@ -1793,8 +1793,7 @@ And then there are some categories like "month", with all the months.
          <with-param pos="1"/>
          <with-param pos="2"/>
         </call-macro>
-        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
-        <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="attr-noun" case="caseFirstword">
             <tags>
