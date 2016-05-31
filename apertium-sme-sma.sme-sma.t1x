@@ -105,6 +105,9 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="áhkku" tags="n.*.sg.*"/>
       <cat-item lemma="áddjá" tags="n.*.sg.*"/>
     </def-cat>
+    <def-cat n="jahki">
+      <cat-item lemma="jahki" tags="n.*.sg.loc.*"/>
+    </def-cat>
     <def-cat n="maake">
       <cat-item lemma="muoŧŧá" tags="n.*.sg.*"/>
       <cat-item lemma="goaski" tags="n.*.sg.*"/>
@@ -194,14 +197,18 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adj-rdep">
       <cat-item tags="adj.*.@→N"/>
     </def-cat>
-    <def-cat n="year">
-      <cat-item tags="*.sem_year.*.loc.*"/>
+    <def-cat n="semyear">
+      <cat-item tags="*.sem_year.*"/>
     </def-cat>
     <def-cat n="numeral">
-      <cat-item tags="num.*"/>
+      <cat-item tags="num.arab.*"/>
+      <cat-item tags="num.sg.*"/>
+      <cat-item tags="num.pl.*"/>
     </def-cat>
     <def-cat n="num-ldep">
-      <cat-item tags="num.*.*.*.@N←"/>
+      <cat-item tags="num.arab.*.*.@N←"/>
+      <cat-item tags="num.sg.*.*.@N←"/>
+      <cat-item tags="num.pl.*.*.@N←"/>
     </def-cat>
     <def-cat n="prn">
       <cat-item tags="prn.*"/>
@@ -1476,7 +1483,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: year - 1 position in-out"> <!-- Paul lea riegádan 1931:s - Paul 1931. jaepien reakadamme -->
       <pattern>
-        <pattern-item n="year"/>
+        <pattern-item n="semyear"/>
       </pattern>
       <action>
         <call-macro n="general-macro-1Param">
@@ -1495,6 +1502,37 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <lit v="jaepie"/>
+              <lit-tag v="n.sg.gen"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: jagis 2001 - 2 position in-out"> <!-- jagis 2001 - 2001. jaepien -->
+      <pattern>
+        <pattern-item n="jahki"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"> <with-param pos="1"/><with-param pos="2"/></call-macro>
+         <let><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="adj.ord"/></let>
+         <let><clip pos="2" side="tl" part="a_nbr"/><lit v=""/></let>
+         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+         <let><clip pos="2" side="tl" part="sem_year"/><lit v=""/></let>
+                          <out>
+          <chunk name="numdd" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
             <b/>
             <lu>
