@@ -2402,7 +2402,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment="REGLA: ii conneg  - 2 positions out">
+   <rule comment="REGLA: ii conneg  - 2 positions out">
       <pattern>
         <pattern-item n="ii"/>
         <pattern-item n="conneg"/>
@@ -2410,10 +2410,10 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/> </call-macro>
         <out>
-          <chunk name="ii-conneg" case="caseFirstword">
+          <chunk name="ii" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="func"/></tag>
+              <tag><lit-tag v="@+FAUXV"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -2425,7 +2425,13 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
+          </chunk>
             <b pos="1"/>
+          <chunk name="conneg" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_verb"/>
@@ -2435,7 +2441,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>  -->
+    </rule>  
 <!--    <rule comment="REGLA: son ii conneg"> it doesn't work properly yet
       <pattern>
         <pattern-item n="prn-pers"/>
