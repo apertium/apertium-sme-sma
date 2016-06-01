@@ -197,6 +197,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.*.*.@→N"/>
       <cat-item tags="adj.*.@→N"/>
       <cat-item tags="n.*.@→N"/>
+      <cat-item tags="np.*.@→N"/>
+      <cat-item tags="num.*.@→N"/>
       <cat-item tags="vblex.*.@→N"/>
     </def-cat>
     <def-cat n="adj-rdep">
