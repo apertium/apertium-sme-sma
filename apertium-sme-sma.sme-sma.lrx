@@ -967,6 +967,7 @@
         <match lemma="stállu"/>
         <match lemma="beana"/>
         <match lemma="albbas"/>
+        <match lemma="bussá"/>
        </or>
      <match lemma="borrat">
        <select lemma="bårredh"/>
@@ -977,6 +978,7 @@
         <match lemma="stállu"/>
         <match lemma="beana"/>
         <match lemma="albbas"/>
+        <match lemma="bussá"/>
        </or>
      <match/>
      <match lemma="borrat">
@@ -988,6 +990,7 @@
         <match lemma="stállu"/>
         <match lemma="beana"/>
         <match lemma="albbas"/>
+        <match lemma="bussá"/>
        </or>
      <match/>
      <match/>
@@ -1885,4 +1888,22 @@
            <select lemma="nuhtjedh"/>   <!-- Sápmi-->
         </match>  
         </rule>   
+        
+        
+<!--  default: gaske --> 
+<!-- <rule weight="1.0">  --> 
+<!--  <match lemma="gaskka" >  --> 
+<!--      <select lemma="gaske"/>   --> 
+<!--    </match>   --> 
+<!--    </rule>   -->   
+
+ <!--  temporarly; rule is comming -->
+ <!--     <rule weight="0.5">  --> 
+ <!--       <match lemma="gaskka">  --> 
+ <!--           <select lemma="gaske"/>  Sápmi-->
+ <!--        </match>  --> 
+ <!--        </rule>   -->         
+        
+        
+
 </rules> 
