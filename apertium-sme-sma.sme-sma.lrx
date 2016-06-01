@@ -775,16 +775,19 @@
        <match lemma="váivi" tags="n.*"><select lemma="barkoestradtje" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="váldit" tags="vblex.tv.*"><select lemma="bïksedh" tags="vblex.*"/></match>
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="vaeltedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.5">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="ååktedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.5">
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="krööhkedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="ååktedh" tags="vblex.*"/></match>
        <match lemma="duohta" tags="n.*.sg.loc.*"/>
   </rule>
-  <rule weight="0.5">
+  <rule weight="0.6">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="krööhkedh" tags="vblex.*"/></match>
        <match lemma="vuhtii"/>
   </rule>
