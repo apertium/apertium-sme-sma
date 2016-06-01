@@ -649,6 +649,38 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="S V SPRED ADVL" > <!--S V SPRED becomes S SPRED V, Dát rehkenastojuvvo oktan guollin. -->
+      <pattern>
+        <pattern-item n="NP_Subj"/>
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="NP_Spred_l"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="S V SPRED ADVL" > <!--S V SPRED ADVL becomes S SPRED ADVL V -->
       <pattern>
         <pattern-item n="NP_Subj"/>
