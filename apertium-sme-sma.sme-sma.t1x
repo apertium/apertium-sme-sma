@@ -351,7 +351,6 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
 
-
     <def-cat n="sent">
       <cat-item tags="clb"/>
       <cat-item tags="clb.*"/>
@@ -902,6 +901,12 @@ And then there are some categories like "month", with all the months.
       <list-item v="váldit"/>
       <list-item v="oažžut"/>
     </def-list>
+    <def-list n="der_caus2der_d">
+      <list-item v="olahit"/>
+    </def-list>
+
+
+
   </section-def-lists>
   <section-def-macros>
 
@@ -929,6 +934,11 @@ And then there are some categories like "month", with all the months.
 
     <def-macro n="convert-deriv-1Param" npar="1"> <!-- der_aadv to der_laakan -->
       <choose>  
+        <when>
+          <test>
+            <in><clip pos="1" side="sl" part="lem"/><list n="der_caus2der_d"/></in></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ht"/></let>
+        </when>
         <when>
           <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_aadv"/></equal>
