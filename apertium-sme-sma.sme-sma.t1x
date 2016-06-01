@@ -897,8 +897,9 @@ And then there are some categories like "month", with all the months.
       <list-item v="sirdit"/>
       <list-item v="sihkkelastit"/>
       <list-item v="viehkat"/>
-      <list-item v="vázzit"/>
+<!--      <list-item v="vázzit"/> needs special treatment  -->
       <list-item v="vuolgit"/>
+      <list-item v="váldit"/>
       <list-item v="oažžut"/>
     </def-list>
   </section-def-lists>
