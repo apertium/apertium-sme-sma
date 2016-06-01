@@ -75,6 +75,10 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@ADVL.*"/>
         <cat-item tags="ADV.*"/>
     </def-cat>
+    <def-cat n="numcompl">
+        <cat-item tags="*.@Num←"/>
+        <cat-item tags="*.@Num←.*"/>
+    </def-cat>
 
     
     <def-cat n="NP_Po">
@@ -279,7 +283,7 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-    <rule comment="REGLA: NP_Obj CNP NP_Obj"> <!-- Aalkosne Jupmele elmiem jïh eatnemem sjugniedi. -->
+    <rule comment="REGLA: NP_Obj CNP NP_Obj"> 
      <pattern>
        <pattern-item n="Obj_l"/>
        <pattern-item n="CNP"/>
@@ -296,6 +300,27 @@ And then there are some categories like "month", with all the months.
            <clip pos="2" part="content"/>
            <b pos="2"/>
            <clip pos="3" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+
+    <rule comment="REGLA: Obj Numcompl"> 
+     <pattern>
+       <pattern-item n="NP_Obj"/>
+       <pattern-item n="numcompl"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="num_obj"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
            <lit v="}"/>
            <clip pos="1" part="lemq"/>
          </chunk>
