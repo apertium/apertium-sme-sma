@@ -1906,7 +1906,37 @@
  <!--           <select lemma="gaske"/>  Sápmi-->
  <!--        </match>  --> 
  <!--        </rule>   -->         
-        
+
+<!--  default: mielde --> 
+<!-- <rule weight="1.0">  --> 
+<!--  <match lemma="mielde" >  --> 
+<!--      <select lemma="mealtan"/>   --> 
+<!--    </match>   --> 
+<!--    </rule>   -->   
+
+ <!--  temporarly; rule is comming -->
+ <!--     <rule weight="0.5">  --> 
+ <!--       <match lemma="mielde">  --> 
+ <!--           <select lemma="mietie"/>  Sápmi-->
+ <!--        </match>  --> 
+ <!--        </rule>   -->         
+ 
+
+<!--  default: Hijvenlaakan --> 
+<!-- <rule weight="1.0">  --> 
+<!--  <match lemma="bures" >  --> 
+<!--      <select lemma="hijvenlaakan"/>   --> 
+<!--    </match>   --> 
+<!--    </rule>   -->   
+
+ <!--  temporarly; rule is comming -->
+ <!--     <rule weight="0.5">  --> 
+ <!--       <match lemma="bures">  --> 
+ <!--           <select lemma="buaregh"/>  Sápmi-->
+ <!--        </match>  --> 
+ <!--        </rule>   -->         
+ 
+       
         
 
 </rules> 
