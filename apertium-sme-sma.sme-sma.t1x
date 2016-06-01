@@ -1489,7 +1489,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: year - 1 position in-out"> <!-- Paul lea riegádan 1931:s - Paul 1931. jaepien reakadamme -->
+    <rule comment="REGLA: year - 1 position in-out"> <!-- Paul lea riegádan 1931:s - Paul 1931 jaepien reakadamme -->
       <pattern>
         <pattern-item n="semyear"/>
       </pattern>
@@ -1497,9 +1497,8 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
-         <let><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="adj.ord"/></let>
-         <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+          <let><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="num.arab"/></let>
+         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
         <let><clip pos="1" side="tl" part="sem_year"/><lit v=""/></let>
                           <out>
           <chunk name="num" case="caseFirstword">
@@ -1521,16 +1520,15 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: jagis 2001 - 2 position in-out"> <!-- jagis 2001 - 2001. jaepien -->
+    <rule comment="REGLA: jagis 2001 - 2 position in-out"> <!-- jagis 2001 - 2001 jaepien -->
       <pattern>
         <pattern-item n="jahki"/>
         <pattern-item n="semyear"/>
      </pattern>
       <action>
         <call-macro n="general-macro-2Param"> <with-param pos="1"/><with-param pos="2"/></call-macro>
-         <let><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="adj.ord"/></let>
-         <let><clip pos="2" side="tl" part="a_nbr"/><lit v=""/></let>
-         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+          <let><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="num.arab"/></let>
+         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
          <let><clip pos="2" side="tl" part="sem_year"/><lit v=""/></let>
                           <out>
           <chunk name="num-noun" case="caseFirstword">
