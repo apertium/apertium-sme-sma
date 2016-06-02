@@ -2670,49 +2670,6 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>  
-<!--    <rule comment="REGLA: son ii conneg"> it doesn't work properly yet
-      <pattern>
-        <pattern-item n="prn-pers"/>
-        <pattern-item n="ii"/>
-        <pattern-item n="conneg"/>
-      </pattern>
-      <action>
-        <call-macro n="general-macro-2Param">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-          <with-param pos="3"/>
-        </call-macro>
-        <out>
-          <chunk name="ii-prn-conneg" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-              <tag><var n="func"/></tag>
-            </tags>
-            <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_verb"/>
-              <clip pos="2" side="tl" part="a_trans"/>
-              <clip pos="2" side="tl" part="a_neg"/>
-              <clip pos="2" side="tl" part="a_mood"/>
-              <clip pos="3" side="tl" part="a_tense"/>
-              <clip pos="2" side="tl" part="a_pers"/>
-              <clip pos="2" side="tl" part="a_nbr"/>
-            </lu>
-            <b pos="1"/>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b pos="2"/>
-            <lu>
-              <clip pos="3" side="tl" part="lem"/>
-              <clip pos="3" side="tl" part="a_verb"/>
-              <clip pos="3" side="tl" part="a_trans"/>
-              <clip pos="3" side="tl" part="a_conneg"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule> -->
 
 
     <rule comment="REGLA: remove cop-mainv when adj is vfin  - 3 positions">
