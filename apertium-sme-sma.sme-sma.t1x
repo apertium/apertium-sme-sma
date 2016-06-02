@@ -937,6 +937,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="skábmamánnu"/>
       <list-item v="juovlaamánnu"/>
       <list-item v="árgabeaivi"/>
+      <list-item v="eahket"/>
     </def-list>
 
 
@@ -2832,9 +2833,9 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="convert-verb-deriv-1Param">
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="convert-verb-deriv-1Param"><with-param pos="2"/></call-macro>
+         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
+
  <!--         <let><var n="func"/><clip pos="2" side="sl" part="a_synlabel"/></let> -->
         <out>
           <chunk name="vblex" case="caseFirstword">
