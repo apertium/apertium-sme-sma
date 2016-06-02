@@ -1936,18 +1936,18 @@
  
 
 <!--  default: Hijvenlaakan --> 
-<!-- <rule weight="1.0">  --> 
-<!--  <match lemma="bures" >  --> 
-<!--      <select lemma="hijvenlaakan"/>   --> 
-<!--    </match>   --> 
-<!--    </rule>   -->   
+ <rule weight="1.0">   
+  <match lemma="bures" >   
+      <select lemma="hijvenlaakan"/>    
+    </match>    
+    </rule>      
 
  <!--  temporarly; rule is comming -->
- <!--     <rule weight="0.5">  --> 
- <!--       <match lemma="bures">  --> 
- <!--           <select lemma="buaregh"/>  Sápmi-->
- <!--        </match>  --> 
- <!--        </rule>   -->         
+      <rule weight="0.5">   
+        <match lemma="bures">   
+            <select lemma="buaregh"/>  
+         </match>   
+         </rule>            
  
        
         
