@@ -179,6 +179,12 @@ And then there are some categories like "month", with all the months.
     <def-cat n="gen">
       <cat-item tags="*.gen.*"/>
     </def-cat>
+    <def-cat n="nounloc">
+      <cat-item tags="n.*.*.*.loc.*"/>
+      <cat-item tags="n.*.*.loc.*"/>
+      <cat-item tags="np.*.*.*.loc.*"/>
+      <cat-item tags="np.*.*.loc.*"/>
+    </def-cat>
     <def-cat n="interj">
       <cat-item tags="ij.*"/>
     </def-cat>
@@ -192,6 +198,9 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="váste">
       <cat-item lemma="váste" tags="post.*"/>
+    </def-cat>
+    <def-cat n="eret">
+      <cat-item lemma="eret" tags="adv.*"/>
     </def-cat>
     <def-cat n="prsprc">
       <cat-item tags="*.prsprc.*"/>
@@ -2130,7 +2139,50 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    
+     <rule comment="REGLA: eret  - 1 position out"> <!-- Hábmeris eret - elativ -->
+      <pattern>
+        <pattern-item n="nounloc"/>
+        <pattern-item n="eret"/>
+      </pattern>
+      <action>
+           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+     <rule comment="REGLA: eret  - 1 position out"> <!-- Hábmeris eret - elativ -->
+      <pattern>
+        <pattern-item n="eret"/>
+        <pattern-item n="nounloc"/>
+      </pattern>
+      <action>
+           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+         <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+           <lu>
+				<clip pos="2" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   
      <rule comment="REGLA: aehtjie gon tjidtjieh">
       <pattern>
         <pattern-item n="aehtjie"/>
