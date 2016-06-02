@@ -82,6 +82,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="NP_Obj_l">
         <cat-item tags="NP.@←OBJ.*"/>
+        <cat-item tags="NP.@←OBJ"/>
     </def-cat>
     <def-cat n="NP_Spred_l">
         <cat-item tags="*.@←SPRED"/>
@@ -330,6 +331,29 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="FMainV"/>
         <pattern-item n="NP_Obj_l"/>
         <pattern-item n="ADVL_left"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+           <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+         <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="FMAINV modifyer Obj " > <!-- V Mod Obj ADVL becomes Mod Obj V. -->
+      <pattern>     
+        <pattern-item n="FMainV"/>
+        <pattern-item n="modifyer"/>
+        <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
         <out>
