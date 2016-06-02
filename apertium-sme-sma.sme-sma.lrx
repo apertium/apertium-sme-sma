@@ -667,7 +667,20 @@
   </rule>
   <rule weight="0.6">
        <match lemma="orrut" tags="vblex.iv.*"><select lemma="vååjnedh" tags="vblex.*"/></match>
-       <match lemma="leat" tags="vblex.iv.actio.ess.*"/>
+       <or>
+       <match lemma="somá"/>
+       <match lemma="imaš"/>
+       <match lemma="amas"/>
+       </or>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="orrut" tags="vblex.iv.*"><select lemma="vååjnedh" tags="vblex.*"/></match>
+       <match />
+       <or>
+       <match lemma="somá"/>
+       <match lemma="imaš"/>
+       <match lemma="amas"/>
+       </or>
   </rule>
   <rule weight="1.0">
        <match lemma="ossodat" tags="n.*"><select lemma="goevtese" tags="n.*"/></match>
@@ -1888,38 +1901,38 @@
  <!--  temporarly; rule is comming -->
      <rule weight="0.5">  
        <match lemma="geavahit">  
-           <select lemma="nuhtjedh"/>   <!-- Sápmi-->
+           <select lemma="nuhtjedh"/>   
         </match>  
         </rule>   
         
         
 <!--  default: gaske --> 
-<!-- <rule weight="1.0">  --> 
-<!--  <match lemma="gaskka" >  --> 
-<!--      <select lemma="gaske"/>   --> 
-<!--    </match>   --> 
-<!--    </rule>   -->   
+ <rule weight="1.0">   
+  <match lemma="gaskka" >   
+      <select lemma="gaske"/>    
+    </match>    
+    </rule>      
 
- <!--  temporarly; rule is comming -->
- <!--     <rule weight="0.5">  --> 
- <!--       <match lemma="gaskka">  --> 
- <!--           <select lemma="gaske"/>  Sápmi-->
- <!--        </match>  --> 
- <!--        </rule>   -->         
+  temporarly; rule is comming 
+     <rule weight="0.5">   
+       <match lemma="gaskka">   
+           <select lemma="gaske"/>  
+        </match>   
+        </rule>            
 
-<!--  default: mielde --> 
-<!-- <rule weight="1.0">  --> 
-<!--  <match lemma="mielde" >  --> 
-<!--      <select lemma="mealtan"/>   --> 
-<!--    </match>   --> 
-<!--    </rule>   -->   
+<!--  default: mielde   -->
+ <rule weight="1.0">   
+  <match lemma="mielde">   
+      <select lemma="mealtan"/>    
+    </match>    
+    </rule>      
 
- <!--  temporarly; rule is comming -->
- <!--     <rule weight="0.5">  --> 
- <!--       <match lemma="mielde">  --> 
- <!--           <select lemma="mietie"/>  Sápmi-->
- <!--        </match>  --> 
- <!--        </rule>   -->         
+<!--  temporarly; rule is comming -->
+     <rule weight="0.5">   
+       <match lemma="mielde">   
+           <select lemma="mietie"/>  
+        </match>   
+        </rule>            
  
 
 <!--  default: Hijvenlaakan --> 
