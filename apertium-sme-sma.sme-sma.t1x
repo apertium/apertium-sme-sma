@@ -1962,6 +1962,15 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>     
      <choose><when>
+     <test><equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@→N"/></equal></test>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+         </when>
+        <otherwise>
+         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        </otherwise>
+     </choose>
+
+     <choose><when>
      <test><not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="2" side="tl" part="tags"/>
@@ -1969,7 +1978,6 @@ And then there are some categories like "month", with all the months.
           <lit-tag v="n.pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
           </when></choose>
-         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
        <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -3186,28 +3194,48 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <!-- SECTION: Conjunctions -->
-
-<!--   <rule comment="REGLA: vejolaš">
+<!--   <rule comment="REGLA: ii conneg vejolaš  - 2 positions out">
       <pattern>
+        <pattern-item n="ii"/>
         <pattern-item n="leat-main"/>
         <pattern-item n="vejolaš"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/> </call-macro>
         <out>
-          <chunk name="vej" case="caseFirstword">
+          <chunk name="ii" case="caseFirstword">
             <tags>
-              <tag><lit-tag v="VA"/></tag>
-              <tag><var n="func"/></tag>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@+FAUXV"/></tag>
             </tags>
             <lu>
-              <clip pos="2" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_trans"/>
+              <clip pos="1" side="tl" part="a_neg"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="2" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+            <b pos="1"/>
+           <chunk name="vej" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="VA"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <lit-tag v="vblex.conneg"/>
             </lu>
           </chunk>
         </out>
       </action>
-    </rule> -->
+    </rule>  -->
+
+
+    <!-- SECTION: Conjunctions -->
 
     <rule comment="REGLA: ahte  - 1 position">
       <pattern>
