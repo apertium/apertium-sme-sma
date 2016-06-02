@@ -116,6 +116,8 @@
     <sdef n="der_nomag"/>
     <sdef n="der_passl"/>
     <sdef n="der_a"/>
+    <sdef n="der_laakan"/>
+    
 
     <!-- Punctuation -->
     <sdef n="punct"   c="Punctuation"/>
@@ -278,7 +280,7 @@
     <e><p><l>meattá<s n="post"/></l><r>baalteli<s n="post"/></r></p></e>
     <e><p><l>meattá<s n="pr"/></l><r>baalteli<s n="post"/></r></p></e>
     
-    <e><p><l>mielde<s n="post"/></l><r>mealtan<s n="post"/></r></p></e> 
+    <e><p><l>mielde<s n="post"/></l><r>mealtan<s n="adv"/></r></p></e> 
     <e><p><l>mielde<s n="post"/></l><r>mietie<s n="post"/></r></p></e>
     
     <e><p><l>nala<s n="post"/></l><r>nelnie<s n="post"/></r></p></e>
@@ -2157,7 +2159,7 @@
     <e><p><l>stoagus<s n="n"/></l><r>gaevnie<s n="n"/></r></p></e>
     <e><p><l>stoahka<s n="n"/></l><r>stååkedimmie<s n="n"/></r></p></e>
     <e><p><l>stoarbma<s n="n"/></l><r>værtoe<s n="n"/></r></p></e>
-    <e><p><l>stohpu<s n="n"/></l><r>ståapa<s n="n"/></r></p></e>
+    <e><p><l>stohpu<s n="n"/></l><r>ståapoe<s n="n"/></r></p></e>
     <e><p><l>struktuvra<s n="n"/></l><r>struktuvre<s n="n"/></r></p></e>
     <e><p><l>studeanta<s n="n"/></l><r>studeente<s n="n"/></r></p></e>
     <e><p><l>stuibmi<s n="n"/></l><r>stujmie<s n="n"/></r></p></e>
@@ -3347,6 +3349,7 @@
     <e><p><l>almmolaš<s n="adj"/></l><r>byjjes<s n="adj"/></r></p></e>
     <e><p><l>almmus<s n="adj"/></l><r>byjjes<s n="adj"/></r></p></e>
     <e><p><l>amas<s n="adj"/></l><r>ammes<s n="adj"/></r></p></e>
+    <e><p><l>amas<s n="adj"/></l><r>ammes<s n="adj"/><s n="der_laakan"/><s n="adv"/></r></p></e>
     <e><p><l>anihahtti<s n="adj"/></l><r>dæjpeles<s n="adj"/></r></p></e>
     <e><p><l>bahá<s n="adj"/></l><r>bahhas<s n="adj"/></r></p></e>
     <e><p><l>bahánihkkán<s n="adj"/></l><r>ovnuvhtege<s n="adj"/></r></p></e>
@@ -4368,7 +4371,7 @@
     <e><p><l>geallat<s n="vblex"/><s n="tv"/></l><r>deektedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>geassit<s n="vblex"/><s n="tv"/></l><r>giesedh<s n="vblex"/><s n="tv"/></r></p></e>
     
-    <e><p><l>geavahit<s n="vblex"/><s n="tv"/></l><r>provhkedh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>geavahit<s n="vblex"/><s n="tv"/></l><r>pruvhkedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>geavahit<s n="vblex"/><s n="tv"/></l><r>nuhtjedh<s n="vblex"/><s n="tv"/></r></p></e>
     
     <e><p><l>geažuhit<s n="vblex"/><s n="tv"/></l><r>daejriehtidh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -51356,6 +51359,7 @@
 
 
 
+<e><p><l>GPS<s n="n"/></l><r>GPS<s n="n"/></r></p></e>
 
 <e><p><l>NBR<s n="n"/></l><r>NBR<s n="n"/></r></p></e>
 <e><p><l>NSR<s n="n"/></l><r>NSR<s n="n"/></r></p></e>
