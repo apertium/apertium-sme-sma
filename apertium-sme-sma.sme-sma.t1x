@@ -140,6 +140,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adj2verb">
       <cat-item tags="adj.*"/>
     </def-cat>
+    <def-cat n="pr2prnind">
+      <cat-item tags="pr.*"/>
+    </def-cat>
     <def-cat n="Laarain">
       <cat-item tags="*.com.@Pron←"/>
    </def-cat>
@@ -1957,9 +1960,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="numsg"/>
         <pattern-item n="noun"/>
       </pattern>
-      <action>
-        <call-macro n="general-macro-1Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-
+      <action>     
      <choose><when>
      <test><not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
@@ -1968,7 +1969,8 @@ And then there are some categories like "month", with all the months.
           <lit-tag v="n.pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
           </when></choose>
-        <out>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
