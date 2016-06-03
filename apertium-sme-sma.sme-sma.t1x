@@ -223,9 +223,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.sem_year.pl.*"/>
     </def-cat>
     <def-cat n="numsg">
-      <cat-item tags="num.arab.sg.acc.*"/>
       <cat-item tags="num.sg.acc.*"/>
-      <cat-item tags="num.arab.sg.nom.*"/>
       <cat-item tags="num.sg.nom.*"/>
     </def-cat>
     <def-cat n="numeral">
@@ -869,6 +867,11 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="adv"/>
       <attr-item tags="num"/>
       <attr-item tags="adj"/>
+      <attr-item tags="np"/>
+      <attr-item tags="n"/>
+      <attr-item tags="vblex"/>
+      <attr-item tags="post"/>
+      <attr-item tags="pr"/>
     </def-attr>
 
     <def-attr n="a_subPoS">
@@ -1981,13 +1984,17 @@ And then there are some categories like "month", with all the months.
      </choose>
 
      <choose><when>
-     <test><not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not></test>
+     <test><and>
+     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit v="np"/></equal></not>
+     </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="2" side="tl" part="tags"/>
           <concat>
           <lit-tag v="n.pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
           </when></choose>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
        <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -2023,13 +2030,17 @@ And then there are some categories like "month", with all the months.
      </choose>
 
      <choose><when>
-     <test><not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not></test>
+       <test><and>
+     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit v="np"/></equal></not>
+     </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="3" side="tl" part="tags"/>
           <concat>
           <lit-tag v="n.pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
           </when></choose>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>
        <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -2337,9 +2348,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="convert-case-nbr-poss-1Param">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
     <choose><when><test>
     <and><equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></and></test>        
