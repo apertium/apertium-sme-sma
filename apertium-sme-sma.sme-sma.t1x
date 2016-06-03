@@ -225,6 +225,10 @@ And then there are some categories like "month", with all the months.
     <def-cat n="numsg">
       <cat-item tags="num.sg.acc.*"/>
       <cat-item tags="num.sg.nom.*"/>
+<!--      <cat-item tags="num.sg.gen.*"/> -->
+<!--      <cat-item tags="num.sg.ill.attr.*"/>  -->
+<!--      <cat-item tags="num.sg.loc.attr.*"/>  -->
+<!--      <cat-item tags="num.sg.com.attr.*"/>  -->
     </def-cat>
     <def-cat n="numeral">
       <cat-item tags="num.arab.*"/>
@@ -252,6 +256,9 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="prn-dem">
       <cat-item tags="prn.dem.*"/>
+    </def-cat>
+    <def-cat n="prn-dem-sg">
+      <cat-item tags="prn.dem.sg.*"/>
     </def-cat>
     <def-cat n="prn-itg">
       <cat-item tags="prn.itg.*"/>
@@ -1986,7 +1993,7 @@ And then there are some categories like "month", with all the months.
      <choose><when>
      <test><and>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
-     <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit v="np"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
      </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="2" side="tl" part="tags"/>
@@ -2032,7 +2039,7 @@ And then there are some categories like "month", with all the months.
      <choose><when>
        <test><and>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
-     <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit v="np"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
      </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="3" side="tl" part="tags"/>
@@ -2064,6 +2071,115 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: dem numsg noun - 3 positions out">
+      <pattern>
+        <pattern-item n="prn-dem-sg"/>
+        <pattern-item n="numsg"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>     
+     <choose><when>
+     <test><equal><clip pos="2" side="sl" part="a_synlabel"/><lit-tag v="@→N"/></equal></test>
+         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+         </when>
+        <otherwise>
+         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="3"/><with-param pos="2"/></call-macro>
+        </otherwise>
+     </choose>
+
+     <choose><when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     </and></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="3" side="tl" part="tags"/>
+          <concat>
+          <lit-tag v="n.pl"/>
+          <clip pos="1" side="tl" part="a_case"/></concat></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+
+          </when></choose>
+<!--     <choose><when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+     </and></test>
+          <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
+
+          </when></choose> -->
+       <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: dem numsg noun - 3 positions out">
+      <pattern>
+        <pattern-item n="prn-dem-sg"/>
+        <pattern-item n="numsg"/>
+        <pattern-item n="rdep"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>     
+         <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+     <choose><when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="4" side="sl" part="a_PoS"/><lit v="np"/></equal></not>
+     </and></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="3" side="tl" part="tags"/>
+          <concat>
+          <lit-tag v="n.pl"/>
+          <clip pos="1" side="tl" part="a_case"/></concat></let>
+          </when></choose>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: prn-indef noun - 2 positions">
       <pattern>
