@@ -1177,7 +1177,7 @@
  </rule>     
 
 
-       <rule weight="0.5">
+<!--       <rule weight="0.5">
    <match lemma="vejolaš" tags="adj.*">
      <select lemma="gåaradidh" tags="vblex.*"/>
    </match>
@@ -1197,7 +1197,7 @@
    <match lemma="vejolaš"  tags="adj.*">
      <select lemma="gåaradidh" tags="vblex.conneg"/>
    </match>
- </rule>      
+ </rule>      --> 
 
 
        <rule weight="0.5">
@@ -1226,10 +1226,20 @@
        <rule weight="0.6">
    <match lemma="leat" tags="vblex.iv.prfprc.*"/>
    <match lemma="vejolaš" tags="adj.*.sg.nom.*">
-     <select lemma="buektiehtidh" tags="vblex.prfprc"/>
+     <select lemma="buektiehtidh" tags="vblex.*"/>
    </match>
    <match tags="vblex.*"/>
  </rule>     
+       <rule weight="0.6">
+   <match tags="adj.*" />
+   <match lemma="go" />
+   <match lemma="vejolaš" tags="adj.*.sg.nom.*">
+     <select lemma="buektiehtidh" tags="vblex.*"/>
+   </match>
+ </rule>     
+
+
+
        <rule weight="0.5">
    <match lemma="vejolaš" tags="adj.*">
      <select lemma="nuepie" tags="n.*"/>
@@ -1949,7 +1959,27 @@
          </match>   
          </rule>            
  
-       
+<!--  default: go = goh --> 
+ <rule weight="1.0">   
+  <match lemma="go" tags="cnjsub" >   
+      <select lemma="goh"/>    
+    </match>    
+    </rule>      
+
+      <rule weight="0.5">    
+  <match lemma="go" tags="cnjsub" >   
+            <select lemma="guktie"/>  
+         </match>   
+        </rule>            
+ 
+       <rule weight="0.6">    
+  <match lemma="go" tags="cnjsub" >   
+            <select lemma="guktie"/>  
+         </match>   
+     <match tags="adj.*.*.nom.@COMP-CS←"/>    
+        </rule>            
+ 
+      
         
 
 </rules> 
