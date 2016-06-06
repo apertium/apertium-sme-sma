@@ -131,8 +131,12 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.*.@←SPRED"/>
 <!--      <cat-item tags="*.nom.@←SUBJ"/> not ext -->
     </def-cat>
-    <def-cat n="inessive">
-      <cat-item tags="*.loc.@←ADVL"/>
+    <def-cat n="inessive"> <!-- not num, at leat not semyear -->
+      <cat-item tags="n.*.loc.@←ADVL"/>
+      <cat-item tags="n.*.*.loc.@←ADVL"/>
+      <cat-item tags="n.*.*.*.loc.@←ADVL"/>
+      <cat-item tags="np.*.*.loc.@←ADVL"/>
+      <cat-item tags="np.*.*.*.loc.@←ADVL"/>
     </def-cat>
     <def-cat n="moai">
       <cat-item tags="prn.pers.*.du.*"/>
