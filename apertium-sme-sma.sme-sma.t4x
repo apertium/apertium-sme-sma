@@ -60,7 +60,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ADVL_left">
         <cat-item tags="*.@←ADVL.*"/>
         <cat-item tags="*.@←ADVL"/>
-    </def-cat>
+        <cat-item tags="ADV.@←ADVL"/>
+         <cat-item tags="NP.@←ADVL.PX"/>
+   </def-cat>
 
     <def-cat n="SV_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
@@ -124,10 +126,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="IMainV">
-        <cat-item lemma="vblex" tags="SV.@-FMAINV"/>
-        <cat-item lemma="vblex" tags="SV.@-FMAINV.*"/>
-        <cat-item lemma="vblex" tags="SV.*.@-FMAINV.*"/>
-        <cat-item lemma="vblex" tags="SV.*.*.@-FMAINV.*"/>
+        <cat-item tags="SV.@-FMAINV"/>
+        <cat-item tags="SV.@-FMAINV.*"/>
+        <cat-item tags="SV.*.@-FMAINV.*"/>
+        <cat-item tags="SV.*.*.@-FMAINV.*"/>
     </def-cat>
 
     <def-cat n="FMainV">
@@ -207,6 +209,9 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="Pr"/>
         <cat-item tags="Po.*"/>
         <cat-item tags="Po"/>
+    </def-cat>
+    <def-cat n="ADVL_right">
+        <cat-item tags="ADV.@→ADVL"/>
     </def-cat>
     <def-cat n="ADV">
         <cat-item tags="ADV.@ADVL→"/>
@@ -462,6 +467,54 @@ And then there are some categories like "month", with all the months.
             <clip pos="3" part="lemq"/>
           </chunk>
           <b pos="2"/>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="FAuxV IMainV ADVL_left ADVL_right ADVL_left" > <!--AUX V ADVL ADVL ADVL becomes AUX ADVL ADVL ADVL V -->
+      <pattern>
+        <pattern-item n="FAuxV"/>
+        <pattern-item n="IMainV"/>
+        <pattern-item n="ADVL_left"/>
+        <pattern-item n="ADVL_right"/>
+        <pattern-item n="ADVL_left"/> 
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+           <b pos="2"/>
+          <chunk>
+            <clip pos="4" part="lemh"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
+            <clip pos="4" part="lemq"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="5" part="lemh"/>
+            <clip pos="5" part="tags"/>
+            <clip pos="5" part="chcontent"/>
+            <clip pos="5" part="lemq"/>
+          </chunk>
+         <b pos="4"/>
         <chunk>
             <clip pos="2" part="lemh"/>
             <clip pos="2" part="tags"/>

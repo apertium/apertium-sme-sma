@@ -2046,7 +2046,6 @@ And then there are some categories like "month", with all the months.
           <lit-tag v="pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
           </when></choose>
-         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
        <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
        <out>
           <chunk name="noun" case="caseFirstword">
