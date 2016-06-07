@@ -783,6 +783,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_mat_plant"/>
       <attr-item tags="sem_mat_txt"/>
       <attr-item tags="sem_measr"/>
+      <attr-item tags="sem_measr_sign"/>
       <attr-item tags="sem_measr_time"/>
       <attr-item tags="sem_money"/>
       <attr-item tags="sem_money_obj"/>
@@ -2045,7 +2046,8 @@ And then there are some categories like "month", with all the months.
           <lit-tag v="pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
           </when></choose>
-        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
        <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
