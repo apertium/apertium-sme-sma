@@ -1170,12 +1170,6 @@
  </rule>     
 
 
-    <rule weight="1.0">
-   <match lemma="vejolaš" tags="adj.*">
-     <select lemma="nuepie" tags="n.*"/>
-   </match>
- </rule>     
-
 
 <!--       <rule weight="0.5">
    <match lemma="vejolaš" tags="adj.*">
@@ -1199,6 +1193,18 @@
    </match>
  </rule>      --> 
 
+    <rule weight="1.0">
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="nuepie" tags="n.*"/>
+   </match>
+ </rule>     
+
+       <rule weight="0.6">
+   <match lemma="leat" tags="vblex.*"/>
+   <match lemma="vejolaš" tags="adj.*">
+     <select lemma="nuepie" tags="n.*"/>
+   </match>
+ </rule>     
 
        <rule weight="0.5">
    <match lemma="vejolaš" tags="adj.*">
@@ -1224,22 +1230,14 @@
    </match>
  </rule>     
        <rule weight="0.6">
-   <match lemma="leat" tags="vblex.iv.prfprc.*"/>
-   <match lemma="vejolaš" tags="adj.*.sg.nom.*">
-     <select lemma="buektiehtidh" tags="vblex.*"/>
-   </match>
-   <match tags="vblex.*"/>
- </rule>     
-       <rule weight="0.6">
-   <match tags="adj.*" />
-   <match lemma="go" />
+   <match lemma="go" tags="cnjsub.*" />
    <match lemma="vejolaš" tags="adj.*.sg.nom.*">
      <select lemma="buektiehtidh" tags="vblex.*"/>
    </match>
  </rule>     
 
 
-
+<!--
        <rule weight="0.5">
    <match lemma="vejolaš" tags="adj.*">
      <select lemma="nuepie" tags="n.*"/>
@@ -1250,8 +1248,11 @@
    <match lemma="vejolaš" tags="adj.*.sg.nom.*">
      <select lemma="nuepie" tags="n.*"/>
    </match>
-   <match tags="vblex.*"/>
- </rule>     
+   <match tags="vblex.*"/> 
+ </rule>     --> 
+
+
+
 
        <rule weight="1.0">
    <match lemma="gitta" tags="adv.*">
@@ -1914,6 +1915,19 @@
            <select lemma="nuhtjedh"/>   
         </match>  
         </rule>   
+
+     <rule weight="0.5">  
+       <match lemma="geavahit">  
+           <select lemma="utnedh"/>   
+        </match>  
+        </rule>   
+
+     <rule weight="0.5">  
+       <match lemma="geavahit">  
+           <select lemma="utnedh"/>   
+        </match>  
+       <match lemma="giella"/>  
+        </rule>   
         
         
 <!--  default: gaske --> 
@@ -1976,7 +1990,7 @@
   <match lemma="go" tags="cnjsub" >   
             <select lemma="guktie"/>  
          </match>   
-     <match tags="adj.*.*.nom.@COMP-CS←"/>    
+     <match tags="adj.*.*.nom.*"/>    
         </rule>            
  
       
