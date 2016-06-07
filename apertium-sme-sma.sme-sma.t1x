@@ -228,7 +228,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="numsg">
       <cat-item tags="num.sg.acc.*"/>
-<!--      <cat-item tags="num.sg.nom.*"/> -->
+      <cat-item tags="num.sg.nom.*"/> 
 <!--      <cat-item tags="num.sg.gen.*"/> -->
 <!--      <cat-item tags="num.sg.ill.attr.*"/>  -->
 <!--      <cat-item tags="num.sg.loc.attr.*"/>  -->
@@ -451,6 +451,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="loc"/>
        <attr-item tags="ine"/>
        <attr-item tags="ela"/>
+       <attr-item tags="loc"/>
        <attr-item tags="CD"/>
     </def-attr>
 
@@ -942,6 +943,17 @@ And then there are some categories like "month", with all the months.
       <list-item v="váldit"/>
       <list-item v="oažžut"/>
     </def-list>
+    <def-list n="lang-verbs">
+      <list-item v="hupmat"/>
+      <list-item v="hállat"/>
+      <list-item v="čállit"/>
+      <list-item v="bálvalit"/>
+    </def-list>
+    <def-list n="language">
+      <list-item v="sámegiella"/>
+      <list-item v="dárogiella"/>
+      <list-item v="ruoŧagiella"/>
+    </def-list>
     <def-list n="der_caus2der_d">
       <list-item v="olahit"/>
     </def-list>
@@ -1153,9 +1165,10 @@ And then there are some categories like "month", with all the months.
       </choose>
      <choose>
         <when>
-          <test>
+          <test><and>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <in><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in>
-          </test>
+          </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
         </when>
       </choose>
@@ -1171,6 +1184,17 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+              <in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="language"/></in>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+              <in caseless="yes"><var n="main-verb-lemma"/><list n="lang-verbs"/></in>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
         </when>
       </choose>
       <choose>
@@ -2854,7 +2878,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
             <b pos="1"/>
-          <chunk name="conneg" case="caseFirstword">
+          <chunk name="conneg">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@-FMAINV"/></tag>
