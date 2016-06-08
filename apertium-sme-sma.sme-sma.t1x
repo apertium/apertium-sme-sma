@@ -232,16 +232,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="num.sg.nom.*"/> 
       <cat-item tags="num.arab.sg.nom.*"/> 
     </def-cat>
-    <def-cat n="numsgall">
-      <cat-item tags="num.sg.acc.*"/>
-      <cat-item tags="num.arab.sg.acc.*"/>
-      <cat-item tags="num.sg.nom.*"/> 
-      <cat-item tags="num.arab.sg.nom.*"/> 
-      <cat-item tags="num.sg.gen.*"/> 
-      <cat-item tags="num.sg.ill.attr.*"/>  
-      <cat-item tags="num.sg.loc.attr.*"/>  
-      <cat-item tags="num.sg.com.attr.*"/>  
-      <cat-item tags="num.sg.com.*"/>  
+    <def-cat n="num-sg-all">
+      <cat-item tags="num.*"/>
     </def-cat>
     <def-cat n="numeral">
       <cat-item tags="num.rom.*"/>
@@ -2128,7 +2120,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: dem numsg noun - 3 positions out">
       <pattern>
         <pattern-item n="prn-dem-sg"/>
-        <pattern-item n="numsgall"/>
+        <pattern-item n="num-sg-all"/>
         <pattern-item n="noun"/>
       </pattern>
       <action>     
@@ -2140,6 +2132,7 @@ And then there are some categories like "month", with all the months.
          <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="3"/><with-param pos="2"/></call-macro>
         </otherwise>
      </choose>
+        <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
 
      <choose>
      <when>
@@ -2147,12 +2140,26 @@ And then there are some categories like "month", with all the months.
      <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
      <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
      <not><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="com"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></not>
      </and></test>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
           <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
           <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          </when>
+     <when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+     </and></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
           </when>
      <when>
      <test><and>
@@ -2166,16 +2173,6 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
           </when>
           </choose>
-        <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
-<!--     <choose><when>
-     <test><and>
-     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
-     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
-     <equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
-     </and></test>
-          <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
-
-          </when></choose> -->
        <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -2202,7 +2199,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: dem numsg noun - 3 positions out">
       <pattern>
         <pattern-item n="prn-dem-sg"/>
-        <pattern-item n="numsg"/>
+        <pattern-item n="num-sg-all"/>
         <pattern-item n="rdep"/>
         <pattern-item n="noun"/>
       </pattern>
