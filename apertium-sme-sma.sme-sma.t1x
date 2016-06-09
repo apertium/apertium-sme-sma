@@ -905,7 +905,7 @@ And then there are some categories like "month", with all the months.
     <def-var n="poss"/>
     <def-var n="case"/>
     <def-var n="nmbr"/>
-    <def-var n="anaf_nbrpers"/>
+    <def-var n="anaf_tense_nbrpers"/>
     <def-var n="main-verb-lemma"/>
     <def-var n="caseFirstword"/>
   </section-def-vars>
@@ -1062,7 +1062,7 @@ And then there are some categories like "month", with all the months.
               <equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@+FMAINV"/></equal>
             </or>
           </test>
-          <let><var n="anaf_nbrpers"/><concat><clip pos="1" side="tl" part="a_pers"/>
+          <let><var n="anaf_tense_nbrpers"/><concat><clip pos="1" side="tl" part="a_tense"/><clip pos="1" side="tl" part="a_pers"/>
           <clip pos="1" side="tl" part="a_nbr"/></concat></let>
         </when>
       </choose> 
@@ -3380,6 +3380,28 @@ And then there are some categories like "month", with all the months.
     <!-- SECTION: Adjective groups -->
 
 
+    <rule comment="REGLA: vejolaš  - 1 position">
+      <pattern>
+        <pattern-item n="vejolaš"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="vblex"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex.indic"/>
+              <var n="anaf_tense_nbrpers"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: adj  - 1 position">
       <pattern>
         <pattern-item n="adj"/>
@@ -3403,7 +3425,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> 
 
 
     <rule comment="REGLA: prsprc  - 1 position">
@@ -3542,6 +3564,8 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>  -->
+
+
 
 
     <!-- SECTION: Conjunctions -->
