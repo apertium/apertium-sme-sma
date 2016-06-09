@@ -126,10 +126,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="IMainV">
-         <cat-item lemma="vblex" tags="SV.@-FMAINV"/>
-         <cat-item lemma="vblex" tags="SV.@-FMAINV.*"/>
-         <cat-item lemma="vblex" tags="SV.*.@-FMAINV.*"/>
-         <cat-item lemma="vblex" tags="SV.*.*.@-FMAINV.*"/>
+         <cat-item tags="SV.@-FMAINV"/>
+         <cat-item tags="SV.@-FMAINV.*"/>
+         <cat-item tags="SV.*.@-FMAINV.*"/>
+         <cat-item tags="SV.*.*.@-FMAINV.*"/>
     </def-cat>
 
     <def-cat n="FMainV">
@@ -458,8 +458,8 @@ And then there are some categories like "month", with all the months.
             <clip pos="1" part="tags"/>
             <clip pos="1" part="chcontent"/>
             <clip pos="1" part="lemq"/>
-          <b pos="1"/>
           </chunk>
+          <b pos="1"/>
           <chunk>
             <clip pos="3" part="lemh"/>
             <clip pos="3" part="tags"/>
@@ -467,7 +467,7 @@ And then there are some categories like "month", with all the months.
             <clip pos="3" part="lemq"/>
           </chunk>
           <b pos="2"/>
-        <chunk>
+          <chunk>
             <clip pos="2" part="lemh"/>
             <clip pos="2" part="tags"/>
             <clip pos="2" part="chcontent"/>
