@@ -1991,7 +1991,22 @@
             <select lemma="guktie"/>  
          </match>   
      <match tags="adj.*.*.nom.*"/>    
-        </rule>            
+        </rule> 
+        
+        
+<!--  default: mïnnedh --> 
+ <rule weight="1.0">   
+  <match lemma="mannat" >   
+      <select lemma="minnedh"/>    
+    </match>    
+    </rule>    
+
+ <!--  temporarly; rule is comming: gåaradidh når "bures" kommer først-->
+      <rule weight="0.5">   
+        <match lemma="mannat">   
+            <select lemma="gåaradidh"/>  
+         </match>   
+         </rule>                 
  
       
         
