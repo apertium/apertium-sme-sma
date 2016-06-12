@@ -2057,6 +2057,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>     
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
      <choose><when>
      <test><equal><clip pos="1" side="sl" part="a_synlabel"/><lit-tag v="@→N"/></equal></test>
          <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
@@ -2084,8 +2085,8 @@ And then there are some categories like "month", with all the months.
  	<when>
           <test><and>
           <equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal>
+            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-            <equal><clip pos="2" side="sl" part="a_synlabel"/><lit-tag v="@Num←"/></equal>
           </and></test>
           <let><clip pos="2" side="tl" part="tags"/>
           <concat>
@@ -2968,6 +2969,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="adj2verb"/>
       </pattern>
       <action>
+         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
