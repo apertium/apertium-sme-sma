@@ -2256,6 +2256,158 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: Gaajhkine 9 tjïeltine - 3 positions out">
+      <pattern>
+        <pattern-item n="agreement-attr"/>
+        <pattern-item n="num-sg-all"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>     
+        <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
+     <choose><when>
+     <test><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@→N"/></equal></test>
+         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+         </when>
+        <otherwise>
+         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="3"/><with-param pos="2"/></call-macro>
+        </otherwise>
+     </choose>
+
+     <choose>
+     <when>
+     <test><and>
+     <not><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="com"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></not>
+     </and></test>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+          <clip pos="1" side="tl" part="a_npagree_type"/>
+          <lit-tag v="pl"/>
+          <clip pos="3" side="tl" part="a_case"/>
+          </concat>
+          </let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          </when>
+     <when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+     </and></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+          </when>
+     <when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="com"/></equal>
+     </and></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="prn.dem.pl.com.attr"/></let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          </when>
+          </choose>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: Gaajhkine 9 tjïeltine - 3 positions out">
+      <pattern>
+        <pattern-item n="agreement-attr"/>
+        <pattern-item n="prn-dem-sg"/>
+        <pattern-item n="num-sg-all"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>     
+        <call-macro n="convert-case-nbr-poss-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="4"/></call-macro>
+         <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+
+     <choose>
+     <when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="com"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal></not>
+     </and></test>
+          <let><clip pos="1" side="tl" part="tags"/><concat>
+          <clip pos="1" side="tl" part="a_npagree_type"/>
+          <lit-tag v="pl"/>
+          <clip pos="4" side="tl" part="a_case"/>
+          </concat>
+          </let>
+          <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="3" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          </when>
+     <when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+     </and></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="3" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+          </when>
+          </choose>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: dem numsg noun - 3 positions out">
       <pattern>
         <pattern-item n="prn-dem-sg"/>
@@ -2265,18 +2417,36 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>     
          <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
-     <choose><when>
+     <choose>
+     <when>
      <test><and>
      <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
-     <not><equal><clip pos="4" side="sl" part="a_PoS"/><lit v="np"/></equal></not>
+     <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="gen"/></equal>
+     <not><equal><clip pos="4" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
      </and></test>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-          <let><clip pos="3" side="tl" part="tags"/>
+          <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="4" side="tl" part="tags"/>
+          <concat>
+          <lit-tag v="n.pl"/>
+          <clip pos="4" side="tl" part="a_case"/></concat></let>
+          </when>
+     <when>
+     <test><and>
+     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="gen"/></equal></not>
+     <not><equal><clip pos="4" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     </and></test>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="4" side="tl" part="tags"/>
           <concat>
           <lit-tag v="n.pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
-          </when></choose>
+          </when>
+          </choose>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
        <out>
           <chunk name="noun" case="caseFirstword">
             <tags>

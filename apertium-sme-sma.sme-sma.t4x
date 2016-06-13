@@ -60,8 +60,10 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ADVL_left">
         <cat-item tags="*.@←ADVL.*"/>
         <cat-item tags="*.@←ADVL"/>
-        <cat-item tags="ADV.@←ADVL"/>
-         <cat-item tags="NP.@←ADVL.PX"/>
+        <cat-item tags="*.@←ADVL-ela.*"/>
+        <cat-item tags="*.@←ADVL-ela"/>
+        <cat-item tags="*.@←ADVL-ine.*"/>
+        <cat-item tags="*.@←ADVL-ine"/>
    </def-cat>
 
     <def-cat n="SV_Obj">
@@ -85,6 +87,10 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Obj_l">
         <cat-item tags="NP.@←OBJ.*"/>
         <cat-item tags="NP.@←OBJ"/>
+    </def-cat>
+    <def-cat n="NP_Subj_l">
+        <cat-item tags="*.@←SUBJ"/>
+        <cat-item tags="*.@←SUBJ.*"/>
     </def-cat>
     <def-cat n="NP_Spred_l">
         <cat-item tags="*.@←SPRED"/>
@@ -118,6 +124,10 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="ADV.@ADVL"/>
         <cat-item tags="NP.@ADVL→.*"/>
         <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@ADVL-ine→.*"/>
+        <cat-item tags="NP.@←ADVL-ine.*"/>
+        <cat-item tags="NP.@ADVL-ela→.*"/>
+        <cat-item tags="NP.@←ADVL-ela.*"/>
         <cat-item tags="NP.@ADVL.*"/>
     </def-cat>
 
@@ -246,7 +256,11 @@ And then there are some categories like "month", with all the months.
      <attr-item tags="@+FAUXV"/>
      <attr-item tags="@ADVL"/>
      <attr-item tags="@←ADVL"/>
+     <attr-item tags="@←ADVL-ine"/>
+     <attr-item tags="@←ADVL-ela"/>
      <attr-item tags="@ADVL→"/>
+     <attr-item tags="@ADVL-ine→"/>
+     <attr-item tags="@ADVL-ela→"/>
      <attr-item tags="@HAB"/>
      <attr-item tags="@Num←"/>
      <attr-item tags="@→Num"/>
@@ -817,6 +831,29 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="MAINV SUBJ" > 
+      <pattern>
+        <pattern-item n="FMainV"/>
+        <pattern-item n="NP_Subj_l"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="S V SPRED ADVL" > <!--S V SPRED becomes S SPRED V, Dát rehkenastojuvvo oktan guollin. -->
