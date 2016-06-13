@@ -363,7 +363,7 @@
 
     <e><p><l>ieš<s n="prn"/><s n="ref"/></l><r>jïjtje<s n="prn"/><s n="ref"/></r></p></e>
 
-    <e><p><l>buot<s n="prn"/><s n="ind"/></l><r>gaajhke<s n="prn"/><s n="ind"/></r></p></e>
+    <e><p><l>buot<s n="prn"/><s n="ind"/></l><r>gaajhke<s n="prn"/><s n="ind"/><s n="sg"/></r></p></e>
 
     <e><p><l>buohkat<s n="prn"/><s n="ind"/></l><r>gaajhkesh<s n="prn"/><s n="coll"/></r></p></e>
     <e><p><l>eará<s n="prn"/><s n="ind"/></l><r>jeatjebe<s n="prn"/><s n="ind"/></r></p></e>
@@ -459,6 +459,7 @@
     <!-- SECTION: Nouns -->
 
     <e><p><l>ru<s n="n"/><s n="abbr"/></l><r>kr<s n="n"/><s n="abbr"/></r></p></e>
+    <e><p><l>kr<s n="n"/><s n="abbr"/></l><r>kr<s n="n"/><s n="abbr"/></r></p></e>
     <e><p><l>a<s n="n"/><s n="abbr"/></l><r>a<s n="n"/><s n="abbr"/></r></p></e>
     <e><p><l>b<s n="n"/><s n="abbr"/></l><r>b<s n="n"/><s n="abbr"/></r></p></e>
     <e><p><l>c<s n="n"/><s n="abbr"/></l><r>c<s n="n"/><s n="abbr"/></r></p></e>
@@ -5580,7 +5581,6 @@
     <e><p><l>Baraschi<s n="np"/></l><r>Baraschi<s n="np"/></r></p></e>
     <e><p><l>Barentsguovlu<s n="np"/></l><r>Barentsguovlu<s n="np"/></r></p></e>
     <e><p><l>Barentsmearra<s n="np"/></l><r>Barentsmearra<s n="np"/></r></p></e>
-    <e><p><l>Barentsovttasbargu<s n="np"/></l><r>Barentsovttasbargu<s n="np"/></r></p></e>
     <e><p><l>Barentsregiovdna<s n="np"/></l><r>Barentsregiovdna<s n="np"/></r></p></e>
     <e><p><l>Barentsráđđi<s n="np"/></l><r>Barentsráđđi<s n="np"/></r></p></e>
     <e><p><l>Barentsáhpi<s n="np"/></l><r>Barentsáhpi<s n="np"/></r></p></e>
@@ -6221,7 +6221,6 @@
     <e><p><l>Boavva<s n="np"/></l><r>Boavva<s n="np"/></r></p></e>
     <e><p><l>Boazoaivi<s n="np"/></l><r>Boazoaivi<s n="np"/></r></p></e>
     <e><p><l>Boazobuolžžat<s n="np"/></l><r>Boazobuolžžat<s n="np"/></r></p></e>
-    <e><p><l>Boazodoalloláhka<s n="np"/></l><r>Boazodoalloláhka<s n="np"/></r></p></e>
     <e><p><l>Boazodoalloođđasat<s n="np"/></l><r>Boazodoalloođđasat<s n="np"/></r></p></e>
     <e><p><l>Boazoeatnu<s n="np"/></l><r>Boazoeatnu<s n="np"/></r></p></e>
     <e><p><l>Boazogoahtejávri<s n="np"/></l><r>Boazogoahtejávri<s n="np"/></r></p></e>
@@ -12101,7 +12100,7 @@
     <e><p><l>Loddevárri<s n="np"/></l><r>Loddevárri<s n="np"/></r></p></e>
     <e><p><l>Loddoaijeaggi<s n="np"/></l><r>Loddoaijeaggi<s n="np"/></r></p></e>
     <e><p><l>Loddoaivi<s n="np"/></l><r>Loddoaivi<s n="np"/></r></p></e>
-    <e><p><l>Lodegat<s n="np"/></l><r>Lodegat<s n="np"/></r></p></e>
+    <e><p><l>Lodegat<s n="np"/><s n="top"/><s n="pl"/></l><r>Lodegat<s n="np"/><s n="top"/><s n="sg"/></r></p></e>
     <e><p><l>Loffajeaggi<s n="np"/></l><r>Loffajeaggi<s n="np"/></r></p></e>
     <e><p><l>Lofuohta<s n="np"/></l><r>Lofuohta<s n="np"/></r></p></e>
     <e><p><l>Loganjárga<s n="np"/></l><r>Loganjárga<s n="np"/></r></p></e>
@@ -15776,6 +15775,9 @@
     <e><p><l>SUPU<s n="n"/></l><r>SUPU<s n="n"/></r></p></e>
     <e><p><l>SURT<s n="n"/></l><r>SURT<s n="n"/></r></p></e>
     <e><p><l>SVL-cup<s n="np"/></l><r>SVL-cup<s n="np"/></r></p></e>
+    <e><p><l>SVL<s n="n"/></l><r>SVL<s n="n"/></r></p></e>
+    <e><p><l>SVL-N<s n="n"/></l><r>SVL-N<s n="n"/></r></p></e>
+    <e><p><l>ILO<s n="n"/></l><r>ILO<s n="n"/></r></p></e>
     <e><p><l>Saajve<s n="np"/></l><r>Saajve<s n="np"/></r></p></e>
     <e><p><l>Saamelaisalueen<s n="np"/></l><r>Saamelaisalueen<s n="np"/></r></p></e>
     <e><p><l>Saamelaiskulttuuritoimikunnan<s n="np"/></l><r>Saamelaiskulttuuritoimikunnan<s n="np"/></r></p></e>
@@ -29126,7 +29128,6 @@
     <e><p><l>Sogndal<s n="np"/></l><r>Sogndal<s n="np"/></r></p></e>
     <e><p><l>Sogstad<s n="np"/></l><r>Sogstad<s n="np"/></r></p></e>
     <e><p><l>Sohar<s n="np"/></l><r>Sohar<s n="np"/></r></p></e>
-    <e><p><l>Sohkabeal<s n="np"/></l><r>Sohkabeal<s n="np"/></r></p></e>
     <e><p><l>Soho<s n="np"/></l><r>Soho<s n="np"/></r></p></e>
     <e><p><l>Sohppar<s n="np"/></l><r>Sohppar<s n="np"/></r></p></e>
     <e><p><l>Sokkelvik<s n="np"/></l><r>Sokkelvik<s n="np"/></r></p></e>
@@ -30674,7 +30675,6 @@
     <e><p><l>Vittangi<s n="np"/></l><r>Vittangi<s n="np"/></r></p></e>
     <e><p><l>Vitus<s n="np"/></l><r>Vitus<s n="np"/></r></p></e>
     <e><p><l>Vitória<s n="np"/></l><r>Vitória<s n="np"/></r></p></e>
-    <e><p><l>Vivi-Ann<s n="np"/></l><r>Vivi-Ann<s n="np"/></r></p></e>
     <e><p><l>Vivian<s n="np"/></l><r>Vivian<s n="np"/></r></p></e>
     <e><p><l>Viviann<s n="np"/></l><r>Viviann<s n="np"/></r></p></e>
     <e><p><l>Vlad<s n="np"/></l><r>Vlad<s n="np"/></r></p></e>
@@ -31763,15 +31763,6 @@
     <e><p><l>Annanpalo<s n="np"/></l><r>Annanpalo<s n="np"/></r></p></e>
     <e><p><l>Annapurna<s n="np"/></l><r>Annapurna<s n="np"/></r></p></e>
     <e><p><l>Anndalsvåg<s n="np"/></l><r>Anndalsvåg<s n="np"/></r></p></e>
-    <e><p><l>Anne-Britt<s n="np"/></l><r>Anne-Britt<s n="np"/></r></p></e>
-    <e><p><l>Anne-Grete<s n="np"/></l><r>Anne-Grete<s n="np"/></r></p></e>
-    <e><p><l>Anne-Grethe<s n="np"/></l><r>Anne-Grethe<s n="np"/></r></p></e>
-    <e><p><l>Anne-Karin<s n="np"/></l><r>Anne-Karin<s n="np"/></r></p></e>
-    <e><p><l>Anne-Lene<s n="np"/></l><r>Anne-Lene<s n="np"/></r></p></e>
-    <e><p><l>Anne-Lise<s n="np"/></l><r>Anne-Lise<s n="np"/></r></p></e>
-    <e><p><l>Anne-Margrethe<s n="np"/></l><r>Anne-Margrethe<s n="np"/></r></p></e>
-    <e><p><l>Anne-Mari<s n="np"/></l><r>Anne-Mari<s n="np"/></r></p></e>
-    <e><p><l>Anne-Marie<s n="np"/></l><r>Anne-Marie<s n="np"/></r></p></e>
     <e><p><l>Annecy<s n="np"/></l><r>Annecy<s n="np"/></r></p></e>
     <e><p><l>Annelie<s n="np"/></l><r>Annelie<s n="np"/></r></p></e>
     <e><p><l>Annestad<s n="np"/></l><r>Annestad<s n="np"/></r></p></e>
@@ -32070,7 +32061,6 @@
     <e><p><l>Aube<s n="np"/></l><r>Aube<s n="np"/></r></p></e>
     <e><p><l>Auburn<s n="np"/></l><r>Auburn<s n="np"/></r></p></e>
     <e><p><l>Aubøsund<s n="np"/></l><r>Aubøsund<s n="np"/></r></p></e>
-    <e><p><l>Aud-Jorun<s n="np"/></l><r>Aud-Jorun<s n="np"/></r></p></e>
     <e><p><l>Audesen<s n="np"/></l><r>Audesen<s n="np"/></r></p></e>
     <e><p><l>Audmax<s n="np"/></l><r>Audmax<s n="np"/></r></p></e>
     <e><p><l>Audnedal<s n="np"/></l><r>Audnedal<s n="np"/></r></p></e>
@@ -32482,7 +32472,6 @@
     <e><p><l>Bennetter<s n="np"/></l><r>Bennetter<s n="np"/></r></p></e>
     <e><p><l>Benoni<s n="np"/></l><r>Benoni<s n="np"/></r></p></e>
     <e><p><l>Benonisen<s n="np"/></l><r>Benonisen<s n="np"/></r></p></e>
-    <e><p><l>Bente-Lotte<s n="np"/></l><r>Bente-Lotte<s n="np"/></r></p></e>
     <e><p><l>Bentley<s n="np"/></l><r>Bentley<s n="np"/></r></p></e>
     <e><p><l>Bentzrud<s n="np"/></l><r>Bentzrud<s n="np"/></r></p></e>
     <e><p><l>Benue<s n="np"/></l><r>Benue<s n="np"/></r></p></e>
@@ -32499,7 +32488,6 @@
     <e><p><l>Berengar<s n="np"/></l><r>Berengar<s n="np"/></r></p></e>
     <e><p><l>Berensen<s n="np"/></l><r>Berensen<s n="np"/></r></p></e>
     <e><p><l>Berentsen<s n="np"/></l><r>Berentsen<s n="np"/></r></p></e>
-    <e><p><l>Berg-Hansen<s n="np"/></l><r>Berg-Hansen<s n="np"/></r></p></e>
     <e><p><l>Bergamo<s n="np"/></l><r>Bergamo<s n="np"/></r></p></e>
     <e><p><l>Bergan<s n="np"/></l><r>Bergan<s n="np"/></r></p></e>
     <e><p><l>Bergeberget<s n="np"/></l><r>Bergeberget<s n="np"/></r></p></e>
@@ -32541,7 +32529,6 @@
     <e><p><l>Bernardino<s n="np"/></l><r>Bernardino<s n="np"/></r></p></e>
     <e><p><l>Bernau<s n="np"/></l><r>Bernau<s n="np"/></r></p></e>
     <e><p><l>Bernkonvensjonen<s n="np"/></l><r>Bernkonvensjonen<s n="np"/></r></p></e>
-    <e><p><l>Bernt-Erik<s n="np"/></l><r>Bernt-Erik<s n="np"/></r></p></e>
     <e><p><l>Berny<s n="np"/></l><r>Berny<s n="np"/></r></p></e>
     <e><p><l>Beroia<s n="np"/></l><r>Beroia<s n="np"/></r></p></e>
     <e><p><l>Berre<s n="np"/></l><r>Berre<s n="np"/></r></p></e>
@@ -32716,10 +32703,6 @@
     <e><p><l>Bjørkman<s n="np"/></l><r>Bjørkman<s n="np"/></r></p></e>
     <e><p><l>Bjørkåsen<s n="np"/></l><r>Bjørkåsen<s n="np"/></r></p></e>
     <e><p><l>Bjørlo<s n="np"/></l><r>Bjørlo<s n="np"/></r></p></e>
-    <e><p><l>Bjørn-Erik<s n="np"/></l><r>Bjørn-Erik<s n="np"/></r></p></e>
-    <e><p><l>Bjørn-Inge<s n="np"/></l><r>Bjørn-Inge<s n="np"/></r></p></e>
-    <e><p><l>Bjørn-Ivar<s n="np"/></l><r>Bjørn-Ivar<s n="np"/></r></p></e>
-    <e><p><l>Bjørn-Tore<s n="np"/></l><r>Bjørn-Tore<s n="np"/></r></p></e>
     <e><p><l>Bjørndalstræ<s n="np"/></l><r>Bjørndalstræ<s n="np"/></r></p></e>
     <e><p><l>Bjørnefjell<s n="np"/></l><r>Bjørnefjell<s n="np"/></r></p></e>
     <e><p><l>Bjørnerem<s n="np"/></l><r>Bjørnerem<s n="np"/></r></p></e>
@@ -34227,7 +34210,6 @@
     <e><p><l>EALÁT<s n="np"/></l><r>EALÁT<s n="np"/></r></p></e>
     <e><p><l>ECHAM<s n="np"/></l><r>ECHAM<s n="np"/></r></p></e>
     <e><p><l>ECOSOC<s n="np"/></l><r>ECOSOC<s n="np"/></r></p></e>
-    <e><p><l>EF-domstolen<s n="np"/></l><r>EF-domstolen<s n="np"/></r></p></e>
     <e><p><l>EFTA<s n="np"/></l><r>EFTA<s n="np"/></r></p></e>
     <e><p><l>ENØK<s n="np"/></l><r>ENØK<s n="np"/></r></p></e>
     <e><p><l>EUnet<s n="np"/></l><r>EUnet<s n="np"/></r></p></e>
@@ -34458,7 +34440,6 @@
     <e><p><l>Eliša<s n="np"/></l><r>Eliša<s n="np"/></r></p></e>
     <e><p><l>Elk<s n="np"/></l><r>Elk<s n="np"/></r></p></e>
     <e><p><l>Elkjær<s n="np"/></l><r>Elkjær<s n="np"/></r></p></e>
-    <e><p><l>Elle-Katri<s n="np"/></l><r>Elle-Katri<s n="np"/></r></p></e>
     <e><p><l>Ellef<s n="np"/></l><r>Ellef<s n="np"/></r></p></e>
     <e><p><l>Ellemand-Jensen<s n="np"/></l><r>Ellemand-Jensen<s n="np"/></r></p></e>
     <e><p><l>Ellemann<s n="np"/></l><r>Ellemann<s n="np"/></r></p></e>
@@ -34747,7 +34728,6 @@
     <e><p><l>Evripides<s n="np"/></l><r>Evripides<s n="np"/></r></p></e>
     <e><p><l>Evrydike<s n="np"/></l><r>Evrydike<s n="np"/></r></p></e>
     <e><p><l>Evterpe<s n="np"/></l><r>Evterpe<s n="np"/></r></p></e>
-    <e><p><l>Evy-Ann<s n="np"/></l><r>Evy-Ann<s n="np"/></r></p></e>
     <e><p><l>Ewald<s n="np"/></l><r>Ewald<s n="np"/></r></p></e>
     <e><p><l>Excalibur<s n="np"/></l><r>Excalibur<s n="np"/></r></p></e>
     <e><p><l>Exfacfon<s n="np"/></l><r>Exfacfon<s n="np"/></r></p></e>
@@ -34956,7 +34936,6 @@
     <e><p><l>Finlayson<s n="np"/></l><r>Finlayson<s n="np"/></r></p></e>
     <e><p><l>Finlux<s n="np"/></l><r>Finlux<s n="np"/></r></p></e>
     <e><p><l>Finmarchiæ<s n="np"/></l><r>Finmarchiæ<s n="np"/></r></p></e>
-    <e><p><l>Finn-Erik<s n="np"/></l><r>Finn-Erik<s n="np"/></r></p></e>
     <e><p><l>Finnair<s n="np"/></l><r>Finnair<s n="np"/></r></p></e>
     <e><p><l>Finndalselva<s n="np"/></l><r>Finndalselva<s n="np"/></r></p></e>
     <e><p><l>Finneforbundet<s n="np"/></l><r>Finneforbundet<s n="np"/></r></p></e>
@@ -35603,8 +35582,6 @@
     <e><p><l>Gehenna<s n="np"/></l><r>Gehenna<s n="np"/></r></p></e>
     <e><p><l>Gehrken<s n="np"/></l><r>Gehrken<s n="np"/></r></p></e>
     <e><p><l>Geijer<s n="np"/></l><r>Geijer<s n="np"/></r></p></e>
-    <e><p><l>Geir-Arne<s n="np"/></l><r>Geir-Arne<s n="np"/></r></p></e>
-    <e><p><l>Geir-Ove<s n="np"/></l><r>Geir-Ove<s n="np"/></r></p></e>
     <e><p><l>Geisnes<s n="np"/></l><r>Geisnes<s n="np"/></r></p></e>
     <e><p><l>Geist<s n="np"/></l><r>Geist<s n="np"/></r></p></e>
     <e><p><l>Geiteryggen<s n="np"/></l><r>Geiteryggen<s n="np"/></r></p></e>
@@ -35942,7 +35919,6 @@
     <e><p><l>Grinitaje<s n="np"/></l><r>Grinitaje<s n="np"/></r></p></e>
     <e><p><l>Grinstead<s n="np"/></l><r>Grinstead<s n="np"/></r></p></e>
     <e><p><l>Grisa<s n="np"/></l><r>Grisa<s n="np"/></r></p></e>
-    <e><p><l>Gro-Hilde<s n="np"/></l><r>Gro-Hilde<s n="np"/></r></p></e>
     <e><p><l>Grodno<s n="np"/></l><r>Grodno<s n="np"/></r></p></e>
     <e><p><l>Grof<s n="np"/></l><r>Grof<s n="np"/></r></p></e>
     <e><p><l>Groos<s n="np"/></l><r>Groos<s n="np"/></r></p></e>
@@ -36107,8 +36083,6 @@
     <e><p><l>Gunerius<s n="np"/></l><r>Gunerius<s n="np"/></r></p></e>
     <e><p><l>Gunhilde<s n="np"/></l><r>Gunhilde<s n="np"/></r></p></e>
     <e><p><l>Gunleik<s n="np"/></l><r>Gunleik<s n="np"/></r></p></e>
-    <e><p><l>Gunn-Britt<s n="np"/></l><r>Gunn-Britt<s n="np"/></r></p></e>
-    <e><p><l>Gunn-Inger<s n="np"/></l><r>Gunn-Inger<s n="np"/></r></p></e>
     <e><p><l>Gunne<s n="np"/></l><r>Gunne<s n="np"/></r></p></e>
     <e><p><l>Gunnerud<s n="np"/></l><r>Gunnerud<s n="np"/></r></p></e>
     <e><p><l>Gunnerød<s n="np"/></l><r>Gunnerød<s n="np"/></r></p></e>
@@ -37722,7 +37696,6 @@
     <e><p><l>Ichang<s n="np"/></l><r>Ichang<s n="np"/></r></p></e>
     <e><p><l>Icheng<s n="np"/></l><r>Icheng<s n="np"/></r></p></e>
     <e><p><l>Ichikawa<s n="np"/></l><r>Ichikawa<s n="np"/></r></p></e>
-    <e><p><l>Ida-Marie<s n="np"/></l><r>Ida-Marie<s n="np"/></r></p></e>
     <e><p><l>Ida-marie<s n="np"/></l><r>Ida-marie<s n="np"/></r></p></e>
     <e><p><l>Idavollen<s n="np"/></l><r>Idavollen<s n="np"/></r></p></e>
     <e><p><l>Iden<s n="np"/></l><r>Iden<s n="np"/></r></p></e>
@@ -37825,7 +37798,6 @@
     <e><p><l>Imøy<s n="np"/></l><r>Imøy<s n="np"/></r></p></e>
     <e><p><l>In<s n="np"/></l><r>In<s n="np"/></r></p></e>
     <e><p><l>InDesign<s n="np"/></l><r>InDesign<s n="np"/></r></p></e>
-    <e><p><l>Ina-Ristin<s n="np"/></l><r>Ina-Ristin<s n="np"/></r></p></e>
     <e><p><l>Inari<s n="np"/></l><r>Inari<s n="np"/></r></p></e>
     <e><p><l>Inarijoki<s n="np"/></l><r>Inarijoki<s n="np"/></r></p></e>
     <e><p><l>Inarijärvi<s n="np"/></l><r>Inarijärvi<s n="np"/></r></p></e>
@@ -37846,7 +37818,6 @@
     <e><p><l>Infiniti<s n="np"/></l><r>Infiniti<s n="np"/></r></p></e>
     <e><p><l>Ing-Lill<s n="np"/></l><r>Ing-Lill<s n="np"/></r></p></e>
     <e><p><l>Inga-Briitta<s n="np"/></l><r>Inga-Briitta<s n="np"/></r></p></e>
-    <e><p><l>Inga-Lill<s n="np"/></l><r>Inga-Lill<s n="np"/></r></p></e>
     <e><p><l>Ingalill<s n="np"/></l><r>Ingalill<s n="np"/></r></p></e>
     <e><p><l>Ingard<s n="np"/></l><r>Ingard<s n="np"/></r></p></e>
     <e><p><l>Ingdal<s n="np"/></l><r>Ingdal<s n="np"/></r></p></e>
@@ -37861,10 +37832,6 @@
     <e><p><l>Ingelæ<s n="np"/></l><r>Ingelæ<s n="np"/></r></p></e>
     <e><p><l>Ingemann<s n="np"/></l><r>Ingemann<s n="np"/></r></p></e>
     <e><p><l>Ingenmannsrett<s n="np"/></l><r>Ingenmannsrett<s n="np"/></r></p></e>
-    <e><p><l>Inger-Ann<s n="np"/></l><r>Inger-Ann<s n="np"/></r></p></e>
-    <e><p><l>Inger-Anne<s n="np"/></l><r>Inger-Anne<s n="np"/></r></p></e>
-    <e><p><l>Inger-Johanne<s n="np"/></l><r>Inger-Johanne<s n="np"/></r></p></e>
-    <e><p><l>Inger-Lise<s n="np"/></l><r>Inger-Lise<s n="np"/></r></p></e>
     <e><p><l>Ingerborg<s n="np"/></l><r>Ingerborg<s n="np"/></r></p></e>
     <e><p><l>Ingerd<s n="np"/></l><r>Ingerd<s n="np"/></r></p></e>
     <e><p><l>Ingermanland<s n="np"/></l><r>Ingermanland<s n="np"/></r></p></e>
@@ -38079,17 +38046,6 @@
     <e><p><l>Jamna<s n="np"/></l><r>Jamna<s n="np"/></r></p></e>
     <e><p><l>Jamnagar<s n="np"/></l><r>Jamnagar<s n="np"/></r></p></e>
     <e><p><l>Jamtfjellet<s n="np"/></l><r>Jamtfjellet<s n="np"/></r></p></e>
-    <e><p><l>Jan-Arne<s n="np"/></l><r>Jan-Arne<s n="np"/></r></p></e>
-    <e><p><l>Jan-Einar<s n="np"/></l><r>Jan-Einar<s n="np"/></r></p></e>
-    <e><p><l>Jan-Eirik<s n="np"/></l><r>Jan-Eirik<s n="np"/></r></p></e>
-    <e><p><l>Jan-Erik<s n="np"/></l><r>Jan-Erik<s n="np"/></r></p></e>
-    <e><p><l>Jan-Inge<s n="np"/></l><r>Jan-Inge<s n="np"/></r></p></e>
-    <e><p><l>Jan-Ivar<s n="np"/></l><r>Jan-Ivar<s n="np"/></r></p></e>
-    <e><p><l>Jan-Olav<s n="np"/></l><r>Jan-Olav<s n="np"/></r></p></e>
-    <e><p><l>Jan-Ove<s n="np"/></l><r>Jan-Ove<s n="np"/></r></p></e>
-    <e><p><l>Jan-Roger<s n="np"/></l><r>Jan-Roger<s n="np"/></r></p></e>
-    <e><p><l>Jan-Steve<s n="np"/></l><r>Jan-Steve<s n="np"/></r></p></e>
-    <e><p><l>Jan-Tore<s n="np"/></l><r>Jan-Tore<s n="np"/></r></p></e>
     <e><p><l>Janatuinen<s n="np"/></l><r>Janatuinen<s n="np"/></r></p></e>
     <e><p><l>Janbo<s n="np"/></l><r>Janbo<s n="np"/></r></p></e>
     <e><p><l>Janda<s n="np"/></l><r>Janda<s n="np"/></r></p></e>
@@ -38160,7 +38116,6 @@
     <e><p><l>Jenisejsk<s n="np"/></l><r>Jenisejsk<s n="np"/></r></p></e>
     <e><p><l>Jennestad<s n="np"/></l><r>Jennestad<s n="np"/></r></p></e>
     <e><p><l>Jenni<s n="np"/></l><r>Jenni<s n="np"/></r></p></e>
-    <e><p><l>Jens-Jørgen<s n="np"/></l><r>Jens-Jørgen<s n="np"/></r></p></e>
     <e><p><l>Jensby<s n="np"/></l><r>Jensby<s n="np"/></r></p></e>
     <e><p><l>Jensine<s n="np"/></l><r>Jensine<s n="np"/></r></p></e>
     <e><p><l>Jensvold<s n="np"/></l><r>Jensvold<s n="np"/></r></p></e>
@@ -38218,7 +38173,6 @@
     <e><p><l>Johannis<s n="np"/></l><r>Johannis<s n="np"/></r></p></e>
     <e><p><l>Johannsen<s n="np"/></l><r>Johannsen<s n="np"/></r></p></e>
     <e><p><l>Johansdotter<s n="np"/></l><r>Johansdotter<s n="np"/></r></p></e>
-    <e><p><l>John-Marcus<s n="np"/></l><r>John-Marcus<s n="np"/></r></p></e>
     <e><p><l>Johnsen-Butto<s n="np"/></l><r>Johnsen-Butto<s n="np"/></r></p></e>
     <e><p><l>Johnsrud<s n="np"/></l><r>Johnsrud<s n="np"/></r></p></e>
     <e><p><l>Johnstad<s n="np"/></l><r>Johnstad<s n="np"/></r></p></e>
@@ -38246,7 +38200,6 @@
     <e><p><l>Jomna<s n="np"/></l><r>Jomna<s n="np"/></r></p></e>
     <e><p><l>Jomsborg<s n="np"/></l><r>Jomsborg<s n="np"/></r></p></e>
     <e><p><l>Jomås<s n="np"/></l><r>Jomås<s n="np"/></r></p></e>
-    <e><p><l>Jon-Arne<s n="np"/></l><r>Jon-Arne<s n="np"/></r></p></e>
     <e><p><l>Jonar<s n="np"/></l><r>Jonar<s n="np"/></r></p></e>
     <e><p><l>Jonasvollen<s n="np"/></l><r>Jonasvollen<s n="np"/></r></p></e>
     <e><p><l>Jonetta<s n="np"/></l><r>Jonetta<s n="np"/></r></p></e>
@@ -38464,7 +38417,6 @@
     <e><p><l>Jømna<s n="np"/></l><r>Jømna<s n="np"/></r></p></e>
     <e><p><l>Jønnevald<s n="np"/></l><r>Jønnevald<s n="np"/></r></p></e>
     <e><p><l>Jørgensløkken<s n="np"/></l><r>Jørgensløkken<s n="np"/></r></p></e>
-    <e><p><l>Jørn-Are<s n="np"/></l><r>Jørn-Are<s n="np"/></r></p></e>
     <e><p><l>Jørnevik<s n="np"/></l><r>Jørnevik<s n="np"/></r></p></e>
     <e><p><l>Jørpeland<s n="np"/></l><r>Jørpeland<s n="np"/></r></p></e>
     <e><p><l>Jøsok<s n="np"/></l><r>Jøsok<s n="np"/></r></p></e>
@@ -38528,7 +38480,6 @@
     <e><p><l>Kahra<s n="np"/></l><r>Kahra<s n="np"/></r></p></e>
     <e><p><l>Kahri<s n="np"/></l><r>Kahri<s n="np"/></r></p></e>
     <e><p><l>Kahtovaara<s n="np"/></l><r>Kahtovaara<s n="np"/></r></p></e>
-    <e><p><l>Kai-Rune<s n="np"/></l><r>Kai-Rune<s n="np"/></r></p></e>
     <e><p><l>Kaifeng<s n="np"/></l><r>Kaifeng<s n="np"/></r></p></e>
     <e><p><l>Kaihua<s n="np"/></l><r>Kaihua<s n="np"/></r></p></e>
     <e><p><l>Kaija<s n="np"/></l><r>Kaija<s n="np"/></r></p></e>
@@ -38764,8 +38715,6 @@
     <e><p><l>Karhumäki<s n="np"/></l><r>Karhumäki<s n="np"/></r></p></e>
     <e><p><l>Karhunen<s n="np"/></l><r>Karhunen<s n="np"/></r></p></e>
     <e><p><l>Kari<s n="np"/></l><r>Kari<s n="np"/></r></p></e>
-    <e><p><l>Kari-Ann<s n="np"/></l><r>Kari-Ann<s n="np"/></r></p></e>
-    <e><p><l>Kari-Mette<s n="np"/></l><r>Kari-Mette<s n="np"/></r></p></e>
     <e><p><l>Kariba<s n="np"/></l><r>Kariba<s n="np"/></r></p></e>
     <e><p><l>Karibhavet<s n="np"/></l><r>Karibhavet<s n="np"/></r></p></e>
     <e><p><l>Karikoski<s n="np"/></l><r>Karikoski<s n="np"/></r></p></e>
@@ -38786,7 +38735,6 @@
     <e><p><l>Karjunen<s n="np"/></l><r>Karjunen<s n="np"/></r></p></e>
     <e><p><l>Karkiainen<s n="np"/></l><r>Karkiainen<s n="np"/></r></p></e>
     <e><p><l>Karkulahti<s n="np"/></l><r>Karkulahti<s n="np"/></r></p></e>
-    <e><p><l>Karl-Arne<s n="np"/></l><r>Karl-Arne<s n="np"/></r></p></e>
     <e><p><l>Karl-Marx-Stadt<s n="np"/></l><r>Karl-Marx-Stadt<s n="np"/></r></p></e>
     <e><p><l>Karla<s n="np"/></l><r>Karla<s n="np"/></r></p></e>
     <e><p><l>Karlby<s n="np"/></l><r>Karlby<s n="np"/></r></p></e>
@@ -39145,9 +39093,6 @@
     <e><p><l>Kilvik<s n="np"/></l><r>Kilvik<s n="np"/></r></p></e>
     <e><p><l>Kilvågen<s n="np"/></l><r>Kilvågen<s n="np"/></r></p></e>
     <e><p><l>Kilvær<s n="np"/></l><r>Kilvær<s n="np"/></r></p></e>
-    <e><p><l>Kim-Andre<s n="np"/></l><r>Kim-Andre<s n="np"/></r></p></e>
-    <e><p><l>Kim-Ove<s n="np"/></l><r>Kim-Ove<s n="np"/></r></p></e>
-    <e><p><l>Kim-Rune<s n="np"/></l><r>Kim-Rune<s n="np"/></r></p></e>
     <e><p><l>Kimaira<s n="np"/></l><r>Kimaira<s n="np"/></r></p></e>
     <e><p><l>Kimari<s n="np"/></l><r>Kimari<s n="np"/></r></p></e>
     <e><p><l>Kiminki<s n="np"/></l><r>Kiminki<s n="np"/></r></p></e>
@@ -39289,8 +39234,6 @@
     <e><p><l>Kjeldgaard<s n="np"/></l><r>Kjeldgaard<s n="np"/></r></p></e>
     <e><p><l>Kjelkenes<s n="np"/></l><r>Kjelkenes<s n="np"/></r></p></e>
     <e><p><l>Kjelkvik<s n="np"/></l><r>Kjelkvik<s n="np"/></r></p></e>
-    <e><p><l>Kjell-Arne<s n="np"/></l><r>Kjell-Arne<s n="np"/></r></p></e>
-    <e><p><l>Kjell-Ivar<s n="np"/></l><r>Kjell-Ivar<s n="np"/></r></p></e>
     <e><p><l>Kjellberg<s n="np"/></l><r>Kjellberg<s n="np"/></r></p></e>
     <e><p><l>Kjelleidet<s n="np"/></l><r>Kjelleidet<s n="np"/></r></p></e>
     <e><p><l>Kjellerup<s n="np"/></l><r>Kjellerup<s n="np"/></r></p></e>
@@ -39451,7 +39394,6 @@
     <e><p><l>Knoop<s n="np"/></l><r>Knoop<s n="np"/></r></p></e>
     <e><p><l>Knossos<s n="np"/></l><r>Knossos<s n="np"/></r></p></e>
     <e><p><l>Knoxville<s n="np"/></l><r>Knoxville<s n="np"/></r></p></e>
-    <e><p><l>Knut-Erik<s n="np"/></l><r>Knut-Erik<s n="np"/></r></p></e>
     <e><p><l>Knutshø<s n="np"/></l><r>Knutshø<s n="np"/></r></p></e>
     <e><p><l>Knutson<s n="np"/></l><r>Knutson<s n="np"/></r></p></e>
     <e><p><l>Knutstad<s n="np"/></l><r>Knutstad<s n="np"/></r></p></e>
@@ -40576,9 +40518,6 @@
     <e><p><l>Larionova<s n="np"/></l><r>Larionova<s n="np"/></r></p></e>
     <e><p><l>Larjavaara<s n="np"/></l><r>Larjavaara<s n="np"/></r></p></e>
     <e><p><l>Larpent<s n="np"/></l><r>Larpent<s n="np"/></r></p></e>
-    <e><p><l>Lars-Anders<s n="np"/></l><r>Lars-Anders<s n="np"/></r></p></e>
-    <e><p><l>Lars-Erik<s n="np"/></l><r>Lars-Erik<s n="np"/></r></p></e>
-    <e><p><l>Lars-Nila<s n="np"/></l><r>Lars-Nila<s n="np"/></r></p></e>
     <e><p><l>Larsdatter<s n="np"/></l><r>Larsdatter<s n="np"/></r></p></e>
     <e><p><l>Larseng<s n="np"/></l><r>Larseng<s n="np"/></r></p></e>
     <e><p><l>Larsnes<s n="np"/></l><r>Larsnes<s n="np"/></r></p></e>
@@ -43547,7 +43486,6 @@
     <e><p><l>Oggevatn<s n="np"/></l><r>Oggevatn<s n="np"/></r></p></e>
     <e><p><l>Ogna<s n="np"/></l><r>Ogna<s n="np"/></r></p></e>
     <e><p><l>Ogne<s n="np"/></l><r>Ogne<s n="np"/></r></p></e>
-    <e><p><l>Ohcan<s n="np"/></l><r>Ohcan<s n="np"/></r></p></e>
     <e><p><l>Ohenoja<s n="np"/></l><r>Ohenoja<s n="np"/></r></p></e>
     <e><p><l>Ohlsen<s n="np"/></l><r>Ohlsen<s n="np"/></r></p></e>
     <e><p><l>Ohme<s n="np"/></l><r>Ohme<s n="np"/></r></p></e>
