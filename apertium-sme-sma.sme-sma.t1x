@@ -226,7 +226,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.*.@→N"/>
     </def-cat>
     <def-cat n="semyear">
-      <cat-item tags="*.sem_year.sg.*"/>
+      <cat-item tags="*.sem_year.sg.loc.*"/>
+      <cat-item tags="*.sem_year.sg.loc"/>
     </def-cat>
     <def-cat n="semyearPl">
       <cat-item tags="*.sem_year.pl.*"/>
@@ -248,10 +249,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="num.ess.*"/>
     </def-cat>
     <def-cat n="num-ldep">
-      <cat-item tags="num.arab.*.*.@N←"/>
-      <cat-item tags="num.sg.*.*.@N←"/>
-      <cat-item tags="num.pl.*.*.@N←"/>
-      <cat-item tags="num.ess.*.@N←"/>
+      <cat-item tags="num.*.@N←"/>
     </def-cat>
     <def-cat n="prn">
       <cat-item tags="prn.*"/>
@@ -389,6 +387,9 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="buot" tags="prn.ind.*"/> 
       <cat-item lemma="boahtte" tags="adj.*"/> 
       <cat-item lemma="juohke" tags="prn.ind.*"/> 
+    </def-cat>
+    <def-cat n="default">
+      <cat-item tags="*"/>
     </def-cat>
 
 
@@ -1107,6 +1108,7 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
       <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> 
+      <let><clip pos="1" side="tl" part="sem_year"/><lit-tag v="arab"/></let> 
       <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
 
@@ -2583,12 +2585,17 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <choose><when><test> 
+        <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="num"/></equal></test>        
+          <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="sg.nom"/></let>
+        </when></choose>
         <out>
           <chunk name="prn-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
+              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
             </tags>
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
@@ -4030,6 +4037,25 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    <rule comment="REGLA: DEFAULT">
+      <pattern>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="default" case="caseFirstword">
+            <tags>
+              <tag><clip pos="1" side="sl" part="a_func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
 
   </section-rules>
 </transfer>
