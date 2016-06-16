@@ -225,9 +225,13 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adj-rdep">
       <cat-item tags="adj.*.@→N"/>
     </def-cat>
-    <def-cat n="semyear">
+    <def-cat n="semyear-loc">
       <cat-item tags="*.sem_year.sg.loc.*"/>
       <cat-item tags="*.sem_year.sg.loc"/>
+    </def-cat>
+    <def-cat n="semyear">
+      <cat-item tags="*.sem_year.sg.*"/>
+      <cat-item tags="*.sem_year.sg"/>
     </def-cat>
     <def-cat n="semyearPl">
       <cat-item tags="*.sem_year.pl.*"/>
@@ -1787,7 +1791,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: year - 1 position in-out"> <!-- Paul lea riegádan 1931:s - Paul jaepien 1931 reakadamme -->
       <pattern>
-        <pattern-item n="semyear"/>
+        <pattern-item n="semyear-loc"/>
       </pattern>
       <action>
         <call-macro n="general-macro-1Param">
@@ -1821,7 +1825,6 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
-          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let>
                           <out>
           <chunk name="num" case="caseFirstword">
             <tags>
@@ -1850,9 +1853,7 @@ And then there are some categories like "month", with all the months.
      </pattern>
       <action>
         <call-macro n="general-macro-2Param"> <with-param pos="1"/><with-param pos="2"/></call-macro>
-          <let><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="num.arab"/></let>
          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
-         <let><clip pos="2" side="tl" part="sem_year"/><lit v=""/></let>
                           <out>
           <chunk name="num-noun" case="caseFirstword">
             <tags>
