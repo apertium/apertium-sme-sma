@@ -1993,11 +1993,10 @@
      <match tags="adj.*.*.nom.*"/>    
         </rule> 
         
-        
 <!--  default: mïnnedh --> 
  <rule weight="1.0">   
   <match lemma="mannat" >   
-      <select lemma="minnedh"/>    
+      <select lemma="mïnnedh"/>    
     </match>    
     </rule>    
 
