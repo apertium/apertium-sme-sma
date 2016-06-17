@@ -541,9 +541,6 @@
        <match lemma="maŋŋil" tags="pr.*"><select lemma="mïnngesne" tags="pr.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="mannat" tags="vblex.iv.*"><select lemma="mïnnedh" tags="vblex.*"/></match>
-  </rule>
-  <rule weight="1.0">
        <match lemma="mearka" tags="n.*"><select lemma="væhta" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
