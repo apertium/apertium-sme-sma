@@ -562,15 +562,26 @@ And then there are some categories like "month", with all the months.
     <def-attr n="a_deriv">
        <attr-item tags="der_aadv"/>
        <attr-item tags="der_passs"/>
+       <attr-item tags="der_passl"/>
+       <attr-item tags="der_ahtti"/>
+       <attr-item tags="der_alla"/>
+       <attr-item tags="der_inchl"/>
        <attr-item tags="der_laakan"/>
+       <attr-item tags="der_lágaš"/>
+       <attr-item tags="der_lágan"/>
+       <attr-item tags="der_meahttun"/>
        <attr-item tags="der_l"/>
+       <attr-item tags="der_lasj"/>
+       <attr-item tags="der_les"/>
        <attr-item tags="der_caus"/>
        <attr-item tags="der_ahtje"/>
        <attr-item tags="der_ht"/>
        <attr-item tags="der_h"/>
        <attr-item tags="der_d"/>
-       <attr-item tags="der_st"/>
        <attr-item tags="der_muš"/>
+       <attr-item tags="der_st"/>
+       <attr-item tags="der_t"/>
+       <attr-item tags="der_vuota"/>
 	   
     </def-attr>
 
@@ -1032,6 +1043,12 @@ And then there are some categories like "month", with all the months.
           <test>
             <in><clip pos="1" side="sl" part="lem"/><list n="der_caus2der_d"/></in></test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ht"/></let>
+        </when>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_lasj"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_les"/></let>
         </when>
         <when>
           <test>
