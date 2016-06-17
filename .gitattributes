@@ -21,6 +21,7 @@
 /check_mt-otpt.py -text
 /configure.ac -text
 dev/all.html -text
+dev/allparallel.html -text svneol=unset#application/xml
 dev/analyse-all-stages.sh -text
 dev/archive/apertium-sme-sma.sme-sma.LR.att.gz -text
 dev/archive/apertium-sme-sma.sme-sma.RL.att.gz -text
