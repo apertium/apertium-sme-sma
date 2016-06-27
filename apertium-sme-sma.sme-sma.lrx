@@ -2004,7 +2004,30 @@
          </match>   
          </rule>                 
  
-      
-        
+ <!-- dákti- flere varianter av å ha det vondt på sma START -->    
+<!-- default: måaroe -->  
+       <rule weight="1.0"> 
+         <match lemma="dákti" >
+            <select lemma="måaroe"/>  <!-- måaroe-->  
+<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
+         </match>
+       </rule>     
 
+<!-- daektie -->
+       <rule weight="0.5"> 
+         <match lemma="dákti">
+            <select lemma="daektie"/>   <!-- daektie-->
+         </match>
+       </rule>     
+<!-- daektie -->
+       <rule weight="0.6">                <!-- daektie-->
+       <match lemma="olmmoš"/>
+  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
+       <match lemma="dákti">
+         <select lemma="daektie"/> 
+       </match>
+      </rule>    
+   
+     
+       
 </rules> 
