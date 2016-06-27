@@ -2004,7 +2004,7 @@
          </match>   
          </rule>                 
  
- <!-- dákti- flere varianter av å ha det vondt på sma START -->    
+ <!-- dákti- to varianter for bein på sma: daektie for mennesker og måaroe for resten; dyr, fisk etc.  -->    
 <!-- default: måaroe -->  
        <rule weight="1.0"> 
          <match lemma="dákti" >
@@ -2028,6 +2028,7 @@
        </match>
       </rule>    
    
-     
+
+ <!-- skinn- flere varianter for skinn på sma: elgskinn, bjørnskinn, fiskeskinn etc.-->      
        
 </rules> 
