@@ -2004,7 +2004,7 @@
          </match>   
          </rule>                 
  
- <!-- dákti- to varianter for bein på sma: daektie for mennesker og måaroe for resten; dyr, fisk etc.  -->    
+<!-- dákti- to varianter for bein på sma: daektie for mennesker og måaroe for resten; dyr, fisk etc.  -->    
 <!-- default: måaroe -->  
        <rule weight="1.0"> 
          <match lemma="dákti" >
@@ -2027,8 +2027,60 @@
          <select lemma="daektie"/> 
        </match>
       </rule>    
-   
+
 
  <!-- skinn- flere varianter for skinn på sma: elgskinn, bjørnskinn, fiskeskinn etc.-->      
-       
+ 
+<!-- baektjiedidh-  -->    
+<!-- default: baektjiedidh -->  
+       <rule weight="1.0"> 
+         <match lemma="bávččastit" >
+            <select lemma="baektjiedidh"/>  <!-- måaroe-->  
+<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
+         </match>
+       </rule>     
+
+<!-- baektjiedidh -->
+       <rule weight="0.5"> 
+         <match lemma="bávččastit">
+            <select lemma="jijledh"/>   <!-- jijledh-->
+         </match>
+       </rule>     
+<!-- baektjiedidh -->
+       <rule weight="0.6">                <!-- bátni-->
+       <match lemma="bátni"/>
+  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
+       <match lemma="bávččastit">
+         <select lemma="jijledh"/> 
+       </match>
+      </rule>    
+   
+
+<!-- baektjiedidh-  -->    
+<!-- default: baektjiedidh -->  
+       <rule weight="1.0"> 
+         <match lemma="bávččastit" >
+            <select lemma="baektjiedidh"/>  <!-- baektjiedidh-->  
+<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
+         </match>
+       </rule>     
+
+<!-- baektjiedidh -->
+       <rule weight="0.5"> 
+         <match lemma="bávččastit">
+            <select lemma="tjaabrodh"/>   <!-- tjaabrodh-->
+         </match>
+       </rule>     
+<!-- baektjiedidh -->
+       <rule weight="0.6">                <!-- čoavji-->
+       <match lemma="čoavji"/>
+  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
+       <match lemma="bávččastit">
+         <select lemma="tjaabrodh"/> 
+       </match>
+      </rule>    
+   
+
+
+      
 </rules> 
