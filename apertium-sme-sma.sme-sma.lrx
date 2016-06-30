@@ -2080,6 +2080,29 @@
        </match>
       </rule>    
    
+<!-- baektjiedidh-  -->    
+<!-- default: baektjiedidh -->  
+       <rule weight="1.0"> 
+         <match lemma="bávččastit" >
+            <select lemma="baektjiedidh"/>  <!-- baektjiedidh-->  
+<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
+         </match>
+       </rule>     
+
+<!-- baektjiedidh -->
+       <rule weight="0.5"> 
+         <match lemma="bávččastit">
+            <select lemma="vaarkedh"/>   <!-- tjaabrodh-->
+         </match>
+       </rule>     
+<!-- baektjiedidh -->
+       <rule weight="0.6">                <!-- čoavji-->
+       <match lemma="sealgi"/>
+  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
+       <match lemma="bávččastit">
+         <select lemma="vaarkedh"/> 
+       </match>
+      </rule>    
 
 
       
