@@ -233,6 +233,10 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.sem_year.sg.*"/>
       <cat-item tags="*.sem_year.sg"/>
     </def-cat>
+    <def-cat n="semdate">
+      <cat-item tags="*.sem_date.sg.*"/>
+      <cat-item tags="*.sem_date.sg"/>
+    </def-cat>
     <def-cat n="semyearPl">
       <cat-item tags="*.sem_year.pl.*"/>
     </def-cat>
@@ -468,6 +472,9 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_attr">
        <attr-item tags="attr"/>
+    </def-attr>
+    <def-attr n="a_adjattr">
+       <attr-item tags="adj.attr"/>
     </def-attr>
 
     <def-attr n="a_adj">
@@ -899,6 +906,7 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="sem_year">
       <attr-item tags="sem_year"/>
+      <attr-item tags="sem_date"/>
     </def-attr>
 
 
@@ -1045,10 +1053,12 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ht"/></let>
         </when>
         <when>
-          <test>
+          <test><and>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_lasj"/></equal>
-          </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_les"/></let>
+               <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_adjattr"/><lit-tag v="sg.gen"/></let>
         </when>
         <when>
           <test>
@@ -1834,6 +1844,29 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    <rule comment="REGLA: date - 1 position in-out">
+      <pattern>
+        <pattern-item n="semdate"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let>
+                          <out>
+          <chunk name="num" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: year pl - 1 position in-out"> <!-- Paul lea riegádan 1931:s - Paul jaepien 1931 reakadamme -->
       <pattern>
         <pattern-item n="semyearPl"/>
@@ -2178,6 +2211,7 @@ And then there are some categories like "month", with all the months.
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_ntype"/><lit-tag v="abbr"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
      </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="2" side="tl" part="tags"/>
@@ -2239,7 +2273,9 @@ And then there are some categories like "month", with all the months.
      <choose><when>
        <test><and>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
      </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
           <let><clip pos="3" side="tl" part="tags"/>
