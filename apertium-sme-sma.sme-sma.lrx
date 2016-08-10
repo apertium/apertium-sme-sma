@@ -668,6 +668,7 @@
        <match lemma="somá"/>
        <match lemma="imaš"/>
        <match lemma="amas"/>
+       <match tags="*.actio.ess.*"/>
        </or>
   </rule>
   <rule weight="0.6">
