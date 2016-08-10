@@ -804,8 +804,10 @@
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="krööhkedh" tags="vblex.*"/></match>
        <match lemma="vuhtii"/>
   </rule>
-  <rule weight="0.5">
-       <match lemma="váldit" tags="vblex.tv.*"><select lemma="dåastoehtidh" tags="vblex.*"/></match>
+  <rule weight="0.6">
+       <match lemma="váldit" tags="vblex.tv.*">
+       <select lemma="dåastoehtidh" tags="vblex.*"/>
+       </match>
        <match lemma="vuostá"/>
   </rule>
   <rule weight="1.0">
@@ -1994,41 +1996,64 @@
  
 <!--  default: mo = guktie --> 
  <rule weight="1.0">   
-  <match lemma="mo" tags="adv" >   
+  <match lemma="mo" tags="adv.*" >   
       <select lemma="guktie"/>    
     </match>    
     </rule>      
 
-<!--      <rule weight="0.5">    
-  <match lemma="mo" tags="adv" >   
+      <rule weight="0.5">    
+  <match lemma="mo" tags="adv.*" >   
             <select lemma="goh"/>  
          </match>   
         </rule>            
  
        <rule weight="0.6">    
      <match lemma="nu"/>    
-  <match lemma="mo" tags="adv" >   
+  <match lemma="mo" tags="adv.*" >   
             <select lemma="goh"/>  
          </match>   
-        </rule>  -->
+        </rule> 
 <!--  default: go = goh --> 
+
+<!--  default: mo = guktie --> 
  <rule weight="1.0">   
-  <match lemma="go" tags="cnjsub" >   
-      <select lemma="goh"/>    
+  <match lemma="mo" tags="adv.*" >   
+      <select lemma="guktie"/>    
     </match>    
     </rule>      
 
       <rule weight="0.5">    
-  <match lemma="go" tags="cnjsub" >   
-            <select lemma="guktie"/>  
+  <match lemma="mo" tags="adv.*" >   
+            <select lemma="goh"/>  
          </match>   
         </rule>            
  
        <rule weight="0.6">    
-  <match lemma="go" tags="cnjsub" >   
-            <select lemma="guktie"/>  
+     <match lemma="nu"/>    
+  <match lemma="mo" tags="adv.*" >   
+            <select lemma="goh"/>  
          </match>   
-     <match tags="adj.*.*.nom.*"/>    
+        </rule> 
+<!--  default: go = goh --> 
+
+
+ <rule weight="1.0">   
+  <match lemma="nu" tags="adv.*" >   
+      <select lemma="dan"/>    
+    </match>    
+    </rule>      
+
+      <rule weight="0.5">    
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma=""/>  
+         </match>   
+        </rule>            
+ 
+       <rule weight="0.6">    
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma=""/>  
+         </match>   
+     <match lemma="mo"/>    
         </rule> 
         
 <!--  default: mïnnedh --> 

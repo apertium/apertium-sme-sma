@@ -70,6 +70,8 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@OBJ→.*"/>
         <cat-item tags="NP.@←OBJ.*"/>
         <cat-item tags="NP.@←OBJ"/>
+        <cat-item tags="NP.@-F←OBJ"/>
+        <cat-item tags="NP.@-F←OBJ.*"/>
     </def-cat>
 
     <def-cat n="NP_Subj">
@@ -87,6 +89,8 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Obj_l">
         <cat-item tags="NP.@←OBJ.*"/>
         <cat-item tags="NP.@←OBJ"/>
+        <cat-item tags="NP.@-F←OBJ"/>
+        <cat-item tags="NP.@-F←OBJ.*"/>
     </def-cat>
     <def-cat n="NP_Subj_l">
         <cat-item tags="*.@←SUBJ"/>
@@ -157,6 +161,11 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="vblex" tags="SV.@-FMAINV"/>
         <cat-item lemma="vblex" tags="SV.@-FMAINV.*"/>
         <cat-item lemma="vblex" tags="SV.*.@-FMAINV.*"/>
+        <cat-item lemma="inf" tags="SV.@-FMAINV"/>
+        <cat-item lemma="inf" tags="SV.@-FMAINV.*"/>
+        <cat-item lemma="inf" tags="SV.*.@-FMAINV.*"/>
+        <cat-item lemma="inf" tags="SV.@N←.*"/>
+        <cat-item lemma="inf" tags="SV.@N←"/>
     </def-cat>
 
 
@@ -347,7 +356,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
     <rule comment="Subj FMAINV Obj  ADVL" > <!-- V Obj ADVL becomes Obj ADVL V. -->
       <pattern>     
-        <pattern-item n="FMainV"/>
+        <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Obj_l"/>
         <pattern-item n="ADVL_left"/>
       </pattern>
@@ -395,7 +404,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="FMAINV ADVL Obj " > <!-- V ADVL Obj becomes ADVL Obj V. -->
       <pattern>     
-        <pattern-item n="FMainV"/>
+        <pattern-item n="IFMainV"/>
         <pattern-item n="ADVL_left"/>
         <pattern-item n="NP_Obj_l"/>
       </pattern>
