@@ -3217,6 +3217,14 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
+        <choose>  
+        <when><test><and>
+        <equal><clip pos="1" side="sl" part="lem"/><lit v="buot"/></equal>
+        <equal><clip pos="3" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+        </and></test>
+        <let><clip pos="1" side="tl" part="tags"/><lit-tag v="prn.ind.pl.nom"/></let>
+        </when>
+      </choose>  
         <call-macro n="general-macro-3Param">
           <with-param pos="1"/>
           <with-param pos="2"/>
@@ -3228,7 +3236,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="attr-attr-n" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
