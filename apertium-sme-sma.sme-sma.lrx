@@ -793,6 +793,9 @@
   <rule weight="0.5">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="krööhkedh" tags="vblex.*"/></match>
   </rule>
+  <rule weight="0.5">
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="dåastoehtidh" tags="vblex.*"/></match>
+  </rule>
   <rule weight="0.6">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="ååktedh" tags="vblex.*"/></match>
        <match lemma="duohta" tags="n.*.sg.loc.*"/>
@@ -800,6 +803,10 @@
   <rule weight="0.6">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="krööhkedh" tags="vblex.*"/></match>
        <match lemma="vuhtii"/>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="dåastoehtidh" tags="vblex.*"/></match>
+       <match lemma="vuostá"/>
   </rule>
   <rule weight="1.0">
        <match lemma="vásihit" tags="vblex.tv.*"><select lemma="damtedh" tags="vblex.*"/></match>
@@ -1256,6 +1263,21 @@
      <select lemma="öövre" tags="adv.*"/>
    </match>
  </rule>     
+       <rule weight="0.8">
+   <match lemma="gitta">
+     <select lemma="öövre" tags="adv.*"/>
+   </match>
+   <match />
+   <match />
+   <or><match tags="*.ill.*"/><match lemma="rádjai"/></or>
+ </rule>     
+       <rule weight="0.8">
+   <match lemma="gitta">
+     <select lemma="öövre" tags="adv.*"/>
+   </match>
+   <match />
+   <or><match tags="*.ill.*"/><match lemma="rádjai"/></or>
+ </rule>     
 
        <rule weight="0.5">
    <match lemma="gitta" tags="adv.*">
@@ -1263,7 +1285,7 @@
    </match>
  </rule>     
        <rule weight="0.6">
-   <or><match tags="n.sem_org.*"/><match tags="n.sem_build_org.*"/><match tags="n.sem_org.*"/><match tags="n.sem_edu_org.*"/></or>
+   <or><match tags="n.sem_org.*.nom.*"/><match tags="n.sem_build_org.*.nom.*"/><match tags="n.sem_edu_org.*.nom.*"/></or>
    <match />
    <match lemma="gitta">
      <select lemma="dahpeldihkie" tags="adv.*"/>
@@ -1970,6 +1992,25 @@
          </match>   
          </rule>            
  
+<!--  default: mo = guktie --> 
+ <rule weight="1.0">   
+  <match lemma="mo" tags="adv" >   
+      <select lemma="guktie"/>    
+    </match>    
+    </rule>      
+
+<!--      <rule weight="0.5">    
+  <match lemma="mo" tags="adv" >   
+            <select lemma="goh"/>  
+         </match>   
+        </rule>            
+ 
+       <rule weight="0.6">    
+     <match lemma="nu"/>    
+  <match lemma="mo" tags="adv" >   
+            <select lemma="goh"/>  
+         </match>   
+        </rule>  -->
 <!--  default: go = goh --> 
  <rule weight="1.0">   
   <match lemma="go" tags="cnjsub" >   
