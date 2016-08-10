@@ -221,6 +221,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="np.*.@→N"/>
       <cat-item tags="num.*.@→N"/>
       <cat-item tags="vblex.*.@→N"/>
+      <cat-item tags="*.cmp_splitr.*"/>
     </def-cat>
     <def-cat n="adj-rdep">
       <cat-item tags="adj.*.@→N"/>
@@ -2931,7 +2932,6 @@ And then there are some categories like "month", with all the months.
            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></and></test>        
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         </when></choose>
-
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
