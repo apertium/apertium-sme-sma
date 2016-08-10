@@ -3753,7 +3753,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="actio" case="caseFirstword">
+          <chunk name="inf" case="caseFirstword"> <!-- to be modified -->
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -3762,7 +3762,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_verb"/>
               <clip pos="1" side="tl" part="a_trans"/>
-              <lit-tag v="ger"/>
+              <lit-tag v="inf"/>
             </lu>
           </chunk>
         </out>
