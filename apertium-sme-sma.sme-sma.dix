@@ -199,6 +199,7 @@
     <e><p><l>go<s n="cnjsub"/></l><r>goh<s n="cnjsub"/></r></p></e>
     <e><p><l>go<s n="cnjsub"/></l><r>guktie<s n="cnjsub"/></r></p></e> <!-- go @COMP-CS< -->
     <e><p><l>nugo<s n="cnjsub"/></l><r>goh<s n="cnjsub"/></r></p></e>
+    <e><p><l>numo<s n="adv"/></l><r>goh<s n="cnjsub"/></r></p></e>
     <e><p><l>jos<s n="cnjsub"/></l><r>jis<s n="cnjsub"/></r></p></e>
     <e r="LR"><p><l>jis<s n="cnjsub"/></l><r>jis<s n="cnjsub"/></r></p></e>
     <e r="LR"><p><l>jus<s n="cnjsub"/></l><r>jis<s n="cnjsub"/></r></p></e>
@@ -368,6 +369,7 @@
     <e><p><l>ieš<s n="prn"/><s n="ref"/></l><r>jïjtje<s n="prn"/><s n="ref"/></r></p></e>
 
     <e><p><l>buot<s n="prn"/><s n="ind"/></l><r>gaajhke<s n="prn"/><s n="ind"/><s n="sg"/></r></p></e>
+    <e><p><l>buot<s n="prn"/><s n="adv"/></l><r>gaajhke<s n="prn"/><s n="ind"/></r></p></e>
 
     <e><p><l>buohkat<s n="prn"/><s n="ind"/></l><r>gaajhkesh<s n="prn"/><s n="coll"/></r></p></e>
     <e><p><l>eará<s n="prn"/><s n="ind"/></l><r>jeatjebe<s n="prn"/><s n="ind"/></r></p></e>
@@ -1025,7 +1027,7 @@
     <e><p><l>ovddastus<s n="n"/></l><r>dïedte<s n="n"/></r></p></e>
      <e><p><l>lagamus<s n="n"/><s n="sem_hum_plc"/></l><r>gietskies<s n="adj"/><s n="sup"/></r></p></e>
    <e><p><l>sávzadoallu<s n="n"/></l><r>sïrveburrie<s n="n"/></r></p></e>
-    <e><p><l>referánsa<s n="n"/></l><r>referanse<s n="n"/></r></p></e>
+    <e><p><l>referánsa<s n="n"/></l><r>referaanse<s n="n"/></r></p></e>
     <e><p><l>majoriteahtta<s n="n"/></l><r>majoriteete<s n="n"/></r></p></e>
     <e><p><l>dohkálaš<s n="adj"/></l><r>dåhkasjidh<s n="vblex"/><s n="prfprc"/></r></p></e>
     <e><p><l>dohkálaš<s n="adj"/><s n="attr"/></l><r>dåhkasjidh<s n="vblex"/><s n="prfprc"/></r></p></e>
@@ -3715,7 +3717,6 @@
     <e><p><l>parlamentarihkkár<s n="n"/></l><r>paramentarihkere<s n="n"/></r></p></e>
     <e><p><l>leahkin<s n="n"/></l><r>årrodh<s n="vblex"/><s n="iv"/><s n="der_nomact"/><s n="n"/></r></p></e>
     <e><p><l>iešstivren<s n="n"/></l><r>jïjtjereereme<s n="n"/></r></p></e>
-    <e><p><l>investeren<s n="n"/></l><r>investeereme<s n="n"/></r></p></e>
     <e><p><l>turbiidna<s n="n"/></l><r>jårrehtse<s n="n"/></r></p></e>
     <e><p><l>bieggaturbiinna<s n="n"/></l><r>bïegkejårrehtse<s n="n"/></r></p></e>
     <e><p><l>birasmirku<s n="n"/></l><r>byjreskrodte<s n="n"/></r></p></e>
@@ -4008,6 +4009,7 @@
     <e><p><l>ovdalis<s n="post"/></l><r>åvtelisnie<s n="post"/></r></p></e>
 
     <e><p><l>earret<b/>eará<s n="adv"/></l><r>gaskem<b/>jeatjah<s n="adv"/></r></p></e> 
+    <e><p><l>ee<s n="adv"/><s n="abbr"/></l><r>gaskem<b/>jeatjah<s n="adv"/></r></p></e> 
     <e><p><l>iešguđetge<b/>ládje<s n="adv"/></l><r>joekehtslaakan<s n="adv"/></r></p></e> 
     <e><p><l>fásta<s n="adv"/></l><r>vihties<s n="adj"/></r></p></e>
     <e><p><l>bálddalas<s n="adj"/></l><r>baaltelaaketje<s n="adj"/></r></p></e>
@@ -4143,6 +4145,7 @@
     <e><p><l>iđđes<s n="adv"/></l><r>aerede<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>maid<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
     <e><p><l>mo<s n="adv"/></l><r>guktie<s n="adv"/></r></p></e>
+    <e><p><l>mo<s n="adv"/></l><r>goh<s n="cnjsub"/></r></p></e>
     <e><p><l>movt<s n="adv"/></l><r>guktie<s n="adv"/></r></p></e>
     <e><p><l>govt<s n="adv"/></l><r>guktie<s n="adv"/></r></p></e>
     <e r="LR"><p><l>mot<s n="adv"/></l><r>nåtsh<s n="adv"/></r></p></e>
@@ -4831,7 +4834,7 @@
     <e slr="3"><p><l>mannat<s n="vblex"/><s n="iv"/></l><r>fealadidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>massit<s n="vblex"/><s n="tv"/></l><r>dassedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>meahkut<s n="vblex"/><s n="iv"/></l><r>praahkedh<s n="vblex"/><s n="iv"/></r></p></e>
-    <e><p><l>meannudit<s n="vblex"/><s n="tv"/></l><r>gïetedalledh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>meannudit<s n="vblex"/><s n="tv"/></l><r>gïetedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>mearridit<s n="vblex"/><s n="tv"/></l><r>nænnoestidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>mearridit<s n="vblex"/><s n="tv"/></l><r>mieriedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>merket<s n="vblex"/><s n="tv"/></l><r>mïerhkesjidh<s n="vblex"/><s n="tv"/></r></p></e>
