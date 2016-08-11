@@ -226,6 +226,13 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adj-rdep">
       <cat-item tags="adj.*.@→N"/>
     </def-cat>
+    <def-cat n="genmod">
+      <cat-item tags="n.*.gen.@→N"/>
+    </def-cat>
+    <def-cat n="illadvl">
+      <cat-item tags="*.der_nomact.n.*.ill.@←ADVL"/>
+      <cat-item tags="n.sem_act.*.ill.@←ADVL"/>
+    </def-cat>
     <def-cat n="semyear-loc">
       <cat-item tags="*.sem_year.sg.loc.*"/>
       <cat-item tags="*.sem_year.sg.loc"/>
@@ -2028,6 +2035,108 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
+    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out"> <!-- don galggat oassálastit iežat oahppanbarggu plánemii -->
+      <pattern>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="genmod"/>
+        <pattern-item n="illadvl"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+       <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="nounnn" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+             <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+               <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+              <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out">
+      <pattern>
+        <pattern-item n="genmod"/>
+        <pattern-item n="illadvl"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="nounnn" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: genmod illadvl til acc inf  - 4 position out">
+      <pattern>
+        <pattern-item n="genmod"/>
+        <pattern-item n="illadvl"/>
+        <pattern-item n="cnjcoo"/>
+        <pattern-item n="illadvl"/>        
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+       <let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="nounnn" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+               <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: n-cmp n-cmp n  - 1 position out">
       <pattern>
         <pattern-item n="n-cmp"/>
@@ -3217,14 +3326,14 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <choose>  
+<!--        <choose>  
         <when><test><and>
         <equal><clip pos="1" side="sl" part="lem"/><lit v="buot"/></equal>
         <equal><clip pos="3" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
         </and></test>
         <let><clip pos="1" side="tl" part="tags"/><lit-tag v="prn.ind.pl.nom"/></let>
         </when>
-      </choose>  
+      </choose>  -->
         <call-macro n="general-macro-3Param">
           <with-param pos="1"/>
           <with-param pos="2"/>
