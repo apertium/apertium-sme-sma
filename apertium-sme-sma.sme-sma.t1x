@@ -226,12 +226,18 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adj-rdep">
       <cat-item tags="adj.*.@→N"/>
     </def-cat>
+    <def-cat n="oassálastit">
+      <cat-item lemma="oassálastit" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="genmod">
-      <cat-item tags="n.*.gen.@→N"/>
+      <cat-item tags="*.gen.@→N"/>
+      <cat-item tags="*.gen.*.@→N"/>
     </def-cat>
     <def-cat n="illadvl">
       <cat-item tags="*.der_nomact.n.*.ill.@←ADVL"/>
       <cat-item tags="n.sem_act.*.ill.@←ADVL"/>
+      <cat-item tags="n.sem_act.*.ill.@-F←ADVL"/>
+      <cat-item tags="*.der_nomact.n.*.ill.@-F←ADVL"/>
     </def-cat>
     <def-cat n="semyear-loc">
       <cat-item tags="*.sem_year.sg.loc.*"/>
@@ -1053,6 +1059,20 @@ And then there are some categories like "month", with all the months.
        </choose>
     </def-macro>
 
+    <def-macro n="convert-nomact-1Param" npar="1"> 
+      <choose>  
+        <when>
+          <test><equal>
+            <clip pos="1" side="sl" part="lem"/><lit v="árvvoštallan"/></equal></test>
+          <let><clip pos="1" side="tl" part="lem"/><lit v="vierhtiedalledh"/></let>
+        </when>
+        <when>
+          <test><equal>
+            <clip pos="1" side="sl" part="lem"/><lit v="huksen"/></equal></test>
+          <let><clip pos="1" side="tl" part="lem"/><lit v="tseegkedh"/></let>
+        </when>
+      </choose>
+    </def-macro>
     <def-macro n="convert-deriv-1Param" npar="1"> <!-- der_aadv to der_laakan -->
       <choose>  
         <when>
@@ -2035,31 +2055,162 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out"> <!-- don galggat oassálastit iežat oahppanbarggu plánemii -->
+    <rule comment="REGLA: genmod illadvl til acc inf  - 3 position out"> <!-- don galggat oassálastit oahppanbarggu plánemii -->
       <pattern>
+        <pattern-item n="oassálastit"/>
         <pattern-item n="n-cmp"/>
         <pattern-item n="genmod"/>
         <pattern-item n="illadvl"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
-       <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-nomact-1Param"><with-param pos="4"/></call-macro>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
         <out>
-          <chunk name="nounnn" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
-             <mlu>
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-               <lu>
+              <b/>
+             <mlu>
+              <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
+               <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
             </mlu>
+              <b/>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: genmod illadvl til acc inf  - 4 position out"> <!-- don galggat oassálastit iežat oahppanbarggu plánemii -->
+      <pattern>
+        <pattern-item n="oassálastit"/>
+        <pattern-item n="genmod"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="genmod"/>
+        <pattern-item n="illadvl"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="5"/></call-macro>
+        <call-macro n="convert-nomact-1Param"><with-param pos="5"/></call-macro>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="5" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+             <mlu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+               <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+              <b/>
+              <lu>
+                <clip pos="5" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: genmod illadvl til acc inf  - 4 position out"> <!-- don galggat oassálastit iežat oahppanbarggu plánemii -->
+      <pattern>
+        <pattern-item n="oassálastit"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="genmod"/>
+        <pattern-item n="illadvl"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-nomact-1Param"><with-param pos="4"/></call-macro>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+               <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: genmod illadvl til acc inf  - 3 position out">
+      <pattern>
+        <pattern-item n="oassálastit"/>
+        <pattern-item n="genmod"/>
+        <pattern-item n="illadvl"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
               <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
@@ -2069,36 +2220,11 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out">
+    <rule comment="REGLA: genmod illadvl til acc inf  - 6 position out">
       <pattern>
+        <pattern-item n="oassálastit"/>
         <pattern-item n="genmod"/>
-        <pattern-item n="illadvl"/>
-      </pattern>
-      <action>
-        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
-        <out>
-          <chunk name="nounnn" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="NP"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-              <lu>
-                <clip pos="1" side="tl" part="whole"/>
-              </lu>
-              <b/>
-              <lu>
-                <clip pos="2" side="tl" part="whole"/>
-              </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: genmod illadvl til acc inf  - 4 position out">
-      <pattern>
+        <pattern-item n="n-cmp"/>
         <pattern-item n="genmod"/>
         <pattern-item n="illadvl"/>
         <pattern-item n="cnjcoo"/>
@@ -2106,11 +2232,15 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
-       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
-       <let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <call-macro n="general-macro-3Param"><with-param pos="5"/><with-param pos="6"/><with-param pos="7"/></call-macro>
+        <call-macro n="convert-nomact-1Param"><with-param pos="5"/></call-macro>
+         <call-macro n="convert-nomact-1Param"><with-param pos="7"/></call-macro>
+            <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+      <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="5" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+       <let><clip pos="7" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
         <out>
-          <chunk name="nounnn" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -2120,16 +2250,76 @@ And then there are some categories like "month", with all the months.
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
               <b/>
-               <lu>
+              <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
               <b/>
+             <mlu>
+               <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+                <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+           </mlu>
+              <b/>
+               <lu>
+                <clip pos="5" side="tl" part="whole"/>
+              </lu>
+              <b/>
               <lu>
+                <clip pos="6" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="7" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: genmod illadvl til acc inf  - 5 position out">
+      <pattern>
+        <pattern-item n="oassálastit"/>
+        <pattern-item n="genmod"/>
+        <pattern-item n="illadvl"/>
+        <pattern-item n="cnjcoo"/>
+        <pattern-item n="illadvl"/>        
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="5"/></call-macro>
+        <call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>
+         <call-macro n="convert-nomact-1Param"><with-param pos="5"/></call-macro>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+       <let><clip pos="5" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+               <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
               <b/>
               <lu>
                 <clip pos="4" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="5" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
@@ -3005,27 +3195,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
      
-    
-    <rule comment="REGLA: verb to adv  - 1 position"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
-      <pattern>
-        <pattern-item n="verb_to_adv"/>
-      </pattern>
-      <action>
-           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
-        <out>
-          <chunk name="adverb" case="caseFirstword">
-             <tags>
-              <tag><lit-tag v="SV"/></tag>
-               <tag><lit-tag v="@ADVL"/></tag>
-           </tags>
-           <lu>
-				<clip pos="1" side="tl" part="whole"/>            
-		  </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
+ 
 
     <rule comment="REGLA: noun  - 1 position">
       <pattern>
@@ -3377,6 +3547,50 @@ And then there are some categories like "month", with all the months.
 
 
     <!-- SECTION: Verbal groups -->
+
+    <rule comment="REGLA: verb to adv  - 1 position"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
+      <pattern>
+        <pattern-item n="verb_to_adv"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+        <out>
+          <chunk name="adverb" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+               <tag><lit-tag v="@ADVL"/></tag>
+           </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: verb to adv  - 1 position"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
+      <pattern>
+        <pattern-item n="leat-aux"/>
+        <pattern-item n="verb_to_adv"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+           <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adv"/></let>
+        <out>
+          <chunk name="adverb" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+               <tag><lit-tag v="@ADVL"/></tag>
+           </tags>
+           <lu>
+				<clip pos="2" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
   <rule comment="REGLA: ii  - 1 position">
       <pattern>
