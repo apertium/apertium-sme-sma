@@ -1918,9 +1918,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="semyearPl"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-1Param">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let>
                           <out>
           <chunk name="num" case="caseFirstword">
             <tags>
@@ -2565,6 +2564,7 @@ And then there are some categories like "month", with all the months.
      <when>
      <test><and>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_ntype"/><lit-tag v="abbr"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
