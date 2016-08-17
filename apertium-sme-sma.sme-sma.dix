@@ -1205,7 +1205,7 @@
     <e><p><l>garrudeapmi<s n="n"/></l><r>gærroedimmie<s n="n"/></r></p></e>
     <e><p><l>gaska<s n="n"/></l><r>dajve<s n="n"/></r></p></e>
     <e><p><l>gaska<s n="n"/></l><r>gåhkaldahke<s n="n"/></r></p></e>
-    <e><p><l>gaska<s n="n"/></l><r>gaske<s n="n"/></r></p></e>
+    <e><p><l>gaska<s n="n"/></l><r>gaske<s n="n"/></r></p></e> <!-- tid, dam gaskam -->
     <e><p><l>gaskabeaivi<s n="n"/></l><r>gaskebiejjie<s n="n"/></r></p></e>
     <e><p><l>gaskabeaivvit<s n="n"/><s n="sem_dummytag"/><s n="pl"/></l><r>gaskebiejjie<s n="n"/><s n="sg"/></r></p></e>
     <e><p><l>gaskaidja<s n="n"/></l><r>gaskejïjje<s n="n"/></r></p></e>
@@ -1280,7 +1280,7 @@
     <e><p><l>giitu<s n="ij"/></l><r>gudtsien<s n="ij"/></r></p></e>
 
     <e><p><l>giksi<s n="n"/></l><r>haerhpie<s n="n"/></r></p></e>
-    <e><p><l>gilli<s n="n"/></l><r>byjje<s n="n"/></r></p></e>
+    <e><p><l>gilli<s n="n"/></l><r>voene<s n="n"/></r></p></e>
     <e><p><l>gillámuš<s n="n"/></l><r>vaejvie<s n="n"/></r></p></e>
     <e><p><l>gillár<s n="n"/></l><r>barta<s n="n"/></r></p></e>
     <e><p><l>gilvu<s n="n"/></l><r>gaahtjeme<s n="n"/></r></p></e>
@@ -1374,6 +1374,10 @@
     <e><p><l>divššohas<s n="n"/></l><r>pasient<s n="n"/></r></p></e>
     <e><p><l>biotohpa<s n="n"/></l><r>biotovpe<s n="n"/></r></p></e>
     <e><p><l>alkohola<s n="n"/></l><r>alkohovle<s n="n"/></r></p></e>
+
+    <e><p><l>cealkámuš<s n="n"/></l><r>jiehtege<s n="n"/></r></p></e>
+
+
     <e><p><l>kongreassa<s n="n"/></l><r>kongresse<s n="n"/></r></p></e>
     <e><p><l>álgoálbmotkongreassa<s n="n"/></l><r>aalkoeåålmehkongresse<s n="n"/></r></p></e>
     <e><p><l>panela<s n="n"/></l><r>paneele<s n="n"/></r></p></e>
@@ -3750,7 +3754,7 @@
 	
     <e><p><l>ovddeš<s n="adj"/></l><r>ovtetje<s n="adj"/></r></p></e>
 	
-    <e><p><l>ovddit<s n="adj"/></l><r>ovtetje<s n="adj"/></r></p></e>
+    <e><p><l>ovddit<s n="adj"/></l><r>övtebe<s n="adj"/></r></p></e>
     <e><p><l>ovddolaš<s n="adj"/></l><r>rovnegs<s n="adj"/></r></p></e>
     <e><p><l>ođas<s n="adj"/></l><r>orre<s n="adj"/></r></p></e>
     <e><p><l>ođđaáigásaš<s n="adj"/></l><r>daaletje<s n="adj"/></r></p></e>
@@ -3913,7 +3917,7 @@
     <e><p><l>máŋggabealat<s n="adj"/></l><r>gelliesåarts<s n="adj"/></r></p></e>
     <e><p><l>fásta<s n="adj"/></l><r>vihties<s n="adj"/></r></p></e>
     
-    <e><p><l>geatnegahtton<s n="adj"/></l><r>dïedtem utnedh<s n="vblex"/></r></p></e>  
+    <e><p><l>geatnegahtton<s n="adj"/></l><r>dïedtem<b/>utnedh<s n="vblex"/></r></p></e>  
     
     <e><p><l>váilevaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>fååtesidh<s n="vblex"/><s n="tv"/><s n="prsprc"/></r></p></e>
     <e><p><l>suohkanlaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>tjïelte<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
@@ -4164,7 +4168,7 @@
     <e><p><l>vuollin<s n="adv"/></l><r>vuelnie<s n="adv"/></r></p></e>
     <e><p><l>vánit<s n="adv"/></l><r>jallan<s n="adv"/></r></p></e>
     <e><p><l>maiddái<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
-    <e><p><l>gal<s n="adv"/></l><r>hågkh<s n="adv"/></r></p></e>
+    <e><p><l>gal<s n="adv"/></l><r>gujht<s n="pcle"/></r></p></e>
     <e><p><l>hui<s n="adv"/></l><r>dan<s n="adv"/></r></p></e>
     <e><p><l>juo<s n="adv"/></l><r>joe<s n="adv"/></r></p></e>
     <e><p><l>eret<s n="adv"/></l><r>dïhte<s n="prn"/><s n="dem"/><s n="sg"/><s n="ela"/></r></p></e>
@@ -4179,7 +4183,8 @@
     <e><p><l>áibbas<s n="adv"/></l><r>aejvie<s n="adv"/></r></p></e>
     <e><p><l>ovdan<s n="adv"/></l><r>fraamme<s n="adv"/></r></p></e>
     <e><p><l>ovttas<s n="adv"/></l><r>ektesne<s n="adv"/></r></p></e>
-    <e><p><l>ná<s n="adv"/></l><r>naemhtie<s n="adv"/></r></p></e>
+    <e><p><l>ovttas<s n="adv"/></l><r>ektine<s n="adv"/></r></p></e> <!-- com ektine -->
+   <e><p><l>ná<s n="adv"/></l><r>naemhtie<s n="adv"/></r></p></e>
     <e><p><l>danin<s n="adv"/></l><r>dannasinie<s n="adv"/></r></p></e>
     <e><p><l>dáppe<s n="adv"/></l><r>daebpene<s n="adv"/></r></p></e>
     <e><p><l>doarvái<s n="adv"/></l><r>nuekies<s n="adv"/></r></p></e>
@@ -4990,7 +4995,7 @@
     <e><p><l>ráigat<s n="vblex"/><s n="tv"/></l><r>raejkiedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>ráivut<s n="vblex"/><s n="tv"/></l><r>staameldidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>rámidit<s n="vblex"/><s n="tv"/></l><r>girmedh<s n="vblex"/><s n="iv"/></r></p></e>
-    <e><p><l>rámidit<s n="vblex"/><s n="tv"/></l><r>freemmedh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>rámiidit<s n="vblex"/><s n="tv"/></l><r>girmedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>rávvet<s n="vblex"/><s n="tv"/></l><r>nihtetjistedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>ráđđet<s n="vblex"/><s n="tv"/></l><r>raeriestidh<s n="vblex"/><s n="tv"/></r></p></e>
     
@@ -23607,7 +23612,7 @@
     <e><p><l>Gunther<s n="np"/></l><r>Gunther<s n="np"/></r></p></e>
     <e><p><l>Gunvald<s n="np"/></l><r>Gunvald<s n="np"/></r></p></e>
     <e><p><l>Gunvor<s n="np"/></l><r>Gunvor<s n="np"/></r></p></e>
-    <e><p><l>Guovdageaidnu<s n="np"/></l><r>Kautokeino<s n="np"/></r></p></e>
+    <e><p><l>Guovdageaidnu<s n="np"/></l><r>Goevtegeajnoe<s n="np"/></r></p></e>
     <e><p><l>Gurli<s n="np"/></l><r>Gurli<s n="np"/></r></p></e>
     <e><p><l>Guro<s n="np"/></l><r>Guro<s n="np"/></r></p></e>
     <e><p><l>Gusdal<s n="np"/></l><r>Gusdal<s n="np"/></r></p></e>
