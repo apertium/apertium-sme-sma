@@ -239,9 +239,11 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.sem_act.*.ill.@-F←ADVL"/>
       <cat-item tags="*.der_nomact.n.*.ill.@-F←ADVL"/>
     </def-cat>
-    <def-cat n="semyear-loc">
+    <def-cat n="semyear-loc-gen">
       <cat-item tags="*.sem_year.sg.loc.*"/>
       <cat-item tags="*.sem_year.sg.loc"/>
+      <cat-item tags="*.sem_year.sg.gen.*"/>
+      <cat-item tags="*.sem_year.sg.gen"/>
     </def-cat>
     <def-cat n="semyear">
       <cat-item tags="*.sem_year.sg.*"/>
@@ -1178,7 +1180,7 @@ And then there are some categories like "month", with all the months.
       <choose>
         <when>
           <test>
-            <not><equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sh"/></equal></not>
+            <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sh"/></equal>
           </test>
       <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom"/></let> 
         </when>
@@ -1889,7 +1891,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: year - 1 position in-out"> <!-- Paul lea riegádan 1931:s - Paul jaepien 1931 reakadamme -->
       <pattern>
-        <pattern-item n="semyear-loc"/>
+        <pattern-item n="semyear-loc-gen"/>
       </pattern>
       <action>
         <call-macro n="general-macro-1Param">
