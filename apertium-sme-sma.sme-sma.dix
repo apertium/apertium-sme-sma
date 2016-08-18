@@ -125,6 +125,7 @@
     <sdef n="der_passl"/>
     <sdef n="der_a"/>
     <sdef n="der_laakan"/>
+    <sdef n="der_ht"/>
     
 
     <!-- Punctuation -->
@@ -355,6 +356,7 @@
     <e><p><l>duot<s n="prn"/></l><r>doete<s n="prn"/></r></p></e>
 
     <e><p><l>goappašat<s n="prn"/></l><r>gåabpegh<s n="prn"/></r></p></e>
+    <e><p><l>goappašagat<s n="prn"/></l><r>gåabpegh<s n="prn"/></r></p></e>
     <e><p><l>diet<s n="prn"/><s n="dem"/></l><r>doete<s n="prn"/><s n="dem"/></r></p></e>
     <e><p><l>dihto<s n="adj"/></l><r>såemies<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>molssaevttolaš<s n="adj"/></l><r>alternatijve<s n="adj"/></r></p></e>
@@ -528,8 +530,7 @@
     <e><p><l>strategiija<s n="n"/></l><r>strategije<s n="n"/></r></p></e>
     <e><p><l>rámmaeaktu<s n="n"/></l><r>mierietsiehkie<s n="n"/></r></p></e>
     
-    <e><p><l>einnostus<s n="n"/></l><r>daerpiesvoete<s n="n"/></r></p></e>
-    <e><p><l>dárbu<s n="n"/></l><r>daerpiesvoete<s n="n"/></r></p></e>
+    <e><p><l>dárbu<s n="n"/></l><r>daerpies<s n="adj"/></r></p></e>
     <e><p><l>adjektiiva<s n="n"/></l><r>adjektijve<s n="n"/></r></p></e>
     <e><p><l>agálašvuohta<s n="n"/></l><r>ihkuve<s n="n"/></r></p></e>
     <e><p><l>ahkemearri<s n="n"/></l><r>jaepiemierie<s n="n"/></r></p></e>
@@ -3753,9 +3754,13 @@
     <e><p><l>olmmošlaš<s n="adj"/></l><r>garkeles<s n="adj"/></r></p></e>
     <e><p><l>oskkáldas<s n="adj"/></l><r>stinkes<s n="adj"/></r></p></e>
     <e><p><l>ovccát<s n="adj"/></l><r>åktsede<s n="adj"/></r></p></e>
+    <e><p><l>sadjásaš<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>sæjjasadtje<s n="adj"/><s n="attr"/></r></p></e>
+    <e><p><l>sadjásaš<s n="adj"/><s n="sem_hum"/><s n="sg"/><s n="nom"/></l><r>sijjie<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>
+    <e><p><l>sadjásaš<s n="n"/></l><r>sæjjasadtje<s n="n"/></r></p></e>
 	
     <e><p><l>ovddeš<s n="adj"/></l><r>ovtetje<s n="adj"/></r></p></e>
-	
+	<e><p><l>gaskamuttus<s n="adv"/></l><r>gaskoeh<s n="post"/></r></p></e>
+
     <e><p><l>ovddit<s n="adj"/></l><r>övte<s n="adj"/></r></p></e> <!-- övtebe -->
     <e><p><l>ovddolaš<s n="adj"/></l><r>rovnegs<s n="adj"/></r></p></e>
     <e><p><l>ođas<s n="adj"/></l><r>orre<s n="adj"/></r></p></e>
@@ -4540,6 +4545,7 @@
     <e><p><l>doarrut<s n="vblex"/><s n="tv"/></l><r>gåaljodh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>doddjot<s n="vblex"/><s n="iv"/></l><r>dåajodh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dohkkehit<s n="vblex"/><s n="tv"/></l><r>dåhkasjehtedh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>dohkkehit<s n="vblex"/><s n="tv"/><s n="der_passl"/><s n="vblex"/><s n="iv"/><s n="prfprc"/></l><r>dåhkasjidh<s n="vblex"/><s n="iv"/><s n="der_ht"/><s n="vblex"/><s n="tv"/><s n="der_nomact"/><s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>dohkket<s n="vblex"/><s n="iv"/></l><r>dajpedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>doidit<s n="vblex"/><s n="tv"/></l><r>skuvledh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dollet<s n="vblex"/><s n="tv"/></l><r>bïksedh<s n="vblex"/><s n="tv"/></r></p></e>
