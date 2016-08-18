@@ -399,6 +399,13 @@
   <rule weight="1.0">
        <match lemma="guovlu" tags="n.*"><select lemma="dajve" tags="n.*"/></match>
   </rule>
+  <rule weight="5.0">
+       <match lemma="guovlu" tags="n.*"><select lemma="haerie" tags="n.*"/></match>
+  </rule>
+  <rule weight="6.0">
+       <match lemma="riekta" tags="adj.*.attr.*" />
+       <match lemma="guovlu" tags="n.*"><select lemma="haerie" tags="n.*"/></match>
+  </rule>
   <rule weight="1.0">
        <match lemma="hálddašit" tags="vblex.tv.*"><select lemma="reeredh" tags="vblex.*"/></match>
   </rule>
@@ -2070,6 +2077,19 @@
             <select lemma="gåaradidh"/>  
          </match>   
          </rule>                 
+
+ <rule weight="0.5">   
+  <match lemma="mannat" >   
+      <select lemma="juhtedh"/>    
+    </match>    
+    </rule>    
+ <rule weight="0.6">   
+  <match lemma="mannat" >   
+      <select lemma="juhtedh"/>    
+    </match>    
+  <match lemma="riekta" tags="adj.*" />   
+    </rule>    
+
  
 <!-- dákti- to varianter for bein på sma: daektie for mennesker og måaroe for resten; dyr, fisk etc.  -->    
 <!-- default: måaroe -->  
