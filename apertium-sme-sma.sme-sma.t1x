@@ -108,6 +108,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="jahki">
       <cat-item lemma="jahki" tags="n.*.sg.loc.*"/>
     </def-cat>
+    <def-cat n="mielde_adv">
+      <cat-item lemma="mielde" tags="adv.*"/>
+    </def-cat>
     <def-cat n="maake">
       <cat-item lemma="muoŧŧá" tags="n.*.sg.*"/>
       <cat-item lemma="goaski" tags="n.*.sg.*"/>
@@ -1907,9 +1910,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="semyear-loc-gen"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-1Param">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let>
                           <out>
           <chunk name="num" case="caseFirstword">
@@ -2396,6 +2397,12 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-1Param">
           <with-param pos="3"/>
         </call-macro>
+     <choose><when>
+     <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+     </choose>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -2460,8 +2467,14 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-1Param">
           <with-param pos="2"/>
         </call-macro>
+     <choose><when>
+     <test><and><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+     </choose>
         <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nounnn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4222,8 +4235,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-actio  - 1 position">
+    <rule comment="REGLA: verb-actio to inf  - 2 position">
       <pattern>
+        <pattern-item n="mielde_adv"/>
         <pattern-item n="verb-actio"/>
       </pattern>
       <action>
@@ -4231,15 +4245,25 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="inf" case="caseFirstword"> <!-- to be modified -->
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+            <b/>
+          <chunk name="inf"> 
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
-              <clip pos="1" side="tl" part="a_trans"/>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_verb"/>
+              <clip pos="2" side="tl" part="a_trans"/>
               <lit-tag v="inf"/>
             </lu>
           </chunk>
@@ -4248,6 +4272,30 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
+    <rule comment="REGLA: verb-actio to inf  - 1 position">
+      <pattern>
+        <pattern-item n="verb-actio"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_trans"/>
+              <lit-tag v="ger"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: verb-imp  - 1 position">
       <pattern>
