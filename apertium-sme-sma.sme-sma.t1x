@@ -379,6 +379,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="vejolaš">
       <cat-item lemma="vejolaš" tags="adj.*"/>
     </def-cat>
+    <def-cat n="geatnegahtton">
+      <cat-item lemma="geatnegahtton" tags="adj.*"/>
+    </def-cat>
     <def-cat n="cnjsub">
       <cat-item tags="cnjsub"/>
       <cat-item tags="cnjsub.*"/>
@@ -1007,6 +1010,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="bálvalit"/>
       <list-item v="ilbmat"/>
       <list-item v="almmuhit"/>
+      <list-item v="bálvalit"/>
     </def-list>
     <def-list n="language">
       <list-item v="sámegiella"/>
@@ -1137,6 +1141,15 @@ And then there are some categories like "month", with all the months.
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
             </or>
+          </test>
+          <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@A←"/></equal>
+              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="vblex"/></equal>
+            </and>
           </test>
           <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
         </when>
@@ -4011,6 +4024,30 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
+    <rule comment="REGLA: geatnegahtton  - 1 position"> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
+      <pattern>
+       <pattern-item n="leat-main"/>
+       <pattern-item n="geatnegahtton"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="vblex"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <lit-tag v="vblex.indic"/>
+              <var n="anaf_tense_nbrpers"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: leat-main inessive  - 1 position out"> <!-- áhčči lea ruovttus - aehtjie gåetesne -->
       <pattern>
         <pattern-item n="leat-drop"/>
@@ -4070,6 +4107,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+
+
     <rule comment="REGLA: oažžut dieđu  - 2 position out">
       <pattern>
         <pattern-item n="oažžut"/>
@@ -4080,7 +4119,7 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="2" side="tl" part="lem"/><lit v="daejredh"/></let>
         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
         <out>
-          <chunk name="copnom" case="caseFirstword">
+          <chunk name="vblex" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@+FMAINV"/></tag> 
