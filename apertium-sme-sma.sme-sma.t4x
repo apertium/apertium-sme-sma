@@ -81,6 +81,11 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Subj_r">
         <cat-item tags="NP.@SUBJ→.*"/>
     </def-cat>
+    <def-cat n="NP_Subj_not_Rel_r">
+        <cat-item lemma="prn" tags="NP.@SUBJ→.pers"/>
+        <cat-item lemma="noun" tags="NP.@SUBJ→.*"/>
+        <cat-item lemma="noun" tags="NP.@SUBJ→"/>
+    </def-cat>
     <def-cat n="right_border">
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="cnjsub.@CVP.*"/>
@@ -1604,7 +1609,7 @@ And then there are some categories like "month", with all the months.
 
      <rule comment="NP_Subj_r iiverb" > <!-- mun in - im manne -->
       <pattern>
-        <pattern-item n="NP_Subj_r"/>
+        <pattern-item n="NP_Subj_not_Rel_r"/>
         <pattern-item n="iiverb"/>
       </pattern>
       <action>

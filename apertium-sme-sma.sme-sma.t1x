@@ -126,9 +126,18 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="máhka" tags="n.*.sg.*"/>
    </def-cat>
     <def-cat n="buorre">
-      <cat-item tags="buorre.adj.*.@→N"/>
+      <cat-item lemma="buorre" tags="adj.*.@→N"/>
     </def-cat>
-    <def-cat n="pl-words"> <!-- sme is sg, sma is pl, and the verb must agree when the noun is subject. -->
+     <def-cat n="mearkkašit">
+      <cat-item lemma="mearkkašit" tags="vblex.*"/>
+    </def-cat>
+     <def-cat n="atnit">
+      <cat-item lemma="atnit" tags="vblex.*"/>
+    </def-cat>
+     <def-cat n="árvvus">
+      <cat-item lemma="árvu" tags="n.*.sg.loc.*"/>
+    </def-cat>
+   <def-cat n="pl-words"> <!-- sme is sg, sma is pl, and the verb must agree when the noun is subject. -->
       <cat-item lemma="mearridanváldi" tags="n.*.sg.nom.*"/>
     </def-cat>
     <def-cat n="habitive">
@@ -354,6 +363,9 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="ii-imp">
       <cat-item lemma="ii" tags="vblex.iv.neg.imp.*"/>
+    </def-cat>
+    <def-cat n="leat_conneg_prt">
+      <cat-item lemma="leat" tags="vblex.*.pret.conneg.*"/>
     </def-cat>
     <def-cat n="conneg">
       <cat-item tags="vblex.*.conneg.*"/>
@@ -4405,7 +4417,61 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    <rule comment="REGLA: mearkkašit  - 2 positions out">
+      <pattern>
+        <pattern-item n="mearkkašit"/>
+        <pattern-item n="ahte"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="imp" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <lit v="jiehtedh"/>
+              <lit-tag v="vblex.tv.inf"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
+    <rule comment="REGLA: atnit árvvus  - 2 positions out">
+      <pattern>
+        <pattern-item n="atnit"/>
+        <pattern-item n="árvvus"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="feejjen" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="MOVE"/></tag>
+            </tags>
+            <lu>
+              <lit v="dan"/>
+              <lit-tag v="adv"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <!-- SECTION: Adjective groups -->
@@ -4556,7 +4622,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--   <rule comment="REGLA: ii conneg vejolaš  - 2 positions out">
+   <rule comment="REGLA: ii conneg vejolaš  - 2 positions out">
       <pattern>
         <pattern-item n="ii"/>
         <pattern-item n="leat-main"/>
@@ -4594,7 +4660,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>  -->
+    </rule>  
 
 
 
