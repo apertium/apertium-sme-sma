@@ -3265,7 +3265,7 @@
     <e><p><l>ekspearta<s n="n"/></l><r>eksperte<s n="n"/></r></p></e>
     <e><p><l>kárten<s n="n"/></l><r>goerehtalleme<s n="n"/></r></p></e>
     
-    <e><p><l>geatnegasvuohta<s n="n"/></l><r>dïedte<s n="n"/></r></p></e>    <!-- Se nærmere på denne oversettinga! -->
+    <e><p><l>geatnegasvuohta<s n="n"/></l><r>dïedte<s n="n"/></r></p></e>    <!-- Se nærmere på denne oversettinga! stillese? -->
     
   
     
@@ -3437,6 +3437,9 @@
     <e><p><l>ruovttufylka<s n="n"/></l><r>årromefylhke<s n="n"/></r></p></e>
     <e><p><l>laboratoria<s n="n"/></l><r>laboratovrije<s n="n"/></r></p></e>
     <e><p><l>skábma<s n="n"/></l><r>jemhkelds<b/>tïjje<s n="n"/></r></p></e>
+    <e><p><l>bálvalusfállu<s n="n"/></l><r>dïenesjefaalenasse<s n="n"/></r></p></e>
+    <e><p><l>loahpalaččat<s n="adv"/></l><r>minngiegietjesne<s n="adv"/></r></p></e>
+    <e><p><l>fállu<s n="n"/></l><r>faalenasselæstoe<s n="n"/></r></p></e>
 
 
 
@@ -3444,10 +3447,11 @@
     <!-- SECTION: Adjectives -->
 
     <!-- Translating between POS means taking care in the transfer -->
-    <e><p><l>sámegiel<s n="adj"/></l><r>saemiengïeleh<s n="adj"/></r></p></e>
+     <e><p><l>eurohpálaš<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>Eurovpa<s n="np"/><s n="sg"/><s n="gen"/></r></p></e>
+   <e><p><l>sámegiel<s n="adj"/></l><r>saemiengïeleh<s n="adj"/></r></p></e>
     <e><p><l>dárogiel<s n="adj"/></l><r>daaroengïeleh<s n="adj"/></r></p></e>
     <e><p><l>davviriikkalaš<s n="adj"/><s n="attr"/></l><r>noerhtelaante<s n="n"/><s n="pl"/><s n="gen"/></r></p></e>
-    <e><p><l>sierranas<s n="adj"/></l><r>sjïere<s n="adj"/></r></p></e>
+    <e><p><l>sierranas<s n="adj"/></l><r>ovmessie<s n="adj"/></r></p></e>
     <e><p><l>dárbbašlaš<s n="adj"/></l><r>daerpies<s n="adj"/></r></p></e>
     <e><p><l>praktihkalaš<s n="adj"/></l><r>praktihkeles<s n="adj"/></r></p></e>
     <e><p><l>norgalaš<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>daaroe<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
@@ -3914,7 +3918,6 @@
     <e><p><l>fágagielalaš<s n="adj"/></l><r>faagegïeleh<s n="adj"/></r></p></e>
     
     <e><p><l>árbevirolaš<s n="adj"/></l><r>aerpiesïejhme<s n="adj"/></r></p></e>
-    <e><p><l>jahkásaš<s n="adj"/></l><r>jaapetje<s n="adj"/></r></p></e>
    
     <e><p><l>statistihkalaš<s n="adj"/></l><r>statistihkeles<s n="adj"/></r></p></e>
     <e><p><l>priváhta<s n="adj"/></l><r>privaate<s n="adj"/></r></p></e>
@@ -4266,8 +4269,10 @@
     <e><p><l>dohkálaččat<s n="adv"/></l><r>hijvenlaakan<s n="adv"/></r></p></e>
     <e><p><l>oidnosii<s n="adv"/></l><r>vååjnesasse<s n="adv"/></r></p></e>
     <e><p><l>oinnolaš<s n="adj"/></l><r>våajnoes<s n="adv"/></r></p></e>
-    <e><p><l>geavatlaččat<s n="adv"/></l><r>åtnoe<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>
-   <e><p><l>praktihkalaččat<s n="adv"/></l><r>åtnoe<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>
+ <!--   <e><p><l>geavatlaččat<s n="adv"/></l><r>åtnoe<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>  -->
+<!--   <e><p><l>praktihkalaččat<s n="adv"/></l><r>åtnoe<s n="n"/><s n="sg"/><s n="ine"/></r></p></e> -->
+    <e><p><l>geavatlaččat<s n="adv"/></l><r>praktihkelaakan<s n="adv"/></r></p></e>
+   <e><p><l>praktihkalaččat<s n="adv"/></l><r>praktihkelaakan<s n="adv"/></r></p></e>
    <e><p><l>ollásit<s n="adv"/></l><r>ellieslaakan<s n="adv"/></r></p></e>
     <e><p><l>omd<s n="adv"/><s n="abbr"/></l><r>vuesiehtimmien<b/>gaavhtan<s n="adv"/></r></p></e>
     <e><p><l>jnv<s n="adv"/><s n="abbr"/></l><r>jnv<s n="adv"/><s n="abbr"/></r></p></e>
@@ -5238,6 +5243,7 @@
     <e><p><l>čájehit<s n="vblex"/><s n="tv"/></l><r>vuesiehtidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>čállit<s n="vblex"/><s n="tv"/></l><r>tjaeledh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>čállit<s n="vblex"/><s n="tv"/></l><r>tjööledh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>čállit<s n="vblex"/><s n="tv"/></l><r>nualan<b/>tjaeledh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>čárvet<s n="vblex"/><s n="tv"/></l><r>tsiptsedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>šaddat<s n="vblex"/><s n="iv"/></l><r>sjïdtedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>šealgut<s n="vblex"/><s n="iv"/></l><r>giltedh<s n="vblex"/><s n="iv"/></r></p></e>
