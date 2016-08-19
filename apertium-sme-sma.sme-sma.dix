@@ -106,7 +106,8 @@
     <sdef n="sem_prod-cogn"/>
     <sdef n="sem_ani_group"/>
     <sdef n="sem_feat-psych"/>
-    <sdef n="sem_hum_plc"/>
+    <sdef n="sem_hum_plc"/> 
+    <sdef n="sem_process"/>
     
 
 
@@ -245,8 +246,10 @@
     <e><p><l>beallai<s n="post"/></l><r>bealan<s n="post"/></r></p></e>
     <e><p><l>birra<s n="post"/></l><r>bïjre<s n="post"/></r></p></e>
     <e><p><l>birra<s n="adv"/></l><r>bïjre<s n="adv"/></r></p></e>
-    <e r="LR"><p><l>bakte<s n="post"/></l><r>baaktoe<s n="post"/></r></p></e>
+    <e><p><l>bakte<s n="post"/></l><r>baaktoe<s n="post"/></r></p></e>
     <e><p><l>bokte<s n="post"/></l><r>baaktoe<s n="post"/></r></p></e>
+    <e><p><l>bokte<s n="post"/></l><r><s n="post"/></r></p></e>
+    <e><p><l>bakte<s n="post"/></l><r><s n="post"/></r></p></e>
     <e><p><l>buohta<s n="post"/></l><r>boehth<s n="post"/></r></p></e>
     <e><p><l>báldda<s n="post"/></l><r>bielesne<s n="post"/></r></p></e>
     <e><p><l>bálddas<s n="post"/></l><r>bealesne<s n="post"/></r></p></e>
@@ -3462,7 +3465,7 @@
 <!--    <e><p><l>vejolaš<s n="adj"/><s n="sem_dummytag"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="conneg"/></r></p></e> -->
     <e><p><l>vejolaš<s n="adj"/><s n="sem_dummytag"/></l><r>nuepie<s n="n"/></r></p></e>
     <e><p><l>vejolaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>kaanne<s n="adv"/><s n="sg"/></r></p></e>
-    <e><p><l>vejolaš<s n="adj"/><s n="sem_dummytag"/><s n="sg"/><s n="nom"/></l><r>buektiehtidh<s n="vblex"/></r></p></e>
+    <e><p><l>vejolaš<s n="adj"/><s n="sem_dummytag"/><s n="sg"/><s n="nom"/></l><r>buektiehtidh<s n="vblex"/><s n="indic"/><s n="inf"/></r></p></e>
 
     <e><p><l>fágalaš<s n="ind"/></l><r>faageles<s n="adj"/><s n="attr"/></r></p></e>
 
@@ -3757,9 +3760,11 @@
     <e><p><l>sadjásaš<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>sæjjasadtje<s n="adj"/><s n="attr"/></r></p></e>
     <e><p><l>sadjásaš<s n="adj"/><s n="sem_hum"/><s n="sg"/><s n="nom"/></l><r>sijjie<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>
     <e><p><l>sadjásaš<s n="n"/></l><r>sæjjasadtje<s n="n"/></r></p></e>
+    <e><p><l>johtu<s n="n"/><s n="sem_process"/><s n="sg"/><s n="ill"/></l><r><s n="n"/></r></p></e>
 	
     <e><p><l>ovddeš<s n="adj"/></l><r>ovtetje<s n="adj"/></r></p></e>
 	<e><p><l>gaskamuttus<s n="adv"/></l><r>gaskoeh<s n="post"/></r></p></e>
+	<e><p><l>johtileappot<s n="adv"/></l><r>verkebe<s n="adv"/></r></p></e>
 
     <e><p><l>ovddit<s n="adj"/></l><r>övte<s n="adj"/></r></p></e> <!-- övtebe -->
     <e><p><l>ovddolaš<s n="adj"/></l><r>rovnegs<s n="adj"/></r></p></e>
@@ -3923,8 +3928,11 @@
     <e><p><l>teknologalaš<s n="adj"/></l><r>teknologeles<s n="adj"/></r></p></e>
     <e><p><l>máŋggabealat<s n="adj"/></l><r>gelliesåarts<s n="adj"/></r></p></e>
     <e><p><l>fásta<s n="adj"/></l><r>vihties<s n="adj"/></r></p></e>
+    <e><p><l>eanemus<s n="adv"/></l><r>jeenjemes<s n="adv"/></r></p></e>
+    <e><p><l>eanemusat<s n="adv"/></l><r>jeenjemes<s n="adv"/></r></p></e>
     
     <e><p><l>geatnegahtton<s n="adj"/></l><r>dïedtem<b/>utnedh<s n="vblex"/></r></p></e>  
+    <e><p><l>geatnegahttit<s n="vblex"/></l><r>stilledh<s n="vblex"/></r></p></e>  
     
     <e><p><l>váilevaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>fååtesidh<s n="vblex"/><s n="tv"/><s n="prsprc"/></r></p></e>
     <e><p><l>suohkanlaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>tjïelte<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
@@ -4410,6 +4418,8 @@
     <e><p><l>beaškit<s n="vblex"/><s n="iv"/></l><r>plåavedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>berret<s n="vblex"/><s n="iv"/></l><r>byöredh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>bidjat<s n="vblex"/><s n="tv"/></l><r>bïejedh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>bidjat<s n="vblex"/><s n="tv"/></l><r>aelkiehtidh<s n="vblex"/><s n="tv"/></r></p></e>
+
     <e><p><l>biebmat<s n="vblex"/><s n="tv"/></l><r>bïepmehtidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>biehkut<s n="vblex"/><s n="iv"/></l><r>hanhkedidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>biehkut<s n="vblex"/><s n="iv"/></l><r>hojjedh<s n="vblex"/><s n="tv"/></r></p></e>

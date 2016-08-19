@@ -397,14 +397,14 @@
        <match lemma="guovdu" tags="pr.*"><select lemma="gaskoeh" tags="post"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="guovlu" tags="n.*"><select lemma="dajve" tags="n.*"/></match>
+       <match lemma="guovlu" tags="n.*"><select lemma="dajve" /></match>
   </rule>
   <rule weight="5.0">
-       <match lemma="guovlu" tags="n.*"><select lemma="haerie" tags="n.*"/></match>
+       <match lemma="guovlu" tags="n.*"><select lemma="haerie" /></match>
   </rule>
   <rule weight="6.0">
        <match lemma="riekta" tags="adj.*.attr.*" />
-       <match lemma="guovlu" tags="n.*"><select lemma="haerie" tags="n.*"/></match>
+       <match lemma="guovlu" tags="n.*"><select lemma="haerie" /></match>
   </rule>
   <rule weight="1.0">
        <match lemma="hálddašit" tags="vblex.tv.*"><select lemma="reeredh" tags="vblex.*"/></match>
@@ -2063,6 +2063,26 @@
          </match>   
      <match lemma="mo"/>    
         </rule> 
+ 
+ <rule weight="1.0">   
+  <match lemma="bidjat" >   
+      <select lemma="bïejedh"/>    
+    </match>    
+    </rule>    
+
+      <rule weight="0.5">   
+        <match lemma="bidjat">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+         </rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="bidjat">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+        <match lemma="johtu" tags="n.*.sg.ill.*" />   
+         </rule>                 
+ 
         
 <!--  default: mïnnedh --> 
  <rule weight="1.0">   
@@ -2077,6 +2097,21 @@
             <select lemma="gåaradidh"/>  
          </match>   
          </rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="mannat">   
+            <select lemma="gåaradidh"/>  
+         </match>   
+        <match lemma="bures" tags="adv.*" />   
+         </rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="bures" tags="adv.*" />   
+        <match lemma="mannat">   
+            <select lemma="gåaradidh"/>  
+         </match>   
+         </rule>                 
+
 
  <rule weight="0.5">   
   <match lemma="mannat" >   
@@ -2216,6 +2251,13 @@
             <select lemma="ektine"/> 
          </match>
        </rule>     
+
+       <rule weight="1.0"> 
+         <match lemma="bokte" >
+            <select lemma=""/> 
+         </match>
+       </rule>     
+
 
       
 </rules> 

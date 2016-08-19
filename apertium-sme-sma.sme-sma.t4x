@@ -81,6 +81,11 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Subj_r">
         <cat-item tags="NP.@SUBJ→.*"/>
     </def-cat>
+    <def-cat n="right_border">
+        <cat-item tags="NP.@SUBJ→.*"/>
+        <cat-item tags="cnjsub.@CVP.*"/>
+        <cat-item tags="cnjsub.@CVP"/>
+    </def-cat>
 
     <def-cat n="NP_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
@@ -973,7 +978,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="S V SPRED ADVL" > <!--S V SPRED becomes S SPRED V, Dát rehkenastojuvvo oktan guollin. -->
       <pattern>
-        <pattern-item n="NP_Subj"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Spred_l"/>
       </pattern>
@@ -1005,7 +1010,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="S V SPRED ADVL" > <!--S V SPRED ADVL becomes S SPRED ADVL V -->
       <pattern>
-        <pattern-item n="NP_Subj"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Spred_l"/>
         <pattern-item n="ADVL_left"/>
