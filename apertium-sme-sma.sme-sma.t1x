@@ -499,6 +499,10 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="CD"/>
     </def-attr>
 
+    <def-attr n="a_infinit">
+       <attr-item tags="prfprc"/>
+       <attr-item tags="inf"/>
+    </def-attr>
     <def-attr n="a_attr">
        <attr-item tags="attr"/>
     </def-attr>
@@ -1102,7 +1106,7 @@ And then there are some categories like "month", with all the months.
       <choose>  
         <when>
           <test>
-            <in><clip pos="1" side="sl" part="lem"/><list n="der_caus2der_d"/></in></test>
+            <in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="der_caus2der_d"/></in></test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ht"/></let>
         </when>
         <when>
@@ -1205,6 +1209,14 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom"/></let> 
         </when>
       </choose>
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="tl" part="a_infinit"/><lit-tag v="prfprc"/></equal>
+          </test>
+      <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let> 
+        </when>
+      </choose>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
@@ -1298,7 +1310,7 @@ And then there are some categories like "month", with all the months.
         <when>
           <test><and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <in><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in>
+             <in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in>
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
         </when>
@@ -1308,7 +1320,7 @@ And then there are some categories like "month", with all the months.
             <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
-             <not><in><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
+             <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
 
 <!--              <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
@@ -1316,7 +1328,7 @@ And then there are some categories like "month", with all the months.
             <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
-             <not><in><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
+             <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
 <!--              <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
             </and>
@@ -1367,7 +1379,7 @@ And then there are some categories like "month", with all the months.
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
-             <not><in><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
+             <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
               <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></not>
 <!--            <not><in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in></not> -->
             </and>
@@ -1551,14 +1563,14 @@ And then there are some categories like "month", with all the months.
               <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
 <!--              <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
                <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
-             <not><in><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
+             <not><in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
             </and>
             <and>
               <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
               <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
               <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
                <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-             <not><in><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
+             <not><in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
             </and>
             </or>
           </test>
@@ -1608,7 +1620,7 @@ And then there are some categories like "month", with all the months.
               <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
               <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
 <!--              <not><in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in></not> -->
-             <not><in><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
+             <not><in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
             </and>
           </test>
           <let>
