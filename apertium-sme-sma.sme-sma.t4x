@@ -120,6 +120,9 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@Num←.*"/>
     </def-cat>
 
+    <def-cat n="ref_nom">
+        <cat-item tags="NP.@SUBJ→.ref"/>
+    </def-cat>
 
 
     <def-cat n="modifyer">
@@ -366,6 +369,28 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule> -->
+
+
+<!--    <rule comment="ref-nom SUBJ" > --> <!-- ref-nom SUBJ becomes  SUBJ ref-nom. -->
+<!--      <pattern>     
+        <pattern-item n="ref_nom"/>
+        <pattern-item n="NP_Subj_r"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+         <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule> -->
+
+
     <rule comment="Subj FMAINV Obj  ADVL" > <!-- V Obj ADVL becomes Obj ADVL V. -->
       <pattern>     
         <pattern-item n="IFMainV"/>

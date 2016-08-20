@@ -2262,12 +2262,12 @@
             <select lemma=""/> 
          </match>
        </rule>     
-       <rule weight="5.0">  
+       <rule weight="0.5">  
          <match lemma="bokte" >
             <select lemma="jis"/> 
          </match>
        </rule>     
-       <rule weight="6.0">  <!-- dan bokte ahte -->
+       <rule weight="0.6">  <!-- dan bokte ahte -->
          <match lemma="dat"/>
          <match lemma="bokte" >
             <select lemma="jis"/> 
@@ -2280,12 +2280,12 @@
             <select lemma="lea"/> 
          </match>
        </rule>     
-       <rule weight="5.0">  
+       <rule weight="0.5">  
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
        </rule>     
-       <rule weight="6.0"> 
+       <rule weight="0.6"> 
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
@@ -2297,17 +2297,68 @@
             <select lemma="tïjje"/> 
          </match>
        </rule>     
-       <rule weight="5.0">  
+       <rule weight="0.5">  
          <match lemma="áigi" >
             <select lemma="aejkie" tags="n.*"/> 
          </match>
        </rule>     
-       <rule weight="6.0"> 
+       <rule weight="0.6"> 
          <match lemma="boahtte" tags="adj.*"/>
          <match lemma="áigi" >
             <select lemma="aejkie" tags="n.*"/> 
          </match>
        </rule>     
+       <rule weight="1.0"> 
+         <match lemma="boahtte" >
+            <select lemma="båetije"/> 
+         </match>
+       </rule>     
+       <rule weight="0.5">  
+         <match lemma="boahtte" >
+            <select lemma="minngebe" /> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="boahtte" >
+            <select lemma="minngebe" /> 
+         </match>
+         <match lemma="buolva" tags="n.*"/>
+       </rule>     
 
-      
+        <rule weight="1.0"> 
+         <match lemma="dárbu" >
+            <select lemma="daerpiesvoete" tags="n.*.sg.gen.*"/> 
+         </match>
+       </rule>     
+        <rule weight="1.0"> 
+         <match lemma="dárbu" >
+            <select lemma="daerpiesvoete" tags="n.*.sg.acc.*"/> 
+         </match>
+       </rule>     
+        <rule weight="1.0"> 
+         <match lemma="dárbu" >
+            <select lemma="daerpiesvoete" tags="n.*.sg.ill.*"/> 
+         </match>
+       </rule>     
+        <rule weight="1.0"> 
+         <match lemma="dárbu" >
+            <select lemma="daerpiesvoete" tags="n.*.sg.com.*"/> 
+         </match>
+       </rule>     
+        <rule weight="1.0"> 
+         <match lemma="dárbu" >
+            <select lemma="daerpiesvoete" tags="n.*.pl.*"/> 
+         </match>
+       </rule>     
+       <rule weight="0.5">  
+         <match lemma="dárbu" >
+            <select lemma="daerpies" /> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="dárbu" >
+            <select lemma="daerpies" tags="adj.*.sg.nom.*"/> 
+         </match>
+       </rule>     
+     
 </rules> 
