@@ -60,6 +60,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ADVL_left">
         <cat-item tags="*.@←ADVL.*"/>
         <cat-item tags="*.@←ADVL"/>
+        <cat-item tags="*.@←ADVL.*"/>
         <cat-item tags="*.@←ADVL-ela.*"/>
         <cat-item tags="*.@←ADVL-ela"/>
         <cat-item tags="*.@←ADVL-ine.*"/>
@@ -77,6 +78,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Subj">
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="NP.@←SUBJ.*"/>
+    </def-cat>
+    <def-cat n="MOVE">
+        <cat-item tags="*.MOVE"/>
     </def-cat>
     <def-cat n="NP_Subj_r">
         <cat-item tags="NP.@SUBJ→.*"/>
@@ -209,13 +213,13 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="CC">
         <cat-item tags="CC.@CNP"/>
-        <cat-item tags="CC.*"/> <!--should be removed when we fix CG -->
         <cat-item tags="SV.*.Neg.Foc_ge"/>
         <cat-item tags="SV.*.Neg.Foc_ge.*"/>
     </def-cat>
 
     <def-cat n="CNP">
         <cat-item tags="CC.@CNP"/>
+        <cat-item tags="cnjsub.@CNP"/>
     </def-cat>
     <def-cat n="ahte">
         <cat-item lemma="ahte" tags="cnjsub.@CVP"/>
@@ -463,6 +467,36 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+<!--    <rule comment="FMAINV ADVL Obj ADVL " >
+      <pattern>     
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="ADVL_left"/>
+        <pattern-item n="NP_Obj_l"/>
+        <pattern-item n="ADVL_left"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+           <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+           <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+         <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule> -->
+
+
 
  <rule comment="AHTE PRN-DEM" > <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
       <pattern>
@@ -505,6 +539,31 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="MOVE NP_Obj_l" > <!-- moves over the next NP -->
+      <pattern>
+        <pattern-item n="MOVE"/>
+        <pattern-item n="NP"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+        <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="FAuxV IMainV ADVL_left" > <!--AUX V A becomes AUX A V -->
       <pattern>
         <pattern-item n="FAuxV"/>
@@ -1080,7 +1139,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="S V OBJ SPRED " > <!--S V SPRED OBJ becomes S OBJ  SPRED V -->
       <pattern>
-        <pattern-item n="NP_Subj"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Obj_l"/>
         <pattern-item n="NP_Spred_l"/>
@@ -1121,7 +1180,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="S V OBJ ADVL " > <!--S V ADVL OBJ becomes S OBJ  ADVL V -->
       <pattern>
-        <pattern-item n="NP_Subj"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Obj_l"/>
         <pattern-item n="ADVL_left"/>
@@ -1161,7 +1220,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="S V OBJ OPRED " > <!--S V OPRED OBJ becomes S OBJ  OPRED V -->
       <pattern>
-        <pattern-item n="NP_Subj"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Obj_l"/>
         <pattern-item n="NP_Opred_l"/>
@@ -1342,7 +1401,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="Subj FMAINV ADVL  ADVL" > <!-- V ADVL ADVL becomes ADVL ADVL V, Son orru doppe miehtá jagi. -->
       <pattern>     
-        <pattern-item n="NP_Subj_r"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="FMainV"/>
         <pattern-item n="ADVL_left"/>
         <pattern-item n="ADVL_left"/>
@@ -1546,7 +1605,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="NP_Subj FMainV NP_Obj_l CC" > <!--no SOV with complex coordinated objects -->
       <pattern>
-        <pattern-item n="NP_Subj"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="FMainV"/>
         <pattern-item n="NP_Obj_l"/>
         <pattern-item n="CC"/>
@@ -1586,7 +1645,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="NP_Subj FMainV NP_Advl" > <!--SVA becomes SAV -->
       <pattern>
-        <pattern-item n="NP_Subj"/>
+        <pattern-item n="right_border"/>
         <pattern-item n="FMainV"/>
         <pattern-item n="NP_Advl"/>
       </pattern>

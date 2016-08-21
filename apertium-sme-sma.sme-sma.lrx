@@ -396,10 +396,10 @@
   <rule weight="1.0">
        <match lemma="guovlu" tags="n.*"><select lemma="dajve" /></match>
   </rule>
-  <rule weight="5.0">
+  <rule weight="0.5">
        <match lemma="guovlu" tags="n.*"><select lemma="haerie" /></match>
   </rule>
-  <rule weight="6.0">
+  <rule weight="0.6">
        <match lemma="riekta" tags="adj.*.attr.*" />
        <match lemma="guovlu" tags="n.*"><select lemma="haerie" /></match>
   </rule>
@@ -2259,7 +2259,7 @@
 
        <rule weight="1.0"> 
          <match lemma="bokte" >
-            <select lemma=""/> 
+            <select lemma="baaktoe"/> 
          </match>
        </rule>     
        <rule weight="0.5">  
@@ -2290,6 +2290,11 @@
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
          <match lemma="ahte" tags="cnjsub.*"/>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="mearkkašit" >
+            <select lemma="sïjhtedh" tags="vblex.*.inf.*"/> 
+         </match>
        </rule>     
 
        <rule weight="1.0"> 
