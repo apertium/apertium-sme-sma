@@ -884,7 +884,13 @@
   <rule weight="1.0">
        <match lemma="báhkka" tags="n.*"><select lemma="aeskie"/></match>
   </rule>
-  
+   <rule weight="1.0">
+       <match lemma="dihte" tags="post.*"><select lemma="åvteste" tags="post.*"/></match>
+  </rule>
+   <rule weight="2.5">
+       <match lemma="dihte" tags="post.*"><select lemma="" tags="post.*"/></match>
+  </rule>
+ 
    
 <!--   seangkoem laedtjedh  = seaŋgga láhčit    
    leahtam laetjedh  = leahtam láhčit -->
