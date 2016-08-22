@@ -518,6 +518,31 @@
   <rule weight="1.0">
        <match lemma="lohkat" tags="vblex.tv.*"><select lemma="jiehtedh" tags="vblex.*"/></match>
   </rule>
+  <rule weight="0.5">
+       <match lemma="lohkat" tags="vblex.tv.*"><select lemma="ryöknedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="lohkat" tags="vblex.tv.*"><select lemma="ryöknedh" tags="vblex.*"/></match>
+       <match lemma="álbmot"/>
+       
+  </rule>
+  <rule weight="0.5">
+       <match lemma="lohkat" tags="vblex.tv.*"><select lemma="lohkedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+         <match lemma="čállit"/>
+       <match />
+       <match lemma="lohkat" tags="vblex.tv.*"><select lemma="lohkedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+        <match lemma="lohkat" tags="vblex.tv.*"><select lemma="lohkedh" tags="vblex.*"/></match>
+       <match />
+       <match lemma="čállit"/>
+   </rule>
+  <rule weight="0.6">
+        <match lemma="lohkat" tags="vblex.tv.*"><select lemma="lohkedh" tags="vblex.*"/></match>
+       <match tags="n.sem_lang.*"/> 
+   </rule> 
   <rule weight="1.0">
        <match lemma="lohkki" tags="n.*"><select lemma="lohkije" tags="n.*"/></match>
   </rule>
