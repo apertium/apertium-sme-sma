@@ -92,6 +92,27 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.*.attr.*"/>
       <cat-item tags="adj.*.*.nom.*"/>
     </def-cat>
+    <def-cat n="mánnu">
+      <cat-item lemma="ođđajagemánnu" tags="n.*"/>
+      <cat-item lemma="guovvamánnu" tags="n.*"/>
+      <cat-item lemma="njukčaamánnu" tags="n.*"/>
+      <cat-item lemma="cuoŋománnu" tags="n.*"/>
+      <cat-item lemma="miessemánnu" tags="n.*"/>
+      <cat-item lemma="geassemánnu" tags="n.*"/>
+      <cat-item lemma="suoidnemánnu" tags="n.*"/>
+      <cat-item lemma="borgemánnu" tags="n.*"/>
+      <cat-item lemma="čakčamánnu" tags="n.*"/>
+      <cat-item lemma="golggotmánnu" tags="n.*"/>
+      <cat-item lemma="skábmamánnu" tags="n.*"/>
+      <cat-item lemma="juovlaamánnu" tags="n.*"/>
+    </def-cat>
+    <def-cat n="ordinal">
+      <cat-item tags="adj.ord.*"/>
+    </def-cat>
+    <def-cat n="beaivi">
+      <cat-item lemma="beaivi" tags="n.sg.*"/>
+      <cat-item lemma="b" tags="adv.abbr.*"/>
+    </def-cat>
     <def-cat n="goiku">
       <cat-item lemma="borranmiella" tags="n.*.sg.nom.*"/>
       <cat-item lemma="goiku" tags="n.*.sg.nom.*"/>
@@ -1102,6 +1123,9 @@ And then there are some categories like "month", with all the months.
     </def-list>
     <def-list n="muvhte">
       <list-item v="muvhte"/>
+      <list-item v="måedtie"/>
+      <list-item v="gellie"/>
+      <list-item v="jïjnje"/>
 <!--      <list-item v="gaajhke"/> -->
     </def-list>
     <def-list n="a_time">
@@ -2165,6 +2189,43 @@ And then there are some categories like "month", with all the months.
             <b/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA:  dates"> 
+      <pattern> 
+        <pattern-item n="mánnu"/>
+        <pattern-item n="ordinal"/>
+        <pattern-item n="beaivi"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+
+                          <out>
+          <chunk name="date" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
