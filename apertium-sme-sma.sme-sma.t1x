@@ -500,6 +500,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="muhtin" tags="prn.ind.*"/> 
       <cat-item lemma="buot" tags="prn.ind.*"/> 
       <cat-item lemma="boahtte" tags="adj.*"/> 
+      <cat-item lemma="ollu" tags="adj.*"/> 
       <cat-item lemma="juohke" tags="prn.ind.*"/> 
     </def-cat>
     <def-cat n="default">
@@ -1126,8 +1127,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="muvhte"/>
       <list-item v="måedtie"/>
       <list-item v="gellie"/>
-      <list-item v="jïjnje"/>
-<!--      <list-item v="gaajhke"/> -->
+     <list-item v="gaajhke"/>  <!-- Muorat leat buot máilmmiosiin. -->
     </def-list>
     <def-list n="a_time">
       <list-item v="ođđajagemánnu"/>
