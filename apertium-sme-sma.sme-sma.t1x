@@ -4768,6 +4768,30 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: mearkkašit  - 1 position out">
+      <pattern>
+        <pattern-item n="mearkkašit"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="cop-mainv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: mearkkašit  - 2 positions out">
       <pattern>
         <pattern-item n="mearkkašit"/>
@@ -4788,8 +4812,13 @@ And then there are some categories like "month", with all the months.
             </lu>
             <b/>
             <lu>
-              <lit v="jiehtedh"/>
-              <lit-tag v="vblex.tv.inf"/>
+              <lit v="nimhtie"/>
+              <lit-tag v="adv"/>
+            </lu>
+            <b/>
+            <lu>
+              <lit v="ahte"/>
+              <lit-tag v="cnjsub"/>
             </lu>
           </chunk>
         </out>
