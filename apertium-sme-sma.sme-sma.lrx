@@ -2291,12 +2291,12 @@
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
        </rule>     
-       <rule weight="0.6"> 
+<!--       <rule weight="0.6"> 
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
          <match lemma="ahte" tags="cnjsub.*"/>
-       </rule>     
+       </rule>     -->
        <rule weight="0.6"> 
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*.inf.*"/> 
