@@ -106,6 +106,9 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="skábmamánnu" tags="n.*"/>
       <cat-item lemma="juovlaamánnu" tags="n.*"/>
     </def-cat>
+    <def-cat n="lassin">
+      <cat-item lemma="lassi" tags="n.*.ess.*"/>
+    </def-cat>
     <def-cat n="ordinal">
       <cat-item tags="adj.ord.*"/>
     </def-cat>
@@ -257,7 +260,11 @@ And then there are some categories like "month", with all the months.
     <def-cat n="gen">
       <cat-item tags="*.gen.*"/>
     </def-cat>
-    <def-cat n="nounloc">
+    <def-cat n="noun-ill">
+      <cat-item tags="n.*.ill.*"/>
+      <cat-item tags="n.*.*.ill.*"/>
+    </def-cat>
+    <def-cat n="noun-loc">
       <cat-item tags="n.*.*.*.loc.*"/>
       <cat-item tags="n.*.*.loc.*"/>
       <cat-item tags="np.*.*.*.loc.*"/>
@@ -298,6 +305,12 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="oassálastit">
       <cat-item lemma="oassálastit" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="beassat">
+      <cat-item lemma="beassat" tags="vblex.iv.*"/>
+    </def-cat>
+    <def-cat n="fárrui">
+      <cat-item lemma="fárrui" tags="adv.*"/>
     </def-cat>
     <def-cat n="genmod">
       <cat-item tags="*.gen.@→N"/>
@@ -1127,7 +1140,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="muvhte"/>
       <list-item v="måedtie"/>
       <list-item v="gellie"/>
-     <list-item v="gaajhke"/>  <!-- Muorat leat buot máilmmiosiin. -->
+<!--     <list-item v="gaajhke"/> -->  <!-- Muorat leat buot máilmmiosiin. -->
     </def-list>
     <def-list n="a_time">
       <list-item v="ođđajagemánnu"/>
@@ -1322,7 +1335,8 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
       <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> 
       <let><clip pos="1" side="tl" part="sem_year"/><lit-tag v="arab"/></let> 
-      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+       <let><clip pos="1" side="tl" part="a_actio"/><lit-tag v="der_nomact.n.sg"/></let>
+     <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
 
     <def-macro n="general-macro-2Param" npar="2">
@@ -1925,7 +1939,7 @@ And then there are some categories like "month", with all the months.
             <clip pos="2" side="tl" part="a_case"/> 
           </concat>                
         </let> 
-        <let>
+<!--        <let>
           <clip pos="2" side="tl" part="tags"/>
           <concat>
             <lit-tag v="n"/>
@@ -1933,7 +1947,7 @@ And then there are some categories like "month", with all the months.
             <clip pos="2" side="tl" part="a_nbr"/>
             <clip pos="2" side="tl" part="a_case"/> 
           </concat>                
-        </let> 
+        </let> -->
         </otherwise>
       </choose>
               <let><var n="func"/><clip pos="2" side="sl" part="a_func"/></let>
@@ -1997,6 +2011,13 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
               <tag><lit-tag v="ref"/></tag>
             </tags>
+            <lu>
+              <lit v="dïhte"/><concat>
+              <lit-tag v="pron.dem"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <lit-tag v="nom"/></concat>
+            </lu>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -2832,7 +2853,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/> <with-param pos="2"/></call-macro>
         <out>
-          <chunk name="attr-nounxx" case="caseFirstword">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -2875,6 +2896,7 @@ And then there are some categories like "month", with all the months.
      <not><equal><clip pos="2" side="sl" part="a_ntype"/><lit-tag v="abbr"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_ntype"/><lit-tag v="acr"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal></not>
      </and>
      </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
@@ -2893,7 +2915,10 @@ And then there are some categories like "month", with all the months.
  	</when>
  	<when>
           <test><and>
+          <or>
           <equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal>
+          <equal><clip pos="1" side="sl" part="a_subPoS"/><lit v="arab"/></equal>
+          </or>
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
           </and></test>
@@ -3392,7 +3417,7 @@ And then there are some categories like "month", with all the months.
     </rule>
      <rule comment="REGLA: eret  - 1 position out"> <!-- Hábmeris eret - elativ -->
       <pattern>
-        <pattern-item n="nounloc"/>
+        <pattern-item n="noun-loc"/>
         <pattern-item n="eret"/>
       </pattern>
       <action>
@@ -3411,6 +3436,57 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+     <rule comment="REGLA: lassin noun-ill"> <!-- lassin ill - ill lassin -->
+      <pattern>
+        <pattern-item n="lassin"/>
+        <pattern-item n="noun-ill"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+           <lu>
+				<clip pos="2" side="tl" part="whole"/>            
+		  </lu>
+		  <b/>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+     <rule comment="REGLA: beassat fárrui"> <!-- mealtan årrodh -->
+      <pattern>
+        <pattern-item n="beassat"/>
+        <pattern-item n="fárrui"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="nounvv" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+
 
     <rule comment="REGLA: bokte  - 1 position out"> <!-- inessive and comitative/essive instead of pp with bokte -->
       <pattern>
@@ -3561,8 +3637,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: dihte  - 1 position out">  <!-- verb-actio-gen + dihte - infintive -->
-      <pattern>
+<!--    <rule comment="REGLA: dihte  - 1 position out"> -->  <!-- verb-actio-gen + dihte - infintive -->
+<!--      <pattern>
         <pattern-item n="verb-actio-gen"/>
         <pattern-item n="dihte"/>
       </pattern>
@@ -3583,13 +3659,13 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
      <rule comment="REGLA: eret  - 1 position out"> <!-- eret Hábmeris  - elativ -->
       <pattern>
         <pattern-item n="eret"/>
-        <pattern-item n="nounloc"/>
+        <pattern-item n="noun-loc"/>
       </pattern>
       <action>
            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let>
