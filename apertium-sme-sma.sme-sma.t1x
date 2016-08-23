@@ -3500,15 +3500,23 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="bokte"/>
       </pattern>
       <action>
-      <choose><when><test><or>
+      <choose>
+      <when><test><or>
        <equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
        <equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
        </or></test>
                  <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
                  </when>
+      <when><test><and>
+       <not><equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
+       <not><equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
+       <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+       </and></test>
+                 <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ess"/></let>
+                 </when>
                  <otherwise>
-           <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ess"/></let></otherwise></choose>
+           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></let></otherwise></choose>
          <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
          
               <let><var n="func"/><clip pos="2" side="sl" part="a_func"/></let>
