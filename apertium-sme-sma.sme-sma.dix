@@ -192,8 +192,8 @@
     <e r="LR"><p><l>dehe<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
     <e r="LR"><p><l>dahjege<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
 
-    <!-- TODO: ahte<cnjcoo> doesn't exist in the sma analyser, what's the best translation? -->
-    <!-- <e><p><l>ahte<s n="cnjcoo"/></l><r>jïh<s n="cnjcoo"/></r></p></e> -->
+  
+    <e><p><l>ahte<s n="cnjcoo"/></l><r><s n="cnjcoo"/></r></p></e> <!-- we have rules for this -->
     <!-- <e><p><l>ahte<s n="cnjcoo"/></l><r>ahte<s n="cnjcoo"/></r></p></e> -->
 
     <!-- SECTION: Subjunctions -->
@@ -3486,7 +3486,9 @@
     <e><p><l>eanaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>jeenje<s n="adj"/><s n="sup"/><s n="attr"/></r></p></e>
     <e><p><l>eanas<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>jeenje<s n="adj"/><s n="sup"/><s n="attr"/></r></p></e>
     <e><p><l>eambbogat<s n="prn"/><s n="ind"/></l><r>jïjnje<s n="adj"/><s n="comp"/></r></p></e> 
-    
+     <e><p><l>eanet<s n="adj"/><s n="comp"/></l><r>jeenje-jeenjebe<s n="adj"/></r></p></e>
+
+   
     
     
     <e><p><l>vejolaš<s n="adj"/><s n="sem_dummytag"/><s n="sg"/><s n="nom"/></l><r>gåaradidh<s n="vblex"/><s n="indic"/><s n="pres"/><s n="p3"/><s n="sg"/></r></p></e> 

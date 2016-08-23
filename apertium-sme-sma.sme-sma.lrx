@@ -15,6 +15,17 @@
   <rule weight="1.0">
        <match lemma="doarjja" tags="n.*"><select lemma="dåarjoe" tags="n.*"/></match>
   </rule>
+  <rule weight="1.0">
+       <match lemma="eanet" tags="adj.*"><select lemma="jeenje" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="eanet" tags="adj.*"><select lemma="jeenje-jeenjebe" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="eanet" tags="adj.*"><select lemma="jeenje-jeenjebe" tags="adj.*"/></match>
+       <or><match lemma="ja" /><match lemma="ahte" />   </or>
+       <match lemma="eanet" />
+  </rule>
        
   <rule weight="1.0">
        <match lemma="áidna" tags="adj.*"><select lemma="aajnehke" tags="adj.*"/></match>
@@ -2369,5 +2380,13 @@
          <match lemma="vejolaš" />
           </or>
       </rule>     
+      <rule weight="0.6">  
+      <or>
+          <match lemma="dalle" /> <match lemma="ovdal" />     
+       </or>
+        <match lemma="go" >
+            <select lemma="goh" /> 
+         </match>
+       </rule>     
     
 </rules> 

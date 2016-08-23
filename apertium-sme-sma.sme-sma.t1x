@@ -109,6 +109,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="lassin">
       <cat-item lemma="lassi" tags="n.*.ess.*"/>
     </def-cat>
+    <def-cat n="eanet">
+      <cat-item lemma="eanet" tags="adj.comp.*"/>
+    </def-cat>
     <def-cat n="ordinal">
       <cat-item tags="adj.ord.*"/>
     </def-cat>
@@ -455,6 +458,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ja">
       <cat-item lemma="ja" tags="cnjcoo"/>
       <cat-item lemma="ja" tags="cnjcoo.*"/>
+      <cat-item lemma="ahte" tags="cnjcoo.*"/>
     </def-cat>
     <def-cat n="cnjcoo">
       <cat-item tags="cnjcoo"/>
@@ -1096,7 +1100,11 @@ And then there are some categories like "month", with all the months.
       <list-item v="veallahit"/>
       <list-item v="eallit"/>
     </def-list>
-    <def-list n="elative-verbs">
+    <def-list n="from-ill-to-ine-verbs">
+      <list-item v="álgit"/>
+      <list-item v="oassálastit"/>     
+     </def-list>
+     <def-list n="elative-verbs">
       <list-item v="boahtit"/>
       <list-item v="fárret"/>
       <list-item v="beassat"/>
@@ -1478,6 +1486,15 @@ And then there are some categories like "month", with all the months.
       </choose>
       <choose>
         <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="from-ill-to-ine-verbs"/></in>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
+        </when>
+       <when>
           <test>
             <and>
               <in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="language"/></in>
@@ -5069,6 +5086,30 @@ And then there are some categories like "month", with all the months.
     <!-- SECTION: Adverbial groups -->
 
 
+    <rule comment="REGLA: eanet ahte eanet  - 1 position out">
+      <pattern>
+        <pattern-item n="eanet"/>
+        <pattern-item n="ja"/>
+        <pattern-item n="eanet"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+         <out>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><lit-tag v="@←ADVL"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: adv  - 1 position">
       <pattern>
         <pattern-item n="adv"/>
@@ -5092,6 +5133,36 @@ And then there are some categories like "month", with all the months.
     </rule>
 
     <!-- SECTION: Adpositions -->
+
+    <rule comment="REGLA: pr noun-acc  - 2 position">
+      <pattern>
+        <pattern-item n="pr"/>
+        <pattern-item n="gen"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/>
+</call-macro>
+      <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        <out>
+          <chunk name="pr" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="PREP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
 
     <rule comment="REGLA: pr  - 1 position">
       <pattern>
