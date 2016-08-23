@@ -26,18 +26,14 @@ datere= å bli datert = see
 
 Mii lea beaiváduvvon = Mij lea tjaalasovveme 
 
+echo 03.02. 2012 beaiváduvvon gohččun ja áššelistu  | apertium -d. sme-sma
+03.02. jaepien 2012 tjaalasovveme gåhtjome jïh aamhteselæstoe
+
 
 03.02.12 beaiváduvvon gohččun oktan áššelisttuin, prográmmain ja sárdnunáiggiin dohkkehuvvo.
-03.02.12 *beaiváduvvon gåhtjomen oktegh aamhteselæstojne, programmine jïh saarnometïjjine #dåhkasjehtedh<vblex><tv><der_passl><vblex><iv><indic><pres><p3><sg>.
+03.02.12 tjaalasovveme gåhtjomen oktegh aamhteselæstojne, programmine jïh saarnometïjjine #dåhkasjehtedh<vblex><tv><der_passl><vblex><iv><indic><pres><p3><sg>.
 
 
-
-ođđasis+Adv (på nytt, igjen)
-de lea dárbu ođđasis árvvoštallat stivra- ja organisašuvdnavuogi.
-======
-
-Stáhta huksendoaimmahat (Statsbygg) lullisámegillii? Staatenbægkoeh
-======
 
 Mánáidviesus ii leat oktage fásta bargi: oktage =  akte gænnah 
 ======
@@ -54,10 +50,11 @@ lohkehtalledh:lohkehtall SOVVEDH ; (eget lexicon- for alledh=ikke passiv)
 
 geatnegahtton = forpliktet
 
-#vïedteldihkie<adj><sg><nom>
-    <e><p><l>geatnegahtton<s n="adj"/></l><r>vïedteldihkie<s n="adj"/></r></p></e> (pending-test):eksempel) 
 
-Ráddjejuvvon mearri suohkanat leat váldojuvvon mielde dán guvlui, ja dát suohkanat leat geatnegahtton bálvalit iežas álbmoga sámegillii.
+
+
+SME: Ráddjejuvvon mearri suohkanat leat váldojuvvon mielde dán guvlui, ja dát suohkanat leat geatnegahtton bálvalit iežas álbmoga sámegillii.
+MT: Gaertjiedovveme mierie tjïelth mealtan vaaltasovveme daan dajvese, jïh daah tjïelth dïedtem utnieh hoksehtidh jïjtjse åålmegem saemiengïelesne.
 
 Norgga stáhta leat geatnegahtton láhčit diliid nu ahte sápmelaččat sáhttet sihkkarastit ja ovddidit gielaset.
 
@@ -75,7 +72,8 @@ dohkkehuvvon = vedtatt, godtatt
 #dåhkasjehtedh<vblex><tv><der_passl><vblex><iv><prfprc>
 <e><p><l>dohkkehit<s n="vblex"/><s n="tv"/></l><r>dåhkasjehtedh<s n="vblex"/><s n="tv"/></r></p></e>
 
-ásahus lea dohkkehuvvon oahppobáikin spesialistaohppui.
+SME: ásahus lea dohkkehuvvon oahppobáikin spesialistaohppui.
+MT: institusjovne learoesijjine dåhkasjehteme *spesialistaohppu
 
 Sámediggi áigu konsulteret Luondduhálddašandirektoráhtain ovdalgo hálddašanplána dohkkehuvvo.
 
