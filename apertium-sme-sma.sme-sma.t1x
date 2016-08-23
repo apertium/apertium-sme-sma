@@ -1955,8 +1955,15 @@ And then there are some categories like "month", with all the months.
 
 
     <def-macro n="convert-verb-deriv-1Param" npar="1">
-
-
+      <choose>
+        <when>
+          <test><and>
+               <equal><clip pos="1" side="sl" part="a_infinit"/><lit-tag v="inf"/></equal>
+               <equal><clip pos="1" side="tl" part="lem"/><lit v="lea"/></equal>           
+          </and></test>
+          <let><clip pos="1" side="tl" part="lem"/><lit v=""/></let>
+        </when>
+      </choose>
       <choose>
         <when>
           <test><and>
@@ -1966,7 +1973,6 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_passl"/></let>
         </when>
       </choose>
-
       <choose>
         <when>
           <test>
@@ -3900,7 +3906,7 @@ And then there are some categories like "month", with all the months.
       </choose>  
         <let><clip pos="1" side="tl" part="sem_year"/><lit-tag v="arab"/></let>
         <out>
-          <chunk name="nounnn" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4879,15 +4885,11 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="imp" case="caseFirstword">
+          <chunk name="adv" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
             </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b/>
             <lu>
               <lit v="nimhtie"/>
               <lit-tag v="adv"/>
