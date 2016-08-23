@@ -1962,6 +1962,7 @@ And then there are some categories like "month", with all the months.
                <equal><clip pos="1" side="tl" part="lem"/><lit v="lea"/></equal>           
           </and></test>
           <let><clip pos="1" side="tl" part="lem"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="tags"/><lit v=""/></let>
         </when>
       </choose>
       <choose>
