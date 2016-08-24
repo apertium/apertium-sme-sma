@@ -1100,9 +1100,12 @@ And then there are some categories like "month", with all the months.
       <list-item v="veallahit"/>
       <list-item v="eallit"/>
     </def-list>
-    <def-list n="from-ill-to-ine-verbs">
+    <def-list n="from-ill-to-ine-verb">
       <list-item v="álgit"/>
       <list-item v="oassálastit"/>     
+     </def-list>
+    <def-list n="nom-verb">
+      <list-item v="mearkkašit"/>
      </def-list>
      <def-list n="elative-verbs">
       <list-item v="boahtit"/>
@@ -1488,11 +1491,20 @@ And then there are some categories like "month", with all the months.
         <when>
           <test>
             <and>
-            <in caseless="yes"><var n="main-verb-lemma"/><list n="from-ill-to-ine-verbs"/></in>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="from-ill-to-ine-verb"/></in>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
             </and>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="nom-verb"/></in>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         </when>
        <when>
           <test>
@@ -2062,6 +2074,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="prn" case="caseFirstword">
             <tags>
@@ -3350,6 +3363,70 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: prn-dem noun - 2 positions">
+      <pattern>
+        <pattern-item n="prn-dem"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+         <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: prn-dem noun cmp  - 2 positions out">
+      <pattern>
+        <pattern-item n="prn-dem"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/>
+        <with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>
+         <out>
+          <chunk name="prn-noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: prn-indef noun - 2 positions">
       <pattern>
         <pattern-item n="prn-indef"/>
@@ -3358,10 +3435,12 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <choose><when><test> 
-        <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="num"/></equal></test>        
-          <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="sg.nom"/></let>
-        </when></choose>
+      <choose><when>
+     <test><and><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+     </choose>
         <out>
           <chunk name="prn-noun" case="caseFirstword">
             <tags>
@@ -3393,6 +3472,12 @@ And then there are some categories like "month", with all the months.
         <with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>
+      <choose><when>
+     <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+     </choose>
         <out>
           <chunk name="prn-noun" case="caseFirstword">
             <tags>
@@ -3953,6 +4038,11 @@ And then there are some categories like "month", with all the months.
         </and></test>
         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
         </when>
+      <when>
+     <test><and><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
       </choose>  
         <let><clip pos="1" side="tl" part="sem_year"/><lit-tag v="arab"/></let>
         <out>
@@ -3997,6 +4087,11 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
         </when>
+      <when>
+     <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
       </choose>  
         <out>
           <chunk name="noun" case="caseFirstword">
@@ -4046,6 +4141,11 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
         </when>
+      <when>
+     <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
       </choose>  
         <out>
           <chunk name="noun" case="caseFirstword">
@@ -4990,7 +5090,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
-          <chunk name="NP" case="caseFirstword">
+          <chunk name="advl" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><lit-tag v="ADVL"/></tag>
