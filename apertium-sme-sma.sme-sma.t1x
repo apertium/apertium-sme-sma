@@ -95,7 +95,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="mánnu">
       <cat-item lemma="ođđajagemánnu" tags="n.*"/>
       <cat-item lemma="guovvamánnu" tags="n.*"/>
-      <cat-item lemma="njukčaamánnu" tags="n.*"/>
+      <cat-item lemma="njukčamánnu" tags="n.*"/>
       <cat-item lemma="cuoŋománnu" tags="n.*"/>
       <cat-item lemma="miessemánnu" tags="n.*"/>
       <cat-item lemma="geassemánnu" tags="n.*"/>
@@ -104,7 +104,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="čakčamánnu" tags="n.*"/>
       <cat-item lemma="golggotmánnu" tags="n.*"/>
       <cat-item lemma="skábmamánnu" tags="n.*"/>
-      <cat-item lemma="juovlaamánnu" tags="n.*"/>
+      <cat-item lemma="juovlamánnu" tags="n.*"/>
     </def-cat>
     <def-cat n="lassin">
       <cat-item lemma="lassi" tags="n.*.ess.*"/>
@@ -201,9 +201,6 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="adj2verb">
       <cat-item tags="adj.*"/>
-    </def-cat>
-    <def-cat n="pr2prnind">
-      <cat-item tags="pr.*"/>
     </def-cat>
     <def-cat n="Laarain">
       <cat-item tags="*.com.@Pron←"/>
@@ -477,6 +474,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="geatnegahtton">
       <cat-item lemma="geatnegahtton" tags="adj.*"/>
+      <cat-item lemma="geatnegahttojuvvon" tags="adj.*"/>
     </def-cat>
     <def-cat n="cnjsub">
       <cat-item tags="cnjsub"/>
@@ -485,10 +483,6 @@ And then there are some categories like "month", with all the months.
     <def-cat n="pr">
       <cat-item tags="pr"/>
       <cat-item tags="pr.*"/>
-    </def-cat>
-    <def-cat n="empty-post">
-      <cat-item lemma="" tags="post"/>
-      <cat-item lemma="" tags="post.*"/>
     </def-cat>
     <def-cat n="post">
       <cat-item tags="post"/>
@@ -1156,7 +1150,7 @@ And then there are some categories like "month", with all the months.
     <def-list n="a_time">
       <list-item v="ođđajagemánnu"/>
       <list-item v="guovvamánnu"/>
-      <list-item v="njukčaamánnu"/>
+      <list-item v="njukčamánnu"/>
       <list-item v="cuoŋománnu"/>
       <list-item v="miessemánnu"/>
       <list-item v="geassemánnu"/>
@@ -1165,7 +1159,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="čakčamánnu"/>
       <list-item v="golggotmánnu"/>
       <list-item v="skábmamánnu"/>
-      <list-item v="juovlaamánnu"/>
+      <list-item v="juovlamánnu"/>
       <list-item v="árgabeaivi"/>
       <list-item v="eahket"/>
       <list-item v="eahket"/>
@@ -4495,7 +4489,7 @@ And then there are some categories like "month", with all the months.
     </rule>  
 
 
-    <rule comment="REGLA: remove cop-mainv when adj is vfin  - 3 positions">
+<!--    <rule comment="REGLA: remove cop-mainv when adj is vfin  - 3 positions">
       <pattern>
         <pattern-item n="leat-drop"/>
         <pattern-item n="noun"/>
@@ -4527,7 +4521,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule>  -->
 
 
     <rule comment="REGLA: verb-fin  - 1 position">
@@ -4717,8 +4711,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-    <rule comment="REGLA: geatnegahtton  - 1 position"> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
-      <pattern>
+<!--    <rule comment="REGLA: geatnegahtton  - 1 position"> --> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
+<!--      <pattern>
        <pattern-item n="leat-main"/>
        <pattern-item n="geatnegahtton"/>
       </pattern>
@@ -4738,7 +4732,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
     <rule comment="REGLA: leat-main inessive  - 1 position out"> <!-- áhčči lea ruovttus - aehtjie gåetesne -->
@@ -4780,6 +4774,13 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
+        <choose><when><test><and>
+        <equal><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="vblex"/></equal>
+        <not><equal><clip pos="2" side="tl" part="a_infinit"/><lit-tag v="prfprc"/></equal></not>
+        </and></test>
+                 <let><clip pos="2" side="tl" part="tags"/><concat>
+              <lit-tag v="vblex.indic"/>
+              <var n="anaf_tense_nbrpers"/></concat></let></when></choose>
         <out>
           <chunk name="copnom" case="caseFirstword">
             <tags>

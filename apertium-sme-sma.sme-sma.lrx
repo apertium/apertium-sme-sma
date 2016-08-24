@@ -2404,6 +2404,50 @@
             <select lemma="daerpies" tags="adj.*.sg.nom.*"/> 
          </match>
        </rule>     
+        <rule weight="1.0"> 
+         <match lemma="geatnegahtton" tags="adj.*.sg.nom.*" >
+            <select lemma="stilledh"  /> 
+         </match>
+       </rule>     
+       <rule weight="0.5">  
+         <match lemma="geatnegahtton" tags="adj.*.sg.nom.*" >
+            <select lemma="dïedtem utnedh" /> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="geatnegahtton" tags="adj.*.sg.nom.*" >
+            <select lemma="dïedtem utnedh" /> 
+         </match>
+         <match tags="vblex.*.inf.*" />
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="geatnegahtton" tags="adj.*.sg.nom.*" >
+            <select lemma="dïedtem utnedh" /> 
+         </match>
+         <match lemma="ahte" />
+       </rule>     
+        <rule weight="1.0"> 
+         <match lemma="geatnegahttojuvvon" tags="adj.*.sg.nom.*" >
+            <select lemma="stilledh"  /> 
+         </match>
+       </rule>     
+       <rule weight="0.5">  
+         <match lemma="geatnegahttojuvvon" tags="adj.*.sg.nom.*" >
+            <select lemma="dïedtem utnedh" /> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="geatnegahttojuvvon" tags="adj.*.sg.nom.*" >
+            <select lemma="dïedtem utnedh" /> 
+         </match>
+         <match tags="vblex.*.inf.*" />
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="geatnegahttojuvvon" tags="adj.*.sg.nom.*" >
+            <select lemma="dïedtem utnedh" /> 
+         </match>
+         <match lemma="ahte" />
+       </rule>     
  
          <rule weight="1.0"> 
          <match lemma="go" >
@@ -2429,7 +2473,8 @@
       </rule>     
       <rule weight="0.6">  
       <or>
-          <match lemma="dalle" /> <match lemma="ovdal" />     
+          <match lemma="dalle" /> <match lemma="ovdal" /> <match lemma="maŋŋil" />
+          <match lemma="maŋŋá" /> <match lemma="das" /> <match lemma="dás" />     
        </or>
         <match lemma="go" >
             <select lemma="goh" /> 
