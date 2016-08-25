@@ -105,6 +105,12 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="skábmamánnu" tags="n.*"/>
       <cat-item lemma="juovlamánnu" tags="n.*"/>
     </def-cat>
+    <def-cat n="boahtit">
+      <cat-item lemma="boahtit" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="fápmu">
+      <cat-item lemma="fápmu" tags="n.*.sg.ill.*"/>
+    </def-cat>
     <def-cat n="guhkki">
       <cat-item lemma="guhkki" tags="adj.*.attr.*"/>
     </def-cat>
@@ -3586,6 +3592,32 @@ And then there are some categories like "month", with all the months.
             </tags>
            <lu>
 				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: boahtit fápmui"> 
+      <pattern>
+        <pattern-item n="boahtit"/>
+        <pattern-item n="fápmu"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+		  <b/>
+          <lu>
+				<lit v="juhtedh"/>            
+				<lit-tag v="vblex.iv.inf"/>            
 		  </lu>
           </chunk>
         </out>

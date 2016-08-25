@@ -3,6 +3,13 @@
   <rule weight="1.0">
        <match lemma="boahtit" tags="vblex.*"><select lemma="båetedh" tags="vblex.*"/></match>
   </rule>
+  <rule weight="0.5">
+       <match lemma="boahtit" tags="vblex.*"><select lemma="aelkedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="boahtit" tags="vblex.*"><select lemma="aelkedh" tags="vblex.*"/></match>
+    <match lemma="fápmu" />
+  </rule>
   
   <rule weight="1.1">
        <match lemma="son" tags="prn.*"><select lemma="dïhte" tags="prn.*"/></match>
