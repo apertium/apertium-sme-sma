@@ -1,3 +1,29 @@
+<metalrx>
+
+  <def-seqs>
+    <def-seq n="non-verb">
+      <or>
+        <match tags="n.*"/>
+        <match tags="adv.*"/>
+        <match tags="adj.*"/>
+        <match tags="pr.*"/>
+        <match tags="ij.*"/>
+      </or>
+    </def-seq>
+    <def-seq n="ela-verbs">
+      <or>
+        <match lemma="fárret"/>
+        <match lemma="boahtit"/>
+      </or>
+    </def-seq>
+    <def-seq n="ine-verbs">
+      <or>
+        <match lemma="foo"/>
+        <match lemma="bar"/>
+      </or>
+    </def-seq>
+  </def-seqs>
+
 <rules>
   
   <rule weight="1.0">
@@ -2503,3 +2529,5 @@
        </rule>     
     
 </rules> 
+
+</metalrx>
