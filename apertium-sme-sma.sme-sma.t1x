@@ -321,6 +321,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.prsprc.*"/>
     </def-cat>
     <def-cat n="rdep">
+      <cat-item tags="prn.pers.*.*.@→N"/>
       <cat-item tags="adj.*.*.@→N"/>
       <cat-item tags="adj.*.@→N"/>
       <cat-item tags="n.*.@→N"/>
