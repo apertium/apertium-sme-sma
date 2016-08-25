@@ -105,6 +105,24 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="skábmamánnu" tags="n.*"/>
       <cat-item lemma="juovlamánnu" tags="n.*"/>
     </def-cat>
+     <def-cat n="dem-gen">
+      <cat-item tags="prn.dem.sg.gen.*"/>
+    </def-cat>
+     <def-cat n="ala">
+      <cat-item lemma="ala" tags="post.*"/>
+    </def-cat>
+   <def-cat n="prop-nom">
+      <cat-item tags="np.*.sg.nom.*"/>
+    </def-cat>
+    <def-cat n="prop-attr">
+      <cat-item tags="np.*.attr.*"/>
+    </def-cat>
+    <def-cat n="dárbu">
+      <cat-item lemma="dárbu" tags="n.*.sg.nom.*"/>
+    </def-cat>
+    <def-cat n="dattetge">
+      <cat-item lemma="dattetge" tags="adv.*"/>
+    </def-cat>
     <def-cat n="boahtit">
       <cat-item lemma="boahtit" tags="vblex.*"/>
     </def-cat>
@@ -3598,6 +3616,35 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: dattetge lea dárbu"> 
+      <pattern>
+        <pattern-item n="dattetge"/>
+        <pattern-item n="leat-main"/>
+        <pattern-item n="dárbu"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+           <lu>
+				<clip pos="3" side="tl" part="whole"/>            
+		  </lu>
+		  <b/>
+          <lu>
+				<clip pos="2" side="tl" part="whole"/>            
+		  </lu>
+		  <b/>
+          <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: boahtit fápmui"> 
       <pattern>
         <pattern-item n="boahtit"/>
@@ -4117,6 +4164,114 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+   <rule comment="REGLA: rdep n propnom  - 3 positions">
+      <pattern>
+        <pattern-item n="rdep"/>
+        <pattern-item n="n-not-cmp"/>
+        <pattern-item n="prop-nom"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   <rule comment="REGLA: rdep n propnom  - 4 positions">
+      <pattern>
+        <pattern-item n="rdep"/>
+        <pattern-item n="n-not-cmp"/>
+        <pattern-item n="prop-attr"/>
+        <pattern-item n="prop-nom"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+   <rule comment="REGLA: rdep n attr attr propnom  - 5 positions">
+      <pattern>
+        <pattern-item n="rdep"/>
+        <pattern-item n="n-not-cmp"/>
+        <pattern-item n="prop-attr"/>
+        <pattern-item n="prop-attr"/>
+        <pattern-item n="prop-nom"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="5"/></call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+            <b pos="4"/>
+            <lu>
+              <clip pos="5" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: rdep n  - 3 positions">
       <pattern>
@@ -4559,7 +4714,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nounnn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><var n="func"/></tag>
@@ -5336,6 +5491,28 @@ And then there are some categories like "month", with all the months.
           <chunk name="pr" case="caseFirstword">
             <tags>
               <tag><lit-tag v="PREP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: post  - 2 position">
+      <pattern>
+        <pattern-item n="dem-gen"/>
+        <pattern-item n="ala"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></let>
+       <out>
+          <chunk name="post" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="POST"/></tag>
               <tag><var n="func"/></tag>
             </tags>
             <lu>
