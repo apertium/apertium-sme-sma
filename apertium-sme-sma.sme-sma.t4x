@@ -1164,6 +1164,38 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="MAINV SUBJ ADVL" > 
+      <pattern>
+        <pattern-item n="FMainV"/>
+        <pattern-item n="NP_Subj_l"/>
+        <pattern-item n="NP_Obj_l"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="MAINV SUBJ SPRED" > 
       <pattern>

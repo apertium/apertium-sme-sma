@@ -105,6 +105,9 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="skábmamánnu" tags="n.*"/>
       <cat-item lemma="juovlamánnu" tags="n.*"/>
     </def-cat>
+     <def-cat n="nomact-com">
+      <cat-item tags="vblex.*.der_nomact.n.sg.com.*"/>
+    </def-cat>
      <def-cat n="dem-gen">
       <cat-item tags="prn.dem.sg.gen.*"/>
     </def-cat>
@@ -2374,6 +2377,31 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: nomact-com to inf  - 1 position">
+      <pattern>
+        <pattern-item n="nomact-com"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-verb-deriv-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <out>
+          <chunk name="inf" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
@@ -4725,7 +4753,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
             <b/>
-          <chunk name="verb" case="caseFirstword">
+          <chunk name="vblex" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
