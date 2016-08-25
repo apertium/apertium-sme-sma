@@ -148,7 +148,7 @@ SHOULD_BE_SMA: Dennie sjïekesne lea prinsihpeles mïerhkesjimmie daelie goh sae
 
 SME: Sámediggeráđđi lea dán áigodagas doallan 7 čoahkkima ja lea meannudan 68 ášši.
 
-MT_SMA:  Saemiedigkieraerie lea daennie boelhkesne steereme 7 tjåanghkoeh jïh 68 aamhtesh gïetedamme.
+MT_SMA:  Saemiedigkieraerie lea daennie boelhkesne 7 tjåanghkoeh åtneme jïh 68 aamhtesh gïetedamme. OK
 
 SHOULD_BE_SMA: Saemiedigkieraerie lea daennie boelhkesne 7 tjåanghkoeh åtneme jïh 68 aamhtesh gïetedamme. 
 
@@ -157,7 +157,7 @@ SHOULD_BE_SMA: Saemiedigkieraerie lea daennie boelhkesne 7 tjåanghkoeh åtneme 
 
 SME: Sámi álbmogis galgá leat vejolašvuohta ja vuoigatvuohta geavahit gielas.
 
-SMA_MT: Saemien aalmogen edtja årrodh nuepie jïh reakta gïelem utnedh.
+SMA_MT: Saemien åålmegen galka årrodh nuepie jïh reakta gïelem utnedh.
 
 SHOULD_BE_SMA: 
 
@@ -169,11 +169,12 @@ Stoerre jih stuerebh kriebpesjimmieh aaj sjidtin laaken nualan båetedh, øøkon
 Seammasïenten båetiejin jeenje jïh jeenje krïevenassh dïsse ahte båatsoesaemie edtji laakh dabtedh, maehtiejibie ryöknemem jïh jeatjah paehperebarkojde dijpedh jïh dam ahte maehtieji stuhtjem öörnedh dan ahte jeenjemes nåhtoem destie åådtje.
 
 
-SME: Dán áiggis lei oallugiin boazodoalus unnán skuvla, earret eará ledje oallugat massán skuvlaoahpu soađi vuolde.
+SME: Dán áiggis lei oallugiin boazodoalus unnán skuvla, earret eará ledje oallugat massán skuvlaoahpu soađi vuolde.  Problem 1: <hab> Problem 2: massán @>N
 
 SMA_MANUELT: Dåaroen gaavhtan lin gallesh båatsoeburrie-almetjh nuepiem dasseme skuvlh vaedtsedh.
 
-SMA_MT: Daennie tïjjen lij jïjnjesinie båatsosne vaenie skuvle, gaskem jeatjah lin jïjnjesh dasseme skuvlelearoem dåaroen nuelesne.
+
+SMA_MT: Daennie tïjjen lij jïjnjesinie båatsosne vaenie skuvle, gaskem jeatjah lin jïjnjesh dasseme skuvlelearoem dåaroen nuelesne. - 
 
 SHOULD_BE_SMA_MT: Dej beeli lin jïjnjesi båatsosne vaenie skuvle, gaskem jeatjah lin jïjnjesh skuvlelearoem dåaroen gielhtie dasseme.
 
@@ -195,6 +196,8 @@ vuelie-vueliegasse
 Sven Skjenneberg álggii dán bargui, ja go sus lei virgelohpi 1966-68 rádjái, de ledjen mun su sadjásaš.
 
 Sven Skjenneberge dennie barkojsne sijjiem åadtjoeji jih gosse dihte liegkesem utnieji 1966-68, lim manne dennie sijjesne.
+
+MT: Sven Skjenneberg daennie barkosne aelkieji, jïh gosse dan lij permisjovne 1966-68:j raajan, dellie lim manne dan sijjesne.
 
 Sven Skjenneberg aelkieji daan barkose, jïh gosse dan lij permisjovne 1966-68:j raajan, dellie lim manne dan sijjesne.
 
@@ -240,7 +243,7 @@ MT-SMA_SHOUL_BE: Saemiedigkieraerie guhkiem barkeme saemien maanaj reaktaj jïh 
 SME: Gitta jagi 2007 rájes lea Sámediggeráđđi árjjalaččat bargan dan ala ahte sámi mánát geat leat mánáidsuodjalusa fuolahusas, galget oažžut vuoigatvuođaid sin kultuvrii, ja galget beassat hállat sin giela.
 
 
-MT-SMA: Öövre jaepien 2007 raejeste saemiedigkieraerie eadtjohkelaakan dejnie barkeme ahte saemien maanah gïeh leah maanavaarjelimmien hoksesne, edtjieh reaktah åadtjodh daj kultuvrese, jïh edtjieh åadtjodh håaledh daj gïelem.
+MT-SMA: Öövre jaepien 2007 raejeste saemiedigkieraerie eadtjohkelaakan dejnie barkeme ahte saemien maanah gïeh leah maanavaarjelimmien hoksesne, edtjieh reaktah daj kultuvrese åadtjodh, jïh edtjieh åadtjodh daj gïelem håaledh.
 
 
 MT-SMA_SHOULD_BE: Öövre jaepien 2007 raejeste saemiedigkieraerie eadtjohkelaakan dejnie barkeme ahte saemien maanah gïeh leah maanavaarjelimmien hoksesne, edtjieh reaktah sijjen kultuvrese åadtjodh, jïh edtjieh sijjen gïelem soptsestidh.
@@ -261,7 +264,7 @@ MT-SMA_SHOULD_BE: Saemiedigkieraerie jeahta ahte maanese lea bööremes aaj sov 
 
 SME: Dat lea juo mearriduvvon riikkaidgaskasaš konvenšuvnnain ja lágain.
 
-SMA: Dïhte joe gaskenasjonaale konvensjovnine nænnoestovveme jïh laakine.
+SMA: Dïhte joe gaskenasjonaale konvensjovnine jïh laakine nænnoestovveme.
 
 MT_SMA_SHOULD_BE: Dïhte joe gaskenasjonaale konvensjovnine jïh laakine nænnoestovveme.
 
@@ -271,9 +274,11 @@ MT_SMA_SHOULD_BE: Dïhte joe gaskenasjonaale konvensjovnine jïh laakine nænnoe
 SME:
 Dalle go mánná gártá biebmoruktui, dahje mánáidsuodjalanásahussii, ferte dohkálaččat vuhtii váldit máná kulturduogáža, ja diliid ferte láhčit nu ahte mánná sáhttá ovddidit sihke gielas ja kultuvrras.
 
-MT_SMA: Dellie goh maana beapmoegåatan sjædta, jallh maanajvaarjelimmieinstitusjovnese, tjoevere #dåahka<n><adj><comp><sg><nom> vuehtieji vaeltedh maanan kultuvreduekiem, jïh tsiehkieh tjoevere dan laetjedh ahte maana maahta evtiedidh dovne gïelesne jïh kultuvresne.
+MT_SMA: 
+Dellie goh maana beapmoegåatan sjædta, jallh maanajvaarjelimmieinstitusjovnese, tjoevere sjiehteleslaakan # maanan kultuvreduekiem seatadidh, jïh tsiehkieh tjoevere dan laetjedh ahte maana maahta dovne gïelem jïh kultuvrem evtiedidh.
 
-MT_SMA_SHOULD_BE: Dellie goh maana beapmoegåatan sjædta, jallh maanajvaarjelimmieinstitusjovnese, tjoevere sjïehteleslaakan seatadidh maanan kultuvreduekiem, jïh tsiehkieh tjoevere laetjedh ahte maana maahta jïjtse gïelem jïh kultuvrem evtiedidh.
+MT_SMA_SHOULD_BE: 
+Dellie goh maana beapmoegåatan sjædta, jallh maanajvaarjelimmieinstitusjovnese, tjoevere sjïehteleslaakan seatadidh maanan kultuvreduekiem, jïh tsiehkieh tjoevere laetjedh ahte maana maahta jïjtse gïelem jïh kultuvrem evtiedidh.
 
 
 ****
@@ -281,20 +286,23 @@ MT_SMA_SHOULD_BE: Dellie goh maana beapmoegåatan sjædta, jallh maanajvaarjelim
 SME: Mii leat hui ilus go Sámedikki bargu sámi mánáid vuoigatvuođaid gozihemiin mánáidsuodjalusas dál buktá bohtosiid, dadjá Sámediggeráđi lahttu Ellinor Marita Jåma.
 
 
-MT_SMA: Mijjieh libie dan aavosne gosse Saemiedigkien barkoe saemien maanaj reaktaj geehteminie maanavaarjelimmesne daelie illedahkh buakta, Saemiedigkieraerien lïhtsege jeahta Ellinor Marita Jåma.
+MT_SMA: 
+Mijjieh libie dan aavosne gosse Saemiedigkien barkoe saemien maanaj reaktaj geehtedh maanavaarjelimmesne daelie illedahkh buakta, saemiedigkieraerien lïhtsege Ellinor Marita Jåma jeahta
 
-
-MT_SMA_SHOULD_BE: Mijjieh libie dan aavosne go Saemiedigkien barkoe guktie saemien maanaj reaktaj maanavaarjelimmesne geehtedidh daelie illedahkh buakta, Saemiedigkieraerien lïhtsege Ellinor Marita Jåma jeahta .
+MT_SMA_SHOULD_BE: 
+Mijjieh libie dan aavosne go Saemiedigkien barkoe guktie saemien maanaj reaktaj maanavaarjelimmesne geehtedidh daelie illedahkh buakta, Saemiedigkieraerien lïhtsege Ellinor Marita Jåma jeahta .
 
 ***
 
 SME: Go mánná lea biebmoruovttus de oažžu son bearráigeahčči gii fuolaha ahte mánás lea buorre dilli, ja ahte máná fuolahusdilli lea buorre.
 
 
-SMA_MT: Gosse maana lea beapmoegåetesne dellie dïhte åådtje vuartasjæjjam gie håksa ahte maanan lea buerie tsiehkie, jïh ahte maanan hoksetsiehkie buerie.
+SMA_MT: 
+Gosse maana lea beapmoegåetesne dellie dïhte vuartasjæjjam åådtje gie håksa ahte maanan lea buerie tsiehkie, jïh ahte maanan hoksetsiehkie buerie.
 
 
-SMA_MT_SHOULD_BE: Gosse maana lea beapmoegåetesne dellie dïhte geehtedæjjam åådtje gie vuartesje ahte maanan lea buerie tsiehkie, jïh ahte maanan hoksetsiehkie buerie.
+SMA_MT_SHOULD_BE: 
+Gosse maana lea beapmoegåetesne dellie dïhte geehtedæjjam åådtje gie vuartesje ahte maanan lea buerie tsiehkie, jïh ahte maanan hoksetsiehkie buerie.
 
 
 ***
@@ -302,9 +310,11 @@ SMA_MT_SHOULD_BE: Gosse maana lea beapmoegåetesne dellie dïhte geehtedæjjam �
 
 SME: Bearráigeahččama ulbmilin lea bearráigeahččat dan ahte mánná oažžu dohkálaš fuolahusa biebmoruovttus/mánáidsuodjalanásahusas.
 
-SMA_MT: Vuartasjimmien ulmine lea vuartasjidh dam ahte maana dåhkasjamme hoksem beapmoegåeteste åådtje/maanajvaarjelimmieinstitusjovneste.
+SMA_MT: 
+Vuartasjimmien ulmine lea vuartasjidh dam ahte maana dåhkasjamme hoksem beapmoegåeteste/maanajvaarjelimmieinstitusjovneste åådtje. OK
 
-SMA_MT_SHOULD_BE: Vuartasjimmien ulmine lea vuartasjidh dam ahte maana dåhkasjamme hoksem beapmoegåeteste/maanajvaarjelimmieinstitusjovneste åådtje.
+SMA_MT_SHOULD_BE: 
+Vuartasjimmien ulmine lea vuartasjidh dam ahte maana dåhkasjamme hoksem beapmoegåeteste/maanajvaarjelimmieinstitusjovneste åådtje.
 
 
 *****
@@ -321,12 +331,15 @@ SMA_MT_SHOULD_BE: Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadt
 
 ****
 
-SME: Dattetge lea dárbu dovddahit dan čielgasit láhkaásahusain mat gusket mánáid bearráigeahččamii biebmoruovttuin ja mánáidsuodjalanásahusain, cealká Sámediggeráđi lahttu Ellinor Marita Jåma.
+SME: Dattetge lea dárbu dovddahit dan čielgasit láhkaásahusain mat gusket mánáid bearráigeahččamii biebmoruovttuin ja mánáidsuodjalanásahusain, cealká Sámediggeráđi lahttu Ellinor Marita Jåma. 
+Problem: čielgasit+Adj
 
-MT_SMA: Daerpies lea darhkan dam jiehtedh tjïelkebe njoelkedassine mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine, Saemiedigkieraerien lïhtsege Ellinor Jåma jeahta.
+MT_SMA: 
+Daerpies lea darhkan dam jiehtedh tjïelkebe njoelkedassine mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine, Saemiedigkieraerien lïhtsege Ellinor Jåma jeahta.
 
 
-SMA_MT_SHOULD_BE: Daerpies lea darhkan jiehtedh tjïelkeslaakan njoelkedassine mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine, Saemiedigkieraerien lïhtsege  Ellinor Marita Jåma jeahta.
+SMA_MT_SHOULD_BE: 
+Daerpies lea darhkan jiehtedh tjïelkeslaakan njoelkedassine mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine, Saemiedigkieraerien lïhtsege  Ellinor Marita Jåma jeahta.
 
 Gjelder ordrekkefølgen Daerpies lea ... også disse?
 maiddái lea dárbu   
@@ -341,17 +354,21 @@ Seammás lea dárbu
 SME: Sámediggeráđi konsultašuvnnaid bokte Mánáid-, dásseárvo- ja searvadahttindepartemeanttain leat láhkaásahusat mat gusket mánáid bearráigeahččamii biebmoruovttuin ja mánáidsuodjalanásahusain rievdaduvvon ja dat bohtet fápmui miessemánu 1. b. 2012 .
 
 
-MT_SMA: Saemiedigkieraerien konsultasjovnine Maana-, mïrrestalleme- jïh ektiedimmiedepartemeenti leah njoelkedassh mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine jarkestovveme jïh dah suehpeden 1. b. 2012 aelkieh juhtedh . 
+MT_SMA: 
+Saemiedigkieraerien konsultasjovnine Maana-, mïrrestalleme- jïh ektiedimmiedepartemeenti leah njoelkedassh mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine jarkestovveme jïh dah suehpeden 1. b. 2012 aelkieh juhtedh . 
 
-SMA_MT_SHOULD_BE: Saemiedigkieraerien konsultasjovnine leah Maana-, mïrrestalleme- jïh ektiedimmiedepartemeenti  njoelkedassh mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine jarkestovveme jïh dah suehpeden 1. b. 2012 aelkieh juhtedh. 
+SMA_MT_SHOULD_BE: 
+Saemiedigkieraerien konsultasjovnine leah Maana-, mïrrestalleme- jïh ektiedimmiedepartemeenti  njoelkedassh mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine jarkestovveme jïh dah suehpeden 1. b. 2012 aelkieh juhtedh. 
 
 ***
 
 SME: Dearvvašvuođabearráigeahčču Fylkkamánni bokte bearráigeahččá mánáid mánáidsuodjalanásahusain.
 
-MT_SMA: Healsoenvaaksjome Fylhkemaennine maanah maanajvaarjelimmieinstitusjovnine vuartesje.
+MT_SMA: 
+Healsoenvaaksjome Fylhkemaennine maanah maanajvaarjelimmieinstitusjovnine vuartesje.
 
-SMA_MT_SHOULD_BE:  Healsoenvaaksjome Fylhkemaennine maanah maanajvaarjelimmieinstitusjovnine vuartesje. Ikke helt klar????) 
+SMA_MT_SHOULD_BE:  
+Healsoenvaaksjome Fylhkemaennine maanah maanajvaarjelimmieinstitusjovnine vuartesje. Ikke helt klar????) 
 
 Fylhkemaennien baaktoe ?
 
@@ -359,9 +376,11 @@ Fylhkemaennien baaktoe ?
 
 SME: Dát rievdadusat bohtet fápmui miessemánu 1. b. 2012 .
 
-MT_SMA: Daah jorkestimmieh suehpeden 1. b. 2012 aelkieh juhtedh . OK
+MT_SMA: 
+Daah jorkestimmieh suehpeden 1. b. 2012 aelkieh juhtedh . OK
 
-SMA_MT_SHOULD_BE: Daah jorkestimmieh suehpeden 1. b. 2012 aelkieh juhtedh.
+SMA_MT_SHOULD_BE: 
+Daah jorkestimmieh suehpeden 1. b. 2012 aelkieh juhtedh.
 
 
 
