@@ -2254,6 +2254,38 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: jagis 2001 - 2 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
+      <pattern> 
+        <pattern-item n="mánnu"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"> <with-param pos="1"/><with-param pos="2"/></call-macro>
+         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let> 
+        <let><clip pos="2" side="tl" part="sem_year"/><lit-tag v="arab"/></let>
+         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
+                          <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
     <rule comment="REGLA:  2001 - 2 position in-out"> <!--  2001 - jaepien 2001  -->
       <pattern> 
         <pattern-item n="semyear"/>
