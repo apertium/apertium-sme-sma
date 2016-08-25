@@ -89,7 +89,6 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.prfprc.*"/>
       <cat-item tags="n.*"/>
       <cat-item tags="adv.*"/>
-      <cat-item tags="adj.*.attr.*"/>
       <cat-item tags="adj.*.*.nom.*"/>
     </def-cat>
     <def-cat n="mánnu">
@@ -105,6 +104,12 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="golggotmánnu" tags="n.*"/>
       <cat-item lemma="skábmamánnu" tags="n.*"/>
       <cat-item lemma="juovlamánnu" tags="n.*"/>
+    </def-cat>
+    <def-cat n="guhkki">
+      <cat-item lemma="guhkki" tags="adj.*.attr.*"/>
+    </def-cat>
+    <def-cat n="áigi">
+      <cat-item lemma="áigi" tags="n.*"/>
     </def-cat>
     <def-cat n="lassin">
       <cat-item lemma="lassi" tags="n.*.ess.*"/>
@@ -3557,6 +3562,28 @@ And then there are some categories like "month", with all the months.
 				<clip pos="2" side="tl" part="whole"/>            
 		  </lu>
 		  <b/>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: guhkes áiggi - guhkiem"> 
+      <pattern>
+        <pattern-item n="guhkki"/>
+        <pattern-item n="áigi"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
            <lu>
 				<clip pos="1" side="tl" part="whole"/>            
 		  </lu>

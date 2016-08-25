@@ -26,7 +26,17 @@
        <or><match lemma="ja" /><match lemma="ahte" />   </or>
        <match lemma="eanet" />
   </rule>
-
+  <rule weight="1.0">
+       <match lemma="guhkki" tags="adj.*"><select lemma="guhkies" /></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="guhkki" tags="adj.*"><select lemma="guhkiem" tags="adv.*" /></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="guhkki" tags="adj.*"><select lemma="guhkiem" tags="adv.*" /></match>
+       <match lemma="áigi" />
+  </rule>
+ 
   <rule weight="1.0">
        <match lemma="unni" tags="adj.*"><select lemma="onne" tags="adj.*"/></match>
   </rule>
@@ -855,8 +865,12 @@
        <match lemma="duohta" tags="n.*.sg.loc.*"/>
   </rule>
   <rule weight="0.6">
-       <match lemma="váldit" tags="vblex.tv.*"><select lemma="krööhkedh" tags="vblex.*"/></match>
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="seatadidh" tags="vblex.*"/></match>
        <match lemma="vuhtii"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="vuhtii"/>
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="seatadidh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.6">
        <match lemma="váldit" tags="vblex.tv.*">
