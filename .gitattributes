@@ -23,6 +23,7 @@
 /configure.ac -text
 dev/Departemeente_SMA[!!-~]5.txt -text
 dev/GG_Lastoeh.txt -text svneol=unset#application/octet-stream
+dev/Olli_kronikk_sme2sma.html -text svneol=unset#application/xml
 dev/all.html -text
 dev/allparallel.html -text svneol=unset#application/xml
 dev/analyse-all-stages.sh -text
@@ -477,6 +478,7 @@ texts/udir_muitalus.sma.txt -text
 texts/udir_muitalus.sme.txt -text
 texts/villmo-sma.txt -text
 texts/villmo-sme.txt -text
+tmx_data/Olli_kronikk_sme2sma.tmx -text
 tmx_data/fjellheim_sme2sma.tmx -text
 tmx_data/jorgaleddjiide_sme2sma.tmx -text
 tmx_data/samediggeweb_sme2sma.tmx -text
