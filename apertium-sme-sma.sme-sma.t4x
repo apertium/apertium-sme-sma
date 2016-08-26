@@ -120,8 +120,8 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="Modifier_Argument_l">
-        <cat-item tags="*.@→N.*"/>
-        <cat-item tags="NP.@←OBJ.*"/>
+        <cat-item tags="*.@→N.*"/> <!-- this set only -->
+        <cat-item tags="NP.@←OBJ.*"/> <!-- also in next set -->
         <cat-item tags="NP.@←OBJ"/>
         <cat-item tags="NP.@-F←OBJ"/>
         <cat-item tags="NP.@-F←OBJ.*"/>
@@ -195,6 +195,8 @@ And then there are some categories like "month", with all the months.
          <cat-item tags="SV.@-FMAINV.*"/>
          <cat-item tags="SV.*.@-FMAINV.*"/>
          <cat-item tags="SV.*.*.@-FMAINV.*"/>
+         <cat-item lemma="inf" tags="SV.@A←"/>
+         <cat-item lemma="inf" tags="SV.@N←"/>
     </def-cat>
 
     <def-cat n="FMainV">
@@ -221,6 +223,8 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="inf" tags="SV.*.@-FMAINV.*"/>
         <cat-item lemma="inf" tags="SV.@N←.*"/>
         <cat-item lemma="inf" tags="SV.@N←"/>
+        <cat-item lemma="inf" tags="SV.@A←.*"/>
+        <cat-item lemma="inf" tags="SV.@A←"/>
     </def-cat>
 
 
