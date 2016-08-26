@@ -2137,6 +2137,19 @@
     </match>    
     </rule>      
 
+     <rule weight="0.5">   
+       <match lemma="mielde" tags="post.*" >   
+           <select lemma="guhkiebasse"/>  
+        </match>   
+        </rule>            
+
+     <rule weight="0.6">   
+       <match lemma="áigi" />   
+       <match lemma="mielde"  tags="post.*" >   
+           <select lemma="guhkiebasse"/>  
+        </match>   
+        </rule>            
+
 <!--  temporarly; rule is comming -->
      <rule weight="0.5">   
        <match lemma="mielde">   

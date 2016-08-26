@@ -170,6 +170,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="mielde_adv">
       <cat-item lemma="mielde" tags="adv.*"/>
     </def-cat>
+    <def-cat n="mielde_post">
+      <cat-item lemma="mielde" tags="post.*"/>
+    </def-cat>
     <def-cat n="bokte">
       <cat-item lemma="bokte" tags="post.*"/>
       <cat-item lemma="bakte" tags="post.*"/>
@@ -3678,6 +3681,29 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: áiggi mielde - "> 
+      <pattern>
+        <pattern-item n="áigi"/>
+        <pattern-item n="mielde_post"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+          <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+           <lu>
+				<clip pos="2" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: dattetge lea dárbu"> 
       <pattern>
