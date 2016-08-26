@@ -1101,6 +1101,7 @@ And then there are some categories like "month", with all the months.
     <def-var n="foc-ge"/>
     <def-var n="poss"/>
     <def-var n="case"/>
+    <def-var n="tense"/>
     <def-var n="nmbr"/>
     <def-var n="anaf_tense_nbrpers"/>
     <def-var n="main-verb-lemma"/>
@@ -1314,6 +1315,7 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><var n="anaf_tense_nbrpers"/><concat><clip pos="1" side="tl" part="a_tense"/><clip pos="1" side="tl" part="a_pers"/>
           <clip pos="1" side="tl" part="a_nbr"/></concat></let>
+          <let><var n="tense"/><clip pos="1" side="tl" part="a_tense"/></let>
         </when>
       </choose> 
      <choose>
@@ -5441,7 +5443,8 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex.indic"/>
-              <var n="anaf_tense_nbrpers"/>
+              <var n="tense"/>
+              <lit-tag v="p3.sg"/>
             </lu>
           </chunk>
         </out>
