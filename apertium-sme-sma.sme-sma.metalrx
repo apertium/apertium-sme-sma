@@ -41,7 +41,7 @@
        <match lemma="son" tags="prn.*"><select lemma="dïhte" tags="prn.*"/></match>
   </rule>
   <rule weight="0.5">
-       <match lemma="son" tags="prn.pers.*.*.nom.*"><select lemma="dat" tags="prn.*"/></match>
+       <match lemma="son" tags="prn.pers.*.*.nom.*"><select lemma="dïhte" tags="prn.*"/></match>
   </rule>
  
  
@@ -64,6 +64,15 @@
        <match lemma="son" tags="prn.pers.p3.sg.com.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
 
+  <rule weight="1.0">
+       <match lemma="son" tags="prn.*"><select lemma="dah" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="son" tags="prn.pers.*.*.nom.*"><select lemma="dah" tags="prn.*"/></match>
+  </rule>
+
+
+
   <rule weight="0.5">
        <match lemma="son" tags="prn.*"><select lemma="sijjieh" tags="prn.*"/></match>
   </rule>
@@ -82,6 +91,14 @@
  <rule weight="0.6">
        <match lemma="son" tags="prn.pers.p3.pl.com.*"><select lemma="sijjieh" tags="prn.*"/></match>
   </rule>
+
+  <rule weight="1.0">
+       <match lemma="son" tags="prn.*"><select lemma="dah guaktah" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="son" tags="prn.pers.*.*.nom.*"><select lemma="dah guaktah" tags="prn.*"/></match>
+  </rule>
+
 
   <rule weight="0.5">
        <match lemma="son" tags="prn.*"><select lemma="såtnoeh" tags="prn.*"/></match>
