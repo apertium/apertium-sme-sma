@@ -48,6 +48,7 @@ dev/oldscripts/generation-schoolcorpus-errors.sh -text
 dev/oldscripts/generation-test.sh -text
 dev/oldscripts/test-prefix.sh -text
 dev/sme_bidix_sanity.sh -text
+dev/sme_synonyms.freq -text
 dev/sorting_sanityoutput.sh -text
 dev/star-report.freq -text
 dev/star_analysis -text
