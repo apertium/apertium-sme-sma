@@ -131,6 +131,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="dattetge">
       <cat-item lemma="dattetge" tags="adv.*"/>
+      <cat-item lemma="maiddái" tags="adv.*"/>
     </def-cat>
     <def-cat n="boahtit">
       <cat-item lemma="boahtit" tags="vblex.*"/>
@@ -341,6 +342,9 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.*.*.@→N"/>
       <cat-item tags="adj.*.@→N"/>
       <cat-item tags="n.*.@→N"/>
+      <cat-item tags="n.*.*.*.@→N"/>
+      <cat-item tags="n.*.*.*.*.@→N"/>
+      <cat-item tags="n.*.*.@→N"/>
       <cat-item tags="np.*.@→N"/>
       <cat-item tags="num.*.@→N"/>
       <cat-item tags="vblex.*.@→N"/>
@@ -4385,6 +4389,57 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+
+    <rule comment="REGLA: rdep rdep cmp n  - 3 positions out">
+      <pattern>
+        <pattern-item n="rdep"/> 
+        <pattern-item n="rdep"/> 
+        <pattern-item n="n-not-cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="convert-case-nbr-poss-3Param">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+              <choose>  
+        <when><test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+        </when>
+      <when>
+     <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+      </choose>  
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="REGLA: n num-ldep  - 2 positions">
