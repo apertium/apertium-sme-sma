@@ -85,6 +85,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="MOVE">
         <cat-item tags="*.MOVE"/>
+        <cat-item tags="MOVE.*"/>
     </def-cat>
     <def-cat n="NP_Subj_r">
         <cat-item tags="NP.@SUBJ→.*"/>
