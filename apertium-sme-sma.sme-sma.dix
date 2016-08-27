@@ -308,7 +308,7 @@
     
     <e><p><l>mielde<s n="adv"/></l><r>mealtan<s n="adv"/></r></p></e> 
     <e><p><l>mielde<s n="post"/></l><r>mietie<s n="post"/></r></p></e>
-    <e><p><l>mielde<s n="post"/></l><r>guhkiebasse<s n="adv"/></r></p></e>
+<!--    <e><p><l>mielde<s n="post"/></l><r>guhkiebasse<s n="adv"/></r></p></e> vej. áiggi mielde --> 
     
     <e><p><l>nala<s n="post"/></l><r>nelnie<s n="post"/></r></p></e>
     <e><p><l>nalde<s n="post"/></l><r>nelhtie<s n="post"/></r></p></e>
@@ -1322,7 +1322,8 @@
     <e><p><l>giittos<s n="n"/></l><r>gæjhtoe<s n="n"/></r></p></e>
     <e><p><l>giittus<s n="n"/></l><r>gæjhtoe<s n="n"/></r></p></e>
     <e><p><l>álgomuddu<s n="n"/></l><r>aalkove<s n="n"/></r></p></e>
-    
+     <e><p><l>elemeanta<s n="n"/></l><r>elemeente<s n="n"/></r></p></e>
+   
 
     <e><p><l>giitu<s n="ij"/></l><r>gæjhtoe<s n="ij"/></r></p></e>
     <e><p><l>giitu<s n="ij"/></l><r>gudtsien<s n="ij"/></r></p></e>
@@ -3563,6 +3564,7 @@
     <e><p><l>gielalaš<s n="adj"/></l><r>gïeleh<s n="adj"/></r></p></e>
     <e><p><l>boaris<s n="adj"/></l><r>båeries<s n="adj"/></r></p></e>
     <e><p><l>barggán<s n="adj"/></l><r>barkijes<s n="adj"/></r></p></e>
+    <e><p><l>vuoras<s n="adj"/><s n="sem_hum"/><s n="pl"/></l><r>båeries<b/>almetje<s n="adj"/><s n="pl"/></r></p></e>
     <e><p><l>vuoras<s n="adj"/></l><r>båeries<s n="adj"/></r></p></e>
 <!--    <e><p><l>guovddáš<s n="adj"/></l><r>voernges<s n="adj"/></r></p></e> -->
     <e><p><l>oktasaš<s n="adj"/></l><r>ektie<s n="adj"/></r></p></e>  
@@ -4338,6 +4340,7 @@
     <e><p><l>báikkálaččat<s n="adv"/></l><r>byjreskisnie<s n="adv"/></r></p></e>
     <e><p><l>njuolggo<s n="adv"/></l><r>ryöktesth<s n="adv"/></r></p></e>
     <e><p><l>hárve<s n="adv"/></l><r>vaenie<s n="adv"/></r></p></e>
+    <e><p><l>hárve<s n="adj"/></l><r>vaenie<s n="adj"/></r></p></e>
     <e><p><l>unnimusat<s n="adv"/></l><r>unnemes<s n="adv"/></r></p></e>
     <e><p><l>oppalaččat<s n="adv"/></l><r>ellieslaakan<s n="adv"/></r></p></e>
     <e><p><l>ollislaččat<s n="adv"/></l><r>ellieslaakan<s n="adv"/></r></p></e>
@@ -4652,7 +4655,7 @@
     <e><p><l>doarrut<s n="vblex"/><s n="tv"/></l><r>gåaljodh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>doddjot<s n="vblex"/><s n="iv"/></l><r>dåajodh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dohkkehit<s n="vblex"/><s n="tv"/></l><r>dåhkasjehtedh<s n="vblex"/><s n="tv"/></r></p></e> <!-- lrx -->
-    <e><p><l>dohkkehit<s n="vblex"/><s n="tv"/><s n="der_passl"/><s n="vblex"/><s n="iv"/></l><r>dåhkasjidh<s n="vblex"/><s n="iv"/><s n="der_ht"/><s n="vblex"/><s n="der_passl"/><s n="vblex"/><s n="iv"/></r></p></e>
+    <e><p><l>dohkkehit<s n="vblex"/><s n="tv"/><s n="der_passl"/><s n="vblex"/><s n="iv"/></l><r>dåhkasjidh<s n="vblex"/><s n="iv"/><s n="der_ht"/><s n="vblex"/></r></p></e>
     <e><p><l>dohkket<s n="vblex"/><s n="iv"/></l><r>dajpedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>doidit<s n="vblex"/><s n="tv"/></l><r>skuvledh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dollet<s n="vblex"/><s n="tv"/></l><r>bïksedh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -5507,7 +5510,7 @@
     <e><p><l>normeret<s n="vblex"/><s n="tv"/></l><r>normeeredh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dádjadit<s n="vblex"/><s n="iv"/></l><r>gaavnedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>standardiseret<s n="vblex"/><s n="tv"/></l><r>standardiseeredh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>čalmmustahttit<s n="vblex"/><s n="tv"/></l><r>tjelmiestehtedh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>čalmmustahttit<s n="vblex"/><s n="tv"/></l><r>vååjnesasse<b/>bïejedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>seailut<s n="vblex"/><s n="iv"/></l><r>stååresjidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>gávnnadit<s n="vblex"/><s n="tv"/></l><r>gaavnedidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ságastallat<s n="vblex"/><s n="tv"/></l><r>soptsestalledh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -5563,6 +5566,7 @@
     <e><p><l>Norgga<b/>Sámiid<b/>Riikkasearvi<s n="np"/></l><r>Nöörjen<b/>Saemiej<b/>Rihjkesiebrie<s n="np"/></r></p></e>
     <e><p><l>Norgga<b/>Boazosápmelaččaid<b/>Riikkasearvi<s n="np"/></l><r>Nöörjen<b/>Båatsoesaemiej<b/>Rijhkesaervie<s n="np"/></r></p></e>
     <e><p><l>4H-searvi<s n="np"/></l><r>4H-searvi<s n="np"/></r></p></e>
+    <e><p><l>ILO-konvenšuvdna<s n="np"/></l><r>ILO-konvensjovne<s n="n"/></r></p></e>
     <e><p><l>Aahkavaerie<s n="np"/></l><r>Aahkavaerie<s n="np"/></r></p></e>
     <e><p><l>Snåase<s n="np"/></l><r>Snåase<s n="np"/></r></p></e>
     <e><p><l>Smeland<s n="np"/></l><r>Smeland<s n="np"/></r></p></e>

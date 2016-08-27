@@ -1465,7 +1465,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
         </when>
-      </choose> 
+      </choose> -->
 
       <choose>
         <when>
@@ -1474,7 +1474,7 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
-      </choose> -->
+      </choose> 
       <choose>
         <when>
           <test><and>
@@ -1518,48 +1518,29 @@ And then there are some categories like "month", with all the months.
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-
-<!--              <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
             </and>
             <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
-<!--              <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
             </and>
           <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
-            </and>
+            </and> 
           <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
-            </and>
-
+            </and> 
           </or>
-
-<!--          </test>
+         </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
         </when>
-        <when>
-          <test><and>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal></and>
-          </test>
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
-        </when>
-        <when>
-          <test><and>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></and> -->
-          </test> 
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
-        </when> 
       </choose>
       <choose>
         <when>
@@ -1599,7 +1580,7 @@ And then there are some categories like "month", with all the months.
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
              <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
               <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></not>
-<!--            <not><in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in></not> -->
+             <not> <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal></not>
             </and>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
@@ -2698,7 +2679,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: num adj loc  - 4 position out"> <!-- compounding -->
+    <rule comment="REGLA: num adj loc  - 4 position out"> 
       <pattern>
         <pattern-item n="num-sg-all"/>
         <pattern-item n="prn-dem-loc"/>
@@ -2733,6 +2714,52 @@ And then there are some categories like "month", with all the months.
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
           </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: num adj loc  - 4 position out"> 
+      <pattern>
+        <pattern-item n="num-sg-all"/>
+        <pattern-item n="prn-dem-loc"/>
+        <pattern-item n="adj-rdep"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="noun-loc-num"/>
+      </pattern>
+      <action>
+    <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+    <call-macro n="general-macro-4Param"><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/><with-param pos="5"/></call-macro>
+      <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+      <let><clip pos="5" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+  
+         <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags> 
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+             <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+               <b/>
+               <mlu>
+             <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="5" side="tl" part="whole"/>
+              </lu>
+                </mlu>
+         </chunk>
         </out>
       </action>
     </rule>
@@ -2783,7 +2810,7 @@ And then there are some categories like "month", with all the months.
          </when>
      </choose>
         <out>
-          <chunk name="nounnnnn" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>

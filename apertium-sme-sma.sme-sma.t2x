@@ -64,6 +64,8 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
         <cat-item tags="NP.@←OBJ.*"/>
+        <cat-item tags="NP.@OBJ→"/>
+        <cat-item tags="NP.@←OBJ"/>
     </def-cat>
     <def-cat n="Obj_l">
         <cat-item tags="NP.@←OBJ.*"/>
@@ -72,18 +74,20 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="ADVL-right">
         <cat-item tags="NP.@ADVL→.*"/>
+        <cat-item tags="NP.@ADVL→"/>
         <cat-item tags="NP.@ADVL-ine→.*"/>
-        <cat-item tags="NP.@ADVL-ine→."/>
+        <cat-item tags="NP.@ADVL-ine→"/>
         <cat-item tags="NP.@ADVL-ela→.*"/>
-        <cat-item tags="NP.@ADVL-ela→."/>
+        <cat-item tags="NP.@ADVL-ela→"/>
     </def-cat>
 
     <def-cat n="ADVL-left">
         <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@←ADVL"/>
         <cat-item tags="NP.@←ADVL-ine.*"/>
-        <cat-item tags="NP.@←ADVL-ine."/>
+        <cat-item tags="NP.@←ADVL-ine"/>
         <cat-item tags="NP.@←ADVL-ela.*"/>
-        <cat-item tags="NP.@←ADVL-ela."/>
+        <cat-item tags="NP.@←ADVL-ela"/>
     </def-cat>
     <def-cat n="numcompl">
         <cat-item tags="*.@Num←"/>
@@ -98,6 +102,8 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Pr">
         <cat-item tags="NP.@←ADVL.*"/>
         <cat-item tags="NP.@P←.*"/>
+        <cat-item tags="NP.@←ADVL"/>
+        <cat-item tags="NP.@P←"/>
     </def-cat>
 
     <def-cat n="FMainV">
@@ -105,6 +111,8 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.@+FMAINV.*"/>
         <cat-item tags="SV.*.@+FMAINV.*"/>
         <cat-item tags="SV.*.*.@+FMAINV.*"/>
+        <cat-item tags="SV.*.@+FMAINV"/>
+        <cat-item tags="SV.*.*.@+FMAINV"/>
     </def-cat>
 
     <def-cat n="FAuxV">
@@ -112,6 +120,8 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.@+FMAUXV.*"/>
         <cat-item tags="SV.*.@+FMAUXV.*"/>
         <cat-item tags="SV.*.*.@+FMAUXV.*"/>
+        <cat-item tags="SV.*.@+FMAUXV"/>
+        <cat-item tags="SV.*.*.@+FMAUXV"/>
     </def-cat>
 
     <def-cat n="dovne">

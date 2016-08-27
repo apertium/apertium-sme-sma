@@ -2147,14 +2147,14 @@
         </match>   
         </rule>            
 
-<!--  default: mielde   -->
+<!--  default: mielde -->  
  <rule weight="1.0">   
   <match lemma="mielde">   
       <select lemma="mealtan"/>    
     </match>    
     </rule>      
 
-     <rule weight="0.5">   
+ <!--    <rule weight="0.5">   
        <match lemma="mielde" tags="post.*" >   
            <select lemma="guhkiebasse"/>  
         </match>   
@@ -2165,7 +2165,7 @@
        <match lemma="mielde"  tags="post.*" >   
            <select lemma="guhkiebasse"/>  
         </match>   
-        </rule>            
+        </rule>     -->        
 
 <!--  temporarly; rule is comming -->
      <rule weight="0.5">   
