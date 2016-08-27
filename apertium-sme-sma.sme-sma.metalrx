@@ -8,6 +8,9 @@
         <match tags="adj.*"/>
         <match tags="pr.*"/>
         <match tags="ij.*"/>
+        <match tags="prn.*"/>
+        <match tags="post.*"/>
+        <match tags="np.*"/>
       </or>
     </def-seq>
     <def-seq n="ela-verbs">
@@ -142,13 +145,13 @@
   <rule weight="1.0">
        <match lemma="guhkki" tags="adj.*"><select lemma="guhkies" /></match>
   </rule>
-  <rule weight="0.5">
+<!--  <rule weight="0.5">
        <match lemma="guhkki" tags="adj.*"><select lemma="guhkiem" tags="adv.*" /></match>
   </rule>
   <rule weight="0.6">
        <match lemma="guhkki" tags="adj.*"><select lemma="guhkiem" tags="adv.*" /></match>
-       <match lemma="áigi" />
-  </rule>
+       <match lemma="áigi" /> 
+  </rule> -->
  
   <rule weight="1.0">
        <match lemma="unni" tags="adj.*"><select lemma="onne" tags="adj.*"/></match>
@@ -452,6 +455,21 @@
        <match lemma="galgat" tags="vblex.iv.*"><select lemma="galkedh" tags="vblex.*"/></match> 
        <match lemma="leat" />
   </rule>
+  <rule weight="1.0">
+       <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="leah" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="mejtie" tags="pcle.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="leat" tags="vblex.iv.indic.pres.p3.sg.qst.*"><select lemma="mejtie" tags="pcle.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="leat" tags="vblex.iv.indic.pres.p3.sg.*"><select lemma="mejtie" tags="pcle.*"/></match>
+       <match lemma="go" tags="pcle.qst.*" />
+  </rule>
+
+
   <rule weight="1.0">
        <match lemma="gállu" tags="n.*"><select lemma="gaalloe" tags="n.*"/></match>
   </rule>
@@ -2479,22 +2497,11 @@
          </match>
        </rule>     
 
-       <rule weight="1.0"> 
-         <match lemma="áigi" >
-            <select lemma="tïjje"/> 
-         </match>
-       </rule>     
-       <rule weight="0.5">  
-         <match lemma="áigi" >
-            <select lemma="aejkie" tags="n.*"/> 
-         </match>
-       </rule>     
-       <rule weight="0.6"> 
-         <match lemma="boahtte" tags="adj.*"/>
-         <match lemma="áigi" >
-            <select lemma="aejkie" tags="n.*"/> 
-         </match>
-       </rule>     
+       <rule weight="1.0"> <match lemma="áigi" ><select lemma="tïjje"/> </match></rule>     
+       <rule weight="0.5"> <match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>     
+       <rule weight="0.5"> <match lemma="áigi" ><select lemma="" tags="n.*"/></match></rule>     
+       <rule weight="0.6"> <match lemma="boahtte" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>     
+      <rule weight="0.6"><match lemma="guhkki" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>    
        <rule weight="1.0"> 
          <match lemma="boahtte" >
             <select lemma="båetije"/> 
@@ -2623,6 +2630,22 @@
             <select lemma="goh" /> 
          </match>
        </rule>    
+       <rule weight="0.6"> 
+         <match lemma="go" >
+            <select lemma="goh"/> 
+         </match>
+    <repeat upto="3"><seq n="non-verb"/></repeat> 
+      <match tags="vblex.*.indic.pres.*" />
+      </rule>     
+       <rule weight="0.6"> 
+         <match lemma="go" >
+            <select lemma="goh"/> 
+         </match>
+      <match tags="vblex.*.indic.pres.*" />
+      </rule>     
+
+
+
 
        <!-- coggat -->   <!-- daajhtodh -->
   <rule weight="1.0">
