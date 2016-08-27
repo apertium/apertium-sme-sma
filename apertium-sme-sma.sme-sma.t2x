@@ -67,6 +67,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="Obj_l">
         <cat-item tags="NP.@←OBJ.*"/>
+        <cat-item tags="NP.@←OBJ"/>
     </def-cat>
 
     <def-cat n="ADVL-right">
