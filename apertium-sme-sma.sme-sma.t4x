@@ -52,6 +52,7 @@ And then there are some categories like "month", with all the months.
   <section-def-cats>
     <def-cat n="SENT">
         <cat-item tags="*.SENT.*"/>
+        <cat-item tags="*.SENT"/>
     </def-cat>
     <def-cat n="NP">
       <cat-item tags="NP"/>
@@ -69,6 +70,7 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="SV_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
+        <cat-item tags="NP.@OBJ→"/>
         <cat-item tags="NP.@←OBJ.*"/>
         <cat-item tags="NP.@←OBJ"/>
         <cat-item tags="NP.@-F←OBJ"/>
@@ -78,12 +80,15 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Subj">
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="NP.@←SUBJ.*"/>
+        <cat-item tags="NP.@SUBJ→"/>
+        <cat-item tags="NP.@←SUBJ"/>
     </def-cat>
     <def-cat n="MOVE">
         <cat-item tags="*.MOVE"/>
     </def-cat>
     <def-cat n="NP_Subj_r">
         <cat-item tags="NP.@SUBJ→.*"/>
+        <cat-item tags="NP.@SUBJ→"/>
     </def-cat>
     <def-cat n="NP_Subj_not_Rel_r">
         <cat-item lemma="prn" tags="NP.@SUBJ→.pers"/>
@@ -91,6 +96,7 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="noun" tags="NP.@SUBJ→"/>
     </def-cat>
     <def-cat n="left_border">
+        <cat-item tags="NP.@SUBJ→"/>
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="cnjsub.@CVP.*"/>
         <cat-item tags="cnjsub.@CVP"/>
@@ -111,8 +117,9 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@←SUBJ.*"/>
     </def-cat>
     <def-cat n="NP_Spred_l">
-        <cat-item tags="*.@←SPRED"/>
-        <cat-item tags="*.@←SPRED.*"/>
+        <cat-item tags="NP.@←SPRED"/>
+        <cat-item tags="NP.@←SPRED.*"/>
+        <cat-item tags="SA.@←SPRED"/>
     </def-cat>
     <def-cat n="NP_Opred_l">
         <cat-item tags="*.@←OPRED"/>
@@ -197,6 +204,8 @@ And then there are some categories like "month", with all the months.
          <cat-item tags="SV.*.*.@-FMAINV.*"/>
          <cat-item lemma="inf" tags="SV.@A←"/>
          <cat-item lemma="inf" tags="SV.@N←"/>
+         <cat-item lemma="inf" tags="SV.@←OBJ"/>
+         <cat-item lemma="inf" tags="SV.@←OBJ.*"/>
     </def-cat>
 
     <def-cat n="FMainV">
@@ -225,6 +234,8 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="inf" tags="SV.@N←"/>
         <cat-item lemma="inf" tags="SV.@A←.*"/>
         <cat-item lemma="inf" tags="SV.@A←"/>
+         <cat-item lemma="inf" tags="SV.@←OBJ"/>
+         <cat-item lemma="inf" tags="SV.@←OBJ.*"/>
     </def-cat>
 
 
@@ -237,6 +248,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="prn-pers-subj">
       <cat-item lemma="prn-pers" tags="NP.@SUBJ→.*"/>
+      <cat-item lemma="prn-pers" tags="NP.@SUBJ→"/>
     </def-cat>
 
 
@@ -276,9 +288,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prn-dem">
         <cat-item lemma="prn" tags="NP.@SUBJ→.*"/>
     </def-cat>
-    <def-cat n="Vcop">
-        <cat-item lemma="cop-mainv" tags="SV"/>
-        <cat-item lemma="cop-mainv" tags="SV.*"/>
+    <def-cat n="Vcop-drop">
+        <cat-item lemma="cop-mainv" tags="SV.*.pres"/>
+        <cat-item lemma="cop-mainv" tags="SV.*.ger"/>
     </def-cat>
 
     <def-cat n="Ine_adverb">
@@ -387,7 +399,7 @@ And then there are some categories like "month", with all the months.
 <!--    <rule> --> <!--genitiv instead of elative in habitive constructions -->
 <!--      <pattern>
         <pattern-item n="NP"/>
-        <pattern-item n="Vcop"/>
+        <pattern-item n="Vcop-drop"/>
       </pattern>
       <action>
         <choose>
@@ -499,24 +511,6 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="Subj FMAINV X" > <!-- V X becomes X V. -->
-      <pattern>     
-        <pattern-item n="IFMainV"/>
-        <pattern-item n="Argument_l"/>
-      </pattern>
-      <action>
-        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <out>
-          <chunk>
-            <clip pos="2" part="whole"/>
-          </chunk>
-          <b pos="1"/>
-           <chunk>
-            <clip pos="1" part="whole"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
 
 
 <!--    <rule comment="Subj FMAINV Obj  ADVL" >  V Obj ADVL becomes Obj ADVL V. 		 -->
@@ -977,24 +971,16 @@ And then there are some categories like "month", with all the months.
 
  <rule comment="prn lea NP" > <!--  delete cop -->
       <pattern>
-        <pattern-item n="prn-dem"/>
-        <pattern-item n="Vcop"/>
+        <pattern-item n="Vcop-drop"/>
         <pattern-item n="NP_Spred_l"/>
       </pattern>
       <action>
         <out>
           <chunk>
-            <clip pos="1" part="lemh"/>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-            <clip pos="1" part="lemq"/>
-          </chunk>
-            <b/>
-          <chunk>
-            <clip pos="3" part="lemh"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-            <clip pos="3" part="lemq"/>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
           </chunk>
         </out>
       </action>
@@ -1005,7 +991,7 @@ And then there are some categories like "month", with all the months.
  <rule comment="prn lea mod NP" > <!--  delete cop -->
       <pattern>
         <pattern-item n="prn-dem"/>
-        <pattern-item n="Vcop"/> 
+        <pattern-item n="Vcop-drop"/> 
         <pattern-item n="modifier"/>
         <pattern-item n="NP_Spred_l"/>
       </pattern>
@@ -1584,20 +1570,46 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
+    <rule comment="NP_Subj_r lea ADVL" > 
+      <pattern>
+        <pattern-item n="NP_Subj_r"/>
+        <pattern-item n="Vcop-drop"/>
+        <pattern-item n="ADVL_left"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b/>
+        <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="FAuxV NP_Spred_l" > <!--SVP becomes SPV. Diet orru leamen somá. Doete luste vååjnoe -->
       <pattern>
         <pattern-item n="FAuxV"/>
+        <pattern-item n="Vcop-drop"/>
         <pattern-item n="NP_Spred_l"/>
       </pattern>
       <action>
-        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
-            <clip pos="2" part="lemh"/>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-            <clip pos="2" part="lemq"/>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
           </chunk>
           <b/>
         <chunk>
@@ -2007,8 +2019,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule comment="IMainV ADVL_left" > <!--VA becomes AV -->
-      <pattern>
+<!--   <rule comment="IMainV ADVL_left" > VA becomes AV       <pattern>
         <pattern-item n="IMainV"/>
         <pattern-item n="ADVL_left"/>
       </pattern>
@@ -2030,8 +2041,27 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
+
+    <rule comment="FMAINV X" > <!-- V X becomes X V. -->
+      <pattern>     
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="Argument_l"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+           <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
   <rule comment="add extra word gænnah" >  
       <pattern>

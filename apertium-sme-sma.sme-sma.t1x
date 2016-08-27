@@ -110,6 +110,8 @@ And then there are some categories like "month", with all the months.
     </def-cat>
      <def-cat n="nomact-ill">
       <cat-item tags="vblex.*.der_nomact.n.sg.ill.*"/>
+      <cat-item lemma ="árvvoštallan" tags="n.*.sg.ill.*"/>
+      <cat-item lemma ="huksen" tags="n.*.sg.ill.*"/>
     </def-cat>
      <def-cat n="dem-gen">
       <cat-item tags="prn.dem.sg.gen.*"/>
@@ -351,6 +353,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.cmp_splitr.*"/>
     </def-cat>
     <def-cat n="adj-rdep">
+      <cat-item tags="adj.*.*.*.@→N"/>
+      <cat-item tags="adj.*.*.@→N"/>
       <cat-item tags="adj.*.@→N"/>
     </def-cat>
     <def-cat n="oassálastit">
@@ -437,6 +441,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prn-indef">
       <cat-item tags="prn.ind.*"/>
     </def-cat>
+    <def-cat n="prn-dem-loc">
+      <cat-item tags="prn.dem.pl.loc.*"/>
+    </def-cat>
     <def-cat n="prn-attr">
       <cat-item tags="prn.ind.attr"/>
       <cat-item tags="prn.ind.attr.*"/>
@@ -472,9 +479,11 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="leat" tags="*.@+FAUXV"/>
       <cat-item lemma="leat" tags="*.@-FAUXV"/>
     </def-cat>
-    <def-cat n="leat-main">
-      <cat-item lemma="leat" tags="*.@+FMAINV"/>
+    <def-cat n="leat-main-infin">
       <cat-item lemma="leat" tags="*.@-FMAINV"/>
+    </def-cat>
+    <def-cat n="leat-main-fin">
+      <cat-item lemma="leat" tags="*.@+FMAINV"/>
     </def-cat>
     <def-cat n="leat-drop">
       <cat-item lemma="leat" tags="vblex.iv.*.pres.*.*.@+FMAINV"/>
@@ -646,9 +655,12 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="CD"/>
     </def-attr>
 
-    <def-attr n="a_infinit">
+    <def-attr n="a_infin">
        <attr-item tags="prfprc"/>
        <attr-item tags="inf"/>
+       <attr-item tags="actio.ess"/>
+       <attr-item tags="prfprc"/>
+       <attr-item tags="ger"/>
     </def-attr>
     <def-attr n="a_attr">
        <attr-item tags="attr"/>
@@ -1124,6 +1136,7 @@ And then there are some categories like "month", with all the months.
     <def-var n="nmbr"/>
     <def-var n="anaf_tense_nbrpers"/>
     <def-var n="main-verb-lemma"/>
+    <def-var n="infin"/>
     <def-var n="caseFirstword"/>
   </section-def-vars>
   <section-def-lists>
@@ -1336,6 +1349,15 @@ And then there are some categories like "month", with all the months.
           <clip pos="1" side="tl" part="a_nbr"/></concat></let>
           <let><var n="tense"/><clip pos="1" side="tl" part="a_tense"/></let>
         </when>
+        <when>
+          <test>
+            <or>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FAUXV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
+            </or>
+          </test>
+          <let><var n="infin"/><clip pos="1" side="tl" part="a_infin"/></let>
+        </when>
       </choose> 
      <choose>
         <when>
@@ -1384,7 +1406,7 @@ And then there are some categories like "month", with all the months.
       <choose>
         <when>
           <test>
-            <equal><clip pos="1" side="tl" part="a_infinit"/><lit-tag v="prfprc"/></equal>
+            <equal><clip pos="1" side="tl" part="a_infin"/><lit-tag v="prfprc"/></equal>
           </test>
       <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let> 
         </when>
@@ -1420,17 +1442,17 @@ And then there are some categories like "month", with all the months.
     </def-macro>
 
     <def-macro n="convert-case-nbr-poss-1Param" npar="1">
-      <let><var n="poss"/><lit-tag v="PX"/></let>
+<!--      <let><var n="poss"/><lit-tag v="PX"/></let> why this? 
       <choose>
         <when>
           <test>
             <not><equal><clip pos="1" side="sl" part="a_poss"/><lit v=""/></equal></not>
-          </test>
+          </test> -->
           <let><var n="poss"/><clip pos="1" side="sl" part="a_poss"/></let>
-        </when>
+<!--        </when>
       </choose>
-      <choose> <!-- For seammá:seamma -->
-        <when>
+      <choose> --> <!-- For seammá:seamma -->
+ <!--       <when>
           <test>
             <and>
               <equal><clip pos="1" side="tl" part="a_indecl"/><lit-tag v="indecl"/></equal>
@@ -1443,7 +1465,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
         </when>
-      </choose>
+      </choose> 
 
       <choose>
         <when>
@@ -1452,7 +1474,7 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         </when>
-      </choose>
+      </choose> -->
       <choose>
         <when>
           <test><and>
@@ -1509,10 +1531,14 @@ And then there are some categories like "month", with all the months.
           <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal>
+             <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
+             <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
             </and>
           <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal>
+             <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
+             <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
             </and>
 
           </or>
@@ -2035,7 +2061,7 @@ And then there are some categories like "month", with all the months.
       <choose>
         <when>
           <test><and>
-               <equal><clip pos="1" side="sl" part="a_infinit"/><lit-tag v="inf"/></equal>
+               <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="inf"/></equal>
                <equal><clip pos="1" side="tl" part="lem"/><lit v="lea"/></equal>           
           </and></test>
           <let><clip pos="1" side="tl" part="lem"/><lit v=""/></let>
@@ -2097,7 +2123,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <lit v="dïhte"/><concat>
-              <lit-tag v="pron.dem"/>
+              <lit-tag v="prn.dem"/>
               <clip pos="2" side="tl" part="a_nbr"/>
               <lit-tag v="nom"/></concat>
             </lu>
@@ -2466,7 +2492,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="nomact-ill"/>
       </pattern>
       <action>
-        <call-macro n="convert-verb-deriv-1Param">
+        <call-macro n="convert-nomact-1Param">
           <with-param pos="1"/>
         </call-macro>
         <call-macro n="general-macro-1Param">
@@ -2557,7 +2583,7 @@ And then there are some categories like "month", with all the months.
 
    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out"> 
       <pattern>
-              <pattern-item n="n-cmp"/>
+        <pattern-item n="n-cmp"/>
         <pattern-item n="genmod"/>
         <pattern-item n="nomact-ill"/>
       </pattern>
@@ -2636,7 +2662,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="REGLA: num adj loc  - 4 position out"> <!-- compounding -->
       <pattern>
         <pattern-item n="num-sg-all"/>
-        <pattern-item n="adj-sup"/>
+        <pattern-item n="adj-rdep"/>
         <pattern-item n="noun-loc-num"/>
       </pattern>
       <action>
@@ -2665,6 +2691,46 @@ And then there are some categories like "month", with all the months.
                <b/>
              <lu>
                 <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: num adj loc  - 4 position out"> <!-- compounding -->
+      <pattern>
+        <pattern-item n="num-sg-all"/>
+        <pattern-item n="prn-dem-loc"/>
+        <pattern-item n="adj-rdep"/>
+        <pattern-item n="noun-loc-num"/>
+      </pattern>
+      <action>
+    <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+      <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+      <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+  
+         <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags> 
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+             <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+               <b/>
+             <lu>
+                <clip pos="4" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
@@ -2709,9 +2775,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <call-macro n="convert-case-nbr-poss-1Param">
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
      <choose><when>
      <test><and><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -2719,7 +2783,7 @@ And then there are some categories like "month", with all the months.
          </when>
      </choose>
         <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nounnnnn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3559,7 +3623,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: áiggi mielde - "> 
+<!--    <rule comment="REGLA: áiggi mielde - "> 
       <pattern>
         <pattern-item n="áigi"/>
         <pattern-item n="mielde_post"/>
@@ -3579,13 +3643,13 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
     <rule comment="REGLA: dattetge lea dárbu"> 
       <pattern>
         <pattern-item n="dattetge"/>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-main-fin"/>
         <pattern-item n="dárbu"/>
       </pattern>
       <action>
@@ -3598,10 +3662,6 @@ And then there are some categories like "month", with all the months.
             </tags>
            <lu>
 				<clip pos="3" side="tl" part="whole"/>            
-		  </lu>
-		  <b/>
-          <lu>
-				<clip pos="2" side="tl" part="whole"/>            
 		  </lu>
 		  <b/>
           <lu>
@@ -4798,7 +4858,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: verb-fin  - 1 position">
       <pattern>
-        <pattern-item n="leat-drop"/>
+        <pattern-item n="leat-main-fin"/>
       </pattern>
       <action>
         <call-macro n="convert-verb-deriv-1Param">
@@ -4813,6 +4873,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="tense"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -4822,10 +4883,38 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: verb-fin  - 1 position">
+      <pattern>
+        <pattern-item n="leat-main-infin"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-verb-deriv-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
+        <out>
+          <chunk name="cop-mainv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="infin"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: verb-fin  - 3 position">
       <pattern>
         <pattern-item n="habitive"/>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-main-fin"/>
         <pattern-item n="pl-words"/>
       </pattern>
       <action>
@@ -4856,32 +4945,6 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: verb-fin  - 1 position">
-      <pattern>
-        <pattern-item n="leat-main-pret"/>
-      </pattern>
-      <action>
-        <call-macro n="convert-verb-deriv-1Param">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="general-macro-1Param">
-          <with-param pos="1"/>
-        </call-macro>
-        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
-        <out>
-          <chunk name="cop-mainv" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-              <tag><var n="func"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
 
 
 
@@ -5006,72 +5069,6 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-
-    <rule comment="REGLA: leat-main inessive  - 1 position out"> <!-- áhčči lea ruovttus - aehtjie gåetesne -->
-      <pattern>
-        <pattern-item n="leat-drop"/>
-        <pattern-item n="inessive"/>
-      </pattern>
-      <action>
-       <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ine"/></let>
-       <call-macro n="general-macro-2Param">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-        </call-macro>
-        <out>
-          <chunk name="nom" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-              <tag><var n="func"/></tag>
-            </tags>
-<!--
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b pos="1"/>
--->
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: leat-main subpred  - 1 position out">
-      <pattern>
-        <pattern-item n="leat-drop"/>
-        <pattern-item n="subpred"/>
-      </pattern>
-      <action>
-        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
-        <choose><when><test><and>
-        <equal><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="vblex"/></equal>
-        <not><equal><clip pos="2" side="tl" part="a_infinit"/><lit-tag v="prfprc"/></equal></not>
-        </and></test>
-                 <let><clip pos="2" side="tl" part="tags"/><concat>
-              <lit-tag v="vblex.indic"/>
-              <var n="anaf_tense_nbrpers"/></concat></let></when></choose>
-        <out>
-          <chunk name="copnom" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-              <tag><lit-tag v="@←SPRED"/></tag> 
-            </tags>
-<!--
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b pos="1"/>
--->
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
 
 
 
@@ -5213,7 +5210,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="inf"> 
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="func"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
@@ -5634,7 +5631,7 @@ And then there are some categories like "month", with all the months.
    <rule comment="REGLA: ii conneg vejolaš  - 2 positions out">
       <pattern>
         <pattern-item n="ii"/>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-main-infin"/>
         <pattern-item n="vejolaš"/>
       </pattern>
       <action>
@@ -5674,7 +5671,7 @@ And then there are some categories like "month", with all the months.
    <rule comment="REGLA: ii conneg ge vejolaš  - 2 positions out">
       <pattern>
         <pattern-item n="ii"/>
-        <pattern-item n="leat-main"/>
+        <pattern-item n="leat-main-infin"/>
         <pattern-item n="pcle"/>
         <pattern-item n="vejolaš"/>
       </pattern>
