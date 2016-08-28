@@ -38,6 +38,13 @@ And then there are some categories like "month", with all the months.
 <interchunk>
 
   <section-def-cats>
+    <def-cat n="Vcopaux-drop">
+        <cat-item lemma="cop-auxv" tags="SV.*.pres"/>
+    </def-cat>
+    <def-cat n="WORD">
+      <cat-item tags="NP.*"/>
+      <cat-item tags="SV.*"/>
+    </def-cat>
     <def-cat n="NP">
       <cat-item tags="NP"/>
       <cat-item tags="NP.*"/>
@@ -172,6 +179,22 @@ And then there are some categories like "month", with all the months.
   </section-def-vars>
 
   <section-rules>
+ <rule comment="lea aux WORD" > <!--  delete cop -->
+      <pattern>
+        <pattern-item n="Vcopaux-drop"/>
+        <pattern-item n="WORD"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule>
       <pattern>
