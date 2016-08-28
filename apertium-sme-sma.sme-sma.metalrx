@@ -1,8 +1,25 @@
 <metalrx>
 
   <def-seqs>
+    <def-seq n="word">
+      <or>
+        <match tags="cnjcoo.*"/>
+        <match tags="cnjsub.*"/>
+        <match tags="n.*"/>
+        <match tags="adv.*"/>
+        <match tags="adj.*"/>
+        <match tags="pr.*"/>
+        <match tags="ij.*"/>
+        <match tags="prn.*"/>
+        <match tags="post.*"/>
+        <match tags="np.*"/>
+        <match tags="vblex.*"/>
+      </or>
+    </def-seq>
     <def-seq n="non-verb">
       <or>
+        <match tags="cnjcoo.*"/>
+        <match tags="cnjsub.*"/>
         <match tags="n.*"/>
         <match tags="adv.*"/>
         <match tags="adj.*"/>
@@ -46,25 +63,38 @@
   <rule weight="0.5">
        <match lemma="son" tags="prn.pers.*.*.nom.*"><select lemma="dïhte" tags="prn.*"/></match>
   </rule>
- 
- 
   <rule weight="0.5">
        <match lemma="son" tags="prn.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
   <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="word"/>
+       <seq n="word"/>
        <match lemma="son" tags="prn.pers.p3.sg.gen.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
   <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="word"/>
+       <seq n="word"/>
        <match lemma="son" tags="prn.pers.p3.sg.acc.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
  <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="word"/>
+       <seq n="word"/>
        <match lemma="son" tags="prn.pers.p3.sg.loc.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
  <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="word"/>
+       <seq n="word"/>
        <match lemma="son" tags="prn.pers.p3.sg.ill.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
  <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.sg.com.*"><select lemma="satne" tags="prn.*"/></match>
+       <seq n="word"/>
+       <seq n="word"/>
+       <seq n="word"/>
+      <match lemma="son" tags="prn.pers.p3.sg.com.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
 
   <rule weight="1.0">
@@ -142,6 +172,54 @@
        <or><match lemma="ja" /><match lemma="ahte" />   </or>
        <match lemma="eanet" />
   </rule>
+  <rule weight="1.0">
+       <match lemma="unni" tags="adj.*"><select lemma="onne" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="unni" tags="adj.*"><select lemma="onne-unnebe" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="unni" tags="adj.*"><select lemma="onne-unnebe" tags="adj.*"/></match>
+       <or><match lemma="ja" /><match lemma="ahte" />   </or>
+       <match lemma="unni" />
+  </rule>
+  <rule weight="1.0">
+       <match lemma="stuoris" tags="adj.*"><select lemma="stoere" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="stuoris" tags="adj.*"><select lemma="stoere-stoerebe" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="stuoris" tags="adj.*"><select lemma="stoere-stoerebe" tags="adj.*"/></match>
+       <or><match lemma="ja" /><match lemma="ahte" />   </or>
+       <match lemma="stuoris" />
+  </rule>
+  <rule weight="1.0">
+       <match lemma="gárži" tags="adj.*"><select lemma="gaertjies" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gárži" tags="adj.*"><select lemma="gaertjies-gaertjebe" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="gárži" tags="adj.*"><select lemma="gaertjies-gaertjebe" tags="adj.*"/></match>
+       <or><match lemma="ja" /><match lemma="ahte" />   </or>
+       <match lemma="gárži" />
+  </rule>
+  <rule weight="1.0">
+       <match lemma="gallji" tags="adj.*"><select lemma="geljies" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gallji" tags="adj.*"><select lemma="geljies-geljebe" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="gallji" tags="adj.*"><select lemma="geljies-geljebe" tags="adj.*"/></match>
+       <or><match lemma="ja" /><match lemma="ahte" />   </or>
+       <match lemma="gallji" />
+  </rule>
+
+
+
+
   <rule weight="1.0">
        <match lemma="guhkki" tags="adj.*"><select lemma="guhkies" /></match>
   </rule>
@@ -458,10 +536,7 @@
   <rule weight="1.0">
        <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="leah" tags="vblex.*"/></match>
   </rule>
-  <rule weight="0.5">
-       <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="mejtie" tags="pcle.*"/></match>
-  </rule>
-  <rule weight="0.6">
+  <rule weight="1.1">
        <match lemma="leat" tags="vblex.iv.indic.pres.p3.sg.qst.*"><select lemma="mejtie" tags="pcle.*"/></match>
   </rule>
   <rule weight="0.6">
@@ -1438,7 +1513,7 @@
        <rule weight="0.6">
    <match lemma="go" tags="cnjsub.*" />
    <match lemma="vejolaš" tags="adj.*.sg.nom.*">
-     <select lemma="gåaradidh" tags="vblex.*"/>
+     <select lemma="gåaradidh" tags="vblex.indic.*"/>
    </match>
  </rule>     
 
@@ -2501,6 +2576,7 @@
        <rule weight="0.5"> <match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>     
        <rule weight="0.5"> <match lemma="áigi" ><select lemma="" tags="n.*"/></match></rule>     
        <rule weight="0.6"> <match lemma="boahtte" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>     
+       <rule weight="0.6"> <match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match><match lemma="mielde" tags="post.*"/></rule>     
       <rule weight="0.6"><match lemma="guhkki" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>    
        <rule weight="1.0"> 
          <match lemma="boahtte" >
