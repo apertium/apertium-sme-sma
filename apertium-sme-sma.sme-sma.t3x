@@ -58,6 +58,7 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="NP_Subj_l">
         <cat-item tags="NP.@←SUBJ"/>
+        <cat-item tags="NP.@←SUBJ.pers"/>
     </def-cat>
 
     

@@ -1055,7 +1055,7 @@
     <e><p><l>dálkkádat<s n="n"/></l><r>daelhkie<s n="n"/></r></p></e>
     <e><p><l>standárda<s n="n"/></l><r>standarde<s n="n"/></r></p></e>
     <e><p><l>signála<s n="n"/></l><r>signaale<s n="n"/></r></p></e>
-    <e><p><l>fápmolinnjá<s n="n"/></l><r>faamoelinja<s n="n"/></r></p></e>
+    <e><p><l>linnjá<s n="n"/></l><r>linje<s n="n"/></r></p></e>
     <e><p><l>finánsa<s n="n"/></l><r>finanse<s n="n"/></r></p></e>
     <e><p><l>minoriteahtta<s n="n"/></l><r>minoriteete<s n="n"/></r></p></e>
     <e><p><l>submi<s n="n"/></l><r>beetnehveahka<s n="n"/></r></p></e>
@@ -3516,11 +3516,11 @@
     <e><p><l>eanas<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>jeenje<s n="adj"/><s n="sup"/><s n="attr"/></r></p></e>
     <e><p><l>eambbogat<s n="prn"/><s n="ind"/></l><r>jïjnje<s n="adj"/><s n="comp"/></r></p></e> 
      <e><p><l>eanet<s n="adj"/><s n="comp"/></l><r>jeenje-jeenjebe<s n="adj"/><s n="comp"/></r></p></e>
-     <e><p><l>unni<s n="adj"/><s n="comp"/></l><r>onne-unnebe<s n="adj"/><s n="comp"/></r></p></e>
-     <e><p><l>stuoris<s n="adj"/><s n="comp"/></l><r>stoere-stoerebe<s n="adj"/><s n="comp"/></r></p></e>
-     <e><p><l>gárži<s n="adj"/><s n="comp"/></l><r>gaertjies-gaertjebe<s n="adj"/><s n="comp"/></r></p></e>
-     <e><p><l>gallji<s n="adj"/><s n="comp"/></l><r>geljies-geljebe<s n="adj"/><s n="comp"/></r></p></e>
-     <e><p><l>gallji<s n="adj"/><s n="comp"/></l><r>geljies<s n="adj"/></r></p></e>
+     <e><p><l>unni<s n="adj"/><s n="sem_dummytag"/><s n="comp"/></l><r>onne-unnebe<s n="adj"/><s n="comp"/></r></p></e>
+     <e><p><l>stuoris<s n="adj"/><s n="sem_hum"/><s n="comp"/></l><r>stoere-stoerebe<s n="adj"/><s n="comp"/></r></p></e>
+     <e><p><l>gárži<s n="adj"/><s n="sem_dummytag"/><s n="comp"/></l><r>gaertjies-gaertjebe<s n="adj"/><s n="comp"/></r></p></e>
+     <e><p><l>gallji<s n="adj"/><s n="sem_dummytag"/><s n="comp"/></l><r>geljies-geljebe<s n="adj"/><s n="comp"/></r></p></e>
+     <e><p><l>gallji<s n="adj"/></l><r>geljies<s n="adj"/></r></p></e>
      <e><p><l>geográfalaš<s n="adj"/></l><r>geograafeles<s n="adj"/></r></p></e>
 
 
@@ -3565,7 +3565,7 @@
     <e><p><l>gielalaš<s n="adj"/></l><r>gïeleh<s n="adj"/></r></p></e>
     <e><p><l>boaris<s n="adj"/></l><r>båeries<s n="adj"/></r></p></e>
     <e><p><l>barggán<s n="adj"/></l><r>barkijes<s n="adj"/></r></p></e>
-    <e><p><l>vuoras<s n="adj"/><s n="sem_hum"/><s n="pl"/></l><r>båeries<b/>almetje<s n="adj"/><s n="pl"/></r></p></e>
+    <e><p><l>vuoras<s n="adj"/><s n="sem_hum"/><s n="pl"/></l><r>båeries<b/>almetje<s n="n"/><s n="pl"/></r></p></e>
     <e><p><l>vuoras<s n="adj"/></l><r>båeries<s n="adj"/></r></p></e>
 <!--    <e><p><l>guovddáš<s n="adj"/></l><r>voernges<s n="adj"/></r></p></e> -->
     <e><p><l>oktasaš<s n="adj"/></l><r>ektie<s n="adj"/></r></p></e>  
@@ -4342,7 +4342,6 @@
     <e><p><l>báikkálaččat<s n="adv"/></l><r>byjreskisnie<s n="adv"/></r></p></e>
     <e><p><l>njuolggo<s n="adv"/></l><r>ryöktesth<s n="adv"/></r></p></e>
     <e><p><l>hárve<s n="adv"/></l><r>vaenie<s n="adv"/></r></p></e>
-    <e><p><l>hárve<s n="adj"/></l><r>vaenie<s n="adj"/></r></p></e>
     <e><p><l>unnimusat<s n="adv"/></l><r>unnemes<s n="adv"/></r></p></e>
     <e><p><l>oppalaččat<s n="adv"/></l><r>ellieslaakan<s n="adv"/></r></p></e>
     <e><p><l>ollislaččat<s n="adv"/></l><r>ellieslaakan<s n="adv"/></r></p></e>
@@ -51669,7 +51668,7 @@
 <e><p><l>ruonas<s n="adj"/></l><r>kruana<s n="adj"/></r></p></e>
 <e><p><l>alu<s n="post"/></l><r>jïlle<s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
 <e><p><l>ollu<s n="adj"/></l><r>jïjnje<s n="adj"/></r></p></e>
-<e><p><l>ovtta<b/>gievrru<s n="adj"/></l><r>veaksehks<s n="adj"/></r></p></e>
+<e><p><l>ovtta<b/>gievrru<s n="adv"/></l><r>veaksehks<s n="adj"/></r></p></e>
 <e><p><l>elektronihkalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>elektronihke<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
 <e><p><l>trohpalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>tropihke<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
 <e><p><l>árktalaš<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>arktihke<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
