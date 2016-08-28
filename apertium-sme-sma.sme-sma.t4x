@@ -54,6 +54,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.SENT.*"/>
         <cat-item tags="*.SENT"/>
     </def-cat>
+
     <def-cat n="NP">
       <cat-item tags="NP"/>
       <cat-item tags="NP.*"/>
@@ -292,6 +293,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="Vcop-drop">
         <cat-item lemma="cop-mainv" tags="SV.*.pres"/>
         <cat-item lemma="cop-mainv" tags="SV.*.ger"/>
+    </def-cat>
+    <def-cat n="Vcopaux-drop">
+        <cat-item lemma="cop-auxv" tags="SV.*.pres"/>
     </def-cat>
 
     <def-cat n="Ine_adverb">
@@ -970,7 +974,7 @@ And then there are some categories like "month", with all the months.
 <!--    </rule>														  -->
 
 
- <rule comment="prn lea NP" > <!--  delete cop -->
+ <rule comment="lea NP" > <!--  delete cop -->
       <pattern>
         <pattern-item n="Vcop-drop"/>
         <pattern-item n="NP_Spred_l"/>
