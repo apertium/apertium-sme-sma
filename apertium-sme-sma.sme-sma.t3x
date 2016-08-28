@@ -44,6 +44,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="WORD">
       <cat-item tags="NP.*"/>
       <cat-item tags="SV.*"/>
+      <cat-item tags="ADV.*"/>
     </def-cat>
     <def-cat n="NP">
       <cat-item tags="NP"/>
@@ -54,6 +55,11 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="NP.@←SUBJ.*"/>
     </def-cat>
+
+    <def-cat n="NP_Subj_l">
+        <cat-item tags="NP.@←SUBJ"/>
+    </def-cat>
+
     
     <def-cat n="NP_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
@@ -196,7 +202,32 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule>
+    <rule comment="MAINV SUBJ" > 
+      <pattern>
+        <pattern-item n="FMainV"/>
+        <pattern-item n="NP_Subj_l"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+<!--    <rule>
       <pattern>
         <pattern-item n="NP"/>
       </pattern>
@@ -209,8 +240,8 @@ And then there are some categories like "month", with all the months.
             <clip pos="1" part="lemq"/>
           </chunk>
         </out>
-      </action>
-    </rule>
+      </action> 
+    </rule> -->
 
   </section-rules>
 </interchunk>

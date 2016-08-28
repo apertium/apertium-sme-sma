@@ -1141,6 +1141,7 @@ And then there are some categories like "month", with all the months.
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="ext"/>
     <def-var n="func"/>
     <def-var n="foc-ge"/>
     <def-var n="poss"/>
@@ -1342,8 +1343,9 @@ And then there are some categories like "month", with all the months.
         </when>
         <when>
           <test>
-            <and>
+            <and><or>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@A←"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></or>
               <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="vblex"/></equal>
             </and>
           </test>
@@ -1392,7 +1394,6 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_south"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
 
-      <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let>
 
       <!-- Set the +Allegro tag to nothing for now -->
       <let><clip pos="1" side="tl" part="a_allegro"/><lit v=""/></let>
@@ -1409,7 +1410,21 @@ And then there are some categories like "month", with all the months.
           <test>
             <not><equal><clip pos="1" side="tl" part="a_func"/><lit v=""/></equal></not>
           </test>
-          <let><var n="func"/><clip pos="1" side="sl" part="a_func"/></let>
+          <let><var n="func"/><clip pos="1" side="tl" part="a_func"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←ext→"/></equal>
+          </test>
+          <let><var n="ext"/><clip pos="1" side="sl" part="a_exthab"/></let>
+        </when>
+        <when>
+          <test>
+            <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←ext→"/></equal></not>
+          </test>
+          <let><var n="ext"/><lit v=""/></let>
         </when>
       </choose>
       <choose>
@@ -1444,6 +1459,7 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
       <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> 
       <let><clip pos="1" side="tl" part="sem_year"/><lit-tag v="arab"/></let> 
+      <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let>
 <!--       <let><clip pos="1" side="tl" part="a_actio"/><lit-tag v="der_nomact.n.sg"/></let> -->
      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
@@ -2126,6 +2142,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><lit-tag v="ref"/></tag>
             </tags>
             <lu>
@@ -2165,6 +2182,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><clip pos="1" side="sl" part="a_prn_type"/></tag>
               <tag><var n="case"/></tag>
               <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
@@ -2427,7 +2445,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
+              <tag><var n="ext"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2541,6 +2559,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -2652,6 +2671,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -2811,6 +2831,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -2845,6 +2866,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -2915,6 +2937,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -2948,6 +2971,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -2980,6 +3004,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3058,6 +3083,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3109,6 +3135,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3215,6 +3242,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3296,6 +3324,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3429,6 +3458,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3464,6 +3494,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
               <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
             </tags>
@@ -3495,6 +3526,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3534,6 +3566,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
               <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
             </tags>
@@ -3571,6 +3604,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
               <lu>
@@ -3694,8 +3728,9 @@ And then there are some categories like "month", with all the months.
        <out>
           <chunk name="noun" case="caseFirstword">
              <tags>
-              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
             </tags>
            <lu>
 				<clip pos="3" side="tl" part="whole"/>            
@@ -4186,6 +4221,7 @@ And then there are some categories like "month", with all the months.
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
+              <tag><var n="ext"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -4258,6 +4294,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4313,6 +4350,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <mlu>
@@ -4348,6 +4386,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4380,6 +4419,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4419,6 +4459,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4479,6 +4520,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4533,6 +4575,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4590,6 +4633,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4628,6 +4672,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4693,6 +4738,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -4739,6 +4785,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
             <lu>
@@ -5520,6 +5567,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="SA"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -5573,6 +5621,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>

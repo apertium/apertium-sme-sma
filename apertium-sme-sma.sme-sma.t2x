@@ -59,7 +59,15 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Subj">
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="NP.@←SUBJ.*"/>
+        <cat-item tags="NP.@SUBJ→"/>
+        <cat-item tags="NP.@←SUBJ"/>
     </def-cat>
+
+    <def-cat n="Subj_l">
+        <cat-item tags="NP.@←SUBJ"/>
+        <cat-item tags="NP.@←SUBJ.*"/>
+    </def-cat>
+
 
     <def-cat n="NP_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
@@ -380,11 +388,11 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-    <rule comment="REGLA: NP_Subj CNP NP_Subj">
+    <rule comment="REGLA: Subj_l CNP Subj_l">
      <pattern>
-       <pattern-item n="NP_Subj"/>
+       <pattern-item n="Subj_l"/>
        <pattern-item n="CNP"/>
-       <pattern-item n="NP_Subj"/>
+       <pattern-item n="Subj_l"/>
      </pattern>
      <action>
        <out>
