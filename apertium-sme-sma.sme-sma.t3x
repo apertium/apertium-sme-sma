@@ -183,7 +183,15 @@ And then there are some categories like "month", with all the months.
   <section-def-vars>
     <def-var n="nombre"/>
     <def-var n="genere"/>
+    <def-var n="caseFirstword"/>
   </section-def-vars>
+  <section-def-macros>
+    <def-macro n="switch_cases" npar="2">
+      <let><var n="caseFirstword"/><get-case-from pos="1"><clip pos="1" part="lem"/></get-case-from></let>
+      <let><clip pos="1" part="lem"/><get-case-from pos="2"><clip pos="1" part="lem"/></get-case-from></let>
+      <modify-case><clip pos="2" part="lem"/><var n="caseFirstword"/></modify-case>
+    </def-macro>
+  </section-def-macros>
 
   <section-rules>
  <rule comment="lea aux WORD" > <!--  delete cop -->
@@ -209,6 +217,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="NP_Subj_l"/>
       </pattern>
       <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
         <chunk>
             <clip pos="2" part="lemh"/>
