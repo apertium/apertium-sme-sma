@@ -586,6 +586,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="boahtte" tags="adj.*"/> 
       <cat-item lemma="ollu" tags="adj.*"/> 
       <cat-item lemma="juohke" tags="prn.ind.*"/> 
+      <cat-item lemma="njealját" tags="adj.ord.*"/> 
     </def-cat>
     <def-cat n="default">
       <cat-item tags="*"/>
@@ -606,6 +607,7 @@ And then there are some categories like "month", with all the months.
     <def-attr n="a_npagree_type">
        <attr-item tags="prn.ind"/>
        <attr-item tags="adj"/>
+       <attr-item tags="adj.ord"/>
     </def-attr>
 
     <def-attr n="a_comp-superl">
@@ -1455,6 +1457,14 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_actio"/><lit-tag v="inf"/></let> 
       <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let> 
         </when>
+        <when>
+          <test><and>
+            <equal><clip pos="1" side="tl" part="a_actio"/><lit-tag v="actio"/></equal>
+            <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
+            </and>
+          </test>
+      <let><clip pos="1" side="tl" part="a_actio"/><lit-tag v="der_nomact.n.sg"/></let> 
+        </when>
       </choose>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
@@ -1687,7 +1697,7 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←SPRED"/></equal>
-              <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj"/></equal>
+              <equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj"/></equal>
             </and>
           </test>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
