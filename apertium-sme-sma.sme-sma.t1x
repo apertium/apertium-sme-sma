@@ -267,9 +267,10 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*.ess.*"/>
       <cat-item tags="n.*.*.sg.*"/>
       <cat-item tags="n.*.*.pl.*"/>
-      <cat-item tags="n.sg.*"/>
-      <cat-item tags="n.pl.*"/>
-      <cat-item tags="n.ess.*"/>
+      <cat-item tags="n.*.*.ess.*"/>
+      <cat-item tags="*.n.sg.*"/>
+      <cat-item tags="*.n.pl.*"/>
+      <cat-item tags="*.n.ess.*"/>
     </def-cat>
     <def-cat n="noun">
       <cat-item tags="*.n.*.sg.*"/>
@@ -2351,7 +2352,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: jagis 2001 - 2 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
+    <rule comment="REGLA: mánnu 2001 - 2 position in-out"> 
       <pattern> 
         <pattern-item n="mánnu"/>
         <pattern-item n="semyear"/>
