@@ -30,6 +30,14 @@
         <match tags="np.*"/>
       </or>
     </def-seq>
+    <def-seq n="s-border">
+      <or>
+        <match tags="cnjcoo.*"/>
+        <match tags="cnjsub.*"/>
+        <match tags="prn.rel.*"/>
+        <match tags="*.cm"/>
+      </or>
+    </def-seq>
     <def-seq n="ela-verbs">
       <or>
         <match lemma="fárret"/>
@@ -68,33 +76,8 @@
   </rule>
   <rule weight="0.6">
        <seq n="word"/>
-       <seq n="word"/>
-       <seq n="word"/>
+       <seq n="s-border"/>  
        <match lemma="son" tags="prn.pers.p3.sg.gen.*"><select lemma="satne" tags="prn.*"/></match>
-  </rule>
-  <rule weight="0.6">
-       <seq n="word"/>
-       <seq n="word"/>
-       <seq n="word"/>
-       <match lemma="son" tags="prn.pers.p3.sg.acc.*"><select lemma="satne" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <seq n="word"/>
-       <seq n="word"/>
-       <seq n="word"/>
-       <match lemma="son" tags="prn.pers.p3.sg.loc.*"><select lemma="satne" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <seq n="word"/>
-       <seq n="word"/>
-       <seq n="word"/>
-       <match lemma="son" tags="prn.pers.p3.sg.ill.*"><select lemma="satne" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <seq n="word"/>
-       <seq n="word"/>
-       <seq n="word"/>
-      <match lemma="son" tags="prn.pers.p3.sg.com.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
 
   <rule weight="1.0">
@@ -110,19 +93,9 @@
        <match lemma="son" tags="prn.*"><select lemma="sijjieh" tags="prn.*"/></match>
   </rule>
   <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="s-border"/>  
        <match lemma="son" tags="prn.pers.p3.pl.gen.*"><select lemma="sijjieh" tags="prn.*"/></match>
-  </rule>
-  <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.pl.acc.*"><select lemma="sijjieh" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.pl.loc.*"><select lemma="sijjieh" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.pl.ill.*"><select lemma="sijjieh" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.pl.com.*"><select lemma="sijjieh" tags="prn.*"/></match>
   </rule>
 
   <rule weight="1.0">
@@ -137,27 +110,12 @@
        <match lemma="son" tags="prn.*"><select lemma="såtnoeh" tags="prn.*"/></match>
   </rule>
   <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="s-border"/>  
        <match lemma="son" tags="prn.pers.p3.du.gen.*"><select lemma="såtnoeh" tags="prn.*"/></match>
   </rule>
-  <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.du.acc.*"><select lemma="såtnoeh" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.du.loc.*"><select lemma="såtnoeh" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.du.ill.*"><select lemma="såtnoeh" tags="prn.*"/></match>
-  </rule>
- <rule weight="0.6">
-       <match lemma="son" tags="prn.pers.p3.du.com.*"><select lemma="såtnoeh" tags="prn.*"/></match>
-  </rule>
-
 
   
-  <rule weight="1.1">
-       <match lemma="son" tags="prn.pers.du3.*"><select lemma="dah guaktah" tags="prn.*"/></match>
-  </rule>
-
   <rule weight="1.0">
        <match lemma="doarjja" tags="n.*"><select lemma="dåarjoe" tags="n.*"/></match>
   </rule>
