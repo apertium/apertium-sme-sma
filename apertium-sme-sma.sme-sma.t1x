@@ -580,6 +580,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="pcle.*"/>
       <cat-item tags="adj.der_aadv.adv"/>
       <cat-item tags="adj.der_aadv.adv.*"/>
+      <cat-item tags="adj.*.der_aadv.adv"/>
+      <cat-item tags="adj.*.der_aadv.adv.*"/>
       <cat-item tags="vblex.*.ger"/>
       <cat-item tags="vblex.*.ger.*"/>
       <cat-item tags="vblex.*.vgen"/>
@@ -643,6 +645,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="vblex.iv.der_nomact.n"/>
       <attr-item tags="vblex.tv.der_nomact.n"/>
       <attr-item tags="adj.der_vuota.n"/>
+      <attr-item tags="adj.*.der_vuota.n"/>
     </def-attr>
 
     <def-attr n="a_prn">
@@ -1320,6 +1323,12 @@ And then there are some categories like "month", with all the months.
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_aadv"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_laakan"/></let>
+        </when>
+        <when>
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_vuota"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
         </when>
       </choose>
     </def-macro>
