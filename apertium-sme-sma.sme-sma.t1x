@@ -292,6 +292,28 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="np.*"/>
       <cat-item tags="*.cmp_sgnom.cmp_splitr.*"/>
     </def-cat>
+    <def-cat n="nounpx">
+      <cat-item tags="n.*.sg.*.px3pl.*"/>
+      <cat-item tags="n.*.sg.*.px1sg.*"/>
+      <cat-item tags="n.*.sg.*.px2sg.*"/>
+      <cat-item tags="n.*.sg.*.px3sg.*"/>
+      <cat-item tags="n.*.sg.*.px1du.*"/>
+      <cat-item tags="n.*.sg.*.px2du.*"/>
+      <cat-item tags="n.*.sg.*.px3du.*"/>
+      <cat-item tags="n.*.sg.*.px1pl.*"/>
+      <cat-item tags="n.*.sg.*.px2pl.*"/>
+      <cat-item tags="n.*.sg.*.px3pl.*"/>
+      <cat-item tags="n.*.sg.*.px3pl.*"/>
+      <cat-item tags="n.*.pl.*.px1sg.*"/>
+      <cat-item tags="n.*.pl.*.px2sg.*"/>
+      <cat-item tags="n.*.pl.*.px3sg.*"/>
+      <cat-item tags="n.*.pl.*.px1du.*"/>
+      <cat-item tags="n.*.pl.*.px2du.*"/>
+      <cat-item tags="n.*.pl.*.px3du.*"/>
+      <cat-item tags="n.*.pl.*.px1pl.*"/>
+      <cat-item tags="n.*.pl.*.px2pl.*"/>
+      <cat-item tags="n.*.pl.*.px3pl.*"/>
+    </def-cat>
     <def-cat n="noun-not-np">
       <cat-item tags="*.n.*.sg.*"/>
       <cat-item tags="*.n.*.pl.*"/>
@@ -1167,6 +1189,7 @@ And then there are some categories like "month", with all the months.
     <def-var n="main-verb-lemma"/>
     <def-var n="infin"/>
     <def-var n="caseFirstword"/>
+    <def-var n="chunk_name"/>
   </section-def-vars>
   <section-def-lists>
     <def-list n="stative-verbs"> <!--sme place-verbs, hope they work the same in sma -->
@@ -4279,7 +4302,34 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
      
- 
+    <rule comment="REGLA: nounpx to ref + noun  - 2 positions out">
+      <pattern>
+        <pattern-item n="nounpx"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <lit v="jïjtje"/>
+              <lit-tag v="prn.ref.gen"/>
+              <var n="poss"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: noun  - 1 position">
       <pattern>
@@ -4317,6 +4367,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
 
 
     <rule comment="REGLA: rdep n  - 2 positions">
@@ -5225,7 +5276,6 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-verb-deriv-1Param">
           <with-param pos="1"/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
           <chunk name="vblex" case="caseFirstword">
             <tags>
@@ -5430,7 +5480,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="adv" case="caseFirstword">
+          <chunk name="mielde" case="caseFirstword">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
               <tag><var n="func"/></tag>
@@ -5464,9 +5514,9 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="verb-actio-ess"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="general-macro-4Param"><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="adv" case="caseFirstword">
+          <chunk name="mielde" case="caseFirstword">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
               <tag><var n="func"/></tag>
@@ -5777,8 +5827,9 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
+         <let><var n="chunk_name"/><clip pos="1" side="sl" part="lem"/></let>
         <out>
-          <chunk name="adv" case="caseFirstword">
+          <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
               <tag><var n="func"/></tag>
@@ -5832,8 +5883,9 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
+        <let><var n="chunk_name"/><clip pos="1" side="sl" part="lem"/></let>
         <out>
-          <chunk name="pr" case="caseFirstword">
+          <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
               <tag><lit-tag v="PREP"/></tag>
               <tag><var n="func"/></tag>
@@ -5934,8 +5986,9 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
+        <let><var n="chunk_name"/><clip pos="1" side="sl" part="lem"/></let>
         <out>
-          <chunk name="post" case="caseFirstword">
+          <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
               <tag><lit-tag v="POST"/></tag>
               <tag><var n="func"/></tag>
@@ -6033,27 +6086,6 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Conjunctions -->
 
-    <rule comment="REGLA: ahte  - 1 position">
-      <pattern>
-        <pattern-item n="ahte"/>
-      </pattern>
-      <action>
-        <call-macro n="general-macro-1Param">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="ahte" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="cnjsub"/></tag>
-              <tag><var n="func"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
     
     <rule comment="REGLA: cs  - 1 position">
       <pattern>
@@ -6063,8 +6095,9 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
+        <let><var n="chunk_name"/><clip pos="1" side="sl" part="lem"/></let>
         <out>
-          <chunk name="cnjsub" case="caseFirstword">
+          <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
               <tag><lit-tag v="cnjsub"/></tag>
               <tag><var n="func"/></tag>
@@ -6111,8 +6144,9 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro> 
+        <let><var n="chunk_name"/><clip pos="1" side="sl" part="lem"/></let>
         <out>
-          <chunk name="cnjcoo" case="caseFirstword">
+          <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
               <tag><lit-tag v="cnjcoo"/></tag>
               <tag><var n="func"/></tag>
@@ -6134,7 +6168,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="cnjsub" case="caseFirstword">
+          <chunk name="interj" case="caseFirstword">
             <tags>
               <tag><lit-tag v="ij"/></tag>
               <tag><var n="func"/></tag>

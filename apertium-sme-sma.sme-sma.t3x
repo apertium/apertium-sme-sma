@@ -46,6 +46,12 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="SV.*"/>
       <cat-item tags="ADV.*"/>
     </def-cat>
+    <def-cat n="mielde">
+      <cat-item lemma="mielde" tags="ADV.*"/>
+    </def-cat>
+    <def-cat n="cop-mainv-inf">
+      <cat-item lemma="cop-mainv" tags="SV.@-FMAINV.inf"/>
+    </def-cat>
     <def-cat n="NP">
       <cat-item tags="NP"/>
       <cat-item tags="NP.*"/>
@@ -215,6 +221,32 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="FMainV"/>
         <pattern-item n="NP_Subj_l"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="mealtan årrodh" > 
+      <pattern>
+        <pattern-item n="cop-mainv-inf"/>
+        <pattern-item n="mielde"/>
       </pattern>
       <action>
         <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
