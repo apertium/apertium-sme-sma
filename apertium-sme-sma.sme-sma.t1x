@@ -5991,6 +5991,37 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: pr gen noun-acc  - 3 positions">
+      <pattern>
+        <pattern-item n="pr"/>
+        <pattern-item n="rdep"/>
+        <pattern-item n="gen"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+      <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        <out>
+          <chunk name="pr" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="PREP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
 
