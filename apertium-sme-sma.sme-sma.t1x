@@ -543,6 +543,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="leat_conneg_prt">
       <cat-item lemma="leat" tags="vblex.*.pret.conneg.*"/>
     </def-cat>
+    <def-cat n="leat_prfprc">
+      <cat-item lemma="leat" tags="vblex.*.prfprc.*"/>
+    </def-cat>
     <def-cat n="conneg">
       <cat-item tags="vblex.*.conneg.*"/>
       <cat-item tags="vblex.*.*.*.conneg.*"/>
@@ -5711,30 +5714,53 @@ And then there are some categories like "month", with all the months.
     <!-- SECTION: Adjective groups -->
 
 
-    <rule comment="REGLA: vejolaš  - 1 position">
+    <rule comment="REGLA: vejolaš - from adj to verb  - 1 position out">
       <pattern>
+        <pattern-item n="leat-main-fin"/>
         <pattern-item n="vejolaš"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose><when><test>
-        <equal><clip pos="1" side="tl" part="a_Pos"/><lit-tag v="vblex"/></equal></test>
-        <let><clip pos="1" side="tl" part="tags"/><concat><lit-tag v="vblex.indic"/>
+        <equal><clip pos="2" side="tl" part="a_Pos"/><lit-tag v="vblex"/></equal></test>
+        <let><clip pos="2" side="tl" part="tags"/><concat><lit-tag v="vblex.indic"/>
         <var n="tense"/><lit-tag v="p3.sg"/></concat></let></when>
         </choose>
         <out>
           <chunk name="vblexc" case="caseFirstword">
             <tags>
-              <tag><lit-tag v="vblex"/></tag>
-              <tag><var n="func"/></tag>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@+FMAINV"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: leamaš vejolaš - from adj to verb  - 1 position out">
+      <pattern>
+        <pattern-item n="leat_prfprc"/>
+        <pattern-item n="vejolaš"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="vblexc" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+            <lu>
+              <lit v="buektiehtidh"/>
+              <lit-tag v="vblex.tv.prfprc"/>            
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: adj  - 1 position">
       <pattern>
