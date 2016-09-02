@@ -5276,6 +5276,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-verb-deriv-1Param">
           <with-param pos="1"/>
         </call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
           <chunk name="vblex" case="caseFirstword">
             <tags>
