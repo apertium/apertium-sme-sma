@@ -146,6 +146,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="boahtit">
       <cat-item lemma="boahtit" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="oaivvildit">
+      <cat-item lemma="oaivvildit" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="fápmu">
       <cat-item lemma="fápmu" tags="n.*.sg.ill.*"/>
     </def-cat>
@@ -335,6 +338,8 @@ And then there are some categories like "month", with all the months.
     <def-cat n="noun-nom">
       <cat-item tags="n.*.*.nom.*"/>
       <cat-item tags="n.*.*.*.nom.*"/>
+      <cat-item tags="np.*.*.nom.*"/>
+      <cat-item tags="np.*.*.*.nom.*"/>
     </def-cat>
     <def-cat n="gen">
       <cat-item tags="*.gen.*"/>
@@ -3882,6 +3887,93 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+   <rule comment="REGLA: oaivvildit"> 
+      <pattern>
+        <pattern-item n="noun-nom"/> 
+         <pattern-item n="cnjcoo"/> 
+        <pattern-item n="noun-nom"/> 
+        <pattern-item n="oaivvildit"/>
+        <pattern-item n="ahte"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+         <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+       <out>
+          <chunk name="coor_noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="@>P"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+            <b/>
+           <lu>
+				<clip pos="2" side="tl" part="whole"/>            
+		  </lu>
+            <b/>
+           <lu>
+				<clip pos="3" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+            <b/>
+          <chunk name="advl">
+             <tags>
+              <tag><lit-tag v="PP"/></tag>
+              <tag><lit-tag v="@ADVL"/></tag>
+            </tags>
+            <lu>
+              <lit v="mïele"/>
+              <lit-tag v="n.sg.gen"/>            
+            </lu>
+            <b/>
+            <lu>
+              <lit v="mietie"/>
+              <lit-tag v="post"/>            
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   <rule comment="REGLA: oaivvildit"> 
+      <pattern>
+        <pattern-item n="noun-nom"/>
+        <pattern-item n="oaivvildit"/>
+        <pattern-item n="ahte"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="@>P"/></tag>
+            </tags>
+           <lu>
+				<clip pos="1" side="tl" part="whole"/>            
+		  </lu>
+          </chunk>
+            <b/>
+          <chunk name="advl">
+             <tags>
+              <tag><lit-tag v="PP"/></tag>
+              <tag><lit-tag v="@ADVL"/></tag>
+            </tags>
+            <lu>
+              <lit v="mïele"/>
+              <lit-tag v="n.sg.gen"/>            
+            </lu>
+            <b/>
+            <lu>
+              <lit v="mietie"/>
+              <lit-tag v="post"/>            
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
      <rule comment="REGLA: beassat fárrui"> <!-- mealtan årrodh -->
       <pattern>
@@ -3891,7 +3983,7 @@ And then there are some categories like "month", with all the months.
       <action>
          <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
        <out>
-          <chunk name="nounvv" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
              <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
