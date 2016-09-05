@@ -21,21 +21,6 @@ leejjege =
 ===============
 #dïhte<prn><dem><ess> danin
 
-
-datere= å bli datert = see 
-
-Mii lea beaiváduvvon = Mij lea tjaalasovveme 
-
-echo 03.02. 2012 beaiváduvvon gohččun ja áššelistu  | apertium -d. sme-sma
-03.02. jaepien 2012 tjaalasovveme gåhtjome jïh aamhteselæstoe
-
-
-03.02.12 beaiváduvvon gohččun oktan áššelisttuin, prográmmain ja sárdnunáiggiin dohkkehuvvo.
-03.02.12 tjaalasovveme gåhtjomen oktegh aamhteselæstojne, programmine jïh saarnometïjjine #dåhkasjehtedh<vblex><tv><der_passl><vblex><iv><indic><pres><p3><sg>.
-
-
-
-Mánáidviesus ii leat oktage fásta bargi: oktage =  akte gænnah 
 ======
 lávga	lávga+Adv	tjåahke  dix: lïhke
 ILO lea ollu oktavuođain dovddahan ahte proseassa ja sisdoallu gullet lávga oktii.
@@ -45,6 +30,25 @@ ILO lea ollu oktavuođain dovddahan ahte proseassa ja sisdoallu gullet lávga ok
 Konferánssas ledje logaldallit = forelesere (logaldallat+V+Der/NomAg+N)
 #lohkehtalledh har ikke Der/NomAg
 lohkehtalledh:lohkehtall SOVVEDH ; (eget lexicon- for alledh=ikke passiv) 
+
+apertium-sme-sma$ usma
+lohkehtalledh
+lohkehtalledh	lohkedh+V+TV+Der/htalle+V+IV+Inf
+lohkehtalledh	lohkedh+V+TV+Der/PassS+V+IV+Der/ht+V+TV+Der/alla+V+Inf
+lohkehtalledh	lohkedh+V+TV+Der/ht+V+TV+Der/alla+V+Inf
+lohkehtalledh	lohkehtidh+V+TV+Der/alla+V+Inf
+lohkehtalledh	lohkehtalledh+V+IV+Inf
+lohkehtalledh	lahkoehtidh+V+TV+Der/alla+V+Inf
+
+^C
+apertium-sme-sma$ dsmaNorm 
+lohkehtalledh+V+Der/NomAg+N+Sg+Nom
+lohkehtalledh+V+Der/NomAg+N+Sg+Nom	lohkehtalledh+V+Der/NomAg+N+Sg+Nom	+?
+
+lahkoehtidh+V+TV+Der/alla+V+Der/NomAg+N+Sg+Nom
+lahkoehtidh+V+TV+Der/alla+V+Der/NomAg+N+Sg+Nom	lohkehtallije
+
+
 
 ======
 
@@ -322,9 +326,12 @@ Vuartasjimmien ulmine lea vuartasjidh dam ahte maana dåhkasjamme hoksem beapmoe
 
 SME: Láhkaásahusa rievdadus dagaha dan ahte dál ferte árjjalaččat ohcalit máná kultuvrralaš ja gielalaš vuoigatvuođaid goziheami dalle go biddjojuvvo biebmoruktui ja mánáidsuodjalanásahussii, cealká Sámediggeráđi lahttu Jåma loahpas.
 
-SMA_MT: (forskrift) Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan ohtselidh maanan kulturelle jïh gïeleh reaktaj (ta vare på/vokte om),  dellie goh beapmoegåatan bïejesåvva jïh maanajvaarjelimmieinstitusjovnese, Saemiedigkieraerien lïhtsege Jåma minngiegeatjan jeahta.
+SMA_MT: (forskrift) 
+Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan ohtselidh maanan kulturelle jïh gïeleh reaktaj,  dellie goh beapmoegåatan bïejesåvva jïh maanajvaarjelimmieinstitusjovnese, Saemiedigkieraerien lïhtsege Jåma minngiegeatjan jeahta.
 
+Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan ohtselidh maanan kulturelle jïh gïeleh reaktaj geehtemen dellie goh beapmoegåatan bïejesåvva jïh maanajvaarjelimmieinstitusjovnese, Saemiedigkieraerien lïhtsege Jåma minngiegietjesne jeahta.
 
+(ta vare på/vokte om)
 
 
 SMA_MT_SHOULD_BE: Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan ohtselidh maanan kulturelle jïh gïeleh reaktaj geehtemen dellie goh beapmoegåatan bïejesåvva jïh maanajvaarjelimmieinstitusjovnese, Saemiedigkieraerien lïhtsege  Jåma minngiegietjesne jeahta. ((???????? Ikke helt klar????) 
@@ -332,6 +339,7 @@ SMA_MT_SHOULD_BE: Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadt
 ****
 
 SME: Dattetge lea dárbu dovddahit dan čielgasit láhkaásahusain mat gusket mánáid bearráigeahččamii biebmoruovttuin ja mánáidsuodjalanásahusain, cealká Sámediggeráđi lahttu Ellinor Marita Jåma. 
+
 Problem: čielgasit+Adj
 
 MT_SMA: 
@@ -339,13 +347,13 @@ Daerpies lea darhkan dam jiehtedh tjïelkebe njoelkedassine mah dijpieh maanaj v
 
 
 SMA_MT_SHOULD_BE: 
-Daerpies lea darhkan jiehtedh tjïelkeslaakan njoelkedassine mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine, Saemiedigkieraerien lïhtsege  Ellinor Marita Jåma jeahta.
+Daerpies darhkan jiehtedh tjïelkeslaakan njoelkedassine mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine, Saemiedigkieraerien lïhtsege  Ellinor Marita Jåma jeahta.
 
 Gjelder ordrekkefølgen Daerpies lea ... også disse?
 maiddái lea dárbu   
-dávjá lea dárbu
-danne lea dárbu 
-Seammás lea dárbu
+dávjá lea dárbu - ikke
+danne lea dárbu -  ikke
+Seammás lea dárbu  - ikke
 
 
 ****
@@ -355,7 +363,7 @@ SME: Sámediggeráđi konsultašuvnnaid bokte Mánáid-, dásseárvo- ja searvad
 
 
 MT_SMA: 
-Saemiedigkieraerien konsultasjovnine Maana-, mïrrestalleme- jïh ektiedimmiedepartemeenti leah njoelkedassh mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine jarkestovveme jïh dah suehpeden 1. b. 2012 aelkieh juhtedh . 
+Saemiedigkieraerien konsultasjovnine Maana-, mïrrestalleme- jïh ektiedimmiedepartemeenti leah njoelkedassh mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine jarkestovveme jïh dah suehpeden 1. b. 2012 aelkieh juhtedh .  OK (bortsett fra Cop)
 
 SMA_MT_SHOULD_BE: 
 Saemiedigkieraerien konsultasjovnine leah Maana-, mïrrestalleme- jïh ektiedimmiedepartemeenti  njoelkedassh mah dijpieh maanaj vuartasjæmman beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine jarkestovveme jïh dah suehpeden 1. b. 2012 aelkieh juhtedh. 
@@ -402,31 +410,39 @@ SMA_MT_SHOULD_BE: Dannasinie lea dan vihkele ahte #rïektes¹<adj><attr> årrome
 
 
 
-SME: - Láhkaásahusa rievdadus dagaha dan ahte dál ferte árjjalaččat ohcalit máná kultuvrralaš ja gielalaš vuoigatvuođaid goziheami dalle go biddjojuvvo biebmoruktui ja mánáidsuodjalanásahussii, cealká Sámediggeráđi lahttu Jåma loahpas.
+SME: 
+- Láhkaásahusa rievdadus dagaha dan ahte dál ferte árjjalaččat ohcalit máná kultuvrralaš ja gielalaš vuoigatvuođaid goziheami dalle go biddjojuvvo biebmoruktui ja mánáidsuodjalanásahussii, cealká Sámediggeráđi lahttu Jåma loahpas.
 
-SMA_MT: - Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan ohtselidh maanan kulturelle jïh gïeleh reaktaj geehtemen dellie goh beapmoegåatan jïh maanajvaarjelimmieinstitusjovnese bïejesåvva, saemiedigkieraerien lïhtsege Jåma Minngiegietjesne jeahta.
+SMA_MT: 
+- Njoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan ohtselidh maanan kulturelle jïh gïeleh reaktaj geehtemen dellie goh beapmoegåatan jïh maanajvaarjelimmieinstitusjovnese bïejesåvva, saemiedigkieraerien lïhtsege Jåma Minngiegietjesne jeahta.
 
-SMA_MT_SHOULD_BE : - Laakenjoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan maanan kulturelle jïh gïeleh reaktajgeehtemem ohtselidh gosse beapmoegåatan jïh maanajvaarjelimmieinstitusjovnese bïejesåvva, saemiedigkieraerien lïhtsege Jåma Minngiegeatjan jeahta.
-
-
-
-SME: Sámediggi áigu sihkkarastit ahte mánáidgárddit ožžot doarvái ruđaid dán lágan fálaldahkii mas lea buorre kvalitehta.
-
-SMA_MT: Saemiedigkie edtja gorredidh ahte maanagïerth nuekies beetnegh daennie laakeste faalenassese åadtjoeh mesnie lea buerie kvaliteete.
+SMA_MT_SHOULD_BE : 
+- Laakenjoelkedassen jorkestimmie dam dorje ahte daelie tjoevere eadtjohkelaakan maanan kulturelle jïh gïeleh reaktajgeehtemem ohtselidh gosse beapmoegåatan jïh maanajvaarjelimmieinstitusjovnese bïejesåvva, saemiedigkieraerien lïhtsege Jåma Minngiegeatjan jeahta.
 
 
-SMA_MT_SHOULD_BE : Saemiedigkie edtja gorredidh ahte maanagïerth nuekies beetnegh daehtie laakeste faalenassese åadtjoeh mesnie lea buerie kvaliteete.
+
+SME: 
+Sámediggi áigu sihkkarastit ahte mánáidgárddit ožžot doarvái ruđaid dán lágan fálaldahkii mas lea buorre kvalitehta.
+
+SMA_MT: 
+Saemiedigkie edtja gorredidh ahte maanagïerth nuekies beetnegh daennie laakeste faalenassese åadtjoeh mesnie lea buerie kvaliteete.
+
+
+SMA_MT_SHOULD_BE : 
+Saemiedigkie edtja gorredidh ahte maanagïerth nuekies beetnegh daehtie laakeste faalenassese åadtjoeh mesnie lea buerie kvaliteete.
 ***
 
 SME: Mánáidgárdi galgá nannet máná identitehta sápmelažžan sámegiela geavaheami ovdánahttima ja sámi kultuvrra gaskkusteami bokte.
 
-SMA_MT_SHOULD_BE : Maanagïerte edtja maanan identiteetem saemine, saemiengïelen pråvhkoen evtiedimmiem jïh saemien kultuvrem nænnoestidh 
+SMA_MT_SHOULD_BE : 
+Maanagïerte edtja maanan identiteetem saemine, saemiengïelen pråvhkoen evtiedimmiem jïh saemien kultuvrem nænnoestidh 
 
 ***
 
 SME: Mánáidgárddi jođihit sámi pedagogalaš bargit.
 
 SMA_MT_SHOULD_BE : Maanagïertem saemien pedagogihken barkijh juhtiehtieh.
+               MT: Maanagïertem saemien pedagogeles barkijh öörnieh.
 
 ***
 
@@ -451,24 +467,33 @@ SMA_MT_SHOULD_BE: Saemien maanagïertemaanaj gïelem, kultuvrem jïh ektiedimmie
 
 SME: Dieđáhus galgá čalmmustahttit áŋgiruššansurggiid ja daid hástalusaid maid ferte dustet go oččoda nu buori mánáidgárddiid go vejolaš.
 
-SMA_MT_SHOULD_BE: Bïevnese edtja barkoesuerkieh jïh dejtie haestiemidie vååjnesasse bïejedh mejtie tjoevere dåastodh gosse åådtjodh dan buerie maanagïertieh goh gåarede.
+MT: 
+Bïevnese edtja barkoesuerkieh jïh dejtie haestiemidie vååjnesasse bïejedh mejtie tjoevere dåastodh gosse åådtjede dan buerie maanagïertide goh gåarede. PL NOM
+
+SMA_MT_SHOULD_BE: 
+Bïevnese edtja barkoesuerkieh jïh dejtie haestiemidie vååjnesasse bïejedh mejtie tjoevere dåastodh gosse åådtjodh dan buerie maanagïertieh goh gåarede.
 
 ****
 
 SME: Sámedikkis leat maiddái stipeandaortnegat, earret eará rekrutteremis sámegielat bargiid mánáidgárddiide.
 
-SMA: Saemiedigkien aaj stipendeöörnegh, gaskem jeatjah barkijh mah saemiestieh dåårrehtidh maanagïertide.
+MT: 
+Saemiedigkien leah aaj stipendeöörnegh, gaskem jeatjah dåårrehtimmesne saemiengïeleh barkiji maanagïertide. NOMACT LOC => INF
 
-SMA_MT_SHOULD_BE: Saemiedigkien leah aaj stipendeöörnegh, gaskem jeatjah saemiengïeleh barkijh maanagïertide dåårrehtidh.
+
+SMA_MT_SHOULD_BE: 
+Saemiedigkien leah aaj stipendeöörnegh, gaskem jeatjah saemiengïeleh barkijh maanagïertide dåårrehtidh.
 
 ***
 
 
 SME: Stuorimus gaskaoapmi nannemis sámi mánáidgárdemánáid giela ja kultuvrra lea doarjja mánáidgárddiide.
 
-SMA_MT: Stoeremes tsavtshvierhtie nænnoestimmesne saemien maanagïertemaanaj gïelem jïh kultuvrem dåarjoe maanagïertide.
+MT:
+Stoeremes tsavtshvierhtie nænnoestimmesne saemien maanagïertemaanaj gïelem jïh kultuvrem dåarjoe maanagïertide. NOMACT LOC => INF
 
-SMA_MT_SHOULD_BE: Dïhte stööremes tsavtshvierhtie guktie saemien maanagïertemaanaj gïelem jïh kultuvrem nænnoestidh, lea dïhte dåarjoe maanagïertide.
+SMA_MT_SHOULD_BE: 
+Dïhte stööremes tsavtshvierhtie guktie saemien maanagïertemaanaj gïelem jïh kultuvrem nænnoestidh, lea dïhte dåarjoe maanagïertide.
 
 ***
 
@@ -476,11 +501,13 @@ SME: Lea vejolaš addit stipeandda sihke joatkkaskuvlla ohppiide, ja allaskuvlla
 
 SMA: Maahta stipendem vedtedh learoehkidie dovne jåarhkeskuvlesne jïh studentide jolleskuvline jïh universiteetine.
 
-MT_SMA: Lea gåarede vedtedh stipeendem dovne jåarhkeskuvlen learoehkidie, jïh jïlleskuvlen jïh universiteeten studeentide.
+MT_SMA: 
+Gåarede stipeendem vedtedh dovne jåarhkeskuvlen learoehkidie, jïh jïlleskuvlen jïh universiteeten studeentide.
 
-SMA_MT_SHOULD_BE: Gåarede stipendem vedtedh learoehkidie dovne jåarhkeskuvlesne jïh studentide jolleskuvline jïh universiteetine. 
+SMA_MT_SHOULD_BE: 
+Gåarede stipendem vedtedh learoehkidie dovne jåarhkeskuvlesne jïh studentide jolleskuvline jïh universiteetine. 
 
-OBS: ta bort "Lea" i begynnelsen "Lea gåarede" => "Gåarede"
+OBS: ta bort "Lea" i begynnelsen "Lea gåarede" => "Gåarede" - DONE
 
 ***
 
@@ -488,7 +515,11 @@ SME: Mis lea maiddái lagas ovttasbargu ovttaskas suohkaniiguin, dat lea suohkan
 
 SMA: Mijjieh aaj lïhke laavenostebe dej sjïere tjïeltigujmie, juktie dah tjïelth dah, mah diedtem utnieh ihke maanagïerth aktem hijven faalenassem vedtieh saemien gïele- jïh kultuvrelïerehtimmien bïjre.
 
-SMA_MT_SHOULD_BE: Mijjen lea aaj gietskies ektiebarkoe oktegs tjïeltigujmie, dïhte tjïelten dïedte sujhtedh ahte maanagïerth saemien gïele- jïh kultuvrelïerehtimmiem faelieh.
+MT:
+Mijjen lea aaj gietskies ektiebarkoe oktegs tjïeltigujmie, dïhte tjïelten dïedte sujhtedh ahte maanagïerth saemien gïele- jïh kultuvrelïerehtimmiem faelieh.
+
+SMA_MT_SHOULD_BE: 
+Mijjen lea aaj gietskies ektiebarkoe oktegs tjïeltigujmie, dïhte tjïelten dïedte sujhtedh ahte maanagïerth saemien gïele- jïh kultuvrelïerehtimmiem faelieh.
 
 ***
 
@@ -498,7 +529,11 @@ SME: Ja danne ii leat ge vejolaš gávnnahit sámegielagiid logu dáinna vugiin.
 
 SMA: Jïh dan gaavhtan ij vielie gåaredh daejredh man jïjnjh almetjh mah saemiestieh naemhtie.
 
-SMA_MT_SHOULD_BE: Jïh dannasinie ij gåaredh saemiestæjjaj låhkoem daejnie vuekine guajhtsadidh.
+MT:
+Jïh dannasinie ij gåaredh saemiestæjjaj låhkoen daejnie vuekine guajhtsadidh. GEN => ACC
+
+SMA_MT_SHOULD_BE:
+ Jïh dannasinie ij gåaredh saemiestæjjaj låhkoem daejnie vuekine guajhtsadidh.
 (låhkoen = fortsatt genitiv hvor det skal være akkusativ?, Ellers er sma_mt faktisk bedre enn manuell oversetting :-) 
 
 
@@ -509,7 +544,11 @@ SME: Sámegiela geavaheddjiidlogu lassáneapmi lea dan duohken ahte lea vejolaš
 
 SMA: Juktie aktem lissiehtimmiem åadtjodh saemien gïeleutnijijstie dle tjuara nuepie årrodh saemien nåhtadidh gaajhkine siebriedahken suerkine, jïh iktegisth.
 
-SMA_MT_SHOULD_BE: Saemiengïelen utnejilåhkoen læssanimmie [båata destie] ahte gåarede saemiengïelem gaajhkine siebriedahkesuerkine jïh gaajhkene lehkesne utnedh.
+MT:
+Saemiengïelen utnejilåhkoen læssanimmie båata destie ahte gåarede saemiengïelem gaajhkine siebriedahkesuerkine jïh gaajhkene lehkesne utnedh. OK
+
+SMA_MT_SHOULD_BE: 
+Saemiengïelen utnejilåhkoen læssanimmie [båata destie] ahte gåarede saemiengïelem gaajhkine siebriedahkesuerkine jïh gaajhkene lehkesne utnedh.
 
 Buot oktavuođain = gaajhkene lehkesne 
 lea dan duohken  = båata destie (går det ann å få denne inn?)
@@ -521,7 +560,11 @@ lea dan duohken = [Lea dïsse jearohke]  (men, tror ikke denne "avhengig" kan br
 
 SME: Konsultašuvnnat eai galgga loahpahuvvot nu guhká go Sámediggi ja stáhta oaivvildeaba ahte lea vejolaš olahit soahpamuša.
 
-(IKKE_FERDIG_SMA_MT_SHOULD_BE): Eah edtjh konsultasjovnh illesovvedh dan guhkiem goh Saemiedigkie jïh staate jiehtieh ahte gåarede hïnnedh latjkoem.
+MT:
+Eah edtjh konsultasjovnh illesovvedh dan guhkiem goh Saemiedigkien jïh staaten mïelen mietie gåarede latjkoem hïnnedh.
+
+(IKKE_FERDIG_SMA_MT_SHOULD_BE): 
+Eah edtjh konsultasjovnh illesovvedh dan guhkiem goh Saemiedigkie jïh staate jiehtieh ahte gåarede hïnnedh latjkoem.
 
 ****
 
@@ -529,15 +572,20 @@ SME: Sáhttá leat váttis joksat ulbmila ahte sámegiella galgá leat beaivvál
 
 SMA: Ij maehtieh intensjovnide jaksedh akten saemien gïelen bïjre mij edtja aarkebiejjien gïeline årrodh.
 
-SMA_MT_SHOULD_BE: Geerve maahta årrodh ulmiem jaksedh ahte saemiengïele galka fïerhtenbeajjetje gïeline årrodh jis gïelh eah aarkebiejjien gåaredh utnedh.
+MT:
+Maahta årrodh geerve ulmiem jaksedh ahte saemiengïele galka årrodh fïerhtenbeajjetje gïele jis gïelh ij gåaredh aarkebiejjien utnedh.
+SMA_MT_SHOULD_BE: 
+Geerve maahta årrodh ulmiem jaksedh ahte saemiengïele galka fïerhtenbeajjetje gïeline årrodh jis gïelh eah aarkebiejjien gåaredh utnedh.
 
 ****
 
 SME: Buohkaide geat máhttet sámegiela, lea stuora árvu beassat sámástit nu olu oktavuođain go vejolaš.
 
-SMA: Gaajhkesidie mah gïelem maehtieh, dle akte stoerre aarvoe saemien nåhtadidh dan gelline tsiehkine goh gåarede.
+MT: 
+Gaajhkesidie gïeh saemiengïelem maehtieh, stoere aarvoe åadtjodh saemiestidh dan jïjnjem goh gåarede. OK
 
-SMA_MT_SHOULD_BE: Gaajhkesidie gïeh saemiengïelem maehtieh, stoere aarvoe åadtjodh saemiestidh dan jïjnjem  goh gåarede.
+SMA_MT_SHOULD_BE: 
+Gaajhkesidie gïeh saemiengïelem maehtieh, stoere aarvoe åadtjodh saemiestidh dan jïjnjem goh gåarede.
 
 olu oktavuođain  = 1) dan jïjnjem (i denne sammenhengen er denne best)
 
@@ -547,9 +595,14 @@ olu oktavuođain  = 2) gellene lehkesne
 
 SME:Jus galgá sihkkarastit giela boahtteáiggi, de lea dehálaš ahte nu oallugat go vejolaš ohppet giela sirdima bokte giellaguddiin.
 
-SMA:Juktie gïelen båetijen aejkien gorredidh dle vihkeles dan jïjnjh almetjh goh gåarede gïelem lierieh gïeleguedtijijstie.
+SMA:
+Juktie gïelen båetijen aejkien gorredidh dle vihkeles dan jïjnjh almetjh goh gåarede gïelem lierieh gïeleguedtijijstie.
 
-SMA_MT_SHOULD_BE: Jis edtja gïelem båetijen aejkien gorredidh, dellie vihkele ahte dan jïjnjesh goh gåaredieh gïelem gïeleguedtiejistie lierieh.
+MT:
+Jis edtja gïelem båetijen aejkien gorredidh, dellie vihkele ahte dan jïjnjesh goh gåaradieh gïelem lierieh goh jåhta gïeleguedtiejijstie.
+
+SMA_MT_SHOULD_BE: 
+Jis edtja gïelem båetijen aejkien gorredidh, dellie vihkele ahte dan jïjnjesh goh gåaredieh gïelem gïeleguedtiejistie lierieh.
 
 ****
 
@@ -557,7 +610,12 @@ SME: Boazoeaiggát Nils-Johan Kappfjell áigu háhkat ođđa njuovvanjorri mii g
 
 SMA: Båatsoesaemie Nils-Johan Kappfjell edtja orre leekedimsheengerem åestedh mij edtja gaervies årrodh leekedimsboelhkese mïetsken.
 
-SMA_MT_SHOULD_BE: Båatsoesaemie Nils-Johan Kappfjell edtja orre leekedimsjårrijem skååffedh mij edtja åtnose mïetsken leekedimmieboelhkeste vaaltasovvedh.
+MT:
+Båatsoesaemiem Nils-Johan Kappfjell edtja orre leekedimsjårrijem skååffedh mij edtja åtnose mïetsken leekedimmieboelhkeste vååltedh.
+PROBLEM: Båatsoesaemiem ACC - to be solved in sme-analysis
+
+SMA_MT_SHOULD_BE: 
+Båatsoesaemie Nils-Johan Kappfjell edtja orre leekedimsjårrijem skååffedh mij edtja åtnose mïetsken leekedimmieboelhkeste vaaltasovvedh.
 
 ****
 
@@ -565,7 +623,12 @@ SME:Kappfjell čállá ohcamis ahte jorri duppalastá su dietnasa.
 
 SMA: Kappfjell sov ohtsemisnie tjaala heengere sæjhta sov dïenestem guektiengïerth darjodh.
 
-SMA_MT_SHOULD_BE: Kappfjell ohtsemisnie tjaala ahte jårrije guektiengïerth dïenestem daestie åådtje.
+MT:
+Kappfjell ohtsemisnie tjaala ahte jårrije *duppalastá dan dïenestem. 
+PROBLEM = duppalastit,  guektiengïerth NOT in FST
+
+SMA_MT_SHOULD_BE: 
+Kappfjell ohtsemisnie tjaala ahte jårrije guektiengïerth dïenestem daestie åådtje.
 
 
 ****
@@ -574,7 +637,12 @@ SME:Sus leat maid čieža eará boazoeaiggádat geain lea beroštupmi geavahit n
 
 SMA:Dïhte aaj tjïjhtje jeatjah båatsoealmetjh damta mah ïedtjem åtna leekedimsheengerem nuhtjedh.
 
-SMA_MT_SHOULD_BE: Dan leah aaj tjïjhtje jeatjah båatsoealmetjh giej lea ïedtje leekedimsjårrijem utnedh.
+MT:
+Dan leah aaj tjïjhtje jeatjah båatsoesaemieh giej lea ïedtje leekedimsjårrijem utnedh. 
+OK (but: båatsoesaemieh - båatsoealmetjh)
+
+SMA_MT_SHOULD_BE: 
+Dan leah aaj tjïjhtje jeatjah båatsoealmetjh giej lea ïedtje leekedimsjårrijem utnedh.
 
 
 
