@@ -5229,7 +5229,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
             <b/>
-          <chunk name="vblex" case="caseFirstword">
+          <chunk name="vblex">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -6177,9 +6177,9 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
             <b pos="1"/>
-           <chunk name="vej" case="caseFirstword">
+           <chunk name="conneg">
             <tags>
-              <tag><lit-tag v="VA"/></tag>
+              <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@-FMAINV"/></tag>
             </tags>
             <lu>
