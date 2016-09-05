@@ -244,6 +244,8 @@ And then there are some categories like "month", with all the months.
          <cat-item lemma="inf" tags="SV.@←OBJ.*"/>
          <cat-item lemma="inf" tags="SV.@←SUBJ"/>
          <cat-item lemma="inf" tags="SV.@←SUBJ.*"/>
+         <cat-item lemma="inf" tags="SV.@←ADVL.*"/>
+         <cat-item lemma="inf" tags="SV.@←ADVL"/>
     </def-cat>
 
 
@@ -251,6 +253,13 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="ii" tags="SV.@+FAUXV.*"/>
         <cat-item lemma="ii" tags="SV.@+FAUXV"/>
     </def-cat>
+    <def-cat n="conneg-aux">
+        <cat-item lemma="conneg" tags="SV.@-FAUXV"/>
+        <cat-item lemma="conneg" tags="SV.@-FAUXV.*"/>
+    </def-cat>
+
+
+
     <def-cat n="ii-conneg">
       <cat-item lemma="ii-conneg" tags="SV.*"/>
     </def-cat>
@@ -2005,6 +2014,40 @@ And then there are some categories like "month", with all the months.
     <!--     </out> -->
     <!--   </action> -->
     <!-- </rule> -->
+    
+
+     <rule comment="NP_Subj_r iiverb conneg-aux" >
+      <pattern>
+        <pattern-item n="NP_Subj_not_Rel_r"/>
+        <pattern-item n="iiverb"/>
+        <pattern-item n="conneg-aux"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
      <rule comment="NP_Subj_r iiverb" > <!-- mun in - im manne -->

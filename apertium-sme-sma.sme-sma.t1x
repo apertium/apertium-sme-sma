@@ -172,9 +172,12 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="fápmu" tags="n.*.sg.ill.*"/>
     </def-cat>
     <def-cat n="guhkki">
-      <cat-item lemma="guhkki" tags="adj.*.attr.*"/>
+      <cat-item lemma="guhkki" tags="adj.*"/>
     </def-cat>
-    <def-cat n="áigi">
+      <def-cat n="vuollai">
+  	 	<cat-item lemma="vuollai" tags="post.*"/>
+  	 </def-cat>
+   <def-cat n="áigi">
       <cat-item lemma="áigi" tags="n.*"/>
     </def-cat>
     <def-cat n="lassin">
@@ -3883,6 +3886,50 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+  <rule comment="REGLA: guhkiem">
+      <pattern>
+        <pattern-item n="guhkki"/>
+        <pattern-item n="áigi"/>
+      </pattern>
+      <action>
+       <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+          <out>
+         <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+            <lit v="guhkiem"/>
+            <lit-tag v="adv"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+  <rule comment="REGLA: guhkiem 2">
+      <pattern>
+        <pattern-item n="guhkki"/>
+        <pattern-item n="áigi"/>
+        <pattern-item n="vuollai"/>
+      </pattern>
+      <action>
+       <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+          <out>
+         <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+            <lit v="guhkiem"/>
+            <lit-tag v="adv"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
 <!--    <rule comment="REGLA: áiggi mielde - "> 
@@ -3920,7 +3967,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="advl" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
-              <tag><var n="func"/></tag>
+              <tag><lit-tag v="@ADVL"/></tag>
             </tags>
             <lu>
               <lit v="dan"/>
@@ -5296,7 +5343,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="conneg">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><lit-tag v="@-FMAINV"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
