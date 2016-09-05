@@ -38,6 +38,15 @@ And then there are some categories like "month", with all the months.
 <interchunk>
 
   <section-def-cats>
+    <def-cat n="PR_PO">
+       <cat-item lemma="pr_post" tags="*"/>
+    </def-cat>
+    <def-cat n="P_left">
+        <cat-item tags="NP.@P←.*"/>
+        <cat-item tags="NP.@P←"/>
+        <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@←ADVL"/>
+    </def-cat>
     <def-cat n="Vcopaux-drop">
         <cat-item lemma="cop-auxv" tags="SV.*.pres"/>
     </def-cat>
@@ -84,7 +93,8 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="NP_Po">
-        <cat-item tags="NP.@→P.*"/>
+        <cat-item tags="NP.@P←.*"/>
+        <cat-item tags="NP.@P←"/>
     </def-cat>
     
     <def-cat n="FMainV">
@@ -127,10 +137,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="Adp">
-        <cat-item tags="Pr.*"/>
-        <cat-item tags="Pr"/>
-        <cat-item tags="Po.*"/>
-        <cat-item tags="Po"/>
+        <cat-item tags="PREP.*"/>
     </def-cat>
 
   </section-def-cats>
@@ -200,6 +207,48 @@ And then there are some categories like "month", with all the months.
   </section-def-macros>
 
   <section-rules>
+   <rule comment="REGLA: NP_Po Adp">
+     <pattern>
+       <pattern-item n="NP_Po"/>
+       <pattern-item n="Adp"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="adpp"/></get-case-from>
+           <clip pos="2" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <lit v="}"/>
+           <clip pos="2" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule> 
+
+   <rule comment="REGLA: Adp NP_Pr">
+     <pattern>
+       <pattern-item n="Adp"/>
+       <pattern-item n="NP_Pr"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="adpp"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+
  <rule comment="lea aux WORD" > <!--  delete cop -->
       <pattern>
         <pattern-item n="Vcopaux-drop"/>
