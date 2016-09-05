@@ -115,6 +115,25 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma ="árvvoštallan" tags="n.*.sg.ill.*"/>
       <cat-item lemma ="huksen" tags="n.*.sg.ill.*"/>
     </def-cat>
+     <def-cat n="dat">
+      <cat-item lemma="dat" tags="prn.*"/>
+    </def-cat>
+     <def-cat n="duohken">
+      <cat-item lemma="duohken" tags="post.*"/>
+    </def-cat>
+     <def-cat n="nu">
+      <cat-item lemma="nu" tags="adv.*"/>
+    </def-cat>
+     <def-cat n="olu">
+      <cat-item lemma="olu" tags="adv.*"/>
+      <cat-item lemma="ollu" tags="adv.*"/>
+    </def-cat>
+     <def-cat n="oktavuohta">
+      <cat-item lemma="oktavuohta" tags="n.*"/>
+    </def-cat>
+     <def-cat n="buot">
+      <cat-item lemma="buot" tags="prn.*"/>
+    </def-cat>
      <def-cat n="dem-gen">
       <cat-item tags="prn.dem.sg.gen.*"/>
     </def-cat>
@@ -2254,6 +2273,60 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+     <rule comment="REGLA: buot oktavuođain"> 
+      <pattern>
+        <pattern-item n="buot"/>
+        <pattern-item n="oktavuohta"/>
+      </pattern>
+      <action>     
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="advl" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <lit v="gaajhke"/>
+              <lit-tag v="prn.ind.sg.ine.attr"/>
+            </lu>
+              <b/>
+            <lu>
+              <lit v="lehkie"/>
+              <lit-tag v="n.sg.ine"/>
+            </lu>
+         </chunk>
+        </out>
+      </action>
+    </rule>
+     <rule comment="REGLA: dan duohken"> 
+      <pattern>
+        <pattern-item n="dat"/>
+        <pattern-item n="duohken"/>
+      </pattern>
+      <action>     
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="advl" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <lit v="båetedh"/>
+              <lit-tag v="vblex.iv.indic.pres.p3.sg"/>
+            </lu>
+              <b/>
+            <lu>
+              <lit v="dïhte"/>
+              <lit-tag v="prn.dem.sg.ela"/>
+            </lu>
+         </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    
 
     <rule comment="REGLA: pronouns  - 2 positions"> <!-- moai Laarain - månnoeh Laarah -->
       <pattern>
@@ -3833,6 +3906,35 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule> -->
+
+   <rule comment="REGLA: nu olu oktavuođain"> 
+      <pattern>
+        <pattern-item n="nu"/>
+        <pattern-item n="olu"/>
+        <pattern-item n="oktavuohta"/>
+      </pattern>
+      <action>     
+         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+
+        <out>
+          <chunk name="advl" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <lit v="dan"/>
+              <lit-tag v="adv"/>
+            </lu>
+              <b/>
+            <lu>
+              <lit v="jïjnje"/>
+              <lit-tag v="adj.sg.acc"/>
+            </lu>
+         </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="REGLA: dattetge lea dárbu"> 
