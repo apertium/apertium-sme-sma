@@ -259,7 +259,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="prn.pers.*.du.*"/>
     </def-cat>
     <def-cat n="adj2verb">
-      <cat-item tags="adj.*"/>
+      <cat-item lemma="bávččas" tags="adj.*.*.*.@←SPRED"/>
     </def-cat>
     <def-cat n="Laarain">
       <cat-item tags="*.com.@Pron←"/>
@@ -5208,7 +5208,7 @@ And then there are some categories like "month", with all the months.
     </rule>  
 
 
-<!--    <rule comment="REGLA: remove cop-mainv when adj is vfin  - 3 positions">
+   <rule comment="REGLA: remove cop-mainv when adj is vfin  - 3 positions"> <!-- Mov åejjieh saejriedieh. -->
       <pattern>
         <pattern-item n="leat-drop"/>
         <pattern-item n="noun"/>
@@ -5219,10 +5219,10 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
-          <chunk name="nounnn" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="func"/></tag>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="@SUBJ→"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
@@ -5232,7 +5232,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="vblex">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="func"/></tag>
+              <tag><lit-tag v="@+FMAINV"/></tag>
             </tags>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
@@ -5240,7 +5240,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>  -->
+    </rule>  
 
 
     <rule comment="REGLA: verb-fin  - 1 position">
