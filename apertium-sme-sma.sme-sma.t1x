@@ -371,7 +371,16 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="np.*.*.nom.*"/>
       <cat-item tags="np.*.*.*.nom.*"/>
     </def-cat>
-    <def-cat n="gen">
+     <def-cat n="noun-nom-acc-gen">
+      <cat-item tags="n.*.*.nom.*"/>
+      <cat-item tags="n.*.*.*.nom.*"/>
+      <cat-item tags="n.*.*.acc.*"/>
+      <cat-item tags="n.*.*.*.acc.*"/>
+      <cat-item tags="n.*.*.gen.*"/>
+      <cat-item tags="n.*.*.*.gen.*"/>
+      <cat-item tags="num.*.gen.*"/>
+    </def-cat>
+   <def-cat n="gen">
       <cat-item tags="*.gen.*"/>
     </def-cat>
     <def-cat n="noun-ill">
@@ -471,7 +480,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="semyearPl">
       <cat-item tags="*.sem_year.pl.*"/>
     </def-cat>
-    <def-cat n="numsg">
+    <def-cat n="numsg-acc-nom">
       <cat-item tags="num.sg.acc.*"/>
       <cat-item tags="num.arab.sg.acc.*"/>
       <cat-item tags="num.sg.nom.*"/> 
@@ -2970,6 +2979,54 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: rdep cmp_splitr ja  n  - 3 position out">  <!-- Gieldda- ja ođasmahttindepartemeanta -->
+      <pattern>
+        <pattern-item n="cmp_splitr"/>
+        <pattern-item n="cnjcoo"/>
+        <pattern-item n="n-cmp"/>
+       <pattern-item n="n-not-cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/>
+        <with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param">
+          <with-param pos="4"/>
+        </call-macro>
+     <choose><when>
+     <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+     </choose>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <mlu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+              </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: rdep cmp_splitr ja  n  - 4 position out"> 
       <pattern>
@@ -3413,8 +3470,8 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: numsg noun - 2 positions out"> <!-- NP: num noun -->
       <pattern>
-        <pattern-item n="numsg"/>
-        <pattern-item n="noun-not-np"/>
+        <pattern-item n="numsg-acc-nom"/>
+        <pattern-item n="noun-nom-acc-gen"/>
       </pattern>
       <action>     
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
@@ -3490,11 +3547,11 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> 
     
-    <rule comment="REGLA: numsg noun - 2 positions out"> <!-- Ipmil sivdnidii guokte stuora čuovgga.  -->
+    <rule comment="REGLA: numsg noun - 3 positions out"> <!-- Ipmil sivdnidii guokte stuora čuovgga.  -->
       <pattern>
-        <pattern-item n="numsg"/>
+        <pattern-item n="numsg-acc-nom"/>
         <pattern-item n="rdep"/>
-        <pattern-item n="noun"/>
+        <pattern-item n="noun-nom-acc-gen"/>
       </pattern>
       <action>     
      <choose><when>
@@ -3506,12 +3563,13 @@ And then there are some categories like "month", with all the months.
         </otherwise>
      </choose>
 
-     <choose><when>
+     <choose>
+     <when>
        <test><and>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
 
 
      </and></test>
@@ -3520,10 +3578,18 @@ And then there are some categories like "month", with all the months.
           <concat>
           <lit-tag v="n.pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
-          </when></choose>
+          </when>
+     <when>
+       <test> 
+     <equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="num"/></equal> 
+     </test>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          </when>
+          </choose>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>       
         <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nounnum" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3545,6 +3611,77 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: numsg noun - 4 positions out"> <!-- 46,3 miljovnna lassi juolludeapmi  -->
+      <pattern>
+        <pattern-item n="numsg-acc-nom"/>
+        <pattern-item n="rdep"/>
+        <pattern-item n="noun-nom-acc-gen"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>     
+     <choose><when>
+     <test><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal></test>
+         <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+         </when>
+        <otherwise>
+         <call-macro n="general-macro-4Param"><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/><with-param pos="1"/></call-macro>
+        </otherwise>
+     </choose>
+
+     <choose>
+     <when>
+       <test><and>
+     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
+     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
+
+
+     </and></test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="3" side="tl" part="tags"/>
+          <concat>
+          <lit-tag v="n.pl"/>
+          <clip pos="1" side="tl" part="a_case"/></concat></let>
+          </when>
+     <when>
+       <test> 
+     <equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="num"/></equal> 
+     </test>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          </when>
+          </choose>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>       
+        <out>
+          <chunk name="nounnum" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+               <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+               <b/>
+              <lu>
+                <clip pos="4" side="tl" part="whole"/>
+              </lu>
+         </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: dem numsg noun - 3 positions out">
       <pattern>
@@ -3978,6 +4115,47 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="prn-indef"/>
         <pattern-item n="n-cmp"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/>
+        <with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>
+      <choose><when>
+     <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+     </choose>
+        <out>
+          <chunk name="prn-noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: prn-indef rdep noun  - 3 positions out">
+      <pattern>
+        <pattern-item n="prn-indef"/>
+        <pattern-item n="rdep"/>
         <pattern-item n="noun"/>
       </pattern>
       <action>
