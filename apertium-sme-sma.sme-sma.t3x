@@ -213,6 +213,7 @@ And then there are some categories like "month", with all the months.
        <pattern-item n="Adp"/>
      </pattern>
      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
        <out>
          <chunk>
            <get-case-from pos="1"><lit v="adpp"/></get-case-from>
@@ -255,6 +256,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="WORD"/>
       </pattern>
       <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="lemh"/>
