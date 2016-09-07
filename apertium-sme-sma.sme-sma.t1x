@@ -3624,13 +3624,13 @@ And then there are some categories like "month", with all the months.
        <test><and>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
-     <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
-     <not><equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
+     <not><equal><clip pos="4" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+     <not><equal><clip pos="4" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
 
 
      </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-          <let><clip pos="3" side="tl" part="tags"/>
+          <let><clip pos="4" side="tl" part="tags"/>
           <concat>
           <lit-tag v="n.pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
@@ -3643,7 +3643,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
           </when>
           </choose>
-        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>       
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>       
         <out>
           <chunk name="nounnum" case="caseFirstword">
             <tags>
