@@ -96,6 +96,9 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="NP_Subj_not_Rel_r">
         <cat-item lemma="prn" tags="NP.@SUBJ→.pers"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.pers.*"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.ind"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.ind.*"/>
         <cat-item lemma="noun" tags="NP.@SUBJ→.*"/>
         <cat-item lemma="noun" tags="NP.@SUBJ→"/>
     </def-cat>
