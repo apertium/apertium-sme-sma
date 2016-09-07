@@ -1387,6 +1387,11 @@ And then there are some categories like "month", with all the months.
         </when>
         <when>
           <test><equal>
+            <clip pos="1" side="sl" part="lem"/><lit v="gulahallan"/></equal></test>
+          <let><clip pos="1" side="tl" part="lem"/><lit v="gaskesadtedh"/></let>
+        </when>
+        <when>
+          <test><equal>
             <clip pos="1" side="sl" part="lem"/><lit v="huksen"/></equal></test>
           <let><clip pos="1" side="tl" part="lem"/><lit v="tseegkedh"/></let>
         </when>
