@@ -911,6 +911,8 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="@-F←ADVL"/>
        <attr-item tags="@-F←ADVL-ine"/>
        <attr-item tags="@-F←ADVL-ela"/>
+       <attr-item tags="@-FADVL-ine→"/>
+       <attr-item tags="@-FADVL-ela→"/>
        <attr-item tags="@-F←OBJ"/>
        <attr-item tags="@-F←OPRED"/>
        <attr-item tags="@-F←SUBJ"/>
@@ -1333,6 +1335,16 @@ And then there are some categories like "month", with all the months.
       <list-item v="boahtteáigi"/>
       <list-item v="áigi"/>
     </def-list>
+    <def-list n="ela-func">
+      <list-item v="@-F←ADVL-ela"/>
+      <list-item v="@←ADVL-ela"/>
+      <list-item v="@ADVL-ela→"/>
+    </def-list>
+    <def-list n="ine-func">
+      <list-item v="@-F←ADVL-ine"/>
+      <list-item v="@←ADVL-ine"/>
+      <list-item v="@ADVL-ine→"/>
+    </def-list>
 
 
 
@@ -1677,13 +1689,11 @@ And then there are some categories like "month", with all the months.
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
+             <or>
              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-            </and>
-            <and>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
-             <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+             <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+              </or>
             </and>
           <and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
@@ -1738,6 +1748,7 @@ And then there are some categories like "month", with all the months.
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+             <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
              <not><in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in></not>
               <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></not>
              <not> <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal></not>
@@ -1928,23 +1939,18 @@ And then there are some categories like "month", with all the months.
          
         <when>        <!-- with sg loc (not hab), littag ela -->
           <test>
-          <or>
             <and>
               <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
               <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
               <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
 <!--              <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
+		       <or>
                <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
-             <not><in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
-            </and>
-            <and>
-              <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
-              <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-              <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
                <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+             <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+               </or>
              <not><in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
             </and>
-            </or>
           </test>
           <let>
             <clip pos="1" side="tl" part="tags"/>
@@ -1991,6 +1997,7 @@ And then there are some categories like "month", with all the months.
               <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
               <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
               <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+             <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
 <!--              <not><in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in></not> -->
              <not><in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="a_time"/></in></not>
             </and>
@@ -2057,23 +2064,18 @@ And then there are some categories like "month", with all the months.
         </when>
         <when>
           <test>
-          <or>
             <and>
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
             <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
 <!--            <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
+              <or>
                <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
-            <not><in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="muvhte"/></in></not>
-            </and>
-            <and>
-            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
-            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
                <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+             <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+               </or>
             <not><in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="muvhte"/></in></not>
             </and>
-          </or>
           </test>
         <let><clip pos="1" side="tl" part="tags"/>
           <concat>
@@ -2094,23 +2096,18 @@ And then there are some categories like "month", with all the months.
         </when>
         <when>
           <test>
-          <or>
             <and>
             <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
             <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
 <!--            <in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in> -->
-               <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+              <or>
+               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+             <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+               </or>
            <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="muvhte"/></in>
             </and>
-            <and>
-            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
-            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-             <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
-               <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-           <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="muvhte"/></in>
-            </and>
-           </or>
          </test>
         <let><clip pos="1" side="tl" part="tags"/>
           <concat>
@@ -2137,6 +2134,7 @@ And then there are some categories like "month", with all the months.
  <!--         <not><in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in></not> -->
             <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
             <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+          <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
            <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="muvhte"/></in>
             </and>
           </test>
@@ -2796,8 +2794,9 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/>
         <with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
         <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nounss" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -2944,11 +2943,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/>
-        <with-param pos="3"/></call-macro>
-        <call-macro n="convert-case-nbr-poss-1Param">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>
      <choose><when>
      <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -2987,11 +2983,8 @@ And then there are some categories like "month", with all the months.
        <pattern-item n="n-not-cmp"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/>
-        <with-param pos="3"/><with-param pos="4"/></call-macro>
-        <call-macro n="convert-case-nbr-poss-1Param">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
      <choose><when>
      <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -3036,11 +3029,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/>
-        <with-param pos="3"/><with-param pos="4"/></call-macro>
-        <call-macro n="convert-case-nbr-poss-1Param">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
      <choose><when>
      <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -4181,14 +4171,13 @@ And then there are some categories like "month", with all the months.
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
               <b/>
-            <mlu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-            </mlu>
           </chunk>
         </out>
       </action>
@@ -4558,17 +4547,36 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
       <choose>
-      <when><test><or>
-       <equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
-       <equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
-       </or></test>
+      <when><test><and><or>
+       <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+       <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
+       </or>
+                    <or>
+             <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+             <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+             <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+              </or>
+</and></test>
+                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+                 </when>
+      <when><test><and><or>
+       <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+       <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
+       </or>
+        <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+        <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
+        <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
+</and></test>
                  <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
                  </when>
       <when><test><and>
-       <not><equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
-       <not><equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
-       <not><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
-       <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+       <not><equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
+       <not><equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
+       <not><equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal></not>
+       <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
+       <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
        </and></test>
                  <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
                  <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ess"/></let>
@@ -4592,8 +4600,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: bokte ahte  - 2 position out"> <!-- inessive and comitative/essive instead of pp with bokte -->
-      <pattern>
+<!--    <rule comment="REGLA: bokte ahte  - 2 position out"> --> <!-- inessive and comitative/essive instead of pp with bokte -->
+<!--      <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="bokte"/>
         <pattern-item n="ahte"/>
@@ -4603,6 +4611,7 @@ And then there are some categories like "month", with all the months.
       <when><test><or>
        <equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
        <equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_money"/></equal>
        </or></test>
                  <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
                  </when>
@@ -4610,6 +4619,7 @@ And then there are some categories like "month", with all the months.
        <not><equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
        <not><equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
        <not><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
+       <not><equal><clip pos="1" side="tl" part="a_sem"/><lit-tag v="sem_money"/></equal></not>
        <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
        </and></test>
                  <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
@@ -4634,7 +4644,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
     <rule comment="REGLA: bokte  - 1 position out"> <!-- inessive and comitative/essive instead of pp with bokte -->
@@ -4645,16 +4655,36 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
       <choose>
-      <when><test><or>
-       <equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
-       <equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
-       </or></test>
+      <when><test><and><or>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
+       </or>
+        <or>
+       <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+       <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+       <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+        </or></and>
+       </test>
+                 <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+                 </when>
+      <when><test><and><or>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
+       </or>
+        <not><equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+        <not><equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
+        <not><equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
+        </and>
+       </test>
                  <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ine"/></let>
                  </when>
       <when><test><and>
-       <not><equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
-       <not><equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
-       <not><equal><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
        <equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
        </and></test>
                  <let><clip pos="2" side="tl" part="a_nbr"/><lit v=""/></let>
@@ -4693,16 +4723,36 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
       <choose>
-      <when><test><or>
-       <equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
-       <equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
-       </or></test>
+      <when><test><and><or>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
+       </or>
+        <or>
+       <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+       <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+       <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+        </or></and>
+       </test>
+                 <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+                 </when>
+      <when><test><and><or>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
+       </or>
+        <not><equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+        <not><equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
+        <not><equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
+        </and>
+       </test>
                  <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ine"/></let>
                  </when>
       <when><test><and>
-       <not><equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
-       <not><equal><clip pos="2" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
-       <not><equal><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
+       <not><equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal></not>
        <equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
        </and></test>
                  <let><clip pos="2" side="tl" part="a_nbr"/><lit v=""/></let>
@@ -4739,16 +4789,36 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
       <choose>
-      <when><test><or>
-       <equal><clip pos="3" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+      <when><test><and><or>
+       <equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
+       <equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
+       <equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
+       </or>
+        <or>
+             <equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+             <equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+             <equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+        </or>
+       </and>
+       </test>
+                 <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+                 </when>
+      <when><test><and><or>
+             <equal><clip pos="3" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
        <equal><clip pos="3" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
-       </or></test>
+       <equal><clip pos="3" side="tl" part="a_sem"/><lit-tag v="sem_money"/></equal></or>
+             <not><equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+             <not><equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
+             <not><equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
+       </and>
+       </test>
                  <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="ine"/></let>
                  </when>
       <when><test><and>
-       <not><equal><clip pos="3" side="tl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
-       <not><equal><clip pos="3" side="tl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
-       <not><equal><clip pos="3" side="tl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
+       <not><equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal></not>
+       <not><equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal></not>
+       <not><equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal></not>
+       <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal></not>
        <equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
        </and></test>
                  <let><clip pos="3" side="tl" part="a_nbr"/><lit v=""/></let>
@@ -5050,17 +5120,16 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
          </when>
 
-        <when><test><or><and>
+        <when><test><and>
         <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
+        <or>
         <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
-        </and>
-        <and>
-        <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
         <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-        <not><equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_time"/></equal></not>
-        </and></or></test>
+        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+        </or>
+        </and>
+        </test>
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
         </when>
         <when>
@@ -5107,17 +5176,16 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
               <choose>  
-        <when><test><or><and>
+        <when><test><and>
         <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
         <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
+        <or>
         <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
-        </and>
-        <and>
-        <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-        <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
         <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-        <not><equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_time"/></equal></not>
-        </and></or></test>
+        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+        </or>
+        </and>
+        </test>
         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let>
         </when>
         <when>

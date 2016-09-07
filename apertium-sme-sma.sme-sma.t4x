@@ -67,6 +67,8 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@←ADVL-ela"/>
         <cat-item tags="*.@←ADVL-ine.*"/>
         <cat-item tags="*.@←ADVL-ine"/>
+        <cat-item tags="*.@-F←ADVL-ine"/>
+        <cat-item tags="*.@-F←ADVL-ela"/>
    </def-cat>
 
     <def-cat n="SV_Obj">
@@ -98,8 +100,10 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="noun" tags="NP.@SUBJ→"/>
     </def-cat>
     <def-cat n="left_border">
-        <cat-item tags="NP.@SUBJ→"/>
         <cat-item tags="NP.@SUBJ→.*"/>
+        <cat-item tags="NP.@←SUBJ.*"/>
+        <cat-item tags="NP.@SUBJ→"/>
+        <cat-item tags="NP.@←SUBJ"/>
         <cat-item tags="cnjsub.@CVP.*"/>
         <cat-item tags="cnjsub.@CVP"/>
     </def-cat>
@@ -143,6 +147,8 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@←ADVL-ela"/>
         <cat-item tags="*.@←ADVL-ine.*"/>
         <cat-item tags="*.@←ADVL-ine"/>
+        <cat-item tags="*.@-F←ADVL-ine"/>
+        <cat-item tags="*.@-F←ADVL-ela"/>
     </def-cat>
 
 
@@ -162,6 +168,10 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@←ADVL-ela"/>
         <cat-item tags="*.@←ADVL-ine.*"/>
         <cat-item tags="*.@←ADVL-ine"/>
+        <cat-item tags="*.@-F←ADVL-ine"/>
+        <cat-item tags="*.@-F←ADVL-ela"/>
+        <cat-item tags="*.@-F←ADVL-ine.*"/>
+        <cat-item tags="*.@-F←ADVL-ela.*"/>
     </def-cat>
 
     <def-cat n="complement">
@@ -1549,8 +1559,8 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="V S SPRED ADVL" > <!-- ja de V S SPRED ADVL becomes S SPRED ADVL V -->
-      <pattern>
+<!--    <rule comment="V S SPRED ADVL" > --> <!-- ja de V S SPRED ADVL becomes S SPRED ADVL V -->
+ <!--      <pattern>
         <pattern-item n="IFMainV"/>
         <pattern-item n="NP_Subj"/>
         <pattern-item n="NP_Spred_l"/>
@@ -1588,7 +1598,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
     <rule comment="NP_Subj_r lea ADVL" > 
@@ -1968,8 +1978,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="NP_Subj FMainV NP_Advl" > <!--SVA becomes SAV -->
-      <pattern>
+<!--    <rule comment="NP_Subj FMainV NP_Advl" > --> <!--SVA becomes SAV -->
+<!--      <pattern>
         <pattern-item n="left_border"/>
         <pattern-item n="FMainV"/>
         <pattern-item n="NP_Advl"/>
@@ -1998,7 +2008,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
     <!--  <rule comment="prn-pers-subj ii-conneg; mun in - im"> -->
