@@ -43,6 +43,12 @@ And then there are some categories like "month", with all the months.
 <interchunk>
 
   <section-def-cats>
+    <def-cat n="comma">
+      <cat-item lemma="comma" tags="CLB" />
+    </def-cat>
+    <def-cat n="post">
+        <cat-item lemma="post" tags="PP.*"/>
+    </def-cat>
     <def-cat n="PR_PO">
        <cat-item lemma="pr_post" tags="*"/>
     </def-cat>
@@ -126,6 +132,7 @@ And then there are some categories like "month", with all the months.
     
     <def-cat n="NP_Po">
         <cat-item tags="NP.@→P.*"/>
+        <cat-item tags="NP.@→P"/>
     </def-cat>
 
 
@@ -574,6 +581,84 @@ And then there are some categories like "month", with all the months.
        <out>
          <chunk>
            <get-case-from pos="1"><lit v="coor_obj"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+     <rule comment="REGLA: NP_Po CNP NP_Po post ">
+     <pattern>
+       <pattern-item n="NP_Po"/>
+       <pattern-item n="comma"/>
+       <pattern-item n="NP_Po"/>
+       <pattern-item n="CNP"/>
+       <pattern-item n="post"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="coor_pp"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <b pos="2"/>
+           <clip pos="3" part="content"/>
+           <b pos="3"/>
+           <clip pos="4" part="content"/>
+           <b pos="4"/>
+           <clip pos="5" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+
+ 
+     <rule comment="REGLA: NP_Po CNP NP_Po post ">
+     <pattern>
+       <pattern-item n="NP_Po"/>
+       <pattern-item n="CNP"/>
+       <pattern-item n="NP_Po"/>
+       <pattern-item n="post"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="coor_pp"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <b pos="2"/>
+           <clip pos="3" part="content"/>
+           <b pos="3"/>
+           <clip pos="4" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+
+     <rule comment="REGLA: NP_Po CNP NP_Po post ">
+     <pattern>
+       <pattern-item n="NP_Po"/>
+       <pattern-item n="post"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="pp"/></get-case-from>
            <clip pos="1" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>

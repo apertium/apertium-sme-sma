@@ -68,6 +68,9 @@ And then there are some categories like "month", with all the months.
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="comma">
+      <cat-item lemma="," tags="cm"/>
+    </def-cat>
     <def-cat n="n-cmp">
       <cat-item tags="*.cmp.guio"/>
       <cat-item tags="*.cmp"/>
@@ -426,6 +429,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="rdep">
       <cat-item tags="prn.pers.*.*.@→N"/>
       <cat-item tags="prn.ref.*.@→N"/>
+      <cat-item tags="prn.ref.*.*.@→N"/>
       <cat-item tags="adj.*.*.@→N"/>
       <cat-item tags="adj.*.@→N"/>
       <cat-item tags="n.*.@→N"/>
@@ -5546,6 +5550,58 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: rdep rdep rdep cmp n  - 4 positions out">
+      <pattern>
+        <pattern-item n="rdep"/> 
+        <pattern-item n="rdep"/> 
+        <pattern-item n="rdep"/> 
+        <pattern-item n="n-not-cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
+              <choose>  
+        <when><test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+        </when>
+      <when>
+     <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+      </choose>  
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
     <rule comment="REGLA: n-cmp rdep rdep cmp n  - 3 positions out">
       <pattern>
         <pattern-item n="n-cmp"/>
@@ -7225,6 +7281,24 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    <rule comment="REGLA: comma">
+      <pattern>
+        <pattern-item n="comma"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="comma" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="CLB"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: DEFAULT">
       <pattern>
         <pattern-item n="default"/>
@@ -7234,6 +7308,7 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="default" case="caseFirstword">
             <tags>
+              <tag><lit-tag v="DEFAULT"/></tag>
               <tag><clip pos="1" side="sl" part="a_func"/></tag>
             </tags>
             <lu>
