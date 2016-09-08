@@ -7286,7 +7286,6 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="comma"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="comma" case="caseFirstword">
             <tags>
