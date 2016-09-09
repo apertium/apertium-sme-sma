@@ -79,6 +79,12 @@
        <seq n="s-border"/>  
        <match lemma="son" tags="prn.pers.p3.sg.gen.*"><select lemma="satne" tags="prn.*"/></match>
   </rule>
+  <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="s-border"/>  
+       <repeat upto="5"><seq n="word"/></repeat> 
+       <match lemma="son" tags="prn.pers.p3.sg.gen.*"><select lemma="satne" tags="prn.*"/></match>
+  </rule>
 
   <rule weight="1.0">
        <match lemma="son" tags="prn.*"><select lemma="dah" tags="prn.*"/></match>
@@ -91,6 +97,12 @@
 
   <rule weight="0.5">
        <match lemma="son" tags="prn.*"><select lemma="sijjieh" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="s-border"/>  
+       <repeat upto="5"><seq n="word"/></repeat> 
+       <match lemma="son" tags="prn.pers.p3.pl.gen.*"><select lemma="sijjieh" tags="prn.*"/></match>
   </rule>
   <rule weight="0.6">
        <seq n="word"/>
@@ -112,6 +124,12 @@
   <rule weight="0.6">
        <seq n="word"/>
        <seq n="s-border"/>  
+       <match lemma="son" tags="prn.pers.p3.du.gen.*"><select lemma="såtnoeh" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <seq n="word"/>
+       <seq n="s-border"/>  
+       <repeat upto="5"><seq n="word"/></repeat> 
        <match lemma="son" tags="prn.pers.p3.du.gen.*"><select lemma="såtnoeh" tags="prn.*"/></match>
   </rule>
 

@@ -840,8 +840,8 @@ And then there are some categories like "month", with all the months.
 <!--      </action>										 -->
 <!--    </rule>											 -->
 
-    <rule comment="FAuxV IMainV ADVL_left" > <!--AUX V A becomes AUX A V -->
-      <pattern>
+<!--    <rule comment="FAuxV IMainV ADVL_left" > --> <!--AUX V A becomes AUX A V -->
+<!--      <pattern>
         <pattern-item n="FAuxV"/>
         <pattern-item n="IMainV"/>
         <pattern-item n="ADVL_left"/>
@@ -870,7 +870,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> 
     <rule comment="FAuxV IMainV ADVL_left NP_Obj_l" > 
       <pattern>
         <pattern-item n="FAuxV"/>
@@ -909,7 +909,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
 

@@ -813,7 +813,6 @@ And then there are some categories like "month", with all the months.
     </def-attr>
 
     <def-attr n="a_ntype">
-       <attr-item tags="nomag"/>
        <attr-item tags="abbr"/>
        <attr-item tags="acr"/>
     </def-attr>
@@ -829,8 +828,10 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="pres"/>
     </def-attr>
 
-    <def-attr n="a_south">
-       <attr-item tags="south"/>
+    <def-attr n="a_spec_sme_tags">
+      <attr-item tags="south"/>
+      <attr-item tags="g3"/>
+       <attr-item tags="nomag"/>
     </def-attr>
 
 
@@ -1522,7 +1523,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="pcle"/></let></when>
       </choose> 
 
-      <let><clip pos="1" side="tl" part="a_south"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_spec_sme_tags"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
 
 
