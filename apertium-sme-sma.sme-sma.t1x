@@ -213,8 +213,11 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="áhkku" tags="n.*.sg.*"/>
       <cat-item lemma="áddjá" tags="n.*.sg.*"/>
     </def-cat>
-    <def-cat n="jahki">
+    <def-cat n="jahki-loc">
       <cat-item lemma="jahki" tags="n.*.sg.loc.*"/>
+    </def-cat>
+    <def-cat n="jahki">
+      <cat-item lemma="jahki" tags="n.*"/>
     </def-cat>
     <def-cat n="mielde_adv">
       <cat-item lemma="mielde" tags="adv.*"/>
@@ -2487,7 +2490,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: jagis 2001 - 2 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
       <pattern> 
-        <pattern-item n="jahki"/>
+        <pattern-item n="jahki-loc"/>
         <pattern-item n="semyear"/>
      </pattern>
       <action>
@@ -2503,6 +2506,63 @@ And then there are some categories like "month", with all the months.
             <lu>
               <lit v="jaepie"/>
               <lit-tag v="n.sg.gen"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: gitta jagi 2001 - 3 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
+      <pattern> 
+        <pattern-item n="rdep"/>
+        <pattern-item n="jahki"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"> <with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+         <let><clip pos="3" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let> 
+                          <out>
+          <chunk name="num-noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA:  jagi 2001 - 2 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
+      <pattern> 
+        <pattern-item n="jahki"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"> <with-param pos="1"/><with-param pos="2"/></call-macro>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let> 
+                          <out>
+          <chunk name="num-noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
             <b/>
             <lu>
