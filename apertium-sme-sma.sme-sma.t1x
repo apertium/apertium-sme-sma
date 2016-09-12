@@ -6649,8 +6649,8 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <let><clip pos="2" side="tl" part="tags"/><concat><lit-tag v="vblex.indic"/><var n="tense"/><lit-tag v="p3"/>
-        <var n="subj_nbr"/></concat></let>
+        <let><clip pos="2" side="tl" part="tags"/><concat><lit-tag v="vblex.indic"/><var n="tense"/><lit-tag v="p3.sg"/>
+        </concat></let>
         <out>
           <chunk name="vblexc" case="caseFirstword">
             <tags>
