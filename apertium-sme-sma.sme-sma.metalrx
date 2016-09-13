@@ -14,8 +14,6 @@
         <match tags="post.*"/>
         <match tags="np.*"/>
         <match tags="vblex.*"/>
-        <match tags="cm.*"/>
-        <match tags="cm"/>
       </or>
     </def-seq>
     <def-seq n="non-verb">

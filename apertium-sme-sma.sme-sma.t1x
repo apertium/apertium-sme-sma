@@ -71,6 +71,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="comma">
       <cat-item lemma="," tags="cm"/>
     </def-cat>
+     <def-cat n="mod_num">
+  	 	<cat-item tags="*.@→Num"/>
+  	 </def-cat>
     <def-cat n="n-cmp">
       <cat-item tags="*.cmp.guio"/>
       <cat-item tags="*.cmp"/>
@@ -89,6 +92,9 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="adj.*.*.*.cmp"/>
       <cat-item tags="vblex.*.der_nomact.n.*.cmp"/>
       <cat-item tags="vblex.*.der_nomag.n.*.cmp"/>
+    </def-cat>
+    <def-cat n="prosent">
+      <cat-item lemma="%" tags="punct"/>
     </def-cat>
     <def-cat n="prfprcword">
       <cat-item tags="*.prfprc.*"/>
@@ -2683,6 +2689,105 @@ And then there are some categories like "month", with all the months.
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: numeral prosent">
+      <pattern>
+        <pattern-item n="numeral"/>
+        <pattern-item n="prosent"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
+         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
+         <let><clip pos="2" side="tl" part="lem"/><lit v="proseente"/></let>
+         <choose>
+         <when><test><and>
+         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
+         <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not></and></test>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.pl.com"/></let>
+          </when>
+         <when><test><and>
+         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
+         <equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></and></test>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.sg.com"/></let>
+          </when>
+         <when><test><and>
+         <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal></not>
+         <equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></and>
+         </test>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.sg.nom"/></let>
+          </when>
+               <otherwise>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.pl.nom"/></let>
+               </otherwise>
+          </choose>
+        <out>
+          <chunk name="prosent" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   <rule comment="REGLA: adv numeral prosent">
+      <pattern>
+        <pattern-item n="mod_num"/>
+        <pattern-item n="numeral"/>
+        <pattern-item n="prosent"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="3"/><with-param pos="2"/></call-macro>
+         <let><clip pos="3" side="tl" part="lem"/><lit v="proseente"/></let> 
+         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
+         <choose>
+         <when><test><and>
+         <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
+         <not><equal><clip pos="2" side="sl" part="lem"/><lit v="1"/></equal></not></and></test>
+         <let><clip pos="3" side="tl" part="tags"/><lit-tag v="n.pl.com"/></let>
+          </when>
+         <when><test><and>
+         <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
+         <equal><clip pos="2" side="sl" part="lem"/><lit v="1"/></equal></and></test>
+         <let><clip pos="3" side="tl" part="tags"/><lit-tag v="n.sg.com"/></let>
+          </when>
+         <when><test><and>
+         <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal></not>
+         <equal><clip pos="2" side="sl" part="lem"/><lit v="1"/></equal></and>
+         </test>
+         <let><clip pos="3" side="tl" part="tags"/><lit-tag v="n.sg.nom"/></let>
+          </when>
+               <otherwise>
+         <let><clip pos="3" side="tl" part="tags"/><lit-tag v="n.pl.nom"/></let>
+               </otherwise>
+          </choose>
+       <out>
+          <chunk name="prosent" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
