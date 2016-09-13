@@ -119,6 +119,9 @@ And then there are some categories like "month", with all the months.
      <def-cat n="nomact-com">
       <cat-item tags="vblex.*.der_nomact.n.sg.com.*"/>
     </def-cat>
+     <def-cat n="nomact-nom">
+      <cat-item tags="vblex.*.der_nomact.n.sg.nom.*"/>
+    </def-cat>
      <def-cat n="nomact-ill">
       <cat-item tags="vblex.*.der_nomact.n.sg.ill.*"/>
       <cat-item lemma ="árvvoštallan" tags="n.*.sg.ill.*"/>
@@ -2908,7 +2911,66 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: nomact-com to inf  - 1 position">
+     <rule comment="REGLA: nomact-com to inf  - 1 position">
+      <pattern>
+        <pattern-item n="gen"/>
+        <pattern-item n="nomact-nom"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-verb-deriv-1Param"><with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        <out>
+          <chunk name="inf" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+     <rule comment="REGLA: nomact-com to inf  - 1 position">
+      <pattern>
+        <pattern-item n="rdep"/>
+        <pattern-item n="gen"/>
+        <pattern-item n="nomact-nom"/>
+      </pattern>
+      <action>
+        <call-macro n="convert-verb-deriv-1Param"><with-param pos="3"/></call-macro>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        <out>
+          <chunk name="inf" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   <rule comment="REGLA: nomact-com to inf  - 1 position">
       <pattern>
         <pattern-item n="nomact-com"/>
       </pattern>

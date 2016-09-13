@@ -317,7 +317,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="prn-dem">
-        <cat-item lemma="prn" tags="NP.@SUBJ→.*"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
     </def-cat>
     <def-cat n="Vcop-drop">
         <cat-item lemma="cop-mainv" tags="SV.*.pres"/>
@@ -1020,7 +1020,6 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-
 
 
  <rule comment="prn lea mod NP" > <!--  delete cop -->
