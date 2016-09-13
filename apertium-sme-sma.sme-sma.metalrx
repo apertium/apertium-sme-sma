@@ -2736,6 +2736,23 @@
     <repeat upto="3"><seq n="word"/></repeat>  <!-- 1-3 words -->
     <seq n="skuovva"/>
   </rule>
+  
+   <rule weight="0.65">
+    <match lemma="coggat">
+      <select lemma="tseegkedh"/>
+    </match> 
+    <seq n="gáhpir"/>
+  </rule>
+
+  <rule weight="0.65">
+    <match lemma="coggat">
+      <select lemma="tseegkedh"/>
+    </match> 
+    <repeat upto="3"><seq n="word"/></repeat>  <!-- 1-3 words -->
+    <seq n="gáhpir"/>  tseegkedh tjohpem åajjan!
+  </rule>
+
+
 
 
        <!-- galkedh -->   <!-- edtjedh -->
@@ -2750,15 +2767,8 @@
       <select lemma="galkedh"  tags="vblex.iv.*"/>
    </match>
   </rule>
-  <rule weight="0.6">
-       <match tags="n.*.*.loc.*" />
-       <match lemma="galgat" tags="vblex.iv.*"><select lemma="galkedh" tags="vblex.iv.*"/></match> 
-  </rule>
-  <rule weight="0.6">
-       <match lemma="galgat" tags="vblex.iv.*"><select lemma="galkedh" tags="vblex.iv.*"/></match> 
-       <match lemma="leat" tags="vblex.iv.*" />
-  </rule>
-
+    
+    
     
 </rules> 
 
