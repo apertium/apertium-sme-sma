@@ -2768,6 +2768,14 @@
    </match>
   </rule>
     
+ <rule weight="0.6">
+      <match tags="n.*.*.loc.*" />
+      <match lemma="galgat" tags="vblex.iv.*"><select lemma="galkedh" tags="vblex.iv.*"/></match> 
+ </rule>
+ <rule weight="0.6">
+      <match lemma="galgat" tags="vblex.iv.*"><select lemma="galkedh" tags="vblex.iv.*"/></match> 
+      <match lemma="leat" tags="vblex.iv.*" />
+ </rule>
     
     
 </rules> 
