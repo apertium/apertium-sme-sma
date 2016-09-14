@@ -1280,9 +1280,16 @@ And then there are some categories like "month", with all the months.
       <list-item v="veallahit"/>
       <list-item v="eallit"/>
     </def-list>
-    <def-list n="from-ill-to-ine-verb">
+    <def-list n="ine-verb">
       <list-item v="álgit"/>
+      <list-item v="aelkedh"/>
       <list-item v="oassálastit"/>     
+      <list-item v="mealtan"/>     
+     </def-list>
+    <def-list n="acc-verb">
+      <list-item v="guoskat"/>     
+      <list-item v="dijpedh"/>     
+      <list-item v="dïjpedh"/>     
      </def-list>
     <def-list n="nom-verb">
       <list-item v="mearkkašit"/>
@@ -1740,11 +1747,20 @@ And then there are some categories like "month", with all the months.
         <when>
           <test>
             <and>
-            <in caseless="yes"><var n="main-verb-lemma"/><list n="from-ill-to-ine-verb"/></in>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="ine-verb"/></in>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
             </and>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="acc-verb"/></in>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
         </when>
         <when>
           <test>
@@ -3001,13 +3017,22 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="nomact-ill"/>
       </pattern>
       <action>
-        <call-macro n="convert-nomact-1Param">
-          <with-param pos="1"/>
-        </call-macro>
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+      <choose>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="acc-verb"/></in>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        </when>
+     </choose>
+<!-- <call-macro n="convert-nomact-1Param"><with-param pos="1"/></call-macro>
+       <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
         <out>
           <chunk name="inf" case="caseFirstword">
             <tags>
@@ -3069,9 +3094,20 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <call-macro n="convert-nomact-1Param"><with-param pos="2"/></call-macro>
+<!--        <call-macro n="convert-nomact-1Param"><with-param pos="2"/></call-macro>
        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
+     <choose>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="acc-verb"/></in>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        </when>
+     </choose>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -3100,9 +3136,20 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
-        <call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>
+     <choose>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="acc-verb"/></in>
+            <equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        </when>
+     </choose>
+<!--       <call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>
        <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+       <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -3137,8 +3184,19 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
         <call-macro n="convert-nomact-1Param"><with-param pos="4"/></call-macro>
-       <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+      <choose>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="acc-verb"/></in>
+            <equal><clip pos="4" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        </when>
+     </choose>
+<!--      <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
