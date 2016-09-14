@@ -71,6 +71,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="comma">
       <cat-item lemma="," tags="cm"/>
     </def-cat>
+     <def-cat n="váikkuhit">
+  	 	<cat-item lemma="váikkuhit" tags="vblex.*"/>
+  	 </def-cat>
      <def-cat n="mod_num">
   	 	<cat-item tags="*.@→Num"/>
   	 </def-cat>
@@ -623,6 +626,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="ja" tags="cnjcoo"/>
       <cat-item lemma="ja" tags="cnjcoo.*"/>
       <cat-item lemma="ahte" tags="cnjcoo.*"/>
+      <cat-item lemma="ahte" tags="cnjcoo"/>
     </def-cat>
     <def-cat n="cnjcoo">
       <cat-item tags="cnjcoo"/>
@@ -1279,6 +1283,11 @@ And then there are some categories like "month", with all the months.
       <list-item v="stuorrut"/>
       <list-item v="veallahit"/>
       <list-item v="eallit"/>
+    </def-list>
+    <def-list n="adv-verb">
+      <list-item v="oassálastit"/>
+      <list-item v="oasálastit"/>
+      <list-item v="searvat"/>
     </def-list>
     <def-list n="ine-verb">
       <list-item v="álgit"/>
@@ -3030,11 +3039,19 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
         </when>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="adv-verb"/></in>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+		<call-macro n="convert-nomact-1Param"><with-param pos="1"/></call-macro>          
+		<let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        </when>
      </choose>
-<!-- <call-macro n="convert-nomact-1Param"><with-param pos="1"/></call-macro>
-       <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
         <out>
-          <chunk name="inf" case="caseFirstword">
+          <chunk name="actio" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@-FMAINV"/></tag>
@@ -3060,7 +3077,7 @@ And then there are some categories like "month", with all the months.
         <with-param pos="3"/><with-param pos="4"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
         <out>
-          <chunk name="nounss" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3086,17 +3103,90 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out"> 
+    <rule comment="REGLA: váikkuhit cmp illadvl    - 1 position out"> 
       <pattern>
+        <pattern-item n="váikkuhit"/>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="nomact-ill"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+          <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.sg.nom"/></let>
+		<let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.der_passl.vblex.iv.indic.pres.p3.sg"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            <b/>
+              <lu>
+              <lit v="guktie"/>
+              <lit-tag v="cnjsub"/>
+              </lu>
+            <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: váikkuhit cmp illadvl    - 1 position out"> 
+      <pattern>
+        <pattern-item n="váikkuhit"/>
         <pattern-item n="genmod"/>
         <pattern-item n="nomact-ill"/>
       </pattern>
       <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+          <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.sg.nom"/></let>
+		<let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.der_passl.vblex.iv.indic.pres.p3.sg"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            <b/>
+              <lu>
+              <lit v="guktie"/>
+              <lit-tag v="cnjsub"/>
+              </lu>
+            <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            <b/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: cmp illadvl    - 1 position out"> 
+      <pattern>
+        <pattern-item n="n-cmp"/>
+        <pattern-item n="nomact-ill"/>
+      </pattern>
+      <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-<!--        <call-macro n="convert-nomact-1Param"><with-param pos="2"/></call-macro>
-       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
      <choose>
         <when>
           <test>
@@ -3106,6 +3196,66 @@ And then there are some categories like "month", with all the months.
             </and>
           </test>
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="adv-verb"/></in>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+		<call-macro n="convert-nomact-1Param"><with-param pos="2"/></call-macro>          
+		<let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        </when>
+     </choose>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out"> 
+      <pattern>
+        <pattern-item n="genmod"/>
+        <pattern-item n="nomact-ill"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+     <choose>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="acc-verb"/></in>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="adv-verb"/></in>
+            <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+		<call-macro n="convert-nomact-1Param"><with-param pos="2"/></call-macro>          
+		<let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
         </when>
      </choose>
         <out>
@@ -3146,10 +3296,18 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
         </when>
-     </choose>
-<!--       <call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="adv-verb"/></in>
+            <equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
        <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
+		<call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>          
+		<let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        </when>
+     </choose>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -3194,9 +3352,18 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></let>
         </when>
+        <when>
+          <test>
+            <and>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="adv-verb"/></in>
+            <equal><clip pos="4" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+		<let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>		
+		<call-macro n="convert-nomact-1Param"><with-param pos="4"/></call-macro>          
+		<let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+        </when>
      </choose>
-<!--      <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-       <let><clip pos="4" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let> -->
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
