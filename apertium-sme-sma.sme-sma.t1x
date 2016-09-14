@@ -5358,6 +5358,8 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
          </when>
+              </choose>  
+              <choose>  
 
         <when><test><and>
         <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
