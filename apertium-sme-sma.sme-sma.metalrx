@@ -2551,12 +2551,6 @@
             <select lemma="minngebe" /> 
          </match>
        </rule>     
-       <rule weight="0.6"> 
-         <match lemma="boahtte" >
-            <select lemma="minngebe" /> 
-         </match>
-         <match lemma="buolva" tags="n.*"/>
-       </rule>     
 
         <rule weight="1.0"> 
          <match lemma="dárbu" >
