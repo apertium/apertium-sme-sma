@@ -98,10 +98,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="FMainV">
-        <cat-item lemma="vblex" tags="SV.@+FMAINV"/>
-        <cat-item lemma="vblex" tags="SV.@+FMAINV.*"/>
-        <cat-item lemma="vblex" tags="SV.*.@+FMAINV.*"/>
-        <cat-item lemma="vblex" tags="SV.*.*.@+FMAINV.*"/>
+        <cat-item tags="SV.@+FMAINV"/>
+        <cat-item tags="SV.@+FMAINV.*"/>
+        <cat-item tags="SV.*.@+FMAINV.*"/>
+        <cat-item tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
     
     <def-cat n="FAuxV">
