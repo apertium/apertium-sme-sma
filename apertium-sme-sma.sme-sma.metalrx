@@ -180,6 +180,18 @@
        <or><match lemma="ja" /><match lemma="ahte" />   </or>
        <match lemma="unni" />
   </rule>
+  <rule weight="0.5">
+       <match lemma="unni" tags="adj.*"><select lemma="vaenie" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="unni" tags="adj.*"><select lemma="vaenie" tags="adj.*"/></match>
+       <match tags="n.sem_money.*" />
+  </rule>
+  <rule weight="0.6">
+       <match lemma="unni" tags="adj.*"><select lemma="vaenie" tags="adj.*"/></match>
+       <match />
+       <match tags="n.sem_money.*" />
+  </rule>
   <rule weight="1.0">
        <match lemma="stuoris" tags="adj.*"><select lemma="stoere" tags="adj.*"/></match>
   </rule>
@@ -228,17 +240,6 @@
        <match lemma="áigi" /> 
   </rule> -->
  
-  <rule weight="1.0">
-       <match lemma="unni" tags="adj.*"><select lemma="onne" tags="adj.*"/></match>
-  </rule>
-  <rule weight="0.5">
-       <match lemma="unni" tags="adj.*"><select lemma="onne-unnebe" tags="adj.*"/></match>
-  </rule>
-  <rule weight="0.6">
-       <match lemma="unni" tags="adj.*"><select lemma="onne-unnebe" tags="adj.*"/></match>
-       <or><match lemma="ja" /><match lemma="ahte" />   </or>
-       <match lemma="eanet" />
-  </rule>
   <rule weight="1.0">
        <match lemma="stuoris" tags="adj.*"><select lemma="stoere" tags="adj.*"/></match>
   </rule>
