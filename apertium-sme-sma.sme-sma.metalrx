@@ -54,7 +54,27 @@
   </def-seqs>
 
 <rules>
-  
+  <rule weight="1.0">
+       <match lemma="okta" tags="num.*"><select lemma="akte" tags="num.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="okta" tags="num.*"><select lemma="fïereguhte" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <match lemma="juohke" />
+       <match lemma="okta" tags="num.*"><select lemma="fïereguhte" tags="prn.*"/></match>
+  </rule>
+   <rule weight="1.0">
+       <match lemma="geahčen" tags="post.*"><select lemma="luvnie" tags="post.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="geahčen" tags="post.*"><select lemma="daestie" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+    <match tags="n.sem_measr_time.*" />
+       <match lemma="geahčen" tags="post.*"><select lemma="daestie" tags="adv.*"/></match>
+  </rule>
+ 
   <rule weight="1.0">
        <match lemma="boahtit" tags="vblex.*"><select lemma="båetedh" tags="vblex.*"/></match>
   </rule>
