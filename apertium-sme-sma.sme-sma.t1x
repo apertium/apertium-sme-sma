@@ -5866,6 +5866,7 @@ And then there are some categories like "month", with all the months.
          </when>
      <when><test><and>
      <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal>  <!-- agreement only for plural nom -->
+     <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
      <not><equal><clip pos="2" side="sl" part="lem"/><lit v="ruhta"/></equal></not>
      <or>
      <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
