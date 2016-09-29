@@ -32,7 +32,7 @@ Error classification:
 =====================
 The errors are listed in the list catalogue, created as follows:
 
-cat 2-2016/MTeval_MAJA.txt |preprocess > list/MTeval_MAJA.list
+cat MTeval_MAJA.txt |preprocess > list/MTeval_MAJA.list
 diff list/sma_mt.list list/MTeval_MAJA.list |sed 's/^[1-9]/™/g;'|tr '\n' ' '|tr '™' '\n'|cut -d" " -f2- > result_MAJA.txt
 
 The resulting list is put in wer_analysis.ods for classifilation
