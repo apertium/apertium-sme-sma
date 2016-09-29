@@ -1,0 +1,45 @@
+Evaluerenteavsttaid analyseren
+
+
+A Kvantitatiivalaš analysa
+1. WER ja PER (man ollu sii leat divvon)
+WER = word error rate (maid sátneordnet)
+PER = position-independent word error rate (ii sátneordnet)
+2. Divvumiid klassifiseren
+3. Divvumiid analysa
+B. Kvalitatiivalaš analysa
+1. Jearranskovit
+
+
+Text files for evaluation are in 2-2016.
+
+WER, PER:
+=========
+
+Texts are evaluated on the command line (WER, PER) and on Fran's web page.
+
+Webpage
+http://xixona.dlsi.ua.es/~fran/eval/
+
+
+Commandline:
+The command used for WER and PER is
+perl ~/apertium/trunk/apertium-eval-translator/apertium-eval-translator-line.pl -r sma_mt.txt -t MTeval_MAJA.txt
+
+
+
+Error classification:
+=====================
+The errors are listed in the list catalogue, created as follows:
+
+cat 2-2016/MTeval_MAJA.txt |preprocess > list/MTeval_MAJA.list
+diff list/sma_mt.list list/MTeval_MAJA.list |sed 's/^[1-9]/™/g;'|tr '\n' ' '|tr '™' '\n'|cut -d" " -f2- > result_MAJA.txt
+
+The resulting list is put in wer_analysis.ods for classifilation
+
+
+Original files
+==============
+
+The original files are in
+techdoc/mt/smesma/evalueren/
