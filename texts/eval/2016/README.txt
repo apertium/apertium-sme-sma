@@ -24,7 +24,7 @@ http://xixona.dlsi.ua.es/~fran/eval/
 
 Commandline:
 The command used for WER and PER is
-perl ~/apertium/trunk/apertium-eval-translator/apertium-eval-translator.pl -r sma_mt.txt -t MTeval_MAJA.txt
+perl $GTCORE/scripts/apertium-eval-translator.pl -r sma_mt.txt -t MTeval_MAJA.txt
 
 
 
@@ -33,7 +33,7 @@ Error classification:
 The errors are listed in the list catalogue, created as follows:
 
 cat MTeval_MAJA.txt |preprocess > list/MTeval_MAJA.list
-diff list/sma_mt.list list/MTeval_MAJA.list |sed 's/^[1-9]/™/g;'|tr '\n' ' '|tr '™' '\n'|cut -d" " -f2- > result_MAJA.txt
+diff list/sma_mt.list list/MTeval_MAJA.list |sed 's/^[1-9]/™/g;'|tr '\n' ' '|tr '™' '\n'|cut -d" " -f2- >> wer_analysis.csv
 
 The resulting list is put in wer_analysis.ods for classifilation
 
