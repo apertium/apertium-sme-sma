@@ -24,7 +24,7 @@ http://xixona.dlsi.ua.es/~fran/eval/
 
 Commandline:
 The command used for WER and PER is
-perl ~/apertium/trunk/apertium-eval-translator/apertium-eval-translator-line.pl -r sma_mt.txt -t MTeval_MAJA.txt
+perl ~/apertium/trunk/apertium-eval-translator/apertium-eval-translator.pl -r sma_mt.txt -t MTeval_MAJA.txt
 
 
 
