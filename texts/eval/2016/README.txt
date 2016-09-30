@@ -38,12 +38,13 @@ diff list/sma_mt.list list/MTeval_MAJA.list |sed 's/^[1-9]/™/g;'|tr '\n' ' '|t
 The resulting list is put in wer_analysis.ods for classifilation
 
 where
-1 = lexical selection
-2 = error in generation (wrong shape of wordform)
-3 = error in choice of form (wrong wordform selected)
-4 = word order (word order changed, word deleted or added)
+Kriteriat
+1 = lexical selection and also word added/removed because of lexical selection
+2 = difference in generation (different shape of wordform)
+3 = difference in choice of form (different wordform selected)
+4 = word order (word order changed, word deleted or added, e.g. copula added or removed)
 5 = punctuation mark added or deleted.
-
+6 = word added/removed because of lexical selection
 
 
 Original files
