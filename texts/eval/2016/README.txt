@@ -33,6 +33,13 @@ Error classification:
 The errors are listed in the list catalogue, created as follows:
 
 cat MTeval_MAJA.txt |preprocess > list/MTeval_MAJA.list
+
+
+New command for making list:
+diff -y list/smj_mt.list list/smj_san.list|cat -n|grep '[><|]'|tr -s '\t'|see
+
+
+OLD COMMAND:
 diff list/sma_mt.list list/MTeval_MAJA.list |sed 's/^[1-9]/™/g;'|tr '\n' ' '|tr '™' '\n'|cut -d" " -f2- >> wer_analysis.csv
 
 The resulting list is put in wer_analysis.ods for classifilation
