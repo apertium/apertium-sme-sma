@@ -36,8 +36,7 @@ cat MTeval_MAJA.txt |preprocess > list/MTeval_MAJA.list
 
 
 New command for making list:
-diff -y list/smj_mt.list list/smj_san.list|cat -n|grep '[><|]'|tr -s '\t'|see
-
+diff -y list/sma_mt.list list/MTeval_MAJA.list|grep '[><|]'|tr -s '\t'|tr -s ' '|sed 's/^/        /' >> wer_analysis.csv
 
 OLD COMMAND:
 diff list/sma_mt.list list/MTeval_MAJA.list |sed 's/^[1-9]/™/g;'|tr '\n' ' '|tr '™' '\n'|cut -d" " -f2- >> wer_analysis.csv
