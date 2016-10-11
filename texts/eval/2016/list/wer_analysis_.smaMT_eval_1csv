@@ -10,16 +10,17 @@ Kriteriat
 3        Buerieh	 |	Buerie
         Minngebe	 |	Minngemes
 3       vïjhtene	 |	vïjhte
-1        stabiliseereme	 |	lea
-        	 >	tjoedtjestamme
-        dïsse	 |	gelline
-        lissine	 <
-        jïjnje	 <
+1        stabiliseereme	 |  tjoedtjestamme	
+4        	 >	lea
+1       dïsse	 |	gelline
+4       lissine	 <
+4       jïjnje	 <
 3       tjïelth	 |	tjïeltine
-        demtieh	 |	aaj
-        	 >	vuejnieh
-        goerehtallemh	 |	daejriejibie
-        vuesiehtieh	 |	goerehtallemistie
+1       demtieh	 |	vuejnieh 
+4        	 > aaj	
+3        goerehtallemh	 |	goerehtallemistie 
+1       vuesiehtieh	 |	daejriejibie ( + 4= Word Order)
+        
 3       mej	 |	mij
 1        Telemarksforskning	 |	Telemarhkhdotkeme
 2       saemiedigkieraerie	 |	Saemiedigkieraerie
@@ -29,17 +30,17 @@ Kriteriat
 1       jieliemidie	 |	jieliemasshsuerkide
 4        	 >	aktesne
 4       aaj	 <
-4      	 >	aaj
+ -     	 >	aaj
 3       leah	 |	lea
-        tseegkesovveme	 |	jeenjebh
-        jeenjebe	 <
-        	 >	sjïdteme
-        dan	 <
-        mij	 <
-        	 >	lea
-        Telemarksforskningen	 |	Telemarhkhdotkemen
-        Dïhte	 |	Vuesehte
-        vuesehte	 <
+1, 4       tseegkesovveme	 |		sjïdteme 
+3       jeenjebe	 <
+        > jeenjebh 
+4        dan	 <
+4        mij	 <
+4        	 >	lea
+1        Telemarksforskningen	 |	Telemarhkhdotkemen
+4        Dïhte	 |	Vuesehte
+2        vuesehte	 <
 3       dajvh	 |	dajvine
         giesijh	 |	jieliemasshevtiedimmiem
         jielemeevtiedæmman	 |	eadtjoestieh
@@ -49,8 +50,8 @@ Kriteriat
 1       garrebelaakan	 |	garrebe
 3       dajvh	 |	dajvide
 5       .	 <
-3       Darhkan	 |	Strerkestem
-        strerkiestamme	 <
+3   	 strerkiestamme |	Strerkestem
+4      	    Darhkan < (wordorder + word deleted)
 1       våaromejielemh	 |	maadthjieliemassh
 1        teknihkeles	 |	teknihken
         	 >	leah
@@ -68,8 +69,8 @@ Kriteriat
         sodju	 <
         dannasinie	 <
         goh	 <
-        stoerebe	 |	proseenteåesie
-        proseenteboelhke	 |	stuerebe
+2        stoerebe	 | stuerebe	
+1        proseenteboelhke	 |	proseenteåesie
         lea	 |	,
         	 >	juktie
         	 >	jïjnjebh
@@ -131,13 +132,13 @@ Kriteriat
         mah	 |	gajhkh
         sjïehtelovveme	 |	mah
         mejnie	 |	leah
-        lea	 |	ööhpehtimmiem
+        lea	 |	ööhpehtimmiem 
         learoe	 |	vaalteme
-        ,	 |	.
+5        ,	 |	.
 2       jïh	 |	Jïh
         tseegkedh	 |	eadtjaldehtedh
-        eadtjaldehtiejibie	 <
-        jielemh	 |	jieliemassh
+       eadtjaldehtiejibie	 <
+3       jielemh	 |	jieliemassh
         	 >	tseegkedh
 4       jeahta	 <
 4        	 >	jeahta
@@ -145,7 +146,7 @@ Kriteriat
         	 >	tjuvtjede
         	 >	ahte
         tjïelkeste	 <
-        	 >	,
+5        	 >	,
         vijrebe	 |	vytneldimmine
         darjoeminie	 |	leah
         	 >	suerkieh
