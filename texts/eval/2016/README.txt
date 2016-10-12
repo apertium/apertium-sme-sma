@@ -10,6 +10,9 @@ PER = position-independent word error rate (ii sátneordnet)
 B. Kvalitatiivalaš analysa
 1. Jearranskovit
 
+Få hele teksten:
+
+diff -y list/smj_mt.list list/smj_eval1.list|tr -s '\t'|tr -s ' '|sed 's/^/        /' | see
 
 Text files for evaluation are in 2-2016.
 
@@ -25,7 +28,6 @@ http://xixona.dlsi.ua.es/~fran/eval/
 Commandline:
 The command used for WER and PER is
 perl $GTCORE/scripts/apertium-eval-translator.pl -r sma_mt.txt -t MTeval_MAJA.txt
-
 
 
 Error classification:
