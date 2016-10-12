@@ -1,0 +1,75 @@
+
+Nei:
+Feaillakategoriija
+1   2   3   4   5   6   Dáhaphus
+0.5                                merrasáme	 <
+           1                     vásedi	vásedi
+       0.5                    	 >	merrasámijguovlojn 
+       
+
+Ja:
+1 = lexical selection
+2 = error in generation (different shape of wordform)
+3 = error in choice of form (different wordform selected)
+4 = word order changed
+5 = punctuation
+6 = word added
+7 = word deleted
+
+ein annan modell
+4 = word order (word order changed, # word deleted or added) ab-ba, a-0, 0-a
+8 =  Add
+9 = /remove word 
+
+4a = anna rekkjef ab-ba
+4b = add 0-a
+4c = delete a-0
+
+kanskje sånn:
+4a = word order changed / word deleted / word added -- traceable
+4b = word order changed / word deleted / word added -- untraceable
+
+Kanskje sånn:
+4a = word order changed -- traceable
+4b = word order changed -- untraceable
+5a = word deleted / word added -- traceable
+5b = word deleted / word added -- untraceable
+
+
+a = add or remove word because { known from context | don't know why }
+b = 
+5 = punctuation mark added or deleted.
+
+Dïhte lea studeente
+Dïhte studeente
+----
+           I       I
+1:4        saw     | had
+           it        it    
+2:3                > seen
+
+
+---------
+       i       i
+1:8    0        had
+2:4    0        it
+3:3    saw     seen
+2:     it      0
+
+edit ID:[1,2,5,...]
+
+error rate = number of edits / number of words
+lexical selection error rate = number of lexical selection errors / number of words
+percentage of lexical selection errors = number of lexical selection errors / total errors
+
+1:1,4,7                                merrasáme	 <
+2:4                                  vásedi <
+2	                               > vásedi (4 underspesifisert for 4:1)
+1                    	       >	merrasámijguovlojn        
+
+
+    Romssa -- 
+    sátnejođiheaddji - ságadoalli
+    Romssas
+
+    
