@@ -3,34 +3,42 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 
 
 3        Buerieh	 |	Buerie
-        Minngebe	 |	Minngemes
+3        Minngebe	 |	Minngemes
 3       vïjhtene	 |	vïjhte
 1       stabiliseereme	 |  tjoedtjestamme	
 6        	 >	lea
 
 1       dïsse	 |	gelline
-4       lissine	 <
-4       jïjnje	 <
+7       lissine	 <
+7       jïjnje	 <
 3       tjïelth	 |	tjïeltine
 1       demtieh	 |	vuejnieh 
-4        	 > aaj	
-3        goerehtallemh	 |	goerehtallemistie 
-1       vuesiehtieh	 |	daejriejibie ( + 4= Word Order)
-        
-3       mej	 |	mij
-1        Telemarksforskning	 |	Telemarhkhdotkeme
+7        	 > aaj	
+
+1,3,4   goerehtallemh	 |	daejriejibie
+        vuesiehtieh	 |	goerehtallemistie
+
+4,3      goerehtallemh <	 
+4,1      vuesiehtieh	 <
+-				     > daejriejibie	
+-					 > goerehtallemistie
+                     
+3        mej	 |	mij       
+1       Telemarksforskning	 |	Telemarhkhdotkeme
 2       saemiedigkieraerie	 |	Saemiedigkieraerie
 1       dan	 |	naa
 1       Goh	 |	Jis
 3        gaajhkide	 |	gaajhkh
 1       jieliemidie	 |	jieliemasshsuerkide
-4        	 >	aktesne
-4       aaj	 <
--     	 >	aaj
+7        	 >	aktesne
+7      aaj	 <
+6     	 >	aaj
 3       leah	 |	lea
-1, 4       tseegkesovveme	 |		sjïdteme 
-3       jeenjebe	 <
-        > jeenjebh 
+ ****
+1,4     tseegkesovveme	 <
+ 3       jeenjebe	|	jeenjebh
+-     	  >	sjïdteme               
+        
 4        dan	 <
 4        mij	 <
 4        	 >	lea
