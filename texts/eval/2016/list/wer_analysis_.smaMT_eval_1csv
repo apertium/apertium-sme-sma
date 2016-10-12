@@ -1,17 +1,13 @@
-Kriteriat
-1 = lexical selection 
-2 = difference in generation (different shape of wordform)
-3 = difference in choice of inflection (different wordform selected)
-4 = word order (word order changed, word deleted or added, e.g. copula added or removed)
-5 = punctuation mark added or deleted.
-6 = word added/removed because of lexical selection
+Categories for classification:1 = lexical selection (b-a)2 = error in generation (different shape of wordform) (b1-b2)3 = error in choice of form (different wordform selected)(bx-by)4 = word order changed (ab- ba)5 = punctuation6 = word added (0-b)7 = word deleted (b-0) 
+
 
 
 3        Buerieh	 |	Buerie
         Minngebe	 |	Minngemes
 3       vïjhtene	 |	vïjhte
-1        stabiliseereme	 |  tjoedtjestamme	
-4        	 >	lea
+1       stabiliseereme	 |  tjoedtjestamme	
+6        	 >	lea
+
 1       dïsse	 |	gelline
 4       lissine	 <
 4       jïjnje	 <
@@ -30,7 +26,7 @@ Kriteriat
 1       jieliemidie	 |	jieliemasshsuerkide
 4        	 >	aktesne
 4       aaj	 <
- -     	 >	aaj
+-     	 >	aaj
 3       leah	 |	lea
 1, 4       tseegkesovveme	 |		sjïdteme 
 3       jeenjebe	 <
