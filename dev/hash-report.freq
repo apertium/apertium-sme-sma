@@ -1,26 +1,34 @@
-  11 #<adv>
-   9 #<pcle>
+   9 #<adv>
+   8 #<pcle>
+   7 #stillese<n><pl><nom>
+   3 #Keskitalo<np><cog><sg><acc>
    2 #vihties<adj>
+   2 #stillese<n><sg><nom>
+   2 #stillese<n><pl><gen>
    2 #saetnies<adj><sg><ine>
    2 #saetnies<adj><sg><ela>
    2 #nåajtodh<vblex><tv><imp><p3><sg>
    2 #guhte<prn><rel><sg><ill><attr>
+   2 #daatamasjijne<n><cmp_sgnom><cmp>programme
+   2 #Loyd<np><cog><sg><nom>
    2 #Fïerhte<prn><ind><attr>
    2 #<post>
    2 #<n>
-   1 #ååbredidh<vblex><iv><der_inchl><vblex><prfprc>
    1 #åahpanadtedh<vblex><iv><der_ht><vblex><tv><inf>
-   1 #vuelkedh<vblex><iv><imp><p1><du>
    1 #vuehtedh<vblex><tv><der_passs><vblex><iv><indic><pret><p3><sg>
    1 #vaajtelidh<vblex><tv><vabess><adj><attr>
    1 #tjöödtjestehtedh<vblex><tv><der_passl><vblex><iv><inf>
    1 #tjöödtjestehtedh<vblex><tv><der_passl><vblex><iv><indic><pres><p3><sg>
-   1 #tjuetie<num><attr>
    1 #t<n><abbr><sg><gen>*he
    1 #sïjhtedh<vblex><tv><der_passl><vblex><iv><prfprc>
-   1 #sjeejsadidh<vblex><tv><inf>?
+   1 #stillese<n><sg><com>
+   1 #stillese<n><sg><acc>
+   1 #stillese<n><pl><acc>
+   1 #sisnjelds<adj><sg><nom>
+   1 #sisnjelds<adj><pl><nom>
    1 #seammavyörtegs<adj><pl><nom>
    1 #seamma<prn><ind><sg><acc>
+   1 #saetnies<adj><sg><nom>
    1 #plearoeh<adj><sg><acc>
    1 #plearoeh<adj><pl><ine>
    1 #plearoeh<adj><pl><acc>
@@ -28,22 +36,19 @@
    1 #ovmese<adj><sg><nom>
    1 #njuenehke<n><cmp>#aamhtese<n><cmp_sgnom><cmp>dabtije
    1 #njaalmeldh<adj><sg><nom>
-   1 #naan<prn><ind><sg><gen>
-   1 #naan<prn><ind><sg><acc>
    1 #mubpie<adj><ord><attr>
-   1 #minngebe<adj><sg><nom>
    1 #mealtan<adv><der_h><vblex><tv><der_nomag><n>
    1 #læssanidh<vblex><iv><der_inchl><vblex><indic><pret><p3><sg>
    1 #linje<n><cmp_sgnom><cmp>#juekedh<vblex><tv><der_passl><vblex><iv><prfprc>
    1 #lahtestimmie<n><cmp_sgnom><der_veara><adj><sg><nom>
    1 #jåerhkedh<vblex><tv><der_passl><vblex><iv><inf>
    1 #juekedh<vblex><tv><der_passl><vblex><iv><indic><pres><p3><sg>
-   1 #jr<n><abbr>
    1 #jorkestovvedh<vblex><der_d><vblex><inf>
    1 #jorkestovvedh<vblex><der_d><vblex><indic><pres><p3><sg>
    1 #jorkestovvedh<vblex><der_d><vblex><indic><pres><p3><pl>
    1 #jorkestovvedh<vblex><der_d><vblex><der_nomact><n><pl><nom>
    1 #joekehts<adj><sg><nom>
+   1 #jeenje-jeenjebe<adj><der_laakan><adv>
    1 #illesovvedh<vblex><iv><prsprc>
    1 #illedahke<n><cmp_sgnom><cmp>#hïnnedh<vblex><iv><der_ht><n><sg><ela>
    1 #hïnnedh<vblex><iv><der_ht><vblex><iv><prfprc>
@@ -51,7 +56,7 @@
    1 #gïehtjedidh<vblex><tv><der_l><vblex><der_adda><vblex><der_nomact><n><cmp_sgnom><cmp>juhtiehtæjjine
    1 #guhte<prn><rel><sg><com>
    1 #gelliengïeleh<adj><pl><nom>
-   1 #gahtjehtidh<vblex><tv><der_d><vblex><der_nomact><n><pl><ill>
+   1 #gahtjehtidh<vblex><tv><der_d><vblex><der_nomact><n><pl><ine>
    1 #gaajhke<prn><ind><acc>
    1 #fïerhte<prn><ind><attr>
    1 #ektiedidh<vblex><der_alla><vblex><der_nomact><n><sg><ine>
@@ -61,24 +66,34 @@
    1 #dievhtedh<vblex><tv><der_passl><vblex><iv><indic><pres><p3><sg>
    1 #dahkoe<n><der_car><adj><comp><attr>
    1 #dagkeres<prn><dem><pl><com><attr>
+   1 #daatamasjijne<n><pl><acc>
+   1 #daatamasjijne<n><cmp_sgnom><cmp>jarkoestimmiem
+   1 #daatamasjijne<n><cmp_sggen><cmp>#jarkoestidh<vblex><tv><der_nomact><n><cmp_sgnom><cmp>programmh
+   1 #daatamasjijne<n><cmp_sggen><cmp>#jarkoestidh<vblex><tv><der_nomact><n><cmp_sgnom><cmp>programme
    1 #daaroengïeleh<adj><pl><ine>
-   1 #daaletje<adj><sg><ela>
    1 #daajroe<n><cmp_attr><cmp>#viehkie<n><cmp_sgnom><cmp>barkijinie
    1 #c<n><abbr><sg><gen>)
    1 #barkoe<n><adj><der_vuota><n><sg><nom>
    1 #aelhkiedehtedh<vblex><tv><der_passl><vblex><iv><inf>
    1 #a<n><abbr><sg><gen>)
+   1 #Zealaante<np><cog><sg><acc>
    1 #Voestes<adj><ord><sg><ine>
    1 #Voestes<adj><ord><ess>
+   1 #Thomassen<np><cog><sg><nom>
+   1 #Schjølberg<np><cog><cmp_sgnom><cmp><guio>Gamnes
    1 #S<n><abbr><sg><gen>t
+   1 #Rasmussen<np><cog><sg><nom>
+   1 #Oskal<np><cog><sg><nom>
    1 #Njaalmeldh<adj><sg><nom>
    1 #Máhtto<np><ant><m><cmp_sgnom><cmp>våarome
-   1 #Julevsaemie<n><cmp_sggen><cmp>#gïele<n><der_t><adj><pl><nom>
-   1 #Jijhtedh<vblex><iv><der_h><vblex><tv><imp><p2><sg>
+   1 #Lenvik<np><cog><sg><ela>
+   1 #Keskitalo<np><cog><sg><nom>
    1 #Interreg<np><cmp_sgnom><cmp><guio>laeviehtovveme
    1 #ILO<n><acr><cmp>konvensjovne
    1 #ILO-konvensjovne<np><sg><ine>
+   1 #Głowacka<np><cog><sg><nom>)
    1 #Gårredidh<vblex><tv><der_st><vblex><indic><pres><p1><pl>
+   1 #Gaup<np><cog><sg><nom>
    1 #Dåarjodh<vblex><tv><imp><p1><pl>
+   1 #Albrigt<np><cog><sg><nom>
    1 #A<n><abbr><sg><gen>
-   1 #12<n><pl><nom>
