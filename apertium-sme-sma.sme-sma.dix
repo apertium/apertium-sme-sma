@@ -209,6 +209,9 @@
     <e><p><l>go<s n="cnjsub"/></l><r>guktie<s n="cnjsub"/></r></p></e> <!-- go @COMP-CS< -->
     <e><p><l>nugo<s n="cnjsub"/></l><r>goh<s n="cnjsub"/></r></p></e>
     <e><p><l>numo<s n="adv"/></l><r>goh<s n="cnjsub"/></r></p></e>
+   
+     <e><p><l>numo<s n="adv"/></l><r>goh<s n="cnjsub"/></r></p></e> 
+    
     <e><p><l>jos<s n="cnjsub"/></l><r>jis<s n="cnjsub"/></r></p></e>
     <e r="LR"><p><l>jis<s n="cnjsub"/></l><r>jis<s n="cnjsub"/></r></p></e>
     <e r="LR"><p><l>jus<s n="cnjsub"/></l><r>jis<s n="cnjsub"/></r></p></e>
@@ -797,12 +800,14 @@
    
     <e><p><l>Stáhta<b/>huksendoaimmahat<s n="np"/><s n="sem_org"/><s n="sg"/></l><r>Staatenbægkoeh<s n="np"/><s n="pl"/></r></p></e>
     
-    <e><p><l>visti<s n="n"/></l><r>gåetie<s n="n"/></r></p></e>
+    <e><p><l>visti<s n="n"/></l><r><s n="n"/></r></p></e>
     
     <e><p><l>erenoamášraportevrra<s n="n"/></l><r>sjïerereektije<s n="n"/></r></p></e>
     <e><p><l>giellalávgun<s n="n"/></l><r>gïelelaavkome<s n="n"/></r></p></e>
 
    <e><p><l>eretfárrejeaddji<s n="n"/></l><r>fraflytter<s n="n"/></r></p></e>  <!-- oftest brukt elativ _ debpede eller destie juhtedh  -->
+ 
+    <e><p><l>doarjalus<s n="n"/></l><r>dåarjege<s n="n"/></r></p></e>  
     
     <e><p><l>báddi<s n="n"/></l><r>baante<s n="n"/></r></p></e>  
     <e><p><l>café<s n="n"/></l><r>prïhtjhgåetie<s n="n"/></r></p></e>  
@@ -1180,6 +1185,9 @@
     <e><p><l>iešguđet<b/>ládje<s n="adv"/></l><r>joekehtslaakan<s n="adv"/></r></p></e>
 
     <e><p><l>integreret<s n="vblex"/><s n="tv"/></l><r>integreeredh<s n="vblex"/></r></p></e>
+    <e><p><l>disponeret<s n="vblex"/><s n="tv"/></l><r>disponeeredh<s n="vblex"/></r></p></e>
+    
+    
     <e><p><l>ráfáidahttit<s n="vblex"/><s n="tv"/></l><r>raeffiedehtedh<s n="vblex"/></r></p></e>
     <e><p><l>ráfáiduvvat<s n="vblex"/><s n="iv"/></l><r>raeffiedovvedh<s n="vblex"/></r></p></e>
     <e><p><l>koordineret<s n="vblex"/><s n="tv"/></l><r>koordineeredh<s n="vblex"/></r></p></e>
@@ -3640,7 +3648,9 @@
     <e><p><l>bálvalusfállu<s n="n"/></l><r>dïenesjefaalenasse<s n="n"/></r></p></e>
     
     <e><p><l>ruoktut<s n="adv"/></l><r>gåetide<s n="adv"/></r></p></e>
+    <e><p><l>dávjjimus<s n="adv"/></l><r>daamtajommes<s n="adv"/></r></p></e>
     
+      
     <e><p><l>loahpalaččat<s n="adv"/></l><r>minngiegietjesne<s n="adv"/></r></p></e>
     
       <e><p><l>dassái<s n="adv"/></l><r>daen<b/>åvteli<s n="adv"/></r></p></e>
@@ -4350,6 +4360,12 @@
 
 
     <e><p><l>ođđasis<s n="adv"/></l><r>ikth<b/>vielie<s n="adv"/></r></p></e>
+    
+    <e><p><l>dainna<b/>lágiin<s n="adv"/></l><r>nimhtie<s n="adv"/></r></p></e>
+    
+
+    
+    
     <e><p><l>fáhkka<s n="adv"/></l><r>faahketji<s n="adv"/></r></p></e>
     <e><p><l>báifáhkka<s n="adv"/></l><r>faahketji<s n="adv"/></r></p></e>
     <e><p><l>iešalddis<s n="adv"/></l><r>oktegh<s n="adv"/></r></p></e>
@@ -4461,7 +4477,10 @@
     <e><p><l>muđui<s n="adv"/></l><r>voen<s n="pcle"/></r></p></e>
     <e><p><l>muđuid<s n="adv"/></l><r>voen<s n="pcle"/></r></p></e>
     <e><p><l>sullii<s n="adv"/></l><r>medtie<s n="adv"/></r></p></e>
+    
     <e><p><l>su<s n="adv"/><s n="abbr"/></l><r>medtie<s n="adv"/></r></p></e>
+    <e><p><l>dieđ<s n="adv"/><s n="abbr"/></l><r>dieđ<s n="adv"/></r></p></e>  
+    
     <e><p><l>áibbas<s n="adv"/></l><r>aejvie<s n="adv"/></r></p></e>
     <e><p><l>ovdan<s n="adv"/></l><r>fraamme<s n="adv"/></r></p></e>
     <e><p><l>ovttas<s n="adv"/></l><r>ektesne<s n="adv"/></r></p></e>
