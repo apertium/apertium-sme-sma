@@ -789,6 +789,8 @@
     <e><p><l>áinnas<s n="adv"/></l><r>maaje<s n="adv"/></r></p></e>
     <e><p><l>láiki<s n="adj"/></l><r>aeblehts<s n="adj"/></r></p></e>
 
+    <e><p><l>servodatlaš<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>siebriedahke<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+
     <e><p><l>árvvolaš<s n="adj"/></l><r>dovrehke<s n="adj"/></r></p></e>
     <e><p><l>dásseárvosaš<s n="adj"/></l><r>seammavyörtegs<s n="adj"/></r></p></e>
     <e><p><l>čatnasit<s n="vblex"/><s n="iv"/></l><r>gårrelgidh<s n="vblex"/><s n="iv"/></r></p></e>
@@ -3618,10 +3620,20 @@
     <e><p><l>gáma<s n="n"/></l><r>gaamege<s n="n"/></r></p></e>
     <e><p><l>lávvu<s n="n"/></l><r>låavthgåetie<s n="n"/></r></p></e>
    
-    
     <e><p><l>rihpat<s n="n"/></l><r>gyrhkesjimmie<s n="n"/></r></p></e>
     
+    <e><p><l>registtar<s n="n"/></l><r>registere<s n="n"/></r></p></e>    <!-- N_ODD registeristie -->
+    
     <e><p><l>vihaheapmi<s n="n"/></l><r>provre<s n="n"/></r></p></e>
+    
+    <e><p><l>sisafárrejeaddji<s n="n"/></l><r>baataræjja<s n="n"/></r></p></e>
+    
+    <e><p><l>nuortalaš<s n="n"/></l><r>noerhtegadtje<s n="n"/></r></p></e>
+    
+    <e><p><l>metoda<s n="n"/></l><r>metovde<s n="n"/></r></p></e>
+    
+    
+    <e><p><l>ovdagáddu<s n="n"/></l><r>vuajnoe<s n="n"/></r></p></e>
     
     <e><p><l>sotnabeaiskuvla<s n="n"/></l><r>gærhkoeskuvle<s n="n"/></r></p></e>
     <e><p><l>gáđohus<s n="n"/></l><r>raavhkedimmie<s n="n"/></r></p></e>
@@ -4262,7 +4274,9 @@
      <e><p><l>formála<s n="adj"/></l><r>byjjes<s n="adj"/></r></p></e>
    <e><p><l>eahpeformálalaš<s n="adj"/></l><r>ovbyjjes<s n="adj"/></r></p></e>
     <e><p><l>siviila<s n="adj"/></l><r>sivijle<s n="adj"/></r></p></e>
-    <e><p><l>mekánalaš<s n="adj"/></l><r>mekanihkeles<s n="adj"/></r></p></e>
+    
+    <e><p><l>mekánalaš<s n="adj"/></l><r>mekanihkeles<s n="adj"/></r></p></e>  <!-- all the 'les' should be changed to "ihke" + genitiv -->
+    
     <e><p><l>maŋit<s n="adj"/><s n="sup"/></l><r>minngebe<s n="adj"/></r></p></e>
     <e><p><l>historjjálaš<s n="adj"/></l><r>historihkeles<s n="adj"/></r></p></e>
     <e><p><l>teknihkalaš<s n="adj"/></l><r>teknihkeles<s n="adj"/></r></p></e>
@@ -4273,6 +4287,8 @@
     <e><p><l>gaskaboddosaš<s n="adj"/></l><r>annjebodts<s n="adv"/></r></p></e>
     <e><p><l>visot<s n="adj"/></l><r>gaajhke<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>lávga<s n="adv"/></l><r>lïhke<s n="adv"/></r></p></e>
+    
+     <e><p><l>mannolagas<s n="adv"/></l><r>dennie<b/>mieresne<s n="adv"/></r></p></e>
     
     <e><p><l>visot<s n="adv"/></l><r>gaajhke<s n="adv"/></r></p></e>
      <e><p><l>ovddas<b/>guvlui<s n="adv"/></l><r>rïektes<b/>raadtan<s n="adv"/></r></p></e>
@@ -4409,6 +4425,10 @@
     <e><p><l>čiekŋudit<s n="vblex"/><s n="tv"/></l><r>gïengelåbpoe<b/>båetedh<s n="vblex"/></r></p></e> 
     
     <e><p><l>sajáiduvvat<s n="vblex"/><s n="tv"/></l><r>sijjiedovvedh<s n="vblex"/></r></p></e> 
+ 
+    <e><p><l>nanosmuvvat<s n="vblex"/><s n="tv"/></l><r>nænnoestovvedh<s n="vblex"/></r></p></e> 
+    
+    <e><p><l>nevvodit<s n="vblex"/><s n="tv"/></l><r>bïhkedidh<s n="vblex"/></r></p></e> 
     
     <e><p><l>váldit<s n="vblex"/><s n="tv"/></l><r>seatadidh<s n="vblex"/></r></p></e> 
     
@@ -4730,7 +4750,9 @@
     <e><p><l>veadjit<s n="vblex"/><s n="iv"/></l><r>åajsodh<s n="vblex"/></r></p></e>
     <e><p><l>čoahkkinastit<s n="vblex"/><s n="iv"/></l><r>tjåanghkenidh<s n="vblex"/></r></p></e>  
     <e><p><l>ovdanboahtit<s n="vblex"/><s n="iv"/></l><r>vååjnesasse<b/>båetedh<s n="vblex"/></r></p></e>
+    
     <e><p><l>ovdanboahtit<s n="vblex"/><s n="iv"/></l><r>åvtese<b/>båetedh<s n="vblex"/></r></p></e>
+    
     <e><p><l>dásáiduvvat<s n="vblex"/><s n="iv"/></l><r>tjoedtjestidh<s n="vblex"/></r></p></e>
     <e><p><l>fuolastuvvat<s n="vblex"/><s n="tv"/></l><r>strerkiestidh<s n="vblex"/></r></p></e>
     <e><p><l>mojohallat<s n="vblex"/><s n="iv"/></l><r>mojjehtalledh<s n="vblex"/></r></p></e>
@@ -4836,7 +4858,7 @@
     <e><p><l>buoridit<s n="vblex"/><s n="tv"/></l><r>bueriedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>buorádahttit<s n="vblex"/><s n="tv"/></l><r>bueriedidh<s n="vblex"/><s n="tv"/></r></p></e>
 
-    
+    <e><p><l>nohkat<s n="vblex"/><s n="tv"/></l><r>nåhkedh<s n="vblex"/><s n="tv"/></r></p></e>
     
     <e><p><l>buoskut<s n="vblex"/><s n="iv"/></l><r>bööktjestidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>buođđut<s n="vblex"/><s n="tv"/></l><r>magkaldehtedh<s n="vblex"/><s n="tv"/></r></p></e>
