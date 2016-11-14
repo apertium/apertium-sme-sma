@@ -1010,6 +1010,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="NP_Spred_l"/>
       </pattern>
       <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="lemh"/>
@@ -1277,6 +1278,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="ADVL_left"/>
       </pattern>
       <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
         <chunk>
             <clip pos="2" part="lemh"/>
@@ -1309,6 +1311,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="NP_Obj_l"/>
       </pattern>
       <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
         <chunk>
             <clip pos="2" part="lemh"/>
@@ -1342,6 +1345,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="NP_Spred_l"/>
       </pattern>
       <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
         <chunk>
             <clip pos="2" part="lemh"/>
