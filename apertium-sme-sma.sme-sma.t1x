@@ -68,6 +68,216 @@ And then there are some categories like "month", with all the months.
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <!-- HARMONISED -->
+
+    <def-cat n="prn">
+      <cat-item tags="prn.*"/>
+    </def-cat>
+
+    <def-cat n="prn-rel">
+      <cat-item tags="prn.rel.*"/>
+    </def-cat>
+
+    <def-cat n="prn-res">
+      <cat-item tags="prn.res.*"/>
+    </def-cat>
+
+    <def-cat n="prn-pers">
+      <cat-item tags="prn.pers.*"/>
+    </def-cat>
+
+    <def-cat n="prn-dem">
+      <cat-item tags="prn.dem.*"/>
+    </def-cat>
+
+    <def-cat n="prn-refl">
+      <cat-item tags="prn.ref.*"/>
+    </def-cat>
+
+    <def-cat n="noun">
+      <cat-item tags="*.n.*.sg.*"/>
+      <cat-item tags="*.n.*.pl.*"/>
+      <cat-item tags="*.n.*.ess.*"/>
+      <cat-item tags="*.n.sg.*"/>
+      <cat-item tags="*.n.pl.*"/>
+      <cat-item tags="*.n.ess.*"/>
+      <cat-item tags="n.*.sg.*"/>
+      <cat-item tags="n.*.pl.*"/>
+      <cat-item tags="n.*.ess.*"/>
+      <cat-item tags="n.*.*.sg.*"/>
+      <cat-item tags="n.*.*.pl.*"/>
+      <cat-item tags="n.*.*.ess.*"/>
+      <cat-item tags="n.sg.*"/>
+      <cat-item tags="n.abbr.*"/>
+      <cat-item tags="n.pl.*"/>
+      <cat-item tags="n.ess.*"/>
+      <cat-item tags="np.*"/>
+      <cat-item tags="*.cmp_sgnom.cmp_splitr.*"/>
+    </def-cat>
+
+    <def-cat n="adj">
+      <cat-item tags="adj.*"/>
+      <cat-item tags="n.*.der_dibme.adj.*"/>
+      <cat-item tags="n.*.der_lasj.adj.*"/>
+      <cat-item tags="n.der_lasj.adj.*"/>
+      <cat-item tags="n.der_saš.adj.*"/>
+      <cat-item tags="n.*.der_sasj.adj.*"/>
+      <cat-item tags="n.der_sasj.adj.*"/>
+    </def-cat>
+
+    <def-cat n="cnjsub">
+       <cat-item tags="cnjsub"/>
+       <cat-item tags="cnjsub.*"/>
+    </def-cat>
+
+    <def-cat n="cnjcoo">
+      <cat-item tags="cnjcoo"/>
+      <cat-item tags="cnjcoo.*"/>
+    </def-cat>
+
+    <def-cat n="pcle">
+      <cat-item tags="pcle"/>
+      <cat-item tags="pcle.*"/>
+    </def-cat>
+
+    <def-cat n="adpos">
+      <cat-item tags="post.*"/>
+      <cat-item tags="pr.*"/>
+    </def-cat>
+
+    <def-cat n="pr">
+      <cat-item tags="pr"/>
+      <cat-item tags="pr.*"/>
+    </def-cat>
+
+    <def-cat n="post">
+      <cat-item tags="post"/>
+      <cat-item tags="post.*"/>
+    </def-cat>
+
+    <def-cat n="default">
+      <cat-item tags="*"/>
+    </def-cat>
+
+    <def-cat n="foc">
+      <cat-item lemma="ba" tags="pcle.*"/>
+      <cat-item lemma="ban" tags="pcle.*"/>
+      <cat-item lemma="bat" tags="pcle.*"/>
+      <cat-item lemma="ge" tags="pcle.*"/>
+      <cat-item lemma="ges" tags="pcle.*"/>
+      <cat-item lemma="gis" tags="pcle.*"/>
+      <cat-item lemma="hal" tags="pcle.*"/>
+      <cat-item lemma="han" tags="pcle.*"/>
+      <cat-item lemma="nai" tags="pcle.*"/>
+      <cat-item lemma="son" tags="pcle.*"/>
+      <cat-item lemma="nu" tags="pcle.*"/>
+    </def-cat>
+
+    <def-cat n="ja">
+      <cat-item lemma="ja" tags="cnjcoo"/>
+      <cat-item lemma="ja" tags="cnjcoo.*"/>
+      <cat-item lemma="ahte" tags="cnjcoo.*"/>
+      <cat-item lemma="ahte" tags="cnjcoo"/>
+    </def-cat>
+
+    <def-cat n="jagis">
+      <cat-item lemma="jahki" tags="n.*.sg.loc.*"/>
+      <cat-item lemma="jahki" tags="n.sg.loc.*"/>
+    </def-cat>
+
+    <def-cat n="jagi">
+      <cat-item lemma="jahki" tags="n.*.sg.gen.*"/>
+      <cat-item lemma="jahki" tags="n.sg.gen.*"/>
+    </def-cat>
+
+    <def-cat n="mánnu">
+      <cat-item lemma="ođđajagemánnu" tags="n.*"/>
+      <cat-item lemma="guovvamánnu" tags="n.*"/>
+      <cat-item lemma="njukčamánnu" tags="n.*"/>
+      <cat-item lemma="cuoŋománnu" tags="n.*"/>
+      <cat-item lemma="miessemánnu" tags="n.*"/>
+      <cat-item lemma="geassemánnu" tags="n.*"/>
+      <cat-item lemma="suoidnemánnu" tags="n.*"/>
+      <cat-item lemma="borgemánnu" tags="n.*"/>
+      <cat-item lemma="čakčamánnu" tags="n.*"/>
+      <cat-item lemma="golggotmánnu" tags="n.*"/>
+      <cat-item lemma="skábmamánnu" tags="n.*"/>
+      <cat-item lemma="juovlamánnu" tags="n.*"/>
+    </def-cat>
+
+    <def-cat n="semyear">
+      <cat-item tags="*.sem_year.sg.*"/>
+      <cat-item tags="*.sem_year.sg"/>
+    </def-cat>
+
+    <def-cat n="ge">
+      <cat-item lemma="ge" tags="pcle.*"/>
+    </def-cat>
+
+    <def-cat n="boaris">
+      <cat-item lemma="boaris" tags="adj.*"/>
+    </def-cat>
+
+    <def-cat n="buorre">
+      <cat-item lemma="buorre" tags="adj.*.@→N"/>
+    </def-cat>
+
+    <def-cat n="mielde_adv">
+      <cat-item lemma="mielde" tags="adv.*"/>
+    </def-cat>
+
+    <def-cat n="dihte">
+      <cat-item lemma="dihte" tags="post.*"/>
+      <cat-item lemma="dihtii" tags="post.*"/>
+    </def-cat>
+
+    <def-cat n="miehtá">
+      <cat-item lemma="miehtá" tags="pr.*"/>
+      <cat-item lemma="miehtá" tags="post.*"/>
+    </def-cat>
+
+    <def-cat n="váste">
+      <cat-item lemma="váste" tags="post.*"/>
+      <cat-item lemma="várás" tags="post.*"/>
+    </def-cat>
+
+    <def-cat n="birra-po">
+      <cat-item lemma="birra" tags="post.*"/>
+    </def-cat>
+    
+    <def-cat n="birra-adv">
+      <cat-item lemma="birra" tags="adv.*"/>
+    </def-cat>
+
+    <def-cat n="liikotverb">
+      <cat-item lemma="liikot" tags="vblex.*"/>
+    </def-cat>
+
+    <def-cat n="geahččatverb">
+      <cat-item lemma="geahččat" tags="vblex.*"/>
+    </def-cat>
+
+    <def-cat n="váikkuhitverb">
+       <cat-item lemma="váikkuhit" tags="vblex.*"/>
+    </def-cat>
+
+    <def-cat n="sent">
+      <cat-item tags="sent.*"/>
+      <cat-item tags="sent"/>
+      <cat-item tags="clb"/>
+      <cat-item tags="clb.*"/>
+    </def-cat>
+
+    <def-cat n="comma">
+      <cat-item lemma="," tags="cm"/>
+    </def-cat>
+
+    <def-cat n="prosent">
+      <cat-item lemma="%" tags="punct"/>
+    </def-cat>
+
+    <!-- PENDING HARMONISERING -->
+
     <def-cat n="comma">
       <cat-item lemma="," tags="cm"/>
     </def-cat>
@@ -93,9 +303,6 @@ And then there are some categories like "month", with all the months.
   	 	<cat-item lemma="ipmárdus" tags="n.*"/>
   	 	<cat-item lemma="áddejupmi" tags="n.*"/>
   	 </def-cat>
-     <def-cat n="váikkuhit">
-  	 	<cat-item lemma="váikkuhit" tags="vblex.*"/>
-  	 </def-cat>
      <def-cat n="mod_num">
   	 	<cat-item tags="*.@→Num"/>
   	 </def-cat>
@@ -118,29 +325,13 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_nomact.n.*.cmp"/>
       <cat-item tags="vblex.*.der_nomag.n.*.cmp"/>
     </def-cat>
-    <def-cat n="prosent">
-      <cat-item lemma="%" tags="punct"/>
-    </def-cat>
     <def-cat n="prfprcword">
       <cat-item tags="*.prfprc.*"/>
       <cat-item tags="n.*"/>
       <cat-item tags="adv.*"/>
       <cat-item tags="adj.*.*.nom.*"/>
     </def-cat>
-    <def-cat n="mánnu">
-      <cat-item lemma="ođđajagemánnu" tags="n.*"/>
-      <cat-item lemma="guovvamánnu" tags="n.*"/>
-      <cat-item lemma="njukčamánnu" tags="n.*"/>
-      <cat-item lemma="cuoŋománnu" tags="n.*"/>
-      <cat-item lemma="miessemánnu" tags="n.*"/>
-      <cat-item lemma="geassemánnu" tags="n.*"/>
-      <cat-item lemma="suoidnemánnu" tags="n.*"/>
-      <cat-item lemma="borgemánnu" tags="n.*"/>
-      <cat-item lemma="čakčamánnu" tags="n.*"/>
-      <cat-item lemma="golggotmánnu" tags="n.*"/>
-      <cat-item lemma="skábmamánnu" tags="n.*"/>
-      <cat-item lemma="juovlamánnu" tags="n.*"/>
-    </def-cat>
+
      <def-cat n="nomact-com">
       <cat-item tags="vblex.*.der_nomact.n.sg.com.*"/>
     </def-cat>
@@ -252,14 +443,8 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="áhkku" tags="n.*.sg.*"/>
       <cat-item lemma="áddjá" tags="n.*.sg.*"/>
     </def-cat>
-    <def-cat n="jahki-loc">
-      <cat-item lemma="jahki" tags="n.*.sg.loc.*"/>
-    </def-cat>
     <def-cat n="jahki">
       <cat-item lemma="jahki" tags="n.*"/>
-    </def-cat>
-    <def-cat n="mielde_adv">
-      <cat-item lemma="mielde" tags="adv.*"/>
     </def-cat>
     <def-cat n="mielde_post">
       <cat-item lemma="mielde" tags="post.*"/>
@@ -271,10 +456,6 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="bokte" tags="post.*"/>
       <cat-item lemma="bakte" tags="post.*"/>
     </def-cat>
-    <def-cat n="dihte">
-      <cat-item lemma="dihte" tags="post.*"/>
-      <cat-item lemma="dihtii" tags="post.*"/>
-    </def-cat>
     <def-cat n="maake">
       <cat-item lemma="muoŧŧá" tags="n.*.sg.*"/>
       <cat-item lemma="goaski" tags="n.*.sg.*"/>
@@ -285,9 +466,6 @@ And then there are some categories like "month", with all the months.
        <cat-item lemma="čeahci" tags="n.*.sg.*"/>
       <cat-item lemma="máhka" tags="n.*.sg.*"/>
    </def-cat>
-    <def-cat n="buorre">
-      <cat-item lemma="buorre" tags="adj.*.@→N"/>
-    </def-cat>
      <def-cat n="mearkkašit">
       <cat-item lemma="mearkkašit" tags="vblex.*"/>
     </def-cat>
@@ -350,26 +528,7 @@ And then there are some categories like "month", with all the months.
       <def-cat n="cmp_splitr">
       <cat-item tags="n.*.*.cmp_splitr.*"/>
     </def-cat>
-   <def-cat n="noun">
-      <cat-item tags="*.n.*.sg.*"/>
-      <cat-item tags="*.n.*.pl.*"/>
-      <cat-item tags="*.n.*.ess.*"/>
-      <cat-item tags="*.n.sg.*"/>
-      <cat-item tags="*.n.pl.*"/>
-      <cat-item tags="*.n.ess.*"/>
-      <cat-item tags="n.*.sg.*"/>
-      <cat-item tags="n.*.pl.*"/>
-      <cat-item tags="n.*.ess.*"/>
-      <cat-item tags="n.*.*.sg.*"/>
-      <cat-item tags="n.*.*.pl.*"/>
-      <cat-item tags="n.*.*.ess.*"/>
-      <cat-item tags="n.sg.*"/>
-      <cat-item tags="n.abbr.*"/>
-      <cat-item tags="n.pl.*"/>
-      <cat-item tags="n.ess.*"/>
-      <cat-item tags="np.*"/>
-      <cat-item tags="*.cmp_sgnom.cmp_splitr.*"/>
-    </def-cat>
+
     <def-cat n="nounpx">
       <cat-item tags="n.*.sg.*.px3pl.*"/>
       <cat-item tags="n.*.sg.*.px1sg.*"/>
@@ -450,14 +609,6 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="oasálastit" tags="vblex.*"/>
       <cat-item lemma="searvat" tags="vblex.*"/>
     </def-cat>
-    <def-cat n="adj">
-      <cat-item tags="adj.*"/>
-      <cat-item tags="*.der_lasj.adj.*"/>
-    </def-cat>
-    <def-cat n="váste">
-      <cat-item lemma="váste" tags="post.*"/>
-      <cat-item lemma="várás" tags="post.*"/>
-    </def-cat>
     <def-cat n="eret">
       <cat-item lemma="eret" tags="adv.*"/>
     </def-cat>
@@ -515,10 +666,6 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.sem_year.sg.gen.*"/>
       <cat-item tags="*.sem_year.sg.gen"/>
     </def-cat>
-    <def-cat n="semyear">
-      <cat-item tags="*.sem_year.sg.*"/>
-      <cat-item tags="*.sem_year.sg"/>
-    </def-cat>
     <def-cat n="semdate">
       <cat-item tags="*.sem_date.sg.*"/>
       <cat-item tags="*.sem_date.sg"/>
@@ -547,23 +694,8 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="num.*.*.@N←"/>
       <cat-item tags="num.*.*.*.@N←"/>
     </def-cat>
-    <def-cat n="prn">
-      <cat-item tags="prn.*"/>
-    </def-cat>
-    <def-cat n="prn-res">
-      <cat-item tags="prn.res.*"/>
-    </def-cat>
-    <def-cat n="prn-refl">
-      <cat-item tags="prn.ref.*"/>
-    </def-cat>
     <def-cat n="prn-refl-sg-nom">
       <cat-item tags="prn.ref.sg.nom.@SUBJ→"/>
-    </def-cat>
-    <def-cat n="prn-rel">
-      <cat-item tags="prn.rel.*"/>
-    </def-cat>
-    <def-cat n="prn-dem">
-      <cat-item tags="prn.dem.*"/>
     </def-cat>
     <def-cat n="prn-dem-sg">
       <cat-item tags="prn.dem.sg.*"/>
@@ -587,9 +719,6 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="verb-actio-gen">
       <cat-item tags="vblex.*.actio.gen.*"/>
-    </def-cat>
-    <def-cat n="prn-pers">
-      <cat-item tags="prn.pers.*"/>
     </def-cat>
     <def-cat n="n-prop-pers">
       <cat-item tags="np.ant.*"/>
@@ -649,16 +778,6 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_inchl.vblex.cond.*"/>
       <cat-item tags="vblex.*.der_inchl.vblex.pot.*"/>
     </def-cat>
-    <def-cat n="ja">
-      <cat-item lemma="ja" tags="cnjcoo"/>
-      <cat-item lemma="ja" tags="cnjcoo.*"/>
-      <cat-item lemma="ahte" tags="cnjcoo.*"/>
-      <cat-item lemma="ahte" tags="cnjcoo"/>
-    </def-cat>
-    <def-cat n="cnjcoo">
-      <cat-item tags="cnjcoo"/>
-      <cat-item tags="cnjcoo.*"/>
-    </def-cat>
     <def-cat n="ahte">
       <cat-item lemma="ahte" tags="cnjsub"/>
       <cat-item lemma="ahte" tags="cnjsub.*"/>
@@ -674,22 +793,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="geatnegahtton" tags="adj.*"/>
       <cat-item lemma="geatnegahttojuvvon" tags="adj.*"/>
     </def-cat>
-    <def-cat n="cnjsub">
-      <cat-item tags="cnjsub"/>
-      <cat-item tags="cnjsub.*"/>
-    </def-cat>
-    <def-cat n="pr">
-      <cat-item tags="pr"/>
-      <cat-item tags="pr.*"/>
-    </def-cat>
-    <def-cat n="post">
-      <cat-item tags="post"/>
-      <cat-item tags="post.*"/>
-    </def-cat>
-    <def-cat n="pcle">
-      <cat-item tags="pcle"/>
-      <cat-item tags="pcle.*"/>
-    </def-cat>
+
     <def-cat n="adv">
       <cat-item tags="adv"/>
       <cat-item tags="adv.*"/>
@@ -726,10 +830,6 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="dieđu">
       <cat-item lemma="diehtu" tags="n.*.acc.*"/>
-    </def-cat>
-    <def-cat n="sent">
-      <cat-item tags="clb"/>
-      <cat-item tags="clb.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -2563,9 +2663,9 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: jagis 2001 - 2 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
+    <rule comment="REGLA: jagis 2001 - 2 position in-out" c="jagis 2001 - jaepien 2001">
       <pattern> 
-        <pattern-item n="jahki-loc"/>
+        <pattern-item n="jagis"/>
         <pattern-item n="semyear"/>
      </pattern>
       <action>
@@ -3276,7 +3376,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: váikkuhit cmp illadvl    - 1 position out"> 
       <pattern>
-        <pattern-item n="váikkuhit"/>
+        <pattern-item n="váikkuhitverb"/>
         <pattern-item n="n-cmp"/>
         <pattern-item n="nomact-ill"/>
       </pattern>
@@ -3314,7 +3414,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="REGLA: váikkuhit cmp illadvl    - 1 position out"> 
       <pattern>
-        <pattern-item n="váikkuhit"/>
+        <pattern-item n="váikkuhitverb"/>
         <pattern-item n="genmod"/>
         <pattern-item n="nomact-ill"/>
       </pattern>
