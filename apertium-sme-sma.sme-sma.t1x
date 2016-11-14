@@ -278,9 +278,6 @@ And then there are some categories like "month", with all the months.
 
     <!-- PENDING HARMONISERING -->
 
-    <def-cat n="comma">
-      <cat-item lemma="," tags="cm"/>
-    </def-cat>
      <def-cat n="juohke">
   	 	<cat-item lemma="juohke" tags="prn.*"/>
   	 </def-cat>
@@ -821,9 +818,6 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="juohke" tags="prn.ind.*"/> 
       <cat-item lemma="njealját" tags="adj.ord.*"/> 
 <!--      <cat-item  tags="adj.*.comp.*"/>  -->
-    </def-cat>
-    <def-cat n="default">
-      <cat-item tags="*"/>
     </def-cat>
     <def-cat n="oažžut">
       <cat-item lemma="oažžut" tags="vblex.*"/>
@@ -2663,7 +2657,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: jagis 2001 - 2 position in-out" c="jagis 2001 - jaepien 2001">
+    <rule comment="REGLA: jagis 2001 - 2 position in-out c='jagis 2001 - jaepien 2001">
       <pattern> 
         <pattern-item n="jagis"/>
         <pattern-item n="semyear"/>
