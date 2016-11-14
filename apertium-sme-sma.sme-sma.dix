@@ -559,10 +559,10 @@
     <e><p><l>psykiatriija<s n="n"/></l><r>psykiatrije<s n="n"/></r></p></e>
     <e><p><l>eiseváldi<s n="n"/></l><r>åejvieladtjh<s n="n"/></r></p></e> <!-- TODO: sme can give sg, sma can't generate sg -->
     <e><p><l>ovdamearka<s n="n"/></l><r>vuesiehtimmie<s n="n"/></r></p></e>
-    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="nom"/></l><r>båetije<b/>aejkie<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="gen"/></l><r>båetije<b/>aejkie<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
-    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="loc"/></l><r>båetije<b/>aejkie<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
-    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="ill"/></l><r>båetije<b/>aejkie<s n="n"/><s n="sg"/><s n="ill"/></r></p></e>
+    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="nom"/></l><r>båetije<b/>biejjie<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="gen"/></l><r>båetije<b/>biejjie<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="loc"/></l><r>båetije<b/>biejjie<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l>boahtteáigi<s n="n"/><s n="sg"/><s n="ill"/></l><r>båetije<b/>biejjie<s n="n"/><s n="sg"/><s n="ill"/></r></p></e>
     <e><p><l>hástalus<s n="n"/></l><r>haesteme<s n="n"/></r></p></e>
     <e><p><l>strategiija<s n="n"/></l><r>strategije<s n="n"/></r></p></e>
     <e><p><l>rámmaeaktu<s n="n"/></l><r>mierietsiehkie<s n="n"/></r></p></e>
@@ -2284,7 +2284,19 @@
     <e><p><l>ravda<s n="n"/></l><r>haerie<s n="n"/></r></p></e>
     <e><p><l>reahka<s n="n"/></l><r>slærra<s n="n"/></r></p></e>
     
+    <e><p><l>boazodoalli<s n="n"/></l><r>båatsoesaemie<s n="n"/></r></p></e>
+    
+    <e><p><l>sátnejođiheaddji<s n="n"/></l><r>tjïeltenåvtehke<s n="n"/></r></p></e>
+    
     <e><p><l>reaidu<s n="n"/></l><r>dïrrege<s n="n"/></r></p></e>
+    
+    <e><p><l>vuorkágovva<s n="n"/></l><r>våarhkoeguvvie<s n="n"/></r></p></e>
+    
+    <e><p><l>čiekčan<s n="n"/></l><r>tjïektjeme<s n="n"/></r></p></e>
+    
+    
+    <e><p><l>mearrasápmi<s n="n"/></l><r>spïdtjeburrie<s n="n"/></r></p></e>
+
     
     <e><p><l>reakšuvdna<s n="n"/></l><r>reaksjovne<s n="n"/></r></p></e>
     <e><p><l>reantu<s n="n"/></l><r>lissiemaaksoe<s n="n"/></r></p></e>
@@ -2791,7 +2803,7 @@
     <e><p><l>válbi<s n="n"/></l><r>ierielimmie<s n="n"/></r></p></e>
     <e><p><l>váldi<s n="n"/><s n="nomag"/></l><r>stilleme<s n="n"/></r></p></e>
     <e><p><l>váldooassi<s n="n"/></l><r>åejvieboelhke<s n="n"/></r></p></e>
-    <e><p><l>váldoulbmil<s n="n"/></l><r>åejvietsiehkie<s n="n"/></r></p></e>
+    <e><p><l>váldoulbmil<s n="n"/></l><r>åejvieulmie<s n="n"/></r></p></e>
     <e><p><l>válga<s n="n"/></l><r>veeljeme<s n="n"/></r></p></e>
     <e><p><l>válgga<s n="n"/></l><r>veeljeme<s n="n"/></r></p></e>
     <e><p><l>válja<s n="n"/></l><r>veeljeme<s n="n"/></r></p></e>
@@ -2926,6 +2938,8 @@
     
     <e><p><l>spábbačiekčan<s n="n"/></l><r>tjengkertjïektjeme<s n="n"/></r></p></e>
     <e><p><l>spábbačiekči<s n="n"/></l><r>tjengkertjïektjije<s n="n"/></r></p></e>
+
+    <e><p><l>čiekči<s n="n"/></l><r>tjïektjije<s n="n"/></r></p></e>
 
     
     <e><p><l>čieran<s n="n"/></l><r>gierehtsepleahtjoe<s n="n"/></r></p></e>
@@ -3811,6 +3825,9 @@
     <e><p><l>boaris<s n="adj"/></l><r>båeries<s n="adj"/></r></p></e>
     <e><p><l>siskkáldas<s n="adj"/></l><r>sisnjelds<s n="adj"/></r></p></e>
     
+    <e><p><l>váilevaš<s n="adj"/></l><r>faeties<s n="adj"/></r></p></e>
+
+    
     <e><p><l>ahkit<s n="adj"/></l><r>ovrovne<s n="adj"/></r></p></e>    
     
     
@@ -3897,7 +3914,7 @@
     <e><p><l>fágaidrasttideaddji<s n="adj"/></l><r>faagerestiedæjja<s n="adj"/></r></p></e>
     <e><p><l>lihkadeaddji<s n="adj"/></l><r>svihtjije<s n="adj"/></r></p></e>
     <e><p><l>bustávalaš<s n="adj"/></l><r>baakoej<b/>mietie<s n="adj"/></r></p></e>
-    <e><p><l>árbbálaš<s n="adj"/></l><r>eerpeles<s n="adj"/></r></p></e>
+    <e><p><l>árbbálaš<s n="adj"/></l><r>eerpeles<s n="adj"/></r></p></e>history
     <e><p><l>golgi<s n="adj"/></l><r>galkije<s n="adj"/></r></p></e>
     
     
@@ -4097,7 +4114,8 @@
     <e><p><l>sadjásaš<s n="adj"/><s n="sem_hum"/><s n="attr"/></l><r>sæjjasadtje<s n="adj"/><s n="attr"/></r></p></e>
     <e><p><l>sadjásaš<s n="adj"/><s n="sem_hum"/><s n="sg"/><s n="nom"/></l><r>sijjie<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>
     <e><p><l>sadjásaš<s n="n"/></l><r>sæjjasadtje<s n="n"/></r></p></e>
-    <e><p><l>johtu<s n="n"/><s n="sem_process"/><s n="sg"/><s n="ill"/></l><r><s n="n"/></r></p></e>
+    
+    <e><p><l>johtu<s n="n"/><s n="sem_process"/><s n="sg"/><s n="ill"/></l><r>drïekte<s n="n"/></r></p></e>
 	
     <e><p><l>ovddeš<s n="adj"/></l><r>ovtetje<s n="adj"/></r></p></e>
 	<e><p><l>gaskamuttus<s n="adv"/></l><r>gaskoeh<s n="post"/></r></p></e>
