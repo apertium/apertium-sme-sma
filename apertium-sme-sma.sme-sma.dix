@@ -157,10 +157,6 @@
       <e><p><l><s n="cmp_sggen"/></l> <r><s n="cmp_sggen"/></r></p></e>
       <e><p><l><s n="cmp_sgnom"/></l> <r><s n="cmp_sgnom"/></r></p></e>
     </pardef>
-    <pardef n=":LR_indecl" c="Tag it for transfer (removed by transfer before generation)">
-      <e r="LR"><p><l></l> <r><s n="indecl"/></r></p></e>
-      <e r="RL"><p><l></l> <r></r></p></e>
-    </pardef>
   </pardefs>
   <section id="main" type="standard">
 
@@ -173,7 +169,7 @@
 <!--    <e><p><l>borrat	byöpmedidh	om menneske 			-->
 <!--									 -->
 <!--    <e><p><l>mannat	mïnnedh	                                	 -->
-<!--    <e><p><l>mannat	vuelkedh	mïnnedh ta en tur og komme tilbake-  -->
+<!--    <e><p><l>mannat	vuelkedh	mïnnedh ta en tur og komme tilbake  -->
 <!--    men mannat brukes også mer i nordsamisk i 			 -->
 <!--    vuelkedh-setninger i sørsamisk. 				-->
 <!--									 -->
@@ -196,14 +192,14 @@
     <e r="LR"><p><l>dahjege<s n="cnjcoo"/></l><r>jallh<s n="cnjcoo"/></r></p></e>
 
   
-    <e><p><l>ahte<s n="cnjcoo"/></l><r><s n="cnjcoo"/></r></p></e> <!-- we have rules for this -->
+    <e r="LR"><p><l>ahte<s n="cnjcoo"/></l><r><s n="cnjcoo"/></r></p></e> <!-- we have rules for this -->
     <!-- <e><p><l>ahte<s n="cnjcoo"/></l><r>ahte<s n="cnjcoo"/></r></p></e> -->
 
     <!-- SECTION: Subjunctions -->
 
     <e><p><l>ahte<s n="cnjsub"/></l><r>ahte<s n="cnjsub"/></r></p></e>
     <e><p><l>dego<s n="cnjsub"/></l><r>goh<s n="cnjsub"/></r></p></e>
-    <e><p><l>go<s n="pcle"/><s n="qst"/></l><r><s n="pcle"/></r></p></e>
+    <e r="LR"><p><l>go<s n="pcle"/><s n="qst"/></l><r><s n="pcle"/></r></p></e>
     <e><p><l>go<s n="cnjsub"/></l><r>goh<s n="cnjsub"/></r></p></e>
     <e><p><l>go<s n="cnjsub"/></l><r>gosse<s n="cnjsub"/></r></p></e>
     <e><p><l>go<s n="cnjsub"/></l><r>guktie<s n="cnjsub"/></r></p></e> <!-- go @COMP-CS< -->
@@ -232,7 +228,7 @@
     
 
     <!-- SECTION: Adpositions -->
-    <e><p><l>mađe<s n="post"/></l><r><s n="post"/></r></p></e>
+    <e r="LR"><p><l>mađe<s n="post"/></l><r><s n="post"/></r></p></e>
     <e><p><l>siskkobealde<s n="post"/></l><r>sisnjelen<s n="post"/></r></p></e>
     <e><p><l>siskkobealde<s n="adv"/></l><r>sisnjelen<s n="adv"/></r></p></e>
     <e><p><l>ovttajienalaččat<s n="adv"/></l><r>aktenraeresne<s n="adv"/></r></p></e>
@@ -264,7 +260,7 @@
     <e><p><l>birra<s n="adv"/></l><r>bïjre<s n="adv"/></r></p></e>
     <e><p><l>bakte<s n="post"/></l><r>baaktoe<s n="post"/></r></p></e>
     <e><p><l>bokte<s n="post"/></l><r>baaktoe<s n="post"/></r></p></e>
-    <e><p><l>vuhtii<s n="adv"/></l><r><s n="adv"/></r></p></e>
+    <e r="LR"><p><l>vuhtii<s n="adv"/></l><r><s n="adv"/></r></p></e>
     <e><p><l>bokte<s n="post"/></l><r>jis<s n="cnjsub"/></r></p></e>
     <e><p><l>bakte<s n="post"/></l><r>jis<s n="cnjsub"/></r></p></e>
     <e><p><l>buohta<s n="post"/></l><r>boehth<s n="post"/></r></p></e>
@@ -343,7 +339,7 @@
     <e><p><l>vuollai<s n="post"/></l><r>nualan<s n="post"/></r></p></e>
     <e><p><l>vuolábealde<s n="post"/></l><r>vuelielisnie<s n="post"/></r></p></e>
     <e><p><l>vuostá<s n="post"/></l><r>vuestie<s n="post"/></r></p></e>
-    <e><p><l>vuostá<s n="adv"/></l><r><s n="adv"/></r></p></e>
+    <e r="LR"><p><l>vuostá<s n="adv"/></l><r><s n="adv"/></r></p></e>
     <e><p><l>vuođul<s n="post"/></l><r>mietie<s n="post"/></r></p></e>
     <e><p><l>várás<s n="post"/></l><r>muhteste<s n="post"/></r></p></e>
     <e><p><l>čađa<s n="post"/></l><r>tjïrrh<s n="post"/></r></p></e>
@@ -805,7 +801,7 @@
  
     <e><p><l>Stáhta<b/>huksendoaimmahat<s n="np"/><s n="sem_org"/><s n="sg"/></l><r>Staatenbægkoeh<s n="np"/><s n="pl"/></r></p></e>
     
-    <e><p><l>visti<s n="n"/></l><r><s n="n"/></r></p></e>
+    <e r="LR"><p><l>visti<s n="n"/></l><r><s n="n"/></r></p></e>
     
     <e><p><l>erenoamášraportevrra<s n="n"/></l><r>sjïerereektije<s n="n"/></r></p></e>
     <e><p><l>giellalávgun<s n="n"/></l><r>gïelelaavkome<s n="n"/></r></p></e>
@@ -3853,7 +3849,8 @@
     <e><p><l>diđolaš<s n="adj"/></l><r>fahkoes<s n="adj"/></r></p></e>
     <e><p><l>vejolaččat<s n="adv"/></l><r>kaanne<s n="adv"/></r></p></e>
  
-    <e><p><l>regionála<s n="adj"/></l><r>regionaale<s n="adj"/></r></p><par n=":LR_indecl"/></e>
+    <e r="LR"><p><l>regionála<s n="adj"/></l><r>regionaale<s n="adj"/></r></p></e>
+    <e r="RL"><p><l>regionála<s n="adj"/></l><r>regionaale<s n="adj"/><s n="indecl"/></r></p></e>
 
 
 
@@ -4411,7 +4408,7 @@
   
     <e><p><l>jođáneappot<s n="adv"/></l><r>verkebe<s n="adv"/></r></p></e> 
     <e><p><l>sadjái<s n="post"/></l><r>sijjie<s n="n"/><s n="sg"/><s n="ela"/></r></p></e> 
-    <e><p><l>váste<s n="post"/></l><r><s n="post"/></r></p></e> 
+    <e r="LR"><p><l>váste<s n="post"/></l><r><s n="post"/></r></p></e> 
 
     <e><p><l>oppalohkái<s n="adv"/></l><r>ållesthlaakan<s n="adv"/></r></p></e> 
     <e><p><l>loahpageahčen<s n="post"/></l><r>minngiegietjesne<s n="post"/></r></p></e> 
@@ -4580,7 +4577,7 @@
     <e><p><l>govt<s n="adv"/></l><r>guktie<s n="adv"/></r></p></e>
     <e r="LR"><p><l>mot<s n="adv"/></l><r>nåtsh<s n="adv"/></r></p></e>
     <e><p><l>nu<s n="adv"/></l><r>dan<s n="adv"/></r></p></e> <!-- nu ollu -->
-    <e><p><l>nu<s n="adv"/></l><r><s n="adv"/></r></p></e> <!-- nu mo -->
+    <e r="LR"><p><l>nu<s n="adv"/></l><r><s n="adv"/></r></p></e> <!-- nu mo -->
     <e><p><l>nuorttas<s n="adv"/></l><r>luvlelen<s n="adv"/></r></p></e>
     <e><p><l>oarjjás<s n="adv"/></l><r>jallese<s n="adv"/></r></p></e>
     <e><p><l>odne<s n="adv"/></l><r>daenbiejjien<s n="adv"/></r></p></e>
@@ -5897,6 +5894,7 @@
     <e><p><l>logget<s n="vblex"/><s n="tv"/></l><r>loggedh<s n="vblex"/><s n="tv"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
+
     <e><re>[…;:.\?¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
     <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
     <e><p><l>!<s n="sent"/></l><r>!<s n="sent"/></r></p></e>
@@ -52182,6 +52180,7 @@
 <e><p><l>várra<s n="adv"/></l><r>kaanne<s n="adv"/></r></p></e>
   
 
+</section>
       
       
 <!--
@@ -52209,5 +52208,4 @@ vuođul ::: eabnoelaage :::
 davvinuorta ::: noerhtenluvlie ::: n
 davvinuorta ::: noerhteluvlie ::: n
  -->
-</section>
 </dictionary>
