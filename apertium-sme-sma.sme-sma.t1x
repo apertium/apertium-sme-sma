@@ -102,6 +102,20 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="prn.ind.*"/>
     </def-cat>
 
+    <def-cat n="prn-attr">
+      <cat-item tags="prn.ind.attr"/>
+      <cat-item tags="prn.ind.attr.*"/>
+      <cat-item tags="prn.itg.attr.*"/>
+    </def-cat>
+
+    <def-cat n="numeral">
+      <cat-item tags="num.rom.*"/>
+      <cat-item tags="num.arab.*"/>
+      <cat-item tags="num.sg.*"/>
+      <cat-item tags="num.pl.*"/>
+      <cat-item tags="num.ess.*"/>
+    </def-cat>
+
     <def-cat n="noun">
       <cat-item tags="*.n.*.sg.*"/>
       <cat-item tags="*.n.*.pl.*"/>
@@ -140,6 +154,15 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_caus.v.inf.*"/>
       <cat-item tags="vblex.*.der_caus.v.*.inf.*"/>
       <cat-item tags="vblex.*.der_inchl.v.inf.*"/>
+    </def-cat>
+
+    <def-cat n="verb-fin">
+      <cat-item tags="vblex.*.indic.*"/>
+      <cat-item tags="vblex.*.cond.*"/>
+      <cat-item tags="vblex.*.pot.*"/>
+      <cat-item tags="vblex.*.der_inchl.vblex.indic.*"/>
+      <cat-item tags="vblex.*.der_inchl.vblex.cond.*"/>
+      <cat-item tags="vblex.*.der_inchl.vblex.pot.*"/>
     </def-cat>
 
     <def-cat n="prop-nom">
@@ -270,6 +293,11 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="guhkki">
       <cat-item lemma="guhkki" tags="adj.*"/>
+    </def-cat>
+
+    <def-cat n="geatnegahtton">
+      <cat-item lemma="geatnegahtton" tags="adj.*"/>
+      <cat-item lemma="geatnegahttojuvvon" tags="adj.*"/>
     </def-cat>
 
     <def-cat n="mielde_adv">
@@ -720,13 +748,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="num-sg-all">
       <cat-item tags="num.*"/>
     </def-cat>
-    <def-cat n="numeral">
-      <cat-item tags="num.rom.*"/>
-      <cat-item tags="num.arab.*"/>
-      <cat-item tags="num.sg.*"/>
-      <cat-item tags="num.pl.*"/>
-      <cat-item tags="num.ess.*"/>
-    </def-cat>
+
     <def-cat n="num-ldep">
       <cat-item tags="num.*.@N←"/>
       <cat-item tags="num.*.*.@N←"/>
@@ -740,11 +762,6 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="prn-dem-loc">
       <cat-item tags="prn.dem.pl.loc.*"/>
-    </def-cat>
-    <def-cat n="prn-attr">
-      <cat-item tags="prn.ind.attr"/>
-      <cat-item tags="prn.ind.attr.*"/>
-      <cat-item tags="prn.itg.attr.*"/>
     </def-cat>
     <def-cat n="verb-actio-ess">
       <cat-item tags="vblex.*.actio.ess.*"/>
@@ -794,14 +811,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.conneg.*"/>
       <cat-item tags="vblex.*.*.*.conneg.*"/>
     </def-cat>
-    <def-cat n="verb-fin">
-      <cat-item tags="vblex.*.indic.*"/>
-      <cat-item tags="vblex.*.cond.*"/>
-      <cat-item tags="vblex.*.pot.*"/>
-      <cat-item tags="vblex.*.der_inchl.vblex.indic.*"/>
-      <cat-item tags="vblex.*.der_inchl.vblex.cond.*"/>
-      <cat-item tags="vblex.*.der_inchl.vblex.pot.*"/>
-    </def-cat>
+
     <def-cat n="ahte">
       <cat-item lemma="ahte" tags="cnjsub"/>
       <cat-item lemma="ahte" tags="cnjsub.*"/>
@@ -812,10 +822,6 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="vejolaš">
       <cat-item lemma="vejolaš" tags="adj.*"/>
-    </def-cat>
-    <def-cat n="geatnegahtton">
-      <cat-item lemma="geatnegahtton" tags="adj.*"/>
-      <cat-item lemma="geatnegahttojuvvon" tags="adj.*"/>
     </def-cat>
 
     <def-cat n="adv">
