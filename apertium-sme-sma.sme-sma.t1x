@@ -252,6 +252,10 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.sem_year.sg"/>
     </def-cat>
 
+    <def-cat n="áigi">
+      <cat-item lemma="áigi" tags="n.*"/>
+    </def-cat>
+
     <def-cat n="ge">
       <cat-item lemma="ge" tags="pcle.*"/>
     </def-cat>
@@ -464,9 +468,6 @@ And then there are some categories like "month", with all the months.
       <def-cat n="vuollai">
   	 	<cat-item lemma="vuollai" tags="post.*"/>
   	 </def-cat>
-   <def-cat n="áigi">
-      <cat-item lemma="áigi" tags="n.*"/>
-    </def-cat>
     <def-cat n="lassin">
       <cat-item lemma="lassi" tags="n.*.ess.*"/>
     </def-cat>
