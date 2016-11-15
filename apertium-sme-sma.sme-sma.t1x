@@ -142,6 +142,14 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="vblex.*.der_inchl.v.inf.*"/>
     </def-cat>
 
+    <def-cat n="prop-nom">
+      <cat-item tags="np.*.sg.nom.*"/>
+    </def-cat>
+
+    <def-cat n="prop-attr">
+      <cat-item tags="np.*.attr.*"/>
+    </def-cat>
+
     <def-cat n="cnjsub">
        <cat-item tags="cnjsub"/>
        <cat-item tags="cnjsub.*"/>
@@ -256,6 +264,10 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="buorre" tags="adj.*.@→N"/>
     </def-cat>
 
+    <def-cat n="guhkki">
+      <cat-item lemma="guhkki" tags="adj.*"/>
+    </def-cat>
+
     <def-cat n="mielde_adv">
       <cat-item lemma="mielde" tags="adv.*"/>
     </def-cat>
@@ -293,6 +305,25 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="váikkuhitverb">
        <cat-item lemma="váikkuhit" tags="vblex.*"/>
+    </def-cat>
+
+    <def-cat n="word">
+      <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
+      <cat-item tags="pcle"/>
+      <cat-item tags="pcle.@PCLE"/>
+      <cat-item tags="cnjsub"/>
+      <cat-item tags="cnjsub.*"/>
+      <cat-item tags="n"/>
+      <cat-item tags="n.*"/>
+      <cat-item tags="np"/>
+      <cat-item tags="np.*"/>
+      <cat-item tags="np"/>
+      <cat-item tags="np.*"/>
+      <cat-item tags="adj"/>
+      <cat-item tags="adj.*"/>
+      <cat-item tags="prn.*"/>
+      <cat-item tags="vblex.*"/>
     </def-cat>
 
     <def-cat n="sent">
@@ -413,12 +444,7 @@ And then there are some categories like "month", with all the months.
      <def-cat n="ala">
       <cat-item lemma="ala" tags="post.*"/>
     </def-cat>
-   <def-cat n="prop-nom">
-      <cat-item tags="np.*.sg.nom.*"/>
-    </def-cat>
-    <def-cat n="prop-attr">
-      <cat-item tags="np.*.attr.*"/>
-    </def-cat>
+
     <def-cat n="dárbu">
       <cat-item lemma="dárbu" tags="n.*.sg.nom.*"/>
     </def-cat>
@@ -434,9 +460,6 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="fápmu">
       <cat-item lemma="fápmu" tags="n.*.sg.ill.*"/>
-    </def-cat>
-    <def-cat n="guhkki">
-      <cat-item lemma="guhkki" tags="adj.*"/>
     </def-cat>
       <def-cat n="vuollai">
   	 	<cat-item lemma="vuollai" tags="post.*"/>
