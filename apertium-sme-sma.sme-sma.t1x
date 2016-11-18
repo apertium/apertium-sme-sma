@@ -333,9 +333,9 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="rdep">
-      <cat-item tags="prn.pers.*.*.@→N"/>
+   <cat-item tags="prn.pers.*.*.@→N"/>
+      <cat-item tags="prn.ref.*.@→N"/>
       <cat-item tags="prn.ref.*.*.@→N"/>
-      <cat-item tags="prn.ref.*.*.*.@→N"/>
       <cat-item tags="adj.*.*.@→N"/>
       <cat-item tags="adj.*.@→N"/>
       <cat-item tags="n.*.@→N"/>
@@ -345,6 +345,7 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*.*.*.*.@→N"/>
       <cat-item tags="n.*.*.@→N"/>
       <cat-item tags="np.*.@→N"/>
+      <cat-item tags="num.*.@→N"/>
       <cat-item tags="vblex.*.@→N"/>
       <cat-item tags="*.cmp_splitr.*"/>
     </def-cat>
