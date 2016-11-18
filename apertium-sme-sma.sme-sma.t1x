@@ -1774,7 +1774,7 @@ And then there are some categories like "month", with all the months.
 
     <def-macro n="general-macro-1Param" npar="1">
       <choose>
-        <when>
+        <when c="M[_____V_] main-verb-lemma">
           <test>
             <or>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
@@ -1783,7 +1783,7 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
         </when>
-        <when>
+        <when c="M[_____V_] main-verb-lemma">
           <test>
             <and><or>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@A←"/></equal>
@@ -1795,7 +1795,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
      <choose>
-        <when>
+        <when c="M[_____V_] subj_nbr">
           <test>
           <and>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal>
@@ -1807,7 +1807,7 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><var n="subj_nbr"/><clip pos="1" side="sl" part="a_nbr"/></let>
         </when>
-        <when>
+        <when c="M[_____V_] verb_tense_nbrpers">
           <test>
             <or>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FAUXV"/></equal>
@@ -1818,7 +1818,7 @@ And then there are some categories like "month", with all the months.
           <clip pos="1" side="tl" part="a_nbr"/></concat></let>
           <let><var n="tense"/><clip pos="1" side="tl" part="a_tense"/></let>
         </when>
-        <when>
+        <when c="M[_____V_] infin">
           <test>
             <or>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FAUXV"/></equal>
@@ -1829,7 +1829,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose> 
      <choose>
-        <when>
+        <when c="M[_____T__] adds attr to prn.dem.pl.com">
           <test>
             <and>
               <equal><clip pos="1" side="sl" part="a_prn"/><lit-tag v="prn.dem"/></equal>
@@ -1841,15 +1841,14 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose> 
      <choose>
-      <when><test><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="pcle"/></equal></test>
+      <when c="M[____T__] pcle">
+      <test><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="pcle"/></equal></test>
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="pcle"/></let></when>
       </choose> 
 
+      <!-- removing tags we don't need -->
       <let><clip pos="1" side="tl" part="a_spec_sme_tags"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
-
-
-      <!-- Set the +Allegro tag to nothing for now -->
       <let><clip pos="1" side="tl" part="a_allegro"/><lit v=""/></let>
 
       <call-macro n="convert-deriv-1Param">
@@ -1860,7 +1859,7 @@ And then there are some categories like "month", with all the months.
            Remove question particle. -->
       <let><var n="func"/><lit-tag v="@X"/></let>
       <choose>
-        <when>
+        <when c="M[_____V_] func">
           <test>
             <not><equal><clip pos="1" side="tl" part="a_func"/><lit v=""/></equal></not>
           </test>
@@ -1868,13 +1867,13 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
-        <when>
+        <when c="M[_____V_] ext">
           <test>
             <equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←ext→"/></equal>
           </test>
           <let><var n="ext"/><clip pos="1" side="sl" part="a_exthab"/></let>
         </when>
-        <when>
+        <when  c="M[_____V_] ext">
           <test>
             <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←ext→"/></equal></not>
           </test>
@@ -1882,7 +1881,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
-        <when>
+        <when c="M[____T__] cmp_sh to cmp_sgnom">
           <test>
             <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sh"/></equal>
           </test>
@@ -1890,7 +1889,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
-        <when>
+        <when c="M[____T__] remove a_attr when prfprc">
           <test>
             <equal><clip pos="1" side="tl" part="a_infin"/><lit-tag v="prfprc"/></equal>
           </test>
@@ -1898,7 +1897,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
-        <when>
+        <when c="M[____T__] actio.loc to inf">
           <test><and>
             <equal><clip pos="1" side="tl" part="a_actio"/><lit-tag v="actio"/></equal>
             <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="loc"/></equal>
@@ -1907,7 +1906,7 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_actio"/><lit-tag v="inf"/></let> 
       <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let> 
         </when>
-        <when>
+        <when c="M[____T__] actio.gen to der_nomact.n.sg">
           <test><and>
             <equal><clip pos="1" side="tl" part="a_actio"/><lit-tag v="actio"/></equal>
             <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
@@ -1974,7 +1973,7 @@ And then there are some categories like "month", with all the months.
       </choose> -->
 
       <choose>
-        <when>
+        <when c="M[____T__] removes a_poss from prn.ref">
           <test>
             <not><equal><clip pos="1" side="sl" part="a_prn"/><lit-tag v="prn.ref"/></equal></not>
           </test>
@@ -1982,7 +1981,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose> 
       <choose>
-        <when>
+        <when c="M[____T__] removes a_attr from prn.dem.pl.loc">
           <test><and>
             <equal><clip pos="1" side="sl" part="a_prn"/><lit-tag v="prn.dem"/></equal>
             <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
@@ -1992,7 +1991,8 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
      <choose>
-      <when><test><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="adv"/></equal></test>
+      <when c="M[____T__] removes extra tags from adv">
+      <test><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="adv"/></equal></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
@@ -2001,13 +2001,13 @@ And then there are some categories like "month", with all the months.
       </choose>  
 
      <choose>
-        <when>
+        <when c="M[____T__] ←hab→ gives gen">
           <test>
               <equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
         </when>
-        <when>
+        <when c="M[____T__] loc to gen for a_time">
           <test><and>
             <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
              <in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="a_time"/></in>
@@ -2583,7 +2583,7 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Nominal groups --> 
 
-<rule comment="REGLA: prn-refl-sg-nom  - 2 positions"> <!-- Ieš jorgalusat  => Jarkoestimmieh jïjtjh  -->
+<rule comment="C[A____T_W] prn-refl-sg-nom noun-nom" c="ieš jorgalusat _ dah jarkoestimmieh jïjtjh"> 
       <pattern>
         <pattern-item n="prn-refl-sg-nom"/>
         <pattern-item n="noun-nom"/>
@@ -2620,7 +2620,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule> 
-    <rule comment="REGLA: pronouns  - 1 position">
+    <rule comment="C[_____T__] prn">
       <pattern>
         <pattern-item n="prn"/>
       </pattern>
@@ -2652,7 +2652,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="REGLA: buot oktavuođain"> 
+     <rule comment="C[____LT__] buot_prn oktavuohta_n" c="buot oktavuođain _ gaajhkene lehkesne"> 
       <pattern>
         <pattern-item n="buot_prn"/>
         <pattern-item n="oktavuohta_n"/>
@@ -2678,7 +2678,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="REGLA: dan duohken"> 
+     <rule comment="C[____LT__] dat_prn duohken_post" c="dan duohken _ båata destie"> 
       <pattern>
         <pattern-item n="dat_prn"/>
         <pattern-item n="duohken_post"/>
@@ -2707,7 +2707,7 @@ And then there are some categories like "month", with all the months.
     
     
 
-    <rule comment="REGLA: pronouns  - 2 positions"> <!-- moai Laarain - månnoeh Laarah -->
+    <rule comment="C[_____T__] prn_pers_du pron_D_com" c="moai Laarain _ månnoeh Laarah">
       <pattern>
         <pattern-item n="prn_pers_du"/>
         <pattern-item n="pron_D_com"/>
@@ -2739,7 +2739,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: year - 1 position in-out"> <!-- Paul lea riegádan 1931:s - Paul jaepien 1931 reakadamme -->
+    <rule comment="C[_____T__] semyear-loc-gen" c="1931:s _ jaepien 1931">
       <pattern>
         <pattern-item n="semyear-loc-gen"/>
       </pattern>
@@ -2765,7 +2765,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: date - 1 position in-out">  <!-- date should be nominative -->
+    <rule comment="C[_____T__] semdate" c="date to nominative"> 
       <pattern>
         <pattern-item n="semdate"/>
       </pattern>
@@ -2788,7 +2788,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: year pl - 1 position in-out"> <!-- 2011-12  - jaepiej 2011-12 -->
+    <rule comment="C[A____T__] semyearPl" c="2011-12 _ jaepiej 2011-12">
       <pattern>
         <pattern-item n="semyearPl"/>
       </pattern>
@@ -2816,7 +2816,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: jagis 2001 - 2 position in-out c='jagis 2001 - jaepien 2001">
+    <rule comment="C[_____T__] jagis semyear" c="jagis 2001 - jaepien 2001">
       <pattern> 
         <pattern-item n="jagis"/>
         <pattern-item n="semyear"/>
@@ -2843,7 +2843,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: gitta jagi 2001 - 3 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
+    <rule comment="C[_____T__] rdep jahki_n semyear (removes semyear)" c="gitta jagi 2001 _ öövre jaepien  2001"> 
       <pattern> 
         <pattern-item n="rdep"/>
         <pattern-item n="jahki_n"/>
@@ -2874,7 +2874,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA:  jagi 2001 - 2 position in-out"> <!-- jagis 2001 - jaepien 2001  -->
+    <rule comment="C[_____T__] jahki_n semyear" c="jagis 2001 - jaepien 2001">
       <pattern> 
         <pattern-item n="jahki_n"/>
         <pattern-item n="semyear"/>
@@ -2901,7 +2901,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: mánnu 2001 - 2 position in-out"> 
+    <rule comment="C[_____T__] mánnu semyear" c="mánnu+gen year-nom"> 
       <pattern> 
         <pattern-item n="mánnu"/>
         <pattern-item n="semyear"/>
@@ -2931,7 +2931,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: jagi sisa - 1 position out"> 
+    <rule comment="C[___D_T__] sem_measr_time sisa" c="jagi sisa _ jaepesne"> 
       <pattern> 
         <pattern-item n="sem_measr_time"/>
         <pattern-item n="sisa"/>
@@ -2953,7 +2953,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: jagi sisa - 1 position out"> 
+    <rule comment="C[___D_T__] numeral-not-year sem_measr_time sisa" c="num time sisa _ to inessive"> 
       <pattern> 
         <pattern-item n="numeral-not-year"/>
         <pattern-item n="sem_measr_time"/>
@@ -2982,7 +2982,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: num jagi geahčen - 3 position out"> 
+    <rule comment="C[_____T__] numeral-not-year sem_measr_time geahčen"> 
       <pattern> 
         <pattern-item n="numeral-not-year"/>
         <pattern-item n="sem_measr_time"/>
@@ -3016,7 +3016,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA:  2001 - 2 position in-out"> <!--  2001 - jaepien 2001  -->
+    <rule comment="C[A____T__] semyear" c="2001 _ jaepien 2001"> 
       <pattern> 
         <pattern-item n="semyear"/>
      </pattern>
@@ -3043,8 +3043,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA:  dates"> 
-      <pattern> 
+    <rule comment="C[________] mánnu ordinal beaivi_n semyear"> 
+      <pattern>
         <pattern-item n="mánnu"/>
         <pattern-item n="ordinal"/>
         <pattern-item n="beaivi_n"/>
@@ -3080,7 +3080,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: date, no year"> 
+    <rule comment="C[________] mánnu ordinal beaivi_n"> 
       <pattern> 
         <pattern-item n="mánnu"/>
         <pattern-item n="ordinal"/>
@@ -3111,7 +3111,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: juohke ovtta ">
+    <rule comment="C[__D_____] juohke_prn numeral-not-year noun" c="juohke ovtta">
       <pattern>
         <pattern-item n="juohke_prn"/>
         <pattern-item n="numeral-not-year"/>
@@ -3136,7 +3136,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: numeral prosent">
+    <rule comment="C[___L_T__] numeral-not-year prosent">
       <pattern>
         <pattern-item n="numeral-not-year"/>
         <pattern-item n="prosent"/>
@@ -3183,7 +3183,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule comment="REGLA: adv numeral prosent">
+   <rule comment="C[___L_T__] mod_num numeral-not-year prosent">
       <pattern>
         <pattern-item n="mod_num"/>
         <pattern-item n="numeral-not-year"/>
@@ -3236,7 +3236,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA:  dates"> 
+    <rule comment="C[________] mánnu numeral-not-year beaivi_n semyear"> 
       <pattern> 
         <pattern-item n="mánnu"/>
         <pattern-item n="numeral-not-year"/> <!-- sometimes dot is missing -->
@@ -3274,7 +3274,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: numeral - 1 position in-out"> <!-- from sem_year to arab -->
+    <rule comment="C[_____T__] numeral-not-year" c="from sem_year to arab">
       <pattern>
         <pattern-item n="numeral-not-year"/>
       </pattern>
@@ -3301,7 +3301,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: mus lea goiku, 2 chunks out"> <!-- mus lea borranmiella - manne bårrestovvem -->
+    <rule comment="C[__DL_T__] habitive leat-drop thirst_hunger_n" c="mus lea borranmiella _ manne bårrestovvem">
       <pattern>
         <pattern-item n="habitive"/>
         <pattern-item n="leat-drop"/>
@@ -3337,7 +3337,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="REGLA: nomact-com to inf  - 1 position">
+     <rule comment="C[_____T__] gen nomact-nom" c="gen nomact-nom to acc inf">
       <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="nomact-nom"/>
@@ -3364,7 +3364,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="REGLA: nomact-com to inf  - 1 position">
+     <rule comment="C[_____T__] rdep gen nomact-nom" c="mod gen nomact-nom to mod acc inf">
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="gen"/>
@@ -3396,7 +3396,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule comment="REGLA: nomact-com to inf  - 1 position">
+   <rule comment="C[_____T__] nomact-com" c="nomact-com to inf">
       <pattern>
         <pattern-item n="nomact-com"/>
       </pattern>
@@ -3422,7 +3422,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: nomact-ill to inf  - 1 position">
+   <rule comment="C[_____T__] nomact-ill" c="nomact-ill to inf">
       <pattern>
         <pattern-item n="nomact-ill"/>
       </pattern>
@@ -3466,7 +3466,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: n-cmp n-cmp n-cmp n - 1 position out"> <!-- compounding -->
+    <rule comment="C[_____S__] n-cmp n-cmp n-cmp noun"> <!-- compounding -->
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="n-cmp"/>
@@ -3505,7 +3505,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: čájehit ipmárdusa    - 1 position out"> 
+    <rule comment="C[__DL____] čájehit_vblex understanding_n" c="čájehit ipmárdusa _ guarkedh"> 
       <pattern>
         <pattern-item n="čájehit_vblex"/>
         <pattern-item n="understanding_n"/>
@@ -3527,7 +3527,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: váikkuhit cmp illadvl    - 1 position out"> 
+    <rule comment="C[A___ST__] váikkuhitverb n-cmp nomact-ill"> 
       <pattern>
         <pattern-item n="váikkuhitverb"/>
         <pattern-item n="n-cmp"/>
@@ -3565,7 +3565,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: váikkuhit cmp illadvl    - 1 position out"> 
+    <rule comment="C[A____T__] váikkuhitverb genmod nomact-ill"> 
       <pattern>
         <pattern-item n="váikkuhitverb"/>
         <pattern-item n="genmod"/>
@@ -3605,7 +3605,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: cmp nomact-ill-modn    - 2 positions out"> 
+    <rule comment="C[____ST__] n-cmp nomact-ill-modn" c="from ill to acc"> 
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="nomact-ill-modn"/>
@@ -3635,7 +3635,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: cmp illadvl    - 1 position out"> 
+    <rule comment="C[____ST__] n-cmp nomact-ill" c="from ill to acc"> 
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="nomact-ill"/>
@@ -3675,7 +3675,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out"> 
+    <rule comment="C[_____T__] genmod nomact-ill" c="from ill to acc"> 
       <pattern>
         <pattern-item n="genmod"/>
         <pattern-item n="nomact-ill"/>
@@ -3722,7 +3722,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: rdep illadvl  - 2 position out"> 
+    <rule comment="C[_____T__] rdep nomact-ill" c="from ill to acc"> 
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="nomact-ill"/>
@@ -3760,7 +3760,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-   <rule comment="REGLA: genmod illadvl til acc inf  - 2 position out"> 
+   <rule comment="C[____ST__] n-cmp genmod nomact-ill" c="gen ill to acc inf"> 
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="genmod"/>
@@ -3814,7 +3814,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA:  genmod cmp illadvl til acc inf  - 3 position out"> 
+   <rule comment="C[____ST__] rdep n-cmp genmod nomact-ill" c="gen ill to acc inf"> 
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="n-cmp"/>
@@ -3882,7 +3882,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: cmp_splitr ja  n  - 3 position out"> 
+    <rule comment="C[_____T__] cmp_splitr cnjcoo noun"> 
       <pattern>
         <pattern-item n="cmp_splitr"/>
         <pattern-item n="cnjcoo"/>
@@ -3921,7 +3921,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: rdep cmp_splitr ja  n  - 3 position out">  <!-- Gieldda- ja ođasmahttindepartemeanta -->
+    <rule comment="C[_____T__] cmp_splitr cnjcoo n-cmp n-not-cmp" c="Gieldda- ja ođasmahttindepartemeanta"> 
       <pattern>
         <pattern-item n="cmp_splitr"/>
         <pattern-item n="cnjcoo"/>
@@ -3966,8 +3966,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: rdep cmp_splitr ja  n  - 4 position out"> 
+    <rule comment="C[_____T__] rdep cmp_splitr cnjcoo noun"> 
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="cmp_splitr"/>
@@ -4012,7 +4011,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: n-cmp n-cmp n  - 1 position out"> <!-- compounding -->
+    <rule comment="C[____S___] n-cmp n-cmp noun">
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="n-cmp"/>
@@ -4055,7 +4054,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: num adj loc  - 4 position out"> <!-- compounding -->
+    <rule comment="C[A____T__] num-sg-all adj-rdep noun-loc-num"> 
       <pattern>
         <pattern-item n="num-sg-all"/>
         <pattern-item n="adj-rdep"/>
@@ -4093,8 +4092,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: num adj loc  - 4 position out"> 
+    <rule comment="C[_____T__] num-sg-all prn-dem-loc adj-rdep noun-loc-num"> 
       <pattern>
         <pattern-item n="num-sg-all"/>
         <pattern-item n="prn-dem-loc"/>
@@ -4133,7 +4131,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: num adj loc  - 4 position out"> 
+    <rule comment="C[____ST__] num-sg-all prn-dem-loc adj-rdep n-cmp noun-loc-num"> 
       <pattern>
         <pattern-item n="num-sg-all"/>
         <pattern-item n="prn-dem-loc"/>
@@ -4179,8 +4177,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: n-cmp num  - 1 position out"> <!-- compounding -->
+    <rule comment="C[____S___] n-cmp numeral-not-year">
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="numeral-not-year"/>
@@ -4211,7 +4208,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: n-cmp n  - 1 position out"> <!-- compounding -->
+    <rule comment="C[____S___] n-cmp noun">
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="noun"/>
@@ -4246,7 +4243,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: n-cmp adj  - 1 position out"> <!-- compounding -->
+    <rule comment="C[____S___] n-cmp adj"> 
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="adj"/>
@@ -4275,8 +4272,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: n-cmp prsprc/prfprc  - 1 position out"> <!-- compounding -->
+    <rule comment="C[____S___] n-cmp verb-for-cmp" c="prsprc/prfprc">
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="verb-for-cmp"/>
@@ -4304,7 +4300,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: attr agreement cmp - 2 positions out"> <!-- NP: agreement-attr cmp noun -->
+    <rule comment="C[_C__S___] agreement-attr n-cmp noun">
       <pattern>
         <pattern-item n="agreement-attr"/>
         <pattern-item n="n-cmp"/>
@@ -4342,7 +4338,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: attr agreement indef - 3 positions out"> <!-- NP: agreement-attr indef noun -->
+    <rule comment="C[_C______] agreement-attr prn-ind noun">
       <pattern>
         <pattern-item n="agreement-attr"/>
         <pattern-item n="prn-ind"/>
@@ -4375,7 +4371,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: attr agreement - 2 positions out"> <!-- NP: agreement-attr noun -->
+    <rule comment="C[_C______] agreement-attr noun">
       <pattern>
         <pattern-item n="agreement-attr"/>
         <pattern-item n="noun"/>
@@ -4403,7 +4399,8 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule comment="REGLA: half agreement - 2 positions out"> 
+
+    <rule comment="C[_C___T__] agreement-half noun">
       <pattern>
         <pattern-item n="agreement-half"/>
         <pattern-item n="noun"/>
@@ -4443,7 +4440,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: numsg noun - 2 positions out"> <!-- NP: num noun -->
+    <rule comment="C[_____T__] numsg-acc-nom noun-nom-acc-gen"> 
       <pattern>
         <pattern-item n="numsg-acc-nom"/>
         <pattern-item n="noun-nom-acc-gen"/>
@@ -4522,7 +4519,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> 
     
-    <rule comment="REGLA: numsg noun - 3 positions out"> <!-- Ipmil sivdnidii guokte stuora čuovgga.  -->
+    <rule comment="C[_____T__] numsg-acc-nom rdep noun-nom-acc-gen" c="Ipmil sivdnidii guokte stuora čuovgga.">
       <pattern>
         <pattern-item n="numsg-acc-nom"/>
         <pattern-item n="rdep"/>
@@ -4587,7 +4584,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: numsg noun - 4 positions out"> <!-- 46,3 miljovnna lassi juolludeapmi  -->
+    <rule comment="C[_____T__] numsg-acc-nom rdep noun-nom-acc-gen noun" c="46,3 miljovnna lassi juolludeapmi">
       <pattern>
         <pattern-item n="numsg-acc-nom"/>
         <pattern-item n="rdep"/>
@@ -4657,8 +4654,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: dem numsg noun - 3 positions out">
+    <rule comment="C[_____T__] prn-dem-sg num-sg-all noun">
       <pattern>
         <pattern-item n="prn-dem-sg"/>
         <pattern-item n="num-sg-all"/>
@@ -4765,7 +4761,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: Gaajhkine 9 tjïeltine - 3 positions out">
+    <rule comment="C[_____T__] prn-dem-sg num-sg-all noun" c="Gaajhkine 9 tjïeltine">
       <pattern>
         <pattern-item n="agreement-attr"/>
         <pattern-item n="num-sg-all"/>
@@ -4846,7 +4842,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: Gaajhkine dejnie 9 tjïeltine - 4 positions out">
+    <rule comment="C[_____T__] prn-dem-sg prn-dem-sg num-sg-all noun" c="Gaajhkine dejnie 9 tjïeltine">
       <pattern>
         <pattern-item n="agreement-attr"/>
         <pattern-item n="prn-dem-sg"/>
@@ -4917,8 +4913,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: dem numsg rdep noun - 4 positions out">
+    <rule comment="C[_____T__] prn-dem-sg num-sg-all rdep noun">
       <pattern>
         <pattern-item n="prn-dem-sg"/>
         <pattern-item n="num-sg-all"/>
@@ -4985,7 +4980,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: prn-dem noun - 2 positions">
+    <rule comment="C[_____T__] prn-dem noun">
       <pattern>
         <pattern-item n="prn-dem"/>
         <pattern-item n="noun"/>
@@ -5014,7 +5009,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: prn-dem noun cmp  - 2 positions out">
+    <rule comment="C[____ST__] prn-dem n-cmp noun">
       <pattern>
         <pattern-item n="prn-dem"/>
         <pattern-item n="n-cmp"/>
@@ -5050,8 +5045,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: prn-indef noun - 2 positions">
+    <rule comment="C[_____T__] prn-ind noun">
       <pattern>
         <pattern-item n="prn-ind"/>
         <pattern-item n="noun"/>
@@ -5086,7 +5080,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: prn-indef noun cmp  - 2 positions out">
+    <rule comment="C[____ST__] prn-ind n-cmp noun">
       <pattern>
         <pattern-item n="prn-ind"/>
         <pattern-item n="n-cmp"/>
@@ -5127,7 +5121,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: prn-indef rdep noun  - 3 positions out">
+    <rule comment="C[_____T__] prn-ind rdep noun">
       <pattern>
         <pattern-item n="prn-ind"/>
         <pattern-item n="rdep"/>
@@ -5168,7 +5162,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: váste  - 1 position out"> <!-- illative instead of pp with váste -->
+    <rule comment="C[__D__T__] gen váste" c="váste_pp to illative">
       <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="váste"/>
@@ -5190,7 +5184,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="REGLA: eret  - 1 position out"> <!-- Hábmeris eret - elativ -->
+    <rule comment="C[__D__T__] noun-loc eret_adv" c="Hábmeris eret _ Hábmeristie">
       <pattern>
         <pattern-item n="noun-loc"/>
         <pattern-item n="eret_adv"/>
@@ -5212,7 +5206,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-     <rule comment="REGLA: lassin noun-ill"> <!-- lassin ill - ill lassin -->
+    <rule comment="C[_____T_W] lassi_n_ess noun-ill" c="lassin illative _ illative lassin">
       <pattern>
         <pattern-item n="lassi_n_ess"/>
         <pattern-item n="noun-ill"/>
@@ -5236,7 +5230,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-  <rule comment="REGLA: guhkiem">
+  <rule comment="C[__DL_T__] guhkki áigi" c="guhkes áiggi _ guhkiem">
       <pattern>
         <pattern-item n="guhkki"/>
         <pattern-item n="áigi"/>
@@ -5258,7 +5252,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-  <rule comment="REGLA: guhkiem 2">
+  <rule comment="C[__DL_T__] guhkki áigi vuollai" c="guhkes áiggi _ guhkiem">
       <pattern>
         <pattern-item n="guhkki"/>
         <pattern-item n="áigi"/>
@@ -5282,7 +5276,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-<!--    <rule comment="REGLA: áiggi mielde - "> 
+<!--    <rule comment="C[ACDLSTVW]áiggi mielde - "> 
       <pattern>
         <pattern-item n="áigi"/>
         <pattern-item n="mielde-post"/>
@@ -5304,7 +5298,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-   <rule comment="REGLA: nu olu oktavuođain"> 
+   <rule comment="C[__DLT__] olu_adv olu_adv oktavuohta_n" c="dan jïjnjem"> 
       <pattern>
         <pattern-item n="nu_adv"/>
         <pattern-item n="olu_adv"/>
@@ -5334,7 +5328,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: dattetge lea dárbu"> 
+    <rule comment="C[__D____] dattetge_maiddai_adv leat-main-fin dárbu_n"> 
       <pattern>
         <pattern-item n="dattetge_maiddai_adv"/>
         <pattern-item n="leat-main-fin"/>
@@ -5360,7 +5354,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: boahtitverb fápmui"> 
+    <rule comment="C[___L___W] boahtitverb fápmui"> 
       <pattern>
         <pattern-item n="boahtitverb"/>
         <pattern-item n="fápmui"/>
@@ -5385,8 +5379,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-
-   <rule comment="REGLA: oaivvildit"> 
+   <rule comment="C[___L_T__] noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub"> 
       <pattern>
         <pattern-item n="noun-nom"/> 
          <pattern-item n="cnjcoo"/> 
@@ -5402,7 +5395,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="coor_noun" case="caseFirstword">
              <tags>
               <tag><lit-tag v="NP"/></tag>
-              <tag><lit-tag v="@>P"/></tag>
+              <tag><lit-tag v="@→P"/></tag>
             </tags>
            <lu>
 				<clip pos="1" side="tl" part="whole"/>            
@@ -5435,7 +5428,8 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule comment="REGLA: oaivvildit"> 
+
+   <rule comment="C[___L_T__] noun-nom oaivvildit_vblex ahte_cnjsub"> 
       <pattern>
         <pattern-item n="noun-nom"/>
         <pattern-item n="oaivvildit_vblex"/>
@@ -5474,7 +5468,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-     <rule comment="REGLA: beassatverb fárrui"> <!-- mealtan årrodh -->
+     <rule comment="C[__DL____] beassatverb fárrui" c="beassat fárrui _ mealtan årrodh">
       <pattern>
         <pattern-item n="beassatverb"/>
         <pattern-item n="fárrui"/>
@@ -5495,7 +5489,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: bokte  - 2 positions out"> 
+    <rule comment="C[___L_T__] actio-sem_act bokte"> 
       <pattern>
         <pattern-item n="actio-sem_act"/>
         <pattern-item n="bokte"/>
@@ -5524,8 +5518,8 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="C[__D__T__] gen bokte" c="inessive and comitative/essive instead of pp with bokte"> 
 
-    <rule comment="REGLA: bokte  - 1 position out"> <!-- inessive and comitative/essive instead of pp with bokte -->
       <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="bokte"/>
@@ -5585,7 +5579,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment="REGLA: bokte ahte  - 2 position out"> --> <!-- inessive and comitative/essive instead of pp with bokte -->
+<!--    <rule comment="C[ACDLSTVW]bokte ahte  - 2 position out"> --> <!-- inessive and comitative/essive instead of pp with bokte -->
 <!--      <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="bokte"/>
@@ -5631,8 +5625,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-
-    <rule comment="REGLA: bokte  - 1 position out"> <!-- inessive and comitative/essive instead of pp with bokte -->
+    <rule comment="C[__D_ST__] n-cmp gen bokte" c="inessive and comitative/essive instead of pp with bokte"> 
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="gen"/>
@@ -5699,8 +5692,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: bokte  - 2 positions out"> <!-- inessive and comitative/essive instead of pp with bokte -->
+    <rule comment="C[__D__T__] rdep gen bokte" c="inessive and comitative/essive instead of pp with bokte"> 
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="gen"/>
@@ -5764,8 +5756,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-
-    <rule comment="REGLA: bokte  - 2 positions out"> <!-- inessive and comitative/essive instead of pp with bokte -->
+    <rule comment="C[__D_ST__] rdep n-cmp gen bokte" c="inessive and comitative/essive instead of pp with bokte"> 
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="n-cmp"/>
@@ -5836,7 +5827,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment="REGLA: dihte  - 1 position out"> -->  <!-- verb-actio-gen + dihte - infintive -->
+<!--    <rule comment="C[ACDLSTVW]dihte  - 1 position out"> -->  <!-- verb-actio-gen + dihte - infintive -->
 <!--      <pattern>
         <pattern-item n="verb-actio-gen"/>
         <pattern-item n="dihte"/>
@@ -5860,8 +5851,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-
-     <rule comment="REGLA: eret  - 1 position out"> <!-- eret Hábmeris  - elativ -->
+    <rule comment="C[__D__T__] eret_adv noun-loc" c="eret Hábmeris _ Hábmeristie"> 
       <pattern>
         <pattern-item n="eret_adv"/>
         <pattern-item n="noun-loc"/>
@@ -5883,7 +5873,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
    
-     <rule comment="REGLA: aehtjie gon tjidtjieh"> <!-- áhčči ja eadni - aehtjie gon tjidtjieh -->
+     <rule comment="C[________] áhčči_eadni ja áhčči_eadni" c="áhčči ja eadni _ aehtjie gon tjidtjieh"> 
       <pattern>
         <pattern-item n="áhčči_eadni"/>
         <pattern-item n="ja"/>
@@ -5914,9 +5904,8 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   
-     <rule comment="REGLA: aahka gon aajjah"> <!-- áhkku ja áddjá - aahka gonnoeh aajjah -->
-      <pattern>
+     <rule comment="C[________] áhčči_eadni ja áhčči_eadni" c="áhkku ja áddjá _ aahka gonnoeh aajjah"> 
+         <pattern>
         <pattern-item n="ahkku_addja"/>
         <pattern-item n="ja"/>
         <pattern-item n="ahkku_addja"/>
@@ -5945,7 +5934,8 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="REGLA: maake gon muahrah"> 
+
+     <rule comment="C[________] áhčči_eadni ja áhčči_eadni" c="maake gon muahrah"> 
       <pattern>
         <pattern-item n="uncle_aunt_n"/>
         <pattern-item n="ja"/>
@@ -5975,7 +5965,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-<!--     <rule comment="REGLA: jijmie gon jiekieh">
+<!--     <rule comment="C[ACDLSTVW]jijmie gon jiekieh">
       <pattern>
         <pattern-item n="jijmie"/>
         <pattern-item n="ja"/>
@@ -6007,7 +5997,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
      
-    <rule comment="REGLA: nounpx to ref + noun  - 2 positions out">
+    <rule comment="C[A_______] nounpx" c="nounpx to ref + noun"> 
       <pattern>
         <pattern-item n="nounpx"/>
       </pattern>
@@ -6035,8 +6025,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: noun  - 1 position">
+    <rule comment="C[_____T__] noun"> 
       <pattern>
         <pattern-item n="noun"/>
       </pattern>
@@ -6074,8 +6063,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-
-    <rule comment="REGLA: rdep n  - 2 positions">
+    <rule comment="C[___L_T__] rdep n-not-cmp">
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="n-not-cmp"/>
@@ -6179,7 +6167,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: cmp rdep n  - 2 positions">
+    <rule comment="C[____ST__] n-cmp rdep n-not-cmp">
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="rdep"/>
@@ -6241,7 +6229,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-   <rule comment="REGLA: rdep n propnom  - 3 positions">
+   <rule comment="C[________] rdep rdep prop-nom">
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="n-not-cmp"/>
@@ -6274,7 +6262,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA:  n propnom  - 3 positions">
+   <rule comment="C[________] n-not-cmp prop-attr prop-nom">
       <pattern>
         <pattern-item n="n-not-cmp"/>
         <pattern-item n="prop-attr"/>
@@ -6306,7 +6294,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA: rdep n propnom  - 4 positions">
+   <rule comment="C[________] rdep n-not-cmp prop-attr prop-nom">
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="n-not-cmp"/>
@@ -6344,7 +6332,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA: rdep n attr attr propnom  - 4 positions">
+   <rule comment="C[________] n-not-cmp prop-attr prop-attr prop-nom">
       <pattern>
         <pattern-item n="n-not-cmp"/>
         <pattern-item n="prop-attr"/>
@@ -6381,7 +6369,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA: rdep n attr attr propnom  - 5 positions">
+   <rule comment="C[________] rdep n-not-cmp prop-attr prop-attr prop-nom">
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="n-not-cmp"/>
@@ -6425,8 +6413,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-    <rule comment="REGLA: rdep n  - 3 positions">
+   <rule comment="C[____ST__] rdep n-cmp n-not-cmp">
       <pattern>
         <pattern-item n="rdep"/> 
         <pattern-item n="n-cmp"/>
@@ -6479,7 +6466,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: rdep rdep cmp n  - 3 positions out">
+   <rule comment="C[____ST__] rdep rdep n-cmp n-not-cmp">
       <pattern>
         <pattern-item n="rdep"/> 
         <pattern-item n="rdep"/> 
@@ -6539,7 +6526,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: rdep rdep cmp n  - 3 positions out">
+    <rule comment="C[_____T__] rdep rdep n-not-cmp">
       <pattern>
         <pattern-item n="rdep"/> 
         <pattern-item n="rdep"/> 
@@ -6591,7 +6578,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: rdep rdep rdep cmp n  - 4 positions out">
+    <rule comment="C[_____T__] rdep rdep rdep n-not-cmp">
       <pattern>
         <pattern-item n="rdep"/> 
         <pattern-item n="rdep"/> 
@@ -6643,7 +6630,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: n-cmp rdep rdep cmp n  - 3 positions out">
+    <rule comment="C[____ST__] n-cmp rdep rdep n-not-cmp">
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="rdep"/> 
@@ -6702,7 +6689,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: n-cmp rdep rdep cmp n  - 3 positions out">
+    <rule comment="C[____ST__] rdep n-cmp rdep n-not-cmp">
       <pattern>
         <pattern-item n="rdep"/> 
         <pattern-item n="n-cmp"/>
@@ -6761,9 +6748,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-
-
-    <rule comment="REGLA: n num-ldep  - 2 positions">
+    <rule comment="C[________] noun num-ldep">
       <pattern>
         <pattern-item n="noun"/>
         <pattern-item n="num-ldep"/>
@@ -6798,8 +6783,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
  
- 
-    <rule comment="REGLA: n-prop-pers  - 1 position">
+    <rule comment="C[________] n-prop-pers">
       <pattern>
         <pattern-item n="n-prop-pers"/>
       </pattern>
@@ -6825,7 +6809,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: pron-attr n-cmp n  - 2 positions out">
+    <rule comment="C[____ST__] prn-attr n-cmp noun">
       <pattern>
         <pattern-item n="prn-attr"/>
         <pattern-item n="n-cmp"/>
@@ -6872,8 +6856,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-
-    <rule comment="REGLA: pron-attr pron-attr n  - 3 positions out">
+    <rule comment="C[_____T__] prn-attr prn-attr noun">
       <pattern>
         <pattern-item n="prn-attr"/>
         <pattern-item n="prn-attr"/>
@@ -6925,7 +6908,7 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Verbal groups -->
 
-    <rule comment="REGLA: verb to adv  - 1 position"> <!-- go oassálastet dákkár giellabesiin - goh mealtan dagkeres gïelebiesine -->
+    <rule comment="C[_____T__] verb_to_adv" c="go oassálastet dákkár giellabesiin _ goh mealtan dagkeres gïelebiesine ">
       <pattern>
         <pattern-item n="verb_to_adv"/>
       </pattern>
@@ -6946,7 +6929,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: verb to adv  - 1 position out"> <!-- go lea oassálastán -->
+    <rule comment="C[ACDLSTVW]verb to adv  - 1 position out"> <!-- go lea oassálastán -->
       <pattern>
         <pattern-item n="leat-aux"/>
         <pattern-item n="verb_to_adv"/>
@@ -6969,7 +6952,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-  <rule comment="REGLA: negverb  - 1 position">
+  <rule comment="C[ACDLSTVW]negverb  - 1 position">
       <pattern>
         <pattern-item n="negverb"/>
       </pattern>
@@ -7002,7 +6985,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: conneg  - 1 position">
+    <rule comment="C[ACDLSTVW]conneg  - 1 position">
       <pattern>
         <pattern-item n="conneg"/>
       </pattern>
@@ -7031,7 +7014,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA: negverb conneg  - 2 positions out">
+   <rule comment="C[ACDLSTVW]negverb conneg  - 2 positions out">
       <pattern>
         <pattern-item n="negverb"/>
         <pattern-item n="conneg"/>
@@ -7085,7 +7068,7 @@ And then there are some categories like "month", with all the months.
     </rule>  
 
 
-   <rule comment="REGLA: remove cop-mainv when adj is vfin  - 3 positions"> <!-- Mov åejjieh saejriedieh. -->
+   <rule comment="C[ACDLSTVW]remove cop-mainv when adj is vfin  - 3 positions"> <!-- Mov åejjieh saejriedieh. -->
       <pattern>
         <pattern-item n="leat-drop"/>
         <pattern-item n="noun"/>
@@ -7120,7 +7103,7 @@ And then there are some categories like "month", with all the months.
     </rule>  
 
 
-    <rule comment="REGLA: verb-fin  - 1 position">
+    <rule comment="C[ACDLSTVW]verb-fin  - 1 position">
       <pattern>
         <pattern-item n="leat-main-fin"/>
       </pattern>
@@ -7151,7 +7134,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-fin  - 1 position">
+    <rule comment="C[ACDLSTVW]verb-fin  - 1 position">
       <pattern>
         <pattern-item n="leat-main-infin"/>
       </pattern>
@@ -7179,7 +7162,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: verb-fin  - 3 position">
+    <rule comment="C[ACDLSTVW]verb-fin  - 3 position">
       <pattern>
         <pattern-item n="habitive"/>
         <pattern-item n="leat-main-fin"/>
@@ -7213,7 +7196,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: leat-aux   - 1 position out">
+    <rule comment="C[ACDLSTVW]leat-aux   - 1 position out">
       <pattern>
         <pattern-item n="leat-aux"/>
       </pattern>
@@ -7237,7 +7220,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: verb-fin  - 1 position">
+    <rule comment="C[ACDLSTVW]verb-fin  - 1 position">
       <pattern>
         <pattern-item n="verb-fin"/>
       </pattern>
@@ -7265,7 +7248,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-<!--    <rule comment="REGLA: leat-aux adv verb-prfprc">
+<!--    <rule comment="C[ACDLSTVW]leat-aux adv verb-prfprc">
       <pattern>
         <pattern-item n="leat-aux"/>
         <pattern-item n="adv"/>
@@ -7302,7 +7285,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-<!--    <rule comment="REGLA: geatnegahtton  - 1 position"> --> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
+<!--    <rule comment="C[ACDLSTVW]geatnegahtton  - 1 position"> --> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
 <!--      <pattern>
        <pattern-item n="leat-main"/>
        <pattern-item n="geatnegahtton"/>
@@ -7328,7 +7311,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: oažžut dieđu  - 2 position out">
+    <rule comment="C[ACDLSTVW]oažžut dieđu  - 2 position out">
       <pattern>
         <pattern-item n="oažžut_vbelx"/>
         <pattern-item n="diehtu_n_acc"/>
@@ -7355,7 +7338,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
- <!--   <rule comment="REGLA: leat-main subpred  - 2 positions out"> --> <!-- Dïhte maanan bïjle. -->
+ <!--   <rule comment="C[ACDLSTVW]leat-main subpred  - 2 positions out"> --> <!-- Dïhte maanan bïjle. -->
  <!--     <pattern>
         <pattern-item n="leat-drop"/>
         <pattern-item n="rdep"/>
@@ -7390,7 +7373,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
 
-    <rule comment="REGLA: verb-inf  - 1 position">
+    <rule comment="C[ACDLSTVW]verb-inf  - 1 position">
       <pattern>
         <pattern-item n="verb-inf"/>
       </pattern>
@@ -7416,7 +7399,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: verb-prfprc  - 1 position"> <!-- OBS -->
+    <rule comment="C[ACDLSTVW]verb-prfprc  - 1 position"> <!-- OBS -->
       <pattern>
         <pattern-item n="verb-prfprc"/>
       </pattern>
@@ -7443,7 +7426,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: verb-actio to inf  - 2 position">
+    <rule comment="C[ACDLSTVW]verb-actio to inf  - 2 position">
       <pattern>
         <pattern-item n="mielde-adv"/>
         <pattern-item n="verb-actio-ess"/>
@@ -7479,7 +7462,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-actio to inf  - 2 position">
+    <rule comment="C[ACDLSTVW]verb-actio to inf  - 2 position">
       <pattern>
         <pattern-item n="mielde-adv"/>
         <pattern-item n="verb-actio-ess"/>
@@ -7527,7 +7510,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: verb-actio-ess to ger  - 1 position">
+    <rule comment="C[ACDLSTVW]verb-actio-ess to ger  - 1 position">
       <pattern>
         <pattern-item n="verb-actio-ess"/>
       </pattern>
@@ -7553,7 +7536,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: verb-imp  - 1 position">
+    <rule comment="C[ACDLSTVW]verb-imp  - 1 position">
       <pattern>
         <pattern-item n="verb-imp"/>
       </pattern>
@@ -7575,7 +7558,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: mearkkašit  - 1 position out">
+    <rule comment="C[ACDLSTVW]mearkkašit  - 1 position out">
       <pattern>
         <pattern-item n="mearkkašit_vblex"/>
       </pattern>
@@ -7598,7 +7581,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: mearkkašit  - 2 positions out">
+    <rule comment="C[ACDLSTVW]mearkkašit  - 2 positions out">
       <pattern>
         <pattern-item n="mearkkašit_vblex"/>
         <pattern-item n="ahte_cnjsub"/>
@@ -7627,7 +7610,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: atnit árvvus  - 2 positions out">
+    <rule comment="C[ACDLSTVW]atnit árvvus  - 2 positions out">
       <pattern>
         <pattern-item n="atnit_vblex"/>
         <pattern-item n="árvu_n_loc"/>
@@ -7655,7 +7638,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: ovttašráđiid to ektine  - 2 positions out">
+    <rule comment="C[ACDLSTVW]ovttašráđiid to ektine  - 2 positions out">
       <pattern>
         <pattern-item n="ovttasráđiid_adv"/>
         <pattern-item n="comitative"/>
@@ -7682,7 +7665,7 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Adjective groups --> 
 
-    <rule comment="REGLA: go vejolaš - from adj to verb  - 2 positions out">
+    <rule comment="C[ACDLSTVW]go vejolaš - from adj to verb  - 2 positions out">
       <pattern>
         <pattern-item n="go-cnjsub"/>
         <pattern-item n="vejolaš_adj"/>
@@ -7710,7 +7693,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: vejolaš - from adj to verb  - 1 position out">
+    <rule comment="C[ACDLSTVW]vejolaš - from adj to verb  - 1 position out">
       <pattern>
         <pattern-item n="leat-main-fin"/>
         <pattern-item n="vejolaš_adj"/>
@@ -7736,7 +7719,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: leamaš vejolaš - from adj to verb  - 1 position out">
+    <rule comment="C[ACDLSTVW]leamaš vejolaš - from adj to verb  - 1 position out">
       <pattern>
         <pattern-item n="leat_prfprc"/>
         <pattern-item n="vejolaš_adj"/>
@@ -7758,7 +7741,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: adj  - 1 position">
+    <rule comment="C[ACDLSTVW]adj  - 1 position">
       <pattern>
         <pattern-item n="adj"/>
       </pattern>
@@ -7785,7 +7768,7 @@ And then there are some categories like "month", with all the months.
     </rule> 
 
 
-    <rule comment="REGLA: prsprc  - 1 position">
+    <rule comment="C[ACDLSTVW]prsprc  - 1 position">
       <pattern>
         <pattern-item n="prsprc"/>
       </pattern>
@@ -7813,7 +7796,7 @@ And then there are some categories like "month", with all the months.
     <!-- SECTION: Adverbial groups -->
 
 
-    <rule comment="REGLA: eanet ahte eanet  - 2 positions out">
+    <rule comment="C[ACDLSTVW]eanet ahte eanet  - 2 positions out">
       <pattern>
         <pattern-item n="adj-adj_comp"/>
         <pattern-item n="ja"/>
@@ -7842,7 +7825,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: adv  - 1 position">
+    <rule comment="C[ACDLSTVW]adv  - 1 position">
       <pattern>
         <pattern-item n="not-pcle"/>
         <pattern-item n="adv"/>
@@ -7866,7 +7849,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: adv  - 1 position">
+    <rule comment="C[ACDLSTVW]adv  - 1 position">
       <pattern>
         <pattern-item n="adv"/>
       </pattern>
@@ -7891,7 +7874,7 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Adpositions -->
 
-    <rule comment="REGLA: pr noun-acc  - 2 position">
+    <rule comment="C[ACDLSTVW]pr noun-acc  - 2 position">
       <pattern>
         <pattern-item n="pr"/>
         <pattern-item n="gen"/>
@@ -7932,7 +7915,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: pr noun-acc  - 4 position">
+    <rule comment="C[ACDLSTVW]pr noun-acc  - 4 position">
       <pattern>
         <pattern-item n="pr"/>
         <pattern-item n="gen"/>
@@ -7984,7 +7967,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: pr gen noun-acc  - 3 positions">
+    <rule comment="C[ACDLSTVW]pr gen noun-acc  - 3 positions">
       <pattern>
         <pattern-item n="pr"/>
         <pattern-item n="rdep"/>
@@ -8018,7 +8001,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="REGLA: pr  - 1 position">
+    <rule comment="C[ACDLSTVW]pr  - 1 position">
       <pattern>
         <pattern-item n="pr"/>
       </pattern>
@@ -8041,7 +8024,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: post  - 2 position">
+    <rule comment="C[ACDLSTVW]post  - 2 position">
       <pattern>
         <pattern-item n="dem-gen"/>
         <pattern-item n="ala_post"/>
@@ -8064,7 +8047,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: post  - 3 position">
+    <rule comment="C[ACDLSTVW]post  - 3 position">
       <pattern>
         <pattern-item n="rdep"/>
         <pattern-item n="gen"/>
@@ -8095,7 +8078,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: post  - 2 position">
+    <rule comment="C[ACDLSTVW]post  - 2 position">
       <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="post"/>
@@ -8121,7 +8104,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: post  - 1 position">
+    <rule comment="C[ACDLSTVW]post  - 1 position">
       <pattern>
         <pattern-item n="post"/>
       </pattern>
@@ -8144,7 +8127,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="REGLA: negverb conneg vejolaš  - 2 positions out">
+   <rule comment="C[ACDLSTVW]negverb conneg vejolaš  - 2 positions out">
       <pattern>
         <pattern-item n="negverb"/>
         <pattern-item n="leat-main-infin"/>
@@ -8184,7 +8167,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>  
 
-   <rule comment="REGLA: negverb conneg ge vejolaš  - 2 positions out">
+   <rule comment="C[ACDLSTVW]negverb conneg ge vejolaš  - 2 positions out">
       <pattern>
         <pattern-item n="negverb"/>
         <pattern-item n="leat-main-infin"/>
@@ -8230,7 +8213,7 @@ And then there are some categories like "month", with all the months.
     <!-- SECTION: Conjunctions -->
 
     
-    <rule comment="REGLA: cs  - 1 position">
+    <rule comment="C[ACDLSTVW]cs  - 1 position">
       <pattern>
         <pattern-item n="cnjsub"/>
       </pattern>
@@ -8253,7 +8236,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: ahte  - 1 position">
+    <rule comment="C[ACDLSTVW]ahte  - 1 position">
       <pattern>
         <pattern-item n="adv_go"/>
         <pattern-item n="go-cnjsub"/>
@@ -8279,7 +8262,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: cc  - 1 position">
+    <rule comment="C[ACDLSTVW]cc  - 1 position">
       <pattern>
         <pattern-item n="cnjcoo"/>
       </pattern>
@@ -8302,7 +8285,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: ij  - 1 position">
+    <rule comment="C[ACDLSTVW]ij  - 1 position">
       <pattern>
         <pattern-item n="interj"/>
       </pattern>
@@ -8326,7 +8309,7 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Miscellaneous -->
 
-    <rule comment="REGLA: sent  - 1 position">
+    <rule comment="C[ACDLSTVW]sent  - 1 position">
       <pattern>
         <pattern-item n="sent"/>
       </pattern>
@@ -8345,7 +8328,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: comma">
+    <rule comment="C[ACDLSTVW]comma">
       <pattern>
         <pattern-item n="comma"/>
       </pattern>
@@ -8362,7 +8345,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="REGLA: DEFAULT">
+    <rule comment="C[ACDLSTVW]DEFAULT">
       <pattern>
         <pattern-item n="default"/>
       </pattern>
