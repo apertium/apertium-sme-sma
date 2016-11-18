@@ -2281,7 +2281,7 @@ And then there are some categories like "month", with all the months.
            </let> 
          </when>
          
-        <when c="M[_C___T__] sg.loc to ela.attr and ela">        <!-- with sg loc (not hab), littag ela -->
+        <when c="M[_C___T__] sg.loc to ela.attr and ela">   
           <test>
             <and>
               <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
@@ -2846,7 +2846,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="C[_____T__] rdep jahki_n semyear (removes semyear)" c="gitta jagi 2001 : öövre jaepien  2001"> 
+    <rule comment="C[_____T__] rdep jahki_n semyear (removes semyear)" c="gitta jagi 2001 : öövre jaepien 2001"> 
       <pattern> 
         <pattern-item n="rdep"/>
         <pattern-item n="jahki_n"/>
@@ -3469,7 +3469,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[____S___] n-cmp n-cmp n-cmp noun"> <!-- compounding -->
+    <rule comment="C[____S___] n-cmp n-cmp n-cmp noun">
       <pattern>
         <pattern-item n="n-cmp"/>
         <pattern-item n="n-cmp"/>
@@ -5830,7 +5830,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment=" dihte  - 1 position out"> -->  <!-- verb-actio-gen + dihte - infintive -->
+<!--    <rule comment=" dihte   out"> -->  <!-- verb-actio-gen + dihte - infintive -->
 <!--      <pattern>
         <pattern-item n="verb-actio-gen"/>
         <pattern-item n="dihte"/>
@@ -7287,7 +7287,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-<!--    <rule comment=" geatnegahtton  - 1 position"> --> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
+<!--    <rule comment=" geatnegahtton  "> --> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
 <!--      <pattern>
        <pattern-item n="leat-main"/>
        <pattern-item n="geatnegahtton"/>
@@ -7769,7 +7769,7 @@ And then there are some categories like "month", with all the months.
     </rule> 
 
 
-    <rule comment="C[________] prsprc  - 1 position">
+    <rule comment="C[________] prsprc">
       <pattern>
         <pattern-item n="prsprc"/>
       </pattern>
