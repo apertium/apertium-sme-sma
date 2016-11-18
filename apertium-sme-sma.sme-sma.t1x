@@ -2723,7 +2723,7 @@ And then there are some categories like "month", with all the months.
          <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         <out>
-          <chunk name="xprn" case="caseFirstword">
+          <chunk name="prn" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -2997,7 +2997,7 @@ And then there are some categories like "month", with all the months.
          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
          <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let> 
                           <out>
-          <chunk name="p" case="caseFirstword">
+          <chunk name="post" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3744,7 +3744,7 @@ And then there are some categories like "month", with all the months.
         </when>
      </choose>
         <out>
-          <chunk name="noundd" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -6831,7 +6831,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="attr-cmp-nnn" case="caseFirstword">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
