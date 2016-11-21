@@ -7898,8 +7898,8 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="whole"/>
             </lu>
             </chunk>
-            <b/>
-          <chunk name="noun" case="caseFirstword">
+            <b pos="1"/>
+            <chunk name="noun" case="caseFirstword">
              <tags>
              <tag><lit-tag v="NP"/></tag>
               <tag><lit-tag v="@P←"/></tag>
@@ -7941,7 +7941,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="whole"/>
             </lu>
             </chunk>
-            <b/>
+            <b pos="1"/>
           <chunk name="noun" case="caseFirstword">
              <tags>
              <tag><lit-tag v="NP"/></tag>
@@ -7950,11 +7950,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
@@ -7982,11 +7982,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
@@ -7994,9 +7994,6 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-
-
-
 
     <rule comment="C[________] pr">
       <pattern>
@@ -8061,11 +8058,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -8149,8 +8146,8 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>
-            <b pos="1"/>
-           <chunk name="conneg">
+          <b pos="1"/>
+          <chunk name="conneg">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@-FMAINV"/></tag>
@@ -8190,8 +8187,8 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>
-            <b pos="1"/>
-           <chunk name="vejolaš" case="caseFirstword">
+          <b pos="1"/>
+          <chunk name="vejolaš" case="caseFirstword">
             <tags>
               <tag><lit-tag v="VA"/></tag>
               <tag><lit-tag v="@-FMAINV"/></tag>
@@ -8325,6 +8322,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
     <rule comment="C[________] comma">
       <pattern>
         <pattern-item n="comma"/>
@@ -8342,6 +8340,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
     <rule comment="C[________] default">
       <pattern>
         <pattern-item n="default"/>
