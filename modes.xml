@@ -759,5 +759,42 @@
     </pipeline>
   </mode>
 
+  <mode name="sma-sme-dgen" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="sma-sme.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="sma-sme.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -n -1 -w">
+        <file name="sma-sme.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="sma-sme.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="sma-sme.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-sme-sma.sma-sme.t1x"/>
+        <file name="sma-sme.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-sme-sma.sma-sme.t2x"/>
+        <file name="sma-sme.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-sme-sma.sma-sme.t3x"/>
+        <file name="sma-sme.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="sma-sme.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
 
 </modes>
