@@ -5446,7 +5446,7 @@ And then there are some categories like "month", with all the months.
 				<clip pos="1" side="tl" part="whole"/>            
 		  </lu>
           </chunk>
-            <b/>
+            <b pos="1"/>
           <chunk name="advl">
              <tags>
               <tag><lit-tag v="PP"/></tag>
@@ -5456,7 +5456,7 @@ And then there are some categories like "month", with all the months.
               <lit v="mïele"/>
               <lit-tag v="n.sg.gen"/>            
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <lit v="mietie"/>
               <lit-tag v="post"/>            
