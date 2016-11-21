@@ -705,7 +705,7 @@
     </pipeline>
   </mode>
 
-  <mode name="sma-sme" install="no">
+  <mode name="sma-sme" install="yes">
     <pipeline>
       <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="sma-sme.automorf.hfst"/>
