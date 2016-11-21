@@ -2606,7 +2606,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="a_nbr"/>
               <lit-tag v="nom"/></concat>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -2667,7 +2667,7 @@ And then there are some categories like "month", with all the months.
               <lit v="gaajhke"/>
               <lit-tag v="prn.ind.sg.ine.attr"/>
             </lu>
-              <b/>
+              <b pos="1"/>
             <lu>
               <lit v="lehkie"/>
               <lit-tag v="n.sg.ine"/>
@@ -2693,7 +2693,7 @@ And then there are some categories like "month", with all the months.
               <lit v="båetedh"/>
               <lit-tag v="vblex.iv.indic.pres.p3.sg"/>
             </lu>
-              <b/>
+              <b pos="1"/>
             <lu>
               <lit v="dïhte"/>
               <lit-tag v="prn.dem.sg.ela"/>
@@ -2727,7 +2727,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -2833,7 +2833,7 @@ And then there are some categories like "month", with all the months.
               <lit v="jaepie"/>
               <lit-tag v="n.sg.gen"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -2860,11 +2860,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -2890,7 +2890,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -2919,7 +2919,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -2970,7 +2970,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-             <b/>
+             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -3000,11 +3000,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -3061,15 +3061,15 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="3"/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
@@ -3097,11 +3097,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -3126,7 +3126,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -3173,7 +3173,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -3221,11 +3221,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -3254,15 +3254,15 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="3"/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
@@ -3323,7 +3323,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
-          <b />
+          <b pos="1"/>
           <chunk name="vblex">
             <tags>
               <tag><lit-tag v="VP"/></tag>
@@ -8091,7 +8091,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
