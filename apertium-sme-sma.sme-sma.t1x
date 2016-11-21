@@ -1074,7 +1074,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="n"/>
     </def-attr>
 
-    <def-attr n="a_verb">
+    <def-attr n="a_vblex">
        <attr-item tags="vblex"/>
        <attr-item tags="vblex.iv.der_inchl.v"/>
        <attr-item tags="vblex.tv.der_inchl.v"/>
@@ -1112,7 +1112,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="imp"/>
     </def-attr>
 
-    <def-attr n="a_ntype">
+    <def-attr n="a_n_type">
        <attr-item tags="abbr"/>
        <attr-item tags="acr"/>
     </def-attr>
@@ -1152,11 +1152,6 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="p1"/>
        <attr-item tags="p2"/>
        <attr-item tags="p3"/>
-    </def-attr>
-
-    <def-attr n="a_degr">
-       <attr-item tags="comp"/>
-       <attr-item tags="superl"/>
     </def-attr>
 
     <def-attr n="a_deriv">
@@ -2103,8 +2098,8 @@ And then there are some categories like "month", with all the months.
         <when c="M[_____T__] sg to pl.nom: göökte laejpieh">
         <test><and>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal>
-        <not><equal><clip pos="1" side="sl" part="a_ntype"/><lit-tag v="abbr"/></equal></not>
-        <not><equal><clip pos="1" side="sl" part="a_ntype"/><lit-tag v="acr"/></equal></not>
+        <not><equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal></not>
+        <not><equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal></not>
         <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
         <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
         <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal>
@@ -2116,7 +2111,7 @@ And then there are some categories like "month", with all the months.
         <when c="M[_____T__] sg.nom">
         <test><and>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal> 
-        <equal><clip pos="1" side="sl" part="a_ntype"/><lit-tag v="abbr"/></equal>
+        <equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal>
         <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
         <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal></and>
         </test>
@@ -2126,7 +2121,7 @@ And then there are some categories like "month", with all the months.
         <when c="M[_____T__] sg.nom">
         <test><and>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal> 
-        <equal><clip pos="1" side="sl" part="a_ntype"/><lit-tag v="acr"/></equal>
+        <equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal>
         <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
         <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal></and>
         </test>
@@ -2266,7 +2261,7 @@ And then there are some categories like "month", with all the months.
             <clip pos="2" side="tl" part="tags"/>
              <concat>
                <lit-tag v="n"/>
-               <clip pos="2" side="tl" part="a_ntype"/>
+               <clip pos="2" side="tl" part="a_n_type"/>
                <clip pos="2" side="tl" part="a_nbr"/>
                <clip pos="2" side="tl" part="a_case"/>
              </concat>  
@@ -2529,7 +2524,7 @@ And then there are some categories like "month", with all the months.
           <clip pos="2" side="tl" part="tags"/>
           <concat>
             <lit-tag v="n"/>
-            <clip pos="2" side="tl" part="a_ntype"/>
+            <clip pos="2" side="tl" part="a_n_type"/>
             <clip pos="2" side="tl" part="a_nbr"/>
             <clip pos="2" side="tl" part="a_case"/> 
           </concat>                
@@ -4465,8 +4460,8 @@ And then there are some categories like "month", with all the months.
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
      <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_ntype"/><lit-tag v="abbr"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_ntype"/><lit-tag v="acr"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal></not>
+     <not><equal><clip pos="2" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal></not>
      </and>
@@ -4475,7 +4470,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="2" side="tl" part="tags"/>
           <concat>
           <lit-tag v="n"/>
-          <clip pos="2" side="tl" part="a_ntype"/>
+          <clip pos="2" side="tl" part="a_n_type"/>
           <lit-tag v="pl"/>
           <clip pos="1" side="tl" part="a_case"/></concat></let>
  	</when>
@@ -4497,7 +4492,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="2" side="tl" part="tags"/>
           <concat>
           <lit-tag v="n"/>
-          <clip pos="2" side="tl" part="a_ntype"/>
+          <clip pos="2" side="tl" part="a_n_type"/>
           <lit-tag v="pl.ela"/></concat></let>
           </when>
           </choose>
@@ -6974,7 +6969,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_neg"/>
               <clip pos="1" side="tl" part="a_mood"/>
@@ -7007,7 +7002,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_conneg"/>
             </lu>
@@ -7043,7 +7038,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_neg"/>
               <clip pos="1" side="tl" part="a_mood"/>
@@ -7060,7 +7055,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_verb"/>
+              <clip pos="2" side="tl" part="a_vblex"/>
               <clip pos="2" side="tl" part="a_trans"/>
               <clip pos="2" side="tl" part="a_conneg"/>
             </lu>
@@ -7454,7 +7449,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_verb"/>
+              <clip pos="2" side="tl" part="a_vblex"/>
               <clip pos="2" side="tl" part="a_trans"/>
               <lit-tag v="inf"/>
             </lu>
@@ -7490,7 +7485,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_verb"/>
+              <clip pos="2" side="tl" part="a_vblex"/>
               <clip pos="2" side="tl" part="a_trans"/>
               <lit-tag v="inf"/>
             </lu>
@@ -7501,7 +7496,7 @@ And then there are some categories like "month", with all the months.
             <b/>
             <lu>
               <clip pos="4" side="tl" part="lem"/>
-              <clip pos="4" side="tl" part="a_verb"/>
+              <clip pos="4" side="tl" part="a_vblex"/>
               <clip pos="4" side="tl" part="a_trans"/>
               <lit-tag v="inf"/>
             </lu>
@@ -7527,7 +7522,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <lit-tag v="ger"/>
             </lu>
@@ -8145,7 +8140,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_neg"/>
               <clip pos="1" side="tl" part="a_mood"/>
@@ -8186,7 +8181,7 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_neg"/>
               <clip pos="1" side="tl" part="a_mood"/>
