@@ -4080,7 +4080,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] num-sg-all prn-dem-loc adjmod_n noun-loc-num" c="sámegiella lea okta dain dehálaš vuođđogeđggiin : saemiengïele lea akte dejstie vihkeles maadthgierkijste"> 
+    <rule comment="C[T] num_sg_all prn-dem-loc adjmod_n noun-loc-num" c="sámegiella lea okta dain dehálaš vuođđogeđggiin : saemiengïele lea akte dejstie vihkeles maadthgierkijste"> 
       <pattern>
         <pattern-item n="num_sg_all"/>
         <pattern-item n="prn_dem_loc"/>
@@ -4119,7 +4119,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[ST] num-sg-all prn-dem-loc adjmod_n n-cmp noun-loc-num" c="Sámegiella lea okta dain dehálaš skuvlagielain : Saemiengïele lea akte dejstie vihkeles skuvlegïelijste"> 
+    <rule comment="C[ST] num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num" c="Sámegiella lea okta dain dehálaš skuvlagielain : Saemiengïele lea akte dejstie vihkeles skuvlegïelijste"> 
       <pattern>
         <pattern-item n="num_sg_all"/>
         <pattern-item n="prn_dem_loc"/>
@@ -4428,7 +4428,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] numsg-acc-nom noun-nom-acc-gen"> 
+    <rule comment="C[T] numsg-acc-nom noun-nom-acc-gen" c="Mus lea okta guolli : Mov lea akte guelie. | Mun dohppen ovtta guoli : Manne aktem gueliem dïjpem"> 
       <pattern>
         <pattern-item n="numsg_acc_nom"/>
         <pattern-item n="noun_nom_acc_gen"/>
@@ -4488,7 +4488,7 @@ And then there are some categories like "month", with all the months.
           </choose>
        <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
        <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nounnum" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4507,7 +4507,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> 
     
-    <rule comment="C[T] numsg-acc-nom mod_n noun-nom-acc-gen" c="Ipmil sivdnidii guokte stuora čuovgga.">
+    <rule comment="C[T] numsg-acc-nom mod_n noun-nom-acc-gen" c="Ipmil sivdnidii guokte stuora čuovgga : Jupmele göökte stoere tjoevkh sjugniedi">
       <pattern>
         <pattern-item n="numsg_acc_nom"/>
         <pattern-item n="mod_n"/>
@@ -4572,7 +4572,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] numsg-acc-nom mod_n noun-nom-acc-gen noun" c="46,3 miljovnna lassi juolludeapmi">
+    <rule comment="C[T] numsg-acc-nom mod_n noun-nom-acc-gen noun" c="46,3 miljovnna lassi juolludeapmi : 46,3 millijovnh lissie dievtie">
       <pattern>
         <pattern-item n="numsg_acc_nom"/>
         <pattern-item n="mod_n"/>
@@ -4642,7 +4642,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] prn-dem-sg num-sg-all noun">
+    <rule comment="C[T] prn_dem_sg num_sg_all noun" c="Mun válddán dán golmma guoli : Manne daaj golme guelide vaaltam">
       <pattern>
         <pattern-item n="prn_dem_sg"/>
         <pattern-item n="num_sg_all"/>
@@ -4726,7 +4726,7 @@ And then there are some categories like "month", with all the months.
           </when>
           </choose>
        <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="noun1" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4749,7 +4749,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] prn-dem-sg num-sg-all noun" c="Gaajhkine 9 tjïeltine">
+    <rule comment="C[T] prn_dem_sg num_sg_all noun" c="buot 9 gielddas : gaajhkine 9 tjïeltine">
       <pattern>
         <pattern-item n="agreement_attr"/>
         <pattern-item n="num_sg_all"/>
@@ -4808,7 +4808,7 @@ And then there are some categories like "month", with all the months.
           </when>
           </choose>
        <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="noun2" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4830,7 +4830,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="C[T] prn-dem-sg prn-dem-sg num-sg-all noun" c="Gaajhkine dejnie 9 tjïeltine">
+    <rule comment="C[T] prn_dem_sg prn_dem_sg num_sg_all noun" c="buot dan 9 gielddas : gaajhkine dejnie 9 tjïeltine">
       <pattern>
         <pattern-item n="agreement_attr"/>
         <pattern-item n="prn_dem_sg"/>
@@ -4875,7 +4875,7 @@ And then there are some categories like "month", with all the months.
           </when>
           </choose>
        <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="noun3" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4901,7 +4901,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] prn-dem-sg num-sg-all mod_n noun">
+    <rule comment="C[T] prn_dem_sg num_sg_all mod_n noun" c="Mun válddán dán golmma guoli meađđemiid : Manne daaj golme gueliej mietienidie vaaltam.">
       <pattern>
         <pattern-item n="prn_dem_sg"/>
         <pattern-item n="num_sg_all"/>
