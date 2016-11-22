@@ -3552,7 +3552,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[AT] váikkuhitverb genmod nomact-ill" c="Sámediggi háliida váikkuhit ealáhusa ovddideapmái : Saemiedigkie sæjhta dijpedh guktie jieliemasse evtiedåvva"> 
+    <rule comment="C[AT] váikkuhitverb genmod nomact-ill to subord.clause" c="Sámediggi háliida váikkuhit ealáhusa ovddideapmái : Saemiedigkie sæjhta dijpedh guktie jieliemasse evtiedåvva"> 
       <pattern>
         <pattern-item n="váikkuhit_vblex"/>
         <pattern-item n="genmod"/>
@@ -3564,7 +3564,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>
     <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.der_passl.vblex.iv.indic.pres.p3.sg"/></let>
         <out>
-          <chunk name="noun3" case="caseFirstword">
+          <chunk name="subord" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3593,7 +3593,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="C[ST] n-cmp nomact-ill-modn" c="from ill to acc"> 
+    <rule comment="C[ST] n-cmp nomact-ill-modn to inf" c="Sis leat buoret vejolašvuođat giellaoahppamii : Daj leah buerebh nuepieh gïelem lïeredh"> 
       <pattern>
         <pattern-item n="n_cmp"/>
         <pattern-item n="nomact_ill_modn"/>
@@ -3623,7 +3623,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[ST] n-cmp nomact-ill" c="from ill to acc"> 
+<!--    <rule comment="C[ST] n-cmp nomact-ill" c="this is included in the macro"> 
       <pattern>
         <pattern-item n="n_cmp"/>
         <pattern-item n="nomact_ill"/>
@@ -3660,10 +3660,10 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
-    <rule comment="C[T] genmod nomact-ill" c="dus lea seammás geatnegasvuohta oassálastit aktiivvalaččat ulbmiliid juksamii : dov lea seammasïenten stilleme mealtan eadtjohkelaakan ulmide jaksedh"> 
+    <rule comment="C[T] genmod nomact-ill to inf" c="dus lea seammás geatnegasvuohta oassálastit aktiivvalaččat ulbmiliid juksamii : dov lea seammasïenten stilleme mealtan eadtjohkelaakan ulmide jaksedh"> 
       <pattern>
         <pattern-item n="genmod"/>
         <pattern-item n="nomact_ill"/>
@@ -3710,7 +3710,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="C[T] mod_n nomact-ill" c="from ill to acc"> 
+    <rule comment="C[T] mod_n nomact-ill" c="viesu huksemii : gåetiem tseegkedh"> 
       <pattern>
         <pattern-item n="mod_n"/>
         <pattern-item n="nomact_ill"/>
@@ -5478,7 +5478,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[LT] actio_sem_act bokte_post"> 
+    <rule comment="C[LT] actio_sem_act bokte_post to case" c="lea dehálaš ahte nu oallugat go vejolaš ohppet giela sirdima bokte giellaguddiin : dellie vihkele ahte dan jïjnjesh goh gåarede gïelem lierieh goh jåhta gïeleguedtiejijstie"> 
       <pattern>
         <pattern-item n="actio_sem_act"/>
         <pattern-item n="bokte_post"/>
@@ -5489,7 +5489,7 @@ And then there are some categories like "month", with all the months.
          
               <let><var n="func"/><clip pos="2" side="sl" part="a_func"/></let>
        <out>
-          <chunk name="subsentence" case="caseFirstword">
+          <chunk name="subord" case="caseFirstword">
              <tags>
               <tag><lit-tag v="SS"/></tag>
             </tags>
@@ -5507,7 +5507,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[DT] gen bokte_post" c="inessive and comitative/essive instead of pp with bokte"> 
+    <rule comment="C[DT] gen bokte_post to case" c="Sámegiela stáhtus loktejuvvošii dan bokte ahte maiddái dáža mánát sáhttet oahppat giela : Saemiengïelen staatuse dejnie lutnjesåvva ahte aaj daaroen maanah maehtieh gïelem lïeredh"> 
 
       <pattern>
         <pattern-item n="gen"/>
@@ -5515,7 +5515,8 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
       <choose>
-      <when><test><and><or>
+      <when c="oaččut teavsttaid e-boastta bokte : teeksth e-påasteste åadtjoeh">
+      <test><and><or>
        <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
        <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
        <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_money"/></equal>
@@ -5614,7 +5615,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-    <rule comment="C[DST] n_cmp gen bokte_post" c="inessive and comitative/essive instead of pp with bokte"> 
+    <rule comment="C[DST] n_cmp gen bokte_post to case" c="Sámegiela stáhtus loktejuvvošii sámediggemearrádusa bokte : Saemiengïelen staatuse saemiedigkienænnoestahkine lutnjesåvva"> 
       <pattern>
         <pattern-item n="n_cmp"/>
         <pattern-item n="gen"/>
@@ -5681,7 +5682,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[DT] mod_n gen bokte_post" c="inessive and comitative/essive instead of pp with bokte"> 
+    <rule comment="C[DT] mod_n gen bokte_post to case" c="Sámegiela stáhtus loktejuvvošii nana giellaoahpahusa bokte : Saemiengïelen staatuse nænnoes gïeleööhpehtimmine lutnjesåvva"> 
       <pattern>
         <pattern-item n="mod_n"/>
         <pattern-item n="gen"/>
@@ -5745,7 +5746,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="C[DST] mod_n n-cmp gen bokte_post" c="inessive and comitative/essive instead of pp with bokte"> 
+    <rule comment="C[DST] mod_n n-cmp gen bokte_post to case" c="inessive and comitative/essive instead of pp with bokte"> 
       <pattern>
         <pattern-item n="mod_n"/>
         <pattern-item n="n_cmp"/>
