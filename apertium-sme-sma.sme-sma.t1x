@@ -2788,7 +2788,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="C[T] semdate" c="date to nominative"> 
+    <rule comment="C[T] semdate" c="Mun lean doppe 12.12.12 : Manne debpene 12.12.12"> 
       <pattern>
         <pattern-item n="semdate"/>
       </pattern>
@@ -3382,7 +3382,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule comment="C[T] nomact-com" c="nomact-com to inf">
+<!--   <rule comment="C[T] nomact-com" >
       <pattern>
         <pattern-item n="nomact_com"/>
       </pattern>
@@ -3406,7 +3406,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
    <rule comment="C[T] nomact_ill" c="oassálastit árvvoštallamii : mealtan vierhtiedalledh">
       <pattern>
@@ -3438,7 +3438,7 @@ And then there are some categories like "month", with all the months.
         </when>
      </choose>
         <out>
-          <chunk name="noun1" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@-FMAINV"/></tag>
@@ -3525,7 +3525,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-nomact-1Param"><with-param pos="3"/></call-macro>
     <let><clip pos="3" side="tl" part="tags"/><lit-tag v="vblex.der_passl.vblex.iv.indic.pres.p3.sg"/></let>
         <out>
-          <chunk name="noun2" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3604,7 +3604,7 @@ And then there are some categories like "month", with all the months.
     <let><clip pos="2" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
     <let><clip pos="1" side="tl" part="tags"/><lit-tag v="n.sg.acc"/></let>
         <out>
-          <chunk name="noun4" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3643,7 +3643,7 @@ And then there are some categories like "month", with all the months.
         </when>
        </choose>
         <out>
-          <chunk name="noun5" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3693,7 +3693,7 @@ And then there are some categories like "month", with all the months.
         </when>
      </choose>
         <out>
-          <chunk name="noun6" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3729,7 +3729,7 @@ And then there are some categories like "month", with all the months.
         </when>
      </choose>
         <out>
-          <chunk name="noun7" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3779,7 +3779,7 @@ And then there are some categories like "month", with all the months.
         </when>
      </choose>
         <out>
-          <chunk name="noun8" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3835,7 +3835,7 @@ And then there are some categories like "month", with all the months.
         </when>
      </choose>
         <out>
-          <chunk name="noun9" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -5343,7 +5343,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[LW] boahtit_vblex fápmui"> 
+    <rule comment="C[LW] boahtit_vblex fápmu_n_ill" c="Sámelága giellanjuolggadusat bohte fápmui dalle : Saemienlaaken gïelenjoelkedassh dellie aelkiejin juhtedh"> 
       <pattern>
         <pattern-item n="boahtit_vblex"/>
         <pattern-item n="fápmu_n_ill"/>
@@ -5987,7 +5987,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
      
-    <rule comment="C[A] nounpx" c="nounpx to ref + noun"> 
+    <rule comment="C[A] nounpx" c="mun válddán girján : manne jïjtjen gærjam vaaltam"> 
       <pattern>
         <pattern-item n="nounpx"/>
       </pattern>
@@ -6006,7 +6006,7 @@ And then there are some categories like "month", with all the months.
               <lit-tag v="prn.ref.gen"/>
               <var n="poss"/>
             </lu>
-            <b/>
+            <b pos="1"/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
