@@ -3886,7 +3886,7 @@ And then there are some categories like "month", with all the months.
          </when>
      </choose>
         <out>
-          <chunk name="6noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3926,7 +3926,7 @@ And then there are some categories like "month", with all the months.
          </when>
      </choose>
         <out>
-          <chunk name="7noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4302,7 +4302,7 @@ And then there are some categories like "month", with all the months.
          <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="attr-noun2" case="caseFirstword">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4336,7 +4336,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
-          <chunk name="attr-noun1" case="caseFirstword">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4409,7 +4409,7 @@ And then there are some categories like "month", with all the months.
           </when>
           </choose>
         <out>
-          <chunk name="attr-noun4" case="caseFirstword">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4549,7 +4549,7 @@ And then there are some categories like "month", with all the months.
           </choose>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>       
         <out>
-          <chunk name="nounnum1" case="caseFirstword">
+          <chunk name="nounnum" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4615,7 +4615,7 @@ And then there are some categories like "month", with all the months.
           </choose>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>       
         <out>
-          <chunk name="nounnum2" case="caseFirstword">
+          <chunk name="nounnum" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -5316,7 +5316,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[D] dattetge_maiddai_adv leat-main-fin dárbu_n"> 
+    <rule comment="C[D] dattetge_maiddai_adv leat-main-fin dárbu_n" c="dattetge lea dárbu dovddahit dan čielgasit : daerpies darhkan dam tjïelkeslaakan jiehtedh"> 
       <pattern>
         <pattern-item n="dattetge_maiddai_adv"/>
         <pattern-item n="leat_main_fin"/>
@@ -5368,7 +5368,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-   <rule comment="C[LT] noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub"> 
+   <rule comment="C[LT] noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub" c="rektor ja oahpaheaddji oaivvildeaba ahte : rektoren jïh lohkehtæjjan mïelen mietie"> 
       <pattern>
         <pattern-item n="noun_nom"/> 
          <pattern-item n="cnjcoo"/> 
@@ -5418,7 +5418,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-   <rule comment="C[LT] noun_nom oaivvildit_vblex ahte_cnjsub"> 
+   <rule comment="C[LT] noun_nom oaivvildit_vblex ahte_cnjsub" c="Sámediggeráđđi oaivvilda ahte : Saemiedigkieraerien mïelen mietie"> 
       <pattern>
         <pattern-item n="noun_nom"/>
         <pattern-item n="oaivvildit_vblex"/>
@@ -6714,7 +6714,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[ ] noun num_ldep">
+    <rule comment="C[ ] noun num_ldep" c="kapihtal 3:s lea : kapihtele 3:ste lea">
       <pattern>
         <pattern-item n="noun"/>
         <pattern-item n="num_ldep"/>
@@ -6729,7 +6729,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="noun-num" case="caseFirstword">
+          <chunk name="nounnum" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -6794,7 +6794,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="attr-noun3" case="caseFirstword">
+          <chunk name="attr-noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -6917,7 +6917,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] negverb">
+    <rule comment="C[T] negverb" c="in boađe odne : im daenbiejjien båetieh">
       <pattern>
         <pattern-item n="negverb"/>
       </pattern>
@@ -6950,7 +6950,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] conneg">
+    <rule comment="C[T] conneg" c="in boađe odne : im daenbiejjien båetieh">
       <pattern>
         <pattern-item n="conneg"/>
       </pattern>
@@ -7068,7 +7068,7 @@ And then there are some categories like "month", with all the months.
     </rule>  
 
 
-    <rule comment="C[T] leat_main_fin">
+    <rule comment="C[T] leat_main_fin" c="mun ledjen ruovttus : manne lim gåetesne">
       <pattern>
         <pattern-item n="leat_main_fin"/>
       </pattern>
@@ -7099,7 +7099,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] leat_main_infin">
+    <rule comment="C[T] leat_main_infin" c="mun lean leamaš ruovttus : manne orreme gåetesne">
       <pattern>
         <pattern-item n="leat_main_infin"/>
       </pattern>
@@ -7789,7 +7789,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[D] not_pcle adv">
+    <rule comment="C[D] not_pcle adv" c="sii válljejedje iešguđet ládje : dah joekehtslaakan veeljin">
       <pattern>
         <pattern-item n="not_pcle"/>
         <pattern-item n="adv"/>
@@ -7813,7 +7813,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-   <rule comment="C[ ] adv">
+   <rule comment="C[ ] adv" c="in boađe odne : im daenbiejjien båetieh">
       <pattern>
         <pattern-item n="adv"/>
       </pattern>
@@ -8198,7 +8198,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[ ] adv_go go-cnjsub">
+    <rule comment="C[ ] adv_go go-cnjsub" c="dalle go jorgala teavsttaid : dellie goh teeksth jarkoste">
       <pattern>
         <pattern-item n="adv_go"/>
         <pattern-item n="go_cnjsub"/>
