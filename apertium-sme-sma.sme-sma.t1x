@@ -2198,6 +2198,14 @@ And then there are some categories like "month", with all the months.
         <with-param pos="1"/>
       </call-macro>
       <choose>
+        <when c="Mun vuoján buriin biillain : Manne buerie bïjline vuajam">
+     <test><and>
+     <equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal>
+     <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
+     </and></test>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+         </when>
         <when>
           <test c="M[V_] case nmbr">
             <and>
@@ -6088,13 +6096,6 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
          </when>
-     <when c="Mun vuoján buriin biillain : Manne buerie bïjline vuajam">
-     <test>
-     <equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal>
-     </test>
-        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-         </when>
               </choose>  
               <choose>  
      <when c="sámi áššiide juolluduvvo unnit ruhta : saemien aamhtesidie vaenebh beetnegh laeviehtåvva">
@@ -6437,11 +6438,6 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
               <choose>  
-        <when  c="buorre vuoigatvuođalávdegoddi : buerie reaktanmoenehtse">
-        <test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
-        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-        </when>
       <when>
      <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -6493,10 +6489,6 @@ And then there are some categories like "month", with all the months.
           <with-param pos="4"/>
         </call-macro>
               <choose>  
-        <when><test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
-        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-        </when>
       <when>
      <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -6551,10 +6543,6 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
               <choose>  
-        <when><test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
-        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-        </when>
       <when>
      <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -6597,10 +6585,6 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
               <choose>  
-        <when><test><equal><clip pos="1" side="sl" part="lem"/><lit v="buorre"/></equal></test>
-        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-        </when>
       <when>
      <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -6657,10 +6641,6 @@ And then there are some categories like "month", with all the months.
           <with-param pos="4"/>
         </call-macro>
               <choose>  
-        <when><test><equal><clip pos="3" side="sl" part="lem"/><lit v="buorre"/></equal></test>
-        <let><clip pos="3" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-        </when>
       <when>
      <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
@@ -6716,10 +6696,6 @@ And then there are some categories like "month", with all the months.
           <with-param pos="4"/>
         </call-macro>
               <choose>  
-        <when><test><equal><clip pos="3" side="sl" part="lem"/><lit v="buorre"/></equal></test>
-        <let><clip pos="3" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-        </when>
       <when>
      <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
      <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
