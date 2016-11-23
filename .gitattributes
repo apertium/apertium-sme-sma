@@ -64,6 +64,7 @@ dev/oldscripts/generation-test.sh -text
 dev/oldscripts/test-prefix.sh -text
 dev/sme_bidix_sanity.sh -text
 dev/sme_synonyms.freq -text
+dev/sortedsanityoutput_withoutprop.txt -text
 dev/sorting_sanityoutput.sh -text
 dev/star-lemmas.txt -text
 dev/star-report.freq -text
