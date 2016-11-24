@@ -49,6 +49,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="post">
         <cat-item lemma="post" tags="PP.*"/>
     </def-cat>
+    <def-cat n="pr">
+        <cat-item lemma="pr" tags="PP.*"/>
+    </def-cat>
     <def-cat n="inftonoun">
         <cat-item lemma="inf" tags="SV.@N←"/>
     </def-cat>
@@ -130,6 +133,11 @@ And then there are some categories like "month", with all the months.
     <def-cat n="numcompl">
         <cat-item tags="*.@Num←"/>
         <cat-item tags="*.@Num←.*"/>
+    </def-cat>
+
+    <def-cat n="Pr_Compl">
+        <cat-item tags="NP.@P←.*"/>
+        <cat-item tags="NP.@P←"/>
     </def-cat>
 
     
@@ -713,6 +721,26 @@ And then there are some categories like "month", with all the months.
      <pattern>
        <pattern-item n="NP_Po"/>
        <pattern-item n="post"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="pp"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+     <rule comment="REGLA: pr Pr_Compl">
+     <pattern>
+       <pattern-item n="pr"/>
+       <pattern-item n="Pr_Compl"/>
      </pattern>
      <action>
        <out>

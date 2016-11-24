@@ -4302,7 +4302,7 @@ And then there are some categories like "month", with all the months.
          <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4336,7 +4336,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4369,7 +4369,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/> <with-param pos="2"/></call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4409,7 +4409,7 @@ And then there are some categories like "month", with all the months.
           </when>
           </choose>
         <out>
-          <chunk name="attr-noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4428,7 +4428,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T] numsg-acc-nom noun-nom-acc-gen" c="Mus lea okta guolli : Mov lea akte guelie. | Mun dohppen ovtta guoli : Manne aktem gueliem dïjpem"> 
+    <rule comment="C[T] numsg-acc-nom noun-nom-acc-gen" c="Mus lea okta guolli : Mov lea akte guelie. | Bussá borrá golbma guoli : Gaahtoe golme guelieh bårra"> 
       <pattern>
         <pattern-item n="numsg_acc_nom"/>
         <pattern-item n="noun_nom_acc_gen"/>
@@ -4488,7 +4488,7 @@ And then there are some categories like "month", with all the months.
           </choose>
        <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
        <out>
-          <chunk name="nounnum" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4549,7 +4549,7 @@ And then there are some categories like "month", with all the months.
           </choose>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>       
         <out>
-          <chunk name="nounnum" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -4615,7 +4615,7 @@ And then there are some categories like "month", with all the months.
           </choose>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>       
         <out>
-          <chunk name="nounnum" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -6055,7 +6055,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[LT] mod_n n_not_cmp" c="Sámedikki ráđđehussan : Saemiedigkien reerenassine">
+    <rule comment="C[LT] mod_n n_not_cmp" c="Sámedikki ráđđehussan : Saemiedigkien reerenassine | Mun vuvden girjjiid golmma olbmui : Manne gærjah golmen almetjasse doekim">
       <pattern>
         <pattern-item n="mod_n"/>
         <pattern-item n="n_not_cmp"/>
@@ -6173,7 +6173,7 @@ And then there are some categories like "month", with all the months.
         <or>
         <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
         <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+        <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
         </or>
         </and>
         </test>
@@ -6212,6 +6212,71 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[ST] n_cmp mod_n n_cmp n_not_cmp"  c="Sámediggi lea guhkit áiggi moaitán Stáhtavuvddiid eanahálddašemiid : Saemiedigkie guhkiem Staateskåaki eatnemereeremh laajhteme">
+      <pattern>
+        <pattern-item n="n_cmp"/>
+        <pattern-item n="mod_n"/>
+        <pattern-item n="n_cmp"/>
+        <pattern-item n="n_not_cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="2"/><with-param pos="4"/></call-macro>
+              <choose>  
+        <when><test><and>
+        <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+        <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
+        <or>
+        <equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+        <equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+        <equal><clip pos="4" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+        </or>
+        </and>
+        </test>
+        <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+        </when>
+        <when>
+        <test><and>
+        <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_time"/></equal>
+        <equal><clip pos="4" side="sl" part="lem"/><lit v="loahppa"/></equal>
+        </and></test>
+        <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+        </when>
+      <when>
+     <test><and><equal><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+     <equal><clip pos="4" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+          <let><clip pos="4" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+         </when>
+      </choose>  
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <mlu>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            </mlu>
+            <b pos="2"/>
+            <mlu>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+            </mlu>
           </chunk>
         </out>
       </action>
@@ -6729,7 +6794,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="2"/>
         </call-macro>
         <out>
-          <chunk name="nounnum" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -6794,7 +6859,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="3"/>
         </call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -7365,7 +7430,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
         <out>
-          <chunk name="attr-noun" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="@←SPRED"/></tag> 
@@ -7839,7 +7904,7 @@ And then there are some categories like "month", with all the months.
     <!-- SECTION: Adpositions -->
 
 
-    <rule comment="C[T] pr gen">
+    <rule comment="C[T] pr gen" c="Son orru doppe miehtá jagi : Dïhte debpene abpe jaepiem orre">
       <pattern>
         <pattern-item n="pr"/>
         <pattern-item n="gen"/>
