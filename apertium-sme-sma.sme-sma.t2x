@@ -446,7 +446,7 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-    <rule comment="REGLA: modn CNP NP_Obj" c="Sámediggeráđđi ádde ahte dáhpáhus lea maŋidan departemeantta ja ráđđehusa barggu. : Saemiedigkieraerie aervede ahte deahpadimmie departemeenten jïh reerenassen barkoem soejmehtamme."> 
+    <rule comment="REGLA: modN CNP Obj_l" c="Sámediggeráđđi ádde ahte dáhpáhus lea maŋidan departemeantta ja ráđđehusa barggu. : Saemiedigkieraerie aervede ahte deahpadimmie departemeenten jïh reerenassen barkoem soejmehtamme."> 
      <pattern>
        <pattern-item n="modN"/>
        <pattern-item n="CNP"/>
