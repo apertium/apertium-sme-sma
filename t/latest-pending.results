@@ -1,11 +1,15 @@
-Revision: 67491
+Revision: 74445
 AP_SRC1 (doesn't seem to be a repo)
 AP_SRC2 (doesn't seem to be a repo)
 Running Pending-tests with mode "sme-sma" with updated tests ...
 
+sme-sma	  Sámediggi lea guhkit áiggi moaitán Stáhtavuvddiid eanahálddašemiid, erenoamážit go sisabahkkemiid ii sáhte máhcahit dakkár guovlluin gos sámi vuoigatvuođat eai vel leat čielgasat.
+	- Saemiedigkie guhkiem staateskåaki eatnemereeremidie laajhteme, eeremes goh ij maehtieh "sisabahkkemiid" jarkahtidh dagkarinie dajvesne gogkoe saemien reaktah eah leah annje tjïelkes.
+	+ Saemiedigkie guhkiem Staateskåaki eatnemereeremh laajhteme, joekoenlaakan goh *sisabahkkemiid ij maehtieh dagkeres dajvine jarkahtidh gusnie eah saemien reaktah annje leah tjïelkes.
+
+
 sme-sma	  Son orru doppe miehtá jagi.
-	- Dïhte abpe jaepiem debpene orre.
-	+ Dïhte debpene orre abpe jaepien.
+WORKS	  Dïhte debpene abpe jaepiem orre.
 
 
 sme-sma	  Dat ii leat imaš.
@@ -13,312 +17,136 @@ sme-sma	  Dat ii leat imaš.
 	+ Dïhte ij leah rovnege.
 
 
-sme-sma	  Čuovo muhtin muora olles jagi.
-	- Dåeredh aktem moerem abpe jaepiem.
-	+ Dåeredh #muvhtie moerem dïeve jaepiem.
+sme-sma	  Sámediggeráđđi ádde ahte dáhpáhus lea maŋidan departemeantta ja ráđđehusa barggu.
+	- Saemiedigkieraerie aervede ahte deahpadimmie lea departemeenten jïh reerenassen barkoem soejmehtamme.
+	+ Saemiedigkieraerie aervede ahte deahpadimmie departemeentem jïh reerenassen barkoem soejmehtamme.
 
 
-sme-sma	  Bábir mii lea du čállingirjjis, lea álggus vuolgán muhtin muoras.
-	- Paehpere mij lea dov tjaelemegærjesne, aalkoevistie moere.
-	+ Paehpere mij lea dov tjaelemegærjesne, #aalkove #muvhtie moereste vualkeme.
+sme-sma	  Muhtun diliin lea várra váttis beassat eret das ahte boahtá sierralohpeohcan kulturmuitolága mearrádusain beassat jávkadit guoskevaš kulturmuittuid ovdalgo huksen álggahuvvo.
+	- Muvhtene tsiehkesne lea kaanne geerve dejtie bïesedh ahte båata sjïereluhpieohtsemen kultuvremojhteselaakem nænnoestahkijste bïesedh nåhkehtidh sjyöhtehke kultuvremojhtesidie aarebi bigkeme aelkiehtåvva.
+	+ Muvhtene tsiehkesne vaahra geerve destie destie åadtjodh ahte båata #sjïere#luhpieohtsemen kultuvremojhteselaaken nænnoestahkijste åadtjodh #sjyöhtehke kultuvremojhtesh aarebi nåhkehtidh bigkeme aelkiehtåvva.
 
 
-sme-sma	  Goahccemuoraiguin huksejit earret eará viesuid ja ráhkadit báhpára.
-	- Gåehtsuvemoerigujmie vuesiehtæmman gåetieh bigkieh jïh paehperem darjoeh.
-	+ Gåehtsuvemoerigujmie #gaskem jeatjah bigkieh gåetide jïh darjoeh paehperem.
-
-
-sme-sma	  Muhtin guovlluin leat muorat.
-	- Muvhtene dajvine leah moerh.
-	+ #Muvhtie dajvine leah moerh.
-
-
-sme-sma	  Muorat leat buot máilmmiosiin.
-	- Moerh leah gaajhkene vearteneboelhkine.
-	+ Moerh gaajhkine vearteneboelhkine leah.
-
-
-sme-sma	  Muhtun muoras lea olmmoš.
-	- Muvhtene moeresne lea almetje.
-	+ Muvhtine moeresne lea almetje.
-
-
-sme-sma	  Galle lanjas leat olbmot.
-	- Gellene tjiehtjelisnie leah almetjh.
-	+ Gellien tjïehtjelisnie leah almetjh.
-
-
-sme-sma	  Mun in boađe.
-	- Im båetieh.
-	+ Manne im båetieh.
-
-
-sme-sma	  Mun in boahtán.
-	- Idtjim båetieh.
-	+ Manne idtjim båetieh.
-
-
-sme-sma	  Mun in boađále.
-	- Im båetieh.
-	+ Manne im båetieh.
-
-
-sme-sma	  Mun in bođeš.
-	- Im båetieh.
-	+ Manne im båetieh.
+sme-sma	  Dat manná bures.
+	- Hijven gåarede.
+	+ Dïhte hijven gåarede.
 
 
 sme-sma	  Mun in goassege boađe.
-	- Im gåessie gænnah båetieh.
-	+ Im manne gossege båetieh.
+WORKS	  Im manne gåessie gænnah båetieh.
 
 
-sme-sma	  Álggus Ipmil sivdnidii almmi ja eatnama.
-	- Aalkovisnie Jupmele elmiem jïh eatnemem sjugniedi.
-	+ #Álgu Jupmele elmiem jïh eatnemem sjugniedi.
+sme-sma	  Paul Fjellheim lea riegádan 1931:s, ja lea bajásšaddan Fjellheim báikkis, dalá Praahke suohkanis, davábealde Rørosa, gos váhnemat barggaiga sihke boazodoaluin ja šibitdoaluin.
+	- Paul Fjellheim jaepien 1931 reakadamme, jïh lea byjjesovveme Fjellheim sijjesne, dæjpeladtje Praahken tjïeltesne, Plaasjen noerhtelen, gusnie eejtegh dovne båatsojne jïh spidtjeburriebarkojne barkigan.
+	+ Paul Fjellheim jaepien 1931 reakadamme, jïh Fjellheim sijjesne byjjesovveme, dæjpeladtje Praahken tjïeltesne, noerhtelen Plassjem, gusnie eejtegh barkigan dovne båatsojne jïh spidtjeburrine.
 
 
-sme-sma	  Eanan lei ávdin ja guorus.
-	- Eatneme lij aevries jïh gåaroes.
-	+ Eatneme lij aevrie jïh gåaroes.
-
-
-sme-sma	  Ipmil gohčodii čuovgga beaivin ja seavdnjadasa idjan.
-	- Jupmele tjoevkem biejjine gåhtjoeji jïh jemhkelem jïjjine.
-	+ Jupmele tjoevkem gåhtjoeji biejjine jïh jemhkelen jïjjine.
-
-
-sme-sma	  Ipmil gohčodii gomuvuođa albmin.
-	- Jupmele gåpmahtassem elmine gåhtjoeji.
-	+ Jupmele gåpmahtassem gåhtjoeji elmine.
-
-
-sme-sma	  Ipmil sivdnidii guokte stuorra čuovgga.
-	- Jupmele göökte stoerre tjoevkh sjugniedi.
-	+ Jupmele gööktem sjugniedi stoere tjoevkh.
-
-
-sme-sma	  eiseválddit.
-WORKS	  åejvieladtjh.
-
-
-sme-sma	  Mun in boahtán.
-	- Idtjim båetieh.
-	+ Manne idtjim båetieh.
+sme-sma	  Dan son lávii guldalit iđđedis gitta eahkedii, álo go ii lean skuvllas.
+	- Dam dïhte provhki aeriedistie öövre iehkiedasse goltelidh, iktesth goh ij lij skuvlesne.
+	+ Dam dïhte provhki aeriedistie öövre iehkiedasse goltelidh, iktesth goh idtji skuvlesne leah.
 
 
 sme-sma	  Mun muitalin nu ollu go vejolaš.
 	- Manne soptsestim dan jïjnjem guktie buektiehtim.
-	+ Manne bïeljelim nimhtie jeenjem goh gåarede.
+	+ Manne soptsestim dan jïjnjem goh gåaradi.
 
 
-sme-sma	  ii leat vejolaš geavahit giela árgabeaivvis.
-	- ij gåaredh gïelem aarkebiejjien nåhtadidh.
-	+ ij leah gåaredh nuhtjedh gïelem aarkebiejjesne.
+sme-sma	  Ii leat vejolaš geavahit giela árgabeaivvis.
+	- Ij gåaredh gïelem aarkebiejjiem utnedh.
+	+ Ij gåaredh gïelem aarkebiejjien utnedh.
 
 
-sme-sma	  Ruovttosiiddu bokte lea vejolaš sihke árvalit áššiid.
-	- Nedtesijjie nuepiem vadta aamhtesidie vierhtiestidh.
-	+ Hïejmesæjroen baaktoe gåarede dovne nåalodh aamhtesidie.
+sme-sma	  Ruovttosiiddu bokte lea vejolaš árvalit áššiid.
+	- Nehtebielien baaktoe lea nuepie aamhtesidie vierhtiestidh.
+	+ Nehtebieline gåarede aamhtesh nåalodh.
 
 
-sme-sma	  daid galget almmolaš eiseválddit geavahit, oktan vejolaš dárogiel namain.
-	- dejtie byjjes åajvaladtjh edtjieh åtnose vaeltedh, kaanne nöörjen nommine ektine.
-	+ dejtie edtjieh byjjes åejvieladtjh nuhtjedh, oktegh kaanne daaroengïelen nommine.
+sme-sma	  Daid galget almmolaš eiseválddit geavahit, oktan vejolaš dárogiel namain.
+	- Dejtie edtjieh byjjes åajvaladtjh åtnose vaeltedh, kaanne daaroengïeleh nommine ektine.
+	+ Dejtie edtjieh byjjes åejvieladtjh utnedh, oktegh #nupies #daaroengïeleh nommine.
 
 
-sme-sma	  Diet orru leamen somá.
-WORKS	  Doete luste vååjnoe.
+sme-sma	  Jus ii leat vejolaš.
+WORKS	  Jis ij gåaredh.
 
 
-sme-sma	  Mus lea cissaheahti.
-	- Manne gadtj´sisnie.
-	+ Mannesne lea *cissaheahti.
+sme-sma	  Dan ášši ferte maiddá leat vejolaš loktet dálá Norgga ráđđehussii.
+	- Dam aamhtesem gåarede aaj daaletje Nöörjen reerenassese lutnjedh.
+	+ Dam aamhtesem tjoevere aaj årrodh gåaredh daaletje Nöörjen reerenassese lutnjedh.
 
 
-sme-sma	  Mus lea baikaheahti.
-	- Manne paak´sisnie.
-	+ Mannesne lea *baikaheahti.
+sme-sma	  Orui amas, ahte son ii diehtán makkár máilbmi dál lei stobu olggobealde.
+	- Ammeslaakan govloe, idtji daejrieh magkeres eatneme daelie lij ståapoen ålkolen.
+	+ Vååjni ammes, ahte idtji dïhte daejrieh magkeres eatneme daelie lij ståapoen ålkolen.
 
 
-sme-sma	  NOM: Okta guolli.
-	- akte guelie.
-	+ *NOM: Akte guelie.
+sme-sma	  Buot dan 9 suohkanis orrot sápmelaččat.
+	- Gaajhkene dejnie 9 tjïeltine saemieh årroeh.
+	+ Gaajhkine dejnie 9 tjïeltine saemieh årroeh.
 
 
-sme-sma	  ACK: Ovtta guoli.
-	- aktem gueliem.
-	+ *ACK: Akten guelien.
+sme-sma	  Sámediggeráđđi lea 2013 bušeahtas evttohan ahte ..
+	- Saemiedigkieraerie jaepien 2013 budsjehtesne uvtedamme ahte ..
+	+ Saemiedigkieraerie jaepien 2013 beetnehsoejkesjisnie uvtedamme ahte ..
 
 
-sme-sma	  GEN: Ovtta guoli.
-	- akten guelien.
-	+ *GEN: Akten guelien.
+sme-sma	  Permišuvnnat olles dievasčoahkkimis.
+	- Permisjovnh abpe dïevestjåanghkoste.
+	+ Permisjovnh abpe dïevestjåanghkosne.
 
 
-sme-sma	  ILL: Ovtta guollái.
-	- akten gualan.
-	+ ILLEN Akten gualan.
+sme-sma	  35 ášši dáin leat doarjjaáššit.
+WORKS	  35 aamhtesh daejnie leah dåarjoeaamhtesh.
 
 
-sme-sma	  INE: Ovtta guolis.
-	- aktene guelesne.
-	+ INE: Aktene guelesne.
+sme-sma	  Dalle go mii oruime doppe.
+	- Dellie goh mijjieh debpene limh årroeminie.
+	+ Dellie goh mijjieh debpene årroejimen.
 
 
-sme-sma	  ELA: Ovtta guolis.
-	- aktede gueleste.
-	+ ELEM: Aktene guelesne.
+sme-sma	  Sámi bustávat iešguđetge diehtobásain bohciidahttet hástalusaid earret eará sámi báikenamaid registreremiin.
+	- Saemien bokstaavh ovmessie daatabaasine haestemh bihtsegehtieh gaskem jeatjah gosse edtja saemien sijjienommh vïhtesjadtedh.
+	+ Saemien bokstaavh ovmessie daatabaasine haestemh gaskem jeatjah saemien sijjienommi registreereminie bïhtsegehtieh.
 
 
-sme-sma	  COM: Ovttain guliin.
-	- aktine gueline.
-	+ *COM: Aktine gueline.
+sme-sma	  Ovtta gaskka barggai son dieđalašveahkkebargin šibitdoavtterallaskuvllas ja 1976 rájis lei son guovllušibitdoavttir Rørosas gitta manai ealáhahkii.
+	- Aktem gaskem dïhte daajroeviehkiebarkijinie barki veterinærjïlleskuvlesne jïh jaepien 1976 raejeste dïhte dajvenveterinæære Plassjesne öövre gosk voeresbaalhkam dåastoeji.
+	+ Akte gåhkaldahkh dïhte daajroenviehkiebarkijinie barki veterinærjïlleskuvlesne jïh 1976 raejeste lij dïhte dajvenveterinæære Plassjesne öövre gåatoemasse mïnni.
 
 
-sme-sma	  ESS: Ovttain guollin.
-	- aktine gueline.
-	+ *ESS: Aktine gueline.
+sme-sma	  Ii oktage máhte nu bures muitalit boazodoalloskuvlla álggaheami birra go Paul Fjellheim.
+	- Ij guhte gænnah maehtieh dan hijvenlaakan soptsestidh båatsoeburrieskuvlen aelkiehtimmien bïjre goh Paul Fjellheim.
+	+ Ij akte gænnah maehtieh dan hijven båatsoeburrieskuvlem aelkiehtimmien bïjre soptsestidh goh Paul Fjellheim.
 
 
-sme-sma	  NOM: guokte guoli.
-	- göökte guelieh.
-	+ *NOM: gööktem guelieh.
+sme-sma	  Muhtun suohkanat geavahit olu ruđa bálvalit álbmoga sámegillii.
+	- Muvhth tjïelth jïjnjh beetnegh nuhtjieh, åålmegem saemiengïelesne hoksehtidh.
+	+ Muvhth tjïelth jïjnje beetnegem hoksehtidh utnieh åålmegem saemiengïelese.
 
 
-sme-sma	  ACK: guokte guoli.
-	- dejtie göökte guelide.
-	+ *ACK: gööktem guelieh.
+sme-sma	  Mii leat vuolgán su lusa su ruktui Rørosii oažžun dihte su muitalit skuvlla álggaheami birra ja vuosttaš skuvlajagi diliid birra.
+	- Mijjieh vualkeme dan gåajkoe dan gåatan Plassjese åadtjodh dam soptsestidh skuvlen aelkiehtimmien bïjre jïh voestes skuvlejaepien tsiehkiej bïjre.
+	+ Mijjieh dan gåajkoe dan gåatan Plassjese åadtjomen dïehre vualkeme dam skuvlem aelkiehtimmien bïjre soptsestidh jïh voestes skuvlejaepien tsiehkiej bïjre.
 
 
-sme-sma	  GEN: guovtti guoli.
-	- guektien guelien.
-	+ *GEN: göökten guelien.
+sme-sma	  Dađistaga go viiddui skuvlavázzinbággu, de gárttai mánáide ja nuoraide unnit ja unnit áigi oahppat praktihkalaš boazodoalu ruovttus.
+	- Ånnetji goh skuvledïedte væjrani, dellie maanide jïh noeride unnie-unnebe tïjjem sjïdti praktihkeles båatsoem gåetesne lïeredh.
+	+ Daamtaj goh skuvledïedte væjrani, dellie maanide jïh noeride sjïdti #onne-unnebe jïh unnebe tïjje praktihkeles båatsoem gåetesne lïeredh.
 
 
-sme-sma	  ILL: guovtti guollái.
-	- guektien gualan.
-	+ ILLEN göökten gualan.
+sme-sma	  Nu šattai stuorit dárbu dasa ahte skuvllain álget oahpahit boazodoalu birra.
+	- Nimhtie stoerebe daerpiesvoete dïsse sjïdti, ahte skuvline aelkieh båatsoen bïjre ööhpehtidh.
+	+ Dan sjïdti stuerebe daerpies dïsse ahte skuvline aelkieh båatsoen bïjre ööhpehtidh.
 
 
-sme-sma	  INE: guovtti guolis.
-	- .gööktene guelesne.
-	+ INE: gööktene guelesne.
+sme-sma	  Seammás bohte eanet ja eanet gáibádusat dasa ahte boazosápmelaš galggai dovdat lágaid, máhttit doaimmahit rehketdoalu ja eará báberbargguid ja dan ahte máhtii organiseret ealu nu ahte oažžu eanemus ávkki das.
+	- Seamma tïjjen jeenje-jeenjebe krïevenassh böötin dïsse ahte båatsoesaemie edtji dabtedh laakide, maehtedh dijpedh ryöknemem jïh jeatjah paehperebarkojde jïh dam ahte maehtedh öörnedh stuhtjem nimhtie ahte åådtje jeenemes nåhtoem destie.
+	+ Seammasïenten #jeenje-jeenjebe krïevenassh dïsse båetiejin ahte båatsoesaemie edtji laakh dabtedh, maehtiejibie ryöknemem jïh jeatjah paehperebarkoeh utnedh jïh dam ahte maehtieji krievviem dan öörnedh ahte jeenjemes nåhtoem destie åådtje.
 
 
-sme-sma	  ELA: guovtti guolis.
-	- gööktede gueleste.
-	+ ELEM: gööktene guelesne.
+sme-sma	  Álggos lei son njunnožis oažžut skuvlla álggahuvvot, maŋŋil šattai son skuvlla vuosttaš váldooahpaheaddjin.
+	- Aalkoelisnie lij dïhte njueniehkisnie åadtjodh skuvlem aelkiehtovvedh, mænngan dïhte skuvlen voestes åejvielohkehtæjjine sjïdti.
+	+ Aalkoelisnie dïhte lij njueniehkisnie åadtjodh skuvlem aelkiehtovvedh, mænngan dïhte skuvlen voestes åejvielohkehtæjjine sjïdti.
 
 
-sme-sma	  COM: guvttiin guliin.
-	- gööktine gueline.
-	+ *COM: gööktine gueline.
-
-
-sme-sma	  ESS: guoktin guollin.
-	- gööktine gueline.
-	+ *ESS: gööktine gueline.
-
-
-sme-sma	  NOM: golbma guoli.
-	- dah golme guelieh. / Men burde det være dette, (OHM): golme guelieh.
-	+ *NOM: golmem guelieh.
-
-
-sme-sma	  ACK: golbma guoli.
-	- dejtie golme guelide. /Men burde det være dette(OHM): golme guelieh.
-	+ *ACK: golmem guelieh.
-
-
-sme-sma	  GEN: golmma guoli.
-	- dej golme gueliej. / Men burde det være dette(OHM): guelmien guelien, golmen guelien.
-	+ *GEN: golmen guelien.
-
-
-sme-sma	  ILL: golmma guollái.
-	- dejtie golme guelide. / Men burde det være dette(OHM): guelmien gualan, golmen gualan.
-	+ ILLEN golmen gualan.
-
-
-sme-sma	  INE: golmma guolis.
-	- . dejnie golme gueline / Men burde det være dette(OHM): golmene guelesne ( kilde på dette: "golmene gåetesne").
-	+ INE: golmene guelesne.
-
-
-sme-sma	  ELA: golmma guolis.
-	- dejstie golme gueliste. /Men burde det være dette(OHM): golmede gueleste.
-	+ ELEM: golmene guelesne.
-
-
-sme-sma	  COM: golmmain guliin.
-	- dejnie golme gueline. / Men burde det være dette(OHM): golmine gueline.
-	+ *COM: golmine gueline.
-
-
-sme-sma	  ESS: golbman guollin.
-	- dejnie gööktine gueline. / Men burde det være dette(OHM): golmine gueline.
-	+ *ESS: golmine gueline.
-
-
-sme-sma	  INE: àhčči lei 7 jagi.
-	- . Bergsland: Dellie goh aehtjie lij tjijhtjene jaepesne.
-	+ INE: *àhčči lij 7:n jaepien.
-
-
-sme-sma	  ILL: golmma olbmui.
-	- golme almetjidie.
-	+ ILLEN golmen almetjasse.
-
-
-sme-sma	  ILL: Sápmelaččat orrot njealji riikkas.
-	- Saemieh njieljene rïjhkesne årroeh/årroeminie.
-	+ ILLEN Saemieh årroeh njieljene rïjhkesne.
-
-
-sme-sma	  ILL: Sápmelaččat orrot njealji riikkas.
-	- Saemieh njielje rïjhkine årroeh/årroeminie.
-	+ ILLEN Saemieh årroeh njieljene rïjhkesne.
-
-
-sme-sma	  ILL: Sámediggeráđđi lea 2013 bušeahtas evttohan ahte.
-	- Saemiedigkieraerie 2013:n budsjehtesne raeriestamme.
-	+ ILLEN Saemiedigkieraerie lea @2013 budsjehtesne uvtedamme ahte.
-
-
-sme-sma	  ILL: Sámegiela hálddašanguovllus leat dál 9 suohkana..
-	- Saemiengïeleh reeremedajvh leah daelie 9 tjïelth.
-	+ ILLEN Saemiengïelen reeremedajvesne daelie leah 9 tjïelth..
-
-
-sme-sma	  ILL: Buot dan 9 suohkanis orrot sápmelaččat.
-	- Gaajhkene dejnie 9 tjïeltine saemieh årroeminie.
-	+ ILLEN Gaajhke dennie #9 tjïeltesne årroeh saemieh.
-
-
-sme-sma	  ILL: Olbmot fárrejit 9 suohkanii.
-	- Almetjh 9:ien tjïeltese juhtieh.
-	+ ILLEN Almetjh juhtieh #9 tjïeltese.
-
-
-sme-sma	  ILL: Sámediggi árvvoštallá 9 suohkana.
-	- Saemiedigkie 9 tjïelth raereste.
-	+ ILLEN Saemiedigkie 9:m laajhta tjïelth.
-
-
-sme-sma	  ILL: Bođii ovddal mu.
-	- "Åvteli mannem bööti" eller "Mov åvteli bööti" (om tid).
-	+ ILLEN aarebi Bööti mov.
-
-
-sme-sma	  ILL: Bođii mu maŋis.
-	- Mov minngesne bööti (etter i posisjon).
-	+ ILLEN mov duekesne Bööti.
-
-
-sme-sma	  
-	- <li> (sme).
-	+ 
-
-
-2 / 64, 3.12%
+4 / 30, 13.33%

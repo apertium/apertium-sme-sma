@@ -1,10 +1,74 @@
-Revision: 67491
+Revision: 74445
 AP_SRC1 (doesn't seem to be a repo)
 AP_SRC2 (doesn't seem to be a repo)
 Running Regression-tests with mode "sme-sma" with updated tests ...
 
-sme-sma	  Ja Ipmil oinnii ahte dat lei buorre.
-WORKS	  Jïh Jupmele vööjni dïhte lij hijven.
+sme-sma	  Mun čálán girjji.
+WORKS	  Manne gærjam tjaalam.
+
+
+sme-sma	  Odne čálán dálu birra.
+WORKS	  Daenbiejjien gåetien bïjre tjaalam.
+
+
+sme-sma	  Odne lean čállán girjji.
+WORKS	  Daenbiejjien gærjam tjaaleme.
+
+
+sme-sma	  Álggus Ipmil sivdnidii almmi ja eatnama.
+WORKS	  Aalkoevisnie Jupmele elmiem jïh eatnemem sjugniedi.
+
+
+sme-sma	  Ipmil gohčodii čuovgga beaivin ja seavdnjadasa idjan.
+WORKS	  Jupmele tjoevkem biejjine gåhtjoeji jïh jemhkelem jïjjine.
+
+
+sme-sma	  Ipmil gohčodii gomuvuođa albmin.
+WORKS	  Jupmele gåpmahtassem elmine gåhtjoeji.
+
+
+sme-sma	  Ráđđi doaibmá Sámedikki ráđđehussan.
+WORKS	  Raerie Saemiedigkien reerenassine jåhta.
+
+
+sme-sma	  Son bođii mu maŋis.
+WORKS	  Dïhte mov mïnngesne båetieji.
+
+
+sme-sma	  Goahccemuoraiguin huksejit viesuid ja ráhkadit báhpára.
+WORKS	  Gåehtsuvemoerigujmie gåetieh bigkieh jïh paehperem darjoeh.
+
+
+sme-sma	  Goahccemuoraiguin huksejit earret eará viesuid ja ráhkadit báhpára.
+WORKS	  Gåehtsuvemoerigujmie gaskem jeatjah gåetieh bigkieh jïh paehperem darjoeh.
+
+
+sme-sma	  Sámi giellaguovddážiid evalueren galgá čájehit movt giellaguovddážat leat organiserejuvvon ja movt dat devdet Sámedikki mihttomeriid.
+WORKS	  Saemien gïelejarngi vuarjasjimmie edtja vuesiehtidh guktie gïelejarngh öörnesovveme jïh guktie dah Saemiedigkien ulmieh dievhtieh.
+
+
+sme-sma	  Dievasčoahkkinjođihangotti árvalus mearriduvvui ovttajienalaččat.
+WORKS	  Dïevestjåanghkoejuhtiehtimmiemoenehtsen åssjele aktenraeresne nænnoestovvi.
+
+
+sme-sma	  Mun orun ruovttus.
+WORKS	  Manne gåetesne årroem.
+
+
+sme-sma	  Mun in boahtán.
+WORKS	  Idtjim manne båetieh.
+
+
+sme-sma	  Mun in boađe.
+WORKS	  Im manne båetieh.
+
+
+sme-sma	  Mun in boađále.
+WORKS	  Im manne båetieh.
+
+
+sme-sma	  Mun in bođeš.
+WORKS	  Im manne båetieh.
 
 
 sme-sma	  ii leat ieš sápmelaš.
@@ -20,29 +84,88 @@ WORKS	  Dïhte buerie bïjle.
 
 
 sme-sma	  Mun vuoján buriin biillain.
-	- Manne buerie bïjline vuajam.
-	+ Manne vuajam buerie bïjline.
+WORKS	  Manne buerie bïjline vuajam.
 
 
 sme-sma	  Mun oainnán buori biilla.
-	- Manne buerie bïjlem vuajnam.
-	+ Manne vuajnam buerie bïjlem.
+WORKS	  Manne buerie bïjlem vuajnam.
 
 
-sme-sma	  Áhčči lea ruovttus.
-WORKS	  Aehtjie gåetesne.
+sme-sma	  Čuovo muhtin muora olles jagi.
+WORKS	  Dåeredh muvhtem moerem abpe jaepiem.
+
+
+sme-sma	  Muhtin guovlluin leat muorat.
+WORKS	  Muvhtene dajvesne leah moerh.
+
+
+sme-sma	  Muorat leat buot máilmmiosiin.
+	- Moerh gaajhkene vearteneboelhkesne.
+	+ Moerh gaajhkene eatnemeboelhkesne.
+
+
+sme-sma	  Muhtun muoras lea olmmoš.
+WORKS	  Muvhtene moeresne lea almetje.
+
+
+sme-sma	  Galli lanjas leat olbmot?
+WORKS	  Gelline tjïehtjelisnie leah almetjh?
 
 
 sme-sma	  Mus leat guokte láibbi.
 WORKS	  Mov leah göökte laejpieh.
 
 
-sme-sma	  Dat lea máná biila.
-WORKS	  Dïhte maanan bïjle.
+sme-sma	  Válden golmma guoli meađđemiid.
+WORKS	  Golmen guelien mietenh vaeltiejim.
 
 
-sme-sma	  Mus lea beana.
-WORKS	  Mov lea bïenje.
+sme-sma	  Mun darvvihin GPS golmma guollái.
+WORKS	  Manne GPS:m golmen gualan dibrehtim.
+
+
+sme-sma	  Mun válden guokte guoli mielde.
+WORKS	  Manne göökte guelieh mealtan vaeltiejim.
+
+
+sme-sma	  Bussá borrá golbma guoli.
+WORKS	  Gaahtoe golme guelieh bårra.
+
+
+sme-sma	  Ipmil sivdnidii guokte stuorra čuovgga.
+WORKS	  Jupmele göökte stoere tjoevkh sjugniedi.
+
+
+sme-sma	  Mun vuvden girjjiid golmma olbmui.
+WORKS	  Manne gærjah golmen almetjasse doekim.
+
+
+sme-sma	  Sámediggi árvvoštallá 9 suohkana.
+WORKS	  Saemiedigkie 9 tjïelth vierhtiedalla.
+
+
+sme-sma	  Attán dan guovtti guollái.
+WORKS	  Dejtie göökte guelide vadtam.
+
+
+sme-sma	  Mun darvvihan GPS dán golmma guollái.
+WORKS	  Manne GPS:m daejtie golme guelide dibrehtem.
+
+
+sme-sma	  Dán golmma guolis leat meađđemat.
+WORKS	  Daejnie golme gueline leah mietenh.
+
+
+sme-sma	  Mun válddán iskosa dán golmma guolis.
+WORKS	  Manne pryövenassem daejstie golme guelijste vaaltam.
+
+
+sme-sma	  Mun boađán dainna golmmain guliin.
+WORKS	  Manne dej golme gueliejgujmie båatam.
+
+
+sme-sma	  Mun válddán dán golmma guoli meađđemiid.
+WORKS	  Manne daaj golme gueliej mietienidie vaaltam.
 
 
 sme-sma	  Mus lea beana.
@@ -54,15 +177,15 @@ WORKS	  Manne bårrestovvem.
 
 
 sme-sma	  Mis lea borranmiella.
-WORKS	  Mijjieh bårrestovvebe.
+WORKS	  Mijjieh bårrestovvijibie.
 
 
 sme-sma	  Mus lea goiku.
 WORKS	  Manne gåjhkelovvem.
 
 
-sme-sma	  Mun muitalin nu ollu go vejolaš.
-WORKS	  Manne bïeljelim nimhtie jeenjem goh gåarede.
+sme-sma	  Áhčči lea ruovttus.
+WORKS	  Aehtjie gåetesne.
 
 
 sme-sma	  Mun lean studeanta.
@@ -73,10 +196,6 @@ sme-sma	  Dat lea fiskes biila.
 WORKS	  Dïhte viskes bïjle.
 
 
-sme-sma	  Goas don lihkat?
-WORKS	  Gåessie datne tjuedtjelh?
-
-
 sme-sma	  Goas lihkat?
 WORKS	  Gåessie tjuedtjelh?
 
@@ -85,34 +204,206 @@ sme-sma	  Galggango riŋget?
 WORKS	  Edtjem ringkedh?
 
 
-sme-sma	  Politihkka lea don ja mun.
-	- Politihke lea datne jïh manne.
-	+ Politihke datne jïh manne.
+sme-sma	  Mánáidskuvlla son váccii Praahkes, reálaskuvlla Rørosas, landsgymnása Orkdaeles ja šibitdoavtterallaskuvlla Oslos.
+WORKS	  Maanaskuvlem dïhte Praahkesne vaedtsieji, realskuvlem Plassjesne, landsgymnaasem Orkdaelesne jïh veterinærjïlleskuvlem Oslovisnie.
 
 
-sme-sma	  Válga ja jienastuslohku.
-WORKS	  Veeljeme jïh veeljemelåhkoe.
+sme-sma	  Ášši DC 002/12.
+WORKS	  Aamhtese DC 002/12.
 
 
-sme-sma	  Sámedikki birra.
-WORKS	  Saemiedigkien bïjre.
+sme-sma	  Paul Fjellheim lea riegádan 1931:s.
+WORKS	  Paul Fjellheim jaepien 1931 reakadamme.
 
 
-sme-sma	  Hotealla eaiggát.
-WORKS	  Hotellen aajhtere.
+sme-sma	  Jagis 2001 nammaduvvui son mielláhttun Sámi vuoigatvuođalávdegoddái.
+WORKS	  Jaepien 2001 dïhte lïhtseginie Saemien reaktanmoenehtsasse nommehtovvi.
 
 
-sme-sma	  Mun čálán girjji.
-WORKS	  Manne gærjam tjaalam.
+sme-sma	  Mus lea okta guolli.
+WORKS	  Mov lea akte guelie.
 
 
-sme-sma	  Odne čálán dálu birra.
-WORKS	  Daenbiejjien gåetien bïjre tjaalam.
+sme-sma	  Mun dohppen ovtta guoli.
+WORKS	  Manne aktem gueliem dïjpem.
 
 
-sme-sma	  Odne lean čállán girjji.
-	- Daenbiejjien gærjam tjaaleme.
-	+ Daenbiejjien tjaaleme gærjam.
+sme-sma	  Diet leat ovtta guoli meađđemat.
+WORKS	  Doeh akten guelien mietenh.
 
 
-23 / 27, 85.19%
+sme-sma	  Dan adden ovtta guollái.
+WORKS	  Dam akten gualan vedtiejim.
+
+
+sme-sma	  Ovtta guolis lei dielku.
+WORKS	  Aktene guelesne lij flïehke.
+
+
+sme-sma	  Dat bođii ovtta guolis.
+WORKS	  Dïhte aktede gueleste båetieji.
+
+
+sme-sma	  Áhkku bođii ovttain guliin.
+WORKS	  Aahka aktine gueline båetieji.
+
+
+sme-sma	  Dát rehkenastojuvvo oktan guollin.
+WORKS	  Daate aktine gueline ryöknesåvva.
+
+
+sme-sma	  Válden iskosa guovtti guolis.
+WORKS	  Pryövenassem gööktede gueleste vaeltiejim.
+
+
+sme-sma	  Dát golbma guoli leat buoremusat.
+WORKS	  Daah golme guelieh bööremes.
+
+
+sme-sma	  Mun válddán dán golbma guoli.
+WORKS	  Manne daejtie golme guelide vaaltam.
+
+
+sme-sma	  II Evttohusat ja mearkkašumit.
+WORKS	  II Uvtelassh jïh mïerhkesjimmieh.
+
+
+sme-sma	  Dát leat guovtti guoli meađđemat.
+WORKS	  Daah göökten guelien mietenh.
+
+
+sme-sma	  Guovtti guolis ledje dákkárat.
+WORKS	  Gööktene guelesne lin dagkerh.
+
+
+sme-sma	  Áhkku bođii golmmain guliin.
+WORKS	  Aahka golmine gueline båetieji.
+
+
+sme-sma	  Diet rehkenastojuvvo golbman guollin.
+WORKS	  Doete golmine gueline ryöknesåvva.
+
+
+sme-sma	  Áhkku bođii guvttiin guliin.
+WORKS	  Aahka gööktine gueline båetieji.
+
+
+sme-sma	  Diet rehkenastojuvvo guoktin guollin.
+WORKS	  Doete gööktine gueline ryöknesåvva.
+
+
+sme-sma	  Jávrris leat golbma guoli.
+WORKS	  Jaevresne leah golme guelieh.
+
+
+sme-sma	  Golmma guolis ledje meađđemat.
+WORKS	  Golmene guelesne lin mietenh.
+
+
+sme-sma	  Dalle go áhčči lei čieža jagi.
+WORKS	  Dellie goh aehtjie lij tjïjhtje jaepieh.
+
+
+sme-sma	  Sápmelaččat orrot njealji riikkas.
+WORKS	  Saemieh njieljene rïjhkesne årroeh.
+
+
+sme-sma	  Sámegiela hálddašanguovllus leat dál 9 suohkana.
+WORKS	  Saemiengïelen reeremedajvesne leah daelie 9 tjïelth.
+
+
+sme-sma	  Olbmot fárrejit 9 suohkanii.
+WORKS	  Almetjh 9 tjïeltese juhtieh.
+
+
+sme-sma	  Sámediggeráđđi lea dán áigodagas doallan 7 čoahkkima ja lea meannudan 68 ášši.
+WORKS	  Saemiedigkieraerie daennie boelhkesne 7 tjåanghkoeh åtneme jïh 68 aamhtesh gïetedamme.
+
+
+sme-sma	  Gitta jagi 2007 rájes lea Sámediggeráđđi árjjalaččat bargan dan ala ahte sámi mánát geat leat mánáidsuodjalusa fuolahusas, galget oažžut vuoigatvuođaid sin kultuvrii, ja galget beassat hállat sin giela.
+WORKS	  Öövre jaepien 2007 raejeste saemiedigkieraerie eadtjohkelaakan dejnie barkeme ahte saemien maanah gïeh maanavaarjelimmien hoksesne, edtjieh reaktah sijjen kultuvrese åadtjodh, jïh edtjieh åadtjodh sijjen gïelem soptsestidh.
+
+
+sme-sma	  Dattetge lea dárbu dovddahit dan čielgasit láhkaásahusain mat gusket mánáid bearráigeahččamii biebmoruovttuin ja mánáidsuodjalanásahusain, cealká Sámediggeráđi lahttu Ellinor Marita Jåma.
+	- Daerpies darhkan dam tjïelkeslaakan jiehtedh laakenjoelkedassine mah maanaj vuartasjimmiem beapmoegåetine jïh maanajvaarjelimmieinstitusjovnine dijpieh, saemiedigkieraerien lïhtsege Ellinor Marita Jåma jeahta.
+	+ Daerpies darhkan dam tjïelkeslaakan jiehtedh laakenjoelkedassine mah maanaj vuartasjimmiem jieliehtimmiegåetine jïh maanajvaarjelimmieinstitusjovnine dijpieh, saemiedigkieraerien lïhtsege Ellinor Marita Jåma jeahta.
+
+
+sme-sma	  Don galggat leat mielde ráhkadeamen buori bargobirrasa ja buriid bargodiliid.
+WORKS	  Datne galkh mealtan årrodh buerie barkoebyjresem jïh buerie barkoetsiehkieh darjodh.
+
+
+sme-sma	  Lea vejolaš addit stipeandda sihke joatkkaskuvlla ohppiide, ja allaskuvlla ja universiteahta studeanttaide.
+WORKS	  Gåarede stipeendem vedtedh dovne jåarhkeskuvlen learoehkidie, jïh jïlleskuvlen jïh universiteeten studeentide.
+
+
+sme-sma	  Buohkaide geat máhttet sámegiela, lea stuora árvu beassat sámástit nu olu oktavuođain go vejolaš.
+WORKS	  Gaajhkesidie gïeh saemiengïelem maehtieh, stoere aarvoe åadtjodh saemiestidh dan jïjnjem goh gåarede.
+
+
+sme-sma	  Sámegiela geavaheddjiidlogu lassáneapmi lea dan duohken ahte lea vejolaš geavahit sámegiela buot servodatsurggiin ja buot oktavuođain.
+WORKS	  Saemiengïelen utnejilåhkoen læssanimmie båata destie ahte gåarede saemiengïelem gaajhkene siebredhsuerkesne jïh gaajhkene lehkesne utnedh.
+
+
+sme-sma	  Sámediggeráđđi oaivvilda ahte mánnái lea buoremus maiddái sin kultuvrralaš ja gielalaš identitehta goziheapmi.
+	- Saemiedigkieraerien mïelen mietie maanese bööremes aaj sijjen kulturelle jïh gïeleh identiteetem geehtedidh.
+	+ Saemiedigkieraerien mïelen mietie maanese bööremes aaj sijjen kulturelle jïh #gïeleh identiteetem geehtedidh.
+
+
+sme-sma	  Dát rievdadusat bohtet fápmui miessemánu 1. b. 2012 .
+WORKS	  Daah jorkestimmieh suehpeden 1. b. 2012 aelkieh juhtedh .
+
+
+sme-sma	  Diet orru leamen somá.
+WORKS	  Doete luste vååjnoe.
+
+
+sme-sma	  Mus lea oaivi bávččas.
+WORKS	  Mov åejjieh saejriedieh.
+
+
+sme-sma	  Suohkaniin lea mearridanváldi earret eará almmolaš čujuhusaid dáfus.
+WORKS	  Tjïelti leah nænnoestimmiereaktah gaskem jeatjah byjjes årromesijjiej dïehre.
+
+
+sme-sma	  Moai Laarain bođiime ruoktot.
+WORKS	  Månnoeh Laarah gåetide båetiejimen.
+
+
+sme-sma	  Moai áhčiin bođiime ruoktot.
+WORKS	  Månnoeh aehtjieh gåetide båetiejimen.
+
+
+sme-sma	  eadni ja áhčči.
+WORKS	  tjidtjie gonnoeh aehtjieh.
+
+
+sme-sma	  Siessá ja máhka.
+WORKS	  Seasa gonnoeh maakh.
+
+
+sme-sma	  Muoŧŧá ja máhka.
+WORKS	  Muahra gonnoeh maakh.
+
+
+sme-sma	  Goaski ja máhka.
+WORKS	  Gåeskie gonnoeh maakh.
+
+
+sme-sma	  Ipmi ja eanu.
+WORKS	  Jijmie gonnoeh jyönh.
+
+
+sme-sma	  Ipmi ja čeahci.
+WORKS	  Jijmie gonnoeh tjietsieh.
+
+
+sme-sma	  Ipmi ja eahki.
+WORKS	  Jijmie gonnoeh jiekieh.
+
+
+sme-sma	  Attán juovlaskeaŋkka eadnái ja áhččái.
+WORKS	  Jåvlevadtesem tjidtjie gonnoeh aahtjan vadtam.
+
+
+97 / 100, 97%
