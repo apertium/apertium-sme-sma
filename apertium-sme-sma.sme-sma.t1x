@@ -1928,6 +1928,13 @@ And then there are some categories like "month", with all the months.
       <let><clip pos="1" side="tl" part="a_actio"/><lit-tag v="der_nomact.n.sg"/></let> 
         </when>
       </choose>
+     <choose><when>
+     <test><and>
+     <equal><clip pos="1" side="sl" part="a_cmp"/><lit-tag v="cmp_attr"/></equal> 
+     <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="n"/></equal> </and></test>
+          <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen"/></let>
+         </when>
+     </choose>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
@@ -4019,7 +4026,7 @@ And then there are some categories like "month", with all the months.
          </when>
      </choose>
         <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nounasdf" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
