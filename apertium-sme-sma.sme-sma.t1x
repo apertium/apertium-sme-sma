@@ -695,6 +695,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="adj_adj_comp">
       <cat-item lemma="eanet" tags="adj.comp.*"/>
+      <cat-item lemma="eanet" tags="adj.der_aadv.adv.*"/>
       <cat-item lemma="unni" tags="adj.comp.*"/>
       <cat-item lemma="stuoris" tags="adj.comp.*"/>
       <cat-item lemma="gárži" tags="adj.comp.*"/>
@@ -7835,6 +7836,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="4"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
+         <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj.comp.attr"/></let>
          <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
