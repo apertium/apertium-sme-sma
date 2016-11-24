@@ -2675,6 +2675,27 @@
          <match lemma="vejolaš" />
           </or>
       </rule>     
+       <rule weight="0.5">  
+         <match lemma="go" >
+            <select lemma="goh" /> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="go" >
+            <select lemma="goh"/> 
+         </match>
+    <repeat upto="3"><seq n="word"/></repeat>  <!-- 1-3 words -->
+         <or>
+         <match tags="prn.*.*.*.@COMP-CS←"/>
+         <match tags="prn.*.*.*.*.@COMP-CS←"/>
+         <match tags="n.*.*.*.@COMP-CS←"/>
+         <match tags="n.*.*.@COMP-CS←"/>
+         <match lemma="vejolaš" />
+          </or>
+      </rule>     
+
+
+
       <rule weight="0.6">  
       <or>
           <match lemma="dalle" /> <match lemma="ovdal" /> <match lemma="maŋŋil" />
