@@ -1,6 +1,13 @@
+echo 'Choose in macros:' > doculist
+
+egrep '(<def-macro|"M\[)' apertium-sme-sma.sme-sma.t1x |cut -d '"' -f2 >> doculist
+echo ' ' >> doculist
+echo ' ' >> doculist
+
+echo 'Rules:' >> doculist
 
 grep 'rule c.*\[' apertium-sme-sma.sme-sma.t1x | grep -v '^<\!' |cut -d '"' -f2 |sed 's/\[ \]/\[_\]/'  > rules
-echo 'Rules for verbals:' > doculist
+echo 'Rules for verbals:' >> doculist
 grep '\-V ' rules |rev | sort | rev >> doculist
 echo ' ' >> doculist
 echo 'Rules for predicates:' >> doculist
@@ -34,3 +41,4 @@ grep '\-IJ ' rules |rev | sort | rev >> doculist
 echo ' ' >> doculist
 echo 'Technical things:' >> doculist
 grep '\-T ' rules |rev | sort | rev >> doculist
+see doculist
