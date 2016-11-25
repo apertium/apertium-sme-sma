@@ -333,6 +333,13 @@
        <match lemma="beassat" tags="vblex.*"><select lemma="dåeriedidh" tags="vblex.*"/></match>
        <match lemma="fárrui" />
   </rule>
+  <rule weight="0.5">
+       <match lemma="beassat" tags="vblex.*"><select lemma="bïesedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="beassat" tags="vblex.*"><select lemma="bïesedh" tags="vblex.*"/></match>
+       <match lemma="eret" />
+  </rule>
 
   
   <rule weight="1.0">
@@ -913,10 +920,10 @@
        <match lemma="orrut" tags="vblex.iv.*"><select lemma="årrodh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.5">
-       <match lemma="orrut" tags="vblex.iv.*"><select lemma="vååjnedh" tags="vblex.*"/></match>
+       <match lemma="orrut" tags="vblex.iv.*"><select lemma="govledh²" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.6">
-       <match lemma="orrut" tags="vblex.iv.*"><select lemma="vååjnedh" tags="vblex.*"/></match>
+       <match lemma="orrut" tags="vblex.iv.*"><select lemma="govledh²" tags="vblex.*"/></match>
        <or>
        <match lemma="somá"/>
        <match lemma="imaš"/>
@@ -925,13 +932,23 @@
        </or>
   </rule>
   <rule weight="0.6">
-       <match lemma="orrut" tags="vblex.iv.*"><select lemma="vååjnedh" tags="vblex.*"/></match>
+       <match lemma="orrut" tags="vblex.iv.*"><select lemma="govledh²" tags="vblex.*"/></match>
        <match />
        <or>
        <match lemma="somá"/>
        <match lemma="imaš"/>
        <match lemma="amas"/>
        </or>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="amas" tags="adj.*"><select lemma="ammes" tags="adj.sg.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="amas" tags="adj.*"><select lemma="ammes" tags="adj.der_laakan.*"/></match>
+  </rule>
+  <rule weight="0.6">
+        <match lemma="orrut"/>
+      <match lemma="amas" tags="adj.*"><select lemma="ammes" tags="adj.der_laakan.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="ossodat" tags="n.*"><select lemma="goevtese" tags="n.*"/></match>

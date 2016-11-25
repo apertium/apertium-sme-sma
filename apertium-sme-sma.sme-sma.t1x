@@ -422,6 +422,10 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.sem_year.sg.*"/>
       <cat-item tags="*.sem_year.sg"/>
     </def-cat>
+    <def-cat n="semyear_gen">
+      <cat-item tags="*.sem_year.sg.gen.*"/>
+      <cat-item tags="*.sem_year.sg.gen"/>
+    </def-cat>
 
     <def-cat n="áigi_n">
       <cat-item lemma="áigi" tags="n.*"/>
@@ -987,6 +991,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="muhtin" tags="prn.ind.*"/> 
       <cat-item lemma="buot" tags="prn.ind.*"/> 
       <cat-item lemma="ollu" tags="adj.*"/> 
+      <cat-item lemma="olu" tags="adj.*"/> 
       <cat-item lemma="juohke" tags="prn.ind.*"/> 
       <cat-item lemma="njealját" tags="adj.ord.*"/> 
 <!--      <cat-item  tags="adj.*.comp.*"/>  -->
@@ -2543,6 +2548,15 @@ And then there are some categories like "month", with all the months.
         </let> 
         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let> 
         </when>
+     <when c="Muhtun suohkanat geavahit olu ruđa bálvalit álbmoga sámegillii : Muvhth tjïelth jïjnjem beetnegem hoksehtidh utnieh åålmegem saemiengïelese">
+     <test><and>
+     <equal><clip pos="1" side="tl" part="lem"/><lit v="jïjnje"/></equal>
+     <equal><clip pos="2" side="tl" part="lem"/><lit v="beetnege"/></equal>
+        <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+     </and></test>
+        <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj.pl.nom"/></let>
+        <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.pl.nom"/></let>
+         </when>   
 
         <otherwise>         <!-- default -->
         <let>
@@ -2940,7 +2954,6 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-2Param"> <with-param pos="1"/><with-param pos="2"/></call-macro>
          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let> 
-        <let><clip pos="2" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let>
          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
                           <out>
           <chunk name="noun" case="caseFirstword">
@@ -3268,32 +3281,6 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment="C[T] numeral-not-year" c="from sem_year to arab">
-      <pattern>
-        <pattern-item n="numeral_not_year"/>
-      </pattern>
-      <action>
-        <call-macro n="general-macro-1Param">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="convert-case-nbr-poss-1Param">
-          <with-param pos="1"/>
-        </call-macro>
-        <let><clip pos="1" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let>
-        <out>
-          <chunk name="num" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="NP"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="ext"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule> -->
 
     <rule comment="C[DLT] habitive leat-drop thirst_hunger_n" c="mus lea borranmiella : manne bårrestovvem">
       <pattern>
@@ -7789,6 +7776,22 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-1Param">
           <with-param pos="1"/>
         </call-macro>
+       <choose><when c="Orui amas, ahte : Govli ammeslaakan, ahte">
+       <test>
+       <equal><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_laakan"/></equal></test>
+       <out>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><lit-tag v="@ADVL"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+        </when>
+        <otherwise>
         <out>
           <chunk name="adj" case="caseFirstword">
             <tags>
@@ -7801,6 +7804,8 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+        </otherwise>
+       </choose>
       </action>
     </rule> 
 
@@ -7894,7 +7899,15 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
+        <choose><when c="lea váttis beassat eret : geerve destie bïesedh">
+        <test>
+         <equal><clip pos="1" side="tl" part="a_prn_type"/><lit-tag v="dem"/></equal></test>
+         <let><var n="chunk_name"/><lit v="dem"/></let>
+         </when>
+       <otherwise>
          <let><var n="chunk_name"/><clip pos="1" side="sl" part="lem"/></let>
+        </otherwise>
+        </choose>
         <out>
           <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
@@ -8113,24 +8126,49 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="C[ ] semyear_gen post" c="ja 1976 rájis lei son guovllušibitdoavttir : jïh jaepien 1976 raejeste dïhte lij dajvenveterinæære">
+      <pattern>
+        <pattern-item n="semyear_gen"/>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
 
-    <rule comment="C[ ] gen post" c="mun čálán girjji birra : manne tjaalam gærjan bïjre">
+        <out>
+         <chunk name="post" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+                  <lu>
+              <lit v="jaepie"/>
+              <lit-tag v="n.sg.gen"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="C[ ] gen post" c="mun čálán girjji birra : manne gærjan bïjre tjaalam">
       <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="post"/>
       </pattern>
       <action>
 
-        <choose>
-       <when>
-       <test><not><equal><clip pos="1" side="tl" part="a_sem_year"/><lit v=""/></equal></not></test>
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-      </when>
-      </choose> 
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-
         <out>
-          <chunk name="post" case="caseFirstword">
+         <chunk name="post" case="caseFirstword">
             <tags>
               <tag><lit-tag v="PP"/></tag>
               <tag><var n="func"/></tag>

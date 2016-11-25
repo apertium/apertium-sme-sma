@@ -55,6 +55,10 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="SV.*"/>
       <cat-item tags="ADV.*"/>
     </def-cat>
+    <def-cat n="prndem-ela">
+      <cat-item lemma="dem" tags="ADV.@-F←ADVL-ela"/>
+      <cat-item lemma="prn" tags="*.dem.loc"/>
+    </def-cat>
     <def-cat n="mielde">
       <cat-item lemma="mielde" tags="ADV.*"/>
     </def-cat>
@@ -207,6 +211,22 @@ And then there are some categories like "month", with all the months.
   </section-def-macros>
 
   <section-rules>
+   <rule comment="REGLA: prndem-ela prndem-ela">
+     <pattern>
+       <pattern-item n="prndem-ela"/>
+       <pattern-item n="prndem-ela"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule> 
    <rule comment="REGLA: NP_Po Adp">
      <pattern>
        <pattern-item n="NP_Po"/>
