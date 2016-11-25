@@ -2371,8 +2371,8 @@ And then there are some categories like "month", with all the months.
       </choose>  
 
       <choose>
-        <when>
-          <test c="M[T] ND to sg: not in use">
+        <when c="M[T] ND to sg: not in use">
+          <test>
             <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="ND"/></equal>
           </test>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
@@ -2446,8 +2446,8 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
          </when>
-        <when>
-          <test c="M[V] case nmbr">
+        <when c="M[V] case nmbr">
+          <test>
             <and>
             <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj"/></equal>
             <not>
@@ -2497,8 +2497,8 @@ And then there are some categories like "month", with all the months.
     <def-macro n="agreement-attr-2Param" npar="2"> <!-- pl prn, num, ord , full agreement, exc com -->
        <choose>
 
-        <when>       
-          <test c="M[CT] pl.com">
+        <when c="M[CT] pl.com">       
+          <test>
             <and>
               <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="com"/></equal>
               <equal><clip pos="2" side="tl" part="a_nbr"/> <lit-tag v="pl"/></equal>
