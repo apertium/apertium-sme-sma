@@ -37,6 +37,65 @@ convert-compounds2     =
 convert-compounds3     =
 convert-verb-deriv1     =
 
+M[CT] sg.loc to ela.attr and ela
+M[T] loc to ela
+M[T] loc to ela
+M[T] muvhte: pl.loc to sg.ela
+M[V] main-verb-lemma
+M[V] main-verb-lemma
+M[T] ill to acc
+M[V] func
+M[T] removes a_attr from prn.dem.pl.loc
+M[T] remove a_attr when prfprc
+M[CT] der_ahtti to der_ahtje
+M[T] pcle
+M[T] loc to gen for a_time
+M[T] loc to ine
+M[T] sg.loc to ine
+M[T] pl.loc to ine
+M[T] ill to ine
+M[T] ill to ine
+M[CT] pl.loc to sg.ine.attr + sg.ine
+M[T] CD to Nom: not in use
+M[T] removes a_poss from prn.ref
+M[T] actio.loc to inf
+M[CT] remove leat.inf
+M[T] adj spred to sg
+M[T] actio.gen to der_nomact.n.sg
+M[L] noun to verb: huksen to tseegkedh
+M[L] noun to verb: árvvoštallan to vierhtiedalledh
+M[L] noun to verb: gulahallan to gaskesadtedh
+M[L] noun to verb: sirdin to juhtedh
+M[L] noun to verb: ovddideapmi to evtiedidh
+M[T] sg to pl.nom: göökte laejpieh
+M[T] adj a_indecl
+M[T] nom gets pl
+M[CT] der_passs to der_passl
+M[T] Mun vuoján buriin biillain : Manne buerie bïjline vuajam
+M[T] adds attr to prn.dem.pl.com
+M[T] acc to nom
+M[T] loc to nom
+M[T] ill to nom
+M[T] sg.nom
+M[T] sg.nom
+M[T] cmp_sh to cmp_sgnom
+M[T] der_aadv to der_laakan
+M[CT] pl.loc to pl.gen + gen
+M[T] sg.loc to gen
+M[T] ←hab→ gives gen
+M[T] der_lasj to sg.gen
+M[V] infin
+M[V] subj_nbr
+M[T] der_vuota: remove a_attr
+M[V] adv remove extra tags
+M[V] verb_tense_nbrpers
+M[CT] der_h to der_ht
+M[T] caus to der_ht
+M[V] ext
+M[V] ext
+M[T] removes extra tags from adv
+
+
 While awaiting documentation, here is a list of the REGLA rules:
 
 C[T] mod_n jahki_n semyear (removes semyear)
