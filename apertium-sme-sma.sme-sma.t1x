@@ -98,30 +98,1175 @@ M[T] removes extra tags from adv
 
 While awaiting documentation, here is a list of the REGLA rules:
 
-
-
-Section: Nominal groups:
-Rules: pron-pers, pron-refl, pron-rel, pron-dem, pron-indef,
-       num, n-cmp n-cmp n-cmp n, n-cmp n-cmp n, n-cmp n, n,
-       adjmod_n n, n num-ldep, n-prop-pers, pron-attr n-cmp n,
-       pron-attr pron-attr n, pron-attr n
-
-Section: Verbal groups:
-Rules: ii, conneg, ii conneg, verb-fin, leat-fin verb-prfprc,
-       leat-fin adv verb-prfprc, verb-inf, verb-prfprc, verb-actio,
-       verb-imp
-
-Section: Adjective groups:
-Rules:  adj
-
-Section: Adverbial groups:
-Rules:  adv
-
-Section: Adpositions
-Rules: pr, post, cs, cc
-
-Section: Miscellaneous:
-Rules: sent
+Rules for verbals:
+C[T]-V negverb
+C[T]-V negverb
+C[_]-V verb_prfprc
+C[_]-V prsprc
+C[_]-V verb_inf
+C[T]-V conneg
+C[LT]-V noun-nom
+C[LT]-V noun_nom
+C[T]-V verb_fin
+C[T]-V leat_main_fin
+C[T]-V leat_main_infin
+C[S]-V n_cmp
+C[_]-V verb_imp
+C[T]-V verb_actio_ess
+C[T]-V verb_to_adv
+C[_]-V mearkkašit_vblex
+C[T]-V leat_aux
+C[_]-V leat_aux
+ 
+Rules for predicates:
+C[DT]-PRED negverb
+C[DT]-PRED negverb
+C[AT]-PRED váikkuhitverb
+C[TW]-PRED leat_prfprc
+C[T]-PRED habitive
+C[TW]-PRED leat-main-fin
+C[DLT]-PRED leat_drop
+C[DL]-PRED beassat_vblex
+C[DL]-PRED čájehit_vblex
+C[AST]-PRED váikkuhit_vblex
+C[L]-PRED atnit_vblex
+C[LW]-PRED boahtit_vblex
+C[L]-PRED mearkkašit_vblex
+C[L]-PRED oažžut_vblex
+ 
+Rules for adjectives:
+C[_]-A adj
+C[S]-A n_cmp
+ 
+Rules for bare nouns:
+C[S]-N n-cmp
+C[_]-N n_prop_pers
+ 
+Rules for noun phrases:
+C[ST]-NP prn-ind
+C[T]-NP prn-ind
+C[T]-NP prn-ind
+C[T]-NP genmod
+C[CT]-NP agreement-half
+C[DLT]-NP guhkki
+C[T]-NP nomact_ill
+C[ST]-NP prn-dem
+C[T]-NP prn-dem
+C[LT]-NP mod_n
+C[ST]-NP mod_n
+C[ST]-NP mod_n
+C[ST]-NP mod_n
+C[ST]-NP mod_n
+C[T]-NP mod_n
+C[T]-NP mod_n
+C[T]-NP mod_n
+C[T]-NP mod_n
+C[T]-NP mod_n
+C[_]-NP mod_n
+C[_]-NP mod_n
+C[_]-NP mod_n
+C[_]-NP áhčči_eadni_n
+C[LT]-NP uncle_aunt_n
+C[LT]-NP áhkku_áddjá_n
+C[T]-NP gen
+C[LT]-NP buot_prn
+C[T]-NP noun
+C[S]-NP n-cmp
+C[ST]-NP n-cmp
+C[ST]-NP n-cmp
+C[ST]-NP n-cmp
+C[S]-NP n_cmp
+C[ST]-NP n_cmp
+C[ST]-NP n_cmp
+C[_]-NP n_not_cmp
+C[_]-NP n_not_cmp
+C[D]-NP adj-adj_comp
+C[T]-NP cmp_splitr
+C[T]-NP cmp_splitr
+C[ST]-NP prn_attr
+C[T]-NP prn_attr
+C[C]-NP agreement_attr
+C[C]-NP agreement_attr
+C[CS]-NP agreement_attr
+C[T]-NP mánnu
+C[_]-NP mánnu
+C[_]-NP mánnu
+C[DLT]-NP olu_adv
+C[A]-NP nounpx
+ 
+Rules for numeral expressions:
+C[T]-NUM semdate
+C[T]-NUM prn_dem_sg
+C[T]-NUM prn_dem_sg
+C[T]-NUM prn_dem_sg
+C[T]-NUM prn_dem_sg
+C[AT]-NUM semyearPl
+C[AT]-NUM num_sg_all
+C[ST]-NUM num_sg_all
+C[T]-NUM num_sg_all
+C[T]-NUM numsg-acc-nom
+C[T]-NUM numsg-acc-nom
+C[T]-NUM numsg-acc-nom
+C[LT]-NUM mod_num
+C[T]-NUM mod_n
+C[T]-NUM jahki_n
+C[T]-NUM semyear_loc_gen
+C[_]-NUM semyear_gen
+C[D]-NUM juohke_prn
+C[_]-NUM noun
+C[S]-NUM n-cmp
+C[LT]-NUM numeral-not-year
+C[AT]-NUM semyear
+C[T]-NUM jagis
+ 
+Rules for adverbs:
+C[DT]-ADV noun-loc
+C[D]-ADV not_pcle
+C[_]-ADV adv
+C[LW]-ADV ovttasráđiid_adv
+C[T]-ADV mielde_adv
+C[T]-ADV mielde_adv
+C[DT]-ADV eret_adv
+ 
+Rules for P phrases:
+C[DT]-PP sem_measr_time
+C[DLT]-PP guhkki
+C[DT]-PP mod_n
+C[DST]-PP mod_n
+C[_]-PP mod_n
+C[DT]-PP gen
+C[DT]-PP gen
+C[_]-PP gen
+C[DT]-PP dem-gen
+C[LT]-PP dat_prn
+C[DST]-PP n_cmp
+C[DT]-PP numeral-not-year
+C[T]-PP numeral-not-year
+C[T]-PP pr
+C[T]-PP pr
+C[W]-PP pr
+C[_]-PP pr
+C[LT]-PP actio_sem_act
+C[_]-PP post
+ 
+Rules for other phrases:
+C[DLT]-PHR habitive
+C[TW]-PHR lassi_n_ess
+C[D]-PHR dattetge_maiddai_adv
+ 
+Small word classes:
+C[_]-CC cnjcoo
+C[_]-CS cnjsub
+C[TW]-CS go-cnjsub
+C[_]-CS adv_go
+C[_]-IJ interj
+ 
+Technical things:
+C[_]-T comma
+C[_]-T default
+C[_]-T sent
+Rules for verbals:
+C[T]-V negverb
+C[LT]-V noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub
+C[LT]-V noun_nom oaivvildit_vblex ahte_cnjsub
+C[_]-V verb_prfprc
+C[_]-V prsprc
+C[_]-V verb_inf
+C[T]-V conneg
+C[T]-V negverb conneg
+C[T]-V verb_fin
+C[T]-V leat_main_fin
+C[T]-V leat_main_infin
+C[S]-V n_cmp verb_for_cmp
+C[_]-V verb_imp
+C[T]-V verb_actio_ess to ger
+C[T]-V verb_to_adv
+C[T]-V leat_aux verb_to_adv
+C[_]-V mearkkašit_vblex
+C[_]-V leat_aux
+ 
+Rules for predicates:
+C[DLT]-PRED leat_drop noun adj2verb
+C[L]-PRED mearkkašit_vblex ahte_cnjsub
+C[L]-PRED oažžut_vblex diehtu_n_acc
+C[L]-PRED atnit_vblex árvu_n_loc
+C[AT]-PRED váikkuhitverb genmod nomact-ill to subord.clause
+C[TW]-PRED leat_prfprc vejolaš_adj
+C[DT]-PRED negverb leat-main-infin pcle vejolaš_adj
+C[TW]-PRED leat-main-fin vejolaš_adj
+C[DT]-PRED negverb leat-main-infin vejolaš_adj
+C[LW]-PRED boahtit_vblex fápmu_n_ill
+C[AST]-PRED váikkuhit_vblex n_cmp nomact_ill
+C[DL]-PRED čájehit_vblex understanding_n
+C[T]-PRED habitive leat_main_fin pl_words
+C[DL]-PRED beassat_vblex fárrui_adv
+ 
+Rules for adjectives:
+C[_]-A adj
+C[S]-A n_cmp adj
+ 
+Rules for bare nouns:
+C[S]-N n-cmp noun
+C[_]-N n_prop_pers
+ 
+Rules for noun phrases:
+C[T]-NP genmod nomact-ill to inf
+C[ST]-NP n-cmp nomact-ill-modn to inf
+C[DLT]-NP guhkki áigi
+C[ST]-NP n-cmp genmod nomact-ill
+C[ST]-NP mod_n n-cmp genmod nomact-ill
+C[T]-NP mod_n nomact-ill
+C[T]-NP nomact_ill
+C[T]-NP gen nomact-nom
+C[T]-NP mod_n gen nomact-nom
+C[_]-NP mod_n n_not_cmp prop_nom
+C[_]-NP n_not_cmp prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_nom
+C[_]-NP n_not_cmp prop_attr prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_attr prop_nom
+C[LT]-NP buot_prn oktavuohta_n
+C[DLT]-NP olu_adv olu_adv oktavuohta_n
+C[_]-NP áhčči_eadni_n ja áhčči_eadni_n
+C[_]-NP mánnu ord_card beaivi_n
+C[LT]-NP uncle_aunt_n ja uncle_aunt_n
+C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n
+C[T]-NP noun
+C[T]-NP prn-ind noun
+C[C]-NP agreement_attr prn_ind noun
+C[CT]-NP agreement-half noun
+C[T]-NP prn-dem noun
+C[T]-NP prn-ind mod_n noun
+C[T]-NP cmp_splitr cnjcoo noun
+C[T]-NP mod_n cmp_splitr cnjcoo noun
+C[ST]-NP prn-ind n-cmp noun
+C[ST]-NP prn-dem n-cmp noun
+C[S]-NP n-cmp n-cmp noun
+C[S]-NP n_cmp n_cmp n_cmp noun
+C[ST]-NP prn_attr n_cmp noun
+C[CS]-NP agreement_attr n_cmp noun
+C[D]-NP adj-adj_comp ja adj-adj_comp noun
+C[T]-NP prn_attr prn_attr noun
+C[C]-NP agreement_attr noun
+C[T]-NP cmp_splitr cnjcoo n-cmp n-not-cmp
+C[LT]-NP mod_n n_not_cmp
+C[T]-NP mod_n mod_n n_not_cmp
+C[T]-NP mod_n mod_n mod_n n_not_cmp
+C[ST]-NP n-cmp mod_n mod_n n_not_cmp
+C[ST]-NP mod_n n-cmp mod_n n_not_cmp
+C[ST]-NP n_cmp mod_n n_not_cmp
+C[ST]-NP mod_n n_cmp n_not_cmp
+C[ST]-NP mod_n mod_n n_cmp n_not_cmp
+C[ST]-NP n_cmp mod_n n_cmp n_not_cmp
+C[_]-NP mánnu ord_card beaivi_n semyear
+C[T]-NP mánnu semyear
+C[A]-NP nounpx
+ 
+Rules for numeral expressions:
+C[T]-NUM semdate
+C[AT]-NUM semyearPl
+C[T]-NUM num_sg_all prn-dem-loc adjmod_n noun-loc-num
+C[ST]-NUM num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num
+C[AT]-NUM num_sg_all adjmod_n noun_loc_num
+C[T]-NUM numsg-acc-nom noun-nom-acc-gen
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen
+C[T]-NUM semyear_loc_gen
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all mod_n noun
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen noun
+C[D]-NUM juohke_prn numeral-not-year noun
+C[_]-NUM noun num_ldep
+C[S]-NUM n-cmp numeral-not-year
+C[AT]-NUM semyear
+C[T]-NUM jahki_n semyear
+C[T]-NUM mod_n jahki_n semyear
+C[T]-NUM jagis semyear
+C[LT]-NUM numeral-not-year prosent
+C[LT]-NUM mod_num numeral-not-year prosent
+C[_]-NUM semyear_gen post
+ 
+Rules for adverbs:
+C[DT]-ADV eret_adv noun_loc
+C[LW]-ADV ovttasráđiid_adv comitative
+C[T]-ADV mielde_adv verb_actio_ess cnjcoo verb_actio_ess
+C[T]-ADV mielde_adv verb_actio_ess
+C[_]-ADV adv
+C[D]-ADV not_pcle adv
+C[DT]-ADV noun-loc eret_adv
+ 
+Rules for P phrases:
+C[DT]-PP sem_measr_time sisa
+C[DT]-PP numeral-not-year sem_measr_time sisa
+C[DT]-PP gen váste
+C[DLT]-PP guhkki áigi vuollai
+C[W]-PP pr mod_n gen
+C[T]-PP pr gen cnjcoo gen
+C[T]-PP pr gen
+C[T]-PP numeral-not-year sem_measr_time geahčen
+C[_]-PP pr
+C[_]-PP post
+C[_]-PP gen post
+C[_]-PP mod_n gen post
+C[DT]-PP dem-gen ala_post
+C[DT]-PP gen bokte_post
+C[DT]-PP mod_n gen bokte_post
+C[DST]-PP mod_n n-cmp gen bokte_post
+C[DST]-PP n_cmp gen bokte_post
+C[LT]-PP actio_sem_act bokte_post
+C[LT]-PP dat_prn duohken_post
+ 
+Rules for other phrases:
+C[TW]-PHR lassi_n_ess noun-ill
+C[DLT]-PHR habitive leat-drop thirst_hunger_n
+C[D]-PHR dattetge_maiddai_adv leat-main-fin dárbu_n
+ 
+Small word classes:
+C[_]-CC cnjcoo
+C[_]-CS cnjsub
+C[_]-CS adv_go go-cnjsub
+C[TW]-CS go-cnjsub vejolaš_adj
+C[_]-IJ interj
+ 
+Technical things:
+C[_]-T comma
+C[_]-T default
+C[_]-T sent
+Rules for verbals:
+C[T]-V negverb
+C[LT]-V noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub
+C[LT]-V noun_nom oaivvildit_vblex ahte_cnjsub
+C[_]-V verb_prfprc
+C[_]-V prsprc
+C[_]-V verb_inf
+C[T]-V conneg
+C[T]-V negverb conneg
+C[T]-V verb_fin
+C[T]-V leat_main_fin
+C[T]-V leat_main_infin
+C[S]-V n_cmp verb_for_cmp
+C[_]-V verb_imp
+C[T]-V verb_actio_ess
+C[T]-V verb_to_adv
+C[T]-V leat_aux verb_to_adv
+C[_]-V mearkkašit_vblex
+C[_]-V leat_aux
+ 
+Rules for predicates:
+C[DLT]-PRED leat_drop noun adj2verb
+C[L]-PRED mearkkašit_vblex ahte_cnjsub
+C[L]-PRED oažžut_vblex diehtu_n_acc
+C[L]-PRED atnit_vblex árvu_n_loc
+C[TW]-PRED leat_prfprc vejolaš_adj
+C[DT]-PRED negverb leat-main-infin pcle vejolaš_adj
+C[TW]-PRED leat-main-fin vejolaš_adj
+C[DT]-PRED negverb leat-main-infin vejolaš_adj
+C[AT]-PRED váikkuhitverb genmod nomact-ill
+C[LW]-PRED boahtit_vblex fápmu_n_ill
+C[AST]-PRED váikkuhit_vblex n_cmp nomact_ill
+C[DL]-PRED čájehit_vblex understanding_n
+C[T]-PRED habitive leat_main_fin pl_words
+C[DL]-PRED beassat_vblex fárrui_adv
+ 
+Rules for adjectives:
+C[_]-A adj
+C[S]-A n_cmp adj
+ 
+Rules for bare nouns:
+C[S]-N n-cmp noun
+C[_]-N n_prop_pers
+ 
+Rules for noun phrases:
+C[DLT]-NP guhkki áigi
+C[T]-NP genmod nomact-ill
+C[ST]-NP n-cmp genmod nomact-ill
+C[ST]-NP mod_n n-cmp genmod nomact-ill
+C[T]-NP mod_n nomact-ill
+C[T]-NP nomact_ill
+C[T]-NP gen nomact-nom
+C[T]-NP mod_n gen nomact-nom
+C[_]-NP mod_n n_not_cmp prop_nom
+C[_]-NP n_not_cmp prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_nom
+C[_]-NP n_not_cmp prop_attr prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_attr prop_nom
+C[LT]-NP buot_prn oktavuohta_n
+C[DLT]-NP olu_adv olu_adv oktavuohta_n
+C[_]-NP áhčči_eadni_n ja áhčči_eadni_n
+C[_]-NP mánnu ord_card beaivi_n
+C[LT]-NP uncle_aunt_n ja uncle_aunt_n
+C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n
+C[ST]-NP n-cmp nomact-ill-modn
+C[T]-NP noun
+C[T]-NP prn-ind noun
+C[C]-NP agreement_attr prn_ind noun
+C[CT]-NP agreement-half noun
+C[T]-NP prn-dem noun
+C[T]-NP prn-ind mod_n noun
+C[T]-NP cmp_splitr cnjcoo noun
+C[T]-NP mod_n cmp_splitr cnjcoo noun
+C[ST]-NP prn-ind n-cmp noun
+C[ST]-NP prn-dem n-cmp noun
+C[S]-NP n-cmp n-cmp noun
+C[S]-NP n_cmp n_cmp n_cmp noun
+C[ST]-NP prn_attr n_cmp noun
+C[CS]-NP agreement_attr n_cmp noun
+C[D]-NP adj-adj_comp ja adj-adj_comp noun
+C[T]-NP prn_attr prn_attr noun
+C[C]-NP agreement_attr noun
+C[T]-NP cmp_splitr cnjcoo n-cmp n-not-cmp
+C[LT]-NP mod_n n_not_cmp
+C[T]-NP mod_n mod_n n_not_cmp
+C[T]-NP mod_n mod_n mod_n n_not_cmp
+C[ST]-NP n-cmp mod_n mod_n n_not_cmp
+C[ST]-NP mod_n n-cmp mod_n n_not_cmp
+C[ST]-NP n_cmp mod_n n_not_cmp
+C[ST]-NP mod_n n_cmp n_not_cmp
+C[ST]-NP mod_n mod_n n_cmp n_not_cmp
+C[ST]-NP n_cmp mod_n n_cmp n_not_cmp
+C[_]-NP mánnu ord_card beaivi_n semyear
+C[T]-NP mánnu semyear
+C[A]-NP nounpx
+ 
+Rules for numeral expressions:
+C[T]-NUM semdate
+C[AT]-NUM semyearPl
+C[T]-NUM num_sg_all prn-dem-loc adjmod_n noun-loc-num
+C[ST]-NUM num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num
+C[AT]-NUM num_sg_all adjmod_n noun_loc_num
+C[T]-NUM numsg-acc-nom noun-nom-acc-gen
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen
+C[T]-NUM semyear_loc_gen
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all mod_n noun
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen noun
+C[D]-NUM juohke_prn numeral-not-year noun
+C[_]-NUM noun num_ldep
+C[S]-NUM n-cmp numeral-not-year
+C[AT]-NUM semyear
+C[T]-NUM jahki_n semyear
+C[T]-NUM mod_n jahki_n semyear
+C[T]-NUM jagis semyear
+C[LT]-NUM numeral-not-year prosent
+C[LT]-NUM mod_num numeral-not-year prosent
+C[_]-NUM semyear_gen post
+ 
+Rules for adverbs:
+C[DT]-ADV eret_adv noun_loc
+C[LW]-ADV ovttasráđiid_adv comitative
+C[T]-ADV mielde_adv verb_actio_ess cnjcoo verb_actio_ess
+C[T]-ADV mielde_adv verb_actio_ess
+C[_]-ADV adv
+C[D]-ADV not_pcle adv
+C[DT]-ADV noun-loc eret_adv
+ 
+Rules for P phrases:
+C[DT]-PP sem_measr_time sisa
+C[DT]-PP numeral-not-year sem_measr_time sisa
+C[DT]-PP gen váste
+C[DLT]-PP guhkki áigi vuollai
+C[W]-PP pr mod_n gen
+C[T]-PP pr gen cnjcoo gen
+C[T]-PP pr gen
+C[T]-PP numeral-not-year sem_measr_time geahčen
+C[_]-PP pr
+C[_]-PP post
+C[_]-PP gen post
+C[_]-PP mod_n gen post
+C[DT]-PP dem-gen ala_post
+C[DT]-PP gen bokte_post
+C[DT]-PP mod_n gen bokte_post
+C[DST]-PP mod_n n-cmp gen bokte_post
+C[DST]-PP n_cmp gen bokte_post
+C[LT]-PP actio_sem_act bokte_post
+C[LT]-PP dat_prn duohken_post
+ 
+Rules for other phrases:
+C[TW]-PHR lassi_n_ess noun-ill
+C[DLT]-PHR habitive leat-drop thirst_hunger_n
+C[D]-PHR dattetge_maiddai_adv leat-main-fin dárbu_n
+ 
+Small word classes:
+C[_]-CC cnjcoo
+C[_]-CS cnjsub
+C[_]-CS adv_go go-cnjsub
+C[TW]-CS go-cnjsub vejolaš_adj
+C[_]-IJ interj
+ 
+Technical things:
+C[_]-T comma
+C[_]-T default
+C[_]-T sent
+Rules for verbals:
+C[T]-V negverb
+C[LT]-V noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub
+C[LT]-V noun_nom oaivvildit_vblex ahte_cnjsub
+C[_]-V verb_prfprc
+C[_]-V prsprc
+C[_]-V verb_inf
+C[T]-V conneg
+C[T]-V negverb conneg
+C[T]-V verb_fin
+C[T]-V leat_main_fin
+C[T]-V leat_main_infin
+C[S]-V n_cmp verb_for_cmp
+C[_]-V verb_imp
+C[T]-V verb_actio_ess
+C[T]-V verb_to_adv
+C[T]-V leat_aux verb_to_adv
+C[_]-V mearkkašit_vblex
+C[_]-V leat_aux
+ 
+Rules for predicates:
+C[DLT]-PRED leat_drop noun adj2verb
+C[L]-PRED mearkkašit_vblex ahte_cnjsub
+C[L]-PRED oažžut_vblex diehtu_n_acc
+C[L]-PRED atnit_vblex árvu_n_loc
+C[TW]-PRED leat_prfprc vejolaš_adj
+C[DT]-PRED negverb leat-main-infin pcle vejolaš_adj
+C[TW]-PRED leat-main-fin vejolaš_adj
+C[DT]-PRED negverb leat-main-infin vejolaš_adj
+C[AT]-PRED váikkuhitverb genmod nomact-ill
+C[LW]-PRED boahtit_vblex fápmu_n_ill
+C[AST]-PRED váikkuhit_vblex n_cmp nomact_ill
+C[DL]-PRED čájehit_vblex understanding_n
+C[T]-PRED habitive leat_main_fin pl_words
+C[DL]-PRED beassat_vblex fárrui_adv
+ 
+Rules for adjectives:
+C[_]-A adj
+C[S]-A n_cmp adj
+ 
+Rules for bare nouns:
+C[S]-N n-cmp noun
+C[_]-N n_prop_pers
+ 
+Rules for noun phrases:
+C[DLT]-NP guhkki áigi
+C[T]-NP genmod nomact-ill
+C[ST]-NP n-cmp genmod nomact-ill
+C[ST]-NP mod_n n-cmp genmod nomact-ill
+C[T]-NP mod_n nomact-ill
+C[T]-NP nomact_ill
+C[T]-NP gen nomact-nom
+C[T]-NP mod_n gen nomact-nom
+C[_]-NP mod_n n_not_cmp prop_nom
+C[_]-NP n_not_cmp prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_nom
+C[_]-NP n_not_cmp prop_attr prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_attr prop_nom
+C[LT]-NP buot_prn oktavuohta_n
+C[DLT]-NP olu_adv olu_adv oktavuohta_n
+C[_]-NP áhčči_eadni_n ja áhčči_eadni_n
+C[_]-NP mánnu ord_card beaivi_n
+C[LT]-NP uncle_aunt_n ja uncle_aunt_n
+C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n
+C[ST]-NP n-cmp nomact-ill-modn
+C[T]-NP noun
+C[T]-NP prn-ind noun
+C[C]-NP agreement_attr prn_ind noun
+C[CT]-NP agreement-half noun
+C[T]-NP prn-dem noun
+C[T]-NP prn-ind mod_n noun
+C[T]-NP cmp_splitr cnjcoo noun
+C[T]-NP mod_n cmp_splitr cnjcoo noun
+C[ST]-NP prn-ind n-cmp noun
+C[ST]-NP prn-dem n-cmp noun
+C[S]-NP n-cmp n-cmp noun
+C[S]-NP n_cmp n_cmp n_cmp noun
+C[ST]-NP prn_attr n_cmp noun
+C[CS]-NP agreement_attr n_cmp noun
+C[D]-NP adj-adj_comp ja adj-adj_comp noun
+C[T]-NP prn_attr prn_attr noun
+C[C]-NP agreement_attr noun
+C[T]-NP cmp_splitr cnjcoo n-cmp n-not-cmp
+C[LT]-NP mod_n n_not_cmp
+C[T]-NP mod_n mod_n n_not_cmp
+C[T]-NP mod_n mod_n mod_n n_not_cmp
+C[ST]-NP n-cmp mod_n mod_n n_not_cmp
+C[ST]-NP mod_n n-cmp mod_n n_not_cmp
+C[ST]-NP n_cmp mod_n n_not_cmp
+C[ST]-NP mod_n n_cmp n_not_cmp
+C[ST]-NP mod_n mod_n n_cmp n_not_cmp
+C[ST]-NP n_cmp mod_n n_cmp n_not_cmp
+C[_]-NP mánnu ord_card beaivi_n semyear
+C[T]-NP mánnu semyear
+C[A]-NP nounpx
+ 
+Rules for numeral expressions:
+C[T]-NUM semdate
+C[AT]-NUM semyearPl
+C[T]-NUM num_sg_all prn-dem-loc adjmod_n noun-loc-num
+C[ST]-NUM num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num
+C[AT]-NUM num_sg_all adjmod_n noun_loc_num
+C[T]-NUM numsg-acc-nom noun-nom-acc-gen
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen
+C[T]-NUM semyear_loc_gen
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all mod_n noun
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen noun
+C[D]-NUM juohke_prn numeral-not-year noun
+C[_]-NUM noun num_ldep
+C[S]-NUM n-cmp numeral-not-year
+C[AT]-NUM semyear
+C[T]-NUM jahki_n semyear
+C[T]-NUM mod_n jahki_n semyear
+C[T]-NUM jagis semyear
+C[LT]-NUM numeral-not-year prosent
+C[LT]-NUM mod_num numeral-not-year prosent
+C[_]-NUM semyear_gen post
+ 
+Rules for adverbs:
+C[DT]-ADV eret_adv noun_loc
+C[LW]-ADV ovttasráđiid_adv comitative
+C[T]-ADV mielde_adv verb_actio_ess cnjcoo verb_actio_ess
+C[T]-ADV mielde_adv verb_actio_ess
+C[_]-ADV adv
+C[D]-ADV not_pcle adv
+C[DT]-ADV noun-loc eret_adv
+ 
+Rules for P phrases:
+C[W]-PP pr mod_n gen
+C[T]-PP pr gen cnjcoo gen
+C[T]-PP pr gen
+C[_]-PP pr
+C[_]-PP post
+C[_]-PP gen post
+C[_]-PP mod_n gen post
+C[DT]-PP dem-gen ala_post
+C[DT]-PP sem_measr_time sisa_post
+C[DT]-PP numeral-not-year sem_measr_time sisa_post
+C[DT]-PP gen bokte_post
+C[DT]-PP mod_n gen bokte_post
+C[DST]-PP mod_n n-cmp gen bokte_post
+C[DST]-PP n_cmp gen bokte_post
+C[LT]-PP actio_sem_act bokte_post
+C[DT]-PP gen váste_post
+C[DLT]-PP guhkki áigi vuollai_post
+C[LT]-PP dat_prn duohken_post
+C[T]-PP numeral-not-year sem_measr_time geahčen_post
+ 
+Rules for other phrases:
+C[TW]-PHR lassi_n_ess noun-ill
+C[DLT]-PHR habitive leat-drop thirst_hunger_n
+C[D]-PHR dattetge_maiddai_adv leat-main-fin dárbu_n
+ 
+Small word classes:
+C[_]-CC cnjcoo
+C[_]-CS cnjsub
+C[_]-CS adv_go go-cnjsub
+C[TW]-CS go-cnjsub vejolaš_adj
+C[_]-IJ interj
+ 
+Technical things:
+C[_]-T comma
+C[_]-T default
+C[_]-T sent
+Rules for verbals:
+C[T]-V negverb
+C[LT]-V noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub
+C[LT]-V noun_nom oaivvildit_vblex ahte_cnjsub
+C[_]-V verb_prfprc
+C[_]-V prsprc
+C[_]-V verb_inf
+C[T]-V conneg
+C[T]-V negverb conneg
+C[T]-V verb_fin
+C[T]-V leat_main_fin
+C[T]-V leat_main_infin
+C[S]-V n_cmp verb_for_cmp
+C[_]-V verb_imp
+C[T]-V verb_actio_ess
+C[T]-V verb_to_adv
+C[T]-V leat_aux verb_to_adv
+C[_]-V mearkkašit_vblex
+C[_]-V leat_aux
+ 
+Rules for predicates:
+C[DLT]-PRED leat_drop noun adj2verb
+C[L]-PRED mearkkašit_vblex ahte_cnjsub
+C[L]-PRED oažžut_vblex diehtu_n_acc
+C[L]-PRED atnit_vblex árvu_n_loc
+C[TW]-PRED leat_prfprc vejolaš_adj
+C[DT]-PRED negverb leat-main-infin pcle vejolaš_adj
+C[TW]-PRED leat-main-fin vejolaš_adj
+C[DT]-PRED negverb leat-main-infin vejolaš_adj
+C[AT]-PRED váikkuhitverb genmod nomact-ill
+C[LW]-PRED boahtit_vblex fápmu_n_ill
+C[AST]-PRED váikkuhit_vblex n_cmp nomact_ill
+C[DL]-PRED čájehit_vblex understanding_n
+C[T]-PRED habitive leat_main_fin pl_words
+C[DL]-PRED beassat_vblex fárrui_adv
+ 
+Rules for adjectives:
+C[_]-A adj
+C[S]-A n_cmp adj
+ 
+Rules for bare nouns:
+C[S]-N n-cmp noun
+C[_]-N n_prop_pers
+ 
+Rules for noun phrases:
+C[T]-NP genmod nomact-ill
+C[ST]-NP n-cmp genmod nomact-ill
+C[ST]-NP mod_n n-cmp genmod nomact-ill
+C[T]-NP mod_n nomact-ill
+C[T]-NP nomact_ill
+C[T]-NP gen nomact-nom
+C[T]-NP mod_n gen nomact-nom
+C[_]-NP mod_n n_not_cmp prop_nom
+C[_]-NP n_not_cmp prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_nom
+C[_]-NP n_not_cmp prop_attr prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_attr prop_nom
+C[LT]-NP buot_prn oktavuohta_n
+C[DLT]-NP olu_adv olu_adv oktavuohta_n
+C[DLT]-NP guhkki_adj áigi_n
+C[_]-NP áhčči_eadni_n ja áhčči_eadni_n
+C[_]-NP mánnu ord_card beaivi_n
+C[LT]-NP uncle_aunt_n ja uncle_aunt_n
+C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n
+C[ST]-NP n-cmp nomact-ill-modn
+C[T]-NP noun
+C[T]-NP prn-ind noun
+C[C]-NP agreement_attr prn_ind noun
+C[CT]-NP agreement-half noun
+C[T]-NP prn-dem noun
+C[T]-NP prn-ind mod_n noun
+C[T]-NP cmp_splitr cnjcoo noun
+C[T]-NP mod_n cmp_splitr cnjcoo noun
+C[ST]-NP prn-ind n-cmp noun
+C[ST]-NP prn-dem n-cmp noun
+C[S]-NP n-cmp n-cmp noun
+C[S]-NP n_cmp n_cmp n_cmp noun
+C[ST]-NP prn_attr n_cmp noun
+C[CS]-NP agreement_attr n_cmp noun
+C[D]-NP adj-adj_comp ja adj-adj_comp noun
+C[T]-NP prn_attr prn_attr noun
+C[C]-NP agreement_attr noun
+C[T]-NP cmp_splitr cnjcoo n-cmp n-not-cmp
+C[LT]-NP mod_n n_not_cmp
+C[T]-NP mod_n mod_n n_not_cmp
+C[T]-NP mod_n mod_n mod_n n_not_cmp
+C[ST]-NP n-cmp mod_n mod_n n_not_cmp
+C[ST]-NP mod_n n-cmp mod_n n_not_cmp
+C[ST]-NP n_cmp mod_n n_not_cmp
+C[ST]-NP mod_n n_cmp n_not_cmp
+C[ST]-NP mod_n mod_n n_cmp n_not_cmp
+C[ST]-NP n_cmp mod_n n_cmp n_not_cmp
+C[_]-NP mánnu ord_card beaivi_n semyear
+C[T]-NP mánnu semyear
+C[A]-NP nounpx
+ 
+Rules for numeral expressions:
+C[T]-NUM semdate
+C[AT]-NUM semyearPl
+C[T]-NUM num_sg_all prn-dem-loc adjmod_n noun-loc-num
+C[ST]-NUM num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num
+C[AT]-NUM num_sg_all adjmod_n noun_loc_num
+C[T]-NUM numsg-acc-nom noun-nom-acc-gen
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen
+C[T]-NUM semyear_loc_gen
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all mod_n noun
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen noun
+C[D]-NUM juohke_prn numeral-not-year noun
+C[_]-NUM noun num_ldep
+C[S]-NUM n-cmp numeral-not-year
+C[AT]-NUM semyear
+C[T]-NUM jahki_n semyear
+C[T]-NUM mod_n jahki_n semyear
+C[T]-NUM jagis semyear
+C[LT]-NUM numeral-not-year prosent
+C[LT]-NUM mod_num numeral-not-year prosent
+C[_]-NUM semyear_gen post
+ 
+Rules for adverbs:
+C[DT]-ADV eret_adv noun_loc
+C[LW]-ADV ovttasráđiid_adv comitative
+C[T]-ADV mielde_adv verb_actio_ess cnjcoo verb_actio_ess
+C[T]-ADV mielde_adv verb_actio_ess
+C[_]-ADV adv
+C[D]-ADV not_pcle adv
+C[DT]-ADV noun-loc eret_adv
+ 
+Rules for P phrases:
+C[W]-PP pr mod_n gen
+C[T]-PP pr gen cnjcoo gen
+C[T]-PP pr gen
+C[_]-PP pr
+C[_]-PP post
+C[_]-PP gen post
+C[_]-PP mod_n gen post
+C[DT]-PP dem-gen ala_post
+C[DT]-PP sem_measr_time sisa_post
+C[DT]-PP numeral-not-year sem_measr_time sisa_post
+C[DT]-PP gen bokte_post
+C[DT]-PP mod_n gen bokte_post
+C[DST]-PP mod_n n-cmp gen bokte_post
+C[DST]-PP n_cmp gen bokte_post
+C[LT]-PP actio_sem_act bokte_post
+C[DT]-PP gen váste_post
+C[DLT]-PP guhkki_adj áigi_n vuollai_post
+C[LT]-PP dat_prn duohken_post
+C[T]-PP numeral-not-year sem_measr_time geahčen_post
+ 
+Rules for other phrases:
+C[TW]-PHR lassi_n_ess noun-ill
+C[DLT]-PHR habitive leat-drop thirst_hunger_n
+C[D]-PHR dattetge_maiddai_adv leat-main-fin dárbu_n
+ 
+Small word classes:
+C[_]-CC cnjcoo
+C[_]-CS cnjsub
+C[_]-CS adv_go go-cnjsub
+C[TW]-CS go-cnjsub vejolaš_adj
+C[_]-IJ interj
+ 
+Technical things:
+C[_]-T comma
+C[_]-T default
+C[_]-T sent
+Rules for verbals:
+C[T]-V negverb
+C[LT]-V noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub
+C[LT]-V noun_nom oaivvildit_vblex ahte_cnjsub
+C[_]-V verb_prfprc
+C[_]-V prsprc
+C[_]-V verb_inf
+C[T]-V conneg
+C[T]-V negverb conneg
+C[T]-V verb_fin
+C[T]-V leat_main_fin
+C[T]-V leat_main_infin
+C[S]-V n_cmp verb_for_cmp
+C[_]-V verb_imp
+C[T]-V verb_actio_ess
+C[T]-V verb_to_adv
+C[T]-V leat_aux verb_to_adv
+C[_]-V mearkkašit_vblex
+C[_]-V leat_aux
+ 
+Rules for predicates:
+C[DLT]-PRED leat_drop noun adj2verb
+C[L]-PRED mearkkašit_vblex ahte_cnjsub
+C[L]-PRED oažžut_vblex diehtu_n_acc
+C[L]-PRED atnit_vblex árvu_n_loc
+C[TW]-PRED leat_prfprc vejolaš_adj
+C[DT]-PRED negverb leat-main-infin pcle vejolaš_adj
+C[TW]-PRED leat-main-fin vejolaš_adj
+C[DT]-PRED negverb leat-main-infin vejolaš_adj
+C[AT]-PRED váikkuhitverb genmod nomact-ill
+C[LW]-PRED boahtit_vblex fápmu_n_ill
+C[AST]-PRED váikkuhit_vblex n_cmp nomact_ill
+C[DL]-PRED čájehit_vblex understanding_n
+C[T]-PRED habitive leat_main_fin pl_words
+C[DL]-PRED beassat_vblex fárrui_adv
+ 
+Rules for adjectives:
+C[_]-A adj
+C[S]-A n_cmp adj
+ 
+Rules for bare nouns:
+C[S]-N n-cmp noun
+C[_]-N n_prop_pers
+ 
+Rules for noun phrases:
+C[T]-NP genmod nomact-ill
+C[ST]-NP n-cmp genmod nomact-ill
+C[ST]-NP mod_n n-cmp genmod nomact-ill
+C[T]-NP mod_n nomact-ill
+C[T]-NP nomact_ill
+C[T]-NP gen nomact-nom
+C[T]-NP mod_n gen nomact-nom
+C[_]-NP mod_n n_not_cmp prop_nom
+C[_]-NP n_not_cmp prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_nom
+C[_]-NP n_not_cmp prop_attr prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_attr prop_nom
+C[LT]-NP buot_prn oktavuohta_n
+C[DLT]-NP olu_adv olu_adv oktavuohta_n
+C[DLT]-NP guhkki_adj áigi_n
+C[_]-NP áhčči_eadni_n ja áhčči_eadni_n
+C[_]-NP mánnu ord_card beaivi_n
+C[LT]-NP uncle_aunt_n ja uncle_aunt_n
+C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n
+C[ST]-NP n-cmp nomact-ill-modn
+C[T]-NP noun
+C[T]-NP prn-ind noun
+C[C]-NP agreement_attr prn_ind noun
+C[CT]-NP agreement-half noun
+C[T]-NP prn-dem noun
+C[T]-NP prn-ind mod_n noun
+C[T]-NP cmp_splitr cnjcoo noun
+C[T]-NP mod_n cmp_splitr cnjcoo noun
+C[ST]-NP prn-ind n-cmp noun
+C[ST]-NP prn-dem n-cmp noun
+C[S]-NP n-cmp n-cmp noun
+C[S]-NP n_cmp n_cmp n_cmp noun
+C[ST]-NP prn_attr n_cmp noun
+C[CS]-NP agreement_attr n_cmp noun
+C[D]-NP adj-adj_comp ja adj-adj_comp noun
+C[T]-NP prn_attr prn_attr noun
+C[C]-NP agreement_attr noun
+C[T]-NP cmp_splitr cnjcoo n-cmp n-not-cmp
+C[LT]-NP mod_n n_not_cmp
+C[T]-NP mod_n mod_n n_not_cmp
+C[T]-NP mod_n mod_n mod_n n_not_cmp
+C[ST]-NP n-cmp mod_n mod_n n_not_cmp
+C[ST]-NP mod_n n-cmp mod_n n_not_cmp
+C[ST]-NP n_cmp mod_n n_not_cmp
+C[ST]-NP mod_n n_cmp n_not_cmp
+C[ST]-NP mod_n mod_n n_cmp n_not_cmp
+C[ST]-NP n_cmp mod_n n_cmp n_not_cmp
+C[_]-NP mánnu ord_card beaivi_n semyear
+C[T]-NP mánnu semyear
+C[A]-NP nounpx
+ 
+Rules for numeral expressions:
+C[T]-NUM semdate
+C[AT]-NUM semyearPl
+C[T]-NUM num_sg_all prn-dem-loc adjmod_n noun-loc-num
+C[ST]-NUM num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num
+C[AT]-NUM num_sg_all adjmod_n noun_loc_num
+C[T]-NUM numsg-acc-nom noun-nom-acc-gen
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen
+C[T]-NUM semyear_loc_gen
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all mod_n noun
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen noun
+C[D]-NUM juohke_prn numeral-not-year noun
+C[_]-NUM noun num_ldep
+C[S]-NUM n-cmp numeral-not-year
+C[AT]-NUM semyear
+C[T]-NUM jahki_n_loc semyear
+C[T]-NUM jahki_n semyear
+C[T]-NUM mod_n jahki_n semyear
+C[LT]-NUM numeral-not-year prosent
+C[LT]-NUM mod_num numeral-not-year prosent
+C[_]-NUM semyear_gen post
+ 
+Rules for adverbs:
+C[DT]-ADV eret_adv noun_loc
+C[LW]-ADV ovttasráđiid_adv comitative
+C[T]-ADV mielde_adv verb_actio_ess cnjcoo verb_actio_ess
+C[T]-ADV mielde_adv verb_actio_ess
+C[_]-ADV adv
+C[D]-ADV not_pcle adv
+C[DT]-ADV noun-loc eret_adv
+ 
+Rules for P phrases:
+C[W]-PP pr mod_n gen
+C[T]-PP pr gen cnjcoo gen
+C[T]-PP pr gen
+C[_]-PP pr
+C[_]-PP post
+C[_]-PP gen post
+C[_]-PP mod_n gen post
+C[DT]-PP dem-gen ala_post
+C[DT]-PP sem_measr_time sisa_post
+C[DT]-PP numeral-not-year sem_measr_time sisa_post
+C[DT]-PP gen bokte_post
+C[DT]-PP mod_n gen bokte_post
+C[DST]-PP mod_n n-cmp gen bokte_post
+C[DST]-PP n_cmp gen bokte_post
+C[LT]-PP actio_sem_act bokte_post
+C[DT]-PP gen váste_post
+C[DLT]-PP guhkki_adj áigi_n vuollai_post
+C[LT]-PP dat_prn duohken_post
+C[T]-PP numeral-not-year sem_measr_time geahčen_post
+ 
+Rules for other phrases:
+C[TW]-PHR lassi_n_ess noun-ill
+C[DLT]-PHR habitive leat-drop thirst_hunger_n
+C[D]-PHR dattetge_maiddai_adv leat-main-fin dárbu_n
+ 
+Small word classes:
+C[_]-CC cnjcoo
+C[_]-CS cnjsub
+C[_]-CS adv_go go-cnjsub
+C[TW]-CS go-cnjsub vejolaš_adj
+C[_]-IJ interj
+ 
+Technical things:
+C[_]-T comma
+C[_]-T default
+C[_]-T sent
+Rules for verbals:
+C[T]-V negverb
+C[LT]-V noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub
+C[LT]-V noun_nom oaivvildit_vblex ahte_cnjsub
+C[_]-V verb_prfprc
+C[_]-V prsprc
+C[_]-V verb_inf
+C[T]-V conneg
+C[T]-V negverb conneg
+C[T]-V verb_fin
+C[T]-V leat_main_fin
+C[T]-V leat_main_infin
+C[S]-V n_cmp verb_for_cmp
+C[_]-V verb_imp
+C[T]-V verb_actio_ess
+C[T]-V verb_to_adv
+C[T]-V leat_aux verb_to_adv
+C[_]-V mearkkašit_vblex
+C[_]-V leat_aux
+ 
+Rules for predicates:
+C[DLT]-PRED leat_drop noun adj2verb
+C[L]-PRED mearkkašit_vblex ahte_cnjsub
+C[L]-PRED oažžut_vblex diehtu_n_acc
+C[L]-PRED atnit_vblex árvu_n_loc
+C[TW]-PRED leat_prfprc vejolaš_adj
+C[DT]-PRED negverb leat-main-infin pcle vejolaš_adj
+C[TW]-PRED leat-main-fin vejolaš_adj
+C[DT]-PRED negverb leat-main-infin vejolaš_adj
+C[AT]-PRED váikkuhitverb genmod nomact-ill
+C[LW]-PRED boahtit_vblex fápmu_n_ill
+C[AST]-PRED váikkuhit_vblex n_cmp nomact_ill
+C[DL]-PRED čájehit_vblex understanding_n
+C[T]-PRED habitive leat_main_fin pl_words
+C[DL]-PRED beassat_vblex fárrui_adv
+ 
+Rules for adjectives:
+C[_]-A adj
+C[S]-A n_cmp adj
+ 
+Rules for bare nouns:
+C[S]-N n-cmp noun
+C[_]-N n_prop_pers
+ 
+Rules for noun phrases:
+C[T]-NP genmod nomact-ill
+C[ST]-NP n-cmp genmod nomact-ill
+C[ST]-NP mod_n n-cmp genmod nomact-ill
+C[T]-NP mod_n nomact-ill
+C[T]-NP nomact_ill
+C[T]-NP gen nomact-nom
+C[T]-NP mod_n gen nomact-nom
+C[_]-NP mod_n n_not_cmp prop_nom
+C[_]-NP n_not_cmp prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_nom
+C[_]-NP n_not_cmp prop_attr prop_attr prop_nom
+C[_]-NP mod_n n_not_cmp prop_attr prop_attr prop_nom
+C[LT]-NP buot_prn oktavuohta_n
+C[DLT]-NP olu_adv olu_adv oktavuohta_n
+C[DLT]-NP guhkki_adj áigi_n
+C[_]-NP áhčči_eadni_n ja áhčči_eadni_n
+C[_]-NP month_n ord_card beaivi_n
+C[LT]-NP uncle_aunt_n ja uncle_aunt_n
+C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n
+C[ST]-NP n-cmp nomact-ill-modn
+C[T]-NP noun
+C[T]-NP prn-ind noun
+C[C]-NP agreement_attr prn_ind noun
+C[CT]-NP agreement-half noun
+C[T]-NP prn-dem noun
+C[T]-NP prn-ind mod_n noun
+C[T]-NP cmp_splitr cnjcoo noun
+C[T]-NP mod_n cmp_splitr cnjcoo noun
+C[ST]-NP prn-ind n-cmp noun
+C[ST]-NP prn-dem n-cmp noun
+C[S]-NP n-cmp n-cmp noun
+C[S]-NP n_cmp n_cmp n_cmp noun
+C[ST]-NP prn_attr n_cmp noun
+C[CS]-NP agreement_attr n_cmp noun
+C[D]-NP adj-adj_comp ja adj-adj_comp noun
+C[T]-NP prn_attr prn_attr noun
+C[C]-NP agreement_attr noun
+C[T]-NP cmp_splitr cnjcoo n-cmp n-not-cmp
+C[LT]-NP mod_n n_not_cmp
+C[T]-NP mod_n mod_n n_not_cmp
+C[T]-NP mod_n mod_n mod_n n_not_cmp
+C[ST]-NP n-cmp mod_n mod_n n_not_cmp
+C[ST]-NP mod_n n-cmp mod_n n_not_cmp
+C[ST]-NP n_cmp mod_n n_not_cmp
+C[ST]-NP mod_n n_cmp n_not_cmp
+C[ST]-NP mod_n mod_n n_cmp n_not_cmp
+C[ST]-NP n_cmp mod_n n_cmp n_not_cmp
+C[T]-NP month_n semyear
+C[_]-NP month_n ord_card beaivi_n semyear
+C[A]-NP nounpx
+ 
+Rules for numeral expressions:
+C[T]-NUM semdate
+C[AT]-NUM semyearPl
+C[T]-NUM num_sg_all prn-dem-loc adjmod_n noun-loc-num
+C[ST]-NUM num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num
+C[AT]-NUM num_sg_all adjmod_n noun_loc_num
+C[T]-NUM numsg-acc-nom noun-nom-acc-gen
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen
+C[T]-NUM semyear_loc_gen
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg prn_dem_sg num_sg_all noun
+C[T]-NUM prn_dem_sg num_sg_all mod_n noun
+C[T]-NUM numsg-acc-nom mod_n noun-nom-acc-gen noun
+C[D]-NUM juohke_prn numeral-not-year noun
+C[_]-NUM noun num_ldep
+C[S]-NUM n-cmp numeral-not-year
+C[AT]-NUM semyear
+C[T]-NUM jahki_n_loc semyear
+C[T]-NUM jahki_n semyear
+C[T]-NUM mod_n jahki_n semyear
+C[LT]-NUM numeral-not-year prosent
+C[LT]-NUM mod_num numeral-not-year prosent
+C[_]-NUM semyear_gen post
+ 
+Rules for adverbs:
+C[DT]-ADV eret_adv noun_loc
+C[LW]-ADV ovttasráđiid_adv comitative
+C[T]-ADV mielde_adv verb_actio_ess cnjcoo verb_actio_ess
+C[T]-ADV mielde_adv verb_actio_ess
+C[_]-ADV adv
+C[D]-ADV not_pcle adv
+C[DT]-ADV noun-loc eret_adv
+ 
+Rules for P phrases:
+C[W]-PP pr mod_n gen
+C[T]-PP pr gen cnjcoo gen
+C[T]-PP pr gen
+C[_]-PP pr
+C[_]-PP post
+C[_]-PP gen post
+C[_]-PP mod_n gen post
+C[DT]-PP dem-gen ala_post
+C[DT]-PP sem_measr_time sisa_post
+C[DT]-PP numeral-not-year sem_measr_time sisa_post
+C[DT]-PP gen bokte_post
+C[DT]-PP mod_n gen bokte_post
+C[DST]-PP mod_n n-cmp gen bokte_post
+C[DST]-PP n_cmp gen bokte_post
+C[LT]-PP actio_sem_act bokte_post
+C[DT]-PP gen váste_post
+C[DLT]-PP guhkki_adj áigi_n vuollai_post
+C[LT]-PP dat_prn duohken_post
+C[T]-PP numeral-not-year sem_measr_time geahčen_post
+ 
+Rules for other phrases:
+C[TW]-PHR lassi_n_ess noun-ill
+C[DLT]-PHR habitive leat-drop thirst_hunger_n
+C[D]-PHR dattetge_maiddai_adv leat-main-fin dárbu_n
+ 
+Small word classes:
+C[_]-CC cnjcoo
+C[_]-CS cnjsub
+C[_]-CS adv_go go-cnjsub
+C[TW]-CS go-cnjsub vejolaš_adj
+C[_]-IJ interj
+ 
+Technical things:
+C[_]-T comma
+C[_]-T default
+C[_]-T sent
 
 
 DEF-CAT NAMING SCHEME:
@@ -779,11 +1924,11 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="goiku" tags="n.*.sg.nom.*"/>
       <cat-item lemma="nealgi" tags="n.*.sg.nom.*"/>
     </def-cat>
-    <def-cat n="áhčči_eadni">
+    <def-cat n="áhčči_eadni_n">
       <cat-item lemma="áhčči" tags="n.*.sg.*"/>
       <cat-item lemma="eadni" tags="n.*.sg.*"/>
     </def-cat>
-    <def-cat n="ahkku_addja">
+    <def-cat n="áhkku_áddjá_n">
       <cat-item lemma="áhkku" tags="n.*.sg.*"/>
       <cat-item lemma="áddjá" tags="n.*.sg.*"/>
     </def-cat>
@@ -2922,7 +4067,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[T]-NUM jagis semyear" c="jagis 2001 : jaepien 2001">
+    <rule comment="C[T]-NUM jahki_n_loc semyear" c="jagis 2001 : jaepien 2001">
       <pattern> 
         <pattern-item n="jahki_n_loc"/>
         <pattern-item n="semyear"/>
@@ -3007,7 +4152,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T]-NP mánnu semyear" c="dievasčoahkkin guovvamánus 2013 juo : dïevestjåanghkoe goevten 2013 joe"> 
+    <rule comment="C[T]-NP month_n semyear" c="dievasčoahkkin guovvamánus 2013 juo : dïevestjåanghkoe goevten 2013 joe"> 
       <pattern> 
         <pattern-item n="month_n"/>
         <pattern-item n="semyear"/>
@@ -3036,7 +4181,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[DT]-PP sem_measr_time sisa" c="jagi sisa : jaepesne"> 
+    <rule comment="C[DT]-PP sem_measr_time sisa_post" c="jagi sisa : jaepesne"> 
       <pattern> 
         <pattern-item n="sem_measr_time"/>
         <pattern-item n="sisa_post"/>
@@ -3058,7 +4203,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[DT]-PP numeral-not-year sem_measr_time sisa" c="Konvenšuvdnašiehtadallamat galget leat čađahuvvon viđa jagi sisa : Konvensjovneraarahtallemh gelkieh vïjhtene jaepesne tjïrrehtovveme"> 
+    <rule comment="C[DT]-PP numeral-not-year sem_measr_time sisa_post" c="Konvenšuvdnašiehtadallamat galget leat čađahuvvon viđa jagi sisa : Konvensjovneraarahtallemh gelkieh vïjhtene jaepesne tjïrrehtovveme"> 
       <pattern> 
         <pattern-item n="numeral_not_year"/>
         <pattern-item n="sem_measr_time"/>
@@ -3087,7 +4232,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[T]-PP numeral-not-year sem_measr_time geahčen"  c="njealji jagi geahčen : njieljie jaepieh daestie"> 
+    <rule comment="C[T]-PP numeral-not-year sem_measr_time geahčen_post"  c="njealji jagi geahčen : njieljie jaepieh daestie"> 
       <pattern> 
         <pattern-item n="numeral_not_year"/>
         <pattern-item n="sem_measr_time"/>
@@ -3148,7 +4293,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[ ]-NP mánnu ord_card beaivi_n semyear" c="guovvamánu 3. beaivvi 2011 lei : goevten 3. biejjien 2011 lij"> 
+    <rule comment="C[ ]-NP month_n ord_card beaivi_n semyear" c="guovvamánu 3. beaivvi 2011 lei : goevten 3. biejjien 2011 lij"> 
       <pattern>
         <pattern-item n="month_n"/>
         <pattern-item n="ord_card"/> <!-- also for dates without dot -->
@@ -3186,7 +4331,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[ ]-NP mánnu ord_card beaivi_n" c="guovvamánu 3. beaivvi : goevten 3. biejjien"> 
+    <rule comment="C[ ]-NP month_n ord_card beaivi_n" c="guovvamánu 3. beaivvi : goevten 3. biejjien"> 
       <pattern> 
         <pattern-item n="month_n"/>
         <pattern-item n="ord_card"/>
@@ -3608,7 +4753,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[AT]-PRED váikkuhitverb genmod nomact-ill to subord.clause" c="Sámediggi háliida váikkuhit ealáhusa ovddideapmái : Saemiedigkie sæjhta dijpedh guktie jieliemasse evtiedåvva"> 
+    <rule comment="C[AT]-PRED váikkuhitverb genmod nomact-ill" c="Sámediggi háliida váikkuhit ealáhusa ovddideapmái : Saemiedigkie sæjhta dijpedh guktie jieliemasse evtiedåvva"> 
       <pattern>
         <pattern-item n="váikkuhit_vblex"/>
         <pattern-item n="genmod"/>
@@ -3649,7 +4794,7 @@ And then there are some categories like "month", with all the months.
 
 
 
-    <rule comment="C[ST]-NP n-cmp nomact-ill-modn to inf" c="Sis leat buoret vejolašvuođat giellaoahppamii : Daj leah buerebh nuepieh gïelem lïeredh"> 
+    <rule comment="C[ST]-NP n-cmp nomact-ill-modn" c="Sis leat buoret vejolašvuođat giellaoahppamii : Daj leah buerebh nuepieh gïelem lïeredh"> 
       <pattern>
         <pattern-item n="n_cmp"/>
         <pattern-item n="nomact_ill_modn"/>
@@ -3719,7 +4864,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
 
-    <rule comment="C[T]-NP genmod nomact-ill to inf" c="dus lea seammás geatnegasvuohta oassálastit aktiivvalaččat ulbmiliid juksamii : dov lea seammasïenten stilleme mealtan eadtjohkelaakan ulmide jaksedh"> 
+    <rule comment="C[T]-NP genmod nomact-ill" c="dus lea seammás geatnegasvuohta oassálastit aktiivvalaččat ulbmiliid juksamii : dov lea seammasïenten stilleme mealtan eadtjohkelaakan ulmide jaksedh"> 
       <pattern>
         <pattern-item n="genmod"/>
         <pattern-item n="nomact_ill"/>
@@ -5124,7 +6269,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[ST] -NPprn-ind n-cmp noun">
+    <rule comment="C[ST]-NP prn-ind n-cmp noun">
       <pattern>
         <pattern-item n="prn_ind"/>
         <pattern-item n="n_cmp"/>
@@ -5206,7 +6351,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[DT]-PP gen váste" c="váste_pp to illative">
+    <rule comment="C[DT]-PP gen váste_post" c="váste_pp to illative">
       <pattern>
         <pattern-item n="gen"/>
         <pattern-item n="váste_post"/>
@@ -5274,7 +6419,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-  <rule comment="C[DLT]-NP guhkki áigi" c="guhkes áiggi : guhkiem">
+  <rule comment="C[DLT]-NP guhkki_adj áigi_n" c="guhkes áiggi : guhkiem">
       <pattern>
         <pattern-item n="guhkki_adj"/>
         <pattern-item n="áigi_n"/>
@@ -5296,7 +6441,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-  <rule comment="C[DLT]-PP guhkki áigi vuollai" c="guhkes áiggi vuollái : guhkiem">
+  <rule comment="C[DLT]-PP guhkki_adj áigi_n vuollai_post" c="guhkes áiggi vuollái : guhkiem">
       <pattern>
         <pattern-item n="guhkki_adj"/>
         <pattern-item n="áigi_n"/>
@@ -5919,11 +7064,11 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
    
-     <rule comment="C[ ]-NP áhčči_eadni ja áhčči_eadni" c="áhčči ja eadni : aehtjie gon tjidtjieh"> 
+     <rule comment="C[ ]-NP áhčči_eadni_n ja áhčči_eadni_n" c="áhčči ja eadni : aehtjie gon tjidtjieh"> 
       <pattern>
-        <pattern-item n="áhčči_eadni"/>
+        <pattern-item n="áhčči_eadni_n"/>
         <pattern-item n="ja"/>
-        <pattern-item n="áhčči_eadni"/>
+        <pattern-item n="áhčči_eadni_n"/>
       </pattern>
       <action>
       
@@ -5950,11 +7095,11 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-     <rule comment="C[LT]-NP ahkku_addja ja ahkku_addja" c="áhkku ja áddjá : aahka gonnoeh aajjah"> 
+     <rule comment="C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n" c="áhkku ja áddjá : aahka gonnoeh aajjah"> 
          <pattern>
-        <pattern-item n="ahkku_addja"/>
+        <pattern-item n="áhkku_áddjá_n"/>
         <pattern-item n="ja"/>
-        <pattern-item n="ahkku_addja"/>
+        <pattern-item n="áhkku_áddjá_n"/>
       </pattern>
       <action>     
          <call-macro n="aehtjie-gon-tjidtjiehParam3"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
@@ -7647,7 +8792,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[T]-V verb_actio_ess to ger" c="mun ledjen lohkamin : manne lim jiehtieminie">
+    <rule comment="C[T]-V verb_actio_ess" c="mun ledjen lohkamin : manne lim jiehtieminie">
       <pattern>
         <pattern-item n="verb_actio_ess"/>
       </pattern>
