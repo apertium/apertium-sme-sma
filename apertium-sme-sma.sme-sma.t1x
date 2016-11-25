@@ -39,6 +39,157 @@ convert-verb-deriv1     =
 
 While awaiting documentation, here is a list of the REGLA rules:
 
+C[T] mod_n jahki_n semyear (removes semyear)
+C[ ] comma
+C[DT] sem_measr_time sisa
+C[DT] numeral-not-year sem_measr_time sisa
+C[DLT] leat_drop noun adj2verb
+C[T] negverb
+C[ ] cnjsub
+C[ ] adv_go go-cnjsub
+C[LT] noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub
+C[LT] noun_nom oaivvildit_vblex ahte_cnjsub
+C[L] mearkkašit_vblex ahte_cnjsub
+C[L] oažžut_vblex diehtu_n_acc
+C[L] atnit_vblex árvu_n_loc
+C[DT] eret_adv noun_loc
+C[ ] verb_prfprc
+C[ ] prsprc
+C[DT] gen bokte_post to case
+C[DT] mod_n gen bokte_post to case
+C[DST] mod_n n-cmp gen bokte_post to case
+C[DST] n_cmp gen bokte_post to case
+C[LT] actio_sem_act bokte_post to case
+C[AT] váikkuhitverb genmod nomact-ill to subord.clause
+C[T] semdate
+C[DT] gen váste
+C[LW] ovttasráđiid_adv comitative
+C[T] genmod nomact-ill to inf
+C[ST] n-cmp nomact-ill-modn to inf
+C[ ] verb_inf
+C[T] conneg
+C[T] negverb conneg
+C[DLT] guhkki áigi vuollai
+C[DLT] guhkki áigi
+C[ ] áhčči_eadni ja áhčči_eadni
+C[ ] áhčči_eadni ja áhčči_eadni
+C[ ] adj
+C[S] n_cmp adj
+C[TW] go-cnjsub vejolaš_adj
+C[TW] leat_prfprc vejolaš_adj
+C[DT] negverb leat-main-infin pcle vejolaš_adj
+C[TW] leat-main-fin vejolaš_adj
+C[DT] negverb leat-main-infin vejolaš_adj
+C[ ] interj
+C[AT] semyearPl
+C[TW] lassi_n_ess noun-ill
+C[ST] n-cmp genmod nomact-ill
+C[ST] mod_n n-cmp genmod nomact-ill
+C[T] mod_n nomact-ill
+C[LW] boahtit_vblex fápmu_n_ill
+C[T] nomact_ill
+C[AST] váikkuhit_vblex n_cmp nomact_ill
+C[T] prn_pers_du pron_D_com
+<rule comment="C[ATW] prn-refl-sg-nom noun-nom
+C[T] gen nomact-nom
+C[T] mod_n gen nomact-nom
+C[ ] mod_n n_not_cmp prop_nom
+C[ ] n_not_cmp prop_attr prop_nom
+C[ ] mod_n n_not_cmp prop_attr prop_nom
+C[ ] n_not_cmp prop_attr prop_attr prop_nom
+C[ ] mod_n n_not_cmp prop_attr prop_attr prop_nom
+C[T] num_sg_all prn-dem-loc adjmod_n noun-loc-num
+C[ST] num_sg_all prn-dem-loc adjmod_n n-cmp noun-loc-num
+C[AT] num_sg_all adjmod_n noun_loc_num
+C[LT] buot_prn oktavuohta_n
+C[DLT] olu_adv olu_adv oktavuohta_n
+C[DL] čájehit_vblex understanding_n
+C[ ] mánnu ord_card beaivi_n
+C[DLT] habitive leat-drop thirst_hunger_n
+C[ ] uncle_aunt_n ja uncle_aunt_n
+C[D] dattetge_maiddai_adv leat-main-fin dárbu_n
+C[W] pr mod_n gen
+C[T] pr gen cnjcoo gen
+C[T] pr gen
+C[T] numsg-acc-nom noun-nom-acc-gen
+C[T] numsg-acc-nom mod_n noun-nom-acc-gen
+C[T] semyear_loc_gen
+C[T] numeral-not-year sem_measr_time geahčen
+C[T] verb_fin
+C[T] leat_main_fin
+C[T] leat_main_infin
+C[T] prn
+C[T] noun
+C[T] prn-ind noun
+C[C] agreement_attr prn_ind noun
+C[CT] agreement-half noun
+C[T] prn_dem_sg num_sg_all noun
+C[T] prn_dem_sg num_sg_all noun
+C[T] prn_dem_sg prn_dem_sg num_sg_all noun
+C[T] prn-dem noun
+C[T] prn-ind mod_n noun
+C[T] prn_dem_sg num_sg_all mod_n noun
+C[T] numsg-acc-nom mod_n noun-nom-acc-gen noun
+C[T] cmp_splitr cnjcoo noun
+C[T] mod_n cmp_splitr cnjcoo noun
+C[S] n-cmp noun
+C[ST] prn-ind n-cmp noun
+C[ST] prn-dem n-cmp noun
+C[S] n-cmp n-cmp noun
+C[S] n_cmp n_cmp n_cmp noun
+C[ST] prn_attr n_cmp noun
+C[CS] agreement_attr n_cmp noun
+C[D] adj-adj_comp ja adj-adj_comp noun
+C[D] juohke_prn numeral-not-year noun
+C[T] prn_attr prn_attr noun
+C[C] agreement_attr noun
+C[ ] cnjcoo
+C[ ] noun num_ldep
+C[T] cmp_splitr cnjcoo n-cmp n-not-cmp
+C[S] n_cmp verb_for_cmp
+C[LT] mod_n n_not_cmp
+C[T] mod_n mod_n n_not_cmp
+C[T] mod_n mod_n mod_n n_not_cmp
+C[ST] n-cmp mod_n mod_n n_not_cmp
+C[ST] mod_n n-cmp mod_n n_not_cmp
+C[ST] n_cmp mod_n n_not_cmp
+C[ST] mod_n n_cmp n_not_cmp
+C[ST] mod_n mod_n n_cmp n_not_cmp
+C[ST] n_cmp mod_n n_cmp n_not_cmp
+C[ ] verb_imp
+C[S] n-cmp numeral-not-year
+C[AT] semyear
+C[T] jahki_n semyear
+C[ ] mánnu ord_card beaivi_n semyear
+C[T] jagis semyear
+C[T] mánnu semyear
+C[T] verb_actio_ess to ger
+C[ ] pr
+C[T] habitive leat_main_fin pl_words
+C[ ] n_prop_pers
+C[T] mielde_adv verb_actio_ess cnjcoo verb_actio_ess
+C[T] mielde_adv verb_actio_ess
+C[ ] default
+C[ ] sent
+C[LT] numeral-not-year prosent
+C[LT] mod_num numeral-not-year prosent
+C[ ] post
+C[ ] gen post
+C[ ] mod_n gen post
+C[ ] semyear_gen post
+C[DT] dem-gen ala_post
+C[LT] dat_prn duohken_post
+C[ ] adv
+C[D] not_pcle adv
+C[DL] beassat_vblex fárrui_adv
+C[T] verb_to_adv
+C[T] leat_aux verb_to_adv
+C[DT] noun-loc eret_adv
+C[ ] mearkkašit_vblex
+C[A] nounpx
+C[ ] leat_aux
+
+
 Section: Nominal groups:
 Rules: pron-pers, pron-refl, pron-rel, pron-dem, pron-indef,
        num, n-cmp n-cmp n-cmp n, n-cmp n-cmp n, n-cmp n, n,
@@ -5473,7 +5624,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[LT] actio_sem_act bokte_post to case" c="lea dehálaš ahte nu oallugat go vejolaš ohppet giela sirdima bokte giellaguddiin : dellie vihkele ahte dan jïjnjesh goh gåarede gïelem lierieh goh jåhta gïeleguedtiejijstie"> 
+    <rule comment="C[LT] actio_sem_act bokte_post to case" c="lea dehálaš ahte nu oallugat go vejolaš ohppet giela sirdima bokte giellaguddiin : dellie vihkele ahte dan jïjnjesh goh gåarede gïelem lierieh gosse jåhta gïeleguedtiejijstie"> 
       <pattern>
         <pattern-item n="actio_sem_act"/>
         <pattern-item n="bokte_post"/>
@@ -5489,7 +5640,7 @@ And then there are some categories like "month", with all the months.
               <tag><lit-tag v="SS"/></tag>
             </tags>
             <lu>
-              <lit v="goh"/>
+              <lit v="gosse"/>
               <lit-tag v="cnjsub"/>
             </lu>
       <b pos="1"/>
