@@ -1,4 +1,4 @@
-echo 'Choose in macros:' > doculist
+echo 'Documenting choose-parts in macros' > doculist
 
 egrep '(<def-macro|"M\[)' apertium-sme-sma.sme-sma.t1x |cut -d '"' -f2 >> doculist
 echo ' ' >> doculist
@@ -6,7 +6,7 @@ echo ' ' >> doculist
 
 echo 'Rules:' >> doculist
 
-grep 'rule c.*\[' apertium-sme-sma.sme-sma.t1x | grep -v '^<\!' |cut -d '"' -f2 |sed 's/\[ \]/\[_\]/'  > rules
+grep 'rule c.*\[' apertium-sme-sma.sme-sma.t1x | grep -v '^<\!' |cut -d '"' -f2   > rules
 echo 'Rules for verbals:' >> doculist
 grep '\-V ' rules |rev | sort | rev >> doculist
 echo ' ' >> doculist
@@ -16,7 +16,7 @@ echo ' ' >> doculist
 echo 'Rules for adjectives:' >> doculist
 grep '\-A ' rules |rev | sort | rev >> doculist
 echo ' ' >> doculist
-echo 'Rules for bare nouns:' >> doculist
+echo 'Rules for bare nouns and pronouns:' >> doculist
 grep '\-N ' rules |rev | sort | rev >> doculist
 echo ' ' >> doculist
 echo 'Rules for noun phrases:' >> doculist

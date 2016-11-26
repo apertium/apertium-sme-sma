@@ -59,8 +59,11 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="dem" tags="ADV.@-F←ADVL-ela"/>
       <cat-item lemma="prn" tags="*.dem.loc"/>
     </def-cat>
-    <def-cat n="mielde">
-      <cat-item lemma="mielde" tags="ADV.*"/>
+    <def-cat n="ektine">
+      <cat-item lemma="ektine" tags="ADV.*"/>
+    </def-cat>
+    <def-cat n="mealtan">
+      <cat-item lemma="mealtan" tags="ADV.*"/>
     </def-cat>
     <def-cat n="cop-mainv-inf">
       <cat-item lemma="cop-mainv" tags="SV.@-FMAINV.inf"/>
@@ -86,8 +89,9 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@←OBJ.*"/>
     </def-cat>
     
-    <def-cat n="NP_Pr">
+    <def-cat n="NP_Advl_l">
         <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@←ADVL"/>
     </def-cat>
     
     <def-cat n="NP_Advl">
@@ -102,10 +106,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="FMainV">
-        <cat-item tags="SV.@+FMAINV"/>
-        <cat-item tags="SV.@+FMAINV.*"/>
-        <cat-item tags="SV.*.@+FMAINV.*"/>
-        <cat-item tags="SV.*.*.@+FMAINV.*"/>
+        <cat-item lemma="vblex" tags="SV.@+FMAINV"/>
+        <cat-item lemma="vblex" tags="SV.@+FMAINV.*"/>
+        <cat-item lemma="vblex" tags="SV.*.@+FMAINV.*"/>
+        <cat-item lemma="vblex" tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
     
     <def-cat n="FAuxV">
@@ -249,10 +253,10 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule> 
 
-   <rule comment="REGLA: Adp NP_Pr">
+   <rule comment="REGLA: Adp NP_Advl_l">
      <pattern>
        <pattern-item n="Adp"/>
-       <pattern-item n="NP_Pr"/>
+       <pattern-item n="NP_Advl_l"/>
      </pattern>
      <action>
        <out>
@@ -265,6 +269,27 @@ And then there are some categories like "month", with all the months.
            <clip pos="2" part="content"/>
            <lit v="}"/>
            <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+
+   <rule comment="REGLA: ektine NP_Advl_l">
+     <pattern>
+       <pattern-item n="ektine"/>
+       <pattern-item n="NP_Advl_l"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="advl"/></get-case-from>
+           <clip pos="2" part="tags"/>
+           <lit v="{"/>
+           <clip pos="2" part="content"/>
+           <b pos="1"/>
+           <clip pos="1" part="content"/>
+           <lit v="}"/>
+           <clip pos="2" part="lemq"/>
          </chunk>
        </out>
      </action>
@@ -317,7 +342,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="mealtan årrodh" > 
       <pattern>
         <pattern-item n="cop-mainv-inf"/>
-        <pattern-item n="mielde"/>
+        <pattern-item n="mealtan"/>
       </pattern>
       <action>
         <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>

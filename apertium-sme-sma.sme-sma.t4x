@@ -102,6 +102,7 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="noun" tags="NP.@SUBJ→.*"/>
         <cat-item lemma="noun" tags="NP.@SUBJ→"/>
         <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.nom"/>
     </def-cat>
     <def-cat n="left_border">
         <cat-item tags="NP.@SUBJ→.*"/>

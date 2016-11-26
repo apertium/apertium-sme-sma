@@ -64,6 +64,16 @@
     <match lemma="juohke" />
        <match lemma="okta" tags="num.*"><select lemma="fïereguhte" tags="prn.*"/></match>
   </rule>
+  <rule weight="1.0">
+       <match lemma="okta" tags="prn.*"><select lemma="akte" tags="num.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="okta" tags="prn.*"><select lemma="guhte" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="okta" tags="prn.*"><select lemma="guhte" tags="prn.*"/></match>
+           <match lemma="máhttit" />
+  </rule>
    <rule weight="1.0">
        <match lemma="geahčen" tags="post.*"><select lemma="luvnie" tags="post.*"/></match>
   </rule>
