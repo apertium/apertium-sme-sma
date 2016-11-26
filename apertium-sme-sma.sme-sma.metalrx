@@ -2223,6 +2223,20 @@
         </match>  
         </rule>   
 
+     <rule weight="0.6">  
+       <match lemma="geavahit">  
+           <select lemma="nuhtjedh"/>   
+        </match>  
+        <match lemma="ruhta"/>  
+       </rule>   
+     <rule weight="0.6">  
+       <match lemma="geavahit">  
+           <select lemma="nuhtjedh"/>   
+        </match>  
+        <match />  
+        <match lemma="ruhta"/>  
+       </rule>   
+
      <rule weight="0.5">  
        <match lemma="geavahit">  
            <select lemma="utnedh"/>   

@@ -756,6 +756,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="liikot_vblex">
       <cat-item lemma="liikot" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="orrut_vblex">
+      <cat-item lemma="orrut" tags="vblex.*"/>
+    </def-cat>
 
     <def-cat n="geahččat_vblex">
       <cat-item lemma="geahččat" tags="vblex.*"/>
@@ -1146,6 +1149,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="verb_actio_ess">
       <cat-item tags="vblex.*.actio.ess.*"/>
     </def-cat>
+    <def-cat n="leat_actio_ess">
+      <cat-item lemma="leat" tags="vblex.*.actio.ess.*"/>
+    </def-cat>
     <def-cat n="verb_actio_gen">
       <cat-item tags="vblex.*.actio.gen.*"/>
     </def-cat>
@@ -1159,7 +1165,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="leat" tags="*.@-FMAINV"/>
     </def-cat>
     <def-cat n="leat_drop">
-      <cat-item lemma="leat" tags="vblex.iv.*.pres.*.*.@+FMAINV"/>
+      <cat-item lemma="leat" tags="vblex.iv.*.*.*.*.@+FMAINV"/>
       <cat-item lemma="leat" tags="*.@-FMAINV"/>
     </def-cat>
     <def-cat n="leat_main_pret">
@@ -3701,6 +3707,27 @@ And then there are some categories like "month", with all the months.
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
             </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="C[DL]-V orrut_vblex leat_actio_ess" c="orru leamen : govloe"> 
+      <pattern>
+        <pattern-item n="orrut_vblex"/>
+        <pattern-item n="leat_actio_ess"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@+FMAINV"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
           </chunk>
         </out>
       </action>
@@ -7323,7 +7350,13 @@ And then there are some categories like "month", with all the months.
       <action>
          <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
+        <let><clip pos="3" side="tl" part="tags"/><concat><clip pos="3" side="tl" part="tags"/>
+        <clip pos="1" side="sl" part="a_tense"/>
+		<lit-tag v="p3"/>        
+		<clip pos="2" side="tl" part="a_nbr"/>
+        </concat></let>
+
+
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -7347,7 +7380,6 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>  
-
 
     <rule comment="C[T]-V leat_main_fin" c="mun ledjen ruovttus : manne lim gåetesne">
       <pattern>
@@ -7378,9 +7410,9 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule>  
 
-    <rule comment="C[T]-V leat_main_infin" c="mun lean leamaš ruovttus : manne orreme gåetesne">
+<!--    <rule comment="C[T]-V leat_main_infin" c="mun lean leamaš ruovttus : manne orreme gåetesne">
       <pattern>
         <pattern-item n="leat_main_infin"/>
       </pattern>
@@ -7405,7 +7437,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule>  -->
 
 
     <rule comment="C[T]-PRED habitive leat_main_fin pl_words" c="sis lei mearridanváldi : daj lin nænnoestimmiereaktah">
@@ -7681,8 +7713,19 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-verb-deriv-1Param">
           <with-param pos="1"/>
         </call-macro>
+        <choose>
+      <when><test><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="pcle"/></equal></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="pcle"/></let></when></choose>
+        <choose><when>
+        <test>
+        <equal><clip pos="1" side="tl" part="lem"/><lit v="lea"/></equal></test>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
+         <let><var n="chunk_name"/><lit v="cop-mainv"/></let></when>
+         <otherwise>
+         <let><var n="chunk_name"/><lit v="inf"/></let>
+         </otherwise></choose>
         <out>
-          <chunk name="inf" case="caseFirstword">
+          <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -7816,7 +7859,7 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <out>
-          <chunk name="vblex" case="caseFirstword">
+          <chunk name="ger" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>

@@ -59,10 +59,11 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="NP"/>
       <cat-item tags="NP.*"/>
     </def-cat>
-    <def-cat n="ADVL_left">
-        <cat-item tags="*.@←ADVL.*"/>
-        <cat-item tags="*.@←ADVL"/>
+    <def-cat n="ADVL_left"> <!-- not inf -->
+        <cat-item tags="ADV.@←ADVL.*"/>
+        <cat-item tags="ADV.@←ADVL"/>
         <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@←ADVL"/>
         <cat-item tags="*.@←ADVL-ela.*"/>
         <cat-item tags="*.@←ADVL-ela"/>
         <cat-item tags="*.@←ADVL-ine.*"/>
@@ -70,7 +71,6 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@-F←ADVL-ine"/>
         <cat-item tags="*.@-F←ADVL-ela"/>
    </def-cat>
-
     <def-cat n="SV_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
         <cat-item tags="NP.@OBJ→"/>
@@ -145,7 +145,8 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@-F←OBJ.*"/>
         <cat-item tags="*.@←OPRED"/>
         <cat-item tags="*.@←OPRED.*"/>
-        <cat-item tags="*.@←ADVL.*"/>
+        <cat-item tags="ADV.@←ADVL.*"/>
+        <cat-item tags="PP.@←ADVL"/>
         <cat-item tags="NP.@←ADVL"/>
         <cat-item tags="ADV.@←ADVL"/>
         <cat-item tags="NP.@←ADVL.*"/>
@@ -155,6 +156,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@←ADVL-ine"/>
         <cat-item tags="*.@-F←ADVL-ine"/>
         <cat-item tags="*.@-F←ADVL-ela"/>
+        <cat-item tags="ADV.@ADVL"/>
     </def-cat>
 
 
@@ -167,8 +169,12 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@-F←ADVL.*"/>
         <cat-item tags="*.@←OPRED"/>
         <cat-item tags="*.@←OPRED.*"/>
-        <cat-item tags="*.@←ADVL.*"/>
-        <cat-item tags="*.@←ADVL"/>
+        <cat-item tags="NP.@←ADVL.*"/>
+        <cat-item tags="NP.@←ADVL"/>
+        <cat-item tags="ADV.@←ADVL.*"/>
+        <cat-item tags="ADV.@←ADVL"/>
+        <cat-item tags="PP.@←ADVL.*"/>
+        <cat-item tags="PP.@←ADVL"/>
         <cat-item tags="NP.@←ADVL.*"/>
         <cat-item tags="*.@←ADVL-ela.*"/>
         <cat-item tags="*.@←ADVL-ela"/>
@@ -316,6 +322,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="ahte">
         <cat-item lemma="ahte" tags="cnjsub.@CVP"/>
+    </def-cat>
+    <def-cat n="prn-dem-pers">
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.pers"/>
     </def-cat>
 
     <def-cat n="prn-dem">
@@ -658,7 +668,7 @@ And then there are some categories like "month", with all the months.
  <rule comment="AHTE PRN-DEM" > <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
       <pattern>
         <pattern-item n="ahte"/>
-        <pattern-item n="prn-dem"/>
+        <pattern-item n="prn-dem-pers"/>
       </pattern>
       <action>
         <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
