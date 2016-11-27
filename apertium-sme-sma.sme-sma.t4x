@@ -94,6 +94,10 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="NP.@SUBJ→"/>
     </def-cat>
+    <def-cat n="NP_Subj_not_prn_r">
+        <cat-item lemma="noun" tags="NP.@SUBJ→.*"/>
+        <cat-item lemma="noun" tags="NP.@SUBJ→"/>
+    </def-cat>
     <def-cat n="NP_Subj_not_Rel_r">
         <cat-item lemma="prn" tags="NP.@SUBJ→.pers"/>
         <cat-item lemma="prn" tags="NP.@SUBJ→.pers.*"/>
@@ -326,6 +330,8 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prn-dem-pers">
         <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
         <cat-item lemma="prn" tags="NP.@SUBJ→.pers"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.nom"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.pers.nom"/>
     </def-cat>
 
     <def-cat n="prn-dem">
@@ -663,6 +669,25 @@ And then there are some categories like "month", with all the months.
 <!--      </action>																				 -->
 <!--    </rule> 																				 -->
 
+
+ <rule comment="AHTE PRN-DEM ii" > <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
+      <pattern>
+        <pattern-item n="ahte"/>
+        <pattern-item n="prn-dem-pers"/>
+        <pattern-item n="iiverb"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="3"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
  <rule comment="AHTE PRN-DEM" > <!-- Ja Ipmil oinnii ahte dat lei buorre. - delete ahte -->
@@ -2079,9 +2104,28 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-     <rule comment="NP_Subj_r iiverb" > <!-- mun in - im manne -->
+     <rule comment="NP_Subj_r iiverb" > <!-- mun in - im  -->
       <pattern>
-        <pattern-item n="NP_Subj_not_Rel_r"/>
+        <pattern-item n="prn-dem-pers"/>
+        <pattern-item n="iiverb"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+     <rule comment="NP_Subj_r iiverb" > 
+      <pattern>
+        <pattern-item n="NP_Subj_not_prn_r"/>
         <pattern-item n="iiverb"/>
       </pattern>
       <action>
@@ -2099,7 +2143,7 @@ And then there are some categories like "month", with all the months.
             <clip pos="1" part="tags"/>
             <clip pos="1" part="chcontent"/>
             <clip pos="1" part="lemq"/>
-          </chunk>
+          </chunk> 
         </out>
       </action>
     </rule>

@@ -927,6 +927,12 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="stuoris" tags="adj.comp.*"/>
       <cat-item lemma="gárži" tags="adj.comp.*"/>
       <cat-item lemma="gallji" tags="adj.comp.*"/>
+      <cat-item lemma="eanet" tags="adj.*.comp.*"/>
+      <cat-item lemma="eanet" tags="adj.*.der_aadv.adv.*"/>
+      <cat-item lemma="unni" tags="adj.*.comp.*"/>
+      <cat-item lemma="stuoris" tags="adj.*.comp.*"/>
+      <cat-item lemma="gárži" tags="adj.*.comp.*"/>
+      <cat-item lemma="gallji" tags="adj.*.comp.*"/>
     </def-cat>
     <def-cat n="ord_card">
       <cat-item tags="adj.ord.*"/>
@@ -2019,24 +2025,19 @@ And then there are some categories like "month", with all the months.
 
     <def-macro n="general-macro-1Param" npar="1">
       <choose>
-        <when c="M[V] main-verb-lemma">
-          <test>
-            <or>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
-            </or>
-          </test>
-          <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
-        </when>
-        <when c="M[V] main-verb-lemma">
+        <when c="M[V] set main-verb-lemma">
           <test>
             <and><or>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@A←"/></equal>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></or>
               <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="vblex"/></equal>
+              <not><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_nomact"/></equal></not>
             </and>
           </test>
-          <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
+          <let><var n="main-verb-lemma"/><clip pos="1" side="tl" part="lem"/></let>
         </when>
       </choose>
      <choose>
@@ -2050,8 +2051,20 @@ And then there are some categories like "month", with all the months.
               </or>
           </and>    
           </test>
-          <let><var n="subj_nbr"/><clip pos="1" side="sl" part="a_nbr"/></let>
+          <let><var n="subj_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
         </when>
+        <when>
+          <test><and>
+              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal></not>
+              <or>
+               <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal>
+              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
+               </or></and>
+        </test>
+          <let><var n="subj_nbr"/><lit v=""/></let>
+        </when>
+      </choose>
+     <choose>
         <when c="M[V] verb_tense_nbrpers">
           <test>
             <or>
@@ -2902,8 +2915,8 @@ And then there are some categories like "month", with all the months.
         </call-macro>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
-          <let><var n="subj_nbr"/><clip pos="1" side="sl" part="a_nbr"/></let>
-<!--        <choose><when>
+ <!--         <let><var n="subj_nbr"/><clip pos="1" side="sl" part="a_nbr"/></let> ???
+        <choose><when>
         <test><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="num"/></equal></test> 
         <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="sg.nom"/></let> 
         </when></choose> -->
@@ -4261,7 +4274,7 @@ And then there are some categories like "month", with all the months.
          </when>
      </choose>
         <out>
-          <chunk name="nounasdf" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -6269,17 +6282,17 @@ And then there are some categories like "month", with all the months.
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
     <choose><when  c="sii huksejit viesuid : dah gåetieh bigkieh">
     <test>
-    <and><equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+    <and><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></and></test>        
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         </when>
-       <when c="okta ohppiin bođii : akte learoehkijstie båetieji">
+<!--       <when c="okta ohppiin bođii : akte learoehkijstie båetieji"> this is in the macro
        <test><and>
        <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal>
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
-              </when>
+              </when> -->
 </choose>
         <out>
           <chunk name="noun" case="caseFirstword">
@@ -7397,6 +7410,13 @@ And then there are some categories like "month", with all the months.
       <when><test><equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="pcle"/></equal></test>
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="pcle"/></let></when>
       </choose> 
+        <choose>
+        <when>
+        <test>         
+        <equal><var n="subj_nbr"/><lit-tag v="sg"/></equal>
+        </test>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>        
+         </when> </choose>
         <out>
           <chunk name="cop-mainv" case="caseFirstword">
             <tags>
@@ -7562,6 +7582,21 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
+        <choose>
+        <when c="Dalle go mii oruimet doppe : Dellie goh mijjieh debpene årroeminie">
+        <test><and>
+        <equal><clip pos="1" side="sl" part="lem"/><lit v="orrut"/></equal>
+        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
+        </and></test>
+        <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.ger"/></let>        
+         </when> </choose>
+        <choose>
+        <when>
+        <test>         
+        <equal><var n="subj_nbr"/><lit-tag v="sg"/></equal>
+        </test>
+        <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>        
+         </when> </choose>
         <out>
           <chunk name="vblex" case="caseFirstword">
             <tags>
@@ -8661,6 +8696,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+          <let><var n="subj_nbr"/><lit v=""/></let>
         <out>
           <chunk name="sent" case="caseFirstword">
             <tags>

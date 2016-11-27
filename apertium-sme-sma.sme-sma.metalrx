@@ -429,6 +429,16 @@
        <match lemma="cuvket" tags="vblex.tv.*"><select lemma="murhkedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
+       <match lemma="dađistaga" tags="adv.*"><select lemma="daamtaj" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="dađistaga" tags="adv.*"><select lemma="ånnetji mænngan" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="dađistaga" tags="adv.*"><select lemma="ånnetji mænngan" tags="adv.*"/></match>
+       <match lemma="go" />
+  </rule>
+  <rule weight="1.0">
        <match lemma="dáhpáhuvvat" tags="vblex.iv.*"><select lemma="sjugniehtovvedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -2367,6 +2377,23 @@
             <select lemma=""/>  
          </match>   
      <match lemma="mo"/>    
+        </rule> 
+
+      <rule weight="0.5">    
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma="nimhtie"/>  
+         </match>   
+        </rule>            
+ 
+       <rule weight="0.6">    
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma="nimhtie"/>  
+         </match>   
+     <or>   
+     <match lemma="šaddat"/>    
+     <match lemma="leat"/>    
+     <match lemma="gártat"/>    
+     </or>   
         </rule> 
  
  <rule weight="1.0">   
