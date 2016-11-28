@@ -2648,34 +2648,34 @@
        </rule>     
 
         <rule weight="1.0"> 
-         <match lemma="dárbu" >
-            <select lemma="daerpiesvoete" tags="n.*.sg.gen.*"/> 
+         <match lemma="dárbu" tags="n.*.sg.gen.*" >
+            <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
         <rule weight="1.0"> 
+         <match lemma="dárbu" tags="n.*.sg.acc.*">
+            <select lemma="daerpiesvoete"/> 
+         </match>
+       </rule>     
+        <rule weight="1.0"  tags="n.*.sg.ill.*"> 
          <match lemma="dárbu" >
-            <select lemma="daerpiesvoete" tags="n.*.sg.acc.*"/> 
+            <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
         <rule weight="1.0"> 
-         <match lemma="dárbu" >
-            <select lemma="daerpiesvoete" tags="n.*.sg.ill.*"/> 
+         <match lemma="dárbu"  tags="n.*.sg.com.*">
+            <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
-        <rule weight="1.0"> 
+        <rule weight="1.0" tags="n.*.pl.*"> 
          <match lemma="dárbu" >
-            <select lemma="daerpiesvoete" tags="n.*.sg.com.*"/> 
-         </match>
-       </rule>     
-        <rule weight="1.0"> 
-         <match lemma="dárbu" >
-            <select lemma="daerpiesvoete" tags="n.*.pl.*"/> 
+            <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
         <rule weight="1.5"> 
          <match tags="*.@→N" />
-         <match lemma="dárbu" >
-            <select lemma="daerpiesvoete" tags="n.*.sg.nom.*"/> 
+         <match lemma="dárbu" tags="n.*.sg.nom.*">
+            <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
        <rule weight="0.5">  
@@ -2684,8 +2684,9 @@
          </match>
        </rule>     
        <rule weight="0.6"> 
-         <match lemma="dárbu" >
-            <select lemma="daerpies" tags="adj.*.sg.nom.*"/> 
+         <match lemma="leat" />
+         <match lemma="dárbu" tags="n.*.sg.nom.*" >
+            <select lemma="daerpies" /> 
          </match>
        </rule>     
         <rule weight="1.0"> 
