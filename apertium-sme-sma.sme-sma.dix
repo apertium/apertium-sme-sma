@@ -567,6 +567,8 @@
     
     <e><p><l>dárbu<s n="n"/></l><r>daerpies<s n="adj"/></r></p></e> <!-- lrx-rules -->
     <e><p><l>dárbu<s n="n"/></l><r>daerpiesvoete<s n="n"/></r></p></e> <!-- lrx-rules -->
+    
+    
     <e><p><l>adjektiiva<s n="n"/></l><r>adjektijve<s n="n"/></r></p></e>
     <e><p><l>agálašvuohta<s n="n"/></l><r>ihkuve<s n="n"/></r></p></e>
     <e><p><l>ahkemearri<s n="n"/></l><r>jaepiemierie<s n="n"/></r></p></e>
@@ -1188,7 +1190,8 @@
       <e><p><l>vásttolaš<s n="adj"/></l><r>tjåadtjoehtæjja<s n="adj"/></r></p></e>
       <e><p><l>badjelaš<s n="adv"/></l><r>åabrelen<s n="adv"/></r></p></e>
 
-      <e><p><l>fysalaš<s n="adj"/></l><r>fysihkeles<s n="adj"/></r></p></e>
+      <e><p><l>fysalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>fysihke<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+      
       <e><p><l>čoahkis<s n="adv"/></l><r>tjåengkesne<s n="adv"/></r></p></e>
       <e><p><l>čoahkis<s n="adv"/></l><r>tjåengkesne<s n="adv"/></r></p></e>
 
@@ -2170,7 +2173,11 @@
      
     <e><p><l>riektedoaimmahat<s n="n"/></l><r>reaktah<s n="n"/></r></p></e>   <!-- Foreløpig ord - til vi finner noe bedre  -->
     <e><p><l>Stáhta<b/>huksendoaimmahat<s n="np"/><s n="sem_org"/><s n="sg"/></l><r>Staatenbægkoeh<s n="np"/><s n="pl"/></r></p></e>
+    
+    <e><p><l>Stáhtavuovddit<s n="np"/></l><r>Staahtenskåakh<s n="np"/></r></p></e>
+    
     <e><p><l>Stáhta<b/>kártadoaimmahat<s n="np"/></l><r>Staaten<b/>Kaarhtevierhkie<s n="np"/></r></p></e>
+    
     <e><p><l>elfápmodoaimmahat<s n="n"/></l><r>el-faamoesijjie<s n="n"/></r></p></e>
     
     <e><p><l>oaivi<s n="n"/></l><r>åejjie<s n="n"/></r></p></e>
@@ -3808,7 +3815,10 @@
     
     <e><p><l>vejolaš<s n="adj"/><s n="sem_dummytag"/><s n="sg"/><s n="nom"/></l><r>buektiehtidh<s n="vblex"/><s n="indic"/><s n="inf"/></r></p></e>
 
-    <e><p><l>fágalaš<s n="ind"/></l><r>faageles<s n="adj"/><s n="attr"/></r></p></e>
+
+    <e><p><l>fágalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>faage<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+
+
 
     <e><p><l>iešguhtet<s n="ind"/></l><r>joekehts<s n="adj"/><s n="attr"/></r></p></e>
 
@@ -4265,30 +4275,42 @@
     <e><p><l>guovttegielalaš<s n="adj"/></l><r>gööktengïeleh<s n="adj"/></r></p></e> <!-- lrx -->
     <e><p><l>guovttegielalaš<s n="adj"/></l><r>saemiestæjja<s n="adj"/></r></p></e>  <!-- bare om mnsk. -->
     
-    <e><p><l>fágalaš<s n="adj"/></l><r>faageles<s n="adj"/></r></p></e>
+    <e><p><l>fágalaš<s n="adj"/></l><r>faage<s n="adj"/></r></p></e>
+    
+    
     <e><p><l>nammafágalaš<s n="adj"/></l><r>nommefaageles<s n="adj"/></r></p></e>
-    <e><p><l>stáhtalaš<s n="adj"/></l><r>staateles<s n="adj"/></r></p></e>
+    
+    <e><p><l>stáhtalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>staate<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    
     <e><p><l>parlamentáralaš<s n="adj"/></l><r>parlamentarihkeles<s n="adj"/></r></p></e>
     <e><p><l>máŋggalágan<s n="adj"/></l><r>gelliesåarts<s n="adj"/></r></p></e>
     <e><p><l>oskkolaš<s n="adj"/></l><r>religijööse<s n="adj"/></r></p></e>
     <e><p><l>doaibmi<s n="adj"/></l><r>funksjovnelle<s n="adj"/></r></p></e>
     
-    <e><p><l>čearddalaš<s n="adj"/></l><r>etnihke<s n="adj"/></r></p></e>
+    <e><p><l>čearddalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>etnihke<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>statistihkalaš<s n="adj"/></l><r>statistihke<s n="adj"/></r></p></e>
     
-    <e><p><l>sosiologalaš<s n="adj"/></l><r>sosiologeles<s n="adj"/></r></p></e>
-    <e><p><l>giellasosiologalaš<s n="adj"/></l><r>gïelesosiologeles<s n="adj"/></r></p></e>
-    <e><p><l>demokráhtalaš<s n="adj"/></l><r>demokraateles<s n="adj"/></r></p></e>
+    <e><p><l>sosiologalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>sosiologeles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l>giellasosiologalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>gïelesosiologeles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l>demokráhtalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>demokraateles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    
+    
     <e><p><l>girkolaš<s n="adj"/></l><r>gyrhkeles<s n="adj"/></r></p></e>
     <e><p><l>sosiála<s n="adj"/></l><r>sosijaale<s n="adj"/></r></p></e>
-    <e><p><l>persovnnalaš<s n="adj"/></l><r>persovneles<s n="adj"/></r></p></e>
-    <e><p><l>psykologalaš<s n="adj"/></l><r>psykologeles<s n="adj"/></r></p></e>
-    <e><p><l>pedagogalaš<s n="adj"/></l><r>pedagogeles<s n="adj"/></r></p></e>
-    <e><p><l>erenoamášpedagogalaš<s n="adj"/></l><r>sjïerepedagogeles<s n="adj"/></r></p></e>
+    
+    <e><p><l>persovnnalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>persovneles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l>psykologalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>psykologeles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l>pedagogalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>pedagogeles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l>erenoamášpedagogalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>sjïerepedagogeles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    
+    
     <e><p><l>heivvolaš<s n="adj"/></l><r>sjïehteles<s n="adj"/></r></p></e>
     <e><p><l>áigeguovdil<s n="adj"/></l><r>daaletje<s n="adj"/></r></p></e>
     <e><p><l>strategalaš<s n="adj"/></l><r>strategeles<s n="adj"/></r></p></e>
-    <e><p><l>giellafágalaš<s n="adj"/></l><r>gïelefaageles<s n="adj"/></r></p></e>
+    
+    <e><p><l>giellafágalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>gïelefaageles<s n="n"/><s n="sg"/><s n="gen"/></r></p></e>
+    
+    
     <e><p><l>vealtameahttun<s n="adj"/></l><r>daerpies<s n="adj"/></r></p></e>
     <e><p><l>mátkkálaš<s n="n"/></l><r>fealadæjja<s n="n"/></r></p></e>
     
@@ -4366,7 +4388,10 @@
     <e><p><l>lahka<s n="adv"/></l><r>lïhkes<s n="adj"/></r></p></e> <!-- comp -->
     <e><p><l>lahka<s n="adj"/></l><r>lïhkes<s n="adj"/></r></p></e>
     <e><p><l>studerenráhkkanahtti<s n="adj"/></l><r>studijeryöjredimmie<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+    
     <e><p><l>fidnofágalaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>barkoefaage<s n="n"/><s n="pl"/><s n="gen"/></r></p></e>
+    
+    
     <e><p><l>ollislaš<s n="adj"/></l><r>ellies<s n="adj"/></r></p></e>
     <e><p><l>relevánta<s n="adj"/></l><r>relevaante<s n="adj"/></r></p></e>
     <e><p><l>árgabeaivválaš<s n="adj"/></l><r>fïerhtenbeajjetje<s n="adj"/></r></p></e>
@@ -4413,7 +4438,12 @@
     <e><p><l>oktiibuot<s n="adv"/></l><r>ektiegaajhke<s n="adv"/></r></p></e>
 
     <e><p><l>olis<s n="post"/></l><r>dïere<s n="post"/></r></p></e> <!-- ML: check this part -->
+    
+    
     <e><p><l>erenoamážit<s n="adv"/></l><r>joekoenlaakan<s n="adv"/></r></p></e> <!-- aave? -->
+   
+    <e><p><l>erenoamážit<s n="adv"/></l><r>eeremes<s n="adv"/></r></p></e> <!-- aave? --> 
+    
     <e><p><l>dábálaččat<s n="adv"/></l><r>sïejhmede<s n="adv"/></r></p></e> <!-- aave? -->
     <e><p><l>olahahttin<s n="adv"/></l><r>jaksoesmïeresne<s n="adv"/></r></p></e> 
     <e><p><l>ovdalis<s n="post"/></l><r>åvtelisnie<s n="post"/></r></p></e>
