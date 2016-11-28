@@ -1,6 +1,6 @@
 echo 'Documenting choose-parts in macros' > doculist
 
-egrep '(<def-macro|"M\[)' apertium-sme-sma.sme-sma.t1x |cut -d '"' -f2 >> doculist
+egrep '(<def-macro|"M\[)' apertium-sme-sma.sme-sma.t1x |cut -d '"' -f2 |sed 's/^/¢/' |sed 's/¢M/M/' |tr '¢' '\n' >> doculist
 echo ' ' >> doculist
 echo ' ' >> doculist
 
