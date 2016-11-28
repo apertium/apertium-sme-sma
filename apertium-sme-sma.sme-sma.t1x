@@ -7582,14 +7582,14 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
-        <choose>
+<!--        <choose>
         <when c="Dalle go mii oruimet doppe : Dellie goh mijjieh debpene årroeminie">
         <test><and>
         <equal><clip pos="1" side="sl" part="lem"/><lit v="orrut"/></equal>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
         </and></test>
         <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.ger"/></let>        
-         </when> </choose>
+         </when> </choose> -->
         <choose>
         <when>
         <test>         
