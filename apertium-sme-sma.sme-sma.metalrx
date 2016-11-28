@@ -372,9 +372,6 @@
        <match lemma="bivdit" tags="vblex.tv.*"><select lemma="maedtedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="borrat" tags="vblex.tv.*"><select lemma="byöpmedidh" tags="vblex.*"/></match>
-  </rule>
-  <rule weight="1.0">
        <match lemma="botkalit" tags="vblex.tv.*"><select lemma="birhkehtidh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -575,7 +572,11 @@
        <match lemma="gaska" tags="n.*"><select lemma="gåhkaldahke" tags="n.*"/></match>
   </rule>
   <rule weight="0.5">
-       <match lemma="gaska" tags="n.*"><select lemma="dajve" tags="n.*"/></match>
+       <match lemma="gaska" tags="n.*"><select lemma="gaske" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="okta"/>
+       <match lemma="gaska" tags="n.*"><select lemma="gaske" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="gaskkas" tags="n.*"><select lemma="gasngese" tags="n.*"/></match>
@@ -1363,7 +1364,12 @@
        <select lemma="byöpmedidh"/>
      </match>
    </rule> 
-   
+     <rule weight="0.5">
+     <match lemma="borrat">
+       <select lemma="byöpmedidh" tags="*.der_nomact.*"/>
+     </match>
+   </rule> 
+  
    
     <rule weight="1.0">
    <match lemma="ge">
@@ -2664,6 +2670,12 @@
         <rule weight="1.0"> 
          <match lemma="dárbu" >
             <select lemma="daerpiesvoete" tags="n.*.pl.*"/> 
+         </match>
+       </rule>     
+        <rule weight="1.5"> 
+         <match tags="*.@→N" />
+         <match lemma="dárbu" >
+            <select lemma="daerpiesvoete" tags="n.*.sg.nom.*"/> 
          </match>
        </rule>     
        <rule weight="0.5">  

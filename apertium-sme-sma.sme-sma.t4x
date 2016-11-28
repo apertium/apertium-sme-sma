@@ -2104,9 +2104,9 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-     <rule comment="NP_Subj_r iiverb" > <!-- mun in - im  -->
+     <rule comment="NP_Subj_not_Rel_r iiverb" > <!-- mun in - im  -->
       <pattern>
-        <pattern-item n="prn-dem-pers"/>
+        <pattern-item n="NP_Subj_not_Rel_r"/>
         <pattern-item n="iiverb"/>
       </pattern>
       <action>
@@ -2118,12 +2118,19 @@ And then there are some categories like "month", with all the months.
             <clip pos="2" part="chcontent"/>
             <clip pos="2" part="lemq"/>
           </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>           
         </out>
       </action>
     </rule>
 
 
-     <rule comment="NP_Subj_r iiverb" > 
+<!--     <rule comment="NP_Subj_r iiverb" > 
       <pattern>
         <pattern-item n="NP_Subj_not_prn_r"/>
         <pattern-item n="iiverb"/>
@@ -2147,7 +2154,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-<!--   <rule comment="IMainV ADVL_left" > VA becomes AV       <pattern>
+   <rule comment="IMainV ADVL_left" > VA becomes AV       <pattern>
         <pattern-item n="IMainV"/>
         <pattern-item n="ADVL_left"/>
       </pattern>
