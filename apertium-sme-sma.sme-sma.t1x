@@ -156,7 +156,7 @@ C[TW]-PRED leat_prfprc vejolaš_adj
 C[DT]-PRED negverb leat-main-infin pcle vejolaš_adj
 C[TW]-PRED leat_main_fin vejolaš_adj
 C[DT]-PRED negverb leat-main-infin vejolaš_adj
-C[DL]-PRED mannat_báhcit_vblex ealáhat_n_ill
+C[LT]-PRED mannat_báhcit_vblex ealáhat_n_ill
 C[LW]-PRED boahtit_vblex fápmu_n_ill
 C[AT]-PRED váikkuhitverb genmod nomact_ill
 C[AST]-PRED váikkuhit_vblex n_cmp nomact_ill
@@ -237,6 +237,7 @@ C[AT]-NUM num_sg_all adjmod_n noun_loc_num
 C[T]-NUM numsg_acc_nom noun_nom_acc_gen
 C[T]-NUM numsg_acc_nom mod_n noun_nom_acc_gen
 C[T]-NUM semyear_loc_gen
+C[CT]-NUM juohke_prn ord_card noun
 C[T]-NUM prn_dem_sg num_sg_all noun
 C[T]-NUM prn_dem_sg num_sg_all noun
 C[T]-NUM prn_dem_sg prn_dem_sg num_sg_all noun
@@ -270,6 +271,7 @@ C[_]-PP pr
 C[_]-PP post
 C[_]-PP gen post
 C[_]-PP mod_n gen post
+C[CT]-PP agreement_attr gen post
 C[DT]-PP dem-gen ala_post
 C[DT]-PP sem_measr_time sisa_post
 C[DT]-PP numeral_not_year sem_measr_time sisa_post
@@ -1253,8 +1255,10 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="muhtin" tags="prn.ind.*"/> 
       <cat-item lemma="buot" tags="prn.ind.*"/> 
       <cat-item lemma="ollu" tags="adj.*"/> 
+      <cat-item lemma="čuovvovaš" tags="adj.*"/> 
       <cat-item lemma="olu" tags="adj.*"/> 
       <cat-item lemma="juohke" tags="prn.ind.*"/> 
+      <cat-item lemma="nubbi" tags="adj.ord.*"/> 
       <cat-item lemma="njealját" tags="adj.ord.*"/> 
 <!--      <cat-item  tags="adj.*.comp.*"/>  -->
     </def-cat>
@@ -1268,6 +1272,7 @@ And then there are some categories like "month", with all the months.
   <section-def-attrs>
 
     <def-attr n="a_npagree_type">
+       <attr-item tags="prn.dem"/>
        <attr-item tags="prn.ind"/>
        <attr-item tags="adj"/>
        <attr-item tags="adj.ord"/>
@@ -3462,6 +3467,42 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    <rule comment="C[CT]-NUM juohke_prn ord_card noun" c="Dát forum lea lágiduvvon juohke nuppi jagi : Daate forume öörnesovveme fïerhten mubpien jaepien jaepien">
+      <pattern>
+        <pattern-item n="juohke_prn"/>
+        <pattern-item n="ord_card"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="agreement-attr-2Param">
+         <with-param pos="1"/>
+         <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b pos="2"/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="C[_]-NUM dii_adv numeral_not_year" c="Doalut álget dii. 11.30 : Arrangemeente aalka ts. 11.30">
       <pattern>
         <pattern-item n="dii_adv"/>
@@ -3834,7 +3875,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="C[DL]-PRED mannat_báhcit_vblex ealáhat_n_ill" c="bázii ealahahkii : voeresbaalhkam dåastoeji"> 
+    <rule comment="C[LT]-PRED mannat_báhcit_vblex ealáhat_n_ill" c="bázii ealahahkii : voeresbaalhkam dåastoeji"> 
       <pattern>
         <pattern-item n="mannat_báhcit_vblex"/>
         <pattern-item n="ealáhat_n_ill"/>
@@ -8496,6 +8537,38 @@ And then there are some categories like "month", with all the months.
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="C[CT]-PP agreement_attr gen post" c="Jienasteapmi dahkkojuvvui čuovvovaš vuogi mielde : Gïelevedteme daan vuekien mietie dorjesovvi">
+      <pattern>
+        <pattern-item n="agreement_attr"/>
+        <pattern-item n="gen"/>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+        <call-macro n="agreement-attr-2Param"><with-param pos="1"/> <with-param pos="2"/></call-macro>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="post" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="PP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
