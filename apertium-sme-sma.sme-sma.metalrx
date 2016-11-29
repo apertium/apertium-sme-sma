@@ -2661,33 +2661,38 @@
             <select lemma="minngebe" /> 
          </match>
        </rule>     
+        <rule weight="0.5"> 
+         <match lemma="dárbu" tags="n.*" >
+            <select lemma="daerpiesvoete"/> 
+         </match>
+       </rule>     
 
-        <rule weight="1.0"> 
+        <rule weight="0.6"> 
          <match lemma="dárbu" tags="n.*.sg.gen.*" >
             <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
-        <rule weight="1.0"> 
+        <rule weight="0.6"> 
          <match lemma="dárbu" tags="n.*.sg.acc.*">
             <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
-        <rule weight="1.0"  tags="n.*.sg.ill.*"> 
-         <match lemma="dárbu" >
+        <rule weight="0.6"> 
+         <match lemma="dárbu" tags="n.*.sg.ill.*" >
             <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
-        <rule weight="1.0"> 
+        <rule weight="0.6"> 
          <match lemma="dárbu"  tags="n.*.sg.com.*">
             <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
-        <rule weight="1.0" tags="n.*.pl.*"> 
+        <rule weight="0.6" tags="n.*.pl.*"> 
          <match lemma="dárbu" >
             <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
-        <rule weight="1.5"> 
+        <rule weight="0.6"> 
          <match tags="*.@→N" />
          <match lemma="dárbu" tags="n.*.sg.nom.*">
             <select lemma="daerpiesvoete"/> 
@@ -2699,7 +2704,7 @@
          </match>
        </rule>     
        <rule weight="0.6"> 
-         <match lemma="leat" />
+         <match lemma="leat" tags="vblex.*" />
          <match lemma="dárbu" tags="n.*.sg.nom.*" >
             <select lemma="daerpies" /> 
          </match>
