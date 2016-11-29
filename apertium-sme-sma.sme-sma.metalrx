@@ -2420,7 +2420,34 @@
          </match>   
         <match lemma="johtu" tags="n.*.sg.ill.*" />   
          </rule>                 
- 
+      <rule weight="0.6">   
+        <match lemma="bidjat">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+        <match />   
+        <match lemma="johtu" tags="n.*.sg.ill.*" />   
+         </rule>                 
+
+      <rule weight="0.5">   
+        <match lemma="bidjat">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+         </rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="bidjat">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+        <match lemma="johtu" tags="n.*.sg.ill.*" />   
+         </rule>                 
+      <rule weight="0.6">   
+        <match lemma="bidjat">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+        <match />   
+        <match lemma="johtu" tags="n.*.sg.ill.*" />   
+         </rule>                 
+
         
 <!--  default: mïnnedh --> 
  <rule weight="1.0">   
