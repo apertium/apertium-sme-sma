@@ -105,8 +105,8 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="prn" tags="NP.@SUBJ→.ind.*"/>
         <cat-item lemma="noun" tags="NP.@SUBJ→.*"/>
         <cat-item lemma="noun" tags="NP.@SUBJ→"/>
-        <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
-        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.nom"/>
+<!--        <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.nom"/> -->
     </def-cat>
     <def-cat n="left_border">
         <cat-item tags="NP.@SUBJ→.*"/>
@@ -115,6 +115,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@←SUBJ"/>
         <cat-item tags="cnjsub.@CVP.*"/>
         <cat-item tags="cnjsub.@CVP"/>
+        <cat-item tags="ADV.@ADVL-ine→"/>
     </def-cat>
 
     <def-cat n="NP_Obj">
@@ -336,6 +337,7 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="prn-dem">
         <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.nom"/>
     </def-cat>
     <def-cat n="Vcop-drop">
         <cat-item lemma="cop-mainv" tags="SV.*.pres"/>
@@ -2102,6 +2104,25 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+     <rule comment="prn-dem iiverb" > <!-- mun in - im  -->
+      <pattern>
+        <pattern-item n="prn-dem"/>
+        <pattern-item n="iiverb"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
      <rule comment="NP_Subj_not_Rel_r iiverb" > <!-- mun in - im  -->

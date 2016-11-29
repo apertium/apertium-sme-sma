@@ -1438,7 +1438,7 @@
        <rule weight="0.6">
    <match lemma="leat" tags="vblex.iv.indic.*.p3.sg.*"/>
    <match lemma="vejolaš" tags="adj.*">
-     <select lemma="gåaradidh" tags="vblex.indic.*"/>
+     <select lemma="gåaradidh" />
    </match>
  </rule>     
 
@@ -1446,7 +1446,7 @@
    <match lemma="ii" tags="vblex.*"/>
    <match lemma="leat" tags="vblex.iv.indic.*.conneg.*"/>
    <match lemma="vejolaš"  tags="adj.*">
-     <select lemma="gåaradidh" tags="vblex.conneg"/>
+     <select lemma="gåaradidh" />
    </match>
  </rule>      
 
@@ -1489,7 +1489,7 @@
        <rule weight="0.6">
    <match lemma="go" tags="cnjsub.*" />
    <match lemma="vejolaš" tags="adj.*.sg.nom.*">
-     <select lemma="gåaradidh" tags="vblex.indic.*"/>
+     <select lemma="gåaradidh" />
    </match>
  </rule>     
 
