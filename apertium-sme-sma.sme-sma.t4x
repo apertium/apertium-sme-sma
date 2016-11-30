@@ -1473,7 +1473,7 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
-    <rule comment="S V SPRED ADVL" > <!--S V SPRED becomes S SPRED V, Dát rehkenastojuvvo oktan guollin. -->
+    <rule comment="left_border IFMainV NP_Spred_l complement" c="Nu šattai stuorit dárbu dasa ahte  : Nimhtie stoerebe daerpiesvoete dïsse sjïdti ahte." > 
       <pattern>
         <pattern-item n="left_border"/>
         <pattern-item n="IFMainV"/>

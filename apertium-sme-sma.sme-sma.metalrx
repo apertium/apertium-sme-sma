@@ -2439,26 +2439,34 @@
   <match lemma="riekta" tags="adj.*" />   
     </rule>    
 
+ <rule weight="0.5">   
+  <match lemma="mannat" >   
+      <select lemma="tjaangedh"/>    
+    </match>    
+    </rule>    
+ <rule weight="0.6">   
+  <match lemma="mannat" >   
+      <select lemma="tjaangedh"/>    
+    </match>    
+  <match lemma="sisa" tags="adv.*" />   
+    </rule>    
+
  
 <!-- dákti- to varianter for bein på sma: daektie for mennesker og måaroe for resten; dyr, fisk etc.  -->    
 <!-- default: måaroe -->  
        <rule weight="1.0"> 
          <match lemma="dákti" >
-            <select lemma="måaroe"/>  <!-- måaroe-->  
-<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
+            <select lemma="måaroe"/> 
          </match>
        </rule>     
 
-<!-- daektie -->
        <rule weight="0.5"> 
          <match lemma="dákti">
-            <select lemma="daektie"/>   <!-- daektie-->
+            <select lemma="daektie"/>  
          </match>
        </rule>     
-<!-- daektie -->
-       <rule weight="0.6">                <!-- daektie-->
+       <rule weight="0.6">                
        <match lemma="olmmoš"/>
-  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
        <match lemma="dákti">
          <select lemma="daektie"/> 
        </match>
@@ -2467,74 +2475,49 @@
 
  <!-- skinn- flere varianter for skinn på sma: elgskinn, bjørnskinn, fiskeskinn etc.-->      
  
-<!-- baektjiedidh-  -->    
 <!-- default: baektjiedidh -->  
        <rule weight="1.0"> 
          <match lemma="bávččastit" >
-            <select lemma="baektjiedidh"/>  <!-- måaroe-->  
-<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
+            <select lemma="baektjiedidh"/>
          </match>
        </rule>     
 
 <!-- baektjiedidh -->
        <rule weight="0.5"> 
          <match lemma="bávččastit">
-            <select lemma="jijledh"/>   <!-- jijledh-->
+            <select lemma="jijledh"/>  
          </match>
        </rule>     
 <!-- baektjiedidh -->
-       <rule weight="0.6">                <!-- bátni-->
+       <rule weight="0.6">              
        <match lemma="bátni"/>
-  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
        <match lemma="bávččastit">
          <select lemma="jijledh"/> 
        </match>
       </rule>    
    
 
-<!-- baektjiedidh-  -->    
-<!-- default: baektjiedidh -->  
-       <rule weight="1.0"> 
-         <match lemma="bávččastit" >
-            <select lemma="baektjiedidh"/>  <!-- baektjiedidh-->  
-<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
-         </match>
-       </rule>     
 
-<!-- baektjiedidh -->
        <rule weight="0.5"> 
          <match lemma="bávččastit">
-            <select lemma="tjaabrodh"/>   <!-- tjaabrodh-->
+            <select lemma="tjaabrodh"/>  
          </match>
        </rule>     
-<!-- baektjiedidh -->
-       <rule weight="0.6">                <!-- čoavji-->
+       <rule weight="0.6">             
        <match lemma="čoavji"/>
-  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
        <match lemma="bávččastit">
          <select lemma="tjaabrodh"/> 
        </match>
       </rule>    
    
-<!-- baektjiedidh-  -->    
-<!-- default: baektjiedidh -->  
-       <rule weight="1.0"> 
-         <match lemma="bávččastit" >
-            <select lemma="baektjiedidh"/>  <!-- baektjiedidh-->  
-<!--            <select lemma="måaroe"></select> alternativt skrevet slik -->  <!-- måaroe--> 
-         </match>
-       </rule>     
 
-<!-- baektjiedidh -->
        <rule weight="0.5"> 
          <match lemma="bávččastit">
-            <select lemma="vaarkedh"/>   <!-- tjaabrodh-->
+            <select lemma="vaarkedh"/>   
          </match>
        </rule>     
-<!-- baektjiedidh -->
-       <rule weight="0.6">                <!-- čoavji-->
+       <rule weight="0.6">            
        <match lemma="sealgi"/>
-  <!--        <match lemma="olmmoš"></match> alternativt skrevet slik:--> 
        <match lemma="bávččastit">
          <select lemma="vaarkedh"/> 
        </match>
