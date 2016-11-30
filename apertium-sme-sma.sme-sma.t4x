@@ -90,7 +90,12 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.MOVE"/>
         <cat-item tags="MOVE.*"/>
     </def-cat>
-    <def-cat n="NP_Subj_r">
+     <def-cat n="öövre">
+        <cat-item lemma="öövre" tags="ADV.@←ADVL-ine"/>
+        <cat-item lemma="öövre" tags="ADV.@←ADVL-ela"/>
+        <cat-item lemma="öövre" tags="ADV.@←ADVL"/>
+    </def-cat>
+   <def-cat n="NP_Subj_r">
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="NP.@SUBJ→"/>
     </def-cat>
@@ -194,6 +199,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="complement">
         <cat-item tags="*.@Num←"/>
         <cat-item tags="*.@Num←.*"/>
+        <cat-item tags="NP.@N←.*"/>
     </def-cat>
 
     <def-cat n="ref_nom">
@@ -563,6 +569,31 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="öövre gosk FMAINV " > <!-- V X X becomes X X V. -->
+      <pattern>     
+        <pattern-item n="öövre"/>
+        <pattern-item n="FMainV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+           <get-case-from pos="1"><lit v="advl"/></get-case-from>
+            <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+              <lit v="^"/>
+              <lit v="gosk"/>
+              <lit-tag v="pcle"/>
+              <lit v="$"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
 
@@ -1433,6 +1464,45 @@ And then there are some categories like "month", with all the months.
             <clip pos="3" part="lemq"/>
           </chunk>
           <b pos="2"/>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="S V SPRED ADVL" > <!--S V SPRED becomes S SPRED V, Dát rehkenastojuvvo oktan guollin. -->
+      <pattern>
+        <pattern-item n="left_border"/>
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="NP_Spred_l"/>
+        <pattern-item n="complement"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="4" part="lemh"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
+            <clip pos="4" part="lemq"/>
+          </chunk>
+          <b pos="3"/>
         <chunk>
             <clip pos="2" part="lemh"/>
             <clip pos="2" part="tags"/>
