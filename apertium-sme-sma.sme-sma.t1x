@@ -897,6 +897,9 @@ And then there are some categories like "month", with all the months.
      <def-cat n="nomact_nom">
       <cat-item tags="vblex.*.der_nomact.n.sg.nom.*"/>
     </def-cat>
+     <def-cat n="nomact_gen">
+      <cat-item tags="vblex.*.der_nomact.n.sg.gen.*"/>
+    </def-cat>
      <def-cat n="nomact_ill_modn">
       <cat-item tags="vblex.*.der_nomact.n.sg.ill.@N←"/>
       <cat-item lemma ="árvvoštallan" tags="n.*.sg.ill.@N←"/>
@@ -3855,6 +3858,30 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    <rule comment="C[DL]-V orrut_vblex adj" c="orrut imaš : ammeslaakan govli"> 
+      <pattern>
+        <pattern-item n="orrut_vblex"/>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="advl" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><lit-tag v="@ADVL"/></tag>
+            </tags>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+               <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+         </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="C[DL]-PRED čájehit_vblex understanding_n" c="čájehit ipmárdusa : guarkedh"> 
@@ -6225,29 +6252,6 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment=" dihte   out"> -->  <!-- verb-actio-gen + dihte - infintive -->
-<!--      <pattern>
-        <pattern-item n="verb_actio_gen"/>
-        <pattern-item n="dihte_post"/>
-      </pattern>
-      <action>
-          <let><clip pos="1" side="tl" part="a_actio"/><lit-tag v="inf"/></let>
-          <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
-         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
-              <let><var n="func"/><clip pos="2" side="sl" part="a_func"/></let>
-       <out>
-          <chunk name="vblex" case="caseFirstword">
-             <tags>
-              <tag><lit-tag v="inf"/></tag>
-              <tag><var n="func"/></tag>
-            </tags>
-           <lu>
-        <clip pos="1" side="tl" part="whole"/>            
-      </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule> -->
 
     <rule comment="C[DT]-ADV eret_adv noun_loc" c="eret Hábmeris : Hábmeristie"> 
       <pattern>
@@ -8668,6 +8672,31 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
+    <rule comment="C[_]-PP nomact_gen dihte_post" c="Mii leat vuolgán su lusa oažžun dihte su muitalit skuvlla álggaheami birra : Mijjieh dan gåajkoe vualkeme åadtjodh dam skuvlen aelkiehtimmien bïjre soptsestidh">
+           <pattern>
+        <pattern-item n="verb_actio_gen"/>
+        <pattern-item n="dihte_post"/>
+      </pattern>
+      <action>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.inf"/></let>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="inf"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+           <lu>
+        <clip pos="1" side="tl" part="whole"/>            
+      </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+
+
+
     <rule comment="C[_]-PP gen post" c="mun čálán girjji birra : manne gærjan bïjre tjaalam">
       <pattern>
         <pattern-item n="gen"/>
@@ -8677,7 +8706,7 @@ And then there are some categories like "month", with all the months.
 
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
-         <chunk name="post" case="caseFirstword">
+         <chunk name="posts" case="caseFirstword">
             <tags>
               <tag><lit-tag v="PP"/></tag>
               <tag><var n="func"/></tag>
