@@ -1255,6 +1255,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="boahtte" tags="adj.*"/> 
     </def-cat>
     <def-cat n="agreement_attr">                             
+      <cat-item lemma="máŋga" tags="num.*"/> 
       <cat-item lemma="muhtun" tags="prn.ind.*"/> 
       <cat-item lemma="muhtin" tags="prn.ind.*"/> 
       <cat-item lemma="buot" tags="prn.ind.*"/> 
@@ -1279,6 +1280,7 @@ And then there are some categories like "month", with all the months.
   <section-def-attrs>
 
     <def-attr n="a_npagree_type">
+       <attr-item tags="num"/>
        <attr-item tags="prn.dem"/>
        <attr-item tags="prn.ind"/>
        <attr-item tags="adj"/>
@@ -4528,6 +4530,29 @@ And then there are some categories like "month", with all the months.
               </lu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[S]-NUM numeral_not_year">
+      <pattern>
+        <pattern-item n="numeral_not_year"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="num" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
               </lu>
             </mlu>
           </chunk>
