@@ -1028,8 +1028,9 @@
   <rule weight="1.0">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="vaeltedh" tags="vblex.*"/></match>
   </rule>
+  
   <rule weight="0.5">
-       <match lemma="váldit" tags="vblex.tv.*"><select lemma="ååktedh" tags="vblex.*"/></match>
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="utnedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.5">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="krööhkedh" tags="vblex.*"/></match>
@@ -1038,8 +1039,8 @@
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="dåastoehtidh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.6">
-       <match lemma="váldit" tags="vblex.tv.*"><select lemma="ååktedh" tags="vblex.*"/></match>
-       <match lemma="duohta" tags="n.*.sg.loc.*"/>
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="utnedh" tags="vblex.*"/></match>
+       <match lemma="duođas"/>
   </rule>
   <rule weight="0.5">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="seatadidh" tags="vblex.*"/></match>
