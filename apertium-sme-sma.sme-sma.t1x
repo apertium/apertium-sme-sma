@@ -2618,7 +2618,7 @@ And then there are some categories like "month", with all the months.
            </let> 
          </when>
          
-        <when c="M[CT] sg.loc to ela.attr and ela">   
+        <when c="M[CT] loc to ela.attr and ela">   
           <test>
             <and>
               <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
@@ -2644,12 +2644,9 @@ And then there are some categories like "month", with all the months.
           </let> 
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let> 
         </when>
-        <when c="M[T] sg.loc to gen">    
+        <when c="M[T] ←hab→ to gen">    
           <test>
-            <and>
-              <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
               <equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal>
-            </and>
           </test>
           <let>
             <clip pos="1" side="tl" part="tags"/>
@@ -3073,33 +3070,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[T]-NUM jahki_n_loc semyear" c="jagis 2001 : jaepien 2001">
-      <pattern> 
-        <pattern-item n="jahki_n_loc"/>
-        <pattern-item n="semyear"/>
-     </pattern>
-      <action>
-        <call-macro n="general-macro-2Param"> <with-param pos="2"/><with-param pos="1"/></call-macro>
-         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let> 
-                          <out>
-          <chunk name="num-noun" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="NP"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
-            <lu>
-              <lit v="jaepie"/>
-              <lit-tag v="n.sg.gen"/>
-            </lu>
-            <b pos="1"/>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
+
     <rule comment="C[T]-NUM mod_n jahki_n semyear" c="gitta jagi 2001 : öövre jaepien 2001"> 
       <pattern> 
         <pattern-item n="mod_n"/>
@@ -4700,7 +4671,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="nouns" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
