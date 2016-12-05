@@ -1,4 +1,12 @@
-Categories for classification:1 = lexical selection (b-a)2 = error in generation (different shape of wordform) (b1-b2)3 = error in choice of form (different wordform selected)(bx-by)4 = word order changed (ab- ba)5 = punctuation6 = word added (0-b)7 = word deleted (b-0) 
+Categories for classification:
+1 = lexical selection (b-a)
+2 = error in generation (different shape of wordform) (b1-b2)
+3 = error in choice of form (different wordform selected)(bx-by)
+
+4 = word order changed (ab- ba)
+5 = punctuation
+6 = word added (0-b)
+7 = word deleted (b-0) 
 
 
 
@@ -19,13 +27,13 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 7        	 > aaj	
 
 1,3,4   goerehtallemh	 |	daejriejibie
-        vuesiehtieh	 |	goerehtallemistie
+       vuesiehtieh	 |	goerehtallemistie
 
 4,3      goerehtallemh <	 
 4,1      vuesiehtieh	 <
 -				     > daejriejibie	
 -					 > goerehtallemistie
-                     
+                   
 3        mej	 |	mij       
 1       Telemarksforskning	 |	Telemarhkhdotkeme
 2       saemiedigkieraerie	 |	Saemiedigkieraerie
@@ -37,11 +45,11 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 7      aaj	 <
 6     	 >	aaj
 3       leah	 |	lea
- ****
+****
 1,4     tseegkesovveme	 <
- 3       jeenjebe	|	jeenjebh
+3       jeenjebe	|	jeenjebh
 -     	  >	sjïdteme    
-         
+        
 7        dan	 <
 7        mij	 <
 6        	 >	lea
@@ -50,12 +58,12 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 1        Telemarksforskningen	 |	Telemarhkhdotkemen
 7        Dïhte	 |
 2        vuesehte	 | Vuesehte
-                     	
+                   	
 ****
 3       dajvh	 |	dajvine
 1        giesijh	 |	eadtjoestieh
 1       jielemeevtiedæmman	 |	  jieliemasshevtiedimmiem 
-              
+            
 4       jeahta	 <
 -       	 >	jeahta
 
@@ -109,16 +117,16 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 7       luajhtadimmesne	 	
 6             >              rijhken
 6             >              raedtie
-        stoerebh	 |	 garrebe  
-        konsekvensh	 |	 dijpie 
+      stoerebh	 |	 garrebe  
+      konsekvensh	 |	 dijpie 
 
-  
+
 ***
 6                       Veele     	 
 7       Dannasinie	 |	
 6        	 >	dan
 6        	 >	sjïeken
-        	 
+      	 
 ***       	 
 1       våaromejielemi	 |	maadthjieliemassi
 7       åadtjodh	 |       
@@ -135,7 +143,7 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 1        jïjnjine	 |	gelline
 7        lea	 |	
 1        stoere	 |	garre
-                   
+                 
 1        leavloe	 |dïedtelgimmie	
 1        jïh | ihke	
 6                   maadthjieliemassi
@@ -149,7 +157,7 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 7        mah	 <
 7        våaromejieliemidie	 <
 7        daarpesjovvieh	 <
-        ¶	 <
+      ¶	 <
 1       eadtjaldovvedh	 |	tjabredh
 1       gaarsje	 |	jïjtjeguedteldh
 3       barkoesijjiejgujmie	 |	barkoesijjieh
@@ -162,10 +170,10 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 
 ****
 
- 6              Jalhts
- 7      Abpe	 |	
-        rïjhken	 <
-        buerebh	 <
+6              Jalhts
+7      Abpe	 |	
+      rïjhken	 <
+      buerebh	 <
 6             abpe
 6       	 >	rïjhken
 6       	 >	mietie
@@ -173,20 +181,20 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 
 1       Dannasinie	 |	Dan
 6       	 >	åvteste
-        		
+      		
 3        mijjesne	 |	mijjen 
 2        stoere	 |	stoerre 
 4       > dïedte
 7       barkedh	 |	
 1        jeenjelaakan |	jïjnjebh
-          <
+        <
 1       åådtjedidh	 |	tseegkedh
 
 ****
 
 7        mah	 |	
 6                        gajhkh
-          sjïehtelovveme	 |	
+        sjïehtelovveme	 |	
 3       mejnie	 |	mah 
 3        lea	 |	leah 
 1        learoe	 |ööhpehtimmiem  
@@ -217,8 +225,8 @@ Categories for classification:1 = lexical selection (b-a)2 = error in generati
 6                 leah
 3     suerkine  >	suerkieh
 6        	 >	gusnie
-        	 
-        	 |	
+      	 
+      	 |	
 3       hæhtadæmman	 < hæhtadidh
 7       orretseegkemidie	 |	 	
 6              orre
