@@ -917,6 +917,9 @@ And then there are some categories like "month", with all the months.
      <def-cat n="nu_adv">
       <cat-item lemma="nu" tags="adv.*"/>
     </def-cat>
+     <def-cat n="mo_adv">
+      <cat-item lemma="mo" tags="adv.*"/>
+    </def-cat>
      <def-cat n="olu_adv">
       <cat-item lemma="olu" tags="adv.*"/>
       <cat-item lemma="ollu" tags="adv.*"/>
@@ -1030,6 +1033,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="comitative">
       <cat-item tags="*.com.*"/>
+    </def-cat>
+    <def-cat n="SUBext">
+      <cat-item tags="n.*.*.*.←ext→.@←SUBJ"/>
+<!--      <cat-item tags="*.nom.@←SUBJ"/> not ext -->
     </def-cat>
     <def-cat n="subpred">
       <cat-item tags="adj.*.@←SPRED"/>
@@ -5651,6 +5658,33 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+    <rule comment="C[TW]-PHR lassi_n_ess noun-ill" c="lassin illative : illative lassin">
+      <pattern>
+        <pattern-item n="mod_n"/>
+        <pattern-item n="lassi_n_ess"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <out>
+          <chunk name="lassin" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="@ADVL"/></tag>
+            </tags>
+           <lu>
+      <clip pos="1" side="tl" part="whole"/>            
+      </lu>
+      <b pos="1"/>
+           <lu>
+        <clip pos="2" side="tl" part="whole"/>            
+      </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
   <rule comment="C[DLT]-NP guhkki_adj áigi_n" c="guhkes áiggi : guhkiem">
       <pattern>
         <pattern-item n="guhkki_adj"/>
@@ -7683,7 +7717,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
-          <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
+          <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let> 
         <out>
           <chunk name="cop-mainv" case="caseFirstword">
             <tags>
@@ -8145,7 +8179,33 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+
+
+
+    <rule comment="C[TW]-CS nu_adv mo_adv" c="nu mo : goh">
+       <pattern>
+        <pattern-item n="nu_adv"/>
+        <pattern-item n="mo_adv"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="cnjsub" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="CS"/></tag>
+              <tag><lit-tag v="@CVP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <!-- SECTION: Adjective groups --> 
+
+
 
  
     <rule comment="C[TW]-CS go_cnjsub vejolaš_adj" c="muitalan nu ollu go vejolaš : soptsestem dan jïjnjem goh gåarede">

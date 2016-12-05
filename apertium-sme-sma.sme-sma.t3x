@@ -62,6 +62,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ektine">
       <cat-item lemma="ektine" tags="ADV.*"/>
     </def-cat>
+    <def-cat n="lassin">
+      <cat-item lemma="lassin" tags="NP.@ADVL"/>
+    </def-cat>
     <def-cat n="mealtan">
       <cat-item lemma="mealtan" tags="ADV.*"/>
     </def-cat>
@@ -73,6 +76,9 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="NP.*"/>
     </def-cat>
     
+    <def-cat n="NPext">
+        <cat-item lemma="noun" tags="NP.@←SUBJ.←ext→"/>
+    </def-cat>
     <def-cat n="NP_Subj">
         <cat-item tags="NP.@SUBJ→.*"/>
         <cat-item tags="NP.@←SUBJ.*"/>
@@ -274,6 +280,26 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
+   <rule comment="REGLA: NPext lassin">
+     <pattern>
+       <pattern-item n="NPext"/>
+       <pattern-item n="lassin"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="advl"/></get-case-from>
+           <clip pos="2" part="tags"/>
+           <lit v="{"/>
+           <clip pos="2" part="content"/>
+           <b pos="1"/>
+           <clip pos="1" part="content"/>
+           <lit v="}"/>
+           <clip pos="2" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
    <rule comment="REGLA: ektine NP_Advl_l">
      <pattern>
        <pattern-item n="ektine"/>
