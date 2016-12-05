@@ -121,6 +121,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="cnjsub.@CVP.*"/>
         <cat-item tags="cnjsub.@CVP"/>
         <cat-item tags="ADV.@ADVL-ine→"/>
+        <cat-item tags="*.@ADVL→"/>
     </def-cat>
 
     <def-cat n="NP_Obj">
@@ -132,6 +133,9 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@←OBJ"/>
         <cat-item tags="NP.@-F←OBJ"/>
         <cat-item tags="NP.@-F←OBJ.*"/>
+    </def-cat>
+    <def-cat n="NP_Subj_l_notext">
+        <cat-item tags="*.@←SUBJ"/>
     </def-cat>
     <def-cat n="NP_Subj_l">
         <cat-item tags="*.@←SUBJ"/>
@@ -348,6 +352,10 @@ And then there are some categories like "month", with all the months.
     <def-cat n="Vcop-drop">
         <cat-item lemma="cop-mainv" tags="SV.*.pres"/>
         <cat-item lemma="cop-mainv" tags="SV.*.ger"/>
+    </def-cat>
+    <def-cat n="cop-mainv">
+        <cat-item lemma="cop-mainv" tags="SV.*"/>
+        <cat-item lemma="cop-mainv" tags="SV.*"/>
     </def-cat>
     <def-cat n="Vcopaux-drop">
         <cat-item lemma="cop-auxv" tags="SV.*.pres"/>
@@ -1317,10 +1325,10 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-<!--    <rule comment="MAINV SUBJ" > 
+<!--    <rule comment="cop-mainv SUBJ" > 
       <pattern>
-        <pattern-item n="FMainV"/>
-        <pattern-item n="NP_Subj_l"/>
+        <pattern-item n="cop-mainv"/>
+        <pattern-item n="NP_Subj_l_notext"/>
       </pattern>
       <action>
         <out>
@@ -1339,7 +1347,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule> -->
+    </rule>  -->
 
     <rule comment="MAINV SUBJ ADVL" > 
       <pattern>

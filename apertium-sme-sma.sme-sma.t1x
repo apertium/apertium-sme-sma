@@ -998,7 +998,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="jahki" tags="n.*"/>
     </def-cat>
     <def-cat n="der_nomact">
-      <cat-item tags="vblex.der_nomact.n.sg.gen.*"/>
+      <cat-item tags="vblex.*.der_nomact.n.sg.gen.*"/>
     </def-cat>
     <def-cat n="uncle_aunt_n">
       <cat-item lemma="muoŧŧá" tags="n.*.sg.*"/>
@@ -5911,7 +5911,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[LT]-PP der_nomact bokte_post" c="lea dehálaš ahte nu oallugat go vejolaš ohppet giela sirdima bokte giellaguddiin : dellie vihkele ahte dan jïjnjesh goh gåarede gïelem lierieh gosse jåhta gïeleguedtiejijstie"> 
+    <rule comment="C[LT]-PP der_nomact bokte_post" c="lea dehálaš ahte nu oallugat go vejolaš ohppet giela sirdima bokte giellaguddiin : dellie vihkele ahte dan jïjnjesh goh gåarede gïelem lierieh gosse gïeleguedtiejijstie sarta"> 
       <pattern>
         <pattern-item n="der_nomact"/>
         <pattern-item n="bokte_post"/>
@@ -5922,7 +5922,7 @@ And then there are some categories like "month", with all the months.
          
               <let><var n="func"/><clip pos="2" side="sl" part="a_func"/></let>
        <out>
-          <chunk name="subord" case="caseFirstword">
+          <chunk name="cnjsub" case="caseFirstword">
              <tags>
               <tag><lit-tag v="SS"/></tag>
             </tags>
@@ -5930,7 +5930,13 @@ And then there are some categories like "month", with all the months.
               <lit v="gosse"/>
               <lit-tag v="cnjsub"/>
             </lu>
+            </chunk>
       <b pos="1"/>
+          <chunk name="vblex">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@+FMAINV"/></tag>
+            </tags>
            <lu>
         <clip pos="1" side="tl" part="lem"/>            
               <lit-tag v="vblex.indic.pres.p3.sg"/>
@@ -7676,9 +7682,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="mearkkašit_vblex"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-1Param">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+          <let><var n="main-verb-lemma"/><clip pos="1" side="sl" part="lem"/></let>
         <out>
           <chunk name="cop-mainv" case="caseFirstword">
             <tags>
