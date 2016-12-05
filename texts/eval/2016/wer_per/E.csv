@@ -26,6 +26,17 @@ Statistics about the translation of unknown words
 -------------------------------------------------------
 Number of unknown words which were free rides: 0
 Percentage of unknown words that were free rides: 0%
+
+
+Categories for classification:
+1 = lexical selection
+2 = error in generation (different shape of wordform)
+3 = error in choice of form (different wordform selected)
+4 = word order changed
+5 = punctuation
+6 = word added
+7 = word deleted
+
         Buerieh	 |	Buerie
         evtiedimmienuepieh	 |	evtiedimmiehille
         Minngebe	 |	Minngemes
