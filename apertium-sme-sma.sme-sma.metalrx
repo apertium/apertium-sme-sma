@@ -321,7 +321,13 @@
        <match lemma="bivdit" tags="vblex.tv.*"><select lemma="maedtedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="botkalit" tags="vblex.tv.*"><select lemma="birhkehtidh" tags="vblex.*"/></match>
+       <match lemma="geatnegasvuohta" tags="n.*"><select lemma="dïedte" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="geatnegasvuohta" tags="n.*"><select lemma="stilleme" tags="n.*"/></match> <!-- legg til regler  -->
+  </rule>
+  <rule weight="1.0">
+       <match lemma="botkalit" tags="vblex.tv.*"><select lemma="birhkehtidh" tags="vblex.*"/></match> 
   </rule>
   <rule weight="1.0">
        <match lemma="buorre" tags="adj.*"><select lemma="buerie" tags="adj.*"/></match>
