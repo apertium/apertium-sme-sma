@@ -146,6 +146,17 @@ And then there are some categories like "month", with all the months.
         <cat-item lemma="gitta" tags="Adv.*"/>
     </def-cat>
     
+    <def-cat n="prn-dem">
+      <cat-item lemma="prn" tags="NP.@←ADVL.dem"/>
+      <cat-item lemma="prn" tags="NP.@←ADVL-ine.dem"/>
+      <cat-item lemma="prn" tags="NP.@←ADVL-ela.dem"/>
+      <cat-item lemma="prn" tags="NP.@←ADVL.dem.*"/>
+      <cat-item lemma="prn" tags="NP.@←ADVL-ine.dem.*"/>
+      <cat-item lemma="prn" tags="NP.@←ADVL-ela.dem.*"/>
+    </def-cat>
+    <def-cat n="ahte">
+        <cat-item lemma="ahte" tags="cnjsub.@CVP"/>
+    </def-cat>
     <def-cat n="Pcle">
         <cat-item tags="Pcle.@PCLE"/>
     </def-cat>
@@ -269,6 +280,26 @@ And then there are some categories like "month", with all the months.
          <chunk>
            <get-case-from pos="1"><lit v="adpp"/></get-case-from>
            <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+   <rule comment="prn-dem ahte" c="dasa ahte">
+     <pattern>
+       <pattern-item n="prn-dem"/>
+       <pattern-item n="ahte"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="dem-ahte"/></get-case-from>
+           <clip pos="2" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
            <b pos="1"/>
