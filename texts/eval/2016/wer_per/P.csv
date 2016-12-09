@@ -37,25 +37,25 @@ Categories for classification:
 6 = word added
 7 = word deleted
 
-6,7       Buerieh	 |	Saemien
+1       Buerieh	 |	Saemien
 7        evtiedimmienuepieh	 <
 7        saemien	 <
 6        	 >	buerie
 6        	 >	nuepie
 6       	 >	evtiedæmman
-6,7        Minngebe	 |	Daah
-6,7        vïjhtene	 |	minngemes
-6,7        jaepesne	 |	vïjhte
+1        Minngebe	 |	Daah
+1        vïjhtene	 |	minngemes
+1        jaepesne	 |	vïjhte
 6        	 >	jaepieh
 1       stabiliseereme	 |	tjoedtjestamme
-6,7        dïsse	 |	jïh
-6,7        lissine	 |	daelie
-6,7        jïjnje	 |	aaj
-6,7        mearoesaemien	 |	maahta
-6,7        tjïelth	 |	vuejnedh
-6,7        demtieh	 |	guktie
+1        dïsse	 |	jïh
+1        lissine	 |	daelie
+1        jïjnje	 |	aaj
+1        mearoesaemien	 |	maahta
+1        tjïelth	 |	vuejnedh
+1        demtieh	 |	guktie
 7       ahte	 <
-6,7        læssene	 |	gellie
+1        læssene	 |	gellie
 6        	 >	tjïeltine
 6        	 >	mearoesaemien
 6        	 >	dajvine
@@ -63,149 +63,149 @@ Categories for classification:
 7        goerehtallemh	 <
 7        vuesiehtieh	 <
 7        mej	 <
-6,7        tjïrrehtamme	 |	sov
-6,7        Saemiedigkien	 |	joekehtimmine
-6,7        åvteste	 |	vuesehte
+1        tjïrrehtamme	 |	sov
+1        Saemiedigkien	 |	joekehtimmine
+1        åvteste	 |	vuesehte
 6       	 >	maam
 6        	 >	Saemiedægkan
 6        	 >	dorjeme
-6,7        saemiedigkieraerie	 |	Daestie
+1        saemiedigkieraerie	 |	Daestie
 6        	 >	Saemiedigkieraerije
-6,7        lea	 |	joekoen
-6,7        dan	 |	geerjene
+1        lea	 |	joekoen1
+1        dan	 |	geerjene
 7       madtjeles	 <
 7        daejnie	 <
 7        evtiedimmine	 <
-6,7        Goh	 |	Jis
-6,7        gïehtjedibie	 |	vuartasjibie
+1        Goh	 |	Jis
+1        gïehtjedibie	 |	vuartasjibie
 7        ,	 <
-6,7        lea	 |	jielemh
-6,7        buerie	 |	daejnie
+1        lea	 |	jielemh
+1        buerie	 |	daejnie
 7        evtiedimmie	 <
 7       aaj	 <
 3        dajvi	 |	dajvine
-6,7        jielemejieliemisnie	 |	buerie
-6       	 >	evtiedamme
-        2010:n	 |	2010
-6,7        raejeste	 |	jaepijste
-6,7        leah	 |	jienebh
+1        jielemejieliemisnie	 |	buerie
+6       	 >	evtiedamme 
+?        2010:n	 |	2010
+1        raejeste	 |	jaepijste
+1        leah	 |	jienebh
 7       tseegkesovveme	 <
 7       jeenjebe	 <
 6        	 >	tseegkesovveme
-        dan	 |	vuertiemisnie
+1       dan	 |	vuertiemisnie
 7        mij	 <
 7        lij	 <
-        vuartasovveme	 <
+7        vuartasovveme	 <
 6        	 >	buerie
 7       positijve	 <
 1        Telemarksforskningen	 |	Telemarkforskningen
-        ahte	 |	dle
-        gåarede	 |	nuepie
-        jielemejielemen	 |	jielemem
-        evtiedimmiem	 |	dejnie
-        dijpedh	 |	skreejrehtidh
-        Dïhte	 |	Vuesehte
-        vuesehte	 |	guktie
-        ahte	 <
-        giesijh	 |	jielemeevtiedimmiem
-        jielemeevtiedæmman	 |	rebpieldieh
-        jeahta	 <
+1        ahte	 |	dle
+1        gåarede	 |	nuepie
+1        jielemejielemen	 |	jielemem
+1       evtiedimmiem	 |	dejnie
+1       dijpedh	 |	skreejrehtidh
+1       Dïhte	 |	Vuesehte
+1       vuesehte	 |	guktie
+7        ahte	 <
+1       giesijh	 |	jielemeevtiedimmiem
+1       jielemeevtiedæmman	 |	rebpieldieh
+7        jeahta	 <
 6        	 >	jeahta
-        Negatijve	 |	Gosse
-        rïjhketrende	 |	jielemh
-        garrebelaakan	 |	abpe
+1        Negatijve	 |	Gosse
+1       rïjhketrende	 |	jielemh
+1       garrebelaakan	 |	abpe
 6        	 >	laantesne
 6        	 >	geajpene
 6        	 >	dellie
 6        	 >	aaj
-        dajvh	 |	dajvine
-        dijpie	 |	gearvene
-        Darhkan	 |	Læjhkan
-        strerkiestamme	 |	maadthjielemi
+3       dajvh	 |	dajvine
+1       dijpie	 |	gearvene
+1       Darhkan	 |	Læjhkan
+1       strerkiestamme	 |	maadthjielemi
 6        	 >	gaavhtan
 6        	 >	strerkestem
         våaromejielemh	 |	goerehtalleme
 6        ,	 |	vuesehte
 6        	 >	guktie
-        teknihkeles	 |	teknihke
-        goerehtimmien	 |	2000
-        mietie	 <
+1       teknihkeles	 |	teknihke
+1       goerehtimmien	 |	2000
+7        mietie	 <
 7        17	 <
-        proseentine	 <
-        2000:n	 <
-        luajhtadamme	 |	17%
+7        proseentine	 <
+7       2000:n	 <
+?       luajhtadamme	 |	17%
 6        	 >	(
 6        	 >	prosentigujmie
 6        	 >	)
 6        	 >	åhtjanamme
-        Mijjieh	 |	Strerkiestibie
-        joekoenlaakan	 |	sjïere
-        strerkiestamme	 |	gosse
-        goh	 |	daejrebe
-        daejriejibie	 |	dah
-        ahte	 |	maadthjielemh
-        våaromejielemh	 |	saemien
-        leah	 |	dajvine
+1       Mijjieh	 |	Strerkiestibie
+1       joekoenlaakan	 |	sjïere
+1       strerkiestamme	 |	gosse
+1       goh	 |	daejrebe
+1       daejriejibie	 |	dah
+1       ahte	 |	maadthjielemh
+1       våaromejielemh	 |	saemien
+1       leah	 |	dajvine
 3       jarnge	 |	jarngesne
 6        	 >	joekoen
 7        boelhke	 <
 7        saemien	 <
 7        dajvi	 <
 7        jielemejieliemisnie	 <
-6,7     Daate	 |	Naemhtie
+1        Daate	 |	Naemhtie
 7        lea	 <
 3        rïjhkem	 |	laantesne
-6,7       *	 |	jïh
-6,7        sodju	 |	gosse
-6,7        ,	 |	daejrebe
+1       *	 |	jïh
+1        sodju	 |	gosse
+1        ,	 |	daejrebe
 7       mohte	 <
 7        dannasinie	 <
 7        goh	 <
-6,7        stoerebe	 |	stuerebe
-6,7        proseenteboelhke	 |	prosente
-6,7        lea	 |	göölijijstie
+1        stoerebe	 |	stuerebe
+1        proseenteboelhke	 |	prosente
+1        lea	 |	göölijijstie
 6        göölijh	 <
-        laanteburrieh	 |	laanteburrijijstie
-        bovtsesteerijh	 |	båatsoeburrijijstie
-        ,	 <
-        lea	 |	dejtie
-        luajhtadimmesne	 <
-        stoerebh	 <
-        konsekvensh	 <
+3        laanteburrieh	 |	laanteburrijijstie
+1        bovtsesteerijh	 |	båatsoeburrijijstie
++        ,	 <
+1        lea	 |	dejtie
+7       luajhtadimmesne	 <
+7        stoerebh	 <
+7        konsekvensh	 <
 6        	 >	sagki
 6        	 >	nåakebe
 6       	 >	sjædta
-        voejhkele	 |	daelie
-        våaromejielemi	 |	barka
-        mieriekrïevemh	 |	sæjhta
-        åadtjodh	 |	maadthjielemi
-        bueriedovvedh	 |	mieride
+1       voejhkele	 |	daelie
+1       våaromejielemi	 |	barka
+1       mieriekrïevemh	 |	sæjhta
+1       åadtjodh	 |	maadthjielemi
+1       bueriedovvedh	 |	mieride
 6,7        ,	 |	bueriemdidh
 6,7        mohte	 |	,
-        ij	 |	daejrebe
-        daarpesjh	 |	gellie
+1       ij	 |	daejrebe
+1       daarpesjh	 |	gellie
 7        geakasjidh	 <
 7        ahte	 <
 7        jïjnjine	 <
-        lea	 |	jeenjesh
-        stoere	 |	mah
-        leavloe	 |	vaatoem
-6,7        jïh	 |	,
-        gaahtjeme	 |	laanteste
-        daj	 |	sijhtieh
-        goelpeneståaroej	 |	behtjiedidh
+1        lea	 |	jeenjesh
+1        stoere	 |	mah
+1        leavloe	 |	vaatoem
+?        jïh	 |	,
+1       gaahtjeme	 |	laanteste
+1       daj	 |	sijhtieh
+1       goelpeneståaroej	 |	behtjiedidh
 7        nelhtie	 <
-        våaromejieliemidie	 |	maadthjieliemidie
-        daarpesjovvieh	 |	daerpies
-        Tjoeveribie	 |	Tjoevrebe
-        eadtjaldovvedh	 <
-        ,	 |	stinkes
-        gaarsje	 |	barkoesijjieh
-        barkoesijjiejgujmie	 |	skreejriehtidh
-        2000:n	 |	2000
-        årrodh	 |	dah
+1       våaromejieliemidie	 |	maadthjieliemidie
+1       daarpesjovvieh	 |	daerpies
+1       Tjoeveribie	 |	Tjoevrebe
+7       eadtjaldovvedh	 <
+?        ,	 |	stinkes
+1       gaarsje	 |	barkoesijjieh
+1       barkoesijjiejgujmie	 |	skreejriehtidh
+?        2000:n	 |	2000
+1       årrodh	 |	dah
 6        	 >	barkoesijjieh
-        jielemejielemen	 |	jieliemisnie
+1       jielemejielemen	 |	jieliemisnie
 7        barkoesijjiej	 <
 7        låhkoe	 <
 7        luajhtadamme	 <
@@ -216,48 +216,48 @@ Categories for classification:
 6        	 >	prosentigujmie
 6        	 >	)
 6        	 >	åhtjanamme
-        rïjhken	 |	laantesne
-        buerebh	 |	jis
-        abpe	 |	15%
-        15	 |	(
-        proseenth	 |	prosentigujmie
-        læssanimmie	 |	)
+1       rïjhken	 |	laantesne
+1       buerebh	 |	jis
+1       abpe	 |	15%
+?        15	 |	(
+3       proseenth	 |	prosentigujmie
+?        læssanimmie	 |	)
 6        	 >	læssasnamme
-        Dannasinie	 |	Dan
-        lea	 |	åvteste
-        mijjesne	 |	mijjese
-        barkedh	 |	haestemh
-        jeenjelaakan	 |	gellebh
-        åådtjedidh	 |	tseegkesh
-        mah	 |	,
-        sjïehtelovveme	 |	mej
-        mejnie	 |	leah
-        lea	 |	ööhpehtimmiem
-        learoe	 <
-        seammasïenten	 |	seamman
-        tseegkedh	 |	aejkien
-        eadtjaldehtiejibie	 <
-        suerkine	 |	suerkiej
+1       Dannasinie	 |	Dan
+1       lea	 |	åvteste
+3       mijjesne	 |	mijjese
+1       barkedh	 |	haestemh
+1        jeenjelaakan	 |	gellebh
+1        åådtjedidh	 |	tseegkesh
+?        mah	 |	,
+1       sjïehtelovveme	 |	mej
+1        mejnie	 |	leah
+1       lea	 |	ööhpehtimmiem
+7       learoe	 <
+1        seammasïenten	 |	seamman
+1        tseegkedh	 |	aejkien
+7       eadtjaldehtiejibie	 <
+3        suerkine	 |	suerkiej
 6        	 >	mietie
 6        	 >	eadtjaldehtedh
-        jeahta	 <
+7        jeahta	 <
 6        	 >	jeahta
-        Dïhte	 |	Dellie
+1       Dïhte	 |	Dellie
 6        	 >	vuesehte
-        eadtjaldovvemem	 |	skreejrehtæmman
-        kultuvrejielemigujmie	 |	kultuvrejielemidie
-        tjïelkeste	 |	goh
+1       eadtjaldovvemem	 |	skreejrehtæmman
+3       kultuvrejielemigujmie	 |	kultuvrejielemidie
+1       tjïelkeste	 |	goh
 6        	 >	fïelestalleme
-        fealadimmiejielemigujmie	 |	design
-        designine	 <
-        vætnojne	 |	duehtie
-        dajven	 |	lïhkesdajvebeapmoe
-        beapmojne	 <
-        vijrebe	 |	darjomes
-        darjoeminie	 |	dïsse
+1       fealadimmiejielemigujmie	 |	design
+7        designine	 <
+1       vætnojne	 |	duehtie
+1       dajven	 |	lïhkesdajvebeapmoe
+7        beapmojne	 <
+1       vijrebe	 |	darjomes
+1       darjoeminie	 |	dïsse
 6       	 >	mah
-        suerkine	 |	orreme
-        hæhtadæmman	 |	gosse
+1       suerkine	 |	orreme
+1       hæhtadæmman	 |	gosse
 6       	 >	jielemh
 6        	 >	orrestehtedh
-        orretseegkemidie	 |	tseegkedh
+1        orretseegkemidie	 |	tseegkedh
