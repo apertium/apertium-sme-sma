@@ -57,7 +57,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="prndem-ela">
       <cat-item lemma="dem" tags="ADV.@-F←ADVL-ela"/>
-      <cat-item lemma="prn" tags="*.dem.loc"/>
+      <cat-item lemma="prn" tags="*.dem.ela"/>
     </def-cat>
     <def-cat n="ektine">
       <cat-item lemma="ektine" tags="ADV.*"/>
@@ -87,6 +87,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="NP_Subj_l">
         <cat-item tags="NP.@←SUBJ"/>
         <cat-item tags="NP.@←SUBJ.pers"/>
+        <cat-item tags="NP.@←SUBJ.pers.*"/>
     </def-cat>
 
     

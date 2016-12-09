@@ -208,6 +208,7 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="ref_nom">
         <cat-item tags="NP.@SUBJ→.ref"/>
+        <cat-item tags="NP.@SUBJ→.ref.*"/>
     </def-cat>
 
 
@@ -341,13 +342,13 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prn-dem-pers">
         <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
         <cat-item lemma="prn" tags="NP.@SUBJ→.pers"/>
-        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.nom"/>
-        <cat-item lemma="prn" tags="NP.@SUBJ→.pers.nom"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.*"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.pers.*"/>
     </def-cat>
 
     <def-cat n="prn-dem">
         <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
-        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.nom"/>
+        <cat-item lemma="prn" tags="NP.@SUBJ→.dem.*"/>
     </def-cat>
     <def-cat n="Vcop-drop">
         <cat-item lemma="cop-mainv" tags="SV.*.pres"/>

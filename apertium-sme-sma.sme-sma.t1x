@@ -2290,6 +2290,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen"/></let>
          </when>
      </choose>
+      <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
