@@ -2249,11 +2249,11 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
-        <when c="M[T] cmp_sh to cmp_sgnom">
+        <when c="M[T] cmp_sh to cmp_sggen">
           <test>
             <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sh"/></equal>
           </test>
-      <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom"/></let> 
+      <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen"/></let> 
         </when>
       </choose>
       <choose>
