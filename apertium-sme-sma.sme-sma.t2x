@@ -47,7 +47,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="comma" tags="CLB" />
     </def-cat>
     <def-cat n="post">
-        <cat-item lemma="post" tags="PP.*"/>
+        <cat-item tags="PP.*"/>
     </def-cat>
     <def-cat n="pr">
         <cat-item lemma="pr" tags="PP.*"/>
