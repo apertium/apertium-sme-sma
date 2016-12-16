@@ -29,7 +29,7 @@ Percentage of unknown words that were free rides: 0%
 
 
 Categories for classification:
-1 = lexical selection
+1 = lexical selection (ikke form, men innhold)
 2 = error in generation (different shape of wordform)
 3 = error in choice of form (different wordform selected)
 4 = word order changed
@@ -37,55 +37,100 @@ Categories for classification:
 6 = word added
 7 = word deleted
 
-1       Buerieh	 |	Saemien
-7        evtiedimmienuepieh	 <
-7        saemien	 <
-6        	 >	buerie
-6        	 >	nuepie
-6       	 >	evtiedæmman
-1        Minngebe	 |	Daah
-1        vïjhtene	 |	minngemes
-1        jaepesne	 |	vïjhte
-6        	 >	jaepieh
+
+4       Buerieh	 |	Saemien
+3,4        evtiedimmienuepieh	 <
+4        saemien	 <
+-        	 >	buerie
+-        	 >	nuepie
+-       	 >	evtiedæmman
+
+
+1,6    Minngebe	 |	Daah
+3        vïjhtene	 |	minngemes
+3        jaepesne	 |	vïjhte
+-        	 >	jaepieh
+
+
 1       stabiliseereme	 |	tjoedtjestamme
-1        dïsse	 |	jïh
-1        lissine	 |	daelie
-1        jïjnje	 |	aaj
-1        mearoesaemien	 |	maahta
-1        tjïelth	 |	vuejnedh
-1        demtieh	 |	guktie
-7       ahte	 <
-1        læssene	 |	gellie
-6        	 >	tjïeltine
-6        	 >	mearoesaemien
-6        	 >	dajvine
-6        	 >	læsseneminie
-7        goerehtallemh	 <
-7        vuesiehtieh	 <
-7        mej	 <
-1        tjïrrehtamme	 |	sov
-1        Saemiedigkien	 |	joekehtimmine
-1        åvteste	 |	vuesehte
-6       	 >	maam
-6        	 >	Saemiedægkan
-6        	 >	dorjeme
-1        saemiedigkieraerie	 |	Daestie
-6        	 >	Saemiedigkieraerije
-1        lea	 |	joekoen1
+
+-         dïsse	 |	jïh
+-         lissine	 |	daelie
+-         jïjnje	 |	aaj
+-        mearoesaemien	 |	maahta
+-         tjïelth	 |	vuejnedh
+-         demtieh	 |	guktie
+-         ahte	 <
+-         læssene	 |	gellie
+-         	 >	tjïeltine
+-         	 >	mearoesaemien
+-         	 >	dajvine
+-         	 >	læsseneminie
+
+1,1
+4
+7
+6
+7
+4
+3
+6,6,6,6,6,6
+
+
+   (MT)dïsse                                              jïjnje   mearoesaemien tjïelth   demtieh ahte almetjelåhkoe læssene.
+  (P) jïh daelie aaj maahta vuejnedh guktie almetjelåhkoe gellie  tjïeltine mearoesaemien  dajvine                  læsseneminie.
+
+
+1        goerehtallemh	 <  
+3        vuesiehtieh	 <
+3        mej	 <
+
+1,6       tjïrrehtamme	 |	sov
+3,6       Saemiedigkien	 |	joekehtimmine
+-        åvteste	 |	vuesehte
+-       	 >	maam
+-        	 >	Saemiedægkan
+-        	 >	dorjeme
+
+
+1,6        saemiedigkieraerie	 |	Daestie
+-       	 >	Saemiedigkieraerije
+
+6        lea	 |	joekoen1
 1        dan	 |	geerjene
-7       madtjeles	 <
+1       madtjeles	 <
 7        daejnie	 <
 7        evtiedimmine	 <
+
+
 1        Goh	 |	Jis
 1        gïehtjedibie	 |	vuartasjibie
-7        ,	 <
-1        lea	 |	jielemh
-1        buerie	 |	daejnie
-7        evtiedimmie	 <
-7       aaj	 <
-3        dajvi	 |	dajvine
-1        jielemejieliemisnie	 |	buerie
-6       	 >	evtiedamme 
+5        ,	 <
+
+
+
+-        lea	 |	jielemh
+-       buerie	 |	daejnie
+-        evtiedimmie	 <
+-       aaj	 <
+-        dajvi	 |	dajvine
+-        jielemejieliemisnie	 |	buerie
+-       	 >	evtiedamme 
+
+6     lea
+4,1    	jielemh*
+6     	daejnie
+4     	SAEMIEM
+3    	dajvine
+-    buerie	buerie
+3    evtietimmie	evtiedamme
+7    aaj	<
+-    SAEMIEN <
+-    dajvi	<
+-    jeielemejieliemisnie < *
+
+
+
 ?        2010:n	 |	2010
 1        raejeste	 |	jaepijste
 1        leah	 |	jienebh
@@ -96,6 +141,8 @@ Categories for classification:
 7        mij	 <
 7        lij	 <
 7        vuartasovveme	 <
+
+
 6        	 >	buerie
 7       positijve	 <
 1        Telemarksforskningen	 |	Telemarkforskningen
