@@ -1367,6 +1367,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="attr"/>
     </def-attr>
     <def-attr n="a_adjattr">
+       <attr-item tags="adj.*.attr"/>
        <attr-item tags="adj.attr"/>
     </def-attr>
 
@@ -2098,7 +2099,7 @@ And then there are some categories like "month", with all the months.
                <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
           </and></test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit v=""/></let>
-          <let><clip pos="1" side="tl" part="a_adjattr"/><lit-tag v="sg.gen"/></let>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="sg.gen"/></let>
         </when>
         <when c="M[T] der_aadv to der_laakan">
           <test>
@@ -2799,8 +2800,7 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="1" side="tl" part="tags"/>
           <concat>
             <clip pos="1" side="tl" part="a_npagree_type"/>
-            <clip pos="2" side="tl" part="sg"/>
-            <lit-tag v="ela"/>
+            <lit-tag v="sg.ela"/>
           </concat>                
         </let> 
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ela"/></let> 
