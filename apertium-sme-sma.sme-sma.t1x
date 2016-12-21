@@ -2152,7 +2152,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
      <choose>
-        <when c="M[V] set subj_nbr">
+        <when c="M[V] set subj_nbr when subj">
           <test>
           <and>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal>
@@ -2164,7 +2164,7 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><var n="subj_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
         </when>
-        <when>
+        <when c="M[V] set empty subj_nbr when not subj">
           <test><and>
               <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal></not>
               <or>
@@ -2250,11 +2250,11 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
-        <when c="M[T] cmp_sh to cmp_sggen">
+        <when c="M[T] cmp_sh to cmp_sgnom">
           <test>
             <equal><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sh"/></equal>
           </test>
-      <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen"/></let> 
+      <let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sgnom"/></let> 
         </when>
       </choose>
       <choose>
@@ -2494,17 +2494,10 @@ And then there are some categories like "month", with all the months.
         <when c="M[T] sg.nom">
         <test><and>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal> 
+        <or>
         <equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal>
-        <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
-        <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal></and>
-        </test>
-        <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-        </when>
-        <when c="M[T] sg.nom">
-        <test><and>
-        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal> 
-        <equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal>
+   		<equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal>
+        </or>
         <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
         <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal></and>
         </test>
@@ -2859,7 +2852,7 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.pl.nom"/></let>
          </when>   
 
-        <otherwise>         <!-- default -->
+        <otherwise c="NP internal agreement">  
         <let>
           <clip pos="1" side="tl" part="tags"/>
           <concat>
@@ -9164,7 +9157,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
         <when>
-        <test><equal><clip pos="2" side="tl" part="lema"/><lit v=""/></equal></test>         
+        <test><equal><clip pos="2" side="tl" part="lem"/><lit v=""/></equal></test>         
         <out>
          <chunk name="post" case="caseFirstword">
             <tags>
@@ -9179,7 +9172,7 @@ And then there are some categories like "month", with all the months.
         </when>
           <otherwise>
         <out>
-         <chunk name="posts" case="caseFirstword">
+         <chunk name="post" case="caseFirstword">
             <tags>
               <tag><lit-tag v="PP"/></tag>
               <tag><var n="func"/></tag>
