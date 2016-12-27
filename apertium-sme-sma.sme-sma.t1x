@@ -688,8 +688,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="geatnegahtton_adj">
-      <cat-item lemma="geatnegahtton" tags="adj.*"/>
-      <cat-item lemma="geatnegahttojuvvon" tags="adj.*"/>
+      <cat-item lemma="geatnegahtton" tags="adj.*.*.*.@←SPRED"/>
+      <cat-item lemma="geatnegahttojuvvon" tags="adj.*.*.*.@←SPRED"/>
+      <cat-item lemma="geatnegahtton" tags="adj.*.*.*.X"/>
+      <cat-item lemma="geatnegahttojuvvon" tags="adj.*.*.*.@X"/>
     </def-cat>
 
     <def-cat n="mielde_adv">
@@ -784,6 +786,12 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="liikot_vblex">
       <cat-item lemma="liikot" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="láhčit_vblex">
+      <cat-item lemma="láhčit" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="dilli_n_acc">
+      <cat-item lemma="dilli" tags="n.*.*.acc.*"/>
     </def-cat>
     <def-cat n="mannat_báhcit_vblex">
       <cat-item lemma="mannat" tags="vblex.*"/>
@@ -3873,6 +3881,27 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
           <let><clip pos="1" side="tl" part="lem"/><lit v="guarkedh"/></let>
         <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[LT]-PRED láhcit_vblex dilli_n_acc" c="láhčit dili : sjïehteladtedh"> 
+      <pattern>
+        <pattern-item n="láhčit_vblex"/>
+        <pattern-item n="dilli_n_acc"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
+          <let><clip pos="1" side="tl" part="lem"/><lit v="sjïehteladtedh"/></let>
+       <out>
           <chunk name="vblex" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
@@ -8203,9 +8232,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-<!--    <rule comment=" geatnegahtton  "> --> <!-- suohkanat leat geatnegahtton - tjïelth dïedtem utnieh -->
-<!--      <pattern>
-       <pattern-item n="leat_main"/>
+    <rule comment="C[T]-PRED leat_main_fin geatnegahtton_adj" c="suohkanat leat geatnegahtton : tjïelth dïedtem utnieh"> 
+      <pattern>
+       <pattern-item n="leat_main_fin"/>
        <pattern-item n="geatnegahtton_adj"/>
       </pattern>
       <action>
@@ -8224,8 +8253,29 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule> -->
+    </rule> 
 
+    <rule comment="C[T]-PRED leat_main_fin geatnegahtton_adj" c="suohkanat leat geatnegahtton : tjïelth dïedtem utnieh"> 
+      <pattern>
+       <pattern-item n="geatnegahtton_adj"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="pred" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="pred"/></tag>
+              <tag><lit-tag v="@←SPRED"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex.indic"/>
+              <var n="verb_tense_nbrpers"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
 
 
     <rule comment="C[L]-PRED oažžut_vblex diehtu_n_acc" c="De ožžon dieđu ahte : Dellie åadtjoejim daejredh ahte">
