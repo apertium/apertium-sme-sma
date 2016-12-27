@@ -1476,6 +1476,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="der_meahttun"/>
        <attr-item tags="der_l"/>
        <attr-item tags="der_lasj"/>
+       <attr-item tags="der_lasj.adj"/>
        <attr-item tags="der_les"/>
        <attr-item tags="der_caus"/>
        <attr-item tags="der_ahtje"/>
@@ -2094,9 +2095,9 @@ And then there are some categories like "month", with all the months.
             <in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="der_caus2der_d"/></in></test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ht"/></let>
         </when>
-        <when c="M[T] der_lasj to sg.gen">
+        <when c="M[T] der_lasj.adj to sg.gen">
           <test><and>
-               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_lasj"/></equal>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_lasj.adj"/></equal>
                <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
           </and></test>
           <let><clip pos="1" side="tl" part="a_deriv"/><lit v=""/></let>
