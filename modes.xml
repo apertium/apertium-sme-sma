@@ -126,15 +126,15 @@
     </pipeline>
   </mode>
 
-  <mode name="sma-sme" install="yes">
+  <mode name="sma-sme" install="yes" gendebug="yes">
     <pipeline>
       <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="sma-sme.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -w" debug-suff="disam">
         <file name="sma-sme.mor.rlx.bin"/>
       </program>
-      <program name="cg-proc -n -1 -w">
+      <program name="cg-proc -n -1 -w" debug-suff="syntax">
         <file name="sma-sme.syn.rlx.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
@@ -148,11 +148,11 @@
         <file name="apertium-sme-sma.sma-sme.t1x"/>
         <file name="sma-sme.t1x.bin"/>
       </program>
-      <program name="apertium-interchunk">
+      <program name="apertium-interchunk" debug-suff="interchunk">
         <file name="apertium-sme-sma.sma-sme.t2x"/>
         <file name="sma-sme.t2x.bin"/>
       </program>
-      <program name="apertium-postchunk">
+      <program name="apertium-postchunk" debug-suff="postchunk">
         <file name="apertium-sme-sma.sma-sme.t3x"/>
         <file name="sma-sme.t3x.bin"/>
       </program>
