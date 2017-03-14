@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
+
   <section-def-cats>
+
+    <def-cat n="adj">
+      <cat-item tags="adj.*"/>
+    </def-cat>
+
     <def-cat n="default">
       <cat-item tags="*"/>
     </def-cat>
+
     <def-cat n="n_cmp">
       <cat-item tags="*.cmp"/>
       <cat-item tags="*.cmp.guio"/>
@@ -15,6 +22,7 @@
       <cat-item lemma="lullisámegiel" tags="adj.*.attr.*"/>
       <cat-item lemma="suomagiel" tags="adj.*.attr.*"/>
     </def-cat>
+
     <def-cat n="noun"> 
       <cat-item tags="n.sg.*"/>
       <cat-item tags="n.*.sg.*"/>
@@ -35,10 +43,21 @@
       <cat-item tags="n.abbr.*"/>
       <cat-item tags="*.cmp_sgnom.cmp_splitr.*"/>
     </def-cat>
+
+    <def-cat n="conneg">
+      <cat-item tags="vblex.*.conneg.*"/>
+      <cat-item tags="vblex.*.*.*.conneg.*"/>
+    </def-cat>
+    
+    <def-cat n="negverb">
+      <cat-item lemma="ij" tags="vblex.iv.neg.indic.*"/>
+    </def-cat>
+
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
   </section-def-cats>
+
   <section-def-attrs>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
@@ -57,9 +76,49 @@
       <attr-item tags="ela"/>
       <attr-item tags="ine"/>
     </def-attr>
+
+    <def-attr n="a_nbr">
+       <attr-item tags="sg"/>
+       <attr-item tags="pl"/>
+       <attr-item tags="du"/>
+       <attr-item tags="ND"/>
+    </def-attr>
+
+    <def-attr n="a_pers">
+       <attr-item tags="p1"/>
+       <attr-item tags="p2"/>
+       <attr-item tags="p3"/>
+    </def-attr>
+
     <def-attr n="a_trans">
       <attr-item tags="iv"/>
       <attr-item tags="tv"/>
+    </def-attr>
+
+    <def-attr n="a_vblex">
+       <attr-item tags="vblex"/>
+       <attr-item tags="vblex.iv.der_inchl.v"/>
+       <attr-item tags="vblex.tv.der_inchl.v"/>
+    </def-attr>
+
+    <def-attr n="a_conneg">
+       <attr-item tags="conneg"/>
+    </def-attr>
+
+    <def-attr n="a_mood">
+       <attr-item tags="pot"/>
+       <attr-item tags="indic"/>
+       <attr-item tags="cond"/>
+       <attr-item tags="imp"/>
+    </def-attr>
+
+    <def-attr n="a_tense">
+       <attr-item tags="pret"/>
+       <attr-item tags="pres"/>
+    </def-attr>
+    
+    <def-attr n="a_neg">
+       <attr-item tags="neg"/>
     </def-attr>
 
     <def-attr n="a_func">
@@ -377,14 +436,145 @@
       <attr-item tags="sem_wpn"/>
       <attr-item tags="sem_wthr"/>
     </def-attr>
-
   </section-def-attrs>
+
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="case"/>
+    <def-var n="func"/>
+    <def-var n="main-verb-lemma"/>
     <def-var n="current_verb"/>
+    <def-var n="caseFirstword"/>
+    <def-var n="verb_tense_nbrpers"/>
+    <def-var n="subj_nbr"/>
+    <def-var n="tense"/>
+    <def-var n="infin"/>
   </section-def-vars>
+
   <section-def-macros>
 
+        <def-macro n="set_caseFirstword" npar="1"
+               c="Set the typographic case to be carried by the chunk.
+                  - if argument is _not_ a proper noun: caseFirstword is the case of the lemma, and the lemma gets lowercase.
+                  - if argument _is_ a proper noun: caseFirstword is lowercase, and lemma stays unchanged.
+
+                  We treat UPPERCASE as proper nouns.">
+      <let><var n="caseFirstword"/><lit v="aa"/></let>
+      <choose><when>
+        <test><not><or>
+          <begins-with><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np"/></begins-with>
+          <!-- <equal><clip pos="1" side="tl" part="lettercase"/><lit-tag v="fixedcase"/></equal> -->
+          <equal><get-case-from pos="1"><lit v="aa"/></get-case-from><lit v="AA"/></equal>
+        </or></not></test>
+        <let><var n="caseFirstword"/><get-case-from pos="1"><lit v="aa"/></get-case-from></let>
+        <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
+      </when></choose>
+    </def-macro>
+
+
+
+
+
+
+    <def-macro n="general-macro-1Param" npar="1">
+
+      <choose>
+        <when c="M[V] set main-verb-lemma">
+          <test>
+            <and><or>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←SUBJ"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@A←"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></or>
+              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="vblex"/></equal>
+              <not><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_nomact"/></equal></not>
+            </and>
+          </test>
+          <let><var n="main-verb-lemma"/><clip pos="1" side="tl" part="lem"/></let>
+        </when>
+      </choose>
+     <choose>
+        <when c="M[V] set subj_nbr when subj">
+          <test>
+          <and>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal>
+              <or>
+              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal>
+              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
+              </or>
+          </and>    
+          </test>
+          <let><var n="subj_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+        </when>
+        <when c="M[V] set empty subj_nbr when not subj">
+          <test><and>
+              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal></not>
+              <or>
+               <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal>
+              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
+               </or></and>
+        </test>
+          <let><var n="subj_nbr"/><lit v=""/></let>
+        </when>
+      </choose>
+     <choose>
+        <when c="M[V] set verb_tense_nbrpers">
+          <test>
+            <or>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FAUXV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
+            </or>
+          </test>
+          <let><var n="verb_tense_nbrpers"/><concat><clip pos="1" side="tl" part="a_tense"/><clip pos="1" side="tl" part="a_pers"/>
+          <clip pos="1" side="tl" part="a_nbr"/></concat></let>
+          <let><var n="tense"/><clip pos="1" side="tl" part="a_tense"/></let>
+        </when>
+        <when c="M[V] set infin">
+          <test>
+            <or>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FAUXV"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
+            </or>
+          </test>
+          <let><var n="infin"/><clip pos="1" side="tl" part="a_infin"/></let>
+        </when>
+      </choose> 
+      
+<!-- whole macro from sme-sma still not inserted -->      
+      <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
+      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
+      <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> 
+      <let><clip pos="1" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let> 
+      <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let>
+     <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+    </def-macro>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <def-macro n="general-macro-2Param" npar="2">
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+    </def-macro>
+
+    
     <def-macro n="default-conversion1" npar="1">
       <let><clip pos="1" side="tl" part="a_known"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
@@ -489,16 +679,65 @@
       </action>
     </rule>
 
+<!-- Verb rules -->
+
+    <rule comment="C[T]-V negverb conneg">
+      <pattern>
+        <pattern-item n="negverb"/>
+        <pattern-item n="conneg"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/> </call-macro>
+        <out>
+          <chunk name="ii" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@+FAUXV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
+              <clip pos="1" side="tl" part="a_trans"/>
+              <clip pos="1" side="tl" part="a_neg"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+            <b pos="1"/>
+          <chunk name="conneg">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_vblex"/>
+              <clip pos="2" side="tl" part="a_trans"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="2" side="tl" part="a_conneg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>  
+
+    
+    
+<!-- General cleanup rules -->
+    
     <rule comment="REGLA: DEFAULT">
       <pattern>
         <pattern-item n="default"/>
       </pattern>
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="x" case="caseFirstWord">
+          <chunk name="any" case="caseFirstword">
             <tags>
-              <tag><lit-tag v="SX"/></tag>
+              <tag><lit-tag v="default"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -515,7 +754,7 @@
       </pattern>
       <action>
         <out>
-          <chunk name="sent" case="caseFirstWord">
+          <chunk name="sent" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SENT"/></tag>
             </tags>
@@ -527,5 +766,6 @@
       </action>
     </rule>
 
+		
   </section-rules>
 </transfer>
