@@ -135,6 +135,7 @@
     
 
     <!-- Punctuation -->
+    <sdef n="clb" c="puctuation"/>
     <sdef n="punct"   c="Punctuation"/>
     <sdef n="sent"    c="Sentence boundary"/>
     <sdef n="cm"      c="Comma"/>
@@ -6035,6 +6036,8 @@
 
     <!-- SECTION: Punctuation -->
 
+	<e r="LR"><p><l>❡<s n="clb"/></l><r></r></p></e>
+	<e r="LR"><p><l>❡<s n="sent"/></l><r></r></p></e>
     <e><re>[…;:.\?¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
     <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
     <e><p><l>!<s n="sent"/></l><r>!<s n="sent"/></r></p></e>
@@ -6388,6 +6391,7 @@
     <e><p><l>Bankssuolu<s n="np"/></l><r>Bankssuolu<s n="np"/></r></p></e>
     <e><p><l>Baranoviči<s n="np"/></l><r>Baranoviči<s n="np"/></r></p></e>
     <e><p><l>Baraschi<s n="np"/></l><r>Baraschi<s n="np"/></r></p></e>
+    <e><p><l>Barents<b/>Plus<s n="np"/></l><r>Barents<b/>Plus<s n="np"/></r></p></e>
     <e><p><l>Barentsguovlu<s n="np"/></l><r>Barentsguovlu<s n="np"/></r></p></e>
     <e><p><l>Barentsmearra<s n="np"/></l><r>Barentsmearra<s n="np"/></r></p></e>
     <e><p><l>Barentsregiovdna<s n="np"/></l><r>Barentsregiovdna<s n="np"/></r></p></e>
