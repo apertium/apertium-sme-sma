@@ -84,11 +84,8 @@ $(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
 # Northern Saami generation:
 # ---------------------
 
-.deps/$(LANG1).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst > $@
-
-$(PREFIX2).autogen.hfst: .deps/$(LANG1).autogen.hfst
-	hfst-fst2fst -w -i $< -o $@
+$(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz
+	$(ZCAT) $< | hfst-txt2fst -f optimized-lookup-weighted -o $@
 
 
 # -------------------
@@ -113,11 +110,8 @@ $(PREFIX2).automorf-untrimmed.hfst: .deps/$(LANG2).automorf.hfst
 # Southern Saami generation:
 # ---------------------
 
-.deps/$(LANG2).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst > $@
-
-$(PREFIX1).autogen.hfst: .deps/$(LANG2).autogen.hfst
-	hfst-fst2fst -w -i $< -o $@
+$(PREFIX1).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz
+	$(ZCAT) $< | hfst-txt2fst -f optimized-lookup-weighted -o $@
 
 
 ###############################################################################
