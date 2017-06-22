@@ -88,7 +88,7 @@ $(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
 	$(ZCAT) $< | hfst-txt2fst > $@
 
 $(PREFIX2).autogen.hfst: .deps/$(LANG1).autogen.hfst
-	hfst-fst2fst -O -i $< -o $@
+	hfst-fst2fst -w -i $< -o $@
 
 
 # -------------------
@@ -117,7 +117,7 @@ $(PREFIX2).automorf-untrimmed.hfst: .deps/$(LANG2).automorf.hfst
 	$(ZCAT) $< | hfst-txt2fst > $@
 
 $(PREFIX1).autogen.hfst: .deps/$(LANG2).autogen.hfst
-	hfst-fst2fst -O -i $< -o $@
+	hfst-fst2fst -w -i $< -o $@
 
 
 ###############################################################################
