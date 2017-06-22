@@ -40,7 +40,7 @@
         <file name="apertium-sme-sma.sme-sma.t5x"/>
         <file name="sme-sma.t5x.bin"/>
       </program>
-      <program name="hfst-proc $1">
+      <program name="hfst-proc --weight-classes 1 $1">
         <file name="sme-sma.autogen.hfst"/>
       </program>
     </pipeline>
@@ -99,7 +99,7 @@
         <file name="apertium-sme-sma.sme-sma.t5x"/>
         <file name="sme-sma.t5x.bin"/>
       </program>
-      <program name="hfst-proc $1">
+      <program name="hfst-proc --weight-classes 1 $1">
         <file name="sme-sma.autogen.hfst"/>
       </program>
     </pipeline>
@@ -156,7 +156,7 @@
         <file name="apertium-sme-sma.sma-sme.t3x"/>
         <file name="sma-sme.t3x.bin"/>
       </program>
-      <program name="hfst-proc $1">
+      <program name="hfst-proc --weight-classes 1 $1">
         <file name="sma-sme.autogen.hfst"/>
       </program>
     </pipeline>
@@ -210,7 +210,7 @@
         <file name="apertium-sme-sma.sma-sme.t3x"/>
         <file name="sma-sme.t3x.bin"/>
       </program>
-      <program name="hfst-proc -d">
+      <program name="hfst-proc --weight-classes 1 -d">
         <file name="sma-sme.autogen.hfst"/>
       </program>
     </pipeline>
