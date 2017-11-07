@@ -38,6 +38,13 @@ TARGETS_COMMON =			\
 # This include defines goals for install-modes, .deps/.d and .mode files:
 @ap_include@
 
+# debug/devel/temporary stuff:
+nouns-sme-sma: dev/nouns-sme-sma/$(PREFIX1).rlx.bin modes/nouns-sme-sma.mode
+
+dev/nouns-sme-sma/$(PREFIX1).rlx.bin: dev/nouns-sme-sma/$(BASENAME).$(PREFIX1).rlx
+	cg-comp $< $@
+
+
 ###############################################################################
 ## Monolingual transducers
 ###############################################################################
