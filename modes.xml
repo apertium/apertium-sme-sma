@@ -218,7 +218,7 @@
 
 
   <!-- debug/devel/temporary stuff: -->
-  <mode name="sme-sma" install="no" gendebug="yes">
+  <mode name="nouns-sme-sma" install="no" gendebug="yes">
     <pipeline>
       <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="sme-sma.automorf.hfst"/>
