@@ -199,7 +199,11 @@
 
     <!-- SECTION: Subjunctions -->
 
+    <e r="RL"><p><l>danne<s n="adv"/></l><r>ihke<s n="cnjsub"/></r></p></e>
+    <e r="RL"><p><l>muhto<s n="cnjsub"/></l><r>bene<s n="cnjsub"/></r></p></e>
+    <e r="RL"><p><l>ahte<s n="cnjsub"/></l><r>ihke<s n="cnjsub"/></r></p></e>
     <e><p><l>ahte<s n="cnjsub"/></l><r>ahte<s n="cnjsub"/></r></p></e>
+    <e r="RL"><p><l>danne<s n="adv"/></l><r>juktie<s n="cnjsub"/></r></p></e>
     <e><p><l>dego<s n="cnjsub"/></l><r>goh<s n="cnjsub"/></r></p></e>
     <e r="LR"><p><l>go<s n="pcle"/><s n="qst"/></l><r><s n="pcle"/></r></p></e>
     <e><p><l>go<s n="cnjsub"/></l><r>goh<s n="cnjsub"/></r></p></e>
@@ -228,12 +232,16 @@
     <e><p><l>ge<s n="pcle"/></l><r>aaj<s n="adv"/></r></p></e>
     <e><p><l>goit<s n="pcle"/></l><r>gujht<s n="pcle"/></r></p></e>
     <e><p><l>ges<s n="pcle"/></l><r>jis<s n="pcle"/></r></p></e>
+    <e><p><l>han<s n="pcle"/></l><r>hov<s n="pcle"/></r></p></e>
     
 
     <!-- SECTION: Adpositions -->
     <e r="LR"><p><l>mađe<s n="post"/></l><r><s n="post"/></r></p></e>
     <e><p><l>siskkobealde<s n="post"/></l><r>sisnjelen<s n="post"/></r></p></e>
-    
+    <e><p><l>maŋŋel<s n="post"/></l><r>minngelen<s n="post"/></r></p></e>
+    <e><p><l>vuostá<s n="post"/></l><r>vööste<s n="post"/></r></p></e>
+    <e><p><l>vuostá<s n="pr"/></l><r>vööste<s n="pr"/></r></p></e>
+   
     <e><p><l>summal<s n="adv"/></l><r>debpelen<b/>dahkoe<s n="adv"/></r></p></e>
     <e><p><l>siskkobealde<s n="adv"/></l><r>sisnjelen<s n="adv"/></r></p></e>
     
@@ -503,6 +511,9 @@
 
     <!-- SECTION: Nouns -->
 
+    <e><p><l>bibal<s n="n"/><s n="abbr"/></l><r>bijpele<s n="n"/><s n="abbr"/></r></p></e>
+
+    
     <e><p><l>ru<s n="n"/><s n="abbr"/></l><r>kr<s n="n"/><s n="abbr"/></r></p></e>
     <e><p><l>kr<s n="n"/><s n="abbr"/></l><r>kr<s n="n"/><s n="abbr"/></r></p></e>
     <e><p><l>a<s n="n"/><s n="abbr"/></l><r>a<s n="n"/><s n="abbr"/></r></p></e>
@@ -1587,6 +1598,7 @@
     <e><p><l>gáfegievdni<s n="n"/></l><r>prïhtjhgiebnie<s n="n"/></r></p></e>
     <e><p><l>gáfeseahkka<s n="n"/></l><r>prïhtjhvoesse<s n="n"/></r></p></e>     
     <e><p><l>gáfet<s n="n"/></l><r>prïhtjegh<s n="n"/></r></p></e>
+    <e><p><l>gáffe<s n="n"/></l><r>prïhtjege<s n="n"/></r></p></e>
     <e><p><l>gáffal<s n="n"/></l><r>tjåagkoe<s n="n"/></r></p></e>
     <e><p><l>gáffe<s n="n"/></l><r>kaaffe<s n="n"/></r></p></e>
     <e><p><l>gágga<s n="n"/></l><r>geegke<s n="n"/></r></p></e>
@@ -3775,6 +3787,7 @@
      
      
     <e><p><l>julevsámegiel<s n="adj"/></l><r>julevsaemiengïeleh<s n="adj"/></r></p></e>
+    <e><p><l>viissis<s n="adj"/></l><r>vijsies<s n="adj"/></r></p></e>
      
      
      <e><p><l>transitiiva<s n="adj"/></l><r>transitïjve<s n="adj"/></r></p></e>
@@ -4494,6 +4507,12 @@
 
     <!-- SECTION: Adverbs -->
 
+    <e><p><l>de<s n="adv"/></l><r>dle<s n="adv"/></r></p></e>
+    <e><p><l>mielde<s n="adv"/></l><r>meatan<s n="adv"/></r></p></e>
+    <e><p><l>de<s n="adv"/></l><r>dle<s n="adv"/></r></p></e>
+    <e><p><l>erenoamáš<s n="adv"/></l><r>joekoen<s n="adv"/></r></p></e>
+    <e><p><l>ovddos<b/>guvlui<s n="adv"/></l><r>åvtese<s n="adv"/></r></p></e>
+
     <e><p><l>kvalitatiivvalaččat<s n="adv"/></l><r>kvalitatijvelaakan<s n="adv"/></r></p></e>
     <e><p><l>maiddá<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e> 
     <e><p><l>maŋimus<s n="adv"/></l><r>minngemes<s n="adv"/></r></p></e>
@@ -4859,7 +4878,10 @@
     <e><p><l>bistit<s n="vblex"/><s n="iv"/></l><r>ryöhkedh<s n="vblex"/></r></p></e>
     <e><p><l>ruhtadit<s n="vblex"/><s n="tv"/></l><r>laeviehtidh<s n="vblex"/></r></p></e>
     <e><p><l>geasuhit<s n="vblex"/><s n="tv"/></l><r>giesedh<s n="vblex"/></r></p></e>
+    <e><p><l>rahpasit<s n="vblex"/><s n="tv"/></l><r>rïhpestidh<s n="vblex"/></r></p></e>
+
     <e><p><l>hárjánit<s n="vblex"/><s n="iv"/></l><r>vaananidh<s n="vblex"/></r></p></e>
+    <e><p><l>jápmit<s n="vblex"/><s n="iv"/></l><r>jaemedh<s n="vblex"/></r></p></e>
     
     
     <!-- It´s hurt-Verbs LRX-regler!!-->
@@ -5178,6 +5200,7 @@
     <e><p><l>fanahit<s n="vblex"/><s n="tv"/></l><r>syöjkedehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>fertet<s n="vblex"/><s n="iv"/></l><r>tjoeveridh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>fertet<s n="vblex"/><s n="iv"/></l><r>byöredh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e><p><l>fertet<s n="vblex"/><s n="iv"/></l><r>tjoeredh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>fidnet<s n="vblex"/><s n="tv"/></l><r>åadtjodh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>fieradit<s n="vblex"/><s n="iv"/></l><r>tompeldidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>fierrat<s n="vblex"/><s n="iv"/></l><r>bollerdidh<s n="vblex"/><s n="iv"/></r></p></e>
