@@ -511,7 +511,6 @@
 
     <!-- SECTION: Nouns -->
 
-    <e><p><l>bibal<s n="n"/><s n="abbr"/></l><r>bijpele<s n="n"/><s n="abbr"/></r></p></e>
 
     
     <e><p><l>ru<s n="n"/><s n="abbr"/></l><r>kr<s n="n"/><s n="abbr"/></r></p></e>
@@ -565,6 +564,9 @@
     <e><p><l>tunealla<s n="n"/></l><r>gohpege<s n="n"/></r></p></e> <!-- Saaran gærja --> 
     <e><p><l>bargamuš<s n="n"/></l><r>barkoe<s n="n"/></r></p></e> 
     
+    <e><p><l>bibal<s n="n"/></l><r>bijpele<s n="n"/></r></p></e>
+    <e><p><l>bisma<s n="n"/></l><r>bispe<s n="n"/></r></p></e>
+    <e r="LR"><p><l>bispa<s n="n"/></l><r>bispe<s n="n"/></r></p></e>
     <e><p><l>friijavuohta<s n="n"/></l><r>frïjjevoete<s n="n"/></r></p></e>
     <e><p><l>virgi<s n="n"/></l><r>barkoe<s n="n"/></r></p></e>
     <e><p><l>láttegiella<s n="n"/></l><r>laedtiengïele<s n="n"/></r></p></e>
@@ -3791,6 +3793,7 @@
      
      
     <e><p><l>julevsámegiel<s n="adj"/></l><r>julevsaemiengïeleh<s n="adj"/></r></p></e>
+    <e><p><l>relevánta<s n="adj"/></l><r>relevaante<s n="adj"/></r></p></e>
     <e><p><l>viissis<s n="adj"/></l><r>vijsies<s n="adj"/></r></p></e>
      
      
@@ -4511,6 +4514,7 @@
 
     <!-- SECTION: Adverbs -->
 
+    <e r="RL"><p><l>fas<s n="adv"/></l><r>bist<s n="adv"/></r></p></e>
     <e><p><l>de<s n="adv"/></l><r>dle<s n="adv"/></r></p></e>
     <e><p><l>mielde<s n="adv"/></l><r>meatan<s n="adv"/></r></p></e>
     <e><p><l>de<s n="adv"/></l><r>dle<s n="adv"/></r></p></e>
@@ -4866,7 +4870,11 @@
 
     <!-- SECTION: Verbs -->
     
+    <e><p><l>čeassat<s n="vblex"/><s n="iv"/></l><r>njieskiehtidh<s n="vblex"/></r></p></e>
     <e><p><l>joatkašuvvat<s n="vblex"/><s n="iv"/></l><r>jåarhkesovvedh<s n="vblex"/></r></p></e>
+    <e><p><l>gilljut<s n="vblex"/><s n="iv"/></l><r>gæljodh<s n="vblex"/></r></p></e>
+    <e><p><l>ráđđádallat<s n="vblex"/><s n="iv"/></l><r>rååresjidh<s n="vblex"/></r></p></e>
+
     <e><p><l>heivehit<s n="vblex"/><s n="tv"/><s n="der_passl"/><s n="vblex"/></l><r>sjïehtelovvedh<s n="vblex"/></r></p></e>
 
     <e><p><l>leat<s n="vblex"/><s n="iv"/></l><r>lea<s n="vblex"/></r></p></e>
@@ -5567,7 +5575,8 @@
     <e><p><l>oastit<s n="vblex"/><s n="tv"/></l><r>åestedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>oasálastit<s n="vblex"/><s n="iv"/></l><r>vyöjhkesadtedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>oađđit<s n="vblex"/><s n="iv"/></l><r>åeredh<s n="vblex"/><s n="iv"/></r></p></e>
-    <e><p><l>oažžut<s n="vblex"/><s n="tv"/></l><r>åadtjodh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e r="RL"><p><l>oažžut<s n="vblex"/><s n="tv"/></l><r>fihkedh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>oažžut<s n="vblex"/><s n="tv"/></l><r>åadtjodh<s n="vblex"/><s n="tv"/></r></p></e> <!-- lexrule -->
     <e><p><l>oažžut<s n="vblex"/><s n="tv"/></l><r>dåastodh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>ohcat<s n="vblex"/><s n="tv"/></l><r>ohtsedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>ohcat<s n="vblex"/><s n="tv"/></l><r>ohtsedidh<s n="vblex"/><s n="tv"/></r></p></e>
