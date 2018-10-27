@@ -2314,6 +2314,15 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
+        <when c="M[T] removing morph tags when cmp">
+          <test>
+        <not><equal><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></equal></not>
+          </test>
+      <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let> 
+      <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let> 
+        </when>
+      </choose>
+      <choose>
         <when c="M[T] removes a_attr when prfprc">
           <test>
             <equal><clip pos="1" side="tl" part="a_infin"/><lit-tag v="prfprc"/></equal>
