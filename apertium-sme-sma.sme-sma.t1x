@@ -825,6 +825,10 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="unnut" tags="vblex.iv.*"/>
     </def-cat>
 
+    <def-cat n="adv_boahtit_vblex">
+      <cat-item lemma="ilbmat" tags="vblex.iv.*"/>
+      <cat-item lemma="ovdanboahtit" tags="vblex.iv.*"/>
+    </def-cat>
 
 
     <def-cat n="speech_vblex">
@@ -6298,6 +6302,37 @@ And then there are some categories like "month", with all the months.
             <lu>
               <lit v="mietie"/>
               <lit-tag v="post"/>            
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+     <rule comment="C[DL]-PRED adv_boahtit_vblex" c="ovdanboahtit : åvtese båetedh">
+      <pattern>
+        <pattern-item n="adv_boahtit_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="adv"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="båetedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>
         </out>
