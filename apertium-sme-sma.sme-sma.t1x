@@ -820,6 +820,13 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="beassat" tags="vblex.iv.*"/>
     </def-cat>
 
+    <def-cat n="adjcomp_vblex">
+      <cat-item lemma="stuorrut" tags="vblex.iv.*"/>
+      <cat-item lemma="unnut" tags="vblex.iv.*"/>
+    </def-cat>
+
+
+
     <def-cat n="speech_vblex">
       <cat-item lemma="hupmat" tags="vblex.*"/>
       <cat-item lemma="hállat" tags="vblex.*"/>
@@ -2314,7 +2321,7 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>
       <choose>
-        <when c="M[T] removing morph tags when cmp">
+        <when c="M[T] removing morph tags when cmp, for cases when sme adj is sma n">
           <test>
         <not><equal><clip pos="1" side="tl" part="a_cmp"/><lit v=""/></equal></not>
           </test>
@@ -6291,6 +6298,37 @@ And then there are some categories like "month", with all the months.
             <lu>
               <lit v="mietie"/>
               <lit-tag v="post"/>            
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+     <rule comment="C[DL]-PRED adjcomp_vblex" c="stuorrut : stuerebe sjïdtedh">
+      <pattern>
+        <pattern-item n="adjcomp_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="adj.comp.sg.nom"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="sjïdtedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
           </chunk>
         </out>
