@@ -3135,7 +3135,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let>
                           <out>
-          <chunk name="num" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3163,7 +3163,7 @@ And then there are some categories like "month", with all the months.
         </call-macro>
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let>
                           <out>
-          <chunk name="num" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3184,7 +3184,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let>
                           <out>
-          <chunk name="num" case="caseFirstword">
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
@@ -3607,7 +3607,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
-         <let><clip pos="2" side="tl" part="lem"/><lit v="proseente"/></let>
+         <let><clip pos="2" side="tl" part="lem"/><lit v="prosente"/></let>
          <choose>
          <when><test><and>
          <or>
@@ -3657,7 +3657,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="3"/><with-param pos="2"/></call-macro>
-         <let><clip pos="3" side="tl" part="lem"/><lit v="proseente"/></let> 
+         <let><clip pos="3" side="tl" part="lem"/><lit v="prosente"/></let> 
          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
          <choose>
          <when><test><and>
