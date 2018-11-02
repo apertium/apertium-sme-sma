@@ -1516,6 +1516,22 @@
  </rule>     --> 
 
 
+       <rule weight="1.0">
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="ahte" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="mejtie" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="duohken" tags="post.*"/>
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="mejtie" tags="cnjsub.*"/>
+   </match>
+ </rule>     
 
 
        <rule weight="1.0">
@@ -2199,17 +2215,32 @@
        <match lemma="geavahit">  
            <select lemma="nuhtjedh"/>   
         </match>  
+     <or>   
         <match lemma="ruhta"/>  
+        <match tags="n.sem_lang.*" />  
+     </or>   
        </rule>   
      <rule weight="0.6">  
        <match lemma="geavahit">  
            <select lemma="nuhtjedh"/>   
         </match>  
         <match />  
+     <or>   
         <match lemma="ruhta"/>  
+        <match tags="n.sem_lang.*" />  
+     </or>   
+       </rule>   
+     <rule weight="0.6">  
+       <match lemma="geavahit">  
+           <select lemma="nuhtjedh"/>   
+        </match>  
+     <or>   
+        <match lemma="ruhta"/>  
+        <match tags="n.sem_lang.*" />  
+     </or>   
        </rule>   
 
-     <rule weight="0.5">  
+<!--     <rule weight="0.5">  
        <match lemma="geavahit">  
            <select lemma="utnedh"/>   
         </match>  
@@ -2220,7 +2251,7 @@
            <select lemma="utnedh"/>   
         </match>  
        <match lemma="giella"/>  
-        </rule>   
+        </rule>   -->
         
         
 <!--  default: gaske --> 
