@@ -43,6 +43,9 @@ And then there are some categories like "month", with all the months.
 <interchunk>
 
   <section-def-cats>
+    <def-cat n="hyphnom">
+      <cat-item lemma="NP" tags="hyphnom.*" />
+    </def-cat>
     <def-cat n="comma">
       <cat-item lemma="comma" tags="CLB" />
     </def-cat>
@@ -174,6 +177,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="ADV.@→CC"/>
     </def-cat>
     <def-cat n="CC">
+        <cat-item tags="cnjcoo.@CNP"/>
         <cat-item tags="CC.@CNP"/>
         <cat-item tags="SV.*.Neg.Foc_ge"/>
         <cat-item tags="SV.*.Neg.Foc_ge.*"/>
@@ -181,6 +185,7 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="CNP">
         <cat-item tags="cnjcoo.@CNP"/>
+        <cat-item tags="cnjcoo.@CVP"/>
     </def-cat>
     <def-cat n="modN">
         <cat-item tags="*.@→N"/>
@@ -495,7 +500,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="REGLA: NP_Obj CNP NP_Obj"> 
+    <rule comment="REGLA: IFMainV CNP IFMainV"> 
      <pattern>
        <pattern-item n="IFMainV"/>
        <pattern-item n="CNP"/>
@@ -590,6 +595,31 @@ And then there are some categories like "month", with all the months.
        </out>
      </action>
     </rule>
+
+   <rule comment="REGLA: ADVL-left CNP ADVL left"><!--Son liikui munnje ja sutnje.--><!--Son liikui mu áhččái ja mu eatnái.-->
+     <pattern>
+       <pattern-item n="ADVL-left"/>
+       <pattern-item n="CNP"/>
+       <pattern-item n="hyphnom"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="coor_advl"/></get-case-from>
+           <clip pos="3" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <b pos="2"/>
+           <clip pos="3" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+
 
     <rule comment="REGLA: ADVL CNP ADVL left"><!--Son liikui munnje ja sutnje.--><!--Son liikui mu áhččái ja mu eatnái.-->
      <pattern>

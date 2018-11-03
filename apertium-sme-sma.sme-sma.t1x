@@ -480,6 +480,11 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="n.*.*.cmp_splitr.*"/>
     </def-cat>
 
+    <def-cat n="guio">
+      <cat-item tags="guio"/>
+    </def-cat>
+
+
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
       <cat-item tags="n.*.der_dibme.adj.*"/>
@@ -9870,7 +9875,31 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[_]-T default">
+    <rule comment="C[_]-T hyph"> <!-- -<guio>$^ -->
+      <pattern>
+        <pattern-item n="guio"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="hyphnom" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><clip pos="2" side="sl" part="a_func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+             </lu>
+            <lu>
+             <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+   <rule comment="C[_]-T default">
       <pattern>
         <pattern-item n="default"/>
       </pattern>

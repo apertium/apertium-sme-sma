@@ -514,7 +514,7 @@
        <match lemma="fárrui" tags="post"><select lemma="mieteli" tags="post"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="fertet" tags="vblex.iv.*"><select lemma="tjoeveridh" tags="vblex.*"/></match>
+       <match lemma="fertet" tags="vblex.iv.*"><select lemma="tjoeredh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="gahččat" tags="vblex.iv.*"><select lemma="gahtjedh" tags="vblex.*"/></match>
