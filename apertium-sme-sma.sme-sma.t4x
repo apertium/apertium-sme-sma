@@ -64,6 +64,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="ADV.@←ADVL"/>
         <cat-item tags="NP.@←ADVL.*"/>
         <cat-item tags="NP.@←ADVL"/>
+        <cat-item tags="PP.@←ADVL"/>
         <cat-item tags="*.@←ADVL-ela.*"/>
         <cat-item tags="*.@←ADVL-ela"/>
         <cat-item tags="*.@←ADVL-ine.*"/>
@@ -554,11 +555,57 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
+    <rule comment="IFMainV NP_Obj_l Argument_l" > <!-- V X X becomes X X V. -->
+      <pattern>     
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="NP_Obj_l"/>
+        <pattern-item n="ADVL_left"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+           <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+         <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="Subj FMAINV X X" > <!-- V X X becomes X X V. -->
       <pattern>     
         <pattern-item n="IFMainV"/>
-        <pattern-item n="Modifier_Argument_l"/>
-        <pattern-item n="Argument_l"/>
+        <pattern-item n="ADVL_left"/>
+        <pattern-item n="NP_Obj_l"/>
+      </pattern>
+      <action>
+        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+           <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+         <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="IFMAINV ADVL_left ADVL_left" > <!-- V X X becomes X X V. -->
+      <pattern>     
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="ADVL_left"/>
+        <pattern-item n="ADVL_left"/>
       </pattern>
       <action>
         <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
@@ -1562,7 +1609,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="S V OBJ SPRED " > <!--S V SPRED OBJ becomes S OBJ  SPRED V -->
+    <rule comment="S V OBJ SPRED " > <!--S V SPRED OBJ becomes S  SPRED OBJ V -->
       <pattern>
         <pattern-item n="left_border"/>
         <pattern-item n="IFMainV"/>
@@ -1579,17 +1626,17 @@ And then there are some categories like "month", with all the months.
           </chunk>
           <b pos="1"/>
           <chunk>
-            <clip pos="3" part="lemh"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-            <clip pos="3" part="lemq"/>
-          </chunk>
-          <b pos="2"/>
-        <chunk>
             <clip pos="4" part="lemh"/>
             <clip pos="4" part="tags"/>
             <clip pos="4" part="chcontent"/>
             <clip pos="4" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+        <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
           </chunk>
           <b />
         <chunk>
@@ -1603,7 +1650,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="S V OBJ ADVL " > <!--S V ADVL OBJ becomes S OBJ  ADVL V -->
+    <rule comment="S V OBJ ADVL " > <!--S V ADVL OBJ becomes S  ADVL OBJ V -->
       <pattern>
         <pattern-item n="left_border"/>
         <pattern-item n="IFMainV"/>
@@ -1620,17 +1667,17 @@ And then there are some categories like "month", with all the months.
           </chunk>
           <b pos="1"/>
           <chunk>
-            <clip pos="3" part="lemh"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-            <clip pos="3" part="lemq"/>
-          </chunk>
-          <b pos="2"/>
-        <chunk>
             <clip pos="4" part="lemh"/>
             <clip pos="4" part="tags"/>
             <clip pos="4" part="chcontent"/>
             <clip pos="4" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+        <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
           </chunk>
           <b />
         <chunk>
@@ -1950,17 +1997,17 @@ And then there are some categories like "month", with all the months.
           </chunk>
           <b pos="1"/>
           <chunk>
-            <clip pos="3" part="lemh"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-            <clip pos="3" part="lemq"/>
-          </chunk>
-          <b pos="2"/>
-          <chunk>
             <clip pos="4" part="lemh"/>
             <clip pos="4" part="tags"/>
             <clip pos="4" part="chcontent"/>
             <clip pos="4" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
           </chunk>
           <b pos="3"/>
           <chunk>
@@ -2014,10 +2061,10 @@ And then there are some categories like "month", with all the months.
           </chunk>
           <b pos="4"/>
           <chunk>
-            <clip pos="5" part="lemh"/>
-            <clip pos="5" part="tags"/>
-            <clip pos="5" part="chcontent"/>
-            <clip pos="5" part="lemq"/>
+            <clip pos="4" part="lemh"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
+            <clip pos="4" part="lemq"/>
           </chunk>
         </out>
       </action>

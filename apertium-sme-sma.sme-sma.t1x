@@ -1942,7 +1942,9 @@ And then there are some categories like "month", with all the months.
   <section-def-lists>
     <def-list n="váikkuhit-verb">
       <list-item v="váikkuhit"/>
+      <list-item v="čuohcat"/>
       <list-item v="dijpedh"/>
+      <list-item v="dïjpedh"/>
     </def-list>
     <def-list n="adv-verb">
       <list-item v="oassálastit"/>
@@ -1966,6 +1968,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="vuesiehtidh"/>     
       <list-item v="dijpedh"/>     
       <list-item v="dïjpedh"/>     
+      <list-item v="čuohcat"/>
      </def-list>
     <def-list n="nom-verb">
       <list-item v="mearkkašit"/>
@@ -2543,6 +2546,7 @@ And then there are some categories like "month", with all the months.
             </and>
           </test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+          <let><var n="func"/><lit-tag v="@←OBJ"/></let>
          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let> 
         </when>
         <when c="M[T] acc to nom">
@@ -8763,6 +8767,54 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_vblex"/>
               <clip pos="2" side="tl" part="a_trans"/>
+              <lit-tag v="inf"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[T]-ADV mielde_adv adv verb_actio_ess" c="lea mielde viidáseappot ovddideamen giela : mealtan vijriebasse gïelem evtiedidh">
+      <pattern>
+        <pattern-item n="mielde_adv"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="verb_actio_ess"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="mielde" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+            <b pos="1"/>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+            <b pos="2"/>
+          <chunk name="inf"> 
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="a_vblex"/>
+              <clip pos="3" side="tl" part="a_trans"/>
               <lit-tag v="inf"/>
             </lu>
           </chunk>

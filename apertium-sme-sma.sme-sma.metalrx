@@ -391,9 +391,35 @@
        <match lemma="go" />
   </rule>
   <rule weight="1.0">
-       <match lemma="dáhpáhuvvat" tags="vblex.iv.*"><select lemma="sjugniehtovvedh" tags="vblex.*"/></match>
+       <match lemma="dáhpáhuvvat" tags="vblex.iv.*"><select lemma="sjïdtedh" tags="vblex.*"/></match>
   </rule>
-  <rule weight="1.0">
+  <rule weight="0.5">
+       <match lemma="dáhpáhuvvat" tags="vblex.tv.*"><select lemma="årrodh" tags="vblex.*"/></match>
+  </rule>
+<!--  <rule weight="0.6">
+       <match lemma="dáhpáhuvvat" tags="vblex.iv.*"><select lemma="årrodh" tags="vblex.iv.prfprc.*"/></match>
+  </rule> -->
+   <rule weight="1.0">
+       <match lemma="dat" tags="prn.*"><select lemma="dïhte" tags="prn.*"/></match>
+  </rule>
+   <rule weight="0.5">
+       <match lemma="dat" tags="prn.*"><select lemma="daate" tags="prn.*"/></match>
+  </rule>
+   <rule weight="0.6">
+       <match lemma="dat" tags="prn.dem.sg.nom.@SUBJ→"><select lemma="daate" tags="prn.*"/></match>
+       <match lemma="gáibidit"/>
+  </rule>
+   <rule weight="1.0">
+       <match lemma="olu" tags="adv.*"><select lemma="jïjnje" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="olu" tags="adv.*"><select lemma="guhkiem" tags="adv.*"/></match>
+  </rule>
+ <rule weight="0.6">
+       <match lemma="olu" tags="adv.*"><select lemma="guhkiem" tags="adv.*"/></match>
+       <match lemma="ovdal" tags="*"/>
+  </rule>  
+ <rule weight="1.0">
        <match lemma="dahppat" tags="vblex.tv.*"><select lemma="dahpedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -2205,7 +2231,29 @@
      </rule>     
 
  <!--  temporarly; rule is comming -->
+     <rule weight="1.0">  
+       <match lemma="váikkuhit">  
+           <select lemma="dijpedh"/>   
+        </match>  
+        </rule>   
      <rule weight="0.5">  
+       <match lemma="váikkuhit">  
+           <select lemma="stuvredh"/>   
+        </match>  
+        </rule>   
+     <rule weight="0.6">  
+     <or>   
+     <match lemma="háliidit"/>  
+     <match lemma="mielde"/>  
+     </or>
+       <match lemma="váikkuhit">  
+           <select lemma="stuvredh"/>   
+        </match>  
+        </rule>   
+
+
+
+     <rule weight="1.0">  
        <match lemma="geavahit">  
            <select lemma="nuhtjedh"/>   
         </match>  
