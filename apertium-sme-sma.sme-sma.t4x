@@ -2325,7 +2325,7 @@ And then there are some categories like "month", with all the months.
       <pattern>
         <pattern-item n="NP_Subj_not_Rel_r"/>
         <pattern-item n="iiverb"/>
-        <pattern-item n="conneg"/>
+<!--        <pattern-item n="conneg"/> -->
       </pattern>
       <action>
         <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
@@ -2337,13 +2337,6 @@ And then there are some categories like "month", with all the months.
             <clip pos="2" part="lemq"/>
           </chunk>
           <b pos="1"/>
-          <chunk>
-            <clip pos="3" part="lemh"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-            <clip pos="3" part="lemq"/>
-          </chunk>           
-          <b pos="2"/>
           <chunk>
             <clip pos="1" part="lemh"/>
             <clip pos="1" part="tags"/>
