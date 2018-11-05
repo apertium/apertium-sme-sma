@@ -2926,7 +2926,7 @@
        <!-- galkedh -->   <!-- edtjedh -->
   <rule weight="1.0">
     <match lemma="galgat" tags="vblex.iv.*">
-      <select lemma="edtjedh"  tags="vblex.iv.*"/>
+      <select lemma="galkedh"  tags="vblex.iv.*"/>
     </match>
   </rule>
 
@@ -2942,7 +2942,8 @@
  </rule>
  <rule weight="0.6">
       <match lemma="galgat" tags="vblex.iv.*"><select lemma="galkedh" tags="vblex.iv.*"/></match> 
-      <match lemma="leat" tags="vblex.iv.*" />
+      <or><match lemma="leat" tags="vblex.iv.*" />
+      <match tags="vblex.*.der_passl.*" /></or>
  </rule>
     
 
