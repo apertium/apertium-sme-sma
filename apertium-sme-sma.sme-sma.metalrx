@@ -2437,7 +2437,18 @@
      <match lemma="ahte"/>    
      </or>   
         </rule> 
- 
+        <rule weight="0.6">    
+     <or>   
+     <match lemma="šaddat"/>    
+     <match lemma="leat"/>    
+     <match lemma="gártat"/>    
+     <match lemma="ahte"/>    
+     </or>   
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma="nimhtie"/>  
+         </match>   
+        </rule> 
+
  <rule weight="1.0">   
   <match lemma="bidjat" >   
       <select lemma="bïejedh"/>    
@@ -2659,12 +2670,39 @@
             <select lemma="lea"/> 
          </match>
        </rule>     
+       <rule weight="0.5"> 
+         <match lemma="mearkkašit" >
+            <select lemma="dïhte jis"/> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="mii" tags="prn.*"/>
+         <match lemma="mearkkašit" >
+            <select lemma="dïhte jis"/> 
+         </match>
+       </rule>     
+       <rule weight="0.5"> 
+         <match lemma="mearkkašit" >
+            <select lemma="jis"/> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="dat" tags="prn.*"/>
+         <match lemma="mearkkašit" >
+            <select lemma="jis"/> 
+         </match>
+       </rule>     
+<!--        <rule weight="1.0"> 
+         <match lemma="mearkkašit" >
+            <select lemma="lea"/> 
+         </match>
+       </rule>     
        <rule weight="0.5">  
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
        </rule>     
-<!--       <rule weight="0.6"> 
+       <rule weight="0.6"> 
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
@@ -2790,6 +2828,12 @@
             <select lemma="gosse" /> 
          </match>
        </rule>     
+         <rule weight="0.5"> 
+         <match lemma="mearkkašit" />
+         <match lemma="go" >
+            <select lemma="gosse" /> 
+         </match>
+       </rule>     
        <rule weight="0.5">  
          <match lemma="go" >
             <select lemma="goh" /> 
@@ -2807,11 +2851,6 @@
          <match lemma="vejolaš" />
           </or>
       </rule>     
-       <rule weight="0.5">  
-         <match lemma="go" >
-            <select lemma="goh" /> 
-         </match>
-       </rule>     
        <rule weight="0.6"> 
          <match lemma="go" >
             <select lemma="goh"/> 
