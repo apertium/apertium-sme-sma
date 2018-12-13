@@ -247,6 +247,7 @@
    
     <e><p><l>summal<s n="adv"/></l><r>debpelen<b/>dahkoe<s n="adv"/></r></p></e>
     <e><p><l>siskkobealde<s n="adv"/></l><r>sisnjelen<s n="adv"/></r></p></e>
+    <e><p><l>čađat<s n="adv"/></l><r>iktesth<s n="adv"/></r></p></e>
     
     <e><p><l>ovttajienalaččat<s n="adv"/></l><r>aktenraeresne<s n="adv"/></r></p></e>
     <e><p><l>davábealde<s n="post"/></l><r>noerhtelen<s n="post"/></r></p></e>
@@ -3360,7 +3361,7 @@
     <e><p><l>vássánáigi<s n="n"/></l><r>vaaseme<b/>tïjje<s n="n"/></r></p></e>    <!--Typisk sma-siermåte: biejjieh mah vaaseme -->
     <e><p><l>vásttolaš<s n="adj"/></l><r>tjåadtjoehtæjja<s n="adj"/></r></p></e>
     <e><p><l>vástádus<s n="n"/></l><r>vaestiedasse<s n="n"/></r></p></e>
-    <e><p><l>vásáhus<s n="n"/></l><r>dååjrehts<s n="n"/></r></p></e>
+    <e><p><l>vásáhus<s n="n"/></l><r>dååjrehtse<s n="n"/></r></p></e>
     <e><p><l>vásáhus<s n="n"/></l><r>vaesehts<s n="n"/></r></p></e>
     <e><p><l>váttisvuohta<s n="n"/></l><r>dåeriesmoere<s n="n"/></r></p></e>  <!-- tsagkese -->
     <e><p><l>vázzi<s n="n"/><s n="nomag"/></l><r>vaedtsije<s n="n"/></r></p></e>
@@ -4260,6 +4261,7 @@
     <e><p><l>davábealde<s n="adv"/></l><r>noerhtelen<s n="adv"/></r></p></e>
     <e><p><l>davás<s n="adv"/></l><r>noerhtese<s n="adv"/></r></p></e>
     <e><p><l>dađistaga<s n="adv"/></l><r>daamtaj<s n="adv"/></r></p></e> <!-- iktemearan -->
+    <e><p><l>dađistaga<s n="adv"/></l><r>minngelen<s n="adv"/></r></p></e>
     <e><p><l>dađistaga<s n="adv"/></l><r>iktemearan<s n="adv"/></r></p></e>
     <e><p><l>de<s n="adv"/></l><r>dellie<s n="adv"/></r></p></e>
     <e><p><l>de<s n="adv"/></l><r>dle<s n="adv"/></r></p></e>
@@ -4472,9 +4474,13 @@
     <e><p><l>unnimusat<s n="adv"/></l><r>unnemes<s n="adv"/></r></p></e>
     <e><p><l>unnit<s n="adv"/></l><r>vaenebe<s n="adv"/></r></p></e>
     <e><p><l>unnut<s n="vblex"/><s n="iv"/></l><r>unnies<s n="adj"/><s n="comp"/></r></p></e>  <!-- unnebe sjïdtedh -->
+    <e><p><l>gustot<s n="vblex"/><s n="iv"/><s n="indic"/><s n="pres"/><s n="p3"/><s n="sg"/></l><r>faamosne<s n="adv"/></r></p></e> 
+    <e><p><l>gustot<s n="vblex"/><s n="iv"/><s n="indic"/><s n="pret"/><s n="p3"/><s n="pl"/></l><r>faamosne<s n="adv"/></r></p></e> 
+    <e><p><l>gustot<s n="vblex"/><s n="iv"/><s n="inf"/></l><r>faamosne<s n="adv"/></r></p></e> 
+    <e><p><l>man<s n="adv"/></l><r>mij<s n="prn"/><s n="ind"/><s n="sg"/><s n="acc"/></r></p></e>
     <e><p><l>unnán<s n="adv"/></l><r>vaenie<s n="adv"/></r></p></e>
     <e><p><l>vaikko<s n="adv"/></l><r>saaht<s n="adv"/></r></p></e>
-    <e><p><l>valjit<s n="adv"/></l><r>veljie<s n="n"/></r></p></e>
+    <e><p><l>valjit<s n="adv"/></l><r>veljie<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>veahá<s n="adv"/></l><r>ånnetji<s n="adv"/></r></p></e>
     <e><p><l>veaháš<s n="adv"/></l><r>ånnetji<s n="adv"/></r></p></e>
     <e><p><l>vehá<s n="adv"/></l><r>ånnetji<s n="adv"/></r></p></e>
@@ -4537,8 +4543,9 @@
     <!-- <e><p><l>bávččastit<s n="vblex"/><s n="iv"/></l><r>vaarkedh<s n="vblex"/></r></p></e>     -->
     <!-- It´s hurt-Verbs LRX-regler!!-->
     <e r="LR"><p><l>gávdnot<s n="vblex"/><s n="iv"/></l><r>lea<s n="vblex"/><s n="iv"/></r></p></e>
-    <e r="LR"><p><l>mearkkašit<s n="vblex"/><s n="tv"/></l><r>lea<s n="vblex"/><s n="iv"/></r></p></e>
-    <e r="LR"><p><l>mearkkašit<s n="vblex"/><s n="tv"/></l><r>sïjhtedh<s n="vblex"/><s n="tv"/></r></p></e>
+<!--    <e r="LR"><p><l>mearkkašit<s n="vblex"/><s n="tv"/></l><r>lea<s n="vblex"/><s n="iv"/></r></p></e> -->
+<!--    <e r="LR"><p><l>mearkkašit<s n="vblex"/><s n="tv"/></l><r>sïjhtedh<s n="vblex"/><s n="tv"/></r></p></e> -->
+    <e r="LR"><p><l>mearkkašit<s n="vblex"/><s n="tv"/></l><r>vïhtesjidh<s n="vblex"/><s n="tv"/></r></p></e> 
 <!--    <e><p><l>mearkkašit<s n="vblex"/><s n="tv"/><s n="indic"/><s n="pres"/><s n="p3"/><s n="sg"/></l><r>dïhte<b/>jis<s n="adv"/></r></p></e> -->
 <!--    <e><p><l>mearkkašit<s n="vblex"/><s n="tv"/><s n="indic"/><s n="pret"/><s n="p3"/><s n="sg"/></l><r>dïhte<b/>jis<s n="adv"/></r></p></e> -->
 <!--    <e><p><l>mearkkašit<s n="vblex"/><s n="tv"/><s n="indic"/><s n="pres"/><s n="p3"/><s n="sg"/></l><r>jis<s n="pcle"/></r></p></e> -->

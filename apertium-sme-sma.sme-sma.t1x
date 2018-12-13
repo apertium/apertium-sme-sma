@@ -144,12 +144,12 @@ C[T]-V verb_actio_ess
 C[DL]-V orrut_vblex leat_actio_ess
 C[T]-V verb_to_adv
 C[T]-V leat_aux verb_to_adv
-C[_]-V mearkkašit_vblex
+C[_]-V mearkkašit_3p
 C[_]-V leat_aux
  
 Rules for predicates:
 C[DLT]-PRED leat_drop noun adj2verb
-C[L]-PRED mearkkašit_vblex ahte_cnjsub
+C[L]-PRED mearkkašit_3p ahte_cnjsub
 C[L]-PRED oažžut_vblex diehtu_n_acc
 C[L]-PRED atnit_vblex árvu_n_loc
 C[TW]-PRED leat_prfprc vejolaš_adj
@@ -1055,8 +1055,16 @@ And then there are some categories like "month", with all the months.
        <cat-item lemma="čeahci" tags="n.*.sg.*"/>
       <cat-item lemma="máhka" tags="n.*.sg.*"/>
    </def-cat>
-     <def-cat n="mearkkašit_vblex">
-      <cat-item lemma="mearkkašit" tags="vblex.tv.*.*.p3.sg.*"/>
+     <def-cat n="mearkkasit_inf">
+      <cat-item lemma="mearkkašit" tags="vblex.tv.inf.*"/>
+    </def-cat>
+     <def-cat n="mearkkašit_3p">
+      <cat-item lemma="mearkkašit" tags="vblex.tv.*.p3.sg.*"/>
+    </def-cat>
+     <def-cat n="darbbasit_conneg">
+      <cat-item lemma="dárbbašit" tags="vblex.tv.*.*.*.conneg.*"/>
+      <cat-item lemma="dárbbašit" tags="vblex.tv.*.conneg.*"/>
+      <cat-item lemma="dárbbahit" tags="vblex.*.*.*.conneg.*"/>
     </def-cat>
      <def-cat n="atnit_vblex">
       <cat-item lemma="atnit" tags="vblex.*"/>
@@ -2646,7 +2654,7 @@ And then there are some categories like "month", with all the months.
         <when c="M[T] adj spred to sg">
           <test>
             <and>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←SPRED"/></equal>
+          <not><equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal></not>
               <equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj"/></equal>
             </and>
           </test>
@@ -8012,6 +8020,67 @@ And then there are some categories like "month", with all the months.
 
     <!-- SECTION: Verbal groups -->
 
+    <rule comment="C[L]-PRED negverbdarbbasit_conneg mearkkasit_inf ahte_cnjsub" c="ii dárbbaš mearkkaša ahte boađán ihttin : dïhte jis gosse jirreden båatam">
+      <pattern>
+        <pattern-item n="negverb"/>
+        <pattern-item n="darbbasit_conneg"/>
+        <pattern-item n="mearkkasit_inf"/>
+        <pattern-item n="ahte_cnjsub"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/> </call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="3"/></call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="4"/></call-macro>
+          <let><var n="main-verb-lemma"/><clip pos="3" side="sl" part="lem"/></let> 
+        <let><var n="tense"/><clip pos="2" side="sl" part="a_tense"/></let>
+        <let><clip pos="2" side="tl" part="a_mood"/><lit v=""/></let>
+        <let><clip pos="4" side="tl" part="lem"/><lit v="gosse"/></let>
+     <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="ii" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@+FAUXV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_vblex"/>
+              <clip pos="1" side="tl" part="a_trans"/>
+              <clip pos="1" side="tl" part="a_neg"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+			  <var n="tense"/>              
+			 <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+            <b pos="1"/>
+          <chunk name="conneg">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_vblex"/>
+              <clip pos="2" side="tl" part="a_trans"/>
+              <clip pos="2" side="tl" part="a_conneg"/>
+            </lu>
+          </chunk>
+            <b pos="2"/>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><lit-tag v="@ADVL"/></tag>
+            </tags>
+            <lu>
+              <lit v="nimhtie"/>
+              <lit-tag v="adv"/>
+            </lu>
+           <b pos="3"/>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
     <rule comment="C[T]-V verb_to_adv" c="go oassálastet dákkár giellabesiin : goh mealtan dagkeres gïelebiesine ">
       <pattern>
         <pattern-item n="verb_to_adv"/>
@@ -8372,10 +8441,10 @@ And then there are some categories like "month", with all the months.
     </rule> 
 
 
-    <rule comment="C[_]-V prn_itg mearkkašit_vblex" c="Maid mearkkaša go leat journalista? : Mij dïhte jis gosse journaliste? ">
+    <rule comment="C[_]-V prn_itg mearkkašit_3p" c="Maid mearkkaša go leat journalista? : Mij dïhte jis gosse journaliste? ">
       <pattern>
         <pattern-item n="prn_itg"/>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
       </pattern>
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
@@ -8407,9 +8476,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[L]-PRED mearkkašit_vblex dat_prn ahte_cnjsub" c="mearkkaša dan ahte : Dïhte jis gosse ">
+    <rule comment="C[L]-PRED mearkkašit_3p dat_prn ahte_cnjsub" c="mearkkaša dan ahte : Dïhte jis gosse ">
       <pattern>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
         <pattern-item n="dat_prn"/>
         <pattern-item n="ahte_cnjsub"/>
       </pattern>
@@ -8442,10 +8511,10 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>  
-   <rule comment="C[L]-PRED dat mearkkašit_vblex dat_prn " c="dat mearkkaša dan  : Dïhte jis gosse ">
+   <rule comment="C[L]-PRED dat mearkkašit_3p dat_prn " c="dat mearkkaša dan  : Dïhte jis gosse ">
       <pattern>
         <pattern-item n="dat_prn"/>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
         <pattern-item n="dat_prn"/>
       </pattern>
       <action>
@@ -8472,10 +8541,10 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>  
-    <rule comment="C[L]-PRED dat mearkkašit_vblex dat_prn ahte_cnjsub" c="dat mearkkaša dan ahte : Dïhte jis gosse ">
+    <rule comment="C[L]-PRED dat mearkkašit_3p dat_prn ahte_cnjsub" c="dat mearkkaša dan ahte : Dïhte jis gosse ">
       <pattern>
         <pattern-item n="dat_prn"/>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
         <pattern-item n="dat_prn"/>
         <pattern-item n="ahte_cnjsub"/>
       </pattern>
@@ -8509,10 +8578,10 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>  
-    <rule comment="C[L]-PRED dat_prn mearkkašit_vblex ahte_cnjsub" c="dat mearkkaša ahte boađán ihttin : dïhte jis gosse jirreden båatam">
+    <rule comment="C[L]-PRED dat_prn mearkkašit_3p ahte_cnjsub" c="dat mearkkaša ahte boađán ihttin : dïhte jis gosse jirreden båatam">
       <pattern>
         <pattern-item n="dat_prn"/>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
         <pattern-item n="ahte_cnjsub"/>
       </pattern>
       <action>
@@ -8544,10 +8613,10 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule> 
-   <rule comment="C[L]-PRED dat_prn mearkkašit_vblex" c="Dat mearkkaša unnideami dehálaš sámi surggiin. : dïhte jis unniedimmie vihkeles saemien suerkine">
+   <rule comment="C[L]-PRED dat_prn mearkkašit_3p" c="Dat mearkkaša unnideami dehálaš sámi surggiin. : dïhte jis unniedimmie vihkeles saemien suerkine">
        <pattern>
         <pattern-item n="dat_prn"/>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
       </pattern>
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
@@ -8572,9 +8641,9 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>  
-    <rule comment="C[L]-PRED mearkkašit_vblex ahte_cnjsub" c="mearkkaša ahte : Dïhte jis gosse ">
+    <rule comment="C[L]-PRED mearkkašit_3p ahte_cnjsub" c="mearkkaša ahte : Dïhte jis gosse ">
       <pattern>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
         <pattern-item n="ahte_cnjsub"/>
       </pattern>
       <action>
@@ -8607,10 +8676,10 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>  
  <!--
-    <rule comment="C[L]-PRED dat_prn mearkkašit_vblex ahte_cnjsub" c="dat mearkkaša ahte : nimhtie lea">
+    <rule comment="C[L]-PRED dat_prn mearkkašit_3p ahte_cnjsub" c="dat mearkkaša ahte : nimhtie lea">
       <pattern>
         <pattern-item n="dat_prn"/>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
         <pattern-item n="ahte_cnjsub"/>
       </pattern>
       <action>
@@ -8640,9 +8709,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
- <!--   <rule comment="C[L]-PRED mearkkašit_vblex ahte_cnjsub" c="dat mearkkaša ahte mun boađán ruoktot : dïhte nimhtie ahte manne gåetide båatam">
+ <!--   <rule comment="C[L]-PRED mearkkašit_3p ahte_cnjsub" c="dat mearkkaša ahte mun boađán ruoktot : dïhte nimhtie ahte manne gåetide båatam">
       <pattern>
-        <pattern-item n="mearkkašit_vblex"/>
+        <pattern-item n="mearkkašit_3p"/>
         <pattern-item n="ahte_cnjsub"/>
       </pattern>
       <action>
