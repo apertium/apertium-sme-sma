@@ -541,7 +541,10 @@
        <match lemma="gárri" tags="n.*"><select lemma="lihtie" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="garrudit" tags="vblex.tv.*"><select lemma="våarnodh" tags="vblex.*"/></match>
+       <match lemma="lieđđut" tags="vblex.iv.*"><select lemma="bahtsegidh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="garrudit" tags="vblex.tv.*"><select lemma="gærroedidh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="gaskan" tags="adj.*"><select lemma="byölehts" tags="adj.*"/></match>
@@ -989,7 +992,7 @@
        <match lemma="rissi" tags="n.*"><select lemma="båskoe" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="ruovgat" tags="vblex.tv.*"><select lemma="snahkadidh" tags="vblex.*"/></match>
+       <match lemma="ruovgat" tags="vblex.tv.*"><select lemma="råavkedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="ruvdno" tags="n.*"><select lemma="kråvna" tags="n.*"/></match>
@@ -1052,7 +1055,7 @@
        <match lemma="vahát" tags="n.*"><select lemma="goerpe" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="váidit" tags="vblex.tv.*"><select lemma="gïelkerdidh" tags="vblex.*"/></match>
+       <match lemma="váidit" tags="vblex.tv.*"><select lemma="hojjedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="váivi" tags="n.*"><select lemma="barkoestradtje" tags="n.*"/></match>
