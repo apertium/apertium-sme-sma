@@ -534,6 +534,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="leat_main_fin">
       <cat-item lemma="leat" tags="*.@+FMAINV"/>
     </def-cat>
+    <def-cat n="leat_main_inf">
+      <cat-item lemma="leat" tags="*.inf.@+FMAINV"/>
+    </def-cat>
 
     <def-cat n="prop_nom">
       <cat-item tags="np.*.sg.nom.*"/>
@@ -2076,7 +2079,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="km"/>
     </def-list>
     <def-list n="muvhte">
-      <list-item v="muvhte"/>
+<!--      <list-item v="muvhte"/> -->
       <list-item v="måedtie"/>
       <list-item v="gellie"/>
  <!--    <list-item v="gaajhke"/>    Muorat leat buot máilmmiosiin. -->
@@ -2977,6 +2980,14 @@ And then there are some categories like "month", with all the months.
         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.pl.nom"/></let>
          </when>   
 
+     <when>
+     <test><and>
+     <equal><clip pos="1" side="tl" part="lem"/><lit v="gaajhke"/></equal>
+     <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+     </and></test>
+        <let><clip pos="1" side="tl" part="tags"/><lit-tag v="prn.ind.pl.nom"/></let>
+        <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.pl.nom"/></let>
+         </when>   
         <otherwise c="NP internal agreement">  
         <let>
           <clip pos="1" side="tl" part="tags"/>
@@ -6563,7 +6574,7 @@ And then there are some categories like "month", with all the months.
       <action>
          <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
        <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="verb" case="caseFirstword">
              <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -6614,7 +6625,7 @@ And then there are some categories like "month", with all the months.
     <rule comment="C[DT]-PP gen bokte_post" c="Sámegiela stáhtus loktejuvvošii dan bokte ahte maiddái dáža mánát sáhttet oahppat giela : Saemiengïelen staatuse dejnie lutnjesåvva ahte aaj daaroen maanah maehtieh gïelem lïeredh"> 
 
       <pattern>
-        <pattern-item n="gen"/>
+        <pattern-item n="dem_gen"/>
         <pattern-item n="bokte_post"/>
       </pattern>
       <action>
@@ -6631,8 +6642,8 @@ And then there are some categories like "month", with all the months.
              <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
               </or>
 </and></test>
-                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
-                 </when>
+                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let> 
+                 </when> 
       <when><test><and><or>
        <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_txt"/></equal>
        <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_plc-abstr"/></equal>
@@ -6671,7 +6682,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> 
 
 <!--    <rule comment=" bokte ahte  - 2 position out"> --> <!-- inessive and comitative/essive instead of pp with bokte -->
 <!--      <pattern>
@@ -8968,7 +8979,7 @@ And then there are some categories like "month", with all the months.
     </rule> -->
 
 
-    <rule comment="C[_]-V verb_inf" c="mun máhtán goarrut : manne maahtam gåarodh">
+    <rule comment="C[_]-V verb_inf" c="mun máhtán goarrut : manne maahtam gåarodh asdf">
       <pattern>
         <pattern-item n="verb_inf"/>
       </pattern>
@@ -8984,7 +8995,7 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="1" side="tl" part="tags"/><lit-tag v="pcle"/></let></when></choose>
         <choose><when>
         <test>
-        <equal><clip pos="1" side="tl" part="lem"/><lit v="lea"/></equal></test>
+        <equal><clip pos="1" side="sl" part="lem"/><lit v="leat"/></equal></test>
         <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
          <let><var n="chunk_name"/><lit v="cop-mainv"/></let></when>
          <otherwise>

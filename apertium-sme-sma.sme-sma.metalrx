@@ -297,7 +297,7 @@
   </rule>
   <rule weight="0.6">
        <match lemma="beassat" tags="vblex.*"><select lemma="bïesedh" tags="vblex.*"/></match>
-       <match lemma="eret" />
+       <or><match lemma="eret" /><match lemma="fárrui" /></or>
   </rule>
 
   
@@ -1054,6 +1054,16 @@
   <rule weight="1.0">
        <match lemma="vahát" tags="n.*"><select lemma="goerpe" tags="n.*"/></match>
   </rule>
+   <rule weight="1.0">
+       <match lemma="ovdan" tags="adv.*"><select lemma="fraamme" tags="adv.*"/></match>
+  </rule>
+   <rule weight="0.5">
+       <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="váldit"/>
+       <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
+  </rule>
   <rule weight="1.0">
        <match lemma="váidit" tags="vblex.tv.*"><select lemma="hojjedh" tags="vblex.*"/></match>
   </rule>
@@ -1063,7 +1073,14 @@
   <rule weight="1.0">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="vaeltedh" tags="vblex.*"/></match>
   </rule>
-  
+    <rule weight="0.5">
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="buektedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="buektedh" tags="vblex.*"/></match>
+       <match lemma="ovdan"/>
+  </rule>
+
   <rule weight="0.5">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="utnedh" tags="vblex.*"/></match>
   </rule>
@@ -2850,6 +2867,8 @@
          <match tags="prn.*.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.@COMP-CS←"/>
          <match lemma="vejolaš" />
           </or>
       </rule>     
@@ -2863,6 +2882,8 @@
          <match tags="prn.*.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.@COMP-CS←"/>
           </or>
       </rule>     
 
