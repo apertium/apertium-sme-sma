@@ -2841,6 +2841,29 @@
          </match>
          <match lemma="ahte" />
        </rule>     
+
+
+         <rule weight="1.0"> 
+         <match lemma="gos" >
+            <select lemma="gusnie" /> 
+         </match>
+       </rule>     
+         <rule weight="0.5"> 
+         <match lemma="gos" >
+            <select lemma="gustie" /> 
+         </match>
+       </rule>     
+         <rule weight="0.6"> 
+         <match lemma="gos" tags="adv.@ADVLcs-ela→" >
+            <select lemma="gustie" /> 
+         </match>
+       </rule>     
+         <rule weight="0.6"> 
+         <match lemma="gos" tags="adv.@ADVL-ela→" >
+            <select lemma="gustie" /> 
+         </match>
+       </rule>     
+
  
          <rule weight="1.0"> 
          <match lemma="go" >
