@@ -1431,6 +1431,27 @@
    </match>
  </rule>     
 
+
+    <rule weight="1.0">
+   <match lemma="guhte">
+     <select lemma="guhte" tags="prn.rel.*"/>
+   </match>
+ </rule>     
+
+
+     <rule weight="0.5">
+   <match lemma="guhte" tags="prn.rel.sg.*">
+     <select lemma="man" tags="adv.*"/>
+   </match>
+ </rule>     
+    <rule weight="0.6">
+   <match lemma="guhte" tags="prn.rel.sg.*">
+     <select lemma="man" tags="adv.*"/>
+   </match>
+   <match lemma="muddu"/>
+ </rule>     
+
+
     <rule weight="1.0">
    <match lemma="álgu">
      <select lemma="aalkoe" tags="n.*"/>
@@ -1450,6 +1471,24 @@
  </rule>     
 
     <rule weight="1.0">
+   <match lemma="ovttasráđiid">
+     <select lemma="ektesevyöki" tags="adv.*"/>
+   </match>
+ </rule>     
+
+       <rule weight="0.5">
+   <match lemma="ovttasráđiid">
+     <select lemma="ektine" tags="adv.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ovttasráđiid">
+     <select lemma="ektine" tags="adv.*"/>
+   </match>
+    <match tags="*.com.*"/>
+ </rule>     
+
+    <rule weight="1.0">
    <match lemma="gosa">
      <select lemma="gåabph" tags="adv.*"/>
    </match>
@@ -1460,7 +1499,7 @@
      <select lemma="gosse" tags="adv.*"/>
    </match>
  </rule>     
-       <rule weight="0.5">
+       <rule weight="0.6">
    <match lemma="gosa">
      <select lemma="gosse" tags="adv.*"/>
    </match>
@@ -2561,8 +2600,10 @@
        <rule weight="0.6">    
   <match lemma="nu" tags="adv.*" >   
             <select lemma="dan"/>  
-         </match>   
-     <match tags="adj.sg.*"/>    
+         </match> <or>  
+     <match tags="adj.*"/>    
+     <match tags="prn.ind.pl.*"/>    
+     <match tags="adv.*"/>   </or> 
         </rule> 
 
 

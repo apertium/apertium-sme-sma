@@ -69,6 +69,7 @@
     <sdef n="prfprc"/>
 
     <sdef n="indecl"/>
+    <sdef n="subqst"/>
 
     <sdef n="ord"/>
     <sdef n="attr"/>
@@ -77,7 +78,8 @@
     <sdef n="m"/>
     <sdef n="f"/>
 
-    <sdef n="sem_plc"/>
+    <sdef n="sem_plc"/> 
+    <sdef n="sem_plc_time"/>
     <sdef n="sem_sur"/>
     <sdef n="sem_org"/>
     <sdef n="sem_mat"/>
@@ -393,6 +395,8 @@
     <e><p><l>mii<s n="prn"/><s n="rel"/><s n="sg"/><s n="acc"/><s n="known"/></l><r>mij<s n="prn"/><s n="rel"/><s n="sg"/><s n="acc"/></r></p></e>
     <e><p><l>gii<s n="prn"/><s n="rel"/></l><r>gie<s n="prn"/><s n="rel"/></r></p></e>
     <e><p><l>guhte<s n="prn"/><s n="rel"/></l><r>guhte<s n="prn"/><s n="rel"/></r></p></e>
+    <e><p><l>guhte<s n="prn"/><s n="rel"/><s n="sg"/><s n="ill"/><s n="attr"/></l><r>man<s n="adv"/></r></p></e>
+    <e><p><l>guhte<s n="prn"/><s n="rel"/><s n="sg"/><s n="loc"/><s n="attr"/></l><r>man<s n="adv"/></r></p></e>
     <e><p><l>juohkehaš<s n="prn"/></l><r>fïereguhte<s n="prn"/></r></p></e>
 
 <!--    <e><p><l>dat<s n="prn"/><s n="dem"/><s n="sg"/></l><r>dïhte<s n="prn"/><s n="dem"/><s n="sg"/></r></p></e>-->
@@ -2566,6 +2570,7 @@
     <e><p><l>ovttasbargočoahkkin<s n="n"/></l><r>laavenjostoetjåanghkoe<s n="n"/></r></p></e>
     <e><p><l>ovttasbargu<s n="n"/></l><r>ektiebarkoe<s n="n"/></r></p></e>
     <e><p><l>ovttasráđiid<s n="adv"/></l><r>ektine<s n="adv"/></r></p></e>
+    <e><p><l>ovttasráđiid<s n="adv"/></l><r>ektesevyöki<s n="adv"/></r></p></e>
     <e><p><l>ovttastus<s n="n"/></l><r>gaskese<s n="n"/></r></p></e>
     <e><p><l>ođas<s n="n"/></l><r>saernie<s n="n"/></r></p></e>
     <e><p><l>ođđadárogiella<s n="n"/></l><r>orredaaroengïele<s n="n"/></r></p></e>
@@ -2771,6 +2776,7 @@
     <e><p><l>rámbuvra<s n="n"/></l><r>bovre<s n="n"/></r></p></e>
     <e><p><l>rámbuvri<s n="n"/></l><r>bovre<s n="n"/></r></p></e>
     <e><p><l>rámma<s n="n"/></l><r>mierie<s n="n"/></r></p></e>
+    <e><p><l>muddu<s n="n"/><s n="sem_plc_time"/><s n="sg"/><s n="ill"/></l><r>mierie<s n="n"/><s n="sg"/><s n="ill"/></r></p></e>
     <e><p><l>rámmaeaktu<s n="n"/></l><r>mierietsiehkie<s n="n"/></r></p></e>
     <e><p><l>rámmajuolludeapmi<s n="n"/></l><r>mieriesertiestimmie<s n="n"/></r></p></e>
     <e><p><l>ránnjá<s n="n"/></l><r>graanna<s n="n"/></r></p></e>
@@ -4323,7 +4329,7 @@
     <e><p><l>fásta<s n="adv"/></l><r>vihtieslaakan<s n="adv"/></r></p></e> 
     <e><p><l>gal<s n="adv"/></l><r>gujht<s n="pcle"/></r></p></e>
     <e><p><l>gaskaboddosaččat<s n="adv"/></l><r>annjebodts<s n="adv"/></r></p></e>
-    <e><p><l>gaskkal<s n="pr"/></l><r>gaskem<s n="pr"/></r></p></e>
+    <e><p><l>gaskkal<s n="pr"/></l><r>gaskem<s n="post"/></r></p></e>
     <e><p><l>geasset<s n="adv"/></l><r>giesege<s n="adv"/></r></p></e>
     <e><p><l>geassit<s n="adv"/></l><r>giesege<s n="adv"/></r></p></e>
     <e><p><l>geavatlaččat<s n="adv"/></l><r>praktihkelaakan<s n="adv"/></r></p></e>
@@ -4484,6 +4490,7 @@
 <!--    <e><p><l>gustot<s n="vblex"/><s n="iv"/><s n="indic"/><s n="pret"/><s n="p3"/><s n="pl"/></l><r>faamosne<s n="adv"/></r></p></e> -->
 <!--    <e><p><l>gustot<s n="vblex"/><s n="iv"/><s n="inf"/></l><r>faamosne<s n="adv"/></r></p></e> 									 -->
     <e><p><l>gustot<s n="vblex"/><s n="iv"/></l><r>dïjpedh<s n="vblex"/><s n="tv"/></r></p></e> 
+    <e><p><l>man<s n="adv"/><s n="subqst"/></l><r>mij<s n="prn"/><s n="ind"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>man<s n="adv"/></l><r>mij<s n="prn"/><s n="ind"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>unnán<s n="adv"/></l><r>vaenie<s n="adv"/></r></p></e>
     <e><p><l>vaikko<s n="adv"/></l><r>saaht<s n="adv"/></r></p></e>
@@ -44378,6 +44385,7 @@
     <e><p><l>Sámešaldi<s n="np"/></l><r>Sámešaldi<s n="np"/></r></p></e>
     <e><p><l>Sámi-Cup<s n="np"/></l><r>Sámi-Cup<s n="np"/></r></p></e>
     <e><p><l>Sámi<b/>Amatör<b/>Teáhter<s n="np"/></l><r>Sámi<b/>Amatör<b/>Teáhter<s n="np"/></r></p></e>
+    <e><p><l>Sámi<b/>allaskuvla<s n="np"/></l><r>Saemien<b/>jïlleskuvle<s n="np"/></r></p></e>
     <e><p><l>Sámi<b/>Boy<s n="np"/></l><r>Sámi<b/>Boy<s n="np"/></r></p></e>
     <e><p><l>Sámi<b/>Grand<b/>Prix<s n="np"/></l><r>Sámi<b/>Grand<b/>Prix<s n="np"/></r></p></e>
     <e><p><l>Sámi<b/>Jakki<s n="np"/></l><r>Sámi<b/>Jakki<s n="np"/></r></p></e>

@@ -9967,7 +9967,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T]-PP pr gen cnjcoo gen">
+<!--    <rule comment="C[T]-PP pr gen cnjcoo gen">
       <pattern>
         <pattern-item n="pr"/>
         <pattern-item n="gen"/>
@@ -10016,7 +10016,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
     <rule comment="C[W]-PP pr mod_n gen">
@@ -10027,23 +10027,37 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
-      <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+       <choose><when><test>
+       <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="post"/></equal></test>
+       <let><var n="chunk_name"/><lit v="pr_post"/></let></when>
+               <otherwise>
+           <let><var n="chunk_name"/><lit v="pr"/></let>
+       <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+        </otherwise>
+      </choose>
+       
         <out>
-          <chunk name="pr" case="caseFirstword">
+          <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
               <tag><lit-tag v="PP"/></tag>
               <tag><var n="func"/></tag>
             </tags>
             <lu>
-              <clip pos="2" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
+            </chunk>
             <b pos="1"/>
+            <chunk name="noun" case="caseFirstword">
+             <tags>
+             <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="@P←"/></tag>
+            </tags>
             <lu>
-              <clip pos="3" side="tl" part="whole"/>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
             <b pos="2"/>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
@@ -10058,7 +10072,12 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
+       <choose><when><test>
+       <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="post"/></equal></test>
+       <let><var n="chunk_name"/><lit v="pr_post"/></let></when>
+       <otherwise>
         <let><var n="chunk_name"/><clip pos="1" side="sl" part="lem"/></let>
+       </otherwise></choose>
         <out>
           <chunk namefrom="chunk_name" case="caseFirstword">
             <tags>
