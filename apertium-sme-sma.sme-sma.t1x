@@ -845,6 +845,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adv_juhtedh_vblex">
       <cat-item lemma="sisafárret" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="refl_vblex">
+      <cat-item lemma="geassádit" tags="vblex.*"/> <!-- jïjtjemse sigkedh -->
+    </def-cat>
     <def-cat n="adv_båetedh_vblex">
       <cat-item lemma="ilbmat" tags="vblex.*"/>
       <cat-item lemma="ovdanboahtit" tags="vblex.*"/>
@@ -1985,6 +1988,7 @@ And then there are some categories like "month", with all the months.
     <def-var n="caseFirstword"/>
     <def-var n="chunk_name"/>
     <def-var n="spectag"/>
+    <def-var n="px_nbrpers"/>
   </section-def-vars>
   <section-def-lists>
     <def-list n="váikkuhit-verb">
@@ -2176,7 +2180,52 @@ And then there are some categories like "month", with all the months.
   <section-def-macros>
 
 
-
+    <def-macro n="verb-px-1Param" npar="1"> 
+		<choose>
+	 	<when><test><and>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+		<equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1"/></equal>
+		 </and></test>
+             <let><var n="px_nbrpers"/><lit-tag v="px1sg"/></let>
+		 </when>	
+	 	<when><test><and>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+		<equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2"/></equal>
+		 </and></test>
+             <let><var n="px_nbrpers"/><lit-tag v="px2sg"/></let>
+		 </when>	
+	 	<when><test><and>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+		<equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3"/></equal>
+		 </and></test>
+             <let><var n="px_nbrpers"/><lit-tag v="px3sg"/></let>
+		 </when>	
+	 	<when><test><and><or>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="du"/></equal>
+		</or>
+		<equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1"/></equal>
+		 </and></test>
+             <let><var n="px_nbrpers"/><lit-tag v="px1pl"/></let>
+		 </when>	
+	 	<when><test><and><or>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="du"/></equal>
+		</or>
+		<equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2"/></equal>
+		 </and></test>
+             <let><var n="px_nbrpers"/><lit-tag v="px2pl"/></let>
+		 </when>	
+	 	<when><test><and><or>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+		<equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="du"/></equal>
+		</or>
+		<equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3"/></equal>
+		 </and></test>
+             <let><var n="px_nbrpers"/><lit-tag v="px3pl"/></let>
+		 </when>	
+		</choose>
+    </def-macro>
     <def-macro n="aehtjie-gon-tjidtjiehParam3" npar="3"> 
       <choose>
       <when c="M[T] nom gets pl">
@@ -6456,6 +6505,40 @@ And then there are some categories like "month", with all the months.
            <b />
            <lu>
               <lit v="bïejedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+     <rule comment="C[DL]-PRED refl_vblex" c="geassádit : jïjtjemse sigkedh">
+      <pattern>
+        <pattern-item n="refl_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+         <call-macro n="verb-px-1Param"><with-param pos="1"/></call-macro>
+
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+			<lit v="jïjtje"/>
+				<lit-tag v="prn.ref.acc"/>               
+				<var n="px_nbrpers"/>
+            </lu>
+           <b />
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
               <lit-tag v="vblex"/>
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tense"/>
