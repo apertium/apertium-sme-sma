@@ -1451,10 +1451,21 @@
 
     <rule weight="1.0">
    <match lemma="gosa">
-     <select lemma="gosse" tags="adv.*"/>
+     <select lemma="gåabph" tags="adv.*"/>
    </match>
  </rule>     
 
+       <rule weight="0.5">
+   <match lemma="gosa">
+     <select lemma="gosse" tags="adv.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.5">
+   <match lemma="gosa">
+     <select lemma="gosse" tags="adv.*"/>
+   </match>
+    <match lemma="bïejedh" tags="vblex.*"/>
+ </rule>     
 
        <rule weight="0.5">
    <match lemma="gosa">
@@ -2524,7 +2535,7 @@
 
  <rule weight="1.0">   
   <match lemma="nu" tags="adv.*" >   
-      <select lemma="dan"/>    
+      <select lemma="nimhtie"/>    
     </match>    
     </rule>      
 
@@ -2542,6 +2553,20 @@
         </rule> 
 
       <rule weight="0.5">    
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma="dan"/>  
+         </match>   
+        </rule>            
+ 
+       <rule weight="0.6">    
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma="dan"/>  
+         </match>   
+     <match tags="adj.sg.*"/>    
+        </rule> 
+
+
+<!--      <rule weight="0.5">    
   <match lemma="nu" tags="adv.*" >   
             <select lemma="nimhtie"/>  
          </match>   
@@ -2567,7 +2592,7 @@
   <match lemma="nu" tags="adv.*" >   
             <select lemma="nimhtie"/>  
          </match>   
-        </rule> 
+        </rule>   -->
 
  <rule weight="1.0">   
   <match lemma="bidjat" >   
