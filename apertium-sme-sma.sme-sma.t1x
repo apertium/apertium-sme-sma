@@ -828,27 +828,50 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="beassat" tags="vblex.iv.*"/>
     </def-cat>
 
-    <def-cat n="adjcomp_vblex">
-      <cat-item lemma="stuorrut" tags="vblex.iv.*"/>
-      <cat-item lemma="unnut" tags="vblex.iv.*"/>
+    <def-cat n="adj_vblex">
+      <cat-item lemma="gárvvásmuvvat" tags="vblex.*"/>
+      <cat-item lemma="guorranit" tags="vblex.*"/>
     </def-cat>
 
+
+    <def-cat n="adjcomp_vblex">
+      <cat-item lemma="gárvvásmuvvat" tags="vblex.*"/>
+      <cat-item lemma="guorranit" tags="vblex.*"/>
+    </def-cat>
+
+    <def-cat n="adv_vaeltedh_vblex">
+      <cat-item lemma="atnuiváldit" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="adv_juhtedh_vblex">
+      <cat-item lemma="sisafárret" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="adv_båetedh_vblex">
       <cat-item lemma="ilbmat" tags="vblex.*"/>
       <cat-item lemma="ovdanboahtit" tags="vblex.*"/>
     </def-cat>
     <def-cat n="adv_buektedh_vblex"> 
-      <cat-item lemma="mielddisbuktit" tags="vblex.*"/>
-      <cat-item lemma="ovdanbuktit" tags="vblex.*"/>
-      <cat-item lemma="gaskkustit" tags="vblex.*"/>
+      <cat-item lemma="mielddisbuktit" tags="vblex.*"/> <!-- mealtan -->
+      <cat-item lemma="ovdanbuktit" tags="vblex.*"/> <!-- åvtese -->
+      <cat-item lemma="gaskkustit" tags="vblex.*"/> <!-- åvtese -->
+      <cat-item lemma="čalmmustuhttit" tags="vblex.*"/> <!-- vååjnesasse -->
     </def-cat>
     <def-cat n="adv_tjaeledh_vblex"> 
-      <cat-item lemma="vuolláičállit" tags="vblex.*"/>
+      <cat-item lemma="vuolláičállit" tags="vblex.*"/> <!-- nualan -->
     </def-cat>
     <def-cat n="adv_bïejedh_vblex"> 
       <cat-item lemma="čalmmustit" tags="vblex.*"/>
       <cat-item lemma="čalmmustahttit" tags="vblex.*"/>
       <cat-item lemma="oainnusmahttit" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="n_tjoehpedh_vblex"> 
+      <cat-item lemma="murret" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="n_bïejedh_vblex"> 
+      <cat-item lemma="virgáibidjat" tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="n_båeltedh_vblex"> 
+      <cat-item lemma="dolastallat" tags="vblex.*"/>
+      <cat-item lemma="dolastit" tags="vblex.*"/>
     </def-cat>
     <def-cat n="n_vedtedh_vblex">
       <cat-item lemma="jienastit" tags="vblex.*"/>
@@ -1993,6 +2016,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="dijpedh"/>     
       <list-item v="dïjpedh"/>     
       <list-item v="čuohcat"/>
+      <list-item v="luohttit"/>
      </def-list>
     <def-list n="nom-verb">
       <list-item v="mearkkašit"/>
@@ -6436,7 +6460,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_infin"/>
             </lu>
           </chunk>
@@ -6444,6 +6468,108 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+     <rule comment="C[DL]-PRED n_tjoehpedh_vblex" c="murret : moerh tjoehpedh">
+      <pattern>
+        <pattern-item n="n_tjoehpedh_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="n"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="tjoehpedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+     <rule comment="C[DL]-PRED n_båeltedh_vblex" c="dolastallat : dållem båeltedh">
+      <pattern>
+        <pattern-item n="n_båeltedh_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="n"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="båeltedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+     <rule comment="C[DL]-PRED n_bïejedh_vblex" c="virgáibidjat : barkose bïejedh">
+      <pattern>
+        <pattern-item n="n_bïejedh_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="n"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_case"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="bïejedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
      <rule comment="C[DL]-PRED adv_tjaeledh_vblex" c="vuolláičállit : nualan tjaeledh">
       <pattern>
@@ -6469,7 +6595,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_infin"/>
             </lu>
           </chunk>
@@ -6502,7 +6628,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_infin"/>
             </lu>
           </chunk>
@@ -6533,7 +6659,103 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+     <rule comment="C[DL]-PRED adv_vaeltedh_vblex" c="atnuiváldit : åtnose vaeltedh">
+      <pattern>
+        <pattern-item n="adv_vaeltedh_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="adv"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="vaeltedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+     <rule comment="C[DL]-PRED adv_juhtedh_vblex" c="sisafárret : sïjse juhtedh">
+      <pattern>
+        <pattern-item n="adv_juhtedh_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="adv"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="juhtedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+     <rule comment="C[DL]-PRED adj_vblex" c="gárvvásmuvvat : gaervies sjïdtedh">
+      <pattern>
+        <pattern-item n="adj_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            
+           <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="adj.sg.nom"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="sjïdtedh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_infin"/>
             </lu>
           </chunk>

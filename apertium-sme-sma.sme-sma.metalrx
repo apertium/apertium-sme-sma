@@ -1578,8 +1578,103 @@
      <select lemma="mejtie" tags="cnjsub.*"/>
    </match>
  </rule>     
+       <rule weight="0.5">
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
 
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
 
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
        <rule weight="1.0">
    <match lemma="gitta" tags="adv.*">
      <select lemma="öövre" tags="adv.*"/>
