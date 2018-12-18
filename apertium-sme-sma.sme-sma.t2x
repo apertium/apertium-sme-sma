@@ -49,7 +49,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="comma">
       <cat-item lemma="comma" tags="CLB" />
     </def-cat>
-    <def-cat n="post">
+    <def-cat n="pp">
         <cat-item tags="PP.*"/>
     </def-cat>
     <def-cat n="pr">
@@ -76,6 +76,9 @@ And then there are some categories like "month", with all the months.
 
     <def-cat n="CONNEG">
       <cat-item lemma="conneg" tags="SV.*"/>
+    </def-cat>
+    <def-cat n="noun">
+        <cat-item lemma="noun" tags="*"/>
     </def-cat>
     <def-cat n="NP_Pr">
         <cat-item tags="NP.@P←.*"/>
@@ -192,6 +195,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="modN">
         <cat-item tags="*.@→N"/>
+        <cat-item tags="*.@→A"/>
     </def-cat>
 
     <def-cat n="Vcop">
@@ -260,7 +264,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
-    <def-attr n="case">
+    <def-attr n="a_case">
      <attr-item tags="nom"/>
      <attr-item tags="acc"/>
      <attr-item tags="gen"/>
@@ -384,6 +388,33 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
  -->
+
+    <rule comment="REGLA: PR_PO P_left CNP P_left">
+    <pattern>
+       <pattern-item n="PR_PO"/> 
+       <pattern-item n="P_left"/>
+       <pattern-item n="CNP"/>
+       <pattern-item n="P_left"/>
+    </pattern>
+      <action>
+    <out>
+      <chunk>
+            <get-case-from pos="1"><lit v="NP"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+        <clip pos="2" part="content"/>
+      <b pos="1"/>
+        <clip pos="3" part="content"/>
+      <b pos="2"/>
+        <clip pos="4" part="content"/>
+      <b pos="3"/>
+        <clip pos="1" part="content"/>
+           <lit v="}"/>
+      </chunk>
+    </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: PR_PO P_left">
     <pattern>
        <pattern-item n="PR_PO"/>
@@ -392,15 +423,38 @@ And then there are some categories like "month", with all the months.
       <action>
     <out>
       <chunk>
-        <clip pos="2" part="whole"/>
-      </chunk>
+           <get-case-from pos="1"><lit v="NP"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+        <clip pos="2" part="content"/>
       <b pos="1"/>
-        <chunk>
-        <clip pos="1" part="whole"/>
+        <clip pos="1" part="content"/>
+           <lit v="}"/>
       </chunk>
     </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: PP P_left">
+    <pattern>
+       <pattern-item n="Adp"/>
+       <pattern-item n="P_left"/>
+    </pattern>
+      <action>
+    <out>
+      <chunk>
+           <get-case-from pos="1"><lit v="NP"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+        <clip pos="1" part="content"/>
+      <b pos="1"/>
+        <clip pos="2" part="content"/>
+           <lit v="}"/>
+      </chunk>
+    </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: ektesne ADVL-left">
     <pattern>
@@ -470,6 +524,26 @@ And then there are some categories like "month", with all the months.
            <clip pos="3" part="content"/>
            <lit v="}"/>
            <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+
+    <rule comment="REGLA: modN noun"> 
+     <pattern>
+       <pattern-item n="modN"/>
+       <pattern-item n="noun"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="noun"/></get-case-from>
+           <clip pos="2" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <lit v="}"/>
          </chunk>
        </out>
      </action>
@@ -826,7 +900,7 @@ And then there are some categories like "month", with all the months.
        <pattern-item n="comma"/>
        <pattern-item n="NP_Po"/>
        <pattern-item n="CNP"/>
-       <pattern-item n="post"/>
+       <pattern-item n="Adp"/>
      </pattern>
      <action>
        <out>
@@ -856,7 +930,7 @@ And then there are some categories like "month", with all the months.
        <pattern-item n="NP_Po"/>
        <pattern-item n="CNP"/>
        <pattern-item n="NP_Po"/>
-       <pattern-item n="post"/>
+       <pattern-item n="Adp"/>
      </pattern>
      <action>
        <out>
@@ -881,7 +955,7 @@ And then there are some categories like "month", with all the months.
      <rule comment="REGLA: NP_Po CNP NP_Po post ">
      <pattern>
        <pattern-item n="NP_Po"/>
-       <pattern-item n="post"/>
+       <pattern-item n="Adp"/>
      </pattern>
      <action>
        <out>

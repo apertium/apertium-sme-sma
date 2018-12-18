@@ -297,7 +297,7 @@
   </rule>
   <rule weight="0.6">
        <match lemma="beassat" tags="vblex.*"><select lemma="bïesedh" tags="vblex.*"/></match>
-       <match lemma="eret" />
+       <or><match lemma="eret" /><match lemma="fárrui" /></or>
   </rule>
 
   
@@ -381,7 +381,7 @@
        <match lemma="cuvket" tags="vblex.tv.*"><select lemma="murhkedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="dađistaga" tags="adv.*"><select lemma="daamtaj" tags="adv.*"/></match>
+       <match lemma="dađistaga" tags="adv.*"><select lemma="minngelen" tags="adv.*"/></match>
   </rule>
   <rule weight="0.5">
        <match lemma="dađistaga" tags="adv.*"><select lemma="ånnetji mænngan" tags="adv.*"/></match>
@@ -541,7 +541,10 @@
        <match lemma="gárri" tags="n.*"><select lemma="lihtie" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="garrudit" tags="vblex.tv.*"><select lemma="våarnodh" tags="vblex.*"/></match>
+       <match lemma="lieđđut" tags="vblex.iv.*"><select lemma="bahtsegidh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="garrudit" tags="vblex.tv.*"><select lemma="gærroedidh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="gaskan" tags="adj.*"><select lemma="byölehts" tags="adj.*"/></match>
@@ -724,7 +727,13 @@
        <match lemma="lávet" tags="n.*"><select lemma="tsietsehthmuerjie" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
+       <match lemma="háhkat" tags="vblex.tv.*"><select lemma="reebledh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="1.0">
        <match lemma="lávet" tags="vblex.tv.*"><select lemma="provhkedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="ávki" tags="n.*"><select lemma="aevhkie" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="lávki" tags="n.*"><select lemma="sïlle" tags="n.*"/></match>
@@ -989,7 +998,7 @@
        <match lemma="rissi" tags="n.*"><select lemma="båskoe" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="ruovgat" tags="vblex.tv.*"><select lemma="snahkadidh" tags="vblex.*"/></match>
+       <match lemma="ruovgat" tags="vblex.tv.*"><select lemma="råavkedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="ruvdno" tags="n.*"><select lemma="kråvna" tags="n.*"/></match>
@@ -1051,8 +1060,18 @@
   <rule weight="1.0">
        <match lemma="vahát" tags="n.*"><select lemma="goerpe" tags="n.*"/></match>
   </rule>
+   <rule weight="1.0">
+       <match lemma="ovdan" tags="adv.*"><select lemma="fraamme" tags="adv.*"/></match>
+  </rule>
+   <rule weight="0.5">
+       <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="váldit"/>
+       <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
+  </rule>
   <rule weight="1.0">
-       <match lemma="váidit" tags="vblex.tv.*"><select lemma="gïelkerdidh" tags="vblex.*"/></match>
+       <match lemma="váidit" tags="vblex.tv.*"><select lemma="hojjedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="váivi" tags="n.*"><select lemma="barkoestradtje" tags="n.*"/></match>
@@ -1060,7 +1079,14 @@
   <rule weight="1.0">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="vaeltedh" tags="vblex.*"/></match>
   </rule>
-  
+    <rule weight="0.5">
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="buektedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="váldit" tags="vblex.tv.*"><select lemma="buektedh" tags="vblex.*"/></match>
+       <match lemma="ovdan"/>
+  </rule>
+
   <rule weight="0.5">
        <match lemma="váldit" tags="vblex.tv.*"><select lemma="utnedh" tags="vblex.*"/></match>
   </rule>
@@ -1405,6 +1431,27 @@
    </match>
  </rule>     
 
+
+    <rule weight="1.0">
+   <match lemma="guhte">
+     <select lemma="guhte" tags="prn.rel.*"/>
+   </match>
+ </rule>     
+
+
+     <rule weight="0.5">
+   <match lemma="guhte" tags="prn.rel.sg.*">
+     <select lemma="man" tags="adv.*"/>
+   </match>
+ </rule>     
+    <rule weight="0.6">
+   <match lemma="guhte" tags="prn.rel.sg.*">
+     <select lemma="man" tags="adv.*"/>
+   </match>
+   <match lemma="muddu"/>
+ </rule>     
+
+
     <rule weight="1.0">
    <match lemma="álgu">
      <select lemma="aalkoe" tags="n.*"/>
@@ -1424,11 +1471,40 @@
  </rule>     
 
     <rule weight="1.0">
+   <match lemma="ovttasráđiid">
+     <select lemma="ektesevyöki" tags="adv.*"/>
+   </match>
+ </rule>     
+
+       <rule weight="0.5">
+   <match lemma="ovttasráđiid">
+     <select lemma="ektine" tags="adv.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ovttasráđiid">
+     <select lemma="ektine" tags="adv.*"/>
+   </match>
+    <match tags="*.com.*"/>
+ </rule>     
+
+    <rule weight="1.0">
+   <match lemma="gosa">
+     <select lemma="gåabph" tags="adv.*"/>
+   </match>
+ </rule>     
+
+       <rule weight="0.5">
    <match lemma="gosa">
      <select lemma="gosse" tags="adv.*"/>
    </match>
  </rule>     
-
+       <rule weight="0.6">
+   <match lemma="gosa">
+     <select lemma="gosse" tags="adv.*"/>
+   </match>
+    <match lemma="bïejedh" tags="vblex.*"/>
+ </rule>     
 
        <rule weight="0.5">
    <match lemma="gosa">
@@ -1558,8 +1634,103 @@
      <select lemma="mejtie" tags="cnjsub.*"/>
    </match>
  </rule>     
+       <rule weight="0.5">
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
 
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
 
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
+       <rule weight="0.6">
+     <match lemma="mearkkašit" tags="vblex.*"/>
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match />
+   <match lemma="ahte" tags="cnjsub.*">
+     <select lemma="gosse" tags="cnjsub.*"/>
+   </match>
+ </rule>     
        <rule weight="1.0">
    <match lemma="gitta" tags="adv.*">
      <select lemma="öövre" tags="adv.*"/>
@@ -2403,7 +2574,7 @@
 
  <rule weight="1.0">   
   <match lemma="nu" tags="adv.*" >   
-      <select lemma="dan"/>    
+      <select lemma="nimhtie"/>    
     </match>    
     </rule>      
 
@@ -2422,6 +2593,22 @@
 
       <rule weight="0.5">    
   <match lemma="nu" tags="adv.*" >   
+            <select lemma="dan"/>  
+         </match>   
+        </rule>            
+ 
+       <rule weight="0.6">    
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma="dan"/>  
+         </match> <or>  
+     <match tags="adj.*"/>    
+     <match tags="prn.ind.pl.*"/>    
+     <match tags="adv.*"/>   </or> 
+        </rule> 
+
+
+<!--      <rule weight="0.5">    
+  <match lemma="nu" tags="adv.*" >   
             <select lemma="nimhtie"/>  
          </match>   
         </rule>            
@@ -2437,7 +2624,17 @@
      <match lemma="ahte"/>    
      </or>   
         </rule> 
- 
+        <rule weight="0.6">    
+     <or>   
+     <match lemma="šaddat"/>    
+     <match lemma="leat"/>    
+     <match lemma="gártat"/>    
+     </or>   
+  <match lemma="nu" tags="adv.*" >   
+            <select lemma="nimhtie"/>  
+         </match>   
+        </rule>   -->
+
  <rule weight="1.0">   
   <match lemma="bidjat" >   
       <select lemma="bïejedh"/>    
@@ -2659,12 +2856,39 @@
             <select lemma="lea"/> 
          </match>
        </rule>     
+       <rule weight="0.5"> 
+         <match lemma="mearkkašit" >
+            <select lemma="dïhte jis"/> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="mii" tags="prn.*"/>
+         <match lemma="mearkkašit" >
+            <select lemma="dïhte jis"/> 
+         </match>
+       </rule>     
+       <rule weight="0.5"> 
+         <match lemma="mearkkašit" >
+            <select lemma="jis"/> 
+         </match>
+       </rule>     
+       <rule weight="0.6"> 
+         <match lemma="dat" tags="prn.*"/>
+         <match lemma="mearkkašit" >
+            <select lemma="jis"/> 
+         </match>
+       </rule>     
+<!--        <rule weight="1.0"> 
+         <match lemma="mearkkašit" >
+            <select lemma="lea"/> 
+         </match>
+       </rule>     
        <rule weight="0.5">  
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
        </rule>     
-<!--       <rule weight="0.6"> 
+       <rule weight="0.6"> 
          <match lemma="mearkkašit" >
             <select lemma="sïjhtedh" tags="vblex.*"/> 
          </match>
@@ -2784,8 +3008,37 @@
          </match>
          <match lemma="ahte" />
        </rule>     
+
+
+         <rule weight="1.0"> 
+         <match lemma="gos" >
+            <select lemma="gusnie" /> 
+         </match>
+       </rule>     
+         <rule weight="0.5"> 
+         <match lemma="gos" >
+            <select lemma="gustie" /> 
+         </match>
+       </rule>     
+         <rule weight="0.6"> 
+         <match lemma="gos" tags="adv.@ADVLcs-ela→" >
+            <select lemma="gustie" /> 
+         </match>
+       </rule>     
+         <rule weight="0.6"> 
+         <match lemma="gos" tags="adv.@ADVL-ela→" >
+            <select lemma="gustie" /> 
+         </match>
+       </rule>     
+
  
          <rule weight="1.0"> 
+         <match lemma="go" >
+            <select lemma="gosse" /> 
+         </match>
+       </rule>     
+         <rule weight="0.5"> 
+         <match lemma="mearkkašit" />
          <match lemma="go" >
             <select lemma="gosse" /> 
          </match>
@@ -2804,14 +3057,11 @@
          <match tags="prn.*.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.@COMP-CS←"/>
          <match lemma="vejolaš" />
           </or>
       </rule>     
-       <rule weight="0.5">  
-         <match lemma="go" >
-            <select lemma="goh" /> 
-         </match>
-       </rule>     
        <rule weight="0.6"> 
          <match lemma="go" >
             <select lemma="goh"/> 
@@ -2822,6 +3072,8 @@
          <match tags="prn.*.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.*.@COMP-CS←"/>
          <match tags="n.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.*.@COMP-CS←"/>
+         <match tags="np.*.*.@COMP-CS←"/>
           </or>
       </rule>     
 
