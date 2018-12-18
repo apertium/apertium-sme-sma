@@ -70,6 +70,7 @@
 
     <sdef n="indecl"/>
     <sdef n="subqst"/>
+    <sdef n="foc_pos-ge"/>
 
     <sdef n="ord"/>
     <sdef n="attr"/>
@@ -435,8 +436,8 @@
     
     <e><p><l>okta<s n="prn"/><s n="ind"/></l><r>guhte<s n="prn"/><s n="ind"/></r></p></e>
 
-    <e><p><l>iešguhtet<s n="prn"/><s n="ind"/><s n="attr"/></l><r>ovmessie<s n="adj"/><s n="attr"/></r></p></e>
-    <e><p><l>iešguhte<s n="prn"/><s n="ind"/><s n="sg"/><s n="loc"/><s n="attr"/></l><r>ovmessie<s n="adj"/><s n="attr"/></r></p></e>
+<!--    <e><p><l>iešguhtet<s n="prn"/><s n="ind"/></l><r>ovmessie<s n="adj"/></r></p></e> -->
+<!--     <e><p><l>iešguhte<s n="prn"/><s n="ind"/><s n="sg"/><s n="loc"/><s n="attr"/></l><r>ovmessie<s n="adj"/><s n="attr"/></r></p></e> -->
     <e><p><l>iešguhtet<s n="prn"/><s n="ind"/></l><r>fïereguhte<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>veaháš<s n="prn"/><s n="ind"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e>
 
@@ -1730,6 +1731,7 @@
     <e><p><l>hástalus<s n="n"/></l><r>haesteme<s n="n"/></r></p></e>
     <e><p><l>hávdi<s n="n"/></l><r>groepte<s n="n"/></r></p></e>
     <e><p><l>hávvi<s n="n"/></l><r>saejrie<s n="n"/></r></p></e>
+    <e><p><l>hávvi<s n="n"/></l><r>aejkie<s n="n"/></r></p></e>
     <e><p><l>háŋka<s n="n"/></l><r>tjegkie<s n="n"/></r></p></e>
     <e><p><l>i<s n="n"/><s n="abbr"/></l><r>i<s n="n"/><s n="abbr"/></r></p></e>
     <e><p><l>idea<s n="n"/></l><r>soejkesje<s n="n"/></r></p></e>
@@ -2484,6 +2486,7 @@
     <e><p><l>oblikutiiva<s n="n"/></l><r>oblikutijve<s n="n"/></r></p></e>
     <e><p><l>ofelaš<s n="n"/></l><r>tsïegle<s n="n"/></r></p></e>
     <e><p><l>ohcamuš<s n="n"/></l><r>ohtseme<s n="n"/></r></p></e>
+    <e><p><l>ohcan<s n="n"/></l><r>ohtseme<s n="n"/></r></p></e>
     <e><p><l>ohcanskovvi<s n="n"/></l><r>ohtsemegoere<s n="n"/></r></p></e>
     <e><p><l>ohcanáigemearri<s n="n"/></l><r>ohtsemebiejjie<s n="n"/></r></p></e>
     <e><p><l>ohcanáigemearri<s n="n"/></l><r>syökememierie<s n="n"/></r></p></e>
@@ -2494,6 +2497,7 @@
     <e><p><l>ohppiidlohku<s n="n"/></l><r>learohkelåhkoe<s n="n"/></r></p></e>
     <e><p><l>ohppiidráđibargu<s n="n"/></l><r>learohkeraerienbarkoe<s n="n"/></r></p></e>
     <e><p><l>oktasašfága<s n="n"/></l><r>ektiefaage<s n="n"/></r></p></e>
+    <e><p><l>oktavuohta<s n="n"/></l><r><s n="n"/></r></p></e> <!-- váldit oktavuođa -->
     <e><p><l>oktavuohta<s n="n"/></l><r>gaskese<s n="n"/></r></p></e>
     <e><p><l>oktavuohta<s n="n"/></l><r>tsiehkie<s n="n"/></r></p></e>
     <e><p><l>oktiibidjan<s n="n"/></l><r>laavkeme<s n="n"/></r></p></e>
@@ -4001,7 +4005,7 @@
     <e><p><l>otná<s n="adj"/></l><r>daanbeajjetje<s n="adj"/></r></p></e>
     <e><p><l>ovccinuppelogát<s n="adj"/></l><r>luhkieåktsede<s n="adj"/></r></p></e>
     <e><p><l>ovccát<s n="adj"/></l><r>åktsede<s n="adj"/></r></p></e>
-    <e><p><l>ovddas<b/>guvlui<s n="adv"/></l><r>rïektes<b/>raadtan<s n="adv"/></r></p></e>
+    <e><p><l>ovddas<b/>guvlui<s n="adv"/></l><r>åvtese<s n="adv"/></r></p></e>
     <e><p><l>ovddeš<s n="adj"/></l><r>ovtetje<s n="adj"/></r></p></e>
     <e><p><l>ovddit<s n="adj"/></l><r>övte<s n="adj"/></r></p></e> <!-- övtebe -->
     <e><p><l>ovddolaš<s n="adj"/></l><r>rovnegs<s n="adj"/></r></p></e>
@@ -4265,6 +4269,7 @@
     <e><p><l>dassážii<s n="adv"/></l><r>gosk<s n="pcle"/></r></p></e>
     <e><p><l>dasto<s n="adv"/></l><r>dehtie<b/>minngede<s n="adv"/></r></p></e>
     <e><p><l>datte<s n="adv"/></l><r>lïjhke<s n="adv"/></r></p></e>
+    <e><p><l>datte<s n="adv"/><s n="foc_pos-ge"/></l><r>lïjhke<s n="adv"/></r></p></e>
     <e><p><l>dattetge<s n="adv"/></l><r>darhkan<s n="pcle"/></r></p></e>
     <e><p><l>davvin<s n="adv"/></l><r>noerhtene<s n="adv"/></r></p></e> 
     <e><p><l>davviriikkalaččat<s n="adv"/></l><r>noerhtelaanti<b/>daltesisnie<s n="adv"/></r></p></e> 
@@ -4430,6 +4435,7 @@
     <e><p><l>oktan<s n="adv"/></l><r>ektine<s n="adv"/></r></p></e>
     <e><p><l>oktanaga<s n="adv"/></l><r>seammasïenten<s n="adv"/></r></p></e>
     <e><p><l>oktanis<s n="adv"/></l><r>seammasïenten<s n="adv"/></r></p></e> 
+    <e><p><l>oktii<s n="adv"/></l><r>ikte<s n="adv"/></r></p></e>
     <e><p><l>oktii<s n="adv"/></l><r>ikth<s n="adv"/></r></p></e>
     <e><p><l>oktiibuot<s n="adv"/></l><r>ektiegaajhke<s n="adv"/></r></p></e>
     <e><p><l>okto<s n="adv"/></l><r>oktegh<s n="adv"/></r></p></e>
@@ -4464,6 +4470,7 @@
     <e><p><l>ođđasis<s n="adv"/></l><r>ikth<b/>vielie<s n="adv"/></r></p></e>
     <e><p><l>praktihkalaččat<s n="adv"/></l><r>praktihkelaakan<s n="adv"/></r></p></e>
     <e><p><l>rabas<s n="adv"/></l><r>gaahpode<s n="adv"/></r></p></e>
+    <e><p><l>rabas<s n="adj"/></l><r>ræhpas<s n="adj"/></r></p></e>
     <e><p><l>ratifiseret<s n="vblex"/><s n="tv"/></l><r>ratifiseeredh<s n="vblex"/></r></p></e>
     <e><p><l>riikkaidgaskasaččat<s n="adv"/></l><r>gaskenasjovnaale<b/>daltesisnie<s n="adv"/></r></p></e> 
     <e><p><l>ruoktot<s n="adv"/></l><r>gåetide<s n="adv"/></r></p></e>
@@ -5752,13 +5759,14 @@
     <e><p><l>váidit<s n="vblex"/><s n="tv"/></l><r>hojjedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>váikkuhit<s n="vblex"/><s n="iv"/></l><r>dijpedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>váikkuhit<s n="vblex"/><s n="iv"/></l><r>stuvredh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>váillahit<s n="vblex"/><s n="tv"/></l><r>ohtsedh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>váillahit<s n="vblex"/><s n="tv"/></l><r>ohtselidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>váilut<s n="vblex"/><s n="iv"/></l><r>fååtesidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>válbmanit<s n="vblex"/><s n="iv"/></l><r>dorjesovvedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e r="LR"><p><l>válddahit<s n="vblex"/><s n="tv"/></l><r>buerkiestidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>váldit<s n="vblex"/><s n="tv"/></l><r>dåastoehtidh<s n="vblex"/><s n="tv"/></r></p></e> <!-- vuostá -->
     <e><p><l>váldit<s n="vblex"/><s n="tv"/></l><r>utnedh<s n="vblex"/><s n="tv"/></r></p></e> <!-- duođas -->
     <e><p><l>váldit<s n="vblex"/><s n="tv"/></l><r>buektedh<s n="vblex"/><s n="tv"/></r></p></e> <!-- ovdan -->
+    <e><p><l>váldit<s n="vblex"/><s n="tv"/></l><r>govlehtidh<s n="vblex"/><s n="tv"/></r></p></e> <!-- oktavuohta -->
     <e><p><l>váldit<s n="vblex"/><s n="tv"/></l><r>vaeltedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>válljet<s n="vblex"/><s n="tv"/></l><r>veeljedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>vánddardit<s n="vblex"/><s n="iv"/></l><r>vaalmerdidh<s n="vblex"/><s n="iv"/></r></p></e>
