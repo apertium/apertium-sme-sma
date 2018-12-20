@@ -320,6 +320,9 @@ And then there are some categories like "month", with all the months.
   <section-def-cats>
     <!-- HARMONISED -->
 
+    <def-cat n="lquot">
+      <cat-item tags="lquot"/>
+    </def-cat>
     <def-cat n="prn">
       <cat-item tags="prn.*"/>
     </def-cat>
@@ -542,6 +545,11 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prop_nom">
       <cat-item tags="np.*.sg.nom.*"/>
     </def-cat>
+
+    <def-cat n="prop_cog">
+      <cat-item tags="np.cog.sg.*"/>
+    </def-cat>
+
 
     <def-cat n="prop_attr">
       <cat-item tags="np.*.attr.*"/>
@@ -3333,7 +3341,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <lit v="jaepie"/>
@@ -3361,7 +3368,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -3382,7 +3388,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <lit v="jaepie"/>
@@ -3412,7 +3417,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -3449,7 +3453,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -3479,7 +3482,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -3515,7 +3517,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -3614,6 +3615,102 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="C[AT]-NUM lquot semyear" c="(2001"> 
+      <pattern> 
+        <pattern-item n="lquot"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"> <with-param pos="2"/></call-macro>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let> 
+                          <out>
+          <chunk name="default" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="lquot"/></tag>
+              <tag><clip pos="1" side="sl" part="a_func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+         <chunk name="num-noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[AT]-NUM lquot semyear sent" c="; 2001"> 
+      <pattern> 
+        <pattern-item n="sent"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"> <with-param pos="2"/></call-macro>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let> 
+                          <out>
+          <chunk name="sent">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+            <b pos="1"/>
+         <chunk name="num-noun">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="C[AT]-NUM prop_cog semyear" c="Ramussen 2001"> 
+      <pattern> 
+        <pattern-item n="prop_cog"/>
+        <pattern-item n="semyear"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+         <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let> 
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+            <b pos="1"/>
+         <chunk name="num-noun">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
 
     <rule comment="C[AT]-NUM semyear" c="2001:s : jaepien 2001"> 
       <pattern> 
@@ -3627,7 +3724,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <lit v="jaepie"/>
@@ -3658,7 +3754,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -3694,7 +3789,6 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -3755,7 +3849,6 @@ And then there are some categories like "month", with all the months.
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
-              <tag><var n="poss"/></tag>
             </tags>
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
@@ -10635,7 +10728,7 @@ And then there are some categories like "month", with all the months.
           <let><var n="subj_nbr"/><lit v=""/></let>
           <let><var n="main-verb-lemma"/><lit v=""/></let>
         <out>
-          <chunk name="sent" case="caseFirstword">
+          <chunk name="sent">
             <tags>
               <tag><lit-tag v="SENT"/></tag>
               <tag><var n="func"/></tag>
