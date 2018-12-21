@@ -5773,6 +5773,11 @@ And then there are some categories like "month", with all the months.
           </when>
           </choose>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="3"/></call-macro>       
+     <choose><when><test>
+	     <equal><clip pos="2" side="sl" part="a_npagree_type"/><lit-tag v="adj.comp"/></equal>
+	     </test>
+        <call-macro n="agreement-attr-2Param"><with-param pos="2"/> <with-param pos="3"/></call-macro>
+     </when></choose>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>

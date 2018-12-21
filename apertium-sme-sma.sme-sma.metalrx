@@ -2580,6 +2580,43 @@
         </rule>     -->        
 
  
+ <rule weight="1.0">   
+  <match lemma="mihá" >   
+      <select lemma="sagki"/>    
+    </match>    
+    </rule>      
+
+      <rule weight="0.5">   
+  <match lemma="mihá" >   
+      <select lemma="sagke"/>    
+    </match>    
+    </rule>      
+ 
+       <rule weight="0.6">   
+  <match lemma="mihá" >   
+      <select lemma="sagke"/>    
+    </match>    
+    <match tags="adj.comp.*"/>    
+    </rule>      
+
+ <rule weight="1.0">   
+  <match lemma="siste" >   
+      <select lemma="sisnie"/>    
+    </match>    
+    </rule>      
+
+      <rule weight="1.1">   
+  <match lemma="siste" >   
+      <select lemma="sistie" tags="post.@ADVL-ela→"/>    
+    </match>    
+    </rule>      
+ 
+      <rule weight="1.1">   
+  <match lemma="siste" >   
+      <select lemma="sistie" tags="post.@←ADVL-ela"/>    
+    </match>    
+    </rule>      
+
 
 <!--  default: Hijvenlaakan --> 
  <rule weight="1.0">   
