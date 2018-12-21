@@ -10805,6 +10805,8 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+     <let><var n="previous-nhead-sl"/><lit v=""/></let>
+     <let><var n="main-verb-lemma"/><lit v=""/></let>
       </action>
     </rule>
 
@@ -10823,6 +10825,8 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+     <let><var n="previous-nhead-sl"/><lit v=""/></let>
+     <let><var n="main-verb-lemma"/><lit v=""/></let>
       </action>
     </rule>
 
