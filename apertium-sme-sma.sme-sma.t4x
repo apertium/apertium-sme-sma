@@ -126,6 +126,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="cnjsub.@CVP"/>
         <cat-item tags="ADV.@ADVL-ine→"/>
         <cat-item tags="*.@ADVL→"/>
+        <cat-item tags="*.@-FADVL→"/>
     </def-cat>
 
     <def-cat n="NP_Obj">
@@ -227,6 +228,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
 
     <def-cat n="NP_Advl">
+        <cat-item tags="ADV.@-FADVL→"/>
         <cat-item tags="ADV.@ADVL→"/>
         <cat-item tags="ADV.@←ADVL"/>
         <cat-item tags="ADV.@ADVL"/>
@@ -385,9 +387,11 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="ADV.@ADVL-ine→"/>
         <cat-item tags="ADV.@ADVL-ela→"/>
         <cat-item tags="ADV.@ADVL→"/>
+        <cat-item tags="ADV.@-FADVL→"/>
     </def-cat>
     <def-cat n="ADV">
         <cat-item tags="ADV.@ADVL→"/>
+        <cat-item tags="ADV.@-FADVL→"/>
     </def-cat>
     <def-cat n="foc-neg-word">
         <cat-item tags="*.foc_neg-ge"/>
@@ -421,6 +425,7 @@ And then there are some categories like "month", with all the months.
      <attr-item tags="@←ADVL"/>
      <attr-item tags="@←ADVL-ine"/>
      <attr-item tags="@←ADVL-ela"/>
+     <attr-item tags="@-FADVL→"/>
      <attr-item tags="@ADVL→"/>
      <attr-item tags="@ADVL-ine→"/>
      <attr-item tags="@ADVL-ela→"/>

@@ -2555,9 +2555,10 @@ And then there are some categories like "month", with all the months.
         <when c="M[T] loc to ela-bijre">
           <test>
             <and>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal><or>
              <equal><var n="previous-nhead-sl"/><lit v="sáhka"/></equal>
-            </and>
+             <equal><var n="main-verb-lemma"/><lit v="soptsestidh"/></equal>
+       </or></and>
          </test>
 	         <let><var n="func"/><concat><clip pos="1" side="sl" part="a_func"/><lit-tag v="BIJRE"/></concat></let>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let> 
@@ -2747,7 +2748,8 @@ And then there are some categories like "month", with all the months.
         <when c="M[T] loc to ine">
           <test>
             <and>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+                  <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
