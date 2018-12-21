@@ -600,6 +600,9 @@
        <match lemma="girji" tags="n.*"><select lemma="gærja" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
+       <match lemma="gillát" tags="vblex.tv.*"><select lemma="gïertedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="1.0">
        <match lemma="givssidit" tags="vblex.tv.*"><select lemma="irhkedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -2576,12 +2579,6 @@
         </match>   
         </rule>     -->        
 
-<!--  temporarly; rule is comming -->
-     <rule weight="0.5">   
-       <match lemma="mielde">   
-           <select lemma="mietie"/>  
-        </match>   
-        </rule>            
  
 
 <!--  default: Hijvenlaakan --> 
