@@ -52,6 +52,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="pp">
         <cat-item tags="PP.*"/>
     </def-cat>
+   <def-cat n="BIJRE">
+      <cat-item tags="*.BIJRE" />
+    </def-cat>
     <def-cat n="modADVL">
         <cat-item tags="ADV.@→ADVL"/>
     </def-cat>
@@ -467,6 +470,27 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="REGLA: BIJRE">
+    <pattern>
+       <pattern-item n="BIJRE"/>
+    </pattern>
+      <action>
+    <out>
+      <chunk>
+           <get-case-from pos="1"><lit v="NP"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+        <clip pos="1" part="content"/>
+      <b />
+           <lit v="^"/>
+           <lit v="bïjre"/>
+           <lit-tag v="post"/>
+           <lit v="$"/>
+           <lit v="}"/>
+      </chunk>
+    </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: ektesne ADVL-left">
     <pattern>
