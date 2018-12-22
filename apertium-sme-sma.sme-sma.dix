@@ -205,6 +205,7 @@
     <e><p><l>muhte<s n="cnjcoo"/></l><r>mohte<s n="cnjcoo"/></r></p></e>
     <e><p><l>muhto<s n="cnjcoo"/></l><r>mohte<s n="cnjcoo"/></r></p></e>
     <e r="RL"><p><l>muhto<s n="cnjcoo"/></l><r>men<s n="cnjcoo"/></r></p></e>
+    <e r="RL"><p><l>muhto<s n="cnjcoo"/></l><r>menh<s n="cnjcoo"/></r></p></e>
     <e><p><l>vai<s n="cnjcoo"/></l><r>vuj<s n="cnjcoo"/></r></p></e>
 
     <!-- SECTION: Subjunctions -->
@@ -241,6 +242,7 @@
     <e><p><l>goit<s n="pcle"/></l><r>gujht<s n="pcle"/></r></p></e>
     <e><p><l>ges<s n="pcle"/></l><r>jis<s n="pcle"/></r></p></e>
     <e><p><l>han<s n="pcle"/></l><r>hov<s n="pcle"/></r></p></e>
+    <e r="RL"><p><l>han<s n="pcle"/></l><r>maa<s n="pcle"/></r></p></e>
     
 
     <!-- SECTION: Adpositions -->
@@ -1724,6 +1726,7 @@
     <e><p><l>hállu<s n="n"/></l><r>luste<s n="n"/></r></p></e>
     <e><p><l>hápmi<s n="n"/></l><r>guelmie<s n="n"/></r></p></e>
     <e><p><l>hápmi<s n="n"/></l><r>haamoe<s n="n"/></r></p></e>
+    <e r="RL"><p><l>hápmi<s n="n"/></l><r>hammoe<s n="n"/></r></p></e>
     <e><p><l>hápmi<s n="n"/></l><r>haemie<s n="n"/></r></p></e>
     <e><p><l>hárjehalli<s n="n"/><s n="nomag"/></l><r>lïerehtæjja<s n="n"/></r></p></e>
     <e><p><l>hárjehus<s n="n"/></l><r>laavenjasse<s n="n"/></r></p></e>
@@ -3039,6 +3042,7 @@
     <e><p><l>sympatiija<s n="n"/></l><r>sympatije<s n="n"/></r></p></e>
     <e><p><l>syntesa<s n="n"/></l><r>syntese<s n="n"/></r></p></e>
     <e><p><l>syntáksa<s n="n"/></l><r>syntaktihke<s n="n"/></r></p></e>
+    <e r="RL"><p><l>syntáksa<s n="n"/></l><r>syntakse<s n="n"/></r></p></e>
     <e><p><l>systema<s n="n"/></l><r>systeeme<s n="n"/></r></p></e>
     <e><p><l>systemáhtalaččat<s n="adv"/></l><r>systeemelaaketje<s n="adv"/></r></p></e>
     <e><p><l>sággi<s n="n"/></l><r>herrehke<s n="n"/></r></p></e>
@@ -5704,7 +5708,7 @@
     <e><p><l>veiggodit<s n="vblex"/><s n="iv"/></l><r>tjearadehtedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>viehkat<s n="vblex"/><s n="iv"/></l><r>vaarredh<s n="vblex"/><s n="iv"/></r></p></e> <!-- default: alle tobeinte --> 
     <e><p><l>viežžat<s n="vblex"/><s n="tv"/></l><r>veedtjedh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>viggat<s n="vblex"/><s n="iv"/></l><r>pryövedh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e><p><l>viggat<s n="vblex"/><s n="iv"/></l><r>pryövedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>vihkkedallat<s n="vblex"/><s n="tv"/></l><r>tsebpeldidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>viiddidit<s n="vblex"/><s n="tv"/></l><r>vijriedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>viidut<s n="vblex"/><s n="iv"/></l><r>væjranidh<s n="vblex"/></r></p></e>
