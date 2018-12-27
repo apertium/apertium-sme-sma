@@ -93,7 +93,7 @@ And then there are some categories like "month", with all the months.
 
      <def-cat n="NP">
       <cat-item tags="NP"/>
-      <cat-item tags="NP.*"/>
+      <cat-item lemma="noun" tags="NP.*"/>
     </def-cat>
 
     <def-cat n="NP_Subj">
@@ -185,7 +185,10 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.*.*.@+FAUXV"/>
     </def-cat>
 
-    <def-cat n="dovne">
+    <def-cat n="dovneMod">
+        <cat-item lemma="dovne" tags="ADV.@ADVL-ine→"/>
+    </def-cat>
+    <def-cat n="dovneCC">
         <cat-item tags="ADV.@→CC"/>
     </def-cat>
     <def-cat n="CC">
@@ -404,6 +407,30 @@ And then there are some categories like "month", with all the months.
     </rule>
  -->
 
+    <rule comment="REGLA: dovneMod NP">
+    <pattern>
+       <pattern-item n="dovneMod"/> 
+       <pattern-item n="NP"/>
+    </pattern>
+      <action>
+    <out>
+      <chunk>
+            <get-case-from pos="1"><lit v="NP"/></get-case-from>
+           <clip pos="2" part="tags"/>
+           <lit v="{"/>
+        <clip pos="1" part="content"/>
+      <b pos="1"/>
+        <clip pos="2" part="content"/>
+      <b />
+           <lit v="^"/>
+           <lit v="aaj"/>
+           <lit-tag v="adv"/>
+           <lit v="$"/>
+           <lit v="}"/>
+      </chunk>
+    </out>
+      </action>
+    </rule>
     <rule comment="REGLA: PR_PO P_left CNP P_left">
     <pattern>
        <pattern-item n="PR_PO"/> 
@@ -513,9 +540,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: dovne NP_Obj CNP NP_Obj"> 
+    <rule comment="REGLA: dovneCC NP_Obj CNP NP_Obj"> 
      <pattern>
-       <pattern-item n="dovne"/>
+       <pattern-item n="dovneCC"/>
        <pattern-item n="Obj_l"/>
        <pattern-item n="CNP"/>
        <pattern-item n="Obj_l"/>
@@ -731,7 +758,7 @@ And then there are some categories like "month", with all the months.
     </rule>
     <rule comment="REGLA: dovne Subj_l CNP Subj_l">
      <pattern>
-       <pattern-item n="dovne"/>
+       <pattern-item n="dovneCC"/>
        <pattern-item n="Subj_l"/>
        <pattern-item n="CNP"/>
        <pattern-item n="Subj_l"/>

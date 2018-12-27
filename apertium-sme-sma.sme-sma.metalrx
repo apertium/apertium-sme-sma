@@ -2758,33 +2758,33 @@
 
  <rule weight="0.5">   
   <match lemma="maid" >   
-      <select lemma="dovne"/>    
+      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
     </match>    
     </rule>    
  <rule weight="0.5">   
   <match lemma="maiddá" >   
-      <select lemma="dovne"/>    
+      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
     </match>    
     </rule>    
  <rule weight="0.5">   
   <match lemma="maiddái" >   
-      <select lemma="dovne"/>    
+      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
     </match>    
     </rule>    
 
  <rule weight="0.6">   
   <match lemma="maid" >   
-      <select lemma="dovne" tags="@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
     </match>    
     </rule>    
  <rule weight="0.6">   
   <match lemma="maiddá" >   
-      <select lemma="dovne" tags="@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
     </match>    
     </rule>    
  <rule weight="0.6">   
   <match lemma="maiddái" >   
-      <select lemma="dovne" tags="@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
     </match>    
     </rule>    
 
