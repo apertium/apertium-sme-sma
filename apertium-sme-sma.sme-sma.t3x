@@ -129,11 +129,23 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="FMainV">
+        <cat-item lemma="cop-mainv" tags="SV.@+FMAINV"/>
+        <cat-item lemma="cop-mainv" tags="SV.@+FMAINV.*"/>
         <cat-item lemma="vblex" tags="SV.@+FMAINV"/>
         <cat-item lemma="vblex" tags="SV.@+FMAINV.*"/>
         <cat-item lemma="vblex" tags="SV.*.@+FMAINV.*"/>
         <cat-item lemma="vblex" tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
+
+    <def-cat n="FV">
+        <cat-item tags="SV.@+FAUXV"/>
+        <cat-item tags="SV.@+FAUXV.*"/>
+        <cat-item tags="SV.@+FMAINV"/>
+        <cat-item tags="SV.@+FMAINV.*"/>
+        <cat-item tags="SV.*.@+FMAINV.*"/>
+        <cat-item tags="SV.*.*.@+FMAINV.*"/>
+    </def-cat>
+
 
     <def-cat n="IFMainV">
         <cat-item tags="SV.@+FMAINV"/>
@@ -401,7 +413,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="MAINV SUBJ" > 
       <pattern>
-        <pattern-item n="FMainV"/>
+        <pattern-item n="FV"/>
         <pattern-item n="NP_Subj_l"/>
       </pattern>
       <action>
