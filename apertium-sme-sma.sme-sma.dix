@@ -100,6 +100,7 @@
     <sdef n="sem_lang"/>
     <sdef n="sem_measr"/>
     <sdef n="sem_money"/>
+    <sdef n="sem_part"/>
     <sdef n="sem_plant"/>
     <sdef n="sem_route"/>
     <sdef n="sem_time"/>
@@ -135,6 +136,7 @@
     <sdef n="der_a"/>
     <sdef n="der_laakan"/>
     <sdef n="der_ht"/>
+    <sdef n="der_dimin"/>
 
     <!-- Punctuation -->
     <sdef n="clb"     c="puctuation"/>
@@ -764,6 +766,7 @@
     <e><p><l>bioteknologiija<s n="n"/></l><r>bioteknologije<s n="n"/></r></p></e>
     <e><p><l>biotohpa<s n="n"/></l><r>biotovpe<s n="n"/></r></p></e>
     <e><p><l>bipmi<s n="n"/></l><r>savra<s n="n"/></r></p></e>
+    <e><p><l>giellabiras<s n="n"/></l><r>gïelebyjrese<s n="n"/></r></p></e>
     <e><p><l>biras<s n="n"/></l><r>byjrese<s n="n"/></r></p></e>
     <e><p><l>birgejupmi<s n="n"/></l><r>bïerkenimmie<s n="n"/></r></p></e>
     <e><p><l>birrajohtu<s n="n"/></l><r>gohkedæjja<s n="n"/></r></p></e>
@@ -1242,7 +1245,7 @@
     <e><p><l>farao<s n="n"/></l><r>faraove<s n="n"/></r></p></e>
     <e><p><l>fariidna<s n="n"/></l><r>dïjnehke<s n="n"/></r></p></e>
     <e><p><l>faskkon<s n="n"/></l><r>skreepemeruevtie<s n="n"/></r></p></e>
-    <e><p><l>favorihtta<s n="n"/></l><r>eeremes<s n="adv"/></r></p></e>
+    <e><p><l>favorihtta<s n="n"/></l><r>eeremes<s n="adv"/><s n="sup"/></r></p></e> 
     <e><p><l>feanda<s n="n"/></l><r>bahha<s n="n"/></r></p></e>
     <e><p><l>feardna<s n="n"/></l><r>goerne<s n="n"/></r></p></e>
     <e><p><l>feber<s n="n"/></l><r>vaejlie<s n="n"/></r></p></e>
@@ -2459,6 +2462,7 @@
     <e><p><l>oarra<s n="n"/></l><r>rietjmie<s n="n"/></r></p></e>
     <e><p><l>oarri<s n="n"/></l><r>åeruve<s n="n"/></r></p></e>
     <e><p><l>oasseváldi<s n="n"/><s n="nomag"/></l><r>mealtan<s n="adv"/></r></p></e>
+    <e><p><l>oassi<s n="n"/><s n="sem_part"/><s n="der_dimin"/><s n="n"/></l><r>åesie<s n="n"/><s n="der_dimin"/><s n="n"/></r></p></e>
     <e><p><l>oassi<s n="n"/></l><r>boelhke<s n="n"/></r></p></e>
     <e><p><l>oassi<s n="n"/></l><r>vuerpie<s n="n"/></r></p></e>
     <e><p><l>oassálastin<s n="n"/></l><r>mealtan<b/>årrome<s n="n"/></r></p></e>
@@ -4284,14 +4288,14 @@
     <e><p><l>dávjá<s n="adv"/></l><r>daamtaj<s n="adv"/></r></p></e>
     <e><p><l>eahkes<s n="adv"/></l><r>iehkeden<s n="adv"/></r></p></e>
     <e><p><l>eanet<s n="adv"/></l><r>jienebh<s n="adv"/></r></p></e>
-    <e><p><l>earenoamážit<s n="adv"/></l><r>aave<s n="adv"/></r></p></e>
+    <e><p><l>earenoamážit<s n="adv"/></l><r>eeremes<s n="adv"/><s n="sup"/></r></p></e>
     <e><p><l>earret<b/>eará<s n="adv"/></l><r>gaskem<b/>jeatjah<s n="adv"/></r></p></e>
     <e><p><l>eará<b/>ládje<s n="adv"/></l><r>jeatjahlaakan<s n="adv"/></r></p></e>
     <e><p><l>easka<s n="adv"/></l><r>easkan<s n="adv"/></r></p></e>
     <e><p><l>easkka<s n="adv"/></l><r>voestegh<s n="adv"/></r></p></e>
     <e><p><l>ee<s n="adv"/><s n="abbr"/></l><r>gaskem<b/>jeatjah<s n="adv"/></r></p></e>
     <e><p><l>erenoamáš<s n="adv"/></l><r>joekoen<s n="adv"/></r></p></e>
-    <e><p><l>erenoamážit<s n="adv"/></l><r>eeremes<s n="adv"/></r></p></e> <!-- aave? -->
+    <e><p><l>erenoamážit<s n="adv"/></l><r>eeremes<s n="adv"/><s n="sup"/></r></p></e> <!-- aave? --> 
     <e><p><l>erenoamážit<s n="adv"/></l><r>joekoenlaakan<s n="adv"/></r></p></e> <!-- aave? -->
     <e><p><l>erenoamážit<s n="adv"/></l><r>sjïere<s n="adv"/></r></p></e> <!-- aave? -->
     <e><p><l>eret<s n="adv"/></l><r>dïhte<s n="prn"/><s n="dem"/><s n="sg"/><s n="ela"/></r></p></e>
