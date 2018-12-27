@@ -2739,6 +2739,122 @@
          </match>   
         </rule>   -->
 
+
+ <rule weight="1.0">   
+  <match lemma="maid" >   
+      <select lemma="aaj"/>    
+    </match>    
+    </rule>    
+ <rule weight="1.0">   
+  <match lemma="maiddá" >   
+      <select lemma="aaj"/>    
+    </match>    
+    </rule>    
+ <rule weight="1.0">   
+  <match lemma="maiddái" >   
+      <select lemma="aaj"/>    
+    </match>    
+    </rule>    
+
+ <rule weight="0.5">   
+  <match lemma="maid" >   
+      <select lemma="dovne"/>    
+    </match>    
+    </rule>    
+ <rule weight="0.5">   
+  <match lemma="maiddá" >   
+      <select lemma="dovne"/>    
+    </match>    
+    </rule>    
+ <rule weight="0.5">   
+  <match lemma="maiddái" >   
+      <select lemma="dovne"/>    
+    </match>    
+    </rule>    
+
+ <rule weight="0.6">   
+  <match lemma="maid" >   
+      <select lemma="dovne" tags="@ADVL-ine→"/>    
+    </match>    
+    </rule>    
+ <rule weight="0.6">   
+  <match lemma="maiddá" >   
+      <select lemma="dovne" tags="@ADVL-ine→"/>    
+    </match>    
+    </rule>    
+ <rule weight="0.6">   
+  <match lemma="maiddái" >   
+      <select lemma="dovne" tags="@ADVL-ine→"/>    
+    </match>    
+    </rule>    
+
+
+
+ <rule weight="1.0">   
+  <match lemma="doaibmat" >   
+      <select lemma="juhtedh"/>    
+    </match>    
+    </rule>    
+
+      <rule weight="0.5">   
+        <match lemma="doaibmat">   
+            <select tags="vblex.tv.*"/>  
+         </match>   
+         </rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="doaibmat">   
+            <select tags="vblex.tv.*"/>  
+         </match><or>
+        <match tags="n.*.ess.*" />   
+        <match tags="n.*.*.ess.*" />   
+      </or></rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="doaibmat">   
+            <select tags="vblex.tv.*"/>  
+         </match>
+        <match />   
+         <or>
+        <match tags="n.*.ess.*" />   
+        <match tags="n.*.*.ess.*" />   
+      </or></rule>                 
+      <rule weight="0.6">   
+        <match lemma="doaibmat">   
+            <select tags="vblex.tv.*"/>  
+         </match>
+        <match />   
+        <match />   
+         <or>
+        <match tags="n.*.ess.*" />   
+        <match tags="n.*.*.ess.*" />   
+      </or></rule>                 
+      <rule weight="0.6">   
+        <match lemma="doaibmat">   
+            <select tags="vblex.tv.*"/>  
+         </match>
+        <match />   
+        <match />   
+        <match />   
+         <or>
+        <match tags="n.*.ess.*" />   
+        <match tags="n.*.*.ess.*" />   
+      </or></rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="doaibmat">   
+            <select tags="vblex.tv.*"/>  
+         </match>
+        <match />   
+        <match />   
+        <match />   
+        <match />   
+         <or>
+        <match tags="n.*.ess.*" />   
+        <match tags="n.*.*.ess.*" />   
+      </or></rule>                 
+
+
  <rule weight="1.0">   
   <match lemma="bidjat" >   
       <select lemma="bïejedh"/>    
