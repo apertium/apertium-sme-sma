@@ -53,6 +53,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="WORD">
       <cat-item tags="NP.*"/>
       <cat-item tags="SV.*"/>
+      <cat-item tags="VADV.*"/>
       <cat-item tags="ADV.*"/>
     </def-cat>
     <def-cat n="prndem-ela">
@@ -97,6 +98,14 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@←SUBJ.pers.*"/>
     </def-cat>
 
+    <def-cat n="NP_Obj_l">
+        <cat-item tags="NP.@←OBJ.*"/>
+        <cat-item tags="NP.@←OBJ"/>
+    </def-cat>
+    <def-cat n="VADV">
+      <cat-item tags="VADV.*"/>
+    </def-cat>
+
     
     <def-cat n="NP_Obj">
         <cat-item tags="NP.@OBJ→.*"/>
@@ -120,10 +129,34 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="FMainV">
+        <cat-item lemma="cop-mainv" tags="SV.@+FMAINV"/>
+        <cat-item lemma="cop-mainv" tags="SV.@+FMAINV.*"/>
         <cat-item lemma="vblex" tags="SV.@+FMAINV"/>
         <cat-item lemma="vblex" tags="SV.@+FMAINV.*"/>
         <cat-item lemma="vblex" tags="SV.*.@+FMAINV.*"/>
         <cat-item lemma="vblex" tags="SV.*.*.@+FMAINV.*"/>
+    </def-cat>
+
+    <def-cat n="FV">
+        <cat-item tags="SV.@+FAUXV"/>
+        <cat-item tags="SV.@+FAUXV.*"/>
+        <cat-item tags="SV.@+FMAINV"/>
+        <cat-item tags="SV.@+FMAINV.*"/>
+        <cat-item tags="SV.*.@+FMAINV.*"/>
+        <cat-item tags="SV.*.*.@+FMAINV.*"/>
+    </def-cat>
+
+
+    <def-cat n="IFMainV">
+        <cat-item tags="SV.@+FMAINV"/>
+        <cat-item tags="SV.*.@+FMAINV"/>
+        <cat-item tags="SV.@-FMAINV"/>
+        <cat-item tags="SV.*.@-FMAINV"/>
+        <cat-item tags="SV.*.@+FMAINV"/>
+        <cat-item tags="SV.@←ADVL"/>
+        <cat-item tags="SV.*.@←ADVL"/> 
+        <cat-item tags="SV.@←OBJ"/>
+        <cat-item tags="SV.*.@←OBJ"/> 
     </def-cat>
     
     <def-cat n="FAuxV">
@@ -380,7 +413,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="MAINV SUBJ" > 
       <pattern>
-        <pattern-item n="FMainV"/>
+        <pattern-item n="FV"/>
         <pattern-item n="NP_Subj_l"/>
       </pattern>
       <action>
@@ -435,6 +468,53 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+    <rule comment="IFMainV NP_Obj_l NP_Spred" > 
+      <pattern>
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="NP_Obj_l"/>
+        <pattern-item n="VADV"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+           <get-case-from pos="1"><lit v="vblex"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="3" part="content"/>
+           <b pos="1"/>
+           <clip pos="1" part="content"/>
+           <lit v="}"/>
+          </chunk>
+          <b pos="2"/>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="IFMainV  NP_Spred" > 
+      <pattern>
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="VADV"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+           <get-case-from pos="1"><lit v="vblex"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="2" part="content"/>
+           <b pos="1"/>
+           <clip pos="1" part="content"/>
+           <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="mealtan årrodh" > 
       <pattern>
