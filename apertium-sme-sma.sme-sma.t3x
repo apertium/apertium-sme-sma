@@ -146,6 +146,12 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="SV.*.*.@+FMAINV.*"/>
     </def-cat>
 
+    <def-cat n="AV">
+        <cat-item tags="SV.@A←"/>
+    </def-cat>
+    <def-cat n="FOBJ_l">
+        <cat-item tags="*.@-F←OBJ"/>
+    </def-cat>
 
     <def-cat n="IFMainV">
         <cat-item tags="SV.@+FMAINV"/>
@@ -463,6 +469,26 @@ And then there are some categories like "month", with all the months.
             <clip pos="3" part="tags"/>
             <clip pos="3" part="chcontent"/>
             <clip pos="3" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="AV FOBJ_l" > 
+      <pattern>
+        <pattern-item n="AV"/>
+        <pattern-item n="FOBJ_l"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+           <get-case-from pos="1"><lit v="vblex"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="2" part="content"/>
+           <b pos="1"/>
+           <clip pos="1" part="content"/>
+           <lit v="}"/>
           </chunk>
         </out>
       </action>
