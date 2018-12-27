@@ -1380,20 +1380,34 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="boahtte" tags="adj.*"/> 
     </def-cat>
     <def-cat n="agreement_attr">                             
-      <cat-item  tags="adj.comp.*"/> 
-      <cat-item lemma="máŋga" tags="num.*"/> 
-      <cat-item lemma="muhtun" tags="prn.ind.*"/> 
-      <cat-item lemma="muhtin" tags="prn.ind.*"/> 
-      <cat-item lemma="buot" tags="prn.ind.*"/> 
-      <cat-item lemma="ollu" tags="adj.*"/> 
-      <cat-item lemma="čuovvovaš" tags="adj.*"/> 
-      <cat-item lemma="olu" tags="adj.*"/> 
-      <cat-item lemma="juohke" tags="prn.ind.*"/> 
-      <cat-item lemma="nubbi" tags="adj.ord.*"/> 
-      <cat-item lemma="njealját" tags="adj.ord.*"/> 
-      <cat-item lemma="goalmmát" tags="adj.ord.*"/> 
-      <cat-item lemma="viđát" tags="adj.ord.*"/> 
-      <cat-item lemma="guđát" tags="adj.ord.*"/> 
+      <cat-item  tags="adj.comp.*.@→N"/> 
+      <cat-item lemma="máŋga" tags="num.*.@→N"/> 
+      <cat-item lemma="muhtun" tags="prn.ind.*.@→N"/> 
+      <cat-item lemma="muhtin" tags="prn.ind.*.@→N"/> 
+      <cat-item lemma="buot" tags="prn.ind.*.@→N"/> 
+      <cat-item lemma="ollu" tags="adj.*.@→N"/> 
+      <cat-item lemma="čuovvovaš" tags="adj.*.@→N"/> 
+      <cat-item lemma="olu" tags="adj.*.@→N"/> 
+      <cat-item lemma="juohke" tags="prn.ind.*.@→N"/> 
+      <cat-item lemma="nubbi" tags="adj.ord.*.@→N"/> 
+      <cat-item lemma="njealját" tags="adj.ord.*.@→N"/> 
+      <cat-item lemma="goalmmát" tags="adj.ord.*.@→N"/> 
+      <cat-item lemma="viđát" tags="adj.ord.*.@→N"/> 
+      <cat-item lemma="guđát" tags="adj.ord.*.@→N"/> 
+      <cat-item  tags="adj.comp.*.@→A"/> 
+      <cat-item lemma="máŋga" tags="num.*.@→A"/> 
+      <cat-item lemma="muhtun" tags="prn.ind.*.@→A"/> 
+      <cat-item lemma="muhtin" tags="prn.ind.*.@→A"/> 
+      <cat-item lemma="buot" tags="prn.ind.*.@→A"/> 
+      <cat-item lemma="ollu" tags="adj.*.@→A"/> 
+      <cat-item lemma="čuovvovaš" tags="adj.*.@→A"/> 
+      <cat-item lemma="olu" tags="adj.*.@→A"/> 
+      <cat-item lemma="juohke" tags="prn.ind.*.@→A"/> 
+      <cat-item lemma="nubbi" tags="adj.ord.*.@→A"/> 
+      <cat-item lemma="njealját" tags="adj.ord.*.@→A"/> 
+      <cat-item lemma="goalmmát" tags="adj.ord.*.@→A"/> 
+      <cat-item lemma="viđát" tags="adj.ord.*.@→A"/> 
+      <cat-item lemma="guđát" tags="adj.ord.*.@→N"/> 
 <!--      <cat-item  tags="adj.*.comp.*"/>  -->
     </def-cat>
     <def-cat n="oažžut_vblex">
@@ -6777,7 +6791,7 @@ And then there are some categories like "month", with all the months.
           <chunk name="noun" case="caseFirstword">
              <tags>
               <tag><lit-tag v="NP"/></tag>
-              <tag><lit-tag v="@>P"/></tag>
+              <tag><lit-tag v="@→P"/></tag>
             </tags>
            <lu>
         <clip pos="1" side="tl" part="whole"/>            
