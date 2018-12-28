@@ -5095,7 +5095,10 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+        <choose><when><test>
+	        <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→P"/></equal></not></test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let> 
+          </when></choose>
         <out>
           <chunk name="num" case="caseFirstword">
             <tags>

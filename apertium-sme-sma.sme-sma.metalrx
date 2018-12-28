@@ -1146,6 +1146,16 @@
        <match />
        <match lemma="oktavuohta"/>
   </rule>
+    <rule weight="1.0">
+       <match lemma="oktavuohta" tags="n.*"><select lemma="tsiehkie" tags="n.*"/></match>
+  </rule>
+    <rule weight="0.5">
+       <match lemma="oktavuohta" tags="n.*"><select lemma="ektievoete" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="veardidit"/>
+       <match lemma="oktavuohta" tags="n.*"><select lemma="ektievoete" tags="n.*"/></match>
+  </rule>
     <rule weight="0.5">
        <match lemma="oktavuohta" tags="n.*"><select lemma="" tags="n.*"/></match>
   </rule>
@@ -2755,6 +2765,24 @@
       <select lemma="aaj"/>    
     </match>    
     </rule>    
+ <rule weight="1.5">   
+  <match lemma="maid" >   
+      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+    </match>    
+  <match tags="vblex.*" />   
+    </rule>    
+ <rule weight="1.5">   
+  <match lemma="maiddá" >   
+      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+    </match>    
+  <match tags="vblex.*" />   
+    </rule>    
+ <rule weight="1.5">   
+  <match lemma="maiddái" >   
+      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+    </match>    
+  <match tags="vblex.*" />   
+    </rule>    
 
  <rule weight="0.5">   
   <match lemma="maid" >   
@@ -3323,6 +3351,65 @@
       </rule>     
 
 
+  <rule weight="1.0">
+    <match lemma="vuos">
+      <select lemma="voestegh"/>
+    </match>
+  </rule>
+
+  <rule weight="0.5">
+    <match lemma="vuos">
+      <select lemma="annje"/>
+   </match>
+  </rule>
+
+  <rule weight="0.6">
+    <match tags="vblex.iv.neg.*"/>
+    <match lemma="vuos">
+      <select lemma="annje"/>
+   </match>
+  </rule>
+
+  <rule weight="0.6">
+    <match tags="vblex.iv.neg.*"/>
+    <match />
+    <match lemma="vuos">
+      <select lemma="annje"/>
+   </match>
+  </rule>
+
+
+  <rule weight="1.0">
+    <match lemma="easka">
+      <select lemma="easkah"/>
+    </match>
+  </rule>
+
+  <rule weight="0.5">
+    <match lemma="easka">
+      <select lemma="easkah"/>
+   </match>
+  </rule>
+
+  <rule weight="0.6"> <or>
+    <match lemma="de"/>
+    <match lemma="dalle"/></or>
+    <match lemma="easka">
+      <select lemma="easkah"/>
+   </match>
+  </rule>
+
+  <rule weight="1.0">
+    <match lemma="de">
+      <select lemma="dellie"/>
+    </match>
+  </rule>
+
+  <rule weight="0.5">
+    <match lemma="de">
+      <select lemma="dle"/>
+   </match>
+  </rule>
 
 
        <!-- coggat -->   <!-- daajhtodh -->
