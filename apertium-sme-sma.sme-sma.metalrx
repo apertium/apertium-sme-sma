@@ -3352,6 +3352,13 @@
 
 
   <rule weight="1.0">
+    <match lemma="doalut">
+      <select lemma="arrangemente"/>
+    </match>
+  </rule>
+
+
+  <rule weight="1.0">
     <match lemma="vuos">
       <select lemma="voestegh"/>
     </match>
