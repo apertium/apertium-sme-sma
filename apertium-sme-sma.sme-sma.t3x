@@ -417,9 +417,9 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="MAINV SUBJ" > 
+    <rule comment="FMainV SUBJ" > 
       <pattern>
-        <pattern-item n="FV"/>
+        <pattern-item n="FMainV"/>
         <pattern-item n="NP_Subj_l"/>
       </pattern>
       <action>
