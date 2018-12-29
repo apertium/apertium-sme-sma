@@ -435,7 +435,7 @@ And then there are some categories like "month", with all the months.
     </out>
       </action>
     </rule>
-    <rule comment="REGLA: dovneMod NP">
+<!--    <rule comment="REGLA: dovneMod NP">
     <pattern>
        <pattern-item n="dovneMod"/> 
        <pattern-item n="NP"/>
@@ -458,7 +458,7 @@ And then there are some categories like "month", with all the months.
       </chunk>
     </out>
       </action>
-    </rule>
+    </rule> -->
     <rule comment="REGLA: PR_PO P_left CNP P_left">
     <pattern>
        <pattern-item n="PR_PO"/> 
