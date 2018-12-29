@@ -122,8 +122,6 @@
     <!-- Compounds -->
 
     <sdef n="rcmpnd"/>
-    <sdef n="sggencmp"/>        <!--TODO-->
-    <sdef n="sgnomcmp"/>
     <sdef n="cmp_sggen"/>
     <sdef n="cmp_sgnom"/>
 
@@ -146,6 +144,7 @@
     <sdef n="guio"    c="Dash"/>
     <sdef n="lquot"   c="Left quotation mark"/>
     <sdef n="rquot"   c="Right quotation mark"/>
+    <sdef n="gram_iabbr"/>   
 
     <!-- Transfer -->
     <sdef n="ND"/>
@@ -157,8 +156,6 @@
     <e><p><l><s n="pl"/></l>       <r><s n="pl"/></r></p></e>
     <e><p><l><s n="rcmpnd"/></l>   <r><s n="rcmpnd"/></r></p></e>
     <e><p><l><s n="sg"/></l>       <r><s n="sg"/></r></p></e>
-    <e><p><l><s n="sggencmp"/></l> <r><s n="sggencmp"/></r></p></e> <!-- deprecated?-->
-    <e><p><l><s n="sgnomcmp"/></l> <r><s n="sgnomcmp"/></r></p></e> <!-- deprecated?-->
     <e><p><l><s n="cmp_sggen"/></l> <r><s n="cmp_sggen"/></r></p></e>
     <e><p><l><s n="cmp_sgnom"/></l> <r><s n="cmp_sgnom"/></r></p></e>
     </pardef>
@@ -1000,7 +997,7 @@
     <e><p><l>diggi<s n="n"/></l><r>digkie<s n="n"/></r></p></e>
     <e><p><l>dihtomielalašvuohta<s n="n"/></l><r>voerkesvoete<s n="n"/></r></p></e>
     <e><p><l>dihtor<s n="n"/></l><r>daatamaskijne<s n="n"/></r></p></e>
-    <e><p><l>dii<s n="adv"/></l><r>ts<s n="adv"/></r></p></e>
+    <e><p><l>dii<s n="adv"/><s n="abbr"/></l><r>ts<s n="adv"/><s n="abbr"/><s n="gram_iabbr"/></r></p></e>
     <e><p><l>diibmu<s n="n"/></l><r>tsåahka<s n="n"/></r></p></e>
     <e><p><l>diibmu<s n="n"/></l><r>tæjmoe<s n="n"/></r></p></e> <!-- lrx -->
     <e><p><l>diida<s n="n"/></l><r>vuekie<s n="n"/></r></p></e>
@@ -3989,10 +3986,8 @@
     <e><p><l>ollis<s n="adj"/></l><r>dïeve<s n="adj"/></r></p></e>
     <e><p><l>ollis<s n="adj"/><s n="attr"/></l><r>abpe<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e>
     <e><p><l>ollislaš<s n="adj"/></l><r>ellies<s n="adj"/></r></p></e>
-    <e><p><l>ollu<s n="adj"/></l><r>jïjnje<s n="adj"/></r></p></e>
     <e><p><l>olmmošlaš<s n="adj"/></l><r>garkeles<s n="adj"/></r></p></e>
     <e><p><l>olmmošrievttálaš<s n="adj"/></l><r>almetjerïektes<s n="adj"/></r></p></e>
-    <e><p><l>olu<s n="adj"/></l><r>jïjnje<s n="adj"/></r></p></e>
     <e><p><l>oppa<s n="adj"/><s n="attr"/></l><r>abpe<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e>
     <e><p><l>oskkolaš<s n="adj"/></l><r>religijööse<s n="adj"/></r></p></e>
     <e><p><l>oskkáldas<s n="adj"/></l><r>gaerhteles<s n="adj"/></r></p></e>  <!-- lrx : mest om hund iflg. Bergsland, men kan også for morro skyld si om mnsk. jfr. gaarhtalovvedh-->
@@ -4220,7 +4215,7 @@
     <e><p><l>albma<b/>ládje<s n="adv"/></l><r>eensilaakan<s n="adv"/></r></p></e>
     <e><p><l>almmá<s n="adv"/></l><r>namhtah<s n="adv"/></r></p></e>
     <e><p><l>aŋkke<s n="adv"/></l><r>læjhkan<s n="adv"/></r></p></e>
-    <e><p><l>b<s n="adv"/><s n="abbr"/></l><r>b<s n="adv"/><s n="abbr"/></r></p></e>
+    <e><p><l>b<s n="adv"/><s n="abbr"/></l><r>b<s n="adv"/><s n="abbr"/><s n="gram_iabbr"/></r></p></e>
     <e><p><l>badjel<s n="adv"/></l><r>aatsolen<s n="adv"/></r></p></e>
     <e><p><l>badjelii<s n="adv"/></l><r>bijjeli<s n="adv"/></r></p></e>
     <e><p><l>badjin<s n="adv"/></l><r>bijjene<s n="adv"/></r></p></e>
