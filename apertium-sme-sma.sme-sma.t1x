@@ -2028,6 +2028,9 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="arab"/>
     </def-attr>
 
+    <def-attr n="a_vabess">
+      <attr-item tags="vabess"/>
+    </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
@@ -10229,6 +10232,28 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_prn_type"/>
               <clip pos="1" side="tl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_case"/>
+            </lu>
+          </chunk>
+        </out>
+         </when>
+	    <when c="vabess vearditkeahttá : mohtedimmien bielelen">
+        <test> 
+         <equal><clip pos="1" side="tl" part="a_vabess"/><lit-tag v="vabess"/></equal>
+         </test>
+        <out>
+          <chunk namefrom="chunk_name" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex.der_nomact.n.sg.gen"/>
+            </lu>
+            <b />
+            <lu>
+              <lit  v="bielelen"/>
+              <lit-tag v="post"/>
             </lu>
           </chunk>
         </out>
