@@ -916,8 +916,9 @@
   <rule weight="0.5">
        <match lemma="dihte" tags="post.*"><select lemma="gaavhtan" tags="post.*"/></match>
   </rule>
-  <rule weight="0.6">
+  <rule weight="0.6"><or>
        <match tags="vblex.*.actio.gen.*" />
+       <match lemma="ovdamearka" /></or>
        <match lemma="dihte" tags="post.*"><select lemma="gaavhtan" tags="post.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -3153,6 +3154,7 @@
        <rule weight="0.5"> <match lemma="áigi" ><select lemma="" tags="n.*"/></match></rule>     
        <rule weight="0.6"> <match lemma="boahtte" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>     
        <rule weight="0.6"> <match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match><match lemma="mielde" tags="post.*"/></rule>     
+       <rule weight="0.6"> <match tags="n.sem_measr_time.sg.gen.*"/><match lemma="áigi" ><select lemma="" tags="n.*"/></match></rule>     
       <rule weight="0.6"><match lemma="guhkki" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>    
        <rule weight="1.0"> 
          <match lemma="boahtte" >

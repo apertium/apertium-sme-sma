@@ -1258,7 +1258,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="interj">
       <cat-item tags="ij.*"/>
     </def-cat>
-    <def-cat n="verb_to_adv">
+    <def-cat n="adv_årrodh_vblex">
       <cat-item lemma="oassálastit" tags="vblex.*"/>
       <cat-item lemma="oasálastit" tags="vblex.*"/>
       <cat-item lemma="searvat" tags="vblex.*"/>
@@ -2381,7 +2381,13 @@ And then there are some categories like "month", with all the months.
           <test>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_aadv"/></equal>
           </test>
-          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_laakan"/></let>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="attr.der_laakan"/></let>
+        </when>
+        <when c="M[T] der_laakan to der_laaketje">
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_laakan"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_laaketje"/></let>
         </when>
 <!--        <when c="M[T] der_vuota: remove a_attr">
           <test>
@@ -6872,6 +6878,37 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
+     <rule comment="C[DL]-PRED adv_årrodh_vblex" c="oassálastit : mealtan årrodh">
+      <pattern>
+        <pattern-item n="adv_årrodh_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+                       <lu>
+        <clip pos="1" side="tl" part="lem"/>            
+			<lit-tag v="adv"/>
+            </lu>
+           <b />
+           <lu>
+              <lit v="årrodh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="a_mood"/>
+              <clip pos="1" side="tl" part="a_tense"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
      <rule comment="C[DL]-PRED n_bïejedh_vblex" c="virgáibidjat : barkose bïejedh">
       <pattern>
@@ -8710,9 +8747,9 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule> 
-    <rule comment="C[T]-V verb_to_adv" c="go oassálastet dákkár giellabesiin : goh mealtan dagkeres gïelebiesine ">
+<!--    <rule comment="C[T]-V oassálastit" c="go oassálastet dákkár giellabesiin : goh mealtan dagkeres gïelebiesine ">
       <pattern>
-        <pattern-item n="verb_to_adv"/>
+        <pattern-item n="oassálastit"/>
       </pattern>
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
@@ -8731,10 +8768,10 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="C[T]-V leat_aux verb_to_adv" c="go lea oassálastán dákkár giellabesiin : goh mealtan dagkeres gïelebiesine">
+    <rule comment="C[T]-V leat_aux oassálastit" c="go lea oassálastán dákkár giellabesiin : goh mealtan dagkeres gïelebiesine">
       <pattern>
         <pattern-item n="leat_aux"/>
-        <pattern-item n="verb_to_adv"/>
+        <pattern-item n="oassálastit"/>
       </pattern>
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
@@ -8751,7 +8788,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
     <rule comment="C[T]-V negverb" c="in boađe odne : im daenbiejjien båetieh">
       <pattern>
