@@ -3338,7 +3338,7 @@
             <select lemma="goh" /> 
          </match>
        </rule>    
-       <rule weight="0.6"> 
+<!--       <rule weight="0.6"> 
          <match lemma="go" >
             <select lemma="goh"/> 
          </match>
@@ -3350,7 +3350,7 @@
             <select lemma="goh"/> 
          </match>
       <match tags="vblex.*.indic.pres.*" />
-      </rule>     
+      </rule>   -->   
 
 
   <rule weight="1.0">
