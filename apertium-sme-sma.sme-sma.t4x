@@ -1149,24 +1149,24 @@ And then there are some categories like "month", with all the months.
 <!--      </action>													  -->
 <!--    </rule>														  -->
 
-
- <rule comment="Vcop-drop NP_Spred_l" > <!--  delete cop -->
-      <pattern>
-        <pattern-item n="Vcop-drop"/>
-        <pattern-item n="NP_Spred_l"/>
-      </pattern>
-      <action>
-        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <out>
-          <chunk>
-            <clip pos="2" part="lemh"/>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-            <clip pos="2" part="lemq"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
+<!--																							 -->
+<!-- <rule comment="Vcop-drop NP_Spred_l delete cop" >  							 -->
+<!--      <pattern>																				 -->
+<!--        <pattern-item n="Vcop-drop"/>														 -->
+<!--        <pattern-item n="NP_Spred_l"/>														 -->
+<!--      </pattern>																			 -->
+<!--      <action>																				 -->
+<!--        <call-macro n="switch_cases"><with-param pos="1"/><with-param pos="2"/></call-macro> -->
+<!--        <out>																				 -->
+<!--          <chunk>																			 -->
+<!--            <clip pos="2" part="lemh"/>														 -->
+<!--            <clip pos="2" part="tags"/>														 -->
+<!--            <clip pos="2" part="chcontent"/>												 -->
+<!--            <clip pos="2" part="lemq"/>														 -->
+<!--          </chunk>																			 -->
+<!--        </out>																				 -->
+<!--      </action>																				 -->
+<!--    </rule>																					 -->
 
 
  <rule comment="prn-dem Vcop-drop modifier NP_Spred_l" > <!--  delete cop -->

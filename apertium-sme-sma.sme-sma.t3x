@@ -404,7 +404,7 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
- <rule comment="lea aux WORD" > <!--  delete cop -->
+<!-- <rule comment="lea aux WORD - delete cop" >  
       <pattern>
         <pattern-item n="Vcopaux-drop"/>
         <pattern-item n="WORD"/>
@@ -420,7 +420,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
     <rule comment="FMainV Advl_l SUBJ" > 
       <pattern>
