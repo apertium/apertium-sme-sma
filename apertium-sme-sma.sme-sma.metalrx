@@ -923,9 +923,6 @@
        <match lemma="nieida" tags="n.*"><select lemma="nïejte" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="njálggat" tags="adj.*"><select lemma="hearskoes" tags="adj.*"/></match>
-  </rule>
-  <rule weight="1.0">
        <match lemma="njammat" tags="vblex.tv.*"><select lemma="njammedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
