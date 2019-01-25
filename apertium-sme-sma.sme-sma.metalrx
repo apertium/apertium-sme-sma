@@ -902,6 +902,20 @@
        <match lemma="mohkastit" tags="vblex.tv.*"><select lemma="gajvedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
+       <match lemma="sulastahttit" tags="vblex.tv.*"><select lemma="mojhtestehtedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="sulastahttit" tags="vblex.tv.*"><select lemma="plïeresne" tags="post.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="sulastahttit" tags="vblex.tv.*"><select lemma="plïeresne" tags="post.*"/></match>
+       <or>
+       <match tags="n.*.*.acc.*"/>
+       <match tags="np.*.*.acc.*"/>
+       <match tags="prn.*.*.*.acc.*"/>
+       </or>
+  </rule>
+  <rule weight="1.0">
        <match lemma="mohkki" tags="n.*"><select lemma="gaave" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
