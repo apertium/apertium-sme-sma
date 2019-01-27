@@ -419,6 +419,13 @@
        <match lemma="olu" tags="adv.*"><select lemma="guhkiem" tags="adv.*"/></match>
        <match lemma="ovdal" tags="*"/>
   </rule>  
+  <rule weight="0.5">
+       <match lemma="olu" tags="adv.*"><select lemma="sagke" tags="adv.*"/></match>
+  </rule>
+ <rule weight="0.6">
+       <match lemma="olu" tags="adv.*"><select lemma="sagke" tags="adv.*"/></match>
+       <match tags="adj.comp.*"/>
+  </rule>  
  <rule weight="1.0">
        <match lemma="dahppat" tags="vblex.tv.*"><select lemma="dahpedh" tags="vblex.*"/></match>
   </rule>
@@ -868,8 +875,45 @@
   <rule weight="1.0">
        <match lemma="moarsi" tags="n.*"><select lemma="mïelehke" tags="n.*"/></match>
   </rule>
+
+  <rule weight="1.0">
+       <match lemma="gullat" tags="vblex.tv.*"><select lemma="govledh¹" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match tags="prn.*.*.ill.*"/>
+       <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
+       <or>
+       <match tags="prn.*.*.*.ill.*"/>
+       <match tags="n.*.*.*.ill.*"/>
+       <match tags="n.*.*.ill.*"/>
+       <match tags="np.*.*.ill.*"/>
+       <match tags="np.*.*.*.ill.*"/>
+       </or>
+  </rule>
+
+
   <rule weight="1.0">
        <match lemma="mohkastit" tags="vblex.tv.*"><select lemma="gajvedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="sulastahttit" tags="vblex.tv.*"><select lemma="mojhtestehtedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="sulastahttit" tags="vblex.tv.*"><select lemma="plïeresne" tags="post.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="sulastahttit" tags="vblex.tv.*"><select lemma="plïeresne" tags="post.*"/></match>
+       <or>
+       <match tags="n.*.*.acc.*"/>
+       <match tags="np.*.*.acc.*"/>
+       <match tags="prn.*.*.*.acc.*"/>
+       </or>
   </rule>
   <rule weight="1.0">
        <match lemma="mohkki" tags="n.*"><select lemma="gaave" tags="n.*"/></match>
@@ -893,9 +937,6 @@
        <match lemma="nieida" tags="n.*"><select lemma="nïejte" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="njálggat" tags="adj.*"><select lemma="hearskoes" tags="adj.*"/></match>
-  </rule>
-  <rule weight="1.0">
        <match lemma="njammat" tags="vblex.tv.*"><select lemma="njammedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -916,8 +957,9 @@
   <rule weight="0.5">
        <match lemma="dihte" tags="post.*"><select lemma="gaavhtan" tags="post.*"/></match>
   </rule>
-  <rule weight="0.6">
+  <rule weight="0.6"><or>
        <match tags="vblex.*.actio.gen.*" />
+       <match lemma="ovdamearka" /></or>
        <match lemma="dihte" tags="post.*"><select lemma="gaavhtan" tags="post.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -1115,7 +1157,37 @@
        <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
   </rule>
   <rule weight="0.6">
+  	  <or>
+       <match lemma="buktit"/>
        <match lemma="váldit"/>
+       </or>
+       <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+  	  <or>
+       <match lemma="buktit"/>
+       <match lemma="váldit"/>
+       </or>
+       <match />
+       <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+  	  <or>
+       <match lemma="buktit"/>
+       <match lemma="váldit"/>
+       </or>
+       <match />
+       <match />
+       <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+  	  <or>
+       <match lemma="buktit"/>
+       <match lemma="váldit"/>
+       </or>
+       <match />
+       <match />
+       <match />
        <match lemma="ovdan" tags="adv.*"><select lemma="åvtese" tags="adv.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -3153,6 +3225,7 @@
        <rule weight="0.5"> <match lemma="áigi" ><select lemma="" tags="n.*"/></match></rule>     
        <rule weight="0.6"> <match lemma="boahtte" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>     
        <rule weight="0.6"> <match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match><match lemma="mielde" tags="post.*"/></rule>     
+       <rule weight="0.6"> <match tags="n.sem_measr_time.sg.gen.*"/><match lemma="áigi" ><select lemma="" tags="n.*"/></match></rule>     
       <rule weight="0.6"><match lemma="guhkki" tags="adj.*"/><match lemma="áigi" ><select lemma="aejkie" tags="n.*"/></match></rule>    
        <rule weight="1.0"> 
          <match lemma="boahtte" >
@@ -3336,7 +3409,7 @@
             <select lemma="goh" /> 
          </match>
        </rule>    
-       <rule weight="0.6"> 
+<!--       <rule weight="0.6"> 
          <match lemma="go" >
             <select lemma="goh"/> 
          </match>
@@ -3348,7 +3421,7 @@
             <select lemma="goh"/> 
          </match>
       <match tags="vblex.*.indic.pres.*" />
-      </rule>     
+      </rule>   -->   
 
 
   <rule weight="1.0">
