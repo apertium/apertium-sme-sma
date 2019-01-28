@@ -545,8 +545,14 @@
   <rule weight="1.0">
        <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="leah" tags="vblex.*"/></match>
   </rule>
-  <rule weight="1.1">
+  <rule weight="0.6">
+       <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="mejtie" tags="pcle.*"/></match>
+  </rule>
+  <rule weight="0.6">
        <match lemma="leat" tags="vblex.iv.indic.pres.p3.sg.qst.*"><select lemma="mejtie" tags="pcle.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="leat" tags="vblex.iv.indic.pres.p3.pl.qst.*"><select lemma="mejtie" tags="pcle.*"/></match>
   </rule>
   <rule weight="0.6">
        <match lemma="leat" tags="vblex.iv.indic.pres.p3.sg.*"><select lemma="mejtie" tags="pcle.*"/></match>
@@ -883,7 +889,13 @@
        <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.6">
+       <or>
        <match tags="prn.*.*.ill.*"/>
+       <match tags="prn.*.*.*.ill.*"/>
+       <match tags="n.*.*.*.ill.*"/>
+       <match tags="n.*.*.ill.*"/>
+       <match tags="vblex.*.*.n.*.ill.*"/>
+       </or>
        <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.6">
