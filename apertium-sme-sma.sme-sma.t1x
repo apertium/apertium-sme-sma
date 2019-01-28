@@ -2483,6 +2483,7 @@ And then there are some categories like "month", with all the months.
           <begins-with><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np"/></begins-with>
           <!-- <equal><clip pos="1" side="tl" part="lettercase"/><lit-tag v="fixedcase"/></equal> -->
           <equal><get-case-from pos="1"><lit v="aa"/></get-case-from><lit v="AA"/></equal>
+          <equal><clip pos="1" side="tl" part="a_n_type"/><lit-tag v="abbr"/></equal>
         </or></not></test>
         <let><var n="caseFirstword"/><get-case-from pos="1"><lit v="aa"/></get-case-from></let>
         <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
@@ -3064,8 +3065,13 @@ And then there are some categories like "month", with all the months.
      </choose>
     </def-macro>
 
-
     <def-macro n="convert-case-nbr-poss-3Param" npar="3">
+      <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
+      <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
+    </def-macro>
+
+
+<!--    <def-macro n="convert-case-nbr-poss-3Param" npar="3">
       <let><var n="case"/><lit v=""/></let>
       <let><var n="nmbr"/><lit v=""/></let>
       <call-macro n="convert-case-nbr-poss-1Param">
@@ -3079,7 +3085,7 @@ And then there are some categories like "month", with all the months.
       <call-macro n="convert-case-nbr-poss-1Param">
         <with-param pos="3"/>
       </call-macro>
-    </def-macro>
+    </def-macro> -->
 
 
     <def-macro n="agreement-attr-2Param" npar="2"> <!-- pl prn, num, ord , full agreement, exc com -->
@@ -6560,6 +6566,41 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
          </when>
      </choose>
+      <choose><when c="mah mealtan">
+	      <test>
+	    <equal><clip pos="2" side="tl" part="lem"/><lit v="mealtan"/></equal>  
+	      </test>
+	      <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adv"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+              <b pos="2"/>
+              <lu>
+                <lit v="mij"/>
+                <lit-tag v="prn.rel"/>
+                <clip pos="3" side="tl" part="a_nbr"/>
+                <lit-tag v="nom"/>
+              </lu>
+               <b />
+             <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+     </when>
+     <otherwise>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -6581,6 +6622,7 @@ And then there are some categories like "month", with all the months.
               </lu>
           </chunk>
         </out>
+     </otherwise></choose>
       </action>
     </rule>
 
@@ -8089,6 +8131,37 @@ And then there are some categories like "month", with all the months.
         </when>
       </choose>  
         <let><clip pos="1" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let>
+      <choose><when c="mah mealtan">
+	      <test>
+	    <equal><clip pos="1" side="tl" part="lem"/><lit v="mealtan"/></equal>  
+	      </test>
+	      <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+              <lu>
+                <lit v="mij"/>
+                <lit-tag v="prn.rel"/>
+                <clip pos="2" side="tl" part="a_nbr"/>
+                <lit-tag v="nom"/>
+              </lu>
+               <b />
+             <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+     </when>
+     <otherwise>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -8106,6 +8179,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+     </otherwise></choose>
       </action>
     </rule>
 
