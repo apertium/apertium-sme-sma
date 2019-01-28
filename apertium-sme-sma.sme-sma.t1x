@@ -1476,6 +1476,17 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="actio"/>
     </def-attr>
 
+    <def-attr n="negtags">
+      <attr-item tags="indic.pres.conneg"/>
+      <attr-item tags="indic.pret.conneg"/>
+      <attr-item tags="cond.pres.conneg"/>
+      <attr-item tags="cond.pret.conneg"/>
+      <attr-item tags="pot.pres.conneg"/>
+      <attr-item tags="pot.pret.conneg"/>
+      <attr-item tags="imp.conneg"/>
+      <attr-item tags="conneg"/>
+    </def-attr>
+
 
     <def-attr n="a_cmp">
       <attr-item tags="cmp_sggen"/>
@@ -9122,8 +9133,9 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
+        <let><clip pos="1" side="tl" part="negtags"/><lit-tag v="conneg"/></let>
         <out>
-          <chunk name="conneg" case="caseFirstword">
+          <chunk name="connegg" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
@@ -9133,10 +9145,7 @@ And then there are some categories like "month", with all the months.
               <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_vblex"/>
-              <clip pos="1" side="tl" part="a_trans"/>
-              <clip pos="1" side="tl" part="a_conneg"/>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
@@ -9230,6 +9239,7 @@ And then there are some categories like "month", with all the months.
 	  </when>
       <otherwise>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/> </call-macro>
+        <let><clip pos="2" side="tl" part="negtags"/><lit-tag v="conneg"/></let>
         <out>
           <chunk name="ii" case="caseFirstword">
             <tags>
@@ -9242,7 +9252,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_trans"/>
               <clip pos="1" side="tl" part="a_neg"/>
               <lit-tag v="indic"/>
-              <clip pos="2" side="tl" part="a_tense"/>
+              <clip pos="2" side="sl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
@@ -9254,10 +9264,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
             </tags>
             <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_vblex"/>
-              <clip pos="2" side="tl" part="a_trans"/>
-              <clip pos="2" side="tl" part="a_conneg"/>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
