@@ -899,6 +899,17 @@
        <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.6">
+       <or>
+       <match tags="prn.*.*.ill.*"/>
+       <match tags="prn.*.*.*.ill.*"/>
+       <match tags="n.*.*.*.ill.*"/>
+       <match tags="n.*.*.ill.*"/>
+       <match tags="vblex.*.*.n.*.ill.*"/>
+       </or>
+       <match/>
+       <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
        <match lemma="gullat" tags="vblex.tv.*"><select lemma="govlesovvedh" tags="vblex.*"/></match>
        <or>
        <match tags="prn.*.*.*.ill.*"/>
@@ -907,6 +918,19 @@
        <match tags="np.*.*.ill.*"/>
        <match tags="np.*.*.*.ill.*"/>
        </or>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="badjelaš" tags="adv.*"><select lemma="ånnetji bijjelen" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="badjelaš" tags="adv.*"><select lemma="bijjelen" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <or>
+       <match lemma="veaháš"/>
+       <match lemma="vehá"/>
+       </or>
+       <match lemma="badjelaš" tags="adv.*"><select lemma="bijjelen" tags="adv.*"/></match>
   </rule>
 
 
