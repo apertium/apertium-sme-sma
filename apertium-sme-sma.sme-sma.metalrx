@@ -543,9 +543,9 @@
        <match lemma="gáibi" tags="n.*"><select lemma="gaejpie" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="leah" tags="vblex.*"/></match>
+       <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="lea" tags="vblex.*"/></match>
   </rule>
-  <rule weight="0.6">
+  <rule weight="0.5">
        <match lemma="leat" tags="vblex.iv.indic.*"><select lemma="mejtie" tags="pcle.*"/></match>
   </rule>
   <rule weight="0.6">
@@ -1091,7 +1091,7 @@
        <match lemma="ossodat" tags="n.*"><select lemma="goevtese" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="ovdal" tags="pr.*"><select lemma="aarebi" tags="post"/></match>
+       <match lemma="ovdal" tags="pr.*"><select lemma="åvtelen"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="raddi" tags="n.*"><select lemma="boenge" tags="n.*"/></match>
@@ -1950,6 +1950,31 @@
      <select lemma="gosse" tags="cnjsub.*"/>
    </match>
  </rule>     
+
+       <rule weight="1.0">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg.indic.pres.*"/></match>
+ </rule>     
+       <rule weight="0.5">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg.indic.pret.*"/></match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg.indic.pret.*"/></match>
+   <match tags="vblex.*.indic.pret.conneg.*"/>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg.indic.pret.*"/></match>
+   <match />
+   <match tags="vblex.*.indic.pret.conneg.*"/>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg.indic.pret.*"/></match>
+   <match />
+   <match />
+   <match tags="vblex.*.indic.pret.conneg.*"/>
+ </rule>     
+
+
+
        <rule weight="1.0">
    <match lemma="gitta" tags="adv.*">
      <select lemma="öövre" tags="adv.*"/>
