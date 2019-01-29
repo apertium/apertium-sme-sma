@@ -2137,6 +2137,8 @@ And then there are some categories like "month", with all the months.
       <list-item v="searvat"/>     
      </def-list>
     <def-list n="acc-verb">
+      <list-item v="gihtjedh"/>     
+      <list-item v="jearrat"/>     
       <list-item v="čájehit"/>     
       <list-item v="váikkuhit"/>     
       <list-item v="guoskat"/>     
@@ -2145,6 +2147,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="dïjpedh"/>     
       <list-item v="čuohcat"/>
       <list-item v="luohttit"/>
+      <list-item v="leajhtadidh"/>
      </def-list>
     <def-list n="nom-verb">
       <list-item v="mearkkašit"/>
@@ -2838,6 +2841,17 @@ And then there are some categories like "month", with all the months.
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></let>
         </when>
+        <when c="M[T] loc to acc">
+          <test>
+            <and>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
+            <in caseless="yes"><var n="main-verb-lemma"/><list n="acc-verb"/></in>
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+          <let><var n="func"/><lit-tag v="@←OBJ"/></let>
+         <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let> 
+        </when> 
         <when c="M[T] loc to ela">
           <test>
           <or>
