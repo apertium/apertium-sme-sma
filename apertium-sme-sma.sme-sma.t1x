@@ -382,6 +382,11 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="prn.dem.sg.*"/>
     </def-cat>
 
+
+    <def-cat n="mihkke_ge">
+      <cat-item tags="mihkke.prn.ind.sg.gen.foc_neg-ge.*"/>
+    </def-cat>
+
     <def-cat n="numeral">
       <cat-item tags="num.*"/>
     </def-cat>
@@ -6547,6 +6552,35 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
          </when>
      </choose>
+      <choose><when>
+	   <test>
+	   <equal><clip pos="1" side="sl" part="a_foc-ge"/><lit-tag v="foc_neg-ge"/></equal>
+       </test>      
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <lit v="gænnah"/>
+                <lit-tag v="pcle"/>
+              </lu>
+              <b pos="1"/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+         </when>
+         <otherwise>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -6565,7 +6599,9 @@ And then there are some categories like "month", with all the months.
               </lu>
           </chunk>
         </out>
-      </action>
+          </otherwise>
+      </choose>
+    </action>
     </rule>
 
     <rule comment="C[ST]-NP prn_ind n_cmp noun">
@@ -6586,6 +6622,40 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
          </when>
      </choose>
+      <choose><when>
+	   <test>
+	   <equal><clip pos="1" side="sl" part="a_foc-ge"/><lit-tag v="foc_neg-ge"/></equal>
+       </test>      
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <lit v="gænnah"/>
+                <lit-tag v="pcle"/>
+              </lu>
+              <b pos="1"/>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+         </when>
+         <otherwise>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -6608,6 +6678,8 @@ And then there are some categories like "month", with all the months.
             </mlu>
           </chunk>
         </out>
+          </otherwise>
+      </choose>
       </action>
     </rule>
     <rule comment="C[T]-NP prn_ind mod_n noun">
@@ -7674,7 +7746,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-    <rule comment="C[DST]-PP n_cmp gen bokte_post" c="Sámegiela stáhtus loktejuvvošii sámediggemearrádusa bokte : Saemiengïelen staatuse saemiedigkienænnoestahkine lutnjesåvva"> 
+<!--    <rule comment="C[DST]-PP n_cmp gen bokte_post" c="Sámegiela stáhtus loktejuvvošii sámediggemearrádusa bokte : Saemiengïelen staatuse saemiedigkienænnoestahkine lutnjesåvva"> 
       <pattern>
         <pattern-item n="n_cmp"/>
         <pattern-item n="gen"/>
@@ -7874,7 +7946,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
 
     <rule comment="C[DT]-ADV eret_adv noun_loc" c="eret Hábmeris : Hábmeristie"> 

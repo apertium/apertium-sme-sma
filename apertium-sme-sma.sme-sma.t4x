@@ -2406,7 +2406,7 @@ And then there are some categories like "month", with all the months.
 
      <rule comment="prn-dem iiverb" > <!-- mun in - im  -->
       <pattern>
-        <pattern-item n="prn-dem"/>
+        <pattern-item n="prn-pers-subj"/>
         <pattern-item n="iiverb"/>
       </pattern>
       <action>
