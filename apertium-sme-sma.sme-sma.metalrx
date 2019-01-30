@@ -1087,6 +1087,47 @@
        <match lemma="leat" tags="vblex.iv.actio.ess.*"/>
   </rule>
   <rule weight="1.0">
+       <match lemma="vel" tags="adv.*"><select lemma="dovne" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="vel" tags="adv.*"><select lemma="vielie" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="vel" tags="adv.*"><select lemma="vielie" tags="adv.*"/></match>
+        <match tags="vblex.*"/>
+  </rule>
+  <rule weight="0.7">
+  <or>
+        <match tags="num.*"/>
+        <match tags="n.*"/>
+        <match tags="prn.*"/>
+        <match lemma="okta"/>
+  </or>
+       <match lemma="vel" tags="adv.*"><select lemma="vielie" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="vel" tags="adv.*"><select lemma="sagke" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.7">
+       <match lemma="vel" tags="adv.*"><select lemma="sagke" tags="adv.*"/></match>
+       <or>
+        <match tags="adv.comp.*"/>
+        <match tags="adj.comp.*"/>
+       </or>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="vel" tags="adv.*"><select lemma="annje" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+        <match lemma="ii"/>
+       <match />
+       <match lemma="vel" tags="adv.*"><select lemma="annje" tags="adv.*"/></match>
+  </rule>
+  <rule weight="0.6">
+        <match lemma="ii"/>
+       <match lemma="vel" tags="adv.*"><select lemma="annje" tags="adv.*"/></match>
+  </rule>
+  <rule weight="1.0">
        <match lemma="amas" tags="adj.*"><select lemma="ammes" tags="adj.sg.*"/></match>
   </rule>
   <rule weight="0.5">
