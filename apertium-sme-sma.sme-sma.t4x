@@ -141,6 +141,7 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@←OBJ.*"/>
     </def-cat>
     <def-cat n="NP_Obj_l">
+        <cat-item tags="SA.@←OBJ"/>
         <cat-item tags="NP.@←OBJ.*"/>
         <cat-item tags="NP.@←OBJ"/>
         <cat-item tags="NP.@-F←OBJ"/>
@@ -166,6 +167,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="Modifier_Argument_l">
         <cat-item tags="*.@→N.*"/> <!-- this set only -->
         <cat-item tags="NP.@←OBJ.*"/> <!-- also in next set -->
+        <cat-item tags="SA.@←OBJ"/>
         <cat-item tags="NP.@←OBJ"/>
         <cat-item tags="NP.@-F←OBJ"/>
         <cat-item tags="NP.@-F←OBJ.*"/>
@@ -187,6 +189,7 @@ And then there are some categories like "month", with all the months.
 
 
     <def-cat n="Argument_l">
+        <cat-item tags="SA.@←OBJ"/>
         <cat-item tags="NP.@←OBJ.*"/>
         <cat-item tags="NP.@←OBJ"/>
         <cat-item tags="NP.@-F←OBJ"/>
@@ -322,6 +325,11 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="prn-pers" tags="NP.@SUBJ→"/>
     </def-cat>
 
+    <def-cat n="FAuxV-not-ii">
+        <cat-item lemma="vblex" tags="SV.@+FAUXV"/>
+        <cat-item lemma="vblex" tags="SV.@+FAUXV.*"/>
+    </def-cat>
+
 
     <def-cat n="FAuxV">
         <cat-item tags="SV.@+FAUXV"/>
@@ -365,6 +373,9 @@ And then there are some categories like "month", with all the months.
     <def-cat n="prn-dem">
         <cat-item lemma="prn" tags="NP.@SUBJ→.dem"/>
         <cat-item lemma="prn" tags="NP.@SUBJ→.dem.*"/>
+    </def-cat>
+    <def-cat n="Vcop-inf">
+        <cat-item lemma="cop-mainv" tags="SV.@-FMAINV.inf"/>
     </def-cat>
     <def-cat n="Vcop-drop">
         <cat-item lemma="cop-mainv" tags="SV.*.pres"/>
@@ -1549,6 +1560,29 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+
+
+    <rule comment="FAuxV-not-ii Vcop-inf" > <!--S V SPRED becomes S SPRED V, Sámi boazodoallu galgá leat ceavzil. -->
+      <pattern>
+        <pattern-item n="FAuxV-not-ii"/>
+        <pattern-item n="Vcop-inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+        </out>
+         <choose><when>
+          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
+          <out><b pos="1"/></out>
+        </when></choose>
+      </action>
+    </rule>
+
 
     <rule comment="FAuxV IFMainV NP_Spred_l" > <!--S V SPRED becomes S SPRED V, Sámi boazodoallu galgá leat ceavzil. -->
       <pattern>
