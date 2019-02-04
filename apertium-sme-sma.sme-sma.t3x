@@ -224,6 +224,10 @@ And then there are some categories like "month", with all the months.
     <def-cat n="Adp">
         <cat-item tags="PREP.*"/>
     </def-cat>
+    <def-cat n="foc-neg-word">
+        <cat-item tags="*.foc_neg-ge"/>
+        <cat-item tags="*.foc_neg-ge.*"/>
+    </def-cat>
 
   </section-def-cats>
 

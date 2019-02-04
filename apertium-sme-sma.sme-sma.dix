@@ -147,6 +147,7 @@
     <sdef n="lquot"   c="Left quotation mark"/>
     <sdef n="rquot"   c="Right quotation mark"/>
     <sdef n="gram_iabbr"/>   
+    <sdef n="neg-goh"/>   
 
     <!-- Transfer -->
     <sdef n="ND"/>
@@ -1576,6 +1577,8 @@
     <e><p><l>gumppus<s n="n"/></l><r>gaamsoe<s n="n"/></r></p></e>
     <e><p><l>guoccat<s n="n"/></l><r>boetje<s n="n"/></r></p></e>
     <e><p><l>guoddi<s n="n"/><s n="nomag"/></l><r>guedtije<s n="n"/></r></p></e>
+    <e><p><l>doaladupmi<s n="n"/></l><r>vuajnoe<s n="n"/></r></p></e> <!-- holdning -->
+    <e><p><l>miellaguoddu<s n="n"/></l><r>vuajnoe<s n="n"/></r></p></e>
     <e><p><l>guoddu<s n="n"/></l><r>vuajnoe<s n="n"/></r></p></e>
     <e><p><l>guoddá<s n="n"/></l><r>nalhke<s n="n"/></r></p></e>
     <e><p><l>guohpa<s n="n"/></l><r>goehpe<s n="n"/></r></p></e>
@@ -4170,6 +4173,8 @@
     <e><p><l>unni<s n="adj"/><s n="comp"/></l><r>onne-unnebe<s n="adj"/><s n="comp"/></r></p></e>
     <e><p><l>unni<s n="adj"/><s n="comp"/></l><r>onne<s n="adj"/><s n="comp"/></r></p></e>
     <e><p><l>unni<s n="adj"/><s n="comp"/></l><r>vaenie<s n="adj"/><s n="comp"/></r></p></e>
+    <e><p><l>sekundára<s n="adj"/></l><r>sekundæære<s n="adj"/></r></p></e>
+    <e><p><l>primára<s n="adj"/></l><r>vïenes<s n="adj"/></r></p></e>
     <e><p><l>ustitlaš<s n="adj"/></l><r>vïenes<s n="adj"/></r></p></e>
     <e><p><l>varas<s n="adj"/></l><r>båajoes<s n="adj"/></r></p></e>
     <e><p><l>varas<s n="adj"/></l><r>fïerske<s n="adj"/></r></p></e>
@@ -4264,6 +4269,7 @@
     <e><p><l>šlundi<s n="adj"/></l><r>hujnies<s n="adj"/></r></p></e>
     <e><p><l>šoavkat<s n="adj"/></l><r>pliejhkies<s n="adj"/></r></p></e>
     <e><p><l>šođbat<s n="adj"/></l><r>siegkies<s n="adj"/></r></p></e>
+    <e><p><l>poehtalaš<s n="adj"/></l><r>poetihkeles<s n="adj"/></r></p></e>
 
     <!-- SECTION: Adverbs -->
 
@@ -4447,6 +4453,7 @@
     <e><p><l>man<s n="adv"/></l><r>mij<s n="prn"/><s n="ind"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>man<s n="adv"/><s n="subqst"/></l><r>mij<s n="prn"/><s n="ind"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>maŋimus<s n="adv"/></l><r>minngemes<s n="adv"/></r></p></e>
+    <e><p><l>masá<s n="adv"/></l><r>mahte<s n="adv"/></r></p></e>
     <e><p><l>measta<s n="adv"/></l><r>mahte<s n="adv"/></r></p></e>
     <e><p><l>menddo<s n="adv"/></l><r>ååpsen<s n="adv"/></r></p></e>
     <e><p><l>mielde<s n="adv"/></l><r>meatan<s n="adv"/></r></p></e>
@@ -5272,6 +5279,7 @@
     <e><p><l>ii<s n="vblex"/><s n="iv"/><s n="neg"/><s n="indic"/></l><r>ij<s n="vblex"/><s n="neg"/><s n="indic"/><s n="pres"/></r></p></e>
     <e><p><l>ii<s n="vblex"/><s n="iv"/><s n="neg"/><s n="indic"/></l><r>ij<s n="vblex"/><s n="neg"/><s n="indic"/><s n="pret"/></r></p></e>
     <e><p><l>ii<s n="vblex"/><s n="iv"/><s n="neg"/><s n="imp"/></l><r>ij<s n="vblex"/><s n="neg"/><s n="imp"/></r></p></e>
+<!--    <e><p><l>ii<s n="vblex"/><s n="iv"/><s n="neg"/><s n="indic"/></l><r>ij<s n="vblex"/><s n="neg-goh"/><s n="indic"/><s n="pres"/></r></p></e> -->
 
     <e><p><l>ilbmat<s n="vblex"/><s n="iv"/></l><r>olkese<s n="adv"/></r></p></e> <!-- olkese båetedh -->
     <e><p><l>illastit<s n="vblex"/><s n="tv"/></l><r>daaresjidh<s n="vblex"/><s n="tv"/></r></p></e>

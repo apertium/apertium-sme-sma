@@ -2552,7 +2552,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-  <rule comment="add extra word gænnah" >  
+<!--  <rule comment="add extra word gænnah" >  
       <pattern>
         <pattern-item n="foc-neg-word"/>
       </pattern>
@@ -2576,7 +2576,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
    <rule comment="add extra word aaj" >  
       <pattern>

@@ -564,6 +564,15 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="np.cog.sg.*"/>
     </def-cat>
 
+    <def-cat n="prop_pers">
+      <cat-item tags="np.cog.sg.*"/>
+      <cat-item tags="np.ant.*"/>
+   </def-cat>
+
+    <def-cat n="prop_hyphcmp">
+      <cat-item tags="np.*.*.cmp_hyph.cmp"/>
+      <cat-item tags="np.*.*.*.cmp_hyph.cmp"/>
+    </def-cat>
 
     <def-cat n="prop_attr">
       <cat-item tags="np.*.attr.*"/>
@@ -1716,6 +1725,7 @@ And then there are some categories like "month", with all the months.
     <def-attr n="a_foc-ge">
       <attr-item tags="foc_neg-ge"/>
       <attr-item tags="foc_pos-ge"/>
+      <attr-item tags="neg-goh"/>
     </def-attr>
 
     <def-attr n="a_func">
@@ -3581,6 +3591,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="ADV"/></tag>
               <tag><var n="func"/></tag>
+              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
             </tags>
             <lu>
               <lit v="gåabpelen"/>
@@ -3978,7 +3989,7 @@ And then there are some categories like "month", with all the months.
 
     <rule comment="C[AT]-NUM prop_cog semyear" c="Ramussen 2001"> 
       <pattern> 
-        <pattern-item n="prop_cog"/>
+        <pattern-item n="prop_pers"/>
         <pattern-item n="semyear_nom"/>
      </pattern>
       <action>
@@ -3996,15 +4007,44 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-          </chunk>
             <b pos="1"/>
-         <chunk name="num-noun">
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+    <rule comment="C[AT]-NUM prop_hyphcmp prop_cog semyear" c="Olsen-Ramussen 2001"> 
+      <pattern> 
+        <pattern-item n="prop_hyphcmp"/>
+        <pattern-item n="prop_pers"/>
+        <pattern-item n="semyear_nom"/>
+     </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+         <call-macro n="convert-case-nbr-poss-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
+         <let><clip pos="3" side="tl" part="tags"/><lit-tag v="num.arab.sg.nom"/></let> 
+        <out>
+          <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
             </tags>
+            <mlu>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            </mlu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
@@ -6607,7 +6647,6 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
-              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
             </tags>
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
@@ -6687,7 +6726,6 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
-              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
             </tags>
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
@@ -8753,6 +8791,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
+              <tag><clip pos="4" side="sl" part="a_foc-ge"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -8812,6 +8851,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
+              <tag><clip pos="3" side="sl" part="a_foc-ge"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -8865,6 +8905,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
+              <tag><clip pos="4" side="sl" part="a_foc-ge"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -8921,6 +8962,7 @@ And then there are some categories like "month", with all the months.
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
+              <tag><clip pos="3" side="sl" part="a_foc-ge"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -9168,7 +9210,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
- 
+ <!--
     <rule comment="C[_]-N n_prop_pers" c="this one is not in use because of the noun-set, do we need it?">
       <pattern>
         <pattern-item n="n_prop_pers"/>
@@ -9193,7 +9235,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> -->
 
     <rule comment="C[ST]-NP prn_attr n_cmp noun">
       <pattern>
@@ -9402,9 +9444,14 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="negverb"/>
       </pattern>
       <action>
+	   <choose><when><test>
+		<equal><clip pos="1" side="sl" part="a_foc-ge"/><lit-tag v="foc_neg-ge"/></equal> </test>    
+      <let><var n="foc-ge"/><lit-tag v="foc_neg-ge"/></let></when></choose>
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
+<!--        <choose><when><test>
+		<equal><clip pos="1" side="sl" part="a_foc-ge"/><lit-tag v="neg-goh"/></equal> </test>    
         <out>
           <chunk name="ii" case="caseFirstword">
             <tags>
@@ -9420,6 +9467,29 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+		</when>
+		<otherwise> -->
+        <out>
+          <chunk name="ii" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><clip pos="1" side="tl" part="a_mood"/></tag>
+              <tag><clip pos="1" side="tl" part="a_tense"/></tag>
+              <tag><clip pos="1" side="tl" part="a_pers"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b />
+            <lu>
+            <lit v="goh"/>
+            <lit-tag v="pcle"/>
+            </lu>
+          </chunk>
+        </out>
+<!--		</otherwise></choose> -->
       </action>
     </rule>
 
@@ -9441,12 +9511,15 @@ And then there are some categories like "month", with all the months.
               <tag><clip pos="1" side="tl" part="a_tense"/></tag>
               <tag><clip pos="1" side="tl" part="a_pers"/></tag>
               <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
+               <tag><var n="foc-ge"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <let><var n="foc-ge"/><lit v=""/></let>
       </action>
     </rule>
 
@@ -9560,6 +9633,7 @@ And then there are some categories like "month", with all the months.
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="func"/></tag>
+              <tag><clip pos="1" side="sl" part="a_foc-ge"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
