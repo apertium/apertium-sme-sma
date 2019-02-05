@@ -2162,47 +2162,8 @@
 
        <rule weight="0.6">
    <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
-   <or>
-         <match tags="adj.*"/>
-         <match tags="pr.*"/>
-         <match tags="post.*"/>
-         <match tags="prn.*"/>
-         <match tags="adv.*"/>
-         <match tags="n.*"/>
-   </or>
-   <or>
-         <match tags="adj.*"/>
-         <match tags="pr.*"/>
-         <match tags="post.*"/>
-         <match tags="prn.*"/>
-         <match tags="adv.*"/>
-         <match tags="n.*"/>
-   </or>
-   <or>
-         <match tags="adj.*"/>
-         <match tags="pr.*"/>
-         <match tags="post.*"/>
-         <match tags="prn.*"/>
-         <match tags="adv.*"/>
-         <match tags="n.*"/>
-   </or>
-   <or>
-         <match tags="adj.*"/>
-         <match tags="pr.*"/>
-         <match tags="post.*"/>
-         <match tags="prn.*"/>
-         <match tags="adv.*"/>
-         <match tags="n.*"/>
-   </or>
-   <or>
-         <match tags="adj.*"/>
-         <match tags="pr.*"/>
-         <match tags="post.*"/>
-         <match tags="prn.*"/>
-         <match tags="adv.*"/>
-         <match tags="n.*"/>
-   </or>
-         <match tags="sent"/>
+    <repeat upto="8"><seq n="non-verb"/></repeat>   
+    <match tags="sent"/>
  </rule>     
 
 
@@ -3165,67 +3126,76 @@
         </rule>   -->
 
 
- <rule weight="1.0">   
+ <rule weight="0.5">   
   <match lemma="maid" >   
       <select lemma="aaj" tags="adv.*"/>
     </match>    
     </rule>    
- <rule weight="1.0">   
+ <rule weight="0.5">   
   <match lemma="maiddá" >   
       <select lemma="aaj" tags="adv.*"/>
     </match>    
     </rule>    
- <rule weight="1.0">   
+ <rule weight="0.5">   
   <match lemma="maiddái" >   
       <select lemma="aaj" tags="adv.*"/>
     </match>    
     </rule>    
  <rule weight="0.6">   
   <match lemma="maid" >   
-      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+      <select lemma="aaj" tags="adv.*"/>    
     </match>    
+    <or>
   <match tags="vblex.*" />   
+  <match tags="adv.*" />   
+    </or>
     </rule>    
  <rule weight="0.6">   
   <match lemma="maiddá" >   
-      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+      <select lemma="aaj" tags="adv.*"/>    
     </match>    
+    <or>
   <match tags="vblex.*" />   
+  <match tags="adv.*" />   
+    </or>
     </rule>    
  <rule weight="0.6">   
   <match lemma="maiddái" >   
-      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+      <select lemma="aaj" tags="adv.*"/>    
     </match>    
+    <or>
   <match tags="vblex.*" />   
+  <match tags="adv.*" />   
+    </or>
     </rule>    
 
- <rule weight="0.5">   
+ <rule weight="1.0">   
   <match lemma="maid" >   
-      <select lemma="dovne" tags="adv.@→ADVL"/>    
+      <select lemma="dovne" tags="adv.*"/>    
     </match>    
     </rule>    
- <rule weight="0.5">   
+ <rule weight="1.0">   
   <match lemma="maiddá" >   
-      <select lemma="dovne" tags="adv.@→ADVL"/>    
+      <select lemma="dovne" tags="adv.*"/>    
     </match>    
     </rule>    
- <rule weight="0.5">   
+ <rule weight="1.0">   
   <match lemma="maiddái" >   
-      <select lemma="dovne" tags="adv.@→ADVL"/>    
+      <select lemma="dovne" tags="adv.*"/>    
     </match>    
     </rule>    
 
- <rule weight="0.6">   
+ <rule weight="1.0">   
   <match lemma="maid" >   
       <select lemma="dovne" tags="adv.@→ADVL"/>    
     </match>    
     </rule>    
- <rule weight="0.6">   
+ <rule weight="1.0">   
   <match lemma="maiddá" >   
       <select lemma="dovne" tags="adv.@→ADVL"/>    
     </match>    
     </rule>    
- <rule weight="0.6">   
+ <rule weight="1.0">   
   <match lemma="maiddái" >   
       <select lemma="dovne" tags="adv.@→ADVL"/>    
     </match>    
