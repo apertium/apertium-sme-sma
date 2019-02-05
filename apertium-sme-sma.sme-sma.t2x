@@ -322,6 +322,9 @@ And then there are some categories like "month", with all the months.
      <attr-item tags="ine"/>
      <attr-item tags="ela"/>
   </def-attr>
+    <def-attr n="a_foc-neg">
+        <attr-item tags="foc_neg-ge"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -693,6 +696,27 @@ And then there are some categories like "month", with all the months.
        <pattern-item n="noun"/>
      </pattern>
      <action>
+    <choose><when><test>   
+	<equal><clip pos="2" part="a_foc-neg"/><lit-tag v="foc_neg-ge"/></equal>    
+	</test>     
+        <out>
+        <chunk>
+           <get-case-from pos="1"><lit v="noun"/></get-case-from>
+           <clip pos="2" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+          <b />
+           <lit v="^"/>
+            <lit v="gænnah"/>
+            <lit-tag v="pcle"/>
+           <lit v="$"/>
+           <lit v="}"/>
+          </chunk>
+        </out>
+        </when>
+      <otherwise>  
        <out>
          <chunk>
            <get-case-from pos="1"><lit v="noun"/></get-case-from>
@@ -704,6 +728,7 @@ And then there are some categories like "month", with all the months.
            <lit v="}"/>
          </chunk>
        </out>
+      </otherwise></choose>  
      </action>
     </rule>
 
