@@ -2091,6 +2091,141 @@
    <match />
    <match tags="vblex.*.indic.pret.conneg.*"/>
  </rule>     
+       <rule weight="0.5">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
+
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
+
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
+
+
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
 
 
 
@@ -2968,9 +3103,7 @@
 
 
  <rule weight="1.0">   
-  <match lemma="nu" tags="adv.*" >   
-      <select lemma="nimhtie"/>    
-    </match>    
+  <match lemma="nu" tags="adv.*" > <select lemma="nimhtie"/> </match>    
     </rule>      
 
       <rule weight="0.5">    
@@ -2996,6 +3129,7 @@
   <match lemma="nu" tags="adv.*" >   
             <select lemma="dan"/>  
          </match> <or>  
+     <match tags="num.*"/>    
      <match tags="adj.*"/>    
      <match tags="prn.ind.pl.*"/>    
      <match tags="adv.*"/>   </or> 
