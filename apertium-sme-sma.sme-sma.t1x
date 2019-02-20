@@ -1681,6 +1681,8 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="der_ahtti"/>
        <attr-item tags="der_alla"/>
        <attr-item tags="der_inchl"/>
+       <attr-item tags="der_geahtes"/>
+       <attr-item tags="der_car"/>
        <attr-item tags="der_laakan"/>
        <attr-item tags="der_laagasj"/>
        <attr-item tags="der_meahttun"/>
@@ -2538,6 +2540,12 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
         </when> -->
+        <when c="M[T] der_geahtes to der_car">
+          <test>
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_geahtes"/></equal>
+          </test>
+	          <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_car"/></let>
+        </when>
       </choose>
     </def-macro>
 
