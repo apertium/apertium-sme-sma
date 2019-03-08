@@ -43,6 +43,9 @@ And then there are some categories like "month", with all the months.
 <interchunk>
 
   <section-def-cats>
+    <def-cat n="unknown">
+      <cat-item lemma="unknown" tags="unknown" />
+    </def-cat>
     <def-cat n="hyphnom">
       <cat-item lemma="NP" tags="hyphnom.*" />
     </def-cat>
@@ -103,6 +106,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
      <def-cat n="NP-compl">
       <cat-item tags="NP.@N←"/>
+    </def-cat>
+    <def-cat n="foc-neg-word">
+        <cat-item tags="*.foc_neg-ge"/>
+        <cat-item tags="*.foc_neg-ge.*"/>
     </def-cat>
 
     <def-cat n="NP_Subj">
@@ -315,6 +322,9 @@ And then there are some categories like "month", with all the months.
      <attr-item tags="ine"/>
      <attr-item tags="ela"/>
   </def-attr>
+    <def-attr n="a_foc-neg">
+        <attr-item tags="foc_neg-ge"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -429,6 +439,27 @@ And then there are some categories like "month", with all the months.
     </rule>
  -->
 
+  <rule comment="add extra word gænnah" >  
+      <pattern>
+        <pattern-item n="foc-neg-word"/>
+      </pattern>
+      <action>
+        <out>
+        <chunk>
+          <clip pos="1" part="lemh"/>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+        <clip pos="1" part="content"/>
+          <b />
+           <lit v="^"/>
+            <lit v="gænnah"/>
+            <lit-tag v="pcle"/>
+           <lit v="$"/>
+           <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: NP NP-compl">
     <pattern>
        <pattern-item n="NP"/>
@@ -518,7 +549,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule>
 
-    <rule comment="REGLA: PP P_left">
+<!--    <rule comment="REGLA: PP P_left">
     <pattern>
        <pattern-item n="Adp"/>
        <pattern-item n="P_left"/>
@@ -536,7 +567,7 @@ And then there are some categories like "month", with all the months.
       </chunk>
     </out>
       </action>
-    </rule>
+    </rule> -->
 
     <rule comment="REGLA: BIJRE">
     <pattern>
@@ -665,6 +696,27 @@ And then there are some categories like "month", with all the months.
        <pattern-item n="noun"/>
      </pattern>
      <action>
+    <choose><when><test>   
+	<equal><clip pos="2" part="a_foc-neg"/><lit-tag v="foc_neg-ge"/></equal>    
+	</test>     
+        <out>
+        <chunk>
+           <get-case-from pos="1"><lit v="noun"/></get-case-from>
+           <clip pos="2" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+          <b />
+           <lit v="^"/>
+            <lit v="gænnah"/>
+            <lit-tag v="pcle"/>
+           <lit v="$"/>
+           <lit v="}"/>
+          </chunk>
+        </out>
+        </when>
+      <otherwise>  
        <out>
          <chunk>
            <get-case-from pos="1"><lit v="noun"/></get-case-from>
@@ -676,6 +728,7 @@ And then there are some categories like "month", with all the months.
            <lit v="}"/>
          </chunk>
        </out>
+      </otherwise></choose>  
      </action>
     </rule>
 

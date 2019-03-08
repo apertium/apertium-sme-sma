@@ -1687,35 +1687,38 @@
   
    
     <rule weight="1.0">
-   <match lemma="ge">
-     <select lemma="aaj"/>
+   <match lemma="ge" tags="pcle.*">
+     <select lemma="aaj" tags="pcle.*"/>
    </match>
  </rule>     
 
        <rule weight="0.5">
-   <match lemma="ge">
-     <select lemma="gænnah"/>
+   <match lemma="ge" tags="pcle.*">
+     <select lemma="gænnah" tags="pcle.*"/>
    </match>
  </rule>     
        <rule weight="0.6">
+       <or>
    <match lemma="ii"/>
-   <match lemma="ge">
-     <select lemma="gænnah"/>
+   <match tags="vblex.*.*.*.conneg.*"/>
+       </or>
+   <match lemma="ge" tags="pcle.*">
+     <select lemma="gænnah" tags="pcle.*"/>
    </match>
  </rule>     
        <rule weight="0.6">
    <match lemma="ii"/>
    <match />
-   <match lemma="ge">
-     <select lemma="gænnah"/>
+   <match lemma="ge" tags="pcle.*">
+     <select lemma="gænnah" tags="pcle.*"/>
    </match>
  </rule>     
        <rule weight="0.6">
    <match lemma="ii"/>
    <match />
    <match />
-   <match lemma="ge">
-     <select lemma="gænnah"/>
+   <match lemma="ge" tags="pcle.*">
+     <select lemma="gænnah" tags="pcle.*"/>
    </match>
  </rule>     
     <rule weight="1.0">
@@ -2087,6 +2090,102 @@
    <match />
    <match />
    <match tags="vblex.*.indic.pret.conneg.*"/>
+ </rule>     
+       <rule weight="0.5">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
+
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adj.*"/>
+         <match tags="pr.*"/>
+         <match tags="post.*"/>
+         <match tags="prn.*"/>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
+
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+    <repeat upto="8"><seq n="non-verb"/></repeat>   
+    <match tags="sent"/>
+ </rule>     
+
+
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
+ </rule>     
+       <rule weight="0.6">
+   <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
+   <or>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+   <or>
+         <match tags="adv.*"/>
+         <match tags="n.*"/>
+   </or>
+         <match tags="sent"/>
  </rule>     
 
 
@@ -2965,9 +3064,7 @@
 
 
  <rule weight="1.0">   
-  <match lemma="nu" tags="adv.*" >   
-      <select lemma="nimhtie"/>    
-    </match>    
+  <match lemma="nu" tags="adv.*" > <select lemma="nimhtie"/> </match>    
     </rule>      
 
       <rule weight="0.5">    
@@ -2993,6 +3090,7 @@
   <match lemma="nu" tags="adv.*" >   
             <select lemma="dan"/>  
          </match> <or>  
+     <match tags="num.*"/>    
      <match tags="adj.*"/>    
      <match tags="prn.ind.pl.*"/>    
      <match tags="adv.*"/>   </or> 
@@ -3028,69 +3126,78 @@
         </rule>   -->
 
 
- <rule weight="1.0">   
+ <rule weight="0.5">   
   <match lemma="maid" >   
-      <select lemma="aaj"/>    
+      <select lemma="aaj" tags="adv.*"/>
     </match>    
     </rule>    
- <rule weight="1.0">   
+ <rule weight="0.5">   
   <match lemma="maiddá" >   
-      <select lemma="aaj"/>    
+      <select lemma="aaj" tags="adv.*"/>
     </match>    
     </rule>    
- <rule weight="1.0">   
+ <rule weight="0.5">   
   <match lemma="maiddái" >   
-      <select lemma="aaj"/>    
+      <select lemma="aaj" tags="adv.*"/>
     </match>    
     </rule>    
- <rule weight="1.5">   
+ <rule weight="0.6">   
   <match lemma="maid" >   
-      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+      <select lemma="aaj" tags="adv.*"/>    
     </match>    
+    <or>
   <match tags="vblex.*" />   
+  <match tags="adv.*" />   
+    </or>
     </rule>    
- <rule weight="1.5">   
+ <rule weight="0.6">   
   <match lemma="maiddá" >   
-      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+      <select lemma="aaj" tags="adv.*"/>    
     </match>    
+    <or>
   <match tags="vblex.*" />   
+  <match tags="adv.*" />   
+    </or>
     </rule>    
- <rule weight="1.5">   
+ <rule weight="0.6">   
   <match lemma="maiddái" >   
-      <select lemma="aaj" tags="adv.@ADVL-ine→"/>    
+      <select lemma="aaj" tags="adv.*"/>    
     </match>    
+    <or>
   <match tags="vblex.*" />   
+  <match tags="adv.*" />   
+    </or>
     </rule>    
 
- <rule weight="0.5">   
+ <rule weight="1.0">   
   <match lemma="maid" >   
-      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.*"/>    
     </match>    
     </rule>    
- <rule weight="0.5">   
+ <rule weight="1.0">   
   <match lemma="maiddá" >   
-      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.*"/>    
     </match>    
     </rule>    
- <rule weight="0.5">   
+ <rule weight="1.0">   
   <match lemma="maiddái" >   
-      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.*"/>    
     </match>    
     </rule>    
 
- <rule weight="0.6">   
+ <rule weight="1.0">   
   <match lemma="maid" >   
-      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.@→ADVL"/>    
     </match>    
     </rule>    
- <rule weight="0.6">   
+ <rule weight="1.0">   
   <match lemma="maiddá" >   
-      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.@→ADVL"/>    
     </match>    
     </rule>    
- <rule weight="0.6">   
+ <rule weight="1.0">   
   <match lemma="maiddái" >   
-      <select lemma="dovne" tags="adv.@ADVL-ine→"/>    
+      <select lemma="dovne" tags="adv.@→ADVL"/>    
     </match>    
     </rule>    
 
@@ -3605,27 +3712,19 @@
 
  
          <rule weight="1.0"> 
-         <match lemma="go" >
-            <select lemma="gosse" /> 
+         <match lemma="go" tags="cnjsub.*" >
+            <select lemma="gosse" tags="cnjsub.*" /> 
          </match>
        </rule>     
          <rule weight="0.8"> 
-         <or>
-         <match lemma="dalle" />
          <match lemma="mearkkašit" />
-         </or>
-         <match lemma="go" >
-            <select lemma="gosse" /> 
-         </match>
-       </rule>     
-       <rule weight="0.5">  
-         <match lemma="go" >
-            <select lemma="goh" /> 
+         <match lemma="go" tags="cnjsub.*" >
+            <select lemma="gosse" tags="cnjsub.*" /> 
          </match>
        </rule>     
        <rule weight="0.6"> 
-         <match lemma="go" >
-            <select lemma="goh"/> 
+         <match lemma="go"  tags="cnjsub.*">
+            <select lemma="goh"  tags="cnjsub.*"/> 
          </match>
          <or>
          <match tags="prn.*.*.*.@COMP-CS←"/>
@@ -3638,8 +3737,8 @@
           </or>
       </rule>     
        <rule weight="0.6"> 
-         <match lemma="go" >
-            <select lemma="goh"/> 
+         <match lemma="go"  tags="cnjsub.*">
+            <select lemma="goh"  tags="cnjsub.*"/> 
          </match>
     <repeat upto="2"><seq n="non-verb"/></repeat>   
          <or>
@@ -3652,13 +3751,19 @@
           </or>
       </rule>     
        <rule weight="0.6"> 
-         <match lemma="go" >
-            <select lemma="goh"/> 
+         <match lemma="go"  tags="cnjsub.*">
+            <select lemma="goh"  tags="cnjsub.*"/> 
          </match>
          <match n="non-verb"/>
          <match n="non-verb"/>
          <match n="non-verb"/>
          <match n="non-verb"/>
+      </rule>     
+       <rule weight="0.6"> 
+         <match lemma="dalle" />
+         <match lemma="go"  tags="cnjsub.*">
+            <select lemma="goh"  tags="cnjsub.*"/> 
+         </match>
       </rule>     
 
 
