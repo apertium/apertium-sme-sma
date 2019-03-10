@@ -3688,6 +3688,11 @@
          <match lemma="ahte" />
        </rule>     
 
+         <rule weight="1.0"> 
+         <match lemma="gihppu" >
+            <select lemma="frase" /> 
+         </match>
+       </rule>     
 
          <rule weight="1.0"> 
          <match lemma="gos" >
