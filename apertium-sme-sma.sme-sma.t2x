@@ -371,8 +371,8 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule> 
-    <rule comment="REGLA: NP_Pr CNP NP_Pr"> 
+    </rule> -->
+<!--    <rule comment="REGLA: NP_Pr CNP NP_Pr"> 
      <pattern>
        <pattern-item n="NP_Pr"/>
        <pattern-item n="CNP"/>
@@ -415,9 +415,9 @@ And then there are some categories like "month", with all the months.
          </chunk>
        </out>
      </action>
-    </rule> 
+    </rule> -->
 
-   <rule comment="REGLA: Adp NP_Pr">
+<!--   <rule comment="REGLA: Adp NP_Pr">
      <pattern>
        <pattern-item n="Adp"/>
        <pattern-item n="NP_Pr"/>
@@ -687,6 +687,42 @@ And then there are some categories like "month", with all the months.
            <clip pos="1" part="lemq"/>
          </chunk>
        </out>
+     </action>
+    </rule>
+
+    <rule comment="REGLA: noun"> 
+     <pattern>
+       <pattern-item n="noun"/>
+     </pattern>
+     <action>
+    <choose><when><test>   
+	<equal><clip pos="1" part="a_foc-neg"/><lit-tag v="foc_neg-ge"/></equal>    
+	</test>     
+        <out>
+        <chunk>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+          <b />
+           <lit v="^"/>
+            <lit v="gænnah"/>
+            <lit-tag v="pcle"/>
+           <lit v="$"/>
+           <lit v="}"/>
+          </chunk>
+        </out>
+        </when>
+      <otherwise>  
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="noun"/></get-case-from>
+           <clip pos="1" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <lit v="}"/>
+         </chunk>
+       </out>
+      </otherwise></choose>  
      </action>
     </rule>
 
@@ -1082,7 +1118,7 @@ And then there are some categories like "month", with all the months.
      </action>
     </rule>
 
-    <rule comment="REGLA: ADVL / ADVL left">
+<!--    <rule comment="REGLA: ADVL / ADVL left">
      <pattern>
        <pattern-item n="ADVL-left"/>
        <pattern-item n="ADVL-left"/>
@@ -1101,7 +1137,7 @@ And then there are some categories like "month", with all the months.
          </chunk>
        </out>
      </action>
-    </rule>
+    </rule> -->
 
     <rule comment="REGLA: modADVL ADVL CNP ADVL right">
      <pattern>
