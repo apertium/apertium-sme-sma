@@ -151,8 +151,8 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@←SUBJ"/>
     </def-cat>
     <def-cat n="NP_Subj_l">
-        <cat-item tags="*.@←SUBJ"/>
-        <cat-item tags="*.@←SUBJ.*"/>
+        <cat-item tags="NP.@←SUBJ"/>
+        <cat-item tags="NP.@←SUBJ.*"/>
     </def-cat>
     <def-cat n="NP_Spred_l">
         <cat-item tags="NP.@←SPRED"/>

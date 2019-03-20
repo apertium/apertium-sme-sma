@@ -5670,7 +5670,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
-        <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
