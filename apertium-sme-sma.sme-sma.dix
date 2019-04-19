@@ -240,13 +240,13 @@
     <!-- SECTION: Particles -->
 
     <e r="RL"><p><l>han<s n="pcle"/></l><r>maa<s n="pcle"/></r></p></e>
-    <e><p><l>ge<s n="pcle"/></l><r>aaj<s n="adv"/></r></p></e>
+    <e r="LR"><p><l>ge<s n="pcle"/></l><r>aaj<s n="adv"/></r></p></e>
     <e><p><l>ge<s n="pcle"/></l><r>gænnah<s n="pcle"/></r></p></e>
     <e><p><l>ges<s n="pcle"/></l><r>jis<s n="pcle"/></r></p></e>
     <e><p><l>goit<s n="pcle"/></l><r>gujht<s n="pcle"/></r></p></e>
     <e><p><l>goittotge<s n="pcle"/></l><r>lïjhke<s n="pcle"/></r></p></e>
     <e><p><l>han<s n="pcle"/></l><r>hov<s n="pcle"/></r></p></e>
-    <e><p><l>nai<s n="pcle"/></l><r>aaj<s n="adv"/></r></p></e>
+    <e r="LR"><p><l>nai<s n="pcle"/></l><r>aaj<s n="adv"/></r></p></e>
 
     <!-- SECTION: Adpositions -->
 
@@ -256,6 +256,7 @@
     <e r="LR"><p><l>vuhtii<s n="adv"/></l><r><s n="adv"/></r></p></e>
     <e r="LR"><p><l>vuostá<s n="adv"/></l><r><s n="adv"/></r></p></e>
     <e><p><l>aisttan<s n="pr"/></l><r>mietie<s n="post"/></r></p></e>
+    <e r="RL"><p><l>ala<s n="post"/></l><r>nïlle<s n="post"/></r></p></e>
     <e><p><l>ala<s n="post"/></l><r>nelnie<s n="post"/></r></p></e>
     <e><p><l>alde<s n="post"/></l><r>nelhtie<s n="post"/></r></p></e>
     <e><p><l>alu<s n="post"/></l><r>jïlle<s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -488,6 +489,7 @@
     <e><p><l>gávccinuppelohkái<s n="num"/></l><r>luhkiegaektsie<s n="num"/></r></p></e>
     <e><p><l>logi<s n="num"/></l><r>luhkie<s n="num"/></r></p></e>
     <e><p><l>máŋga<s n="num"/></l><r>gellie<s n="num"/></r></p></e>
+    <e r="RL"><p><l>njeallje<s n="num"/></l><r>njielje<s n="num"/></r></p></e>
     <e><p><l>njeallje<s n="num"/></l><r>njieljie<s n="num"/></r></p></e>
     <e><p><l>njealljelogi<s n="num"/></l><r>njieljieluhkie<s n="num"/></r></p></e>
     <e><p><l>njealljenuppelohkái<s n="num"/></l><r>luhkienjieljie<s n="num"/></r></p></e>
@@ -641,7 +643,11 @@
     <e><p><l>maŋŋelis<s n="adv"/></l><r>minngielisnie<s n="adv"/></r></p></e>
     <e><p><l>čilget<s n="vblex"/><s n="tv"/></l><r>bïhkemdidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>bálddalastit<s n="vblex"/><s n="tv"/></l><r>parallelliseeredh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e><p><l>klassifiseret<s n="vblex"/><s n="tv"/></l><r>klassifiseeredh<s n="vblex"/><s n="tv"/></r></p></e>
 
+    <e r="RL"><p><l>girjjálašvuohta<s n="n"/></l><r>tjaaleldahke<s n="n"/></r></p></e>
+    <e><p><l>attribuhtta<s n="n"/></l><r>attribuhte<s n="n"/></r></p></e>
+    <e><p><l>kombinašuvdna<s n="n"/></l><r>kombinasjovne<s n="n"/></r></p></e>
     <e><p><l>romána<s n="n"/></l><r>romaane<s n="n"/></r></p></e>
     <e><p><l>analysa<s n="n"/></l><r>joekehtimmie<s n="n"/></r></p></e>
     <e><p><l>nákkosgirji<s n="n"/></l><r>dåakteretjaalege<s n="n"/></r></p></e>
@@ -4556,8 +4562,8 @@
     <e><p><l>lullin<s n="adv"/></l><r>åarjene<s n="adv"/></r></p></e>
     <e><p><l>láhkai<s n="adv"/></l><r>nemhtie<s n="adv"/></r></p></e>
     <e><p><l>maid<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
-    <e><p><l>maiddá<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
-    <e><p><l>maiddái<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
+    <e r="LR"><p><l>maiddá<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
+    <e r="LR"><p><l>maiddái<s n="adv"/></l><r>aaj<s n="adv"/></r></p></e>
     <e><p><l>maiddái<s n="adv"/></l><r>dovne<s n="adv"/></r></p></e>
     <e><p><l>man<s n="adv"/></l><r>mij<s n="prn"/><s n="ind"/><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l>man<s n="adv"/><s n="subqst"/></l><r>mij<s n="prn"/><s n="ind"/><s n="sg"/><s n="gen"/></r></p></e>
