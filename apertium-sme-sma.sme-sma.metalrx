@@ -1727,6 +1727,22 @@
    </match>
  </rule>     
 
+    <rule weight="1.0">
+   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.@+FAUXV">
+     <select lemma="ij" tags="vblex.iv.neg.indic.*"/>
+   </match>
+ </rule>     
+    <rule weight="0.5">
+   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
+     <select lemma="ij" tags="vblex.iv.neg-goh.indic.*"/>
+   </match>
+ </rule>     
+    <rule weight="0.6">
+   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
+     <select lemma="ij" tags="vblex.iv.neg-goh.indic.*"/>
+   </match>
+ </rule>     
+
 
        <rule weight="0.5">
    <match lemma="buorre">
@@ -2091,9 +2107,9 @@
    <match />
    <match tags="vblex.*.indic.pret.conneg.*"/>
  </rule>     
-       <rule weight="0.5">
+<!--       <rule weight="0.5">
    <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
- </rule>     
+ </rule>      
        <rule weight="0.6">
    <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
    <or>
@@ -2186,7 +2202,7 @@
          <match tags="n.*"/>
    </or>
          <match tags="sent"/>
- </rule>     
+ </rule>    -->  
 
 
 

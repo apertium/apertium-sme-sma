@@ -1602,6 +1602,7 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_neg">
        <attr-item tags="neg"/>
+       <attr-item tags="neg-goh"/>
     </def-attr>
 
     <def-attr n="a_indecl">
@@ -2417,76 +2418,76 @@ And then there are some categories like "month", with all the months.
       <list-item v="@ADVL-ine→"/>
     </def-list>
     <def-list n="sem_time">
-      <list-item v="sem_act_time"/>
-      <list-item v="sem_ani_hum_time"/>
-      <list-item v="sem_ani_time"/>
-      <list-item v="sem_body_group_hum_time"/>
-      <list-item v="sem_body_time"/>
-      <list-item v="sem_event_time"/>
-      <list-item v="sem_food_time"/>
-      <list-item v="sem_furn_time"/>
-      <list-item v="sem_group_hum_time"/>
-      <list-item v="sem_hum_lang_time"/>
-      <list-item v="sem_measr_obj_time"/>
-      <list-item v="sem_measr_plc_time"/>
-      <list-item v="sem_measr_time"/>
-      <list-item v="sem_plant_time_wthr"/>
-      <list-item v="sem_plc_time"/>
-      <list-item v="sem_plc_time_wthr"/>
-      <list-item v="sem_time"/>
-      <list-item v="sem_time-clock"/>
-      <list-item v="sem_time_wthr"/>
+      <list-item v="&lt;sem_act_time&gt;"/>
+      <list-item v="&lt;sem_ani_hum_time&gt;"/>
+      <list-item v="&lt;sem_ani_time&gt;"/>
+      <list-item v="&lt;sem_body_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_body_time&gt;"/>
+      <list-item v="&lt;sem_event_time&gt;"/>
+      <list-item v="&lt;sem_food_time&gt;"/>
+      <list-item v="&lt;sem_furn_time&gt;"/>
+      <list-item v="&lt;sem_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_hum_lang_time&gt;"/>
+      <list-item v="&lt;sem_measr_obj_time&gt;"/>
+      <list-item v="&lt;sem_measr_plc_time&gt;"/>
+      <list-item v="&lt;sem_measr_time&gt;"/>
+      <list-item v="&lt;sem_plant_time_wthr&gt;"/>
+      <list-item v="&lt;sem_plc_time&gt;"/>
+      <list-item v="&lt;sem_plc_time_wthr&gt;"/>
+      <list-item v="&lt;sem_time&gt;"/>
+      <list-item v="&lt;sem_time-clock&gt;"/>
+      <list-item v="&lt;sem_time_wthr&gt;"/>
     </def-list>
     <def-list n="sem_hum">
-      <list-item v="sem_act_hum_obj"/>
-      <list-item v="sem_ani_body-abstr_hum"/>
-      <list-item v="sem_ani_build_hum_txt"/>
-      <list-item v="sem_ani_feat_hum"/>
-      <list-item v="sem_ani_group_hum"/>
-      <list-item v="sem_ani_hum"/>
-      <list-item v="sem_ani_hum_plc"/>
-      <list-item v="sem_ani_hum_time"/>
-      <list-item v="sem_aniprod_hum"/>
-      <list-item v="sem_body_group_hum"/>
-      <list-item v="sem_body_group_hum_time"/>
-      <list-item v="sem_body_hum"/>
-      <list-item v="sem_cat_group_hum"/>
-      <list-item v="sem_cat_group_hum_plc"/>
-      <list-item v="sem_clth_hum"/>
-      <list-item v="sem_domain_hum"/>
-      <list-item v="sem_edu_group_hum"/>
-      <list-item v="sem_edu_hum"/>
-      <list-item v="sem_event_hum"/>
-      <list-item v="sem_feat-phys_hum"/>
-      <list-item v="sem_feat-psych_hum"/>
-      <list-item v="sem_feat_hum"/>
-      <list-item v="sem_fruit_hum"/>
-      <list-item v="sem_geom_hum_plc"/>
-      <list-item v="sem_group_hum"/>
-      <list-item v="sem_group_hum_org"/>
-      <list-item v="sem_group_hum_plc"/>
-      <list-item v="sem_group_hum_plc-abstr"/>
-      <list-item v="sem_group_hum_prod-vis"/>
-      <list-item v="sem_group_hum_time"/>
-      <list-item v="sem_hum"/>
-      <list-item v="sem_hum-abstr"/>
-      <list-item v="sem_hum-prof"/>
-      <list-item v="sem_hum_lang"/>
-      <list-item v="sem_hum_lang_plc"/>
-      <list-item v="sem_hum_lang_time"/>
-      <list-item v="sem_hum_mat_tool"/>
-      <list-item v="sem_hum_obj"/>
-      <list-item v="sem_hum_obj_plc"/>
-      <list-item v="sem_hum_org"/>
-      <list-item v="sem_hum_part"/>
-      <list-item v="sem_hum_plant"/>
-      <list-item v="sem_hum_plc"/>
-      <list-item v="sem_hum_sign"/>
-      <list-item v="sem_hum_tool"/>
-      <list-item v="sem_hum_tool-catch"/>
-      <list-item v="sem_hum_tool-it"/>
-      <list-item v="sem_hum_veh"/>
-      <list-item v="sem_hum_wthr"/>
+      <list-item v="&lt;sem_act_hum_obj&gt;"/>
+      <list-item v="&lt;sem_ani_body-abstr_hum&gt;"/>
+      <list-item v="&lt;sem_ani_build_hum_txt&gt;"/>
+      <list-item v="&lt;sem_ani_feat_hum&gt;"/>
+      <list-item v="&lt;sem_ani_group_hum&gt;"/>
+      <list-item v="&lt;sem_ani_hum&gt;"/>
+      <list-item v="&lt;sem_ani_hum_plc&gt;"/>
+      <list-item v="&lt;sem_ani_hum_time&gt;"/>
+      <list-item v="&lt;sem_aniprod_hum&gt;"/>
+      <list-item v="&lt;sem_body_group_hum&gt;"/>
+      <list-item v="&lt;sem_body_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_body_hum&gt;"/>
+      <list-item v="&lt;sem_cat_group_hum&gt;"/>
+      <list-item v="&lt;sem_cat_group_hum_plc&gt;"/>
+      <list-item v="&lt;sem_clth_hum&gt;"/>
+      <list-item v="&lt;sem_domain_hum&gt;"/>
+      <list-item v="&lt;sem_edu_group_hum&gt;"/>
+      <list-item v="&lt;sem_edu_hum&gt;"/>
+      <list-item v="&lt;sem_event_hum&gt;"/>
+      <list-item v="&lt;sem_feat-phys_hum&gt;"/>
+      <list-item v="&lt;sem_feat-psych_hum&gt;"/>
+      <list-item v="&lt;sem_feat_hum&gt;"/>
+      <list-item v="&lt;sem_fruit_hum&gt;"/>
+      <list-item v="&lt;sem_geom_hum_plc&gt;"/>
+      <list-item v="&lt;sem_group_hum&gt;"/>
+      <list-item v="&lt;sem_group_hum_org&gt;"/>
+      <list-item v="&lt;sem_group_hum_plc&gt;"/>
+      <list-item v="&lt;sem_group_hum_plc-abstr&gt;"/>
+      <list-item v="&lt;sem_group_hum_prod-vis&gt;"/>
+      <list-item v="&lt;sem_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_hum&gt;"/>
+      <list-item v="&lt;sem_hum-abstr&gt;"/>
+      <list-item v="&lt;sem_hum-prof&gt;"/>
+      <list-item v="&lt;sem_hum_lang&gt;"/>
+      <list-item v="&lt;sem_hum_lang_plc&gt;"/>
+      <list-item v="&lt;sem_hum_lang_time&gt;"/>
+      <list-item v="&lt;sem_hum_mat_tool&gt;"/>
+      <list-item v="&lt;sem_hum_obj&gt;"/>
+      <list-item v="&lt;sem_hum_obj_plc&gt;"/>
+      <list-item v="&lt;sem_hum_org&gt;"/>
+      <list-item v="&lt;sem_hum_part&gt;"/>
+      <list-item v="&lt;sem_hum_plant&gt;"/>
+      <list-item v="&lt;sem_hum_plc&gt;"/>
+      <list-item v="&lt;sem_hum_sign&gt;"/>
+      <list-item v="&lt;sem_hum_tool&gt;"/>
+      <list-item v="&lt;sem_hum_tool-catch&gt;"/>
+      <list-item v="&lt;sem_hum_tool-it&gt;"/>
+      <list-item v="&lt;sem_hum_veh&gt;"/>
+      <list-item v="&lt;sem_hum_wthr&gt;"/>
     </def-list>
 
     <def-list n="child">
@@ -6938,8 +6939,7 @@ And then there are some categories like "month", with all the months.
 	      </test>
 	      <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adv"/></let>
 	    <choose><when c="mah or gieh"><test>
-<!--	   <in><clip pos="3" side="sl" part="a_sem"/><list n="sem_hum"/></in></test> -->  
-	   <equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_hum"/></equal></test> 
+	   <in><clip pos="3" side="sl" part="a_sem"/><list n="sem_hum"/></in></test>  
 	  <let><var n="tmp_lemma"/><lit v="gie"/></let>
 	  </when>
 	  <otherwise>
@@ -7211,6 +7211,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
          <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+         <let><clip pos="1" side="tl" part="lem"/><lit v="aelkedh"/></let>
        <out>
           <chunk name="vblex" case="caseFirstword">
              <tags>
@@ -8541,7 +8542,7 @@ And then there are some categories like "month", with all the months.
         </when>
         <when c="borgemánu loahpas : mïetsken minngiegietjien">
         <test><or><and>
-        <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_hum"/></equal>
+	   <in><clip pos="2" side="sl" part="a_sem"/><list n="sem_hum"/></in>  
         <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
         </and>
 	    <and>
@@ -9743,6 +9744,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="conneg"/>
       </pattern>
       <action>
+		<let><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg"/></let>     
 	   <choose><when><test><or>
 		<equal><clip pos="2" side="sl" part="a_foc-ge"/><lit-tag v="foc_neg-ge"/></equal> 
 		<equal><clip pos="1" side="sl" part="a_foc-ge"/><lit-tag v="foc_neg-ge"/></equal> 
@@ -11774,6 +11776,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/> </call-macro>
+		<let><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg"/></let>     
         <out>
           <chunk name="ii" case="caseFirstword">
             <tags>
