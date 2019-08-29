@@ -166,7 +166,46 @@
     <e><p><l><s n="attr"/></l>      <r><s n="sg"/><s n="gen"/></r></p></e>
     <e><p><l></l>      <r><s n="sg"/><s n="gen"/></r></p></e>
     </pardef>
+ 
+    <pardef n="okta_ovcci" c="includes no empty transition">
+      <e><p><l>okta<s n="num"/></l><r>akte<s n="num"/></r></p></e>
+      <e><p><l>guokte<s n="num"/></l><r>göökte<s n="num"/></r></p></e>
+      <e><p><l>golbma<s n="num"/></l><r>golme<s n="num"/></r></p></e>
+      <e><p><l>njeallje<s n="num"/></l><r>njieljie<s n="num"/></r></p></e>
+      <e><p><l>vihtta<s n="num"/></l><r>vïjhte<s n="num"/></r></p></e>
+      <e><p><l>guhtta<s n="num"/></l><r>govhte<s n="num"/></r></p></e>
+      <e><p><l>čieža<s n="num"/></l><r>tjïjhtje<s n="num"/></r></p></e>
+      <e><p><l>gávcci<s n="num"/></l><r>gaektsie<s n="num"/></r></p></e>
+      <e><p><l>ovcci<s n="num"/></l><r>uktsie<s n="num"/></r></p></e>
+    </pardef>
+    <pardef n="0_logi" c="includes empty transition">
+      <e><p><l><s n="num"/></l><r><s n="num"/></r></p></e>  <!-- 102  -->
+      <e><p><l>logi</l><r>luhkie</r></p><par n="okta_ovcci"/></e> <!-- 129  -->
+      <e><p><l>logi<s n="num"/></l><r>luhkie<s n="num"/></r></p></e> <!-- 120  -->
+    </pardef>
+    <pardef n="0_guokte-ovccilogi" c="includes empty transition">
+      <e><p><l><s n="num"/></l><r><s n="num"/></r></p></e>  <!-- 100 -->
+      <e><p><l>okta<s n="num"/></l><r>akta<s n="num"/></r></p></e> <!-- 101 -->
+      <e><p><l>guokte</l><r>göökte</r></p><par n="0_logi"/></e> <!-- 12N -->
+      <e><p><l>golbma</l><r>golme</r></p><par n="0_logi"/></e> <!-- 13N -->
+      <e><p><l>njeallje</l><r>njieljie</r></p><par n="0_logi"/></e> <!-- 14N -->
+      <e><p><l>vihtta</l><r>vïjhte</r></p><par n="0_logi"/></e> <!-- 15N -->
+      <e><p><l>guhtta</l><r>govhte</r></p><par n="0_logi"/></e> <!-- 16N -->
+      <e><p><l>čieža</l><r>gietjav</r></p><par n="0_logi"/></e> <!-- 170 -->
+      <e><p><l>gávcci</l><r>gaektsie</r></p><par n="0_logi"/></e> <!-- 18N -->
+      <e><p><l>ovcci</l><r>uktsie</r></p><par n="0_logi"/></e> <!-- 19N -->
+    </pardef>
+    <pardef n="0_logi_čuođi" c="includes an empty transition">
+      <e><p><l><s n="num"/></l><r><s n="num"/></r></p></e>  <!-- 2  -->
+      <e><p><l>čuođi<s n="num"/></l><r>tjuetie<s n="num"/></r></p></e> <!-- 200  -->
+      <e><p><l>logi<s n="num"/></l><r>luhkie<s n="num"/></r></p></e> <!-- 20  -->
+      <e><p><l>čuođi</l><r>tjuetie</r></p><par n="okta_ovcci"/></e> <!-- 209  -->
+      <e><p><l>logi</l><r>luhkie</r></p><par n="okta_ovcci"/></e> <!-- 29  -->
+      <e><p><l>lot</l><r>luhkie</r></p></e>  <!-- 20 attr  -->
+    </pardef>
   </pardefs>
+
+ 
   <section id="main" type="standard">
 
 <!--  for some common words -->
@@ -456,67 +495,30 @@
     <e><re>[A-Z]+([., \-–]+[0-9]+)*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
     <e><re>[IVXLMC]+</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 
-    <e><p><l>golbma-njeallje<s n="num"/></l><r>golme-njieljie<s n="num"/></r></p></e>
-    <e><p><l>golbma<s n="num"/></l><r>golme<s n="num"/></r></p></e>
-    <e><p><l>golbmalogi<s n="num"/></l><r>golmeluhkie<s n="num"/></r></p></e>
-    <e><p><l>golbmanuppelohkái<s n="num"/></l><r>luhkiegolme<s n="num"/></r></p></e>
-    <e><p><l>golbmačuođi<s n="num"/></l><r>golmetjuetie<s n="num"/></r></p></e>
-    <e><p><l>guhtta<s n="num"/></l><r>govhte<s n="num"/></r></p></e>
-    <e><p><l>guhttalogi<s n="num"/></l><r>govhteluhkie<s n="num"/></r></p></e>
-    <e><p><l>guhttanuppelohkái<s n="num"/></l><r>luhkiegovhte<s n="num"/></r></p></e>
-    <e><p><l>guokte<s n="num"/></l><r>göökte<s n="num"/></r></p></e>
-    <e><p><l>guoktelogi<s n="num"/></l><r>göökteluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktelogigolbma<s n="num"/></l><r>göökteluhkiegolme<s n="num"/></r></p></e>
-    <e><p><l>guoktelogiguhtta<s n="num"/></l><r>göökteluhkiegovhte<s n="num"/></r></p></e>
-    <e><p><l>guoktelogiguokte<s n="num"/></l><r>göökteluhkiegöökte<s n="num"/></r></p></e>
-    <e><p><l>guoktelogigávcci<s n="num"/></l><r>göökteluhkiegaektsie<s n="num"/></r></p></e>
-    <e><p><l>guokteloginjeallje<s n="num"/></l><r>göökteluhkienjieljie<s n="num"/></r></p></e>
-    <e><p><l>guoktelogiokta<s n="num"/></l><r>göökteluhkieakte<s n="num"/></r></p></e>
-    <e><p><l>guoktelogiovcci<s n="num"/></l><r>göökteluhkieuktsie<s n="num"/></r></p></e>
-    <e><p><l>guoktelogivihtta<s n="num"/></l><r>göökteluhkievïjhte<s n="num"/></r></p></e>
-    <e><p><l>guoktelogičieža<s n="num"/></l><r>göökteluhkietjïjhtje<s n="num"/></r></p></e>
-    <e><p><l>guoktenuppelohkái<s n="num"/></l><r>luhkiegöökte<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođi<s n="num"/></l><r>gööktetjuetie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođigolbmalogi<s n="num"/></l><r>gööktetjuetiegolmeluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođiguhttalogi<s n="num"/></l><r>gööktetjuetiegovhteluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođiguoktelogi<s n="num"/></l><r>gööktetjuetiegöökteluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođigávccilogi<s n="num"/></l><r>gööktetjuetiegaektsieluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođilogi<s n="num"/></l><r>gööktetjuetieluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođinjealljelogi<s n="num"/></l><r>gööktetjuetienjieljieluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođiovccilogi<s n="num"/></l><r>gööktetjuetieuktsieluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođivihttalogi<s n="num"/></l><r>gööktetjuetievïjhteluhkie<s n="num"/></r></p></e>
-    <e><p><l>guoktečuođičiežalogi<s n="num"/></l><r>gööktetjuetietjïjhtjeluhkie<s n="num"/></r></p></e>
-    <e><p><l>gávcci<s n="num"/></l><r>gaektsie<s n="num"/></r></p></e>
-    <e><p><l>gávccilogi<s n="num"/></l><r>gaektsieluhkie<s n="num"/></r></p></e>
-    <e><p><l>gávccinuppelohkái<s n="num"/></l><r>luhkiegaektsie<s n="num"/></r></p></e>
+    <e><p><l>okta</l><r>akte</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>guokte</l><r>göökte</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>golbma</l><r>golme</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>njeallje</l><r>njieljie</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>vihtta</l><r>vïjhte</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>guhtta</l><r>govhte</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>čieža</l><r>tjïjhtje</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>gávcci</l><r>gaektsie</r></p><par n="0_logi_čuođi"/></e>
+    <e><p><l>ovcci</l><r>uktsie</r></p><par n="0_logi_čuođi"/></e>
     <e><p><l>logi<s n="num"/></l><r>luhkie<s n="num"/></r></p></e>
-    <e><p><l>máŋga<s n="num"/></l><r>gellie<s n="num"/></r></p></e>
     <e r="RL"><p><l>njeallje<s n="num"/></l><r>njielje<s n="num"/></r></p></e>
-    <e><p><l>njeallje<s n="num"/></l><r>njieljie<s n="num"/></r></p></e>
-    <e><p><l>njealljelogi<s n="num"/></l><r>njieljieluhkie<s n="num"/></r></p></e>
-    <e><p><l>njealljenuppelohkái<s n="num"/></l><r>luhkienjieljie<s n="num"/></r></p></e>
-    <e><p><l>okta<s n="num"/></l><r>akte<s n="num"/></r></p></e>
+    <e><p><l>čuohti</l><r>tjuetie</r></p><par n="0_guokte-ovccilogi"/></e>
     <e><p><l>oktanuppelohkái<s n="num"/></l><r>luhkieakte<s n="num"/></r></p></e>
-    <e><p><l>ovcci<s n="num"/></l><r>uktsie<s n="num"/></r></p></e>
-    <e><p><l>ovccilogi<s n="num"/></l><r>uktsieluhkie<s n="num"/></r></p></e>
-    <e><p><l>ovccinuppelohkái<s n="num"/></l><r>luhkieuktsie<s n="num"/></r></p></e>
-    <e><p><l>vihtta<s n="num"/></l><r>vïjhte<s n="num"/></r></p></e>
-    <e><p><l>vihttalogi<s n="num"/></l><r>vïjhteluhkie<s n="num"/></r></p></e>
+    <e><p><l>guoktenuppelohkái<s n="num"/></l><r>luhkiegöökte<s n="num"/></r></p></e>
+    <e><p><l>golbmanuppelohkái<s n="num"/></l><r>luhkiegolme<s n="num"/></r></p></e>
+    <e><p><l>njealljenuppelohkái<s n="num"/></l><r>luhkienjieljie<s n="num"/></r></p></e>
     <e><p><l>vihttanuppelohkái<s n="num"/></l><r>luhkievïjhte<s n="num"/></r></p></e>
-    <e><p><l>čieža<s n="num"/></l><r>tjïjhtje<s n="num"/></r></p></e>
-    <e><p><l>čiežalogi<s n="num"/></l><r>tjïjhtjeluhkie<s n="num"/></r></p></e>
+    <e><p><l>guhttanuppelohkái<s n="num"/></l><r>luhkiegovhte<s n="num"/></r></p></e>
+    <e><p><l>gávccinuppelohkái<s n="num"/></l><r>luhkiegaektsie<s n="num"/></r></p></e>
     <e><p><l>čiežanuppelohkái<s n="num"/></l><r>luhkietjïjhtje<s n="num"/></r></p></e>
-    <e><p><l>čuohti<s n="num"/></l><r>tjuetie<s n="num"/></r></p></e>
+    <e><p><l>ovccinuppelohkái<s n="num"/></l><r>luhkieuktsie<s n="num"/></r></p></e>
     <e><p><l>čuođi<s n="num"/></l><r>tjuetie<s n="num"/></r></p></e>
-    <e><p><l>čuođigolbmalogi<s n="num"/></l><r>tjuetiegolmeluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođiguhttalogi<s n="num"/></l><r>tjuetiegovhteluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođiguoktelogi<s n="num"/></l><r>tjuetiegöökteluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođigávccilogi<s n="num"/></l><r>tjuetiegaektsieluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođilogi<s n="num"/></l><r>tjuetieluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođinjealljelogi<s n="num"/></l><r>tjuetienjieljieluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođiovccilogi<s n="num"/></l><r>tjuetieuktsieluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođivihttalogi<s n="num"/></l><r>tjuetievïjhteluhkie<s n="num"/></r></p></e>
-    <e><p><l>čuođičiežalogi<s n="num"/></l><r>tjuetietjïjhtjeluhkie<s n="num"/></r></p></e>
+    <e><p><l>máŋga<s n="num"/></l><r>gellie<s n="num"/></r></p></e>
+    <e><p><l>golbma-njeallje<s n="num"/></l><r>golme-njieljie<s n="num"/></r></p></e>
 
 
     <!-- SECTION: Nouns -->
