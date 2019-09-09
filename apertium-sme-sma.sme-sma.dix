@@ -164,7 +164,7 @@
     </pardef>
     <pardef n="adj__gen" c="asf">
     <e><p><l><s n="attr"/></l>      <r><s n="sg"/><s n="gen"/></r></p></e>
-    <e><p><l></l>      <r><s n="sg"/><s n="gen"/></r></p></e>
+    <e><p><l><s n="sg"/><s n="gen"/></l>      <r><s n="sg"/><s n="gen"/></r></p></e>
     </pardef>
  
     <pardef n="duhat_milj" c="includes empty transition">
@@ -3987,8 +3987,8 @@
     <e><p><l>eambbo<s n="adv"/><s n="comp"/></l><r>vielie<s n="adv"/></r></p></e>
     <e><p><l>eambbo<s n="adv"/></l><r>jienebh<s n="adv"/></r></p></e>
     <e><p><l>eambbogat<s n="prn"/><s n="ind"/></l><r>jïjnje<s n="adj"/><s n="comp"/></r></p></e>
-    <e><p><l>eanas<s n="prn"/><s n="ind"/></l><r>jeenje<s n="adj"/><s n="sup"/><s n="attr"/></r></p></e>
-    <e><p><l>eanaš<s n="prn"/><s n="ind"/></l><r>jeenje<s n="adj"/><s n="sup"/><s n="attr"/></r></p></e>
+    <e><p><l>eanas<s n="prn"/><s n="ind"/><s n="sg"/><s n="nom"/></l><r>jeenje<s n="adj"/><s n="sup"/><s n="attr"/></r></p></e>
+    <e><p><l>eanaš<s n="prn"/><s n="ind"/><s n="sg"/><s n="nom"/></l><r>jeenje<s n="adj"/><s n="sup"/><s n="attr"/></r></p></e>
     <e><p><l>eanemus<s n="adv"/></l><r>jeenjemes<s n="adv"/></r></p></e>
     <e><p><l>eanemusat<s n="adv"/></l><r>jeenjemes<s n="adv"/></r></p></e>
     <e><p><l>eanet<s n="adj"/></l><r>jeenje-jeenjebe<s n="adj"/></r></p></e>
@@ -42645,6 +42645,33 @@
     <e><p><l>Snödriva<s n="np"/></l><r>Snödriva<s n="np"/></r></p></e>
     <e><p><l>Snøgg<s n="np"/></l><r>Snøgg<s n="np"/></r></p></e>
     <e><p><l>Snøhetta<s n="np"/></l><r>Snøhetta<s n="np"/></r></p></e>
+   <e><p><l>Søndre<b/>Trondhjems<b/>Amts<b/>Lappeforening<s n="np"/></l><r>Søndre<b/>Trondhjems<b/>Amts<b/>Lappeforening<s n="np"/></r></p></e>
+   <e><p><l>Nordre<b/>Trondhjems<b/>Amts<b/>Lappeforening<s n="np"/></l><r>Nordre<b/>Trondhjems<b/>Amts<b/>Lappeforening<s n="np"/></r></p></e>
+    <e><p><l>Helgelandske<b/>Samiske<b/>Forening<s n="np"/></l><r>Helgelandske<b/>Samiske<b/>Forening<s n="np"/></r></p></e>
+    <e><p><l>Brurskankens<b/>Samiske<b/>Kvindeforening<s n="np"/></l><r>Brurskankens<b/>Samiske<b/>Kvindeforening<s n="np"/></r></p></e>
+    <e><p><l>Brurskankens<b/>Samiske<b/>Lag<s n="np"/></l><r>Brurskankens<b/>Samiske<b/>Lag<s n="np"/></r></p></e>
+    <e><p><l>Silbojohka<s n="np"/></l><r>Silbojohka<s n="np"/></r></p></e>
+    <e><p><l>Diaconus<s n="np"/></l><r>Diaconus<s n="np"/></r></p></e>
+    <e><p><l>Sarri<s n="np"/></l><r>Sarri<s n="np"/></r></p></e>
+    <e><p><l>Tuorpun<s n="np"/></l><r>Tuorpun<s n="np"/></r></p></e>
+    <e><p><l>Tacitus<s n="np"/></l><r>Tacitus<s n="np"/></r></p></e>
+    <e><p><l>Gutorm<s n="np"/></l><r>Gutorm<s n="np"/></r></p></e>
+    <e><p><l>Svose<s n="np"/></l><r>Svose<s n="np"/></r></p></e>
+    <e><p><l>Nášša<s n="np"/></l><r>Nášša<s n="np"/></r></p></e>
+    <e><p><l>Svosa<s n="np"/></l><r>Svosa<s n="np"/></r></p></e>
+    <e><p><l>Divtasvuodna<s n="np"/></l><r>Divtasvuodna<s n="np"/></r></p></e>
+    <e><p><l>Nášša<s n="np"/></l><r>Nášša<s n="np"/></r></p></e>
+    <e><p><l>Laagje<s n="np"/></l><r>Laagje<s n="np"/></r></p></e>
+    <e><p><l>Bihtán<s n="np"/></l><r>Pite<s n="np"/></r></p></e>
+    <e><p><l>Báhčeveadji<s n="np"/></l><r>Báhčeveadji<s n="np"/></r></p></e>
+    <e><p><l>Kollström<s n="np"/></l><r>Kollström<s n="np"/></r></p></e>
+    <e><p><l>Bergstøl<s n="np"/></l><r>Bergstøl<s n="np"/></r></p></e>
+    <e><p><l>Snøfrid<s n="np"/></l><r>Snøfrid<s n="np"/></r></p></e>
+    <e><p><l>Tore<b/>Hund<s n="np"/></l><r>Tore<b/>Hund<s n="np"/></r></p></e>
+    <e><p><l>Harald<b/>Hardråde<s n="np"/></l><r>Harald<b/>Hardråde<s n="np"/></r></p></e>
+    <e><p><l>Harald<b/>Hårfagre<s n="np"/></l><r>Harald<b/>Hårfagre<s n="np"/></r></p></e>
+    <e><p><l>Waren<b/>Sardne<s n="np"/></l><r>Waren<b/>Sardne<s n="np"/></r></p></e>
+    <e><p><l>Samefolkets<b/>Egen<b/>Tidning<s n="np"/></l><r>Samefolkets<b/>Egen<b/>Tidning<s n="np"/></r></p></e>
     <e><p><l>Snøhvit<s n="np"/></l><r>Snøhvit<s n="np"/></r></p></e>
     <e><p><l>Snøsen<s n="np"/></l><r>Snøsen<s n="np"/></r></p></e>
     <e><p><l>Soabbat<s n="np"/></l><r>Soabbat<s n="np"/></r></p></e>
