@@ -859,7 +859,10 @@
    </rule>
   <rule weight="0.6">
         <match lemma="lohkat" tags="vblex.tv.*"><select lemma="lohkedh" tags="vblex.*"/></match>
+        <or>
        <match tags="n.sem_lang.*"/> 
+       <match tags="n.sem_txt.*"/> 
+        </or>
    </rule> 
   <rule weight="1.0">
        <match lemma="lohkki" tags="n.*"><select lemma="lohkije" tags="n.*"/></match>
