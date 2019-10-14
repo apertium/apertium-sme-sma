@@ -11302,7 +11302,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-   <rule comment="C[_]-ADV adv" c="in boađe odne : im daenbiejjien båetieh">
+   <rule comment="C[_]-ADV adv" c="in boađe odne : im daenbiejjien båetieh sadf">
       <pattern>
         <pattern-item n="adv"/>
       </pattern>
@@ -11392,6 +11392,14 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
         </otherwise>
+        </choose>
+        <choose>
+	 	<when><test><or>
+		<equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVLqst-ela→"/></equal>
+		<equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVLqst-ine→"/></equal>
+		 </or></test>
+         <let><var n="subj_nbr"/><lit v=""/></let>
+		 </when>	
         </choose>
       </action>
     </rule>
