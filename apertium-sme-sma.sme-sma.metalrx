@@ -865,6 +865,12 @@
         </or>
    </rule> 
   <rule weight="1.0">
+       <match lemma="irgi" tags="n.*"><select lemma="provrese-ålma" tags="n.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="várrehus" tags="n.*"><select lemma="vaaroehtimmie" tags="n.*"/></match>
+  </rule>
+  <rule weight="1.0">
        <match lemma="lohkki" tags="n.*"><select lemma="lohkije" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
@@ -875,6 +881,9 @@
   </rule>
   <rule weight="1.0">
        <match lemma="máhttájeaddji" tags="n.*"><select lemma="learohke" tags="n.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="náittosdilli" tags="n.*"><select lemma="gaalletjevoete" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="máihli" tags="n.*"><select lemma="aaloe" tags="n.*"/></match>

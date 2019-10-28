@@ -860,6 +860,9 @@ And then there are some categories like "month", with all the months.
    <def-cat n="dii_adv">
       <cat-item lemma="dii" tags="adv.*"/>
     </def-cat>
+    <def-cat n="russiinávlet_vblex">
+      <cat-item lemma="russiinávlet" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="liikot_vblex">
       <cat-item lemma="liikot" tags="vblex.*"/>
     </def-cat>
@@ -4803,6 +4806,30 @@ And then there are some categories like "month", with all the months.
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
               <b pos="1"/>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[LT]-PRED russiinávlet_vblex " c="russiinávlet : kroessese noeredh"> 
+      <pattern>
+        <pattern-item n="russiinávlet_vblex"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+              <lu>
+                <lit v="kroesse"/>
+                <lit-tag v="n.sg.ill"/>
+              </lu>
+              <b />
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
@@ -10091,6 +10118,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
           <chunk name="cop-auxv" case="caseFirstword">
             <tags>
