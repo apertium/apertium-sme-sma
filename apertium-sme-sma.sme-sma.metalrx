@@ -886,6 +886,34 @@
        <match lemma="náittosdilli" tags="n.*"><select lemma="gaalletjevoete" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
+       <match lemma="addit" tags="vblex.*"><select lemma="vedtedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match lemma="ándagassii"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match/>
+       <match lemma="ándagassii"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match/>
+       <match/>
+       <match lemma="ándagassii"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match/>
+       <match/>
+       <match/>
+       <match lemma="ándagassii"/>
+  </rule>
+  <rule weight="1.0">
        <match lemma="máihli" tags="n.*"><select lemma="aaloe" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
