@@ -2,6 +2,11 @@
 
 <!--
 
+        <choose><when> 
+	<test><clip pos="1" side="sl" part="a_mood"/><lit-tag v="cond"/></test>    
+        <let><concat><clip pos="1" side="tl" part="lem"/><lit v="COND"/></concat></let>
+     </when></choose> 
+
 A = addition
 C = agreement / concordance
 D = deletion
@@ -860,6 +865,9 @@ And then there are some categories like "month", with all the months.
    <def-cat n="dii_adv">
       <cat-item lemma="dii" tags="adv.*"/>
     </def-cat>
+    <def-cat n="russiinávlet_vblex">
+      <cat-item lemma="russiinávlet" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="liikot_vblex">
       <cat-item lemma="liikot" tags="vblex.*"/>
     </def-cat>
@@ -1602,6 +1610,7 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_neg">
        <attr-item tags="neg"/>
+       <attr-item tags="neg-goh"/>
     </def-attr>
 
     <def-attr n="a_indecl">
@@ -1637,6 +1646,7 @@ And then there are some categories like "month", with all the months.
     </def-attr>
 
     <def-attr n="a_spec_sme_tags">
+      <attr-item tags="cmp_cit"/>
       <attr-item tags="subqst"/>
       <attr-item tags="←subqst→"/>
       <attr-item tags="south"/>
@@ -1654,6 +1664,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="err_orth-a-á"/>
        <attr-item tags="←logo→"/>
       <attr-item tags="←vdic→"/>
+      <attr-item tags="←ind→"/>
     </def-attr>
 
 
@@ -1804,67 +1815,105 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_sem">
       <attr-item tags="sem_act"/>
+      <attr-item tags="sem_act_clth"/>
+      <attr-item tags="sem_act_domain"/>
+      <attr-item tags="sem_act_event"/>
+      <attr-item tags="sem_act_feat-psych"/>
       <attr-item tags="sem_act_fruit"/>
       <attr-item tags="sem_act_group"/>
+      <attr-item tags="sem_act_hum_obj"/>
+      <attr-item tags="sem_act_obj-play"/>
       <attr-item tags="sem_act_plc"/>
       <attr-item tags="sem_act_route"/>
+      <attr-item tags="sem_act_semcon"/>
+      <attr-item tags="sem_act_time"/>
       <attr-item tags="sem_act_tool-it"/>
+      <attr-item tags="sem_act_txt"/>
+      <attr-item tags="sem_adr"/>
       <attr-item tags="sem_amount"/>
       <attr-item tags="sem_amount_build"/>
       <attr-item tags="sem_amount_semcon"/>
       <attr-item tags="sem_ani"/>
+      <attr-item tags="sem_ani-bird"/>
       <attr-item tags="sem_ani-fish"/>
+      <attr-item tags="sem_ani_body"/>
       <attr-item tags="sem_ani_body-abstr_hum"/>
       <attr-item tags="sem_ani_build"/>
-      <attr-item tags="sem_ani_build-part"/>
       <attr-item tags="sem_ani_build_hum_txt"/>
+      <attr-item tags="sem_ani_buildpart"/>
+      <attr-item tags="sem_ani_cat"/>
+      <attr-item tags="sem_ani_clth"/>
+      <attr-item tags="sem_ani_feat_hum"/>
       <attr-item tags="sem_ani_group"/>
       <attr-item tags="sem_ani_group_hum"/>
       <attr-item tags="sem_ani_group_prod-vis"/>
       <attr-item tags="sem_ani_hum"/>
       <attr-item tags="sem_ani_hum_plc"/>
       <attr-item tags="sem_ani_hum_time"/>
+      <attr-item tags="sem_ani_obj"/>
+      <attr-item tags="sem_ani_obj-el"/>
       <attr-item tags="sem_ani_plc"/>
       <attr-item tags="sem_ani_plc_txt"/>
       <attr-item tags="sem_ani_time"/>
+      <attr-item tags="sem_ani_tool"/>
       <attr-item tags="sem_ani_veh"/>
       <attr-item tags="sem_aniprod"/>
       <attr-item tags="sem_aniprod_hum"/>
+      <attr-item tags="sem_aniprod_mat"/>
+      <attr-item tags="sem_aniprod_obj"/>
       <attr-item tags="sem_aniprod_obj-clo"/>
       <attr-item tags="sem_aniprod_perc-phys"/>
+      <attr-item tags="sem_aniprod_plant"/>
+      <attr-item tags="sem_aniprod_plc"/>
       <attr-item tags="sem_aniprod_plc_route"/>
+      <attr-item tags="sem_aniprod_substnc_wthr"/>
+      <attr-item tags="sem_atr"/>
       <attr-item tags="sem_body"/>
       <attr-item tags="sem_body-abstr"/>
-      <attr-item tags="sem_body-abstr_feat-cogn"/>
+      <attr-item tags="sem_body-abstr_feat-psych"/>
       <attr-item tags="sem_body-abstr_prod-audio_semcon"/>
       <attr-item tags="sem_body_body-abstr"/>
+      <attr-item tags="sem_body_buildpart"/>
       <attr-item tags="sem_body_clth"/>
+      <attr-item tags="sem_body_clthpart"/>
       <attr-item tags="sem_body_food"/>
+      <attr-item tags="sem_body_fruit"/>
+      <attr-item tags="sem_body_group_hum"/>
       <attr-item tags="sem_body_group_hum_time"/>
       <attr-item tags="sem_body_hum"/>
       <attr-item tags="sem_body_mat"/>
       <attr-item tags="sem_body_measr"/>
       <attr-item tags="sem_body_obj_tool-catch"/>
+      <attr-item tags="sem_body_org"/>
       <attr-item tags="sem_body_plc"/>
       <attr-item tags="sem_body_plc-elevate"/>
       <attr-item tags="sem_body_time"/>
       <attr-item tags="sem_build"/>
-      <attr-item tags="sem_build-part"/>
-      <attr-item tags="sem_build-part_cat_ctain"/>
-      <attr-item tags="sem_build-part_cat_ctain_mat"/>
-      <attr-item tags="sem_build-part_ctain_mat"/>
-      <attr-item tags="sem_build-part_ctain_obj"/>
-      <attr-item tags="sem_build-part_plc"/>
-      <attr-item tags="sem_build_build-part"/>
-      <attr-item tags="sem_build_clth-part"/>
+      <attr-item tags="sem_build-room"/>
+      <attr-item tags="sem_build-room_cat_ctain_mat"/>
+      <attr-item tags="sem_build_buildpart"/>
+      <attr-item tags="sem_build_clthpart"/>
       <attr-item tags="sem_build_edu_org"/>
       <attr-item tags="sem_build_event_org"/>
       <attr-item tags="sem_build_obj"/>
       <attr-item tags="sem_build_org"/>
+      <attr-item tags="sem_build_plc"/>
       <attr-item tags="sem_build_route"/>
+      <attr-item tags="sem_build_tool"/>
+      <attr-item tags="sem_buildpart"/>
+      <attr-item tags="sem_buildpart_cat"/>
+      <attr-item tags="sem_buildpart_cat_ctain"/>
+      <attr-item tags="sem_buildpart_cat_ctain_mat"/>
+      <attr-item tags="sem_buildpart_ctain"/>
+      <attr-item tags="sem_buildpart_ctain_mat"/>
+      <attr-item tags="sem_buildpart_ctain_obj"/>
+      <attr-item tags="sem_buildpart_plc"/>
+      <attr-item tags="sem_buildpart_prod-audio"/>
       <attr-item tags="sem_cat"/>
+      <attr-item tags="sem_cat_edu"/>
       <attr-item tags="sem_cat_group_hum"/>
       <attr-item tags="sem_cat_group_hum_plc"/>
+      <attr-item tags="sem_cat_obj"/>
       <attr-item tags="sem_clth"/>
       <attr-item tags="sem_clth-jewl"/>
       <attr-item tags="sem_clth-jewl_curr"/>
@@ -1872,11 +1921,15 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_clth-jewl_curr_obj_org"/>
       <attr-item tags="sem_clth-jewl_fruit"/>
       <attr-item tags="sem_clth-jewl_money"/>
+      <attr-item tags="sem_clth-jewl_org"/>
       <attr-item tags="sem_clth-jewl_plant"/>
-      <attr-item tags="sem_clth-part"/>
       <attr-item tags="sem_clth_hum"/>
+      <attr-item tags="sem_clth_obj"/>
       <attr-item tags="sem_clth_obj-clo"/>
+      <attr-item tags="sem_clthpart"/>
+      <attr-item tags="sem_clthpart_plc"/>
       <attr-item tags="sem_ctain"/>
+      <attr-item tags="sem_ctain-obj"/>
       <attr-item tags="sem_ctain-abstr"/>
       <attr-item tags="sem_ctain-abstr_org"/>
       <attr-item tags="sem_ctain-clth"/>
@@ -1898,8 +1951,11 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_domain"/>
       <attr-item tags="sem_domain_food-med"/>
       <attr-item tags="sem_domain_hum"/>
+      <attr-item tags="sem_domain_ideol"/>
       <attr-item tags="sem_domain_money"/>
+      <attr-item tags="sem_domain_org_plc-abstr"/>
       <attr-item tags="sem_domain_prod-audio"/>
+      <attr-item tags="sem_domain_txt"/>
       <attr-item tags="sem_drink"/>
       <attr-item tags="sem_drink_plant"/>
       <attr-item tags="sem_dummytag"/>
@@ -1910,6 +1966,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_edu_hum"/>
       <attr-item tags="sem_edu_mat"/>
       <attr-item tags="sem_edu_org"/>
+      <attr-item tags="sem_edu_txt"/>
       <attr-item tags="sem_event"/>
       <attr-item tags="sem_event_food"/>
       <attr-item tags="sem_event_hum"/>
@@ -1920,12 +1977,15 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_feat-measr"/>
       <attr-item tags="sem_feat-measr_plc"/>
       <attr-item tags="sem_feat-phys"/>
+      <attr-item tags="sem_feat-phys_hum"/>
+      <attr-item tags="sem_feat-phys_obj"/>
       <attr-item tags="sem_feat-phys_tool-write"/>
       <attr-item tags="sem_feat-phys_veh"/>
       <attr-item tags="sem_feat-phys_wthr"/>
       <attr-item tags="sem_feat-psych"/>
       <attr-item tags="sem_feat-psych_hum"/>
       <attr-item tags="sem_feat-psych_plc"/>
+      <attr-item tags="sem_feat_hum"/>
       <attr-item tags="sem_feat_plant"/>
       <attr-item tags="sem_fem"/>
       <attr-item tags="sem_food"/>
@@ -1934,9 +1994,12 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_food_perc-phys"/>
       <attr-item tags="sem_food_plant"/>
       <attr-item tags="sem_food_sign"/>
+      <attr-item tags="sem_food_substnc"/>
+      <attr-item tags="sem_food_time"/>
       <attr-item tags="sem_fruit"/>
       <attr-item tags="sem_fruit_hum"/>
       <attr-item tags="sem_furn"/>
+      <attr-item tags="sem_furn_time"/>
       <attr-item tags="sem_game"/>
       <attr-item tags="sem_game_obj-play"/>
       <attr-item tags="sem_geom"/>
@@ -1945,44 +2008,60 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_group"/>
       <attr-item tags="sem_group_hum"/>
       <attr-item tags="sem_group_hum_org"/>
-      <attr-item tags="sem_group_hum_plc-abstr"/>
       <attr-item tags="sem_group_hum_plc"/>
+      <attr-item tags="sem_group_hum_plc-abstr"/>
       <attr-item tags="sem_group_hum_prod-vis"/>
       <attr-item tags="sem_group_hum_time"/>
       <attr-item tags="sem_group_org"/>
+      <attr-item tags="sem_group_prod-vis"/>
+      <attr-item tags="sem_group_prod-vis_txt_veh"/>
       <attr-item tags="sem_group_sign"/>
       <attr-item tags="sem_group_txt"/>
       <attr-item tags="sem_hum"/>
+      <attr-item tags="sem_hum-abstr"/>
+      <attr-item tags="sem_hum-prof"/>
       <attr-item tags="sem_hum_lang"/>
       <attr-item tags="sem_hum_lang_plc"/>
       <attr-item tags="sem_hum_lang_time"/>
       <attr-item tags="sem_hum_mat_tool"/>
       <attr-item tags="sem_hum_obj"/>
+      <attr-item tags="sem_hum_obj_plc"/>
       <attr-item tags="sem_hum_org"/>
+      <attr-item tags="sem_hum_part"/>
       <attr-item tags="sem_hum_plant"/>
       <attr-item tags="sem_hum_plc"/>
       <attr-item tags="sem_hum_sign"/>
+      <attr-item tags="sem_hum_tool"/>
+      <attr-item tags="sem_hum_tool-catch"/>
       <attr-item tags="sem_hum_tool-it"/>
       <attr-item tags="sem_hum_veh"/>
       <attr-item tags="sem_hum_wthr"/>
       <attr-item tags="sem_ideol"/>
       <attr-item tags="sem_lang"/>
       <attr-item tags="sem_lang_tool"/>
+      <attr-item tags="sem_lang_tool-catch"/>
       <attr-item tags="sem_mal"/>
       <attr-item tags="sem_mat"/>
+      <attr-item tags="sem_mat_obj"/>
       <attr-item tags="sem_mat_obj-clo"/>
       <attr-item tags="sem_mat_plant"/>
+      <attr-item tags="sem_mat_plc"/>
+      <attr-item tags="sem_mat_tool"/>
+      <attr-item tags="sem_mat_tool-catch"/>
       <attr-item tags="sem_mat_txt"/>
       <attr-item tags="sem_measr"/>
       <attr-item tags="sem_measr_obj_time"/>
+      <attr-item tags="sem_measr_plc_time"/>
       <attr-item tags="sem_measr_sign"/>
       <attr-item tags="sem_measr_time"/>
       <attr-item tags="sem_money"/>
       <attr-item tags="sem_money_obj"/>
       <attr-item tags="sem_money_org"/>
       <attr-item tags="sem_money_part"/>
+      <attr-item tags="sem_money_plc"/>
       <attr-item tags="sem_money_txt"/>
       <attr-item tags="sem_obj"/>
+      <attr-item tags="sem_obj-catch"/>
       <attr-item tags="sem_obj-clo"/>
       <attr-item tags="sem_obj-cogn"/>
       <attr-item tags="sem_obj-el"/>
@@ -1992,11 +2071,16 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_obj-play_sport"/>
       <attr-item tags="sem_obj-rope"/>
       <attr-item tags="sem_obj-surfc"/>
+      <attr-item tags="sem_obj_part_sign"/>
       <attr-item tags="sem_obj_semcon"/>
       <attr-item tags="sem_obj_sign"/>
       <attr-item tags="sem_obj_state"/>
+      <attr-item tags="sem_obj_symbol"/>
+      <attr-item tags="sem_obj_tool-write"/>
+      <attr-item tags="sem_obj_txt"/>
       <attr-item tags="sem_obj_veh"/>
       <attr-item tags="sem_org"/>
+      <attr-item tags="sem_org_plc"/>
       <attr-item tags="sem_org_prod-audio"/>
       <attr-item tags="sem_org_prod-cogn"/>
       <attr-item tags="sem_org_prod-vis"/>
@@ -2008,20 +2092,29 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_part_substnc"/>
       <attr-item tags="sem_perc-cogn"/>
       <attr-item tags="sem_perc-emo"/>
+      <attr-item tags="sem_perc-emo_plc"/>
       <attr-item tags="sem_perc-emo_wthr"/>
       <attr-item tags="sem_perc-phys"/>
+      <attr-item tags="sem_perc-psych"/>
+      <attr-item tags="sem_phonenr"/>
       <attr-item tags="sem_plant"/>
-      <attr-item tags="sem_plant-part"/>
-      <attr-item tags="sem_plant_plant-part"/>
+      <attr-item tags="sem_plant-fungus"/>
+      <attr-item tags="sem_plant_plantpart"/>
+      <attr-item tags="sem_plant_time_wthr"/>
       <attr-item tags="sem_plant_tool"/>
+      <attr-item tags="sem_plant_tool-measr"/>
+      <attr-item tags="sem_plantpart"/>
+      <attr-item tags="sem_play"/>
       <attr-item tags="sem_plc"/>
       <attr-item tags="sem_plc-abstr"/>
       <attr-item tags="sem_plc-abstr_rel_state"/>
       <attr-item tags="sem_plc-abstr_route"/>
+      <attr-item tags="sem_plc-abstr_txt"/>
       <attr-item tags="sem_plc-elevate"/>
       <attr-item tags="sem_plc-line"/>
       <attr-item tags="sem_plc-water"/>
       <attr-item tags="sem_plc_pos"/>
+      <attr-item tags="sem_plc_prod-audio"/>
       <attr-item tags="sem_plc_route"/>
       <attr-item tags="sem_plc_semcon"/>
       <attr-item tags="sem_plc_state"/>
@@ -2043,9 +2136,11 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_prod-vis"/>
       <attr-item tags="sem_rel"/>
       <attr-item tags="sem_route"/>
+      <attr-item tags="sem_route_txt"/>
       <attr-item tags="sem_rule"/>
       <attr-item tags="sem_semcon"/>
       <attr-item tags="sem_semcon_txt"/>
+      <attr-item tags="sem_semcon_wthr"/>
       <attr-item tags="sem_sign"/>
       <attr-item tags="sem_sport"/>
       <attr-item tags="sem_state"/>
@@ -2054,6 +2149,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_substnc"/>
       <attr-item tags="sem_substnc_wthr"/>
       <attr-item tags="sem_sur"/>
+      <attr-item tags="sem_symbol"/>
       <attr-item tags="sem_time"/>
       <attr-item tags="sem_time-clock"/>
       <attr-item tags="sem_time_wthr"/>
@@ -2332,53 +2428,76 @@ And then there are some categories like "month", with all the months.
       <list-item v="@ADVL-ine→"/>
     </def-list>
     <def-list n="sem_time">
-      <list-item v="sem_time"/>
-      <list-item v="sem_measr_time"/>
+      <list-item v="&lt;sem_act_time&gt;"/>
+      <list-item v="&lt;sem_ani_hum_time&gt;"/>
+      <list-item v="&lt;sem_ani_time&gt;"/>
+      <list-item v="&lt;sem_body_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_body_time&gt;"/>
+      <list-item v="&lt;sem_event_time&gt;"/>
+      <list-item v="&lt;sem_food_time&gt;"/>
+      <list-item v="&lt;sem_furn_time&gt;"/>
+      <list-item v="&lt;sem_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_hum_lang_time&gt;"/>
+      <list-item v="&lt;sem_measr_obj_time&gt;"/>
+      <list-item v="&lt;sem_measr_plc_time&gt;"/>
+      <list-item v="&lt;sem_measr_time&gt;"/>
+      <list-item v="&lt;sem_plant_time_wthr&gt;"/>
+      <list-item v="&lt;sem_plc_time&gt;"/>
+      <list-item v="&lt;sem_plc_time_wthr&gt;"/>
+      <list-item v="&lt;sem_time&gt;"/>
+      <list-item v="&lt;sem_time-clock&gt;"/>
+      <list-item v="&lt;sem_time_wthr&gt;"/>
     </def-list>
     <def-list n="sem_hum">
-      <list-item v="sem_ani_body-abstr_hum"/>
-      <list-item v="sem_ani_build_hum_txt"/>
-      <list-item v="sem_ani_group"/>
-      <list-item v="sem_ani_group_hum"/>
-      <list-item v="sem_ani_group_prod-vis"/>
-      <list-item v="sem_ani_hum"/>
-      <list-item v="sem_ani_hum_plc"/>
-      <list-item v="sem_ani_hum_time"/>
-      <list-item v="sem_aniprod_hum"/>
-      <list-item v="sem_body_group_hum_time"/>
-      <list-item v="sem_body_hum"/>
-      <list-item v="sem_cat_group_hum"/>
-      <list-item v="sem_cat_group_hum_plc"/>
-      <list-item v="sem_clth_hum"/>
-      <list-item v="sem_domain_hum"/>
-      <list-item v="sem_edu_group_hum"/>
-      <list-item v="sem_edu_hum"/>
-      <list-item v="sem_event_hum"/>
-      <list-item v="sem_fruit_hum"/>
-      <list-item v="sem_geom_hum_plc"/>
-      <list-item v="sem_group"/>
-      <list-item v="sem_group_hum"/>
-      <list-item v="sem_group_hum_org"/>
-      <list-item v="sem_group_hum_plc-abstr"/>
-      <list-item v="sem_group_hum_plc"/>
-      <list-item v="sem_group_hum_prod-vis"/>
-      <list-item v="sem_group_hum_time"/>
-      <list-item v="sem_group_org"/>
-      <list-item v="sem_group_sign"/>
-      <list-item v="sem_group_txt"/>
-      <list-item v="sem_hum"/>
-      <list-item v="sem_hum_lang"/>
-      <list-item v="sem_hum_lang_plc"/>
-      <list-item v="sem_hum_lang_time"/>
-      <list-item v="sem_hum_mat_tool"/>
-      <list-item v="sem_hum_obj"/>
-      <list-item v="sem_hum_org"/>
-      <list-item v="sem_hum_plant"/>
-      <list-item v="sem_hum_plc"/>
-      <list-item v="sem_hum_sign"/>
-      <list-item v="sem_hum_tool-it"/>
-      <list-item v="sem_hum_veh"/>
-      <list-item v="sem_hum_wthr"/>
+      <list-item v="&lt;sem_act_hum_obj&gt;"/>
+      <list-item v="&lt;sem_ani_body-abstr_hum&gt;"/>
+      <list-item v="&lt;sem_ani_build_hum_txt&gt;"/>
+      <list-item v="&lt;sem_ani_feat_hum&gt;"/>
+      <list-item v="&lt;sem_ani_group_hum&gt;"/>
+      <list-item v="&lt;sem_ani_hum&gt;"/>
+      <list-item v="&lt;sem_ani_hum_plc&gt;"/>
+      <list-item v="&lt;sem_ani_hum_time&gt;"/>
+      <list-item v="&lt;sem_aniprod_hum&gt;"/>
+      <list-item v="&lt;sem_body_group_hum&gt;"/>
+      <list-item v="&lt;sem_body_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_body_hum&gt;"/>
+      <list-item v="&lt;sem_cat_group_hum&gt;"/>
+      <list-item v="&lt;sem_cat_group_hum_plc&gt;"/>
+      <list-item v="&lt;sem_clth_hum&gt;"/>
+      <list-item v="&lt;sem_domain_hum&gt;"/>
+      <list-item v="&lt;sem_edu_group_hum&gt;"/>
+      <list-item v="&lt;sem_edu_hum&gt;"/>
+      <list-item v="&lt;sem_event_hum&gt;"/>
+      <list-item v="&lt;sem_feat-phys_hum&gt;"/>
+      <list-item v="&lt;sem_feat-psych_hum&gt;"/>
+      <list-item v="&lt;sem_feat_hum&gt;"/>
+      <list-item v="&lt;sem_fruit_hum&gt;"/>
+      <list-item v="&lt;sem_geom_hum_plc&gt;"/>
+      <list-item v="&lt;sem_group_hum&gt;"/>
+      <list-item v="&lt;sem_group_hum_org&gt;"/>
+      <list-item v="&lt;sem_group_hum_plc&gt;"/>
+      <list-item v="&lt;sem_group_hum_plc-abstr&gt;"/>
+      <list-item v="&lt;sem_group_hum_prod-vis&gt;"/>
+      <list-item v="&lt;sem_group_hum_time&gt;"/>
+      <list-item v="&lt;sem_hum&gt;"/>
+      <list-item v="&lt;sem_hum-abstr&gt;"/>
+      <list-item v="&lt;sem_hum-prof&gt;"/>
+      <list-item v="&lt;sem_hum_lang&gt;"/>
+      <list-item v="&lt;sem_hum_lang_plc&gt;"/>
+      <list-item v="&lt;sem_hum_lang_time&gt;"/>
+      <list-item v="&lt;sem_hum_mat_tool&gt;"/>
+      <list-item v="&lt;sem_hum_obj&gt;"/>
+      <list-item v="&lt;sem_hum_obj_plc&gt;"/>
+      <list-item v="&lt;sem_hum_org&gt;"/>
+      <list-item v="&lt;sem_hum_part&gt;"/>
+      <list-item v="&lt;sem_hum_plant&gt;"/>
+      <list-item v="&lt;sem_hum_plc&gt;"/>
+      <list-item v="&lt;sem_hum_sign&gt;"/>
+      <list-item v="&lt;sem_hum_tool&gt;"/>
+      <list-item v="&lt;sem_hum_tool-catch&gt;"/>
+      <list-item v="&lt;sem_hum_tool-it&gt;"/>
+      <list-item v="&lt;sem_hum_veh&gt;"/>
+      <list-item v="&lt;sem_hum_wthr&gt;"/>
     </def-list>
 
     <def-list n="child">
@@ -3535,17 +3654,18 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="a_nbr"/>
               <lit-tag v="nom"/></concat>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
-      </action>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+     </action>
     </rule> 
      <rule comment="C[LT]-NP buot_prn oktavuohta_n" c="buot oktavuođain : gaajhkene lehkesne"> 
       <pattern>
@@ -3564,13 +3684,14 @@ And then there are some categories like "month", with all the months.
               <lit v="gaajhke"/>
               <lit-tag v="prn.ind.sg.ine.attr"/>
             </lu>
-              <b pos="1"/>
+            <b/>
             <lu>
               <lit v="lehkie"/>
               <lit-tag v="n.sg.ine"/>
             </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
      <rule comment="C[LT]-PP dat_prn duohken_post" c="dan duohken : båata destie"> 
@@ -3590,13 +3711,14 @@ And then there are some categories like "month", with all the months.
               <lit v="båetedh"/>
               <lit-tag v="vblex.iv.indic.pres.p3.sg"/>
             </lu>
-              <b pos="1"/>
+            <b/>
             <lu>
               <lit v="dïhte"/>
               <lit-tag v="prn.dem.sg.ela"/>
             </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     
@@ -3620,10 +3742,7 @@ And then there are some categories like "month", with all the months.
             </lu>
          </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
-          <out><b pos="1"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
      </action>
     </rule>
     
@@ -3651,12 +3770,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -3753,16 +3873,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
     <rule comment="C[T]-NUM jahki_n semyear" c="jagis 2001 : jaepien 2001">
@@ -3789,12 +3911,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[T]-NUM jahki_n semyear" c="jagiin 1949 ja 1972 : jaepiej 1949 jïh 1972">
@@ -3818,20 +3941,23 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -3853,12 +3979,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -3882,6 +4009,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -3904,12 +4032,14 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-             <b pos="1"/>
+             <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -3934,16 +4064,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -3975,6 +4107,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[AT]-NUM semicolon_comma semyear" c="; 2001"> 
@@ -4028,16 +4161,17 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule> 
 
-    <rule comment="C[AT]-NUM prop_hyphcmp prop_cog semyear" c="Olsen-Ramussen 2001"> 
+    <rule comment="C[AT]-NUM prop_hyphcmp prop_cog semyear" c="Olsen-Rasmussen 2001"> 
       <pattern> 
         <pattern-item n="prop_hyphcmp"/>
         <pattern-item n="prop_pers"/>
@@ -4063,12 +4197,14 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="whole"/>
             </lu>
             </mlu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule> 
 
@@ -4135,20 +4271,23 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -4170,16 +4309,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
     <rule comment="C[D]-NUM juohke_prn okta_num word" c="Lea juohke ovtta ovddasvástádus seailluhit giela : Fïereguhten dïedte lea gïelem vaarjelidh">
@@ -4199,12 +4340,14 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
     <rule comment="C[CT]-NUM juohke_prn ord_card noun" c="Dát forum lea lágiduvvon juohke nuppi jagi : Daate forume öörnesovveme fïerhten mubpien jaepien jaepien">
@@ -4230,16 +4373,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
     <rule comment="C[_]-NUM dii_adv numeral_not_year" c="Doalut álget dii. 11.30 : Arrangemeente ts. 11.30 aalka">
@@ -4259,12 +4404,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[LT]-NUM numeral_not_year prosent" c="Stáhtabušeahta rámmat leat lassánan 5 % jahkásaččat : Staatebeetnehsoejkesjen mierieh 5 proseentigujmie fïerhten jaepien læssanamme">
@@ -4309,12 +4455,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
    <rule comment="C[LT]-NUM mod_num numeral_not_year prosent" c="Stáhtabušeahta rámmat leat lassánan sullii 5 % jahkásaččat : Staatebeetnehsoejkesjen mierieh medtie 5 proseentigujmie fïerhten jaepien læssanamme.">
@@ -4357,16 +4504,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -4406,10 +4555,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="2"/><lit v=" "/></equal></not></test>
-          <out><b pos="2"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
  <!--    <rule comment="C[T]-NP gen nomact_nom" c="gen nomact_nom to acc inf" c="Sámi giellaguovddážiid evalueren galgá čájehit">
@@ -4597,10 +4743,7 @@ And then there are some categories like "month", with all the months.
               </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
-          <out><b pos="1"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[DL]-V orrut_vblex adj" c="orrut imaš : ammeslaakan govli"> 
@@ -4619,12 +4762,13 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
                <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -4648,6 +4792,7 @@ And then there are some categories like "month", with all the months.
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[LT]-PRED láhcit_vblex dilli_n_acc" c="láhčit dili : sjïehteladtedh"> 
@@ -4669,6 +4814,7 @@ And then there are some categories like "month", with all the months.
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[LT]-PRED mannat_báhcit_vblex ealáhat_n_ill" c="bázii ealahahkii : voeresbaalhkam dåastoeji"> 
@@ -4691,7 +4837,32 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      </action>
+    </rule>
+    <rule comment="C[LT]-PRED russiinávlet_vblex " c="russiinávlet : kroessese noeredh"> 
+      <pattern>
+        <pattern-item n="russiinávlet_vblex"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+              <lu>
+                <lit v="kroesse"/>
+                <lit-tag v="n.sg.ill"/>
+              </lu>
+              <b/>
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
@@ -4721,21 +4892,22 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <lit v="guktie"/>
                 <lit-tag v="cnjsub"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -4760,21 +4932,23 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <lit v="guktie"/>
                 <lit-tag v="cnjsub"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -4800,12 +4974,13 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -4889,12 +5064,13 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[T]-NP mod_n nomact_ill" c="viesu huksemii : gåetiem tseegkedh"> 
@@ -4925,12 +5101,13 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -4980,12 +5157,13 @@ And then there are some categories like "month", with all the months.
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
             </mlu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -5031,7 +5209,7 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
              <mlu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
@@ -5041,7 +5219,7 @@ And then there are some categories like "month", with all the months.
               </lu>
             </mlu>
             </chunk>
-              <b pos="2"/>
+              <b/>
           <chunk name="inf" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
@@ -5052,6 +5230,9 @@ And then there are some categories like "month", with all the months.
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5083,16 +5264,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5123,11 +5306,11 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <mlu>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
@@ -5138,6 +5321,9 @@ And then there are some categories like "month", with all the months.
               </mlu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5168,20 +5354,23 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-              <b pos="3"/>
+              <b/>
               <lu>
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5249,12 +5438,12 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <lit v="dïhte"/>
                 <lit-tag v="prn.dem.pl.ela"/>
               </lu>
-              <b pos="2"/>
+              <b/>
              <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
@@ -5264,6 +5453,8 @@ And then there are some categories like "month", with all the months.
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5289,20 +5480,23 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
              <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-               <b pos="3"/>
+              <b/>
              <lu>
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5330,15 +5524,15 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
              <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-               <b pos="3"/>
+              <b/>
                <mlu>
                  <lu>
                     <clip pos="4" side="tl" part="whole"/>
@@ -5349,6 +5543,9 @@ And then there are some categories like "month", with all the months.
                 </mlu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5472,11 +5669,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <lit v="båeries"/>
               <lit-tag v="adj.sg.nom"/>
@@ -5508,7 +5705,7 @@ And then there are some categories like "month", with all the months.
     </rule>
 
 
-    <rule comment="C[S]-A nuemral n_cmp adj tmp_lemma"> 
+    <rule comment="C[S]-A numeral n_cmp adj tmp_lemma OBS"> 
       <pattern>
         <pattern-item n="numeral"/>
         <pattern-item n="n_cmp"/>
@@ -5536,26 +5733,27 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <lit v="båeries"/>
               <lit-tag v="adj.attr"/>
             </lu>
-             <b />
+             <b/>
             <lu>
               <var n="tmp_lemma"/>
               <lit-tag v="n.pl.nom"/>
             </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -5606,6 +5804,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -5629,6 +5828,8 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5651,12 +5852,13 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+        <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>
       </action>
     </rule>  
 
@@ -5682,16 +5884,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-               <b pos="2"/>
+               <b/>
              <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+        <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>
+        <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>
       </action>
     </rule>  
 
@@ -5728,12 +5932,13 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[T]-NUM mod_n prn_dem_sg num_sg_all noun" c="buot dan 9 gielddas : gaajhkine dejnie 9 tjïeltine">
@@ -5793,20 +5998,23 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-              <b pos="3"/>
+              <b/>
               <lu>
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5834,20 +6042,23 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-              <b pos="3"/>
+              <b/>
               <lu>
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -5974,16 +6185,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule> 
     <rule comment="C[T]-NUM numsg_acc_nom noun_nom_acc_gen" c="Mus lea okta guolli : Mov lea akte guelie. | Bussá borrá golbma guoli : Gaahtoe golme guelieh bårra"> 
@@ -5993,75 +6206,75 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>     
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
-     <choose><when>
-     <test><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal></test>
-         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-         </when>
+        <choose><when>
+          <test><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal></test>
+          <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        </when>
         <otherwise>
-         <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
+          <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
         </otherwise>
-     </choose> 
+        </choose> 
 
-     <choose>
-        <when c="M[T] acc to gen sem_time">
-          <test>
-            <and> 
-            <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_measr_time"/></equal>
-            <or>
-            <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
-            <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@→ADVL"/></equal>
-            </or>
+        <choose>
+          <when c="M[T] acc to gen sem_time">
+            <test>
+              <and> 
+                <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_measr_time"/></equal>
+                <or>
+                  <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
+                  <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@→ADVL"/></equal>
+                </or>
+              </and>
+            </test> 
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+          </when> 
+          <when c="noun from sg to pl">
+            <test><and>
+              <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
+              <not><equal><clip pos="1" side="sl" part="lem"/><lit v="Okta"/></equal></not>
+              <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal></not>
             </and>
-          </test> 
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
-          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
-        </when> 
-     <when c="noun from sg to pl">
-     <test><and>
-     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal></not>
-     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="Okta"/></equal></not>
-     <not><equal><clip pos="1" side="sl" part="lem"/><lit v="1"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal></not>
-     <not><equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal></not>
-     </and>
-     </test>
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-          <let><clip pos="2" side="tl" part="tags"/>
-          <concat>
-          <lit-tag v="n"/>
-          <clip pos="2" side="tl" part="a_n_type"/>
-          <lit-tag v="pl"/>
-          <clip pos="1" side="tl" part="a_case"/></concat></let>
-   </when>
-     <when c="abbr to nom">
-     <test>
-         <in caseless="yes"><clip pos="2" side="tl" part="lem"/><list n="abbr_no_case"/></in>     
-         </test>
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-   </when>
-   <when c="from num + noun loc to num + noun ela">
-          <test><and>
-          <or>
-          <equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal>
-          <equal><clip pos="1" side="sl" part="lem"/><lit v="Okta"/></equal>
-          <equal><clip pos="1" side="sl" part="a_subPoS"/><lit v="arab"/></equal>
-          </or>
-            <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
-           <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-          </and></test>
-          <let><clip pos="2" side="tl" part="tags"/>
-          <concat>
-          <lit-tag v="n"/>
-          <clip pos="2" side="tl" part="a_n_type"/>
-          <lit-tag v="pl.ela"/></concat></let>
+            </test>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+            <let><clip pos="2" side="tl" part="tags"/>
+            <concat>
+              <lit-tag v="n"/>
+              <clip pos="2" side="tl" part="a_n_type"/>
+              <lit-tag v="pl"/>
+            <clip pos="1" side="tl" part="a_case"/></concat></let>
           </when>
-          </choose>
-       <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
-       <out>
+          <when c="abbr to nom">
+            <test>
+              <in caseless="yes"><clip pos="2" side="tl" part="lem"/><list n="abbr_no_case"/></in>     
+            </test>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          </when>
+          <when c="from num + noun loc to num + noun ela">
+            <test><and>
+              <or>
+                <equal><clip pos="1" side="sl" part="lem"/><lit v="okta"/></equal>
+                <equal><clip pos="1" side="sl" part="lem"/><lit v="Okta"/></equal>
+                <equal><clip pos="1" side="sl" part="a_subPoS"/><lit v="arab"/></equal>
+              </or>
+              <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+              <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+            </and></test>
+            <let><clip pos="2" side="tl" part="tags"/>
+            <concat>
+              <lit-tag v="n"/>
+              <clip pos="2" side="tl" part="a_n_type"/>
+            <lit-tag v="pl.ela"/></concat></let>
+          </when>
+        </choose>
+        <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+        <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
@@ -6069,15 +6282,16 @@ And then there are some categories like "month", with all the months.
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
             </tags>
-              <lu>
-                <clip pos="1" side="tl" part="whole"/>
-              </lu>
-              <b pos="1"/>
-              <lu>
-                <clip pos="2" side="tl" part="whole"/>
-              </lu>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
           </chunk>
         </out>
+        <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>
       </action>
     </rule> 
 
@@ -6148,7 +6362,7 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
             <mlu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
@@ -6159,6 +6373,8 @@ And then there are some categories like "month", with all the months.
             </mlu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule> 
     
@@ -6216,16 +6432,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-               <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -6283,20 +6501,23 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-               <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-               <b pos="3"/>
+              <b/>
               <lu>
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -6411,16 +6632,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
     <rule comment="C[T]-NUM mod_n num_sg_all noun" c="buot 9 gielddas : gaajhkine 9 tjïeltine">
@@ -6495,16 +6718,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -6561,20 +6786,23 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-              <b pos="3"/>
+              <b/>
               <lu>
                 <clip pos="4" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -6598,12 +6826,13 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -6629,7 +6858,7 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
             <mlu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
@@ -6640,6 +6869,8 @@ And then there are some categories like "month", with all the months.
             </mlu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -6687,7 +6918,7 @@ And then there are some categories like "month", with all the months.
                 <lit v="gænnah"/>
                 <lit-tag v="pcle"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
@@ -6707,7 +6938,7 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
@@ -6715,6 +6946,7 @@ And then there are some categories like "month", with all the months.
         </out>
           </otherwise>
       </choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
     </action>
     </rule>
 
@@ -6766,7 +6998,7 @@ And then there are some categories like "month", with all the months.
                 <lit v="gænnah"/>
                 <lit-tag v="pcle"/>
               </lu>
-              <b pos="1"/>
+              <b/>
             <mlu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
@@ -6790,7 +7022,7 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
             <mlu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
@@ -6803,6 +7035,7 @@ And then there are some categories like "month", with all the months.
         </out>
           </otherwise>
       </choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[T]-NP prn_ind mod_n noun">
@@ -6830,8 +7063,7 @@ And then there are some categories like "month", with all the months.
 	      </test>
 	      <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adv"/></let>
 	    <choose><when c="mah or gieh"><test>
-<!--	   <in><clip pos="3" side="sl" part="a_sem"/><list n="sem_hum"/></in></test> -->  
-	   <equal><clip pos="3" side="sl" part="a_sem"/><lit-tag v="sem_hum"/></equal></test> 
+	   <in><clip pos="3" side="sl" part="a_sem"/><list n="sem_hum"/></in></test>  
 	  <let><var n="tmp_lemma"/><lit v="gie"/></let>
 	  </when>
 	  <otherwise>
@@ -6849,18 +7081,18 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <var n="tmp_lemma"/>
                 <lit-tag v="prn.rel"/>
                 <clip pos="3" side="tl" part="a_nbr"/>
                 <lit-tag v="nom"/>
               </lu>
-               <b />
+               <b/>
              <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
@@ -6879,17 +7111,19 @@ And then there are some categories like "month", with all the months.
               <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="2"/>
+              <b/>
               <lu>
                 <clip pos="3" side="tl" part="whole"/>
               </lu>
           </chunk>
         </out>
      </otherwise></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -6954,10 +7188,7 @@ And then there are some categories like "month", with all the months.
       </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
-          <out><b pos="1"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -6977,12 +7208,13 @@ And then there are some categories like "month", with all the months.
            <lu>
       <clip pos="2" side="tl" part="whole"/>            
       </lu>
-      <b pos="1"/>
+      <b/>
            <lu>
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -7002,12 +7234,13 @@ And then there are some categories like "month", with all the months.
            <lu>
       <clip pos="1" side="tl" part="whole"/>            
       </lu>
-      <b pos="1"/>
+      <b/>
            <lu>
         <clip pos="2" side="tl" part="whole"/>            
       </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -7054,13 +7287,15 @@ And then there are some categories like "month", with all the months.
               <lit v="dan"/>
               <lit-tag v="adv"/>
             </lu>
-              <b pos="1"/>
+              <b/>
             <lu>
               <lit v="jïjnje"/>
               <lit-tag v="adj.sg.acc"/>
             </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -7083,16 +7318,14 @@ And then there are some categories like "month", with all the months.
            <lu>
         <clip pos="3" side="tl" part="whole"/>            
       </lu>
-      <b pos="1"/>
+      <b/>
        <lu>
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="2"/><lit v=" "/></equal></not></test>
-          <out><b pos="2"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -7103,6 +7336,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
          <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+         <let><clip pos="1" side="tl" part="lem"/><lit v="aelkedh"/></let>
        <out>
           <chunk name="vblex" case="caseFirstword">
              <tags>
@@ -7112,13 +7346,14 @@ And then there are some categories like "month", with all the months.
            <lu>
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
-      <b pos="1"/>
+      <b/>
           <lu>
         <lit v="juhtedh"/>            
         <lit-tag v="vblex.iv.inf"/>            
       </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
     <rule comment="C[LW]-PRED geassit_vblex geassit_adv" c="geassit čoahkkái Loahpas mun geasán čoahkkái dán dutkamuša bohtosiid ja árvalusaid"> 
@@ -7137,12 +7372,13 @@ And then there are some categories like "month", with all the months.
            <lu>
         <clip pos="2" side="tl" part="whole"/>            
       </lu>
-      <b pos="1"/>
+      <b/>
           <lu>
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
    <rule comment="C[LT]-V noun-nom cnjcoo noun-nom oaivvildit_vblex ahte_cnjsub" c="rektor ja oahpaheaddji oaivvildeaba ahte : rektoren jïh lohkehtæjjan mïelen mietie"> 
@@ -7166,16 +7402,16 @@ And then there are some categories like "month", with all the months.
            <lu>
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
-            <b pos="1"/>
+            <b/>
            <lu>
         <clip pos="2" side="tl" part="whole"/>            
       </lu>
-            <b pos="2"/>
+            <b/>
            <lu>
         <clip pos="3" side="tl" part="whole"/>            
       </lu>
           </chunk>
-            <b pos="3"/>
+            <b pos="1"/>
           <chunk name="advl">
              <tags>
               <tag><lit-tag v="PP"/></tag>
@@ -7185,13 +7421,16 @@ And then there are some categories like "month", with all the months.
               <lit v="mïele"/>
               <lit-tag v="n.sg.gen"/>            
             </lu>
-            <b pos="4"/>
+            <b/>
             <lu>
               <lit v="mietie"/>
               <lit-tag v="post"/>            
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="4"/><lit v=" "/></equal></not></test><out><b pos="4"/></out></when></choose>     
       </action>
     </rule>
 
@@ -7214,7 +7453,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
           </chunk>
-            <b pos="1"/>
+            <b/>
           <chunk name="advl">
              <tags>
               <tag><lit-tag v="PP"/></tag>
@@ -7224,13 +7463,15 @@ And then there are some categories like "month", with all the months.
               <lit v="mïele"/>
               <lit-tag v="n.sg.gen"/>            
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <lit v="mietie"/>
               <lit-tag v="post"/>            
             </lu>
           </chunk>
         </out> 
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -7251,7 +7492,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="n.sg.acc"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="vedtedh"/>
               <lit-tag v="vblex"/>
@@ -7259,6 +7500,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_tense"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_infin"/>
             </lu>
           </chunk>
         </out>
@@ -7284,7 +7526,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adv"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="bïejedh"/>
               <lit-tag v="vblex"/>
@@ -7318,7 +7560,7 @@ And then there are some categories like "month", with all the months.
 				<lit-tag v="prn.ref.acc"/>               
 				<var n="px_nbrpers"/>
             </lu>
-           <b />
+           <b/>
            <lu>
         <clip pos="1" side="tl" part="lem"/>            
               <lit-tag v="vblex"/>
@@ -7352,7 +7594,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_case"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="tjoehpedh"/>
               <lit-tag v="vblex"/>
@@ -7386,7 +7628,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_case"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="båeltedh"/>
               <lit-tag v="vblex"/>
@@ -7420,7 +7662,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adv"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="årrodh"/>
               <lit-tag v="vblex"/>
@@ -7466,14 +7708,14 @@ And then there are some categories like "month", with all the months.
             <lu>
            <clip pos="1" side="tl" part="whole"/>            
             </lu>
-              <b />
+              <b/>
               <lu>
                 <lit v="gie"/>
                 <lit-tag v="prn.rel"/>
                 <clip pos="1" side="sl" part="a_nbr"/>
                 <lit-tag v="nom"/>
               </lu>
-               <b />
+               <b/>
              <lu>
                 <lit v="mealtan"/>
                 <lit-tag v="adv"/>
@@ -7503,7 +7745,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_case"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="bïejedh"/>
               <lit-tag v="vblex"/>
@@ -7535,7 +7777,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adv"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="tjaeledh"/>
               <lit-tag v="vblex"/>
@@ -7568,7 +7810,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adv"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="buektedh"/>
               <lit-tag v="vblex"/>
@@ -7599,7 +7841,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adv"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="båetedh"/>
               <lit-tag v="vblex"/>
@@ -7631,7 +7873,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adv"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="vaeltedh"/>
               <lit-tag v="vblex"/>
@@ -7663,7 +7905,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adv"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="juhtedh"/>
               <lit-tag v="vblex"/>
@@ -7695,7 +7937,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adj.sg.nom"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="sjïdtedh"/>
               <lit-tag v="vblex"/>
@@ -7727,7 +7969,7 @@ And then there are some categories like "month", with all the months.
         <clip pos="1" side="tl" part="lem"/>            
 			<lit-tag v="adj.comp.sg.nom"/>
             </lu>
-           <b />
+           <b/>
            <lu>
               <lit v="sjïdtedh"/>
               <lit-tag v="vblex"/>
@@ -7760,10 +8002,7 @@ And then there are some categories like "month", with all the months.
       </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
-          <out><b pos="1"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -7861,6 +8100,7 @@ And then there are some categories like "month", with all the months.
       </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule> 
 
@@ -8132,42 +8372,41 @@ And then there are some categories like "month", with all the months.
       </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
-          <out><b pos="1"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
    
-     <rule comment="C[_]-NP áhčči_eadni_n ja áhčči_eadni_n" c="áhčči ja eadni : aehtjie gon tjidtjieh"> 
+    <rule comment="C[_]-NP áhčči_eadni_n ja áhčči_eadni_n" c="áhčči ja eadni : aehtjie gon tjidtjieh"> 
       <pattern>
         <pattern-item n="áhčči_eadni_n"/>
         <pattern-item n="ja"/>
         <pattern-item n="áhčči_eadni_n"/>
       </pattern>
       <action>
-      
-         <call-macro n="aehtjie-gon-tjidtjiehParam3"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
-         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
-     <out>
+        
+        <call-macro n="aehtjie-gon-tjidtjiehParam3"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <out>
           <chunk name="noun" case="caseFirstword">
-             <tags>
+            <tags>
               <tag><lit-tag v="NP"/></tag>
               <tag><var n="func"/></tag>
             </tags>
-           <lu>
-        <clip pos="1" side="tl" part="whole"/>            
-      </lu>
-      <b pos="1"/>
             <lu>
-        <clip pos="2" side="tl" part="whole"/>            
-      </lu>
-      <b pos="1"/>
-           <lu>
-        <clip pos="3" side="tl" part="whole"/>            
-      </lu>
-         </chunk>
+              <clip pos="1" side="tl" part="whole"/>            
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>            
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>            
+            </lu>
+          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
      <rule comment="C[LT]-NP áhkku_áddjá_n ja áhkku_áddjá_n" c="áhkku ja áddjá : aahka gonnoeh aajjah"> 
@@ -8188,16 +8427,18 @@ And then there are some categories like "month", with all the months.
            <lu>
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
-      <b pos="1"/>
+      <b/>
             <lu>
         <clip pos="2" side="tl" part="whole"/>            
       </lu>
-      <b pos="2"/>
+      <b/>
            <lu>
         <clip pos="3" side="tl" part="whole"/>            
       </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8219,16 +8460,18 @@ And then there are some categories like "month", with all the months.
            <lu>
         <clip pos="1" side="tl" part="whole"/>            
       </lu>
-      <b pos="1"/>
+      <b/>
             <lu>
         <clip pos="2" side="tl" part="whole"/>            
       </lu>
-      <b pos="2"/>
+      <b/>
            <lu>
         <clip pos="3" side="tl" part="whole"/>            
       </lu>
          </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 <!--     <rule comment=" jijmie gon jiekieh">
@@ -8357,170 +8600,171 @@ And then there are some categories like "month", with all the months.
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
-      <choose>  
-	<when  c="spred">
-    <test>
-    <not><and>
-	    <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←SUBJext"/></equal>
-	    <equal><var n="foc-ge"/><lit-tag v="foc_neg-ge"/></equal>
+        <choose>
+	  <when  c="spred">
+            <test>
+              <not><and>
+	        <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←SUBJext"/></equal>
+	        <equal><var n="foc-ge"/><lit-tag v="foc_neg-ge"/></equal>
 	    </and></not></test>
-          <let><var n="foc-ge"/><lit v=""/></let>
-        </when>
-      </choose>  
+            <let><var n="foc-ge"/><lit v=""/></let>
+          </when>
+        </choose>
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-              <choose>  
-     <when c="Buori beaivvi : Buerie biejjie">
-     <test><and>
-     <equal><clip pos="1" side="sl" part="lem"/><lit v="Buorre"/></equal>
-     <equal><clip pos="2" side="sl" part="lem"/><lit v="beaivi"/></equal>
-     </and></test>
-        <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
-         <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-         </when>
-              </choose>  
-              <choose>  
-<!--     <when c="sámi áššiide juolluduvvo unnit ruhta : saemien aamhtesidie vaenebh beetnegh laeviehtåvva">
-     <test><and>
-     <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal>
-     <equal><clip pos="2" side="sl" part="lem"/><lit v="ruhta"/></equal>
-     <or>
-     <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
-     <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
-     </or>
-     </and></test>
-        <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="pl.nom"/></let>
-        <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
-         </when> -->
-     <when c="stuorit juolludeamit sámi áššiide : stoerebh dievtieh saemien aamhtesidie">
-     <test><and>
-     <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal>  <!-- agreement only for plural nom obs -->
-     <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
-<!--     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="ruhta"/></equal></not> -->
-     <or>
-     <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
-     <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
-     </or>
-     </and></test>
-        <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="pl.nom"/></let>
-         </when>
+        <choose>
+          <when c="Buori beaivvi : Buerie biejjie">
+            <test><and>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="Buorre"/></equal>
+              <equal><clip pos="2" side="sl" part="lem"/><lit v="beaivi"/></equal>
+            </and></test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          </when>
+        </choose>
+        <choose>
+          <!--     <when c="sámi áššiide juolluduvvo unnit ruhta : saemien aamhtesidie vaenebh beetnegh laeviehtåvva">
+               <test><and>
+               <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal>
+               <equal><clip pos="2" side="sl" part="lem"/><lit v="ruhta"/></equal>
+               <or>
+               <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
+               <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+               </or>
+               </and></test>
+               <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="pl.nom"/></let>
+               <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+               </when> -->
+          <when c="stuorit juolludeamit sámi áššiide : stoerebh dievtieh saemien aamhtesidie">
+            <test><and>
+              <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal>  <!-- agreement only for plural nom obs -->
+              <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+              <!--     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="ruhta"/></equal></not> -->
+              <or>
+                <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
+                <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+              </or>
+            </and></test>
+            <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="pl.nom"/></let>
+          </when>
 
 
-              </choose>  
-              <choose>  
+        </choose>
+        <choose>
 
-        <when c="from prfprc @→N to der_nomact">
-        <test><and>
-        <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="prfprc"/></equal>
-        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
-        </and>
-        </test>
-        <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.der_nomact.n.sg.nom"/></let>
-        </when>
-        <when c="Dat bođii ovtta guolis : Dïhte aktede gueleste båetieji">
-        <test><and>
-        <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
-        <or>
-        <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
-        <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
-        <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
-        </or>
-        </and>
-        </test>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
-        </when>
-        <when c="borgemánu loahpas : mïetsken minngiegietjien">
-        <test><or><and>
-        <equal><clip pos="2" side="sl" part="a_sem"/><lit-tag v="sem_hum"/></equal>
-        <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
-        </and>
+          <when c="from prfprc @→N to der_nomact">
+            <test><and>
+              <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="prfprc"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
+            </and>
+            </test>
+            <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.der_nomact.n.sg.nom"/></let>
+          </when>
+          <when c="Dat bođii ovtta guolis : Dïhte aktede gueleste båetieji">
+            <test><and>
+              <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@→N"/></equal>
+              <or>
+                <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal>
+                <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal>
+                <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal>
+              </or>
+            </and>
+            </test>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
+          </when>
+          <when c="borgemánu loahpas : mïetsken minngiegietjien">
+            <test><or><and>
+	      <in><clip pos="2" side="sl" part="a_sem"/><list n="sem_hum"/></in>
+              <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+            </and>
 	    <and>
-        <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_time"/></equal>
-        <equal><clip pos="2" side="sl" part="lem"/><lit v="loahppa"/></equal>
-        </and></or></test>
-        <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
-        </when>
-      <when c="movt dat devdet Sámedikki mihttomeriid : guktie dah Saemiedigkien ulmieh dievhtieh">
-     <test><and><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
-     <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
-          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-         </when>
-      </choose>  
-      <choose>  
-         <when>
-     <test><and>
-	     <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></equal> 
-         <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></equal>
-     </and></test>
-          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
-         <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
-         </when>
-        <when c="oppa áigge : abpe tïjjem">
-        <test><and>
-        <equal><clip pos="1" side="tl" part="lem"/><lit v="abpe"/></equal>
-        <in><clip pos="2" side="sl" part="a_sem"/><list n="sem_time"/></in> 
-        <or>
-        <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="gen"/></equal>
-        <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
-        </or>
-        </and></test>
-        <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-        </when>
-      </choose>  
+              <equal><clip pos="1" side="sl" part="a_sem"/><lit-tag v="sem_time"/></equal>
+              <equal><clip pos="2" side="sl" part="lem"/><lit v="loahppa"/></equal>
+            </and></or></test>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+          </when>
+          <when c="movt dat devdet Sámedikki mihttomeriid : guktie dah Saemiedigkien ulmieh dievhtieh">
+            <test><and><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+            <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when>
+            <test><and>
+	      <equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
+              <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="ine"/></equal>
+            </and></test>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+            <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+          </when>
+          <when c="oppa áigge : abpe tïjjem">
+            <test><and>
+              <equal><clip pos="1" side="tl" part="lem"/><lit v="abpe"/></equal>
+              <in><clip pos="2" side="sl" part="a_sem"/><list n="sem_time"/></in>
+              <or>
+                <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="gen"/></equal>
+                <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
+              </or>
+            </and></test>
+            <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="acc"/></let>
+          </when>
+        </choose>
         <let><clip pos="1" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let>
-      <choose><when c="mah mealtan">
-	      <test>
-	    <equal><clip pos="1" side="tl" part="lem"/><lit v="mealtan"/></equal>  
-	      </test>
-	      <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
-        <out>
-          <chunk name="noun" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="NP"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="ext"/></tag>
-              <tag><var n="poss"/></tag>
-            </tags>
+        <choose><when c="mah mealtan">
+	  <test>
+	    <equal><clip pos="1" side="tl" part="lem"/><lit v="mealtan"/></equal>
+	  </test>
+	  <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+          <out>
+            <chunk name="noun" case="caseFirstword">
+              <tags>
+                <tag><lit-tag v="NP"/></tag>
+                <tag><var n="func"/></tag>
+                <tag><var n="ext"/></tag>
+                <tag><var n="poss"/></tag>
+              </tags>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
               </lu>
-              <b pos="1"/>
+              <b/>
               <lu>
                 <lit v="mij"/>
                 <lit-tag v="prn.rel"/>
                 <clip pos="2" side="tl" part="a_nbr"/>
                 <lit-tag v="nom"/>
               </lu>
-               <b />
-             <lu>
+              <b/>
+              <lu>
                 <clip pos="1" side="tl" part="whole"/>
               </lu>
-          </chunk>
-        </out>
-     </when>
-     <otherwise>
-        <out>
-          <chunk name="noun" case="caseFirstword">
-            <tags>
-              <tag><lit-tag v="NP"/></tag>
-              <tag><var n="func"/></tag>
-              <tag><var n="ext"/></tag>
-              <tag><var n="poss"/></tag>
-              <tag><clip pos="2" side="sl" part="a_foc-ge"/></tag>
-              <tag><var n="foc-ge"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b pos="1"/>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-     </otherwise></choose>
-              <let><var n="foc-ge"/><lit v=""/></let>
+            </chunk>
+          </out>
+        </when>
+        <otherwise>
+          <out>
+            <chunk name="noun" case="caseFirstword">
+              <tags>
+                <tag><lit-tag v="NP"/></tag>
+                <tag><var n="func"/></tag>
+                <tag><var n="ext"/></tag>
+                <tag><var n="poss"/></tag>
+                <tag><clip pos="2" side="sl" part="a_foc-ge"/></tag>
+                <tag><var n="foc-ge"/></tag>
+              </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </chunk>
+          </out>
+        </otherwise></choose>
+        <let><var n="foc-ge"/><lit v=""/></let>
+        <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>
       </action>
     </rule>
 
@@ -8588,11 +8832,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -8618,7 +8862,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="whole"/>
             </lu>
             </mlu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -8626,6 +8870,8 @@ And then there are some categories like "month", with all the months.
         </out>
       </otherwise></choose>
               <let><var n="foc-ge"/><lit v=""/></let>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
     <rule comment="C[ST]-NP n_cmp mod_n n_cmp n_not_cmp"  c="Sámediggi lea guhkit áiggi moaitán Stáhtavuvddiid eanahálddašemiid : Saemiedigkie guhkiem Staateskåaki eatnemereeremh laajhteme">
@@ -8692,7 +8938,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="whole"/>
             </lu>
             </mlu>
-            <b pos="2"/>
+            <b/>
             <mlu>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
@@ -8704,6 +8950,9 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
               <let><var n="foc-ge"/><lit v=""/></let>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8730,16 +8979,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8762,16 +9013,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8797,20 +9050,23 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8834,20 +9090,23 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8876,24 +9135,28 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
-            <b pos="4"/>
+            <b/>
             <lu>
               <clip pos="5" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="4"/><lit v=" "/></equal></not></test><out><b pos="4"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8936,7 +9199,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <mlu>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
@@ -8947,6 +9210,8 @@ And then there are some categories like "month", with all the months.
             </mlu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -8990,11 +9255,11 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <mlu>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
@@ -9005,6 +9270,8 @@ And then there are some categories like "month", with all the months.
             </mlu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -9028,13 +9295,13 @@ And then there are some categories like "month", with all the months.
         </call-macro>
         <call-macro n="agreement-attr-2Param"><with-param pos="1"/><with-param pos="3"/></call-macro>
         <call-macro n="agreement-attr-2Param"><with-param pos="2"/><with-param pos="3"/></call-macro>
-              <choose>  
-      <when>
-     <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
-     <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
-          <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
-         </when>
-      </choose>  
+        <choose>  
+          <when>
+            <test><and><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal> 
+            <equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="acc"/></equal></and></test>
+            <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          </when>
+        </choose>  
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -9047,16 +9314,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+        <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>
+        <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>
       </action>
     </rule>
 
@@ -9092,20 +9361,23 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -9155,15 +9427,15 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
@@ -9187,11 +9459,11 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="whole"/>
             </lu>
             </mlu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
@@ -9199,6 +9471,9 @@ And then there are some categories like "month", with all the months.
         </out>
       </otherwise>
         </choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -9240,7 +9515,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <mlu>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
@@ -9249,12 +9524,15 @@ And then there are some categories like "month", with all the months.
               <clip pos="3" side="tl" part="whole"/>
             </lu>
             </mlu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -9281,12 +9559,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -9350,7 +9629,7 @@ And then there are some categories like "month", with all the months.
               <var n="nmbr"/>
               <var n="case"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <mlu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
@@ -9361,6 +9640,7 @@ And then there are some categories like "month", with all the months.
             </mlu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -9396,17 +9676,19 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -9471,8 +9753,8 @@ And then there are some categories like "month", with all the months.
               <lit v="nimhtie"/>
               <lit-tag v="adv"/>
             </lu>
-           <b pos="3"/>
           </chunk>
+           <b pos="3"/>
         </out>
       </action>
     </rule> 
@@ -9525,7 +9807,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
 	   <choose><when><test>
-		<equal><clip pos="1" side="sl" part="neg-goh"/><lit-tag v="neg-goh"/></equal> </test>    
+		<equal><clip pos="1" side="tl" part="neg-goh"/><lit-tag v="neg-goh"/></equal> </test>    
 		<let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>     
 		<let><clip pos="1" side="tl" part="neg-goh"/><lit-tag v="neg"/></let>     
 		<let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let>     
@@ -9542,7 +9824,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b />
+            <b/>
             <lu>
             <lit v="goh"/>
             <lit-tag v="pcle"/>
@@ -9634,6 +9916,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="conneg"/>
       </pattern>
       <action>
+		<let><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg"/></let>     
 	   <choose><when><test><or>
 		<equal><clip pos="2" side="sl" part="a_foc-ge"/><lit-tag v="foc_neg-ge"/></equal> 
 		<equal><clip pos="1" side="sl" part="a_foc-ge"/><lit-tag v="foc_neg-ge"/></equal> 
@@ -9828,6 +10111,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
      <let><var n="subj_nbr"/><lit v=""/></let>
       </action>
     </rule>  
@@ -9867,6 +10151,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
      <let><var n="subj_nbr"/><lit v=""/></let>
       </action>
     </rule>  
@@ -9959,16 +10244,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -9978,6 +10265,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="indic"/></let>
         <out>
           <chunk name="cop-auxv" case="caseFirstword">
             <tags>
@@ -10016,18 +10304,19 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
            <lu>
               <lit v="dïhte"/>
               <lit-tag v="prn.dem.sg.nom"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <lit v="jis"/>
               <lit-tag v="pcle"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -10053,17 +10342,19 @@ And then there are some categories like "month", with all the months.
               <lit v="dïhte"/>
               <lit-tag v="prn.dem.sg.nom"/>
             </lu>
-           <b pos="1"/>
+           <b/>
             <lu>
               <lit v="jis"/>
               <lit-tag v="pcle"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>  
    <rule comment="C[L]-PRED dat mearkkašit_3p dat_prn " c="dat mearkkaša dan  : Dïhte jis gosse ">
@@ -10086,14 +10377,16 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-           <b pos="1"/>
+           <b/>
            <lu>
               <lit v="jis"/>
               <lit-tag v="pcle"/>
             </lu>
-           <b pos="2"/>
+           <b/>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>  
     <rule comment="C[L]-PRED dat mearkkašit_3p dat_prn ahte_cnjsub" c="dat mearkkaša dan ahte : Dïhte jis gosse ">
@@ -10119,18 +10412,21 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-           <b pos="1"/>
+           <b/>
            <lu>
               <lit v="jis"/>
               <lit-tag v="pcle"/>
             </lu>
-           <b pos="2"/>
+           <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>  
     <rule comment="C[L]-PRED dat_prn mearkkašit_3p ahte_cnjsub" c="dat mearkkaša ahte boađán ihttin : dïhte jis gosse jirreden båatam">
@@ -10155,17 +10451,19 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <lit v="jis"/>
               <lit-tag v="pcle"/>
             </lu>
-           <b pos="2"/>
+           <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule> 
    <rule comment="C[L]-PRED dat_prn mearkkašit_3p" c="Dat mearkkaša unnideami dehálaš sámi surggiin. : dïhte jis unniedimmie vihkeles saemien suerkine">
@@ -10187,13 +10485,14 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <lit v="jis"/>
               <lit-tag v="pcle"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>  
     <rule comment="C[L]-PRED mearkkašit_3p ahte_cnjsub" c="mearkkaša ahte : Dïhte jis gosse ">
@@ -10217,17 +10516,18 @@ And then there are some categories like "month", with all the months.
               <lit v="dïhte"/>
               <lit-tag v="prn.dem.sg.nom"/>
             </lu>
-           <b pos="1"/>
+           <b/>
             <lu>
               <lit v="jis"/>
               <lit-tag v="pcle"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>  
  
@@ -10331,6 +10631,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
      <let><var n="subj_nbr"/><lit v=""/></let>
       </action>
     </rule>
@@ -10356,7 +10657,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <lit v="plïere"/>
               <lit-tag v="n.sg.ine"/>
@@ -10373,13 +10674,14 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
         </otherwise></choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
      <let><var n="subj_nbr"/><lit v=""/></let>
       </action>
     </rule>
@@ -10465,7 +10767,7 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
-    <rule comment="C[T]-PRED leat_main_fin geatnegahtton_adj" c="suohkanat leat geatnegahtton : tjïelth dïedtem utnieh"> 
+    <rule comment="C[T]-PRED leat_main_fin geatnegahtton_adj" c="suohkanat leat geatnegahtton : tjïelth dïedtem utnieh OBS"> 
       <pattern>
        <pattern-item n="leat_main_fin"/>
        <pattern-item n="geatnegahtton_adj"/>
@@ -10485,6 +10787,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule> 
 
@@ -10529,12 +10832,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -10770,11 +11074,11 @@ And then there are some categories like "month", with all the months.
               <clip pos="2" side="tl" part="a_trans"/>
               <lit-tag v="inf"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
-            <b pos="3"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="lem"/>
               <clip pos="4" side="tl" part="a_vblex"/>
@@ -10783,6 +11087,8 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -10854,12 +11160,13 @@ And then there are some categories like "month", with all the months.
               <lit v="dan"/>
               <lit-tag v="adv"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -10879,12 +11186,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -10904,12 +11212,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -10933,6 +11242,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -10959,12 +11269,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -10991,6 +11302,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11016,6 +11328,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11038,6 +11351,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11156,12 +11470,15 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>
 
@@ -11185,11 +11502,12 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
 
-   <rule comment="C[_]-ADV adv" c="in boađe odne : im daenbiejjien båetieh">
+   <rule comment="C[_]-ADV adv" c="in boađe odne : im daenbiejjien båetieh sadf">
       <pattern>
         <pattern-item n="adv"/>
       </pattern>
@@ -11252,7 +11570,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex.der_nomact.n.sg.gen"/>
             </lu>
-            <b />
+            <b/>
             <lu>
               <lit  v="bielelen"/>
               <lit-tag v="post"/>
@@ -11279,6 +11597,14 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
         </otherwise>
+        </choose>
+        <choose>
+	 	<when><test><or>
+		<equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVLqst-ela→"/></equal>
+		<equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVLqst-ine→"/></equal>
+		 </or></test>
+         <let><var n="subj_nbr"/><lit v=""/></let>
+		 </when>	
         </choose>
       </action>
     </rule>
@@ -11313,7 +11639,7 @@ And then there are some categories like "month", with all the months.
               <clip pos="1" side="tl" part="whole"/>
             </lu>
             </chunk>
-            <b pos="1"/>
+            <b/>
             <chunk name="noun" case="caseFirstword">
              <tags>
              <tag><lit-tag v="NP"/></tag>
@@ -11324,6 +11650,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11415,12 +11742,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -11471,6 +11799,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11493,16 +11822,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -11524,16 +11855,18 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
-            <b pos="2"/>
+            <b/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
@@ -11555,12 +11888,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11622,7 +11956,7 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
@@ -11630,6 +11964,7 @@ And then there are some categories like "month", with all the months.
         </out>
           </otherwise>
         </choose>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11665,6 +12000,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/> </call-macro>
+		<let><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg"/></let>     
         <out>
           <chunk name="ii" case="caseFirstword">
             <tags>
@@ -11696,10 +12032,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="2"/><lit v=" "/></equal></not></test>
-          <out><b pos="2"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>  
 
@@ -11739,17 +12072,15 @@ And then there are some categories like "month", with all the months.
               <clip pos="4" side="tl" part="lem"/>
               <lit-tag v="vblex.conneg"/>
             </lu>
-          <b pos="2"/>
+          <b/>
               <lu>
                 <lit v="gænnah"/>
                 <lit-tag v="pcle"/>
               </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="3"/><lit v=" "/></equal></not></test>
-          <out><b pos="3"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>      
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>
       </action>
     </rule>  
 
@@ -11803,10 +12134,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
-         <choose><when>
-          <test><not><equal><b pos="3"/><lit v=" "/></equal></not></test>
-          <out><b pos="3"/></out>
-        </when></choose>
+      <choose><when><test><not><equal><b pos="3"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>     
       </action>
     </rule>  
 
@@ -11854,12 +12182,13 @@ And then there are some categories like "month", with all the months.
             <lu>
               <clip pos="1" side="tl" part="whole"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
 
@@ -11981,6 +12310,7 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
       </action>
     </rule>
    <rule comment="C[_]-T lquot">

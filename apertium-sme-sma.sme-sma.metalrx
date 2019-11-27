@@ -859,8 +859,17 @@
    </rule>
   <rule weight="0.6">
         <match lemma="lohkat" tags="vblex.tv.*"><select lemma="lohkedh" tags="vblex.*"/></match>
+        <or>
        <match tags="n.sem_lang.*"/> 
+       <match tags="n.sem_txt.*"/> 
+        </or>
    </rule> 
+  <rule weight="1.0">
+       <match lemma="irgi" tags="n.*"><select lemma="provrese-ålma" tags="n.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="várrehus" tags="n.*"><select lemma="vaaroehtimmie" tags="n.*"/></match>
+  </rule>
   <rule weight="1.0">
        <match lemma="lohkki" tags="n.*"><select lemma="lohkije" tags="n.*"/></match>
   </rule>
@@ -872,6 +881,37 @@
   </rule>
   <rule weight="1.0">
        <match lemma="máhttájeaddji" tags="n.*"><select lemma="learohke" tags="n.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="náittosdilli" tags="n.*"><select lemma="gaalletjevoete" tags="n.*"/></match>
+  </rule>
+  <rule weight="1.0">
+       <match lemma="addit" tags="vblex.*"><select lemma="vedtedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match lemma="ándagassii"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match/>
+       <match lemma="ándagassii"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match/>
+       <match/>
+       <match lemma="ándagassii"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="addit" tags="vblex.*"><select lemma="luejhtedh" tags="vblex.*"/></match>
+       <match/>
+       <match/>
+       <match/>
+       <match lemma="ándagassii"/>
   </rule>
   <rule weight="1.0">
        <match lemma="máihli" tags="n.*"><select lemma="aaloe" tags="n.*"/></match>
@@ -1727,6 +1767,22 @@
    </match>
  </rule>     
 
+    <rule weight="1.0">
+   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.@+FAUXV">
+     <select lemma="ij" tags="vblex.iv.neg.indic.*"/>
+   </match>
+ </rule>     
+    <rule weight="0.5">
+   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
+     <select lemma="ij" tags="vblex.iv.neg-goh.indic.*"/>
+   </match>
+ </rule>     
+    <rule weight="0.6">
+   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
+     <select lemma="ij" tags="vblex.iv.neg-goh.indic.*"/>
+   </match>
+ </rule>     
+
 
        <rule weight="0.5">
    <match lemma="buorre">
@@ -2091,9 +2147,9 @@
    <match />
    <match tags="vblex.*.indic.pret.conneg.*"/>
  </rule>     
-       <rule weight="0.5">
+<!--       <rule weight="0.5">
    <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
- </rule>     
+ </rule>      
        <rule weight="0.6">
    <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
    <or>
@@ -2186,7 +2242,7 @@
          <match tags="n.*"/>
    </or>
          <match tags="sent"/>
- </rule>     
+ </rule>    -->  
 
 
 
