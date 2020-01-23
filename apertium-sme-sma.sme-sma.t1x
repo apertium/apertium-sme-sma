@@ -1142,6 +1142,7 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     <def-cat n="ord_card">
       <cat-item tags="adj.ord.*"/>
+      <cat-item tags="adj.arab.ord.*"/>
       <cat-item tags="num.arab.*"/>
     </def-cat>
     <def-cat n="beaivi_n">
@@ -1493,6 +1494,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="prn.ind"/>
        <attr-item tags="adj"/>
        <attr-item tags="adj.ord"/>
+       <attr-item tags="adj.arab.ord"/>
         <attr-item tags="adj.comp"/>   
     </def-attr>
 
@@ -1587,6 +1589,7 @@ And then there are some categories like "month", with all the months.
     <def-attr n="a_adj">
        <attr-item tags="adj"/>
        <attr-item tags="adj.ord"/>
+       <attr-item tags="adj.arab.ord"/>
        <attr-item tags="n"/>
     </def-attr>
 
@@ -3546,6 +3549,7 @@ And then there are some categories like "month", with all the months.
      <when>
      <test><and>
   <not><equal><clip pos="1" side="tl" part="a_npagree_type"/><lit-tag v="adj.ord"/></equal></not>
+  <not><equal><clip pos="1" side="tl" part="a_npagree_type"/><lit-tag v="adj.arab.ord"/></equal></not>
      <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="acc"/></equal>
      <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
      </and></test>

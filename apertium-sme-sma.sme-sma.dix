@@ -6570,7 +6570,7 @@
     <e><p><l>mill<s n="num"/></l><r>milj<s n="num"/></r></p></e>
     <e><p><l>moadde<s n="num"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>|<s n="sent"/></l><r>|<s n="sent"/></r></p></e>
-    <e><re>([0-9]|[0-3][0-9]+)</re><p><l><s n="adj"/><s n="ord"/></l><r><s n="adj"/><s n="ord"/></r></p></e>
+    <e><re>[0-9]+</re><p><l><s n="adj"/></l><r><s n="adj"/></r></p></e>
     <e><re>[«\(‘“„]</re><p><l><s n="lquot"/></l><r><s n="lquot"/></r></p></e>
     <e><re>[±´&amp;\+`%@="'·–]+</re><p><l><s n="punct"/></l><r><s n="punct"/></r></p></e>
     <e><re>[»\)’”]</re><p><l><s n="rquot"/></l><r><s n="rquot"/></r></p></e>
