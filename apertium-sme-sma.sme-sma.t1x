@@ -3,8 +3,8 @@
 <!--
 
         <choose><when> 
-	<test><clip pos="1" side="sl" part="a_mood"/><lit-tag v="cond"/></test>    
-        <let><concat><clip pos="1" side="tl" part="lem"/><lit v="COND"/></concat></let>
+	<test><equal><clip pos="1" side="sl" part="a_mood"/><lit-tag v="cond"/></equal></test>    
+        <let><clip pos="1" side="tl" part="lem"/><concat><clip pos="1" side="tl" part="lem"/><lit v="COND"/></concat></let>
      </when></choose> 
 
 A = addition
@@ -4264,7 +4264,7 @@ And then there are some categories like "month", with all the months.
      </pattern>
       <action>
         <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/></call-macro>
-         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adj.ord.attr"/></let> 
+         <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adj.arab.ord.attr"/></let> 
 
                           <out>
           <chunk name="date" case="caseFirstword">
