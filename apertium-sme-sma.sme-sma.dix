@@ -19,6 +19,7 @@
     <sdef n="acr"/>
     <sdef n="foc_neg-ge"/>
     <sdef n="qst"/>
+    <sdef n="pxpl3"/>
 
     <sdef n="tv"/>
     <sdef n="iv"/>
@@ -721,6 +722,8 @@
     <e r="LR"><p><l>amasgiella<s n="n"/></l><r>ammesgïele<s n="n"/></r></p></e>
 
 
+    <e><p><l>gaskan<s n="adv"/><s n="pxpl3"/><s n="n"/></l><r>sinsitnie<s n="adv"/></r></p></e>
+    <e><p><l>hávga<s n="n"/></l><r>haavke<s n="n"/></r></p></e>
     <e><p><l>paratáksa<s n="n"/></l><r>paratakse<s n="n"/></r></p></e>
     <e><p><l>rekšuvdna<s n="n"/></l><r>reksjovne<s n="n"/></r></p></e>
     <e><p><l>morfosemantihkka<s n="n"/></l><r>morfosemantihke<s n="n"/></r></p></e>
@@ -747,6 +750,29 @@
     <e><p><l>romána<s n="n"/></l><r>romaane<s n="n"/></r></p></e>
     <e><p><l>analysa<s n="n"/></l><r>joekehtimmie<s n="n"/></r></p></e>
     <e><p><l>nákkosgirji<s n="n"/></l><r>dåakteretjaalege<s n="n"/></r></p></e>
+    <e><p><l>etymologiija<s n="n"/></l><r>etymologije<s n="n"/></r></p></e>
+    <e><p><l>antropologa<s n="n"/></l><r>antropolååge<s n="n"/></r></p></e>
+    <e><p><l>norgalaš<s n="n"/></l><r>nöörjehke<s n="n"/></r></p></e>
+    <e><p><l>vikiŋŋa<s n="n"/></l><r>vijkinge<s n="n"/></r></p></e>
+    <e><p><l>stáhtaborgár<s n="n"/></l><r>staatenårroje<s n="n"/></r></p></e>
+    <e><p><l>gárjil<s n="n"/></l><r>gaerjele<s n="n"/></r></p></e>
+     <e><p><l>vearrái<s n="adj"/></l><r>nåake<s n="adj"/></r></p></e>
+     <e><p><l>fysihkalaš<s n="adj"/></l><r>fysihkeles<s n="adj"/></r></p></e>
+     <e><p><l>valjis<s n="adv"/></l><r>veljies<s n="adj"/><s n="attr"/></r></p></e>
+    <e><p><l>sentralsearvi<s n="n"/></l><r>sentralsiebrie<s n="n"/></r></p></e>
+    <e><p><l>coakci<s n="n"/></l><r>tsåeptsie<s n="n"/></r></p></e>
+    <e><p><l>morša<s n="n"/></l><r>måersjie<s n="n"/></r></p></e>
+    <e><p><l>čalán<s n="n"/></l><r>tjalleme<s n="n"/></r></p></e>
+    <e><p><l>kristtalašvuohta<s n="n"/></l><r>kristelesvoete<s n="n"/></r></p></e>
+    <e><p><l>kolonista<s n="n"/></l><r>koloniste<s n="n"/></r></p></e>
+    <e><p><l>jugástat<s n="n"/></l><r>jovkestahke<s n="n"/></r></p></e>
+    <e><p><l>goabbá<s n="prn"/></l><r>gåabpa<s n="prn"/></r></p></e>
+    <e><p><l>sosiáladarwinisma<s n="n"/></l><r>sosialdarvinisme<s n="n"/></r></p></e>
+    <e><p><l>siseana<s n="n"/></l><r>siseatneme<s n="n"/></r></p></e>
+    <e><p><l>gis<s n="pcle"/></l><r>jis<s n="pcle"/></r></p></e>
+    <e><p><l>duohkái<s n="post"/></l><r>duakan<s n="post"/></r></p></e>
+    <e><p><l>duohko<s n="adv"/></l><r>doehkoe<s n="post"/></r></p></e>
+    <e><p><l>almmustuvvat<s n="vblex"/><s n="iv"/></l><r>bæjhkoehtidh<s n="vblex"/><s n="tv"/><s n="der_passl"/><s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ekologiija<s n="n"/></l><r>ekologije<s n="n"/></r></p></e>
     <e><p><l>antologiija<s n="n"/></l><r>antologije<s n="n"/></r></p></e>
     <e><p><l>antropologiija<s n="n"/></l><r>antropologije<s n="n"/></r></p></e>
@@ -51986,6 +52012,7 @@
     <e><p><l>Þórisvatn<s n="np"/></l><r>Þórisvatn<s n="np"/></r></p></e>
     <e><p><l>Þórlákshöfn<s n="np"/></l><r>Þórlákshöfn<s n="np"/></r></p></e>
     <e><p><l>Þórsmörk<s n="np"/></l><r>Þórsmörk<s n="np"/></r></p></e>
+     <e><p><l>ČálliidLágádus<s n="np"/></l><r>TjaelijiBerteme<s n="np"/></r></p></e>
     <e><p><l>Čad<s n="np"/></l><r>Čad<s n="np"/></r></p></e>
     <e><p><l>Čahcariehppi<s n="np"/></l><r>Čahcariehppi<s n="np"/></r></p></e>
     <e><p><l>Čahcavárri<s n="np"/></l><r>Čahcavárri<s n="np"/></r></p></e>
@@ -52671,8 +52698,7 @@
     <e><p><l>Čálkkaleahki<s n="np"/></l><r>Čálkkaleahki<s n="np"/></r></p></e>
     <e><p><l>Čálkkogoahoaivi<s n="np"/></l><r>Čálkkogoahoaivi<s n="np"/></r></p></e>
     <e><p><l>Čálku<s n="np"/></l><r>Čálku<s n="np"/></r></p></e>
-    <e><p><l>ČálliidLágádus<s n="np"/></l><r>ČálliidLágádus<s n="np"/></r></p></e>
-    <e><p><l>Čálliidlágádus<s n="np"/></l><r>Čálliidlágádus<s n="np"/></r></p></e>
+    <e><p><l>Čálliidlágádus<s n="np"/></l><r>TjaelijiBerteme<s n="np"/></r></p></e>
     <e><p><l>Čámmájohka<s n="np"/></l><r>Čámmájohka<s n="np"/></r></p></e>
     <e><p><l>Čánne<s n="np"/></l><r>Čánne<s n="np"/></r></p></e>
     <e><p><l>Čáppalánjasoaivi<s n="np"/></l><r>Čáppalánjasoaivi<s n="np"/></r></p></e>
