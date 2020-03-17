@@ -1845,6 +1845,7 @@
     <e><p><l>guovttegielatvuohta<s n="n"/></l><r>guektiengïelenvoete<s n="n"/></r></p></e>
     <e><p><l>guovttegielatvuohta<s n="n"/></l><r>guektiengïelevoete<s n="n"/></r></p></e>
     <e><p><l>guovttegielatvuođadoarjja<s n="n"/></l><r>guektiengïeledåarjoe<s n="n"/></r></p></e>
+    <e><p><l>guovttos<s n="n"/><s n="coll"/><s n="sg"/></l><r>gööktesh<s n="n"/><s n="coll"/><s n="pl"/></r></p></e>
     <e><p><l>guovttis<s n="n"/><s n="coll"/><s n="sg"/></l><r>gööktesh<s n="n"/><s n="coll"/><s n="pl"/></r></p></e>
     <e><p><l>gallis<s n="prn"/><s n="coll"/></l><r>gallesh<s n="prn"/><s n="coll"/></r></p></e>
     <e><p><l>guovvamánnu<s n="n"/></l><r>goevte<s n="n"/></r></p></e>
@@ -2131,6 +2132,7 @@
     <e><p><l>frekveansa<s n="n"/></l><r>frekvense<s n="n"/></r></p></e>
     <e><p><l>molsun<s n="n"/></l><r>molseme<s n="n"/></r></p></e>
 
+    <e><p><l>cuohppa<s n="n"/></l><r>tsoehpe<s n="n"/></r></p></e>
     <e><p><l>soggi<s n="n"/></l><r>maadtere<s n="n"/></r></p></e>
     <e><p><l>kolonna<s n="n"/></l><r>kolonne<s n="n"/></r></p></e>
     <e><p><l>uvssot<s n="n"/></l><r>okse<s n="n"/></r></p></e>
@@ -2609,6 +2611,11 @@
     <e><p><l>mánnosaččat<s n="adv"/></l><r>fïerhten<b/>asken<s n="adv"/></r></p></e>
     <e><p><l>mánnu<s n="n"/></l><r>aske<s n="n"/></r></p></e>
     <e><p><l>mánná<s n="n"/></l><r>maana<s n="n"/></r></p></e>
+
+    <e><p><l>imašlaš<s n="adj"/></l><r>rovneges<s n="adj"/></r></p></e>
+    <e><p><l>plurála<s n="n"/></l><r>pluraale<s n="adj"/></r></p></e>
+    <e><p><l>singulára<s n="n"/></l><r>singulaare<s n="adj"/></r></p></e>
+    <e><p><l>njuoratmánná<s n="n"/></l><r>slïedte<s n="n"/></r></p></e>
     <e><p><l>mánnáfuolaheapmi<s n="n"/></l><r>maanasåjhtoe<s n="n"/></r></p></e>
     <e><p><l>mánnávuohta<s n="n"/></l><r>maanabaelie<s n="n"/></r></p></e>
     <e><p><l>mánoheahpi<s n="n"/></l><r>askedibie<s n="n"/></r></p></e>
@@ -4816,6 +4823,7 @@
     <e><p><l>de<s n="adv"/></l><r>dellie<s n="adv"/></r></p></e>
     <e><p><l>de<s n="adv"/></l><r>dle<s n="adv"/></r></p></e>
     <e><p><l>deike<s n="adv"/></l><r>diekie<s n="adv"/></r></p></e>
+    <e><p><l>deikke<s n="adv"/></l><r>diekie<s n="adv"/></r></p></e>
     <e><p><l>die<s n="adv"/></l><r>dagkoe<s n="adv"/></r></p></e>
     <e><p><l>dieppe<s n="adv"/></l><r>dogkoe<s n="adv"/></r></p></e>
     <e><p><l>dieđusge<s n="adv"/></l><r>hævvi<s n="pcle"/></r></p></e>
@@ -5382,7 +5390,7 @@
     <e><p><l>birastit<s n="vblex"/><s n="tv"/></l><r>bïjrestidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>birget<s n="vblex"/><s n="iv"/></l><r>bïerkenidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>bissehit<s n="vblex"/><s n="tv"/></l><r>tjöödtjestehtedh<s n="vblex"/><s n="tv"/></r></p></e>
-    <e><p><l>bissut<s n="vblex"/><s n="iv"/></l><r>årrodh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e r="LR"><p><l>bissut<s n="vblex"/><s n="iv"/></l><r>årrodh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>bistit<s n="vblex"/><s n="iv"/></l><r>ryöhkedh<s n="vblex"/></r></p></e>
     <e><p><l>bisuhit<s n="vblex"/><s n="tv"/></l><r>tjöödtjestehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>bisánit<s n="vblex"/><s n="iv"/></l><r>tjöödtjehtidh<s n="vblex"/><s n="iv"/></r></p></e>
@@ -5584,7 +5592,7 @@
     <e><p><l>dáhpáhuvvat<s n="vblex"/><s n="iv"/></l><r>deahpadidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>dáhpáhuvvat<s n="vblex"/><s n="iv"/></l><r>sjugniehtovvedh<s n="vblex"/><s n="iv"/></r></p></e> <!-- lrx -->
     <e><p><l>dáhpáhuvvat<s n="vblex"/><s n="iv"/></l><r>sjïdtedh<s n="vblex"/><s n="iv"/></r></p></e>
-    <e><p><l>dáhpáhuvvat<s n="vblex"/><s n="iv"/></l><r>årrodh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e r="LR"><p><l>dáhpáhuvvat<s n="vblex"/><s n="iv"/></l><r>årrodh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>dáhttut<s n="vblex"/><s n="tv"/></l><r>sïjhtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>dáidit<s n="vblex"/><s n="iv"/></l><r>sååjhtedh<s n="vblex"/></r></p></e>
     <e><p><l>dálkkodit<s n="vblex"/><s n="tv"/></l><r>starnedehtedh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -6203,6 +6211,8 @@
     <e><p><l>ollahuvvat<s n="vblex"/><s n="iv"/></l><r>illesovvedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ollašuhttit<s n="vblex"/><s n="tv"/></l><r>tjïrrehtidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>ollašuvvat<s n="vblex"/><s n="iv"/></l><r>illesovvedh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e><p><l>girddašit<s n="vblex"/><s n="iv"/></l><r>haalahtalledh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e><p><l>duhkoraddat<s n="vblex"/><s n="iv"/></l><r>dovhkerdalledh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ollet<s n="vblex"/><s n="iv"/></l><r>hïnnedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ollit<s n="vblex"/><s n="iv"/></l><r>hïnnedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>ordnet<s n="vblex"/><s n="tv"/></l><r>veesmedh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -6584,6 +6594,7 @@
     <e><p><l>álddagastit<s n="vblex"/><s n="iv"/></l><r>gaskedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>álggahit<s n="vblex"/><s n="tv"/></l><r>aelkiehtidh<s n="vblex"/><s n="tv"/></r></p></e> <!-- nïerhkedh -->
     <e><p><l>álgit<s n="vblex"/><s n="iv"/></l><r>aelkedh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e r="LR"><p><l>riepmat<s n="vblex"/><s n="iv"/></l><r>aelkedh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>álkidahttit<s n="vblex"/><s n="tv"/></l><r>aelhkiedehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>álkidit<s n="vblex"/><s n="tv"/></l><r>aelhkiedehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>ánuhit<s n="vblex"/><s n="tv"/></l><r>aanodh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -31114,6 +31125,7 @@
     <e><p><l>Tit<s n="n"/><s n="abbr"/><s n="gram_tabbr"/></l><r>Tit<s n="n"/><s n="abbr"/><s n="gram_tabbr"/></r></p></e>
     <e><p><l>Váid<s n="n"/><s n="abbr"/><s n="gram_tabbr"/></l><r>Aejv<s n="n"/><s n="abbr"/><s n="gram_tabbr"/></r></p></e>
 
+    <e><p><l>Sáriggá<s n="np"/></l><r>Sarigga<s n="np"/></r></p></e>
     <e><p><l>Matt<s n="np"/></l><r>Matt<s n="np"/></r></p></e>
     <e><p><l>Mattan<s n="np"/></l><r>Mattan<s n="np"/></r></p></e>
     <e><p><l>Mattanen<s n="np"/></l><r>Mattanen<s n="np"/></r></p></e>
