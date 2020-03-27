@@ -5,7 +5,9 @@
 VERSION=0.1.0
 LANG1=sme
 LANG2=sma
+LANG2n=sma_North
 PREFIX1=$(LANG1)-$(LANG2)
+PREFIX1n=$(LANG1)-$(LANG2n)
 PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=apertium-$(PREFIX1)
@@ -16,8 +18,10 @@ TARGETS_COMMON =			\
 	$(PREFIX1).mor.rlx.bin		\
 	$(PREFIX1).syn.rlx.bin		\
 	$(PREFIX1).autobil.bin		\
+	$(PREFIX1n).autobil.bin		\
 	$(PREFIX1).autolex.bin		\
 	$(PREFIX1).autogen.hfst		\
+	$(PREFIX1n).autogen.hfst		\
 	$(PREFIX1).t1x.bin		\
 	$(PREFIX1).t2x.bin		\
 	$(PREFIX1).t3x.bin		\
@@ -120,6 +124,9 @@ $(PREFIX2).automorf-untrimmed.hfst: .deps/$(LANG2).automorf.hfst
 $(PREFIX1).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz
 	$(ZCAT) $< | hfst-txt2fst -f optimized-lookup-weighted -o $@
 
+$(PREFIX1n).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2n).RL.att.gz
+	$(ZCAT) $< | hfst-txt2fst -f optimized-lookup-weighted -o $@
+
 
 ###############################################################################
 ## Disambiguation rules
@@ -144,7 +151,11 @@ $(PREFIX2).syn.rlx.bin: $(AP_SRC2)/$(LANG2).syn.rlx.bin
 
 $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
-	lt-comp lr $< $@
+	lt-comp lr -r s $< $@
+
+$(PREFIX1n).autobil.bin: $(BASENAME).$(PREFIX1).dix
+	apertium-validate-dictionary $<
+	lt-comp lr -r n $< $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
