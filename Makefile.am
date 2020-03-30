@@ -132,17 +132,17 @@ $(PREFIX1n).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2n).RL.att.gz
 ## Disambiguation rules
 ###############################################################################
 
-$(PREFIX1).mor.rlx.bin: $(AP_SRC1)/$(LANG1).mor.rlx.bin 
+$(PREFIX1).mor.rlx.bin: $(AP_SRC1)/$(LANG1).mor.rlx.bin
 	cp $< $@
 
-$(PREFIX1).syn.rlx.bin: $(AP_SRC1)/$(LANG1).syn.rlx.bin 
+$(PREFIX1).syn.rlx.bin: $(AP_SRC1)/$(LANG1).syn.rlx.bin
 	cp $< $@
 
 
-$(PREFIX2).mor.rlx.bin: $(AP_SRC2)/$(LANG2).mor.rlx.bin 
+$(PREFIX2).mor.rlx.bin: $(AP_SRC2)/$(LANG2).mor.rlx.bin
 	cp $< $@
 
-$(PREFIX2).syn.rlx.bin: $(AP_SRC2)/$(LANG2).syn.rlx.bin 
+$(PREFIX2).syn.rlx.bin: $(AP_SRC2)/$(LANG2).syn.rlx.bin
 	cp $< $@
 
 ###############################################################################
@@ -285,4 +285,3 @@ test: all test-install
 	@echo "ja" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
-
