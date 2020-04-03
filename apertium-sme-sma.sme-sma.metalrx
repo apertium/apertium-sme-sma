@@ -392,7 +392,30 @@
        <match lemma="bihttá" tags="n.*"><select lemma="biehkie" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="maedtedh" tags="vblex.*"/></match>
+       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="vijredh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="gööledh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="aanoestidh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.8">
+       <match tags="n.sem_ani.*"/>
+       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="vijredh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="gööledh" tags="vblex.*"/></match>
+       <match tags="n.sem_ani-fish.*"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="aanoestidh" tags="vblex.*"/></match>
+       <match tags="n.sem_hum.*"/>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="bivdit" tags="vblex.tv.*"><select lemma="gööledh" tags="vblex.*"/></match>
+       <match />
+       <match tags="n.sem_ani-fish.*"/>
   </rule>
   <rule weight="1.0">
        <match lemma="geatnegasvuohta" tags="n.*"><select lemma="dïedte" tags="n.*"/></match>
