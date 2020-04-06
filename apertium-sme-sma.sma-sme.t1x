@@ -62,7 +62,16 @@
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_spec_sma_tags">
+    <def-attr n="a_spec_sma_tags1">
+      <attr-item tags="subqst"/>
+      <attr-item tags="sh"/>
+      <attr-item tags="←ext→"/>
+      <attr-item tags="←hab→"/>
+      <attr-item tags="←logo→"/>
+      <attr-item tags="←vdic→"/>
+      <attr-item tags="err_orth_mt"/>
+    </def-attr>
+    <def-attr n="a_spec_sma_tags2">
       <attr-item tags="sh"/>
       <attr-item tags="←ext→"/>
       <attr-item tags="←hab→"/>
@@ -78,6 +87,7 @@
       <attr-item tags="acc"/>
       <attr-item tags="gen"/>
       <attr-item tags="loc"/>
+      <attr-item tags="ill"/>
       <attr-item tags="ela"/>
       <attr-item tags="ine"/>
       <attr-item tags="com"/>
@@ -135,6 +145,7 @@
 
     <def-attr n="a_der">
        <attr-item tags="der_ht"/>
+       <attr-item tags="der_vuota"/>
     </def-attr>
     <def-attr n="a_tense">
        <attr-item tags="pret"/>
@@ -251,6 +262,13 @@
       <attr-item tags="@←SUBJext"/>
       <attr-item tags="@VOC"/>
       <attr-item tags="@X"/>
+    </def-attr>
+    <def-attr n="a_attr">
+       <attr-item tags="attr"/>
+       <attr-item tags="ex_attr"/>
+    </def-attr>
+    <def-attr n="a_type">
+       <attr-item tags="ord"/>
     </def-attr>
 
 
@@ -779,9 +797,30 @@
       <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_dialect"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_ela_ine"/><lit-tag v="loc"/></let>
-      <let><clip pos="1" side="tl" part="a_spec_sma_tags"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_spec_sma_tags1"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_spec_sma_tags2"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let> <!-- must be twice -->
+      <choose>
+	      <when><test><and>
+	  <equal><clip pos="1" side="sl" part="a_attr"/><lit-tag v="attr"/></equal>
+	  <equal><clip pos="1" side="tl" part="a_type"/><lit-tag v="ord"/></equal>
+	  <not><equal><clip pos="1" side="tl" part="lemma"/><lit v="nubbi"/></equal></not>
+	  </and></test>
+      <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
+      </when></choose>
+       <choose> 	      <when><test>
+	  <equal><clip pos="1" side="tl" part="lemma"/><lit v="eambbo"/></equal>
+	  </test>
+      <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+      </when></choose> 
+      <choose><when><test>
+	  <equal><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_vuota"/></equal></test>
+      <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+      </when>
+      </choose> 
+
     </def-macro>
   </section-def-macros>
   <section-rules>
