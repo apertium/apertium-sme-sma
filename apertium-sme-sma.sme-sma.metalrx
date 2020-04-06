@@ -392,6 +392,16 @@
        <match lemma="bihttá" tags="n.*"><select lemma="biehkie" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
+       <match lemma="golgat" tags="vblex.iv.*"><select lemma="gaarkasidh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="golgat" tags="vblex.iv.*"><select lemma="svaatjeldidh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="njunni"/>
+       <match lemma="golgat" tags="vblex.iv.*"><select lemma="svaatjeldidh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="1.0">
        <match lemma="bivdit" tags="vblex.tv.*"><select lemma="vijredh" tags="vblex.*"/></match>
   </rule>
   <rule weight="0.5">
