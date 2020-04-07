@@ -270,6 +270,9 @@
     <def-attr n="a_type">
        <attr-item tags="ord"/>
     </def-attr>
+    <def-attr n="a_num">
+       <attr-item tags="arab"/>
+    </def-attr>
 
 
     <def-attr n="a_sem">
@@ -817,6 +820,35 @@
       </when></choose> 
       <choose><when><test>
 	  <equal><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_vuota"/></equal></test>
+      <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+      </when>
+      </choose> 
+      <choose>
+	      <when><test><and>
+	  <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="adj"/></equal>
+	  <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
+	  </and></test>
+      <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+      </when>
+      </choose> 
+      <choose>
+	      <when><test><and>
+	  <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="prn"/></equal>
+	  <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+	  <equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal>
+	  </and></test>
+      <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+      </when>
+      </choose> 
+      <choose>
+      <when><test><and>
+	  <equal><clip pos="1" side="tl" part="a_num"/><lit-tag v="arab"/></equal>
+	  <or>
+	  <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
+	  <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></equal>
+	  </or>
+	  </and></test>
       <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
       </when>
       </choose> 

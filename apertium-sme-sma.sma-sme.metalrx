@@ -1,4 +1,14 @@
 <rules>
+  <rule weight="1.0">
+       <match lemma="gaajhke" tags="prn.ind.pl.*"><select lemma="buohkat" tags="prn.ind.pl.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gaajhke" tags="prn.ind.pl.*"><select lemma="visot" tags="prn.ind.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="gaajhke" tags="prn.ind.pl.*"><select lemma="visot" tags="prn.ind.*"/></match>
+      <match tags="*.pl.*"/>
+  </rule>
   
   <rule weight="1.0">
        <match lemma="njoktje" tags="n.*"><select lemma="njukča" tags="n.*"/></match>
