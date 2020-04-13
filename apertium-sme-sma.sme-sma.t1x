@@ -1643,6 +1643,7 @@ And then there are some categories like "month", with all the months.
     <def-attr n="a_n_type">
        <attr-item tags="abbr"/>
        <attr-item tags="acr"/>
+       <attr-item tags="symbol"/>
     </def-attr>
     <def-attr n="a_nbr">
        <attr-item tags="sg"/>
@@ -3155,6 +3156,7 @@ And then there are some categories like "month", with all the months.
         <when c="M[T] sg to pl.nom: göökte laejpieh">
         <test><and>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@Num←"/></equal>
+        <not><equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="symbol"/></equal></not>
         <not><equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal></not>
         <not><equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal></not>
         <not><equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
@@ -3171,6 +3173,7 @@ And then there are some categories like "month", with all the months.
         <or>
         <equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal>
    		<equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal>
+   		<equal><clip pos="1" side="sl" part="a_n_type"/><lit-tag v="symbol"/></equal>
         </or>
         <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
         <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal></and>
@@ -6146,6 +6149,7 @@ And then there are some categories like "month", with all the months.
      <not><equal><clip pos="2" side="sl" part="lem"/><lit v="okta"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="lem"/><lit v="Okta"/></equal></not>
      <not><equal><clip pos="2" side="sl" part="lem"/><lit v="1"/></equal></not>
+     <not><equal><clip pos="3" side="sl" part="a_n_type"/><lit-tag v="symbol"/></equal></not>
      <not><equal><clip pos="3" side="sl" part="a_PoS"/><lit-tag v="np"/></equal></not>
      <not><equal><clip pos="3" side="sl" part="a_n_type"/><lit-tag v="abbr"/></equal></not>
      <not><equal><clip pos="3" side="sl" part="a_n_type"/><lit-tag v="acr"/></equal></not>
@@ -9818,7 +9822,7 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
 	   <choose><when><test>
-		<equal><clip pos="1" side="tl" part="neg-goh"/><lit-tag v="neg-goh"/></equal> </test>    
+		<equal><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg-goh"/></equal> </test>    
 		<let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>     
 		<let><clip pos="1" side="tl" part="neg-goh"/><lit-tag v="neg"/></let>     
 		<let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let>     
@@ -9828,6 +9832,7 @@ And then there are some categories like "month", with all the months.
               <tag><lit-tag v="SV"/></tag>
               <tag><clip pos="1" side="sl" part="a_func"/></tag>
               <tag><clip pos="1" side="tl" part="a_mood"/></tag>
+              <tag><clip pos="1" side="tl" part="a_neg"/></tag>
               <tag><clip pos="1" side="tl" part="a_tense"/></tag>
               <tag><clip pos="1" side="tl" part="a_pers"/></tag>
               <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
@@ -9855,6 +9860,7 @@ And then there are some categories like "month", with all the months.
               <tag><lit-tag v="SV"/></tag>
               <tag><clip pos="1" side="sl" part="a_func"/></tag>
               <tag><clip pos="1" side="tl" part="a_mood"/></tag>
+              <tag><clip pos="1" side="tl" part="a_neg"/></tag>
               <tag><clip pos="1" side="tl" part="a_tense"/></tag>
               <tag><clip pos="1" side="tl" part="a_pers"/></tag>
               <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
@@ -12021,7 +12027,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="vejolaš_adj"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/> </call-macro>
+        <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="3"/> </call-macro>
 		<let><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg"/></let>     
         <out>
           <chunk name="ii" case="caseFirstword">
@@ -12066,8 +12072,9 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="vejolaš_adj"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="4"/> </call-macro>
-        <out>
+        <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="4"/> </call-macro>
+ 		<let><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg"/></let>     
+       <out>
           <chunk name="ii" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
@@ -12115,7 +12122,8 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="vejolaš_adj"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-4Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/> </call-macro>
+        <call-macro n="general-macro-3Param"><with-param pos="2"/><with-param pos="3"/><with-param pos="4"/> </call-macro>
+		<let><clip pos="1" side="tl" part="a_neg"/><lit-tag v="neg"/></let>     
         <out>
           <chunk name="ii" case="caseFirstword">
             <tags>

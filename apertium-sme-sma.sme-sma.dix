@@ -7184,10 +7184,11 @@
     <e><p><l>miljovdna<s n="num"/></l><r>millijovne<s n="num"/></r></p></e>
     <e><p><l>milj<s n="num"/></l><r>mill<s n="num"/></r></p></e>
     <e><p><l>moadde<s n="num"/></l><r>naan<s n="prn"/><s n="ind"/></r></p></e>
+    <e><re>[0-9]+</re><p><l><b/>%<s n="num"/></l><r><b/>%<s n="num"/></r></p></e>
     <e><p><l>|<s n="sent"/></l><r>|<s n="sent"/></r></p></e>
     <e><re>[0-9]+</re><p><l><s n="adj"/></l><r><s n="adj"/></r></p></e>
     <e><re>[«\(‘“„]</re><p><l><s n="lquot"/></l><r><s n="lquot"/></r></p></e>
-    <e><re>[±´&amp;\+`%@="'·–]+</re><p><l><s n="punct"/></l><r><s n="punct"/></r></p></e>
+    <e><re>[±´&amp;\+`@="'·–]+</re><p><l><s n="punct"/></l><r><s n="punct"/></r></p></e>
     <e><re>[»\)’”]</re><p><l><s n="rquot"/></l><r><s n="rquot"/></r></p></e>
     <e><re>[…;.\?¿¶]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
 <!--    <e><p><l>moadde<s n="num"/><s n="sg"/><s n="nom"/></l><r>måedtie<s n="prn"/><s n="ind"/><s n="attr"/></r></p></e> -->
