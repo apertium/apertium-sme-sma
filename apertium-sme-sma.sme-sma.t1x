@@ -2175,7 +2175,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="sem_veh"/>
       <attr-item tags="sem_wpn"/>
       <attr-item tags="sem_wthr"/>
-      <attr-item tags="sem_year"/>
+<!--      <attr-item tags="sem_year"/> -->
       <attr-item tags="org"/>
     </def-attr>
 
@@ -3111,7 +3111,8 @@ And then there are some categories like "month", with all the months.
         </when> -->
         <when c="M[T] loc to gen for prn and sem_hum">
           <test><and>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal> 
+            <not><equal><clip pos="1" side="sl" part="lem"/><lit v="njunuš"/></equal></not>
             <or>
              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn.pers"/></equal>
              <equal><clip pos="1" side="tl" part="lem"/><lit v="gie"/></equal>
@@ -11944,14 +11945,14 @@ And then there are some categories like "month", with all the months.
       </pattern>
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <choose>
+<!--        <choose>
         <when>
         <test><equal><clip pos="2" side="tl" part="a_case"/><lit-tag v="ess"/></equal></test> 
         <let>
         <clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/>
 	        </let>        
         </when>
-        </choose>
+        </choose> -->
         <choose>
         <when>
         <test><equal><clip pos="2" side="tl" part="lem"/><lit v=""/></equal></test>         
