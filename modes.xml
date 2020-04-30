@@ -2,7 +2,51 @@
 <modes>
   <!-- sme→sma direction: -->
 
-  <mode name="sme-sma" install="yes" gendebug="yes">
+  <mode name="sme-sma" install="no" gendebug="yes">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="sme-sma.automorf.hfst"/>
+      </program>
+      <program name="cg-proc" debug-suff="disam">
+        <file name="sme-sma.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -1 -n -w" debug-suff="syntax">
+        <file name="sme-sma.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-sme-sma.sme-sma.t1x"/>
+        <file name="sme-sma.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk" debug-suff="interchunk1">
+        <file name="apertium-sme-sma.sme-sma.t2x"/>
+        <file name="sme-sma.t2x.bin"/>
+      </program>
+      <program name="apertium-interchunk" debug-suff="interchunk2">
+        <file name="apertium-sme-sma.sme-sma.t3x"/>
+        <file name="sme-sma.t3x.bin"/>
+      </program>
+      <program name="apertium-interchunk" debug-suff="interchunk3">
+        <file name="apertium-sme-sma.sme-sma.t4x"/>
+        <file name="sme-sma.t4x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-sme-sma.sme-sma.t5x"/>
+        <file name="sme-sma.t5x.bin"/>
+      </program>
+      <program name="hfst-proc --weight-classes 1 $1">
+        <file name="sme-sma.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="sme-sma_Mid" install="yes" gendebug="no">
     <pipeline>
       <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="sme-sma.automorf.hfst"/>
