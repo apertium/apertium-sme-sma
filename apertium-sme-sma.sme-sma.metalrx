@@ -3448,6 +3448,33 @@
         <match lemma="johtu" tags="n.*.sg.ill.*" />   
          </rule>                 
 
+ <rule weight="1.0">   
+  <match lemma="deaddilit" >   
+      <select lemma="dïedtelidh"/>    
+    </match>    
+    </rule>    
+
+
+      <rule weight="0.5">   
+        <match lemma="deaddilit">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+         </rule>                 
+
+      <rule weight="0.6">   
+        <match lemma="deaddilit">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+        <match lemma="johtu" tags="n.*.sg.ill.*" />   
+         </rule>                 
+      <rule weight="0.6">   
+        <match lemma="deaddilit">   
+            <select lemma="aelkiehtidh"/>  
+         </match>   
+        <match />   
+        <match lemma="johtu" tags="n.*.sg.ill.*" />   
+         </rule>                 
+
         
 <!--  default: mïnnedh --> 
  <rule weight="1.0">   
