@@ -3982,7 +3982,7 @@
 
 
        <!-- coggat -->   <!-- daajhtodh -->
-<!--       
+       
   <rule weight="1.0">
     <match lemma="coggat">
       <select lemma="nutkâđ"/>
@@ -4004,8 +4004,25 @@
   
   <rule weight="0.6">
     <match lemma="coggat">
-      <select lemma="kárvudâttâđ"/>
+      <select lemma="gåårvedidh"/>
     </match>
+     <match tags="n.sem_clth.*"/>  
+  </rule>
+
+  <rule weight="0.6">
+    <match lemma="coggat">
+      <select lemma="gåårvedidh"/>
+    </match>
+    <match/>
+     <match tags="n.sem_clth.*"/>  
+  </rule>
+
+  <rule weight="0.6">
+    <match lemma="coggat">
+      <select lemma="gåårvedidh"/>
+    </match>
+    <match/>
+    <match/>
      <match tags="n.sem_clth.*"/>  
   </rule>
 
@@ -4018,20 +4035,12 @@
   </rule>
 
 
-  <rule weight="0.65">
+  <rule weight="0.6">
     <match lemma="coggat">
       <select lemma="gaamedidh"/>
     </match> 
     <seq n="skuovva"/>
-  </rule>
-
-  <rule weight="0.65">
-    <match lemma="coggat">
-      <select lemma="gaamedidh"/>
-    </match> 
-    <repeat upto="3"><seq n="word"/></repeat>   
-    <seq n="skuovva"/>
-  </rule>
+  </rule> 
   
    <rule weight="0.65">
     <match lemma="coggat">
@@ -4045,12 +4054,11 @@
       <select lemma="tseegkedh"/>
     </match> 
     <repeat upto="3"><seq n="word"/></repeat>  
-    <seq n="gáhpir"/>  tseegkedh tjohpem åajjan!
+    <seq n="gáhpir"/> 
   </rule>
 
--->
 
-
+<!--  tseegkedh tjohpem åajjan! -->
        <!-- galkedh -->   <!-- edtjedh -->
   <rule weight="1.0">
     <match lemma="galgat" tags="vblex.iv.*">

@@ -5675,7 +5675,7 @@ And then there are some categories like "month", with all the months.
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
-              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="NPx"/></tag>
               <tag><var n="func"/></tag>
               <tag><var n="ext"/></tag>
               <tag><var n="poss"/></tag>
@@ -5718,6 +5718,43 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </otherwise></choose>
+      </action>
+    </rule>
+
+    <rule comment="C[S]-A numeral jahkásaš_adj" c="njealje jahkásaš. : njieljien jaepien båeries."> 
+      <pattern>
+        <pattern-item n="numeral"/>
+        <pattern-item n="jahkásaš_adj"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="2"/></call-macro>
+	  <let><clip pos="2" side="tl" part="tags"/><lit-tag v="n.sg.gen"/></let>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NPx"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="ext"/></tag>
+              <tag><var n="poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="num"/>
+              <clip pos="1" side="tl" part="a_subPoS"/>
+              <lit-tag v="sg.gen"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <lit v="båeries"/>
+              <lit-tag v="adj.sg.nom"/>
+            </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 
