@@ -2741,13 +2741,11 @@ And then there are some categories like "month", with all the months.
           <test>
           <and>
               <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal>
-              <or>
-              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal>
-              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
-              </or>
+              <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+              <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
           </and>    
           </test>
-          <let><var n="subj_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+          <let><var n="subj_nbr"/><lit-tag v="sg"/></let>
         </when>
         <when c="M[V] set empty subj_nbr when not subj">
           <test><and>
@@ -10763,13 +10761,13 @@ And then there are some categories like "month", with all the months.
         </and></test>
         <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.ger"/></let>        
          </when> </choose> -->
-        <choose>
+<!--        <choose>
         <when c="plural subj sme, singular subj sma">
         <test>         
         <equal><var n="subj_nbr"/><lit-tag v="sg"/></equal>
         </test>
         <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>        
-         </when> </choose> 
+         </when> </choose>  -->
         <choose>
         <when c="der_inchl">
         <test> 
