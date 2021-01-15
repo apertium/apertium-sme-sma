@@ -1,5 +1,15 @@
 <rules>
   <rule weight="1.0">
+       <match lemma="gellie" tags="num.*"><select lemma="galle" tags="num.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gellie" tags="num.*"><select lemma="máŋga" tags="num.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="gellie" tags="num.*"><select lemma="máŋga" tags="num.*"/></match>
+      <match tags="*.pl.*"/>
+  </rule>
+  <rule weight="1.0">
        <match lemma="gaajhke" tags="prn.ind.pl.*"><select lemma="buohkat" tags="prn.ind.pl.*"/></match>
   </rule>
   <rule weight="0.5">
@@ -76,5 +86,40 @@
       <match lemma="aske"/>
       </or>
       </rule>
+
+  <rule weight="1.0">
+       <match lemma="daaroe" tags="n.*"><select lemma="dáčča" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="daaroe" tags="n.*"><select lemma="dáru" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="daaroe" tags="n.*"><select lemma="dáru" tags="n.*"/></match>
+      <match lemma="giella"/>
+      </rule>
+
+
+  <rule weight="1.0">
+       <match lemma="ulmie" tags="n.*"><select lemma="ulbmil" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="ulmie" tags="n.*"><select lemma="mearkkašupmi" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="sátni"/>
+       <match lemma="ulmie" tags="n.*"><select lemma="mearkkašupmi" tags="n.*"/></match>
+      </rule>
+
+  <rule weight="0.1">
+       <match lemma="hijvenlaakan"><select lemma="bures"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="hijvenlaakan"><select lemma="bures ládje"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="sátni"/>
+       <match lemma="hijvenlaakan"><select lemma="bures ládje"/></match>
+      </rule>
+
         
 </rules> 
