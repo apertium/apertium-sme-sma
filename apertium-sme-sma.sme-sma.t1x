@@ -1497,8 +1497,8 @@ And then there are some categories like "month", with all the months.
     </def-attr>
 
     <def-attr n="a_comp-superl">
-      <attr-item tags="comp"/>
-      <attr-item tags="sup"/>
+      <attr-item tags="der_comp"/>
+      <attr-item tags="der_sup"/>
     </def-attr>
     <def-attr n="a_actio">
       <attr-item tags="actio"/>
@@ -3297,7 +3297,7 @@ And then there are some categories like "month", with all the months.
         <when c="M[T] adj spred to sg">
           <test>
             <and>
-          <not><equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal></not>
+          <not><equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="der_comp"/></equal></not>
               <equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj"/></equal>
             </and>
           </test>
@@ -8783,7 +8783,7 @@ And then there are some categories like "month", with all the months.
                </when> -->
           <when c="stuorit juolludeamit sámi áššiide : stoerebh dievtieh saemien aamhtesidie">
             <test><and>
-              <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal>  <!-- agreement only for plural nom obs -->
+              <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="der_comp"/></equal>  <!-- agreement only for plural nom obs -->
               <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
               <!--     <not><equal><clip pos="2" side="sl" part="lem"/><lit v="ruhta"/></equal></not> -->
               <or>
