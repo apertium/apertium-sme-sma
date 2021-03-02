@@ -543,6 +543,13 @@
   <rule weight="1.0">
        <match lemma="divvut" tags="vblex.tv.*"><select lemma="staeriedidh" tags="vblex.*"/></match>
   </rule>
+  <rule weight="0.5">
+       <match lemma="divvut" tags="vblex.tv.*"><select lemma="stealladidh" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="gažaldat" />
+       <match lemma="divvut" tags="vblex.tv.*"><select lemma="stealladidh" tags="vblex.*"/></match>
+  </rule>
   <rule weight="1.0">
        <match lemma="doallat" tags="vblex.tv.*"><select lemma="steeredh" tags="vblex.*"/></match>
   </rule>

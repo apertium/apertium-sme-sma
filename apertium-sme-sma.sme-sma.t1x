@@ -8771,7 +8771,7 @@ And then there are some categories like "month", with all the months.
         <choose>
           <!--     <when c="sámi áššiide juolluduvvo unnit ruhta : saemien aamhtesidie vaenebh beetnegh laeviehtåvva">
                <test><and>
-               <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="comp"/></equal>
+               <equal><clip pos="1" side="sl" part="a_comp-superl"/><lit-tag v="der_comp"/></equal>
                <equal><clip pos="2" side="sl" part="lem"/><lit v="ruhta"/></equal>
                <or>
                <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
