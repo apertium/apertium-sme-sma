@@ -12,9 +12,21 @@
       <cat-item tags="*"/>
     </def-cat>
 
+    <def-cat n="np_cmp">
+      <cat-item tags="np.*.*.*.*.cmp"/>
+      <cat-item tags="np.*.*.*.cmp"/>
+      <cat-item tags="np.*.*.cmp"/>
+      <cat-item tags="np.*.*.*.*.cmp.guio"/>
+      <cat-item tags="np.*.*.*.cmp.guio"/>
+      <cat-item tags="np.*.*.cmp.guio"/>
+    </def-cat>
     <def-cat n="n_cmp">
-      <cat-item tags="*.cmp"/>
-      <cat-item tags="*.cmp.guio"/>
+      <cat-item tags="n.*.*.*.cmp"/>
+      <cat-item tags="n.*.*.*.*.cmp"/>
+      <cat-item tags="n.*.*.*.*.*.cmp"/>
+      <cat-item tags="n.*.*.*.cmp.guio"/>
+      <cat-item tags="n.*.*.*.*.cmp.guio"/>
+      <cat-item tags="n.*.*.*.*.*.cmp.guio"/>
       <cat-item lemma="dárogiel" tags="adj.*.attr.*"/>
       <cat-item lemma="sámegiel" tags="adj.*.attr.*"/>
       <cat-item lemma="davvisámegiel" tags="adj.*.attr.*"/>
@@ -143,13 +155,43 @@
        <attr-item tags="ger"/>
     </def-attr>
 
-    <def-attr n="a_der">
+    <def-attr n="a_deriv">
+       <attr-item tags="der_aadv"/>
+       <attr-item tags="der_passs"/>
+       <attr-item tags="der_passl"/>
+       <attr-item tags="der_ahtti"/>
+       <attr-item tags="der_alla"/>
+       <attr-item tags="der_inchl"/>
+       <attr-item tags="der_geahtes"/>
+       <attr-item tags="der_car"/>
+       <attr-item tags="der_laakan"/>
+       <attr-item tags="der_laagasj"/>
+       <attr-item tags="der_meahttun"/>
+       <attr-item tags="der_l"/>
+       <attr-item tags="der_lasj"/>
+       <attr-item tags="der_lasj.adj"/>
+       <attr-item tags="der_les"/>
+       <attr-item tags="der_caus"/>
+       <attr-item tags="der_ahtje"/>
        <attr-item tags="der_ht"/>
+       <attr-item tags="der_h"/>
+       <attr-item tags="der_d"/>
+       <attr-item tags="der_muš"/>
+       <attr-item tags="der_st"/>
+       <attr-item tags="der_t"/>
        <attr-item tags="der_vuota"/>
+       <attr-item tags="der_nomact"/>
+       <attr-item tags="der_nomag"/>
+       <attr-item tags="der_ldh"/>
+     
     </def-attr>
     <def-attr n="a_tense">
        <attr-item tags="pret"/>
        <attr-item tags="pres"/>
+    </def-attr>
+
+    <def-attr n="a_postags">
+       <attr-item tags="n.sg.nom"/>
     </def-attr>
 
     <def-attr n="a_cmp">
@@ -157,6 +199,9 @@
        <attr-item tags="cmp_sggen"/>
        <attr-item tags="cmp_plgen"/>
        <attr-item tags="cmp_attr"/>
+    </def-attr>
+    <def-attr n="a_hyph">
+       <attr-item tags="cmp_hyph"/>
     </def-attr>
     
     <def-attr n="a_neg">
@@ -699,9 +744,9 @@
     <choose>
         <when c="derivations">
           <test>
-              <equal><clip pos="1" side="sl" part="a_der"/><lit-tag v="der_ht"/></equal>
+              <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_ht"/></equal>
           </test>
-         <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_h"/></let>
+         <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_h"/></let>
         </when>
       </choose>
      <choose>
@@ -819,8 +864,14 @@
       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
       </when></choose> 
       <choose><when><test>
-	  <equal><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_vuota"/></equal></test>
+	  <equal><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_vuota"/></equal></test>
       <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+      </when>
+      </choose> 
+      <choose><when><test>
+	  <equal><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_ldh"/></equal></test>
+      <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_passl"/></let>
+      <let><clip pos="1" side="tl" part="a_postags"/><lit-tag v="vblex.iv.prfprc"/></let>
       </when>
       </choose> 
       <choose>
@@ -857,6 +908,32 @@
   </section-def-macros>
   <section-rules>
 
+    <rule comment="C[S] np_cmp noun" c="example">
+      <pattern>
+        <pattern-item n="np_cmp"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="C[S] n_cmp noun" c="example">
       <pattern>
         <pattern-item n="n_cmp"/>
@@ -865,6 +942,7 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_hyph"/><lit v=""/></let>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -892,6 +970,8 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_hyph"/><lit v=""/></let>
+        <let><clip pos="2" side="tl" part="a_hyph"/><lit v=""/></let>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -924,6 +1004,9 @@
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="4"/></call-macro>
+        <let><clip pos="1" side="tl" part="a_hyph"/><lit v=""/></let>
+        <let><clip pos="2" side="tl" part="a_hyph"/><lit v=""/></let>
+        <let><clip pos="3" side="tl" part="a_hyph"/><lit v=""/></let>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
