@@ -9956,6 +9956,7 @@ And then there are some categories like "month", with all the months.
 		<let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>     
 		<let><clip pos="1" side="tl" part="neg-goh"/><lit-tag v="neg"/></let>     
 		<let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let>     
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="ii" case="caseFirstword">
             <tags>
@@ -10009,9 +10010,7 @@ And then there are some categories like "month", with all the months.
         <pattern-item n="conneg"/>
       </pattern>
       <action>
-        <call-macro n="general-macro-1Param">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="negtags"/><lit-tag v="conneg"/></let>
 	   <choose><when c="iige dan dihte leat dárbu">
 		   <test><and>
