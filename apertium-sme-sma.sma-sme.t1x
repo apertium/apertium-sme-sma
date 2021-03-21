@@ -1152,7 +1152,7 @@
           <let><var n="neg_tense"/><clip pos="1" side="sl" part="a_tense"/></let>
           <let><clip pos="1" side="tl" part="a_tense"/><lit v=""/></let>
         <out>
-          <chunk name="verb" case="caseFirstWord">
+          <chunk name="verb" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
             </tags>
@@ -1168,8 +1168,8 @@
         <pattern-item n="vblex"/>
       </pattern>
       <action>
-        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
       <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose><when>
 	        <test><and>
        <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="conneg"/></equal>
@@ -1179,7 +1179,7 @@
        <let><clip pos="1" side="tl" part="a_infin"/><concat><lit-tag v="indic"/><var n="neg_tense"/><clip pos="1" side="sl" part="a_infin"/></concat></let>
        </when></choose>
         <out>
-          <chunk name="verb" case="caseFirstWord">
+          <chunk name="verb" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
             </tags>
