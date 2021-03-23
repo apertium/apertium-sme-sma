@@ -512,7 +512,7 @@
     <e><p><l>ieš<s n="prn"/><s n="ref"/><s n="sg"/><s n="nom"/></l><r>jïjtjehke<s n="adj"/><s n="attr"/></r></p></e>
     <e><p><l>ieš<s n="prn"/><s n="ref"/></l><r>jïjtje<s n="prn"/><s n="ref"/></r></p></e>
     <e><p><l>iešguhtet<s n="prn"/><s n="ind"/></l><r>fïereguhte<s n="prn"/><s n="ind"/><s n="sg"/></r></p></e>
-    <e><p><l>iežá<s n="prn"/><s n="ind"/></l><r>jeatjebe<s n="prn"/><s n="ind"/></r></p></e>
+    <e r="LR"><p><l>iežá<s n="prn"/><s n="ind"/></l><r>jeatjebe<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>imaš<s n="adj"/></l><r>rovnegs<s n="adj"/></r></p></e>
     <e><p><l>eambbo<s n="prn"/><s n="ind"/></l><r>jienebe<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>juoga<s n="prn"/><s n="ind"/><s n="sg"/></l><r>mij<b/>akt<s n="prn"/><s n="ind"/></r></p></e>
@@ -887,6 +887,7 @@
     <e r="RL"><p><l>fáddá<s n="n"/></l><r>aamhtes<s n="adj"/></r></p></e>
     <e><p><l>aviisa<s n="n"/></l><r>plaerie<s n="n"/></r></p></e>
     <e><p><l>aviisačálus<s n="n"/></l><r>plaerietjaeleme<s n="n"/></r></p></e>
+    <e><p><l>giehtačálus<s n="n"/></l><r>manuskripte<s n="n"/></r></p></e>
     <e><p><l>ađa<s n="n"/></l><r>jïrreme<s n="n"/></r></p></e>
     <e r="LR"><p><l>badjealmmái<s n="n"/></l><r>båatsoesaemie<s n="n"/></r></p></e>
     <e><p><l>guhkkin<s n="adv"/></l><r>guhkelde<s n="adv"/></r></p></e>
@@ -1792,6 +1793,7 @@
     <e><p><l>giellakonferánsa<s n="n"/></l><r>gïelekonferanse<s n="n"/></r></p></e>
     <e><p><l>giellakursa<s n="n"/></l><r>gïelekurse<s n="n"/></r></p></e>
     <e><p><l>giellalávdi<s n="n"/></l><r>gïelesijjie<s n="n"/></r></p></e>
+    <e><p><l>lávdi<s n="n"/></l><r>scene<s n="n"/></r></p></e>
     <e><p><l>giellalávgun<s n="n"/></l><r>gïelelaavkome<s n="n"/></r></p></e>
     <e><p><l>giellamáhttu<s n="n"/></l><r>gïeledaajroe<s n="n"/></r></p></e>
     <e><p><l>giellanjuolggadus<s n="n"/></l><r>gïelenjoelkedasse<s n="n"/></r></p></e>
@@ -2220,7 +2222,7 @@
     <e><p><l>jahkodat<s n="n"/></l><r>jaepieboelhke<s n="n"/></r></p></e>
     <e><p><l>jeaggi<s n="n"/></l><r>pluevie<s n="n"/></r></p></e>
     <e><p><l>jeagil<s n="n"/></l><r>burhvie<s n="n"/></r></p></e>
-    <e><p><l>jearahallan<s n="n"/></l><r>goerehtallemebarkoe<s n="n"/></r></p></e>
+    <e><p><l>jearahallan<s n="n"/></l><r>goerehtalleme<s n="n"/></r></p></e>
     <e><p><l>jearaldat<s n="n"/></l><r>gyhtjelasse<s n="n"/></r></p></e>
     <e><p><l>jeasta<s n="n"/></l><r>jeestere<s n="n"/></r></p></e>
     <e><p><l>jeđđehus<s n="n"/></l><r>soelkehtimmie<s n="n"/></r></p></e>
@@ -4212,7 +4214,7 @@
     <e><p><l>áigumuš<s n="n"/></l><r>aajkoe<s n="n"/></r></p></e> <!-- lrx -->
     <e><p><l>áigumuš<s n="n"/></l><r>syjhtede<s n="n"/></r></p></e>
     <e><p><l>áika<s n="n"/></l><r>haajhke<s n="n"/></r></p></e>
-    <e><p><l>gáiddus<s n="adj"/></l><r>maaje<s n="n"/></r></p></e>
+    <e r="LR"><p><l>gáiddus<s n="adj"/></l><r>maaje<s n="n"/></r></p></e>
     <e><p><l>áinnas<s n="adv"/></l><r>maaje<s n="adv"/></r></p></e>
     <e><p><l>áinnut<s n="n"/></l><r>aajnehke<s n="n"/></r></p></e>
     <e><p><l>áirras<s n="n"/></l><r>saadthalmetje<s n="n"/></r></p></e>
@@ -4925,7 +4927,10 @@
     <e><p><l>rašši<s n="adj"/></l><r>viesjies<s n="adj"/></r></p></e>
     <e><p><l>regionálalaš<s n="adj"/></l><r>regijovne<s n="n"/></r></p><par n="adj__gen"/></e>
     <e><p><l>relevánta<s n="adj"/></l><r>relevaante<s n="adj"/></r></p></e>
+    <e><p><l>jierásmuvvat<s n="vblex"/><s n="iv"/><s n="prfprc"/></l><r>dearkoes<s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
+    <e><p><l>jierásmuvvat<s n="vblex"/><s n="iv"/><s n="prfprc"/></l><r>dearkoes<s n="adj"/><s n="attr"/></r></p></e>
     <e><p><l>riekta<s n="adj"/></l><r>rïekte²<s n="adj"/></r></p></e>
+    <e><p><l>riekta<s n="adv"/></l><r>staaran<s n="adv"/></r></p></e>
     <e><p><l>riikkaidgaskasaš<s n="adj"/></l><r>gaskenasjonaale<s n="adj"/></r></p></e>
     <e><p><l>adnominála<s n="adj"/></l><r>adnominaale<s n="adj"/></r></p></e>
     <e><p><l>imperfektiiva<s n="adj"/></l><r>imperfektijve<s n="adj"/></r></p></e>
@@ -5298,7 +5303,7 @@
     <e><p><l>geavatlaččat<s n="adv"/></l><r>rïektese<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>
     <e><p><l>geavatlaččat<s n="adv"/></l><r>praktihkelaakan<s n="adv"/></r></p></e>
     <e><p><l>gitta<s n="adv"/></l><r>dahpeldihkie<s n="adv"/></r></p></e>
-    <e><p><l>gitta<s n="adv"/></l><r>öövre<s n="adv"/></r></p></e>
+    <e><p><l>áibbas<s n="adv"/></l><r>öövre<s n="adv"/></r></p></e>
     <e><p><l>giđđat<s n="adv"/></l><r>gïjrege<s n="adv"/></r></p></e>
     <e><p><l>goabbat<b/>ládje<s n="adv"/></l><r>joekehtslaakan<s n="adv"/></r></p></e>
     <e><p><l>goas<s n="adv"/></l><r>gåessie<s n="adv"/></r></p></e>
@@ -5530,13 +5535,14 @@
     <e><p><l>čihččii<s n="adv"/></l><r>geektsh<s n="adv"/></r></p></e>
     <e><p><l>čálalaččat<s n="adv"/></l><r>tjaaleldh<s n="adv"/></r></p></e>
     <e><p><l>šat<s n="adv"/></l><r>vielie<s n="adv"/></r></p></e>
-    <e><p><l>spagga<s n="adv"/></l><r>eevre<s n="adv"/></r></p></e>
+    <e r="LR" ><p><l>spagga<s n="adv"/></l><r>eevre<s n="adv"/></r></p></e>
     <e><p><l>duohkut<b/>deike<s n="adv"/></l><r>dohkh<b/>diekie<s n="adv"/></r></p></e>
     <e><p><l>dievva<s n="adv"/></l><r>dïeves<s n="adv"/></r></p></e>
  <!--   <e><p><l>geavatlaččat<s n="adv"/></l><r>åtnoe<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>  -->
 <!--   <e><p><l>praktihkalaččat<s n="adv"/></l><r>åtnoe<s n="n"/><s n="sg"/><s n="ine"/></r></p></e> -->
 
     <!-- SECTION: Verbs -->
+    <e><p><l>plagieret<s n="vblex"/><s n="tv"/></l><r>plagijeeredh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>adderet<s n="vblex"/><s n="tv"/></l><r>ektiedidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>addit<s n="vblex"/><s n="tv"/></l><r>luejhtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>addit<s n="vblex"/><s n="tv"/></l><r>vedtedh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -5637,6 +5643,7 @@
     <e><p><l>bisuhit<s n="vblex"/><s n="tv"/></l><r>tjöödtjestehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>bisánit<s n="vblex"/><s n="iv"/></l><r>tjöödtjehtidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>bivastuvvat<s n="vblex"/><s n="iv"/></l><r>bïevestidh<s n="vblex"/><s n="iv"/></r></p></e>
+    <e r="RL"><p><l>bivdit<s n="vblex"/><s n="tv"/></l><r>saarnoehtidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>bivdit<s n="vblex"/><s n="tv"/></l><r>aanoestidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e r="RL"><p><l>bivdit<s n="vblex"/><s n="tv"/></l><r>birredh<s n="vblex"/><s n="tv"/></r></p></e>
     <e r="LR"><p><l>bivdit<s n="vblex"/><s n="tv"/></l><r>gööledh<s n="vblex"/><s n="tv"/></r></p></e>
@@ -5913,6 +5920,7 @@
     <e><p><l>ealáskit<s n="vblex"/><s n="iv"/></l><r>jealajidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e><p><l>earránit<s n="vblex"/><s n="iv"/></l><r>juakadidh<s n="vblex"/><s n="iv"/></r></p></e>
     <e r="RL"><p><l>earuhit<s n="vblex"/><s n="tv"/></l><r>baaltedidh<s n="vblex"/><s n="tv"/></r></p></e>
+    <e r="RL"><p><l>earuhit<s n="vblex"/><s n="tv"/></l><r>joekehtehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>earuhit<s n="vblex"/><s n="tv"/></l><r>joekehtidh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>earáhuhttit<s n="vblex"/><s n="tv"/></l><r>jeatjahtehtedh<s n="vblex"/><s n="tv"/></r></p></e>
     <e><p><l>earáhuhttit<s n="vblex"/><s n="tv"/></l><r>jyötjedehtedh<s n="vblex"/><s n="tv"/></r></p></e>
