@@ -236,6 +236,7 @@
        <or><match lemma="ja" /><match lemma="ahte" />   </or>
        <match lemma="stuoris" />
   </rule>
+  
   <rule weight="1.0">
        <match lemma="gárži" tags="adj.*"><select lemma="gaertjies" tags="adj.*"/></match>
   </rule>

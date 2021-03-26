@@ -97,6 +97,26 @@
        <match lemma="daaroe" tags="n.*"><select lemma="dáru" tags="n.*"/></match>
       <match lemma="giella"/>
       </rule>
+  <rule weight="1.0">
+       <match lemma="joekehtehtedh" tags="vblex.*"><select lemma="analyseret" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="joekehtehtedh" tags="vblex.*"><select lemma="earuhit" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="sinsitniem"/>
+       <match lemma="joekehtehtedh" tags="vblex.*"><select lemma="earuhit" tags="vblex.*"/></match>
+      </rule>
+  <rule weight="1.0">
+       <match lemma="provhkedh" tags="vblex.*"><select lemma="atnit" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="provhkedh" tags="vblex.*"><select lemma="lávet" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="provhkedh" tags="vblex.*"><select lemma="lávet" tags="vblex.*"/></match>
+       <match tags="vblex.*.inf.*" />
+  </rule>
 
 
   <rule weight="1.0">
