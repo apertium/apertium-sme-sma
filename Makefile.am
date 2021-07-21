@@ -277,11 +277,5 @@ test-install: all
 	@diff tmp-$@/ref tmp-$@/mt
 	@rm -rf tmp-$@
 
-test: all test-install
-	echo "ja" | apertium -d . sme-sma_Mid | tee .test-mt
-	@echo "jïh" > .test-ref
-	@diff .test-ref .test-mt
-	echo "jïh" | apertium -d . sma-sme | tee .test-mt
-	@echo "ja" > .test-ref
-	@diff .test-ref .test-mt
-	@rm .test-ref .test-mt
+test: all
+	apertium-regtest test
