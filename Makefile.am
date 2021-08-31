@@ -277,5 +277,5 @@ test-install: all
 	@diff tmp-$@/ref tmp-$@/mt
 	@rm -rf tmp-$@
 
-test: all
+test: all test-install
 	apertium-regtest test
