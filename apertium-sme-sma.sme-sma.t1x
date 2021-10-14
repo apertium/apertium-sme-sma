@@ -1601,8 +1601,8 @@ And then there are some categories like "month", with all the months.
 
     <def-attr n="a_vblex">
        <attr-item tags="vblex"/>
-       <attr-item tags="vblex.iv.der_inchl.v"/>
-       <attr-item tags="vblex.tv.der_inchl.v"/>
+       <attr-item tags="vblex.iv.der_inchl.vblex"/>
+       <attr-item tags="vblex.tv.der_inchl.vblex"/>
     </def-attr>
 
     <def-attr n="a_trans">
@@ -3309,6 +3309,15 @@ And then there are some categories like "month", with all the months.
           <test>
             <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="abbr_no_case"/></in>
          </test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+        </when>
+      </choose>
+      <choose>
+        <when c="M[T] arab gen to nom">
+          <test><and>
+          <equal><clip pos="1" side="sl" part="a_subPoS"/><lit-tag v="arab"/></equal>
+          <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal>
+         </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         </when>
       </choose>
@@ -8695,13 +8704,13 @@ And then there are some categories like "month", with all the months.
            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></and></test>        
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
         </when> 
-<!--       <when c="okta ohppiin bođii : akte learoehkijstie båetieji"> this is in the macro
+      <when c="okta ohppiin bođii : akte learoehkijstie båetieji"> 
        <test><and>
        <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
         <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal>
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ela"/></let>
-              </when> -->
+              </when> 
 	</choose>
 	<choose>
 	<when  c="spred">
@@ -11117,8 +11126,36 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
-	    
 	    </when> 
+        <when c="der_inchl">
+        <test> 
+        <equal><clip pos="1" side="tl" part="a_deriv2"/><lit-tag v="der_inchl"/></equal>
+        </test>
+        <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+              <tag><var n="foc-ge"/></tag>
+            </tags>
+            <lu>  
+              <lit v="aelkedh"/>
+              <lit-tag v="vblex.iv.prfprc"/>
+            </lu>
+          </chunk>
+            <b/>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="@-FMAINV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex.inf"/>
+            </lu>
+          </chunk>
+        </out>
+        </when> 
 	    <otherwise> 
         <out>
           <chunk name="prfprc" case="caseFirstword">
@@ -11759,6 +11796,11 @@ And then there are some categories like "month", with all the months.
             </lu>
           </chunk>
         </out>
+         </when>
+	    <when c="empty">
+        <test> 
+         <equal><clip pos="1" side="tl" part="lem"/><lit v=""/></equal>
+         </test>
          </when>
         <otherwise>
         <out>

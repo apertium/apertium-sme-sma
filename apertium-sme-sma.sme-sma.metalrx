@@ -677,7 +677,7 @@
        <match lemma="gaskan" tags="pr.*"><select lemma="gaskoeh" tags="pr.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="gaska" tags="n.*"><select lemma="gåhkaldahke" tags="n.*"/></match>
+       <match lemma="gaska" tags="n.*"><select lemma="gaske" tags="n.*"/></match>
   </rule>
   <rule weight="0.5">
        <match lemma="gaska" tags="n.*"><select lemma="gaske" tags="n.*"/></match>
@@ -1057,12 +1057,8 @@
        <match tags="np.*.*.*.ill.*"/>
        </or>
   </rule>
-  <rule weight="1.0">
-       <match lemma="badjelaš" tags="adv.*"><select lemma="ånnetji bijjelen" tags="adv.*"/></match>
-  </rule>
-  <rule weight="0.5">
-       <match lemma="badjelaš" tags="adv.*"><select lemma="bijjelen" tags="adv.*"/></match>
-  </rule>
+  <rule weight="1.0"><match lemma="badjelaš" tags="adv.*"><select lemma="ånnetji bijjelen" tags="adv.*"/></match></rule>
+  <rule weight="0.5"><match lemma="badjelaš" tags="adv.*"><select lemma="bijjelen" tags="adv.*"/></match></rule>
   <rule weight="0.5">
        <or>
        <match lemma="veaháš"/>
@@ -1070,6 +1066,7 @@
        </or>
        <match lemma="badjelaš" tags="adv.*"><select lemma="bijjelen" tags="adv.*"/></match>
   </rule>
+  <rule weight="1.0"><match lemma="badjel" tags="adv.*"><select lemma="bijjelen" tags="adv.*"/></match></rule>
 
 
   <rule weight="1.0">
