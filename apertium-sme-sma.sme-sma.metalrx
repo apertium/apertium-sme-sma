@@ -903,6 +903,7 @@
         <or>
        <match tags="n.sem_lang.*"/> 
        <match tags="n.sem_txt.*"/> 
+       <match tags="n.sem_org_txt.*"/> 
         </or>
    </rule> 
   <rule weight="1.0">
