@@ -3219,6 +3219,7 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
                   <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+             <not><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="ess"/></equal></not>
              <not><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
@@ -8697,7 +8698,7 @@ And then there are some categories like "month", with all the months.
         <call-macro n="general-macro-1Param">
           <with-param pos="1"/>
         </call-macro>
-       <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro>  
+       <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="1"/></call-macro> 
     <choose><when  c="sii huksejit viesuid : dah gåetieh bigkieh">
     <test>
     <and><equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
