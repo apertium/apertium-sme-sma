@@ -98,6 +98,11 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="NP.@←SUBJ.pers.*"/>
     </def-cat>
 
+    <def-cat n="prn_Subj_l">
+        <cat-item tags="NP.@←SUBJ.pers"/>
+        <cat-item tags="NP.@←SUBJ.pers.*"/>
+    </def-cat>
+
     <def-cat n="NP_Obj_l">
         <cat-item tags="NP.@←OBJ.*"/>
         <cat-item tags="NP.@←OBJ"/>
@@ -153,6 +158,12 @@ And then there are some categories like "month", with all the months.
         <cat-item tags="*.@-F←OBJ"/>
     </def-cat>
 
+    <def-cat n="IMainV">
+        <cat-item tags="SV.@-FMAINV"/>
+        <cat-item tags="SV.*.@-FMAINV"/>
+        <cat-item tags="SV.*.@+FMAINV"/>
+    </def-cat>
+
     <def-cat n="IFMainV">
         <cat-item tags="SV.@+FMAINV"/>
         <cat-item tags="SV.*.@+FMAINV"/>
@@ -166,10 +177,10 @@ And then there are some categories like "month", with all the months.
     </def-cat>
     
     <def-cat n="FAuxV">
-        <cat-item tags="SV.@+FMAUXV"/>
-        <cat-item tags="SV.@+FMAUXV.*"/>
-        <cat-item tags="SV.*.@+FMAUXV.*"/>
-        <cat-item tags="SV.*.*.@+FMAUXV.*"/>
+        <cat-item tags="SV.@+FAUXV"/>
+        <cat-item tags="SV.@+FAUXV.*"/>
+        <cat-item tags="SV.*.@+FAUXV.*"/>
+        <cat-item tags="SV.*.*.@+FAUXV.*"/>
     </def-cat>
     
     <def-cat n="CC">
@@ -484,6 +495,31 @@ And then there are some categories like "month", with all the months.
          </out>
       </action>
     </rule>
+    <rule comment="FAuxV prn_Subj_l IMainV" c="remove pers pron " > 
+      <pattern>
+        <pattern-item n="FAuxV"/>
+        <pattern-item n="prn_Subj_l"/>
+        <pattern-item n="IMainV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+        </out>
+      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>      
+      </action>
+    </rule>
     <rule comment="FV SUBJ " > 
       <pattern>
         <pattern-item n="FV"/>
@@ -507,7 +543,7 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule> 
     <rule comment="cop-mainv NP_Advl_l NP_Spred" > 
       <pattern>
         <pattern-item n="cop-mainv"/>

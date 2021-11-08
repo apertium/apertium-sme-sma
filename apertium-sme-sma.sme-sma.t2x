@@ -88,6 +88,12 @@ And then there are some categories like "month", with all the months.
     <def-cat n="ii">
       <cat-item lemma="ii" tags="SV.*"/>
     </def-cat>
+    <def-cat n="Numr">
+      <cat-item tags="ADV.@→Num"/>
+    </def-cat>
+    <def-cat n="NumAdvl">
+      <cat-item lemma="num" tags="*.@←ADVL"/>
+    </def-cat>
 
     <def-cat n="CONNEG">
       <cat-item lemma="conneg" tags="SV.*"/>
@@ -548,6 +554,26 @@ And then there are some categories like "month", with all the months.
     </out>
       </action>
     </rule>
+    <rule comment="REGLA: Numr NumAdvl">
+    <pattern>
+       <pattern-item n="Numr"/>
+       <pattern-item n="NumAdvl"/>
+    </pattern>
+      <action>
+    <out>
+      <chunk>
+           <get-case-from pos="1"><clip pos="2" part="lem"/></get-case-from>
+            <clip pos="2" part="tags"/>
+          <lit v="{"/>
+        <clip pos="1" part="content"/>
+      <b pos="1"/>
+        <clip pos="2" part="content"/>
+           <lit v="}"/>
+      </chunk>
+    </out>
+      </action>
+    </rule>
+
 
 <!--    <rule comment="REGLA: PP P_left">
     <pattern>
@@ -623,6 +649,32 @@ And then there are some categories like "month", with all the months.
        <out>
          <chunk>
            <get-case-from pos="1"><lit v="coor_obj"/></get-case-from>
+           <clip pos="4" part="tags"/>
+           <lit v="{"/>
+           <clip pos="1" part="content"/>
+           <b pos="1"/>
+           <clip pos="2" part="content"/>
+           <b pos="2"/>
+           <clip pos="3" part="content"/>
+           <b pos="3"/>
+           <clip pos="4" part="content"/>
+           <lit v="}"/>
+           <clip pos="1" part="lemq"/>
+         </chunk>
+       </out>
+     </action>
+    </rule>
+    <rule comment="REGLA: dovneCC ADVL-left CNP ADVL-left"> 
+     <pattern>
+       <pattern-item n="dovneCC"/>
+       <pattern-item n="ADVL-left"/>
+       <pattern-item n="CNP"/>
+       <pattern-item n="ADVL-left"/>
+     </pattern>
+     <action>
+       <out>
+         <chunk>
+           <get-case-from pos="1"><lit v="coor_advl"/></get-case-from>
            <clip pos="4" part="tags"/>
            <lit v="{"/>
            <clip pos="1" part="content"/>
