@@ -459,10 +459,10 @@
        <match lemma="čeargut" tags="vblex.iv.*"><select lemma="laakedh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="čeassat" tags="vblex.iv.*"><select lemma="njabpedidh" tags="vblex.*"/></match>
+       <match lemma="lávgun" tags="n.*"><select lemma="laavkome" tags="n.*"/></match>
   </rule>
   <rule weight="1.0">
-       <match lemma="čiehka" tags="n.*"><select lemma="gaave" tags="n.*"/></match>
+       <match lemma="čeassat" tags="vblex.iv.*"><select lemma="njabpedidh" tags="vblex.*"/></match>
   </rule>
   <rule weight="1.0">
        <match lemma="čielgat" tags="vblex.iv.*"><select lemma="tjïelkedh" tags="vblex.*"/></match>
