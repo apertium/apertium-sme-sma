@@ -95,7 +95,7 @@
   </rule>
 
   <rule weight="1.0">
-       <match lemma="son" tags="prn.*"><select lemma="dah guaktah" tags="prn.*"/></match>
+       <match lemma="son" tags="prn.*"><select lemma="guaktah" tags="n.*"/></match>
   </rule>
   <rule weight="0.5">
        <match lemma="son" tags="prn.*"><select lemma="såtnoeh" tags="prn.*"/></match>
