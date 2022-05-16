@@ -935,6 +935,7 @@ And then there are some categories like "month", with all the months.
     <def-cat n="adjcomp_vblex">
       <cat-item lemma="gárvvásmuvvat" tags="vblex.*"/>
       <cat-item lemma="guorranit" tags="vblex.*"/>
+      <cat-item lemma="stuorrut" tags="vblex.*"/>
     </def-cat>
 
     <def-cat n="adv_vaeltedh_vblex">
@@ -1137,18 +1138,18 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="lassi" tags="n.*.ess.*"/>
     </def-cat>
     <def-cat n="adj_adj_comp">
-      <cat-item lemma="eanet" tags="adj.comp.*"/>
+      <cat-item lemma="eanet" tags="adj.der_comp.*"/>
       <cat-item lemma="eanet" tags="adj.der_aadv.adv.*"/>
-      <cat-item lemma="unni" tags="adj.comp.*"/>
-      <cat-item lemma="stuoris" tags="adj.comp.*"/>
-      <cat-item lemma="gárži" tags="adj.comp.*"/>
-      <cat-item lemma="gallji" tags="adj.comp.*"/>
-      <cat-item lemma="eanet" tags="adj.*.comp.*"/>
+      <cat-item lemma="unni" tags="adj.der_comp.*"/>
+      <cat-item lemma="stuoris" tags="adj.der_comp.*"/>
+      <cat-item lemma="gárži" tags="adj.der_comp.*"/>
+      <cat-item lemma="gallji" tags="adj.der_comp.*"/>
+      <cat-item lemma="eanet" tags="adj.*.der_comp.*"/>
       <cat-item lemma="eanet" tags="adj.*.der_aadv.adv.*"/>
-      <cat-item lemma="unni" tags="adj.*.comp.*"/>
-      <cat-item lemma="stuoris" tags="adj.*.comp.*"/>
-      <cat-item lemma="gárži" tags="adj.*.comp.*"/>
-      <cat-item lemma="gallji" tags="adj.*.comp.*"/>
+      <cat-item lemma="unni" tags="adj.*.der_comp.*"/>
+      <cat-item lemma="stuoris" tags="adj.*.der_comp.*"/>
+      <cat-item lemma="gárži" tags="adj.*.der_comp.*"/>
+      <cat-item lemma="gallji" tags="adj.*.der_comp.*"/>
     </def-cat>
     <def-cat n="ord_card">
       <cat-item tags="adj.ord.*"/>
@@ -1457,7 +1458,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="boahtte" tags="adj.*"/> 
     </def-cat>
     <def-cat n="agreement_attr">                             
-      <cat-item  tags="adj.comp.*.@→N"/> 
+      <cat-item  tags="adj.der_comp.*.@→N"/> 
       <cat-item lemma="máŋga" tags="num.*.@→N"/> 
       <cat-item lemma="muhtun" tags="prn.ind.*.@→N"/> 
       <cat-item lemma="muhtin" tags="prn.ind.*.@→N"/> 
@@ -1471,7 +1472,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="goalmmát" tags="adj.ord.*.@→N"/> 
       <cat-item lemma="viđát" tags="adj.ord.*.@→N"/> 
       <cat-item lemma="guđát" tags="adj.ord.*.@→N"/> 
-      <cat-item  tags="adj.comp.*.@→A"/> 
+      <cat-item  tags="adj.der_comp.*.@→A"/> 
       <cat-item lemma="máŋga" tags="num.*.@→A"/> 
       <cat-item lemma="muhtun" tags="prn.ind.*.@→A"/> 
       <cat-item lemma="muhtin" tags="prn.ind.*.@→A"/> 
@@ -1485,7 +1486,7 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="goalmmát" tags="adj.ord.*.@→A"/> 
       <cat-item lemma="viđát" tags="adj.ord.*.@→A"/> 
       <cat-item lemma="guđát" tags="adj.ord.*.@→N"/> 
-<!--      <cat-item  tags="adj.*.comp.*"/>  -->
+<!--      <cat-item  tags="adj.*.der_comp.*"/>  -->
     </def-cat>
     <def-cat n="oažžut_vblex">
       <cat-item lemma="oažžut" tags="vblex.*"/>
@@ -1503,7 +1504,7 @@ And then there are some categories like "month", with all the months.
        <attr-item tags="adj"/>
        <attr-item tags="adj.ord"/>
        <attr-item tags="adj.arab.ord"/>
-        <attr-item tags="adj.comp"/>   
+        <attr-item tags="adj.der_comp"/>   
     </def-attr>
 
     <def-attr n="a_comp-superl">
@@ -3467,7 +3468,7 @@ And then there are some categories like "month", with all the months.
        <choose>
 	    <when><test><or>
 	     <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="agreem_list"/></in>
-	     <equal><clip pos="1" side="sl" part="a_npagree_type"/><lit-tag v="adj.comp"/></equal>
+	     <equal><clip pos="1" side="sl" part="a_npagree_type"/><lit-tag v="adj.der_comp.adj"/></equal>
       </or></test>
               <let><var n="func"/><clip pos="2" side="sl" part="a_func"/></let>
        <choose>
@@ -8232,7 +8233,7 @@ And then there are some categories like "month", with all the months.
             
            <lu>
         <clip pos="1" side="tl" part="lem"/>            
-			<lit-tag v="adj.comp.sg.nom"/>
+			<lit-tag v="adj.der_comp.adj.sg.nom"/>
             </lu>
            <b/>
            <lu>
@@ -11828,7 +11829,7 @@ And then there are some categories like "month", with all the months.
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="4"/></call-macro>
         <call-macro n="convert-case-nbr-poss-1Param"><with-param pos="4"/></call-macro>
-         <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj.comp.attr"/></let>
+         <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj.der_comp.adj.attr"/></let>
          <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
