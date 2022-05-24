@@ -218,6 +218,14 @@
        <or><match lemma="ja" /><match lemma="ahte" />   </or>
        <match lemma="eanet" />
   </rule>
+  <rule weight="0.5">
+       <match lemma="eanet" tags="adv.*"><select lemma="jeenje-jeenjebe" tags="adj.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="eanet" tags="adv.*"><select lemma="jeenje-jeenjebe" tags="adj.*"/></match>
+       <or><match lemma="ja" /><match lemma="ahte" />   </or>
+       <match lemma="eanet" />
+  </rule>
   <rule weight="1.0">
        <match lemma="unni" tags="adj.*"><select lemma="onne" tags="adj.*"/></match>
   </rule>
