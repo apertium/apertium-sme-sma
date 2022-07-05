@@ -1,4 +1,5 @@
-<metalrx>
+<?xml version="1.0" encoding="UTF-8"?>
+<lrx>
 
   <def-seqs>
     <def-seq n="word">
@@ -1757,7 +1758,6 @@
    
    
         
--->
 <!-- čuovvut as dåeriedidh or seatadidh  --> 
    <rule weight="1.0">
      <match lemma="čuovvut">
@@ -1934,17 +1934,17 @@
  </rule>     
 
     <rule weight="1.0">
-   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.@+FAUXV">
+   <match lemma="ii" tags="vblex.iv.neg.indic.*.*.@+FAUXV">
      <select lemma="ij" tags="vblex.iv.neg.indic.*"/>
    </match>
  </rule>     
     <rule weight="0.5">
-   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
+   <match lemma="ii" tags="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
      <select lemma="ij" tags="vblex.iv.neg-goh.indic.*"/>
    </match>
  </rule>     
     <rule weight="0.6">
-   <match lemma="ii" tag="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
+   <match lemma="ii" tags="vblex.iv.neg.indic.*.*.foc_neg-ge.*">
      <select lemma="ij" tags="vblex.iv.neg-goh.indic.*"/>
    </match>
  </rule>     
@@ -2371,7 +2371,7 @@
 
        <rule weight="0.6">
    <match lemma="ii" tags="vblex.*"><select lemma="ij" tags="vblex.neg-goh.indic.pres.*"/></match>
-    <repeat upto="8"><seq n="non-verb"/></repeat>   
+    <repeat from="0" upto="8"><seq n="non-verb"/></repeat>   
     <match tags="sent"/>
  </rule>     
 
@@ -3140,7 +3140,7 @@
     </match>    
     </rule>      
 
-  temporarly; rule is comming 
+  <!--temporarly; rule is comming -->
      <rule weight="0.5">   
        <match lemma="gaskka">   
            <select lemma="gaske"/>  
@@ -3867,8 +3867,8 @@
             <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
-        <rule weight="0.6" tags="n.*.pl.*"> 
-         <match lemma="dárbu" >
+        <rule weight="0.6"> 
+         <match lemma="dárbu" tags="n.*.pl.*">
             <select lemma="daerpiesvoete"/> 
          </match>
        </rule>     
@@ -4004,7 +4004,7 @@
          <match lemma="go"  tags="cnjsub.*">
             <select lemma="goh"  tags="cnjsub.*"/> 
          </match>
-    <repeat upto="2"><seq n="non-verb"/></repeat>   
+    <repeat from="0" upto="2"><seq n="non-verb"/></repeat>   
          <or>
          <match tags="prn.*.*.*.@COMP-CS←"/>
          <match tags="prn.*.*.*.*.@COMP-CS←"/>
@@ -4041,7 +4041,7 @@
          <match lemma="go" >
             <select lemma="goh"/> 
          </match>
-    <repeat upto="2"><seq n="non-verb"/></repeat> 
+    <repeat from="0" upto="2"><seq n="non-verb"/></repeat> 
       <match tags="vblex.*.indic.pres.*" />
       </rule>     
        <rule weight="0.6"> 
@@ -4169,11 +4169,12 @@
     <match lemma="coggat">
       <select lemma="gåårvedidh"/>
     </match>
-    <repeat upto="3"><seq n="word"/></repeat>   
+    <repeat from="0" upto="3"><seq n="word"/></repeat>   
    <match tags="n.sem_clth.*"/>  
   </rule>
 
 
+  <!-- commenting out these 3 rules because those <seq>s don't exist
   <rule weight="0.6">
     <match lemma="coggat">
       <select lemma="gaamedidh"/>
@@ -4192,9 +4193,10 @@
     <match lemma="coggat">
       <select lemma="tseegkedh"/>
     </match> 
-    <repeat upto="3"><seq n="word"/></repeat>  
+    <repeat from="0" upto="3"><seq n="word"/></repeat>  
     <seq n="gáhpir"/> 
   </rule>
+-->
 
 
 <!--  tseegkedh tjohpem åajjan! -->
@@ -4225,4 +4227,4 @@
     
 </rules> 
 
-</metalrx>
+</lrx>

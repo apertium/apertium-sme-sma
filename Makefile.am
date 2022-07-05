@@ -2,7 +2,6 @@
 ## Makefile for Northern Saami--Southern Saami
 ###############################################################################
 
-VERSION=0.1.0
 LANG1=sme
 LANG2=sma
 LANG2n=sma_North
@@ -165,15 +164,12 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 ## Lexical selection rules
 ###############################################################################
 
-%.lrx: metalrx-to-lrx.xslt %.metalrx
-	xsltproc $^ > $@.tmp
-	@xmllint --format $@.tmp > $@
-	@rm $@.tmp
-
 $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
+	apertium-validate-lrx $<
 	lrx-comp $< $@
 
 $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
+	apertium-validate-lrx $<
 	lrx-comp $< $@
 
 ###############################################################################
