@@ -885,13 +885,13 @@
       </choose> 
       
 <!-- whole macro from sme-sma still not inserted -->      
-      <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
-      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let> 
-      <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> 
-      <let><clip pos="1" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let> 
-      <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let>
+      <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>  
+<!--      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let> -->
+<!--      <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let> -->
+<!--      <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>  -->
+<!--      <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> -->
+<!--      <let><clip pos="1" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let>  -->
+<!--      <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let> -->
      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
 
@@ -927,13 +927,41 @@
     </def-macro>
    
     <def-macro n="default-conversion1" npar="1">
-      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_ela_ine"/><lit-tag v="loc"/></let>
-      <let><clip pos="1" side="tl" part="a_spec_sma_tags1"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_spec_sma_tags2"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let> <!-- must be twice -->
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_func"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_sem"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_ela_ine"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_ela_ine"/><lit-tag v="loc"/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_spec_sma_tags1"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_spec_sma_tags1"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_spec_sma_tags2"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_spec_sma_tags2"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_trans"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_trans"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let>		
+	</when>
+	</choose>
       <choose>
 	      <when><test><and>
 	  <equal><clip pos="1" side="sl" part="a_attr"/><lit-tag v="attr"/></equal>
