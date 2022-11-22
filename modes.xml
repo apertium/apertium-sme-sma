@@ -228,13 +228,21 @@
         <file name="apertium-sme-sma.sma-sme.t1x"/>
         <file name="sma-sme.t1x.bin"/>
       </program>
-      <program name="apertium-interchunk" debug-suff="interchunk">
+      <program name="apertium-interchunk" debug-suff="interchunk1">
         <file name="apertium-sme-sma.sma-sme.t2x"/>
         <file name="sma-sme.t2x.bin"/>
       </program>
-      <program name="apertium-postchunk" debug-suff="postchunk">
+      <program name="apertium-interchunk" debug-suff="interchunk2">
         <file name="apertium-sme-sma.sma-sme.t3x"/>
         <file name="sma-sme.t3x.bin"/>
+      </program>
+      <program name="apertium-interchunk" debug-suff="interchunk3">
+        <file name="apertium-sme-sma.sma-sme.t4x"/>
+        <file name="sma-sme.t4x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-sme-sma.sma-sme.t5x"/>
+        <file name="sma-sme.t5x.bin"/>
       </program>
       <program name="hfst-proc --weight-classes 1 $1">
         <file name="sma-sme.autogen.hfst"/>
