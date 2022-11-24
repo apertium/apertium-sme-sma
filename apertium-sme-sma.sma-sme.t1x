@@ -783,139 +783,92 @@
         <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
       </when></choose>
     </def-macro>
-
-
-
-
-
-
-    <def-macro n="general-macro-1Param" npar="1">
-
+    
+        <def-macro n="general-macro-1Param" npar="1">
+      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
       <choose>
-        <when c="M[V] set main-verb-lemma">
-          <test>
-            <and><or>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←ADVL"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←SUBJ"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@A←"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@N←"/></equal></or>
-              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="vblex"/></equal>
-              <not><equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_nomact"/></equal></not>
-            </and>
-          </test>
-          <let><var n="main-verb-lemma"/><clip pos="1" side="tl" part="lem"/></let>
+        <when c="add func">
+          <test><not><equal><clip pos="1" side="tl" part="a_func"/><lit v=""/></equal></not></test>
+          <let><var n="func"/><clip pos="1" side="sl" part="a_func"/></let>
+          <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>		
         </when>
       </choose>
-    <choose>
-        <when c="ger to actio.ess">
-          <test>
-              <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="ger"/></equal>
-          </test>
-         <let><clip pos="1" side="tl" part="a_infin"/><lit-tag v="actio.ess"/></let>
-        </when>
-      </choose>
-    <choose>
-        <when c="derivations">
-          <test>
-              <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_ht"/></equal>
-          </test>
-         <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_h"/></let>
-        </when>
-      </choose>
-      <choose>
-        <when c="M[V] set acc when not obj nom pl">
-          <test><and>
-              <or>
-	              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@OBJ→"/></equal>
-	              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@←OBJ"/></equal>
-              </or>
-               <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
-               </and>
-        </test>
-               <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="acc"/></let>
-        </when>
-      </choose>
-     <choose>
-        <when c="M[V] set subj_nbr when subj">
-          <test>
-          <and>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal>
-              <or>
-              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal>
-              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
-              </or>
-          </and>    
-          </test>
-          <let><var n="subj_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
-        </when>
-        <when c="M[V] set empty subj_nbr when not subj">
-          <test><and>
-              <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@SUBJ→"/></equal></not>
-              <or>
-               <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="prn"/></equal>
-              <equal><clip pos="1" side="sl" part="a_PoS"/><lit-tag v="n"/></equal>
-               </or></and>
-        </test>
-          <let><var n="subj_nbr"/><lit v=""/></let>
-        </when>
-      </choose>
-     <choose>
-        <when c="M[V] set verb_tense_nbrpers">
-          <test>
-            <or>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FAUXV"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@+FMAINV"/></equal>
-            </or>
-          </test>
-          <let><var n="verb_tense_nbrpers"/><concat><clip pos="1" side="tl" part="a_tense"/><clip pos="1" side="tl" part="a_pers"/>
-          <clip pos="1" side="tl" part="a_nbr"/></concat></let>
-          <let><var n="tense"/><clip pos="1" side="tl" part="a_tense"/></let>
-        </when>
-        <when c="M[V] set infin">
-          <test>
-            <or>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FAUXV"/></equal>
-              <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
-            </or>
-          </test>
-          <let><var n="infin"/><clip pos="1" side="tl" part="a_infin"/></let>
-        </when>
-      </choose> 
-      
-<!-- whole macro from sme-sma still not inserted -->      
-      <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>  
-<!--      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let> -->
-<!--      <let><clip pos="1" side="tl" part="a_qst"/><lit v=""/></let> -->
-<!--      <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>  -->
-<!--      <let><clip pos="1" side="tl" part="a_foc-ge"/><lit v=""/></let> -->
-<!--      <let><clip pos="1" side="tl" part="a_sem_year"/><lit-tag v="arab"/></let>  -->
-<!--      <let><clip pos="1" side="tl" part="a_exthab"/><lit v=""/></let> -->
-     <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_sem"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_ela_ine"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_ela_ine"/><lit-tag v="loc"/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_spec_smj_tags"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_spec_smj_tags"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_trans"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_trans"/><lit v=""/></equal></not></test>
+      <let><clip pos="1" side="tl" part="a_trans"/><lit v=""/></let>		
+	</when>
+	</choose>
+	<choose><when><test>
+	<equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_neg-k"/></equal>
+     </test>
+      <let><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_neg-ge"/></let>
+      </when></choose>
     </def-macro>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <def-macro n="general-macro-2Param" npar="2" c="Use for all chunks of two pattern-items
+                                                    param1: first pattern-item; used to set caseFirstword
+                                                    param2: second pattern-item; used to set func variable">
+      <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro> 
+      <choose><when>
+        <test><and>
+          <equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
+          <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@+FAUXV"/></equal>
+        </and></test>
+        <let><var n="func"/><lit-tag v="@+FMAINV"/></let>
+      </when>
+            <otherwise>
+       <let><var n="func"/><clip pos="2" side="sl" part="a_func"/></let>
+            </otherwise>
+       </choose>
+    </def-macro>
 
     
-
-    <def-macro n="general-macro-2Param" npar="2">
-      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
-      <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
+    
+        <def-macro n="general-macro-3Param" npar="3" c="Use for all chunks of three pattern-items
+                                                    param1: first pattern-item; used to set caseFirstword
+                                                    param2: second pattern-item
+                                                    param3: third pattern-item; used to set func variable">
+      <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="3"/></call-macro>
+      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+      <choose><when>
+        <test><and>
+          <equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@-FMAINV"/></equal>
+          <equal><clip pos="3" side="sl" part="a_func"/><lit-tag v="@+FAUXV"/></equal>
+        </and></test>
+        <let><var n="func"/><lit-tag v="@+FMAINV"/></let>
+      </when></choose>
+    </def-macro>
+    <def-macro n="general-macro-4Param" npar="4" c="Use for all chunks of four pattern-items
+                                                    param1: first pattern-item; used to set caseFirstword
+                                                    param2: second pattern-item
+                                                    param3: third pattern-item
+                                                    param4: fourth pattern-item; used to set func variable">
+      <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="4"/></call-macro>
       <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
-
  
      <def-macro n="cmp-conversion" npar="1">
 	 <choose><when><test>
@@ -1041,6 +994,63 @@
               </lu>
               <lu>
                 <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="C[S] mod_n n_not_cmp" c="stoerre gåetie : stuora viessu">
+      <pattern>
+        <pattern-item n="mod_n"/>
+        <pattern-item n="n_not_cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="C[S] mod_n n_cmp n_not_cmp" c="stoerre vaeriegåetie : stuora várreviessu">
+      <pattern>
+        <pattern-item n="mod_n"/>
+        <pattern-item n="n_cmp"/>
+        <pattern-item n="n_not_cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
               </lu>
             </mlu>
           </chunk>
