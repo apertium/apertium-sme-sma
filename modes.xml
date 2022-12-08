@@ -299,4 +299,55 @@
     </pipeline>
   </mode>
 
+  <mode name="sme-sma_rtx" install="yes" gendebug="yes">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="sme-sma.automorf.hfst"/>
+      </program>
+      <program name="cg-proc" debug-suff="disam">
+        <file name="sme-sma.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -1 -n -w" debug-suff="syntax">
+        <file name="sme-sma.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="rtx-proc">
+        <file name="sme-sma.rtx.bin"/>
+      </program>
+      <program name="hfst-proc --weight-classes 1 $1">
+        <file name="sme-sma.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="sme-sma_rtx-tree" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="sme-sma.automorf.hfst"/>
+      </program>
+      <program name="cg-proc" debug-suff="disam">
+        <file name="sme-sma.mor.rlx.bin"/>
+      </program>
+      <program name="cg-proc -1 -n -w" debug-suff="syntax">
+        <file name="sme-sma.syn.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="sme-sma.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="sme-sma.autolex.bin"/>
+      </program>
+      <program name="rtx-proc -T">
+        <file name="sme-sma.rtx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
 </modes>

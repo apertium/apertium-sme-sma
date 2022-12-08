@@ -14,5 +14,13 @@
     "sme-sma-pending": {
         "input": "sme-sma-pending-input.txt",
         "mode": "sme-sma"
+    },
+    "sme-sma-rtx": {
+        "input": "sme-sma-rtx-input.txt",
+        "mode": "sme-sma_rtx"
+    },
+    "sme-sma-rtx-tree": {
+        "input": "sme-sma-rtx-input.txt",
+        "mode": "sme-sma_rtx-tree"
     }
 }
