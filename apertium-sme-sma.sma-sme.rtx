@@ -67,27 +67,37 @@
 !        !         if (1.person = p3 and 1.number = pl) px3pl
 !        !        )]
 !       } ;
-      
-      
-NP -> %n { %1[poss=$poss] } ;
-NP -> "attr adj" adj.attr %NP { 1 _ %2[poss=$poss] } ;
-NP -> %NP cnjcoo NP { %1 _ 2 _ 3[case=$case] } ;
-NP -> %prn { %1 } ;  ! % = NP får taggene fra pronomene
 
-VP -> vblex.tv NP !  hvis transitivt verb, kjør OV - verb + nomen 
-      {
-        2[case=(if (2.number = pl and 2.case = acc) nom   ! case som er acc, blir nominativ hvis nummer er plural
-                if (2.sem = sem_food and 2.case = loc) ela ! hvis sem_taggen er food og case er loc - gir output elativ.
-                else 2.case)] ! ellers gi samme case som er i input.
-        _ 1
-      } ;
-      
-VP -> vblex.iv NP  ! 
+!  SMA -> SME 
+!   SOV     SVO 
+! maanah (subj) laejpieh (object- indef) byöpemdieh (verbal) -> mánát (subjekt) borret (verbl) láibbiid (obj)
+! maanah (subj) laejpide (object- def) byöpemdieh (verbal). ->  mánát (subjekt)  láibbiid (obj) borret (verbl)
 
-      { 1 _ 2 } ;
+VP -> NP.*.nom vblex { 2 _ 1[case=acc] } ;
+VP -> NP.*.acc vblex.tv { 1 _ 2 } ;
 
-  
-VP -> NP vblex.tv { 1 _ 2 } ; ! VO gir OV som output
+
+ NP -> %n { %1[poss=$poss] } ;
+ NP -> "attr adj" adj.attr %NP { 1 _ %2[poss=$poss] } ;
+ NP -> %NP cnjcoo NP { %1 _ 2 _ 3[case=$case] } ;
+ NP -> %prn { %1 } ;  ! % = NP får taggene fra pronomene
+ 
+ 
+! VP -> vblex.tv NP !  hvis transitivt verb, kjør OV - verb + nomen 
+!       {
+!         2[case=(if (2.number = pl and 2.case = acc) nom   ! case som er acc, blir nominativ hvis nummer er plural
+!                 if (2.sem = sem_food and 2.case = loc) ela ! hvis sem_taggen er food og case er loc - gir output elativ.
+!                 else 2.case)] ! ellers gi samme case som er i input.
+!         _ 1
+!       } ;
+!       
+! VP -> vblex.iv NP  ! 
+! 
+!       { 1 _ 2 } ;
+! 
+!   
+! VP -> NP vblex.tv { 1 _ 2 } ; ! VO gir OV som output
+! 
 
 
 ! sma - Mov leah vïellh  -> Gánddas leat vieljat 
