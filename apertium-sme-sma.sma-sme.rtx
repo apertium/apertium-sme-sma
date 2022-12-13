@@ -74,7 +74,7 @@
 ! maanah (subj) laejpide (object- def) byöpemdieh (verbal). ->  mánát (subjekt)  láibbiid (obj) borret (verbl)
 
 VP -> NP.*.nom vblex { 2 _ 1[case=acc] } ;
-VP -> NP.*.acc vblex.tv { 1 _ 2 } ;
+VP -> NP.*.acc vblex.tv { 2 _ 1 } ;
 
 
  NP -> %n { %1[poss=$poss] } ;
@@ -97,7 +97,7 @@ VP -> NP.*.acc vblex.tv { 1 _ 2 } ;
 ! 
 !   
 ! VP -> NP vblex.tv { 1 _ 2 } ; ! VO gir OV som output
-! 
+ 
 
 
 ! sma - Mov leah vïellh  -> Gánddas leat vieljat 
