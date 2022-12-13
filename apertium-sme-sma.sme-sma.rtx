@@ -17,6 +17,7 @@ number = sg pl ;
 case = acc nom gen loc ine ela ;
 poss = ("" "") px1sg px1du px1pl px2sg px2du px2pl px3sg px3du px3pl ;
 person = p1 p2 p3 ;
+pron_type = pers refl dem indef recipr rel ;
 attr = attr ;
 transitivity = tv iv ;
 mood = indic imp ;
@@ -40,10 +41,12 @@ adj_pred: _.number.case ;
 adj: (if (1.attr = attr) 1(adj_attr)
       else 1(adj_pred)) ;
 cnjcoo: _ ;
+prn: _.pron_type.person.number.case ; ! mun<prn><pers><p1><sg><loc>
 NP: _.number.case.poss.sem ;
 ! <vblex><tv><indic><pres><p3><pl>
 vblex: _.transitivity.mood.tense.person.number ;
 VP: _ ;
+S: _ ;
 
 p1_or_p2 = p1 p2 ;
 NP -> prn.pers.[p1_or_p2].*.gen %NP
@@ -63,12 +66,31 @@ NP -> prn.pers.[p1_or_p2].*.gen %NP
 NP -> %n { %1[poss=$poss] } ;
 NP -> "attr adj" adj.attr %NP { 1 _ %2[poss=$poss] } ;
 NP -> %NP cnjcoo NP { %1 _ 2 _ 3[case=$case] } ;
+NP -> %prn { 1 } ;  ! % = NP får taggene fra pronomene
 
-VP -> vblex.tv NP
+VP -> vblex.tv NP !  hvis transitivt verb, kjør OV - verb + nomen 
       {
-        2[case=(if (2.number = pl) nom
-                if (2.sem = sem_food and 2.case = loc) ela
-                else 2.case)]
+        2[case=(if (2.number = pl and 2.case = acc) nom   ! case som er acc, blir nominativ hvis nummer er plural
+                if (2.sem = sem_food and 2.case = loc) ela ! hvis sem_taggen er food og case er loc - gir output elativ.
+                else 2.case)] ! ellers gi samme case som er i input.
         _ 1
       } ;
-VP -> NP vblex.tv { 1 _ 2 } ;
+VP -> NP vblex.tv { 1 _ 2 } ; ! VO gir OV som output
+
+
+
+! sme - Gánddas leat vieljat  - Mov leah vïellh
+!       Gánddas lea viellja.  - Mov lea vïelle
+
+S -> NP.*.loc leat@vblex.iv.indic NP { 1[case=gen] _ 2 _ 3 } ;
+
+
+
+
+
+
+
+  
+
+
+
