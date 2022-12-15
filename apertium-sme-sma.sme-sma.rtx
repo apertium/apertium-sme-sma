@@ -25,6 +25,8 @@ tense = pres pret ;
 qst = qst ;
 np_type = ant cog ;
 gender = m f ;
+vform = inf conneg ;
+neg = neg ;
 person_number = "p1.sg" "p1.du" "p1.pl"
                 "p2.sg" "p2.du" "p2.pl"
                 "p3.sg" "p3.du" "p3.pl" ;
@@ -44,17 +46,21 @@ adj_attr: _.attr ;
 adj_pred: _.number.case ;
 adj: (if (1.attr = attr) 1(adj_attr)
       else 1(adj_pred)) ;
+adv: _ ;
 cnjcoo: _ ;
 prn: _.pron_type.person.number.case ; ! mun<prn><pers><p1><sg><loc>
 NP: _.number.case.poss.sem ;
 ! <vblex><tv><indic><pres><p3><pl>
-vblex: _.transitivity.mood.tense.person.number ;
-VP: _ ;
+vblex_fin: _.transitivity.neg.mood.tense.person.number ; ! neg usually empty
+vblex_inf: _.transitivity.vform ;
+vblex: (if (1.vform = "") 1(vblex_fin)
+        else 1(vblex_inf)) ;
+VP: _.mood.tense.vform ;
 S: _ ;
 
 p1_or_p2 = p1 p2 ;
-NP -> prn.pers.[p1_or_p2].*.gen %NP
-      { %2[poss=1.person_number]
+NP -> prn.pers.[p1_or_p2].*.gen.$lemcase/sl %NP
+      { %2[poss=1.person_number,lemcase=$lemcase]
        ! the following is equivalent
        ! 2[poss=(if (1.person = p1 and 1.number = sg) px1sg
        !         if (1.person = p1 and 1.number = du) px1du
@@ -68,22 +74,34 @@ NP -> prn.pers.[p1_or_p2].*.gen %NP
        !        )]
       } ;
 NP -> %n { %1[poss=$poss,lemcase=$lemcase] } ;
-NP -> "attr adj" adj.attr %NP { 1 _ %2[poss=$poss] } ;
-NP -> %NP cnjcoo NP { %1 _ 2 _ 3[case=$case] } ;
-NP -> %prn { 1 } ;  ! % = NP får taggene fra pronomene
+NP -> adj.attr.$lemcase/sl %NP { 1[lemcase=$lemcase] _ %2[poss=$poss] } ;
+NP -> %NP cnjcoo NP { %1[lemcase=$lemcase] _ 2 _ 3[case=$case] } ;
+NP -> %prn { 1[lemcase=$lemcase] } ;  ! % = NP får taggene fra pronomene
 ! Danielgo -> Daniel dïhte
 NP -> %np { 1 (if (1.qst = qst) [ _ dïhte@pcle ]) } ;
-VP -> vblex.tv.$lemcase/sl NP !  hvis transitivt verb, kjør OV - verb + nomen
+
+VP -> %vblex.tv.$lemcase/sl NP !  hvis transitivt verb, kjør OV - verb + nomen
       {
         2[case=(if (2.number = pl and 2.case = acc) nom   ! case som er acc, blir nominativ hvis nummer er plural
                 if (2.sem = sem_food and 2.case = loc) ela ! hvis sem_taggen er food og case er loc - gir output elativ.
                 else 2.case), ! ellers gi samme case som er i input.
            lemcase=$lemcase]
-        _ 1[lemcase=aa]
+        _ %1[lemcase=aa]
       } ;
-VP -> NP vblex.tv { 1 _ 2 } ; ! VO gir OV som output
+VP -> NP %vblex.tv { 1 _ %2 } ; ! VO gir OV som output
+VP -> %vblex.iv { %1 } ;
+VP -> adv %VP { 1 _ %2 } ;
+
+! AuxP: _ ;
+! AuxP -> ii@vblex.iv.neg VP.*.conneg
+!         { 1[tense=2.tense,mood=2.mood] _ 2[tense="",mood=""] } ;
 
 ! sme - Gánddas leat vieljat  - Mov leah vïellh
 !       Gánddas lea viellja.  - Mov lea vïelle
 
 S -> NP.*.loc leat@vblex.iv.indic NP { 1[case=gen] _ 2 _ 3 } ;
+
+! Mun in boahtán. -> Idtjim manne båetieh.
+S -> NP.*.nom.$lemcase ii@vblex.iv.neg VP.*.conneg
+     { 2[tense=3.tense,mood=3.mood,lemcase=$lemcase]
+       _ 1[lemcase=aa] _ 3[tense="",mood=""] } ;
