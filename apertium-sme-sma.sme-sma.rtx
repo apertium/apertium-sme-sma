@@ -21,6 +21,9 @@ attr = attr ;
 transitivity = tv iv ;
 mood = indic imp ;
 tense = pres pret ;
+qst = qst ;
+np_type = ant cog ;
+gender = m f ;
 person_number = "p1.sg" "p1.du" "p1.pl"
                 "p2.sg" "p2.du" "p2.pl"
                 "p3.sg" "p3.du" "p3.pl" ;
@@ -35,6 +38,7 @@ person_number > poss : "p1.sg" px1sg, "p1.du" px1du, "p1.pl" px1pl,
 case > case : loc ine ;
 
 n: _.number.case.poss ;
+np: _.np_type.gender.number.case ;
 adj_attr: _.attr ;
 adj_pred: _.number.case ;
 adj: (if (1.attr = attr) 1(adj_attr)
@@ -60,15 +64,20 @@ NP -> prn.pers.[p1_or_p2].*.gen %NP
        !         if (1.person = p3 and 1.number = pl) px3pl
        !        )]
       } ;
-NP -> %n { %1[poss=$poss] } ;
+NP -> %n { %1[poss=$poss,lemcase=$lemcase] } ;
 NP -> "attr adj" adj.attr %NP { 1 _ %2[poss=$poss] } ;
 NP -> %NP cnjcoo NP { %1 _ 2 _ 3[case=$case] } ;
+! Danielgo -> Daniel dïhte
+NP -> %np { 1 (if (1.qst = qst) [ _ dïhte@pcle ]) } ;
 
-VP -> vblex.tv NP
+VP -> vblex.tv.$lemcase/sl NP
       {
         2[case=(if (2.number = pl) nom
                 if (2.sem = sem_food and 2.case = loc) ela
-                else 2.case)]
-        _ 1
+                else 2.case),
+          lemcase=$lemcase]
+        _ 1[lemcase=aa]
       } ;
 VP -> NP vblex.tv { 1 _ 2 } ;
+
+! lemcase = AA Aa aa ;
