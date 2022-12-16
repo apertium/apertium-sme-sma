@@ -14,7 +14,7 @@
 
 sem = sem_hum sem_food ;
 number = sg pl ;
-case = acc nom gen loc ine ela ;
+case = acc nom gen loc ine ela ill ;
 poss = ("" "") px1sg px1du px1pl px2sg px2du px2pl px3sg px3du px3pl ;
 person = p1 p2 p3 ;
 pron_type = pers refl dem indef recipr rel ;
@@ -23,10 +23,9 @@ transitivity = tv iv ;
 mood = indic imp ;
 qst = qst ;
 tense = pres pret ;
-qst = qst ;
 np_type = ant cog ;
 gender = m f ;
-vform = inf conneg ;
+vform = inf conneg prfprc ;
 neg = neg ;
 person_number = "p1.sg" "p1.du" "p1.pl"
                 "p2.sg" "p2.du" "p2.pl"
@@ -92,6 +91,20 @@ VP -> %vblex.tv.$lemcase/sl NP !  hvis transitivt verb, kjør OV - verb + nomen
 VP -> NP %vblex.tv { 1 _ %2 } ; ! VO gir OV som output
 VP -> %vblex.iv { %1 } ;
 VP -> adv %VP { 1 _ %2 } ;
+
+verb_ill_to_ine = aelkedh ;
+
+! Mun álggán skuvlii   (sme: Ill)
+! Manne skuvlesne aalkam  (sma: Ine)
+VP -> %VP NP.*.ill { 2[case=(if (1.lem in_caseless verb_ill_to_ine) ine
+                             else 2.case)]
+                     _ %1 } ;
+
+! In leat skuvlii vel álgán (sme: Ill)
+! Im leah skuvlesne annje aalkeme. (sma: Ine)
+VP -> NP.*.ill %VP { 1[case=(if (2.lem in_caseless verb_ill_to_ine) ine
+                             else 1.case)]
+                     _ %2 } ;
 
 ! AuxP: _ ;
 ! AuxP -> ii@vblex.iv.neg VP.*.conneg
