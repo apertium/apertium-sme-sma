@@ -89,8 +89,9 @@ VP -> %vblex.tv.$lemcase/sl NP !  hvis transitivt verb, kjør OV - verb + nomen
         _ %1[lemcase=aa]
       } ;
 VP -> NP %vblex.tv { 1 _ %2 } ; ! VO gir OV som output
-VP -> %vblex.iv { %1 } ;
-VP -> adv %VP { 1 _ %2 } ;
+VP -> %vblex.iv { %1[lem=(if ($lem equalcl gåaradidh) gåaradidh
+                          else 1.lem)] } ;
+VP -> adv %VP { 1 _ %2[lem=$lem] } ;
 
 verb_ill_to_ine = aelkedh ;
 verb_loc_to_acc = gihtjedh ;
@@ -102,7 +103,7 @@ VP -> %VP NP.*.[ill_or_loc]
       { 2[case=(if (2.case = ill and 1.lem in_caseless verb_ill_to_ine) ine
                 if (2.case = loc and 1.lem in_caseless verb_loc_to_acc) acc
                 else 2.case)]
-        _ %1 } ;
+        _ %1[lem=$lem] } ;
 
 ! In leat skuvlii vel álgán (sme: Ill)
 ! Im leah skuvlesne annje aalkeme. (sma: Ine)
@@ -110,7 +111,13 @@ VP -> NP.*.[ill_or_loc] %VP
       { 1[case=(if (1.case = ill and 2.lem in_caseless verb_ill_to_ine) ine
                 if (1.case = loc and 2.lem in_caseless verb_loc_to_acc) acc
                 else 1.case)]
-        _ %2 } ;
+        _ %2[lem=$lem] } ;
+
+! Ruovttosiiddu bokte lea vejolaš árvalit áššiid.
+! Nehtebielien baaktoe gåarede aamhtesh raeriestidh.
+VP -> %lea@VP vejolaš@adj.*.nom { %1[lem=2.lem/tl] } ;
+
+VP -> %VP adv { %1[lem=$lem] _ 2 } ;
 
 ! AuxP: _ ;
 ! AuxP -> ii@vblex.iv.neg VP.*.conneg
