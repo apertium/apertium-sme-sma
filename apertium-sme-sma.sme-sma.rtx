@@ -93,18 +93,24 @@ VP -> %vblex.iv { %1 } ;
 VP -> adv %VP { 1 _ %2 } ;
 
 verb_ill_to_ine = aelkedh ;
+verb_loc_to_acc = gihtjedh ;
 
 ! Mun álggán skuvlii   (sme: Ill)
 ! Manne skuvlesne aalkam  (sma: Ine)
-VP -> %VP NP.*.ill { 2[case=(if (1.lem in_caseless verb_ill_to_ine) ine
-                             else 2.case)]
-                     _ %1 } ;
+ill_or_loc = ill loc ;
+VP -> %VP NP.*.[ill_or_loc]
+      { 2[case=(if (2.case = ill and 1.lem in_caseless verb_ill_to_ine) ine
+                if (2.case = loc and 1.lem in_caseless verb_loc_to_acc) acc
+                else 2.case)]
+        _ %1 } ;
 
 ! In leat skuvlii vel álgán (sme: Ill)
 ! Im leah skuvlesne annje aalkeme. (sma: Ine)
-VP -> NP.*.ill %VP { 1[case=(if (2.lem in_caseless verb_ill_to_ine) ine
-                             else 1.case)]
-                     _ %2 } ;
+VP -> NP.*.[ill_or_loc] %VP
+      { 1[case=(if (1.case = ill and 2.lem in_caseless verb_ill_to_ine) ine
+                if (1.case = loc and 2.lem in_caseless verb_loc_to_acc) acc
+                else 1.case)]
+        _ %2 } ;
 
 ! AuxP: _ ;
 ! AuxP -> ii@vblex.iv.neg VP.*.conneg
