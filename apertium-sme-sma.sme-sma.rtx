@@ -12,8 +12,11 @@
 ! "<vieljat>"
 !	"viellja" n sem_hum sg acc px2sg
 
+gender = m f ;
 sem = sem_hum sem_food ;
 number = sg pl ;
+prn_type_other = rel dem indef itg ;
+prn_type = pers ref [prn_type_other] ;
 case = acc nom gen loc ine ela ill ;
 poss = ("" "") px1sg px1du px1pl px2sg px2du px2pl px3sg px3du px3pl ;
 person = p1 p2 p3 ;
@@ -24,7 +27,6 @@ mood = indic imp ;
 qst = qst ;
 tense = pres pret ;
 np_type = ant cog ;
-gender = m f ;
 vform = inf conneg prfprc ;
 neg = neg ;
 person_number = "p1.sg" "p1.du" "p1.pl"
