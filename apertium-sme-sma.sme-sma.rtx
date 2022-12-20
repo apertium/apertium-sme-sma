@@ -18,6 +18,8 @@ number = sg pl ;
 prn_type_other = rel dem indef itg ;
 prn_type = pers ref [prn_type_other] ;
 case = acc nom gen loc ine ela ill ;
+np_type_other = top hyd cog org al pat ;
+np_type = ant [np_type_other] ;
 poss = ("" "") px1sg px1du px1pl px2sg px2du px2pl px3sg px3du px3pl ;
 person = p1 p2 p3 ;
 pron_type = pers refl dem indef recipr rel ;
@@ -43,6 +45,11 @@ person_number > poss : "p1.sg" px1sg, "p1.du" px1du, "p1.pl" px1pl,
 case > case : loc ine ;
 
 n: _.number.case.poss ;
+np_ant: _.<ant>.gender.number.case ;
+np_other: _.np_type.number.case ;
+np: (if (1.np_type = ant) 1(np_ant)
+      else 1(np_other)) ;
+
 np: _.np_type.gender.number.case ;
 adj_attr: _.attr ;
 adj_pred: _.number.case ;
@@ -97,6 +104,7 @@ VP -> adv %VP { 1 _ %2[lem=$lem] } ;
 
 verb_ill_to_ine = aelkedh ;
 verb_loc_to_acc = gihtjedh ;
+!verb_ill_to_ell = steeredh ;
 
 ! Mun álggán skuvlii   (sme: Ill)
 ! Manne skuvlesne aalkam  (sma: Ine)
@@ -104,6 +112,7 @@ ill_or_loc = ill loc ;
 VP -> %VP NP.*.[ill_or_loc]
       { 2[case=(if (2.case = ill and 1.lem in_caseless verb_ill_to_ine) ine
                 if (2.case = loc and 1.lem in_caseless verb_loc_to_acc) acc
+!                if (2.case = ill and 1.lem in_caseless verb_ill_to_ell) ela
                 else 2.case)]
         _ %1[lem=$lem] } ;
 
