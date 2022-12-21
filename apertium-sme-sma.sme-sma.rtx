@@ -19,7 +19,6 @@ prn_type_other = rel dem indef itg ;
 prn_type = pers ref [prn_type_other] ;
 case = acc nom gen loc ine ela ill ;
 np_type_other = top hyd cog org al pat ;
-np_type = ant [np_type_other] ;
 poss = ("" "") px1sg px1du px1pl px2sg px2du px2pl px3sg px3du px3pl ;
 person = p1 p2 p3 ;
 pron_type = pers refl dem indef recipr rel ;
@@ -27,9 +26,9 @@ attr = attr ;
 transitivity = tv iv ;
 mood = indic imp ;
 qst = qst ;
-tense = pres pret ;
-np_type = ant cog ;
+tense = pres pret ; 
 vform = inf conneg prfprc ;
+np_type = ant [np_type_other] ;
 neg = neg ;
 person_number = "p1.sg" "p1.du" "p1.pl"
                 "p2.sg" "p2.du" "p2.pl"
@@ -142,6 +141,11 @@ VP -> %VP adv { %1[lem=$lem] _ 2 } ;
 
 ! sme - Gánddas leat vieljat  - Mov leah vïellh
 !       Gánddas lea viellja.  - Mov lea vïelle
+! This rule dont work? 
+!SME: Leago Márehis maid beana? Ii, Márehis ii leat beana, sus lea bussá.
+!SMA: Máretisnie #Mejtie dovne bïenje? Ij, Máretisnie ij leah bïenje, desnie lea gaahtoe.
+!
+
 
 S -> NP.*.loc leat@vblex.iv.indic NP { 1[case=gen] _ 2 _ 3 } ;
 
