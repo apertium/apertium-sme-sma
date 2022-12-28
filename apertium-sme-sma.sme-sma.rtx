@@ -112,6 +112,7 @@ VP -> %VP NP.*.[ill_or_loc]
       { 2[case=(if (2.case = ill and 1.lem in_caseless verb_ill_to_ine) ine
                 if (2.case = loc and 1.lem in_caseless verb_loc_to_acc) acc
 !                if (2.case = ill and 1.lem in_caseless verb_ill_to_ell) ela
+!                if (2.case = ill and 1.lem in_caseless verb_ill_to_com) com
                 else 2.case)]
         _ %1[lem=$lem] } ;
 
@@ -120,6 +121,14 @@ VP -> %VP NP.*.[ill_or_loc]
 ! SME: Mun doalan gáibái (ill)  --> SMA: Manne gaejpeste steerem (ela)
 ! if (2.case = ill and 1.lem in_caseless verb_ill_to_ell) ela
 ! ****************************
+
+! ****************************
+! I want to make this valens-rule: 
+! SME: Mun lean harjanan dasa (ill)  --> SMA: Manne dejnie vaananamme (com)
+! SME: Dasa lean oahpasmuvvan (ill) ---> SMA: Manne dejnie åahpanamme (com)
+! if (2.case = ill and 1.lem in_caseless verb_ill_to_com) com
+! ****************************
+
 
 ! In leat skuvlii vel álgán (sme: Ill)
 ! Im leah skuvlesne annje aalkeme. (sma: Ine)
