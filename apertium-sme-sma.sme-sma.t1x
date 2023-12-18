@@ -1674,6 +1674,7 @@ And then there are some categories like "month", with all the months.
       <attr-item tags="south"/>
       <attr-item tags="←cs→"/>
       <attr-item tags="g3"/>
+      <attr-item tags="sentinit"/>
        <attr-item tags="nomag"/>
        <attr-item tags="allegro"/>
        <attr-item tags="err_orth_nom_gen_mt"/>
@@ -11966,6 +11967,23 @@ And then there are some categories like "month", with all the months.
         <test> 
          <equal><clip pos="1" side="tl" part="lem"/><lit v=""/></equal>
          </test>
+         </when>
+	    <when c="empty">
+        <test> 
+         <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="vblex"/></equal>
+         </test>
+        <out>
+          <chunk name="vblex" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+          </chunk>
+        </out>
          </when>
         <otherwise>
         <out>
