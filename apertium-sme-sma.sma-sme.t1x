@@ -4,6 +4,11 @@
 
   <section-def-cats>
 
+    <def-cat n="bårrestohtedh_lex">
+      <cat-item lemma="bårrestohtedh" tags="vblex.*"/>
+    </def-cat>
+
+
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
     </def-cat>
@@ -68,6 +73,8 @@
       <cat-item tags="n.*.*.*.*.*.cmp.guio"/>
       <cat-item tags="vblex.*.*.*.cmp"/>
       <cat-item tags="vblex.*.*.*.*.cmp"/>
+      <cat-item tags="*.cmp"/>
+      <cat-item tags="adj.*.*.*.cmp"/>
       <cat-item lemma="dárogiel" tags="adj.*.attr.*"/>
       <cat-item lemma="sámegiel" tags="adj.*.attr.*"/>
       <cat-item lemma="davvisámegiel" tags="adj.*.attr.*"/>
@@ -119,6 +126,7 @@
       <attr-item tags="subqst"/>
       <attr-item tags="sh"/>
       <attr-item tags="←ext→"/>
+      <attr-item tags="←cs→"/>
       <attr-item tags="←hab→"/>
       <attr-item tags="←logo→"/>
       <attr-item tags="←vdic→"/>
@@ -194,6 +202,8 @@
        <attr-item tags="conneg"/>
        <attr-item tags="prfprc"/>
        <attr-item tags="ger"/>
+       <attr-item tags="supn"/>
+       <attr-item tags="imprtii"/>
     </def-attr>
 
     <def-attr n="a_deriv">
@@ -918,6 +928,7 @@
     </def-macro>
    
     <def-macro n="default-conversion1" npar="1">
+      <let><clip pos="1" side="tl" part="a_spec_sma_tags1"/><lit v=""/></let>		
 	<choose><when><test>
       <not><equal><clip pos="1" side="tl" part="a_func"/><lit v=""/></equal></not></test>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>		
@@ -1040,6 +1051,32 @@
     </rule>
 
 
+    <rule comment="C[S] bårrestohtedh" c="example">
+      <pattern>
+        <pattern-item n="bårrestohtedh_lex"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+      <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            <b pos="1"/>
+            <lu>
+              <lit v="borranmiella"/>
+              <lit-tag v="n.sg.nom"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="C[S] mod_n n_not_cmp" c="stoerre gåetie : stuora viessu">
       <pattern>
         <pattern-item n="mod_n"/>
@@ -1047,6 +1084,8 @@
       </pattern>
       <action>
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -1073,6 +1112,9 @@
       </pattern>
       <action>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -1226,14 +1268,22 @@
       <action>
       <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
-        <choose><when>
+        <choose>
+	        <when>
 	        <test><and>
        <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="conneg"/></equal>
        <equal><clip pos="1" side="sl" part="a_tense"/><lit v=""/></equal>
        <equal><clip pos="1" side="sl" part="a_mood"/><lit v=""/></equal>
            </and></test>
        <let><clip pos="1" side="tl" part="a_infin"/><concat><lit-tag v="indic"/><var n="neg_tense"/><clip pos="1" side="sl" part="a_infin"/></concat></let>
-       </when></choose>
+       </when>
+	        <when>
+	        <test>
+       <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="imprtii"/></equal>
+           </test>
+       <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+       </when>
+       </choose>
         <out>
           <chunk name="verb" case="caseFirstword">
             <tags>
@@ -1256,8 +1306,8 @@
         <pattern-item n="default"/>
       </pattern>
       <action>
-        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
       <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="any" case="caseFirstword">
             <tags>
@@ -1277,6 +1327,7 @@
         <pattern-item n="sent"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="sent" case="caseFirstword">
             <tags>
