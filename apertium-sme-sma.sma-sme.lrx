@@ -22,6 +22,18 @@
   </rule>
   
   <rule weight="1.0">
+       <match lemma="guhte" tags="prn.*"><select lemma="guhte" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="guhte" tags="prn.*"><select lemma="okta" tags="num.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match lemma="fïere"/>
+       <match lemma="guhte" tags="prn.*"><select lemma="okta" tags="num.*"/></match>
+      </rule>
+  
+  
+  <rule weight="1.0">
        <match lemma="njoktje" tags="n.*"><select lemma="njukča" tags="n.*"/></match>
   </rule>
   <rule weight="0.5">
