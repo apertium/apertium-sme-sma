@@ -3169,20 +3169,20 @@
 
   
  <rule weight="1.0">   
-  <match lemma="ieš" >   
+  <match lemma="ieš" tags="prn.ref.sg.nom.*" >   
       <select lemma="jïjtje"/>    
     </match>    
     </rule>      
 
       <rule weight="0.5">   
-  <match lemma="ieš" >   
+  <match lemma="ieš" tags="prn.ref.sg.nom.*" >   
       <select lemma="jïjtjehke"/>    
     </match>    
     </rule>      
  
        <rule weight="0.6">   
-  <match lemma="ieš" tags="prm.refl.sg.nom.*" >   
-      <select lemma="jïjtjehke"/>    
+  <match lemma="ieš" tags="prn.ref.sg.nom.*" >   
+      <select lemma="jïjtjehke"/>   
     </match>    
     <match tags="n.*.sg.nom.*"/>    
     </rule>      

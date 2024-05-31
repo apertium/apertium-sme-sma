@@ -2354,6 +2354,7 @@ And then there are some categories like "month", with all the months.
       <list-item v="nealjede"/> 
       <list-item v="vïjhtede"/> 
       <list-item v="govhtede"/> 
+      <list-item v="fïere"/> 
     </def-list>
     <def-list n="váikkuhit-verb">
       <list-item v="váikkuhit"/>
@@ -3548,6 +3549,31 @@ And then there are some categories like "month", with all the months.
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let> 
         </when>
 
+        <when c="M[T] sg.loc to ine,gen">     
+          <test>
+            <and>
+              <equal><clip pos="2" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+              <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="loc"/></equal>
+              <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="gen"/></equal>
+              <not><equal><clip pos="2" side="sl" part="a_exthab"/><lit-tag v="←hab→"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@ADVL-ela→"/></equal></not>
+              <not><equal><clip pos="2" side="sl" part="a_func"/><lit-tag v="@←ADVL-ela"/></equal></not>
+             <not><equal><clip pos="1" side="sl" part="a_func"/><lit-tag v="@-F←ADVL-ela"/></equal></not>
+<!--              <not><in caseless="yes"><var n="main-verb-lemma"/><list n="elative-verbs"/></in></not> -->
+             <not><in caseless="yes"><clip pos="2" side="sl" part="lem"/><list n="time_n"/></in></not>
+            </and>
+          </test>
+          <let>
+            <clip pos="1" side="tl" part="tags"/>
+            <concat>
+              <clip pos="1" side="tl" part="a_npagree_type"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <lit-tag v="ine.attr"/>    <!-- ine here -->
+            </concat>                
+          </let> 
+          <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ine"/></let> 
+        </when>
+
         <when c="M[T] sg.loc to ine">     
           <test>
             <and>
@@ -3572,7 +3598,6 @@ And then there are some categories like "month", with all the months.
           </let> 
           <let><clip pos="2" side="tl" part="a_case"/><lit-tag v="ine"/></let> 
         </when>
-
 
 
         <when c="M[T] pl.loc to ine">     
