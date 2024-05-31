@@ -7,6 +7,9 @@
     <def-cat n="bårrestohtedh_lex">
       <cat-item lemma="bårrestohtedh" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="gåaradidh_lex">
+      <cat-item lemma="gåaradidh" tags="vblex.*"/>
+    </def-cat>
 
 
     <def-cat n="adj">
@@ -928,7 +931,11 @@
     </def-macro>
    
     <def-macro n="default-conversion1" npar="1">
+	<choose><when><test>
+      <not><equal><clip pos="1" side="tl" part="a_spec_sma_tags1"/><lit v=""/></equal></not></test>
       <let><clip pos="1" side="tl" part="a_spec_sma_tags1"/><lit v=""/></let>		
+	</when>
+	</choose>
 	<choose><when><test>
       <not><equal><clip pos="1" side="tl" part="a_func"/><lit v=""/></equal></not></test>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>		
@@ -1077,6 +1084,32 @@
       </action>
     </rule>
 
+    <rule comment="C[S] gåaradidh" c="example">
+      <pattern>
+        <pattern-item n="gåaradidh_lex"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+            <let><clip pos="1" side="tl" part="lemh"/><lit v="leat"/></let>
+      <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            <b pos="1"/>
+            <lu>
+              <lit v="vejolaš"/>
+              <lit-tag v="adj.sg.nom"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="C[S] mod_n n_not_cmp" c="stoerre gåetie : stuora viessu">
       <pattern>
         <pattern-item n="mod_n"/>
@@ -1086,7 +1119,16 @@
         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
-        <out>
+        <choose>
+	        <when>
+	        <test><and>
+       <equal><clip pos="1" side="tl" part="lemh"/><lit v="buorre"/></equal>
+       <equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal>
+           </and></test>
+       <let><clip pos="1" side="tl" part="a_attr"/><concat><clip pos="2" side="tl" part="a_nbr"/><clip pos="2" side="tl" part="a_case"/></concat></let>
+       </when>
+         </choose>
+       <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
               <tag><lit-tag v="NP"/></tag>
@@ -1115,6 +1157,15 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <choose>
+	        <when>
+	        <test><and>
+       <equal><clip pos="1" side="tl" part="lemh"/><lit v="buorre"/></equal>
+       <equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal>
+           </and></test>
+       <let><clip pos="1" side="tl" part="a_attr"/><concat><clip pos="3" side="tl" part="a_nbr"/><clip pos="3" side="tl" part="a_case"/></concat></let>
+       </when>
+         </choose>
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
