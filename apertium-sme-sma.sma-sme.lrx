@@ -31,8 +31,53 @@
       <match lemma="fïere"/>
        <match lemma="guhte" tags="prn.*"><select lemma="okta" tags="num.*"/></match>
       </rule>
+
+  <rule weight="1.0">
+       <match lemma="mejtie" tags="pcle.*"><select lemma="vejolaččat" tags="adv.*"/></match>
+  </rule>
+
+
+  <rule weight="1.0">
+       <match lemma="gaajhke" tags="prn.*"><select lemma="buot" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gaajhke" tags="prn.*"><select lemma="juohke" tags="prn.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="gaajhke" tags="prn.*"><select lemma="juohke" tags="prn.*"/></match>
+      <match lemma="lehkie"/>
+      </rule>
+
+   <rule weight="1.0">
+       <match lemma="maehtedh" tags="vblex.*"><select lemma="sáhttit" tags="vblex.*"/></match>
+  </rule>
+   <rule weight="0.5">
+       <match lemma="maehtedh" tags="vblex.*"><select lemma="máhttit" tags="vblex.*"/></match>
+  </rule>
+
   
-  
+   <rule weight="1.0">
+       <match lemma="guktie" tags="cnjsub.*"><select lemma="go" tags="cnjsub.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="guktie" tags="cnjsub.*"><select lemma="nugo" tags="cnjsub.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="guktie" tags="cnjsub.*"><select lemma="nugo" tags="cnjsub.*"/></match>
+      <match tags="*.@SUBJ→"/>
+      <match lemma="aarebi" tags="adv.*"/>
+      </rule>
+   <rule weight="1.0">
+       <match lemma="gietjie" tags="n.*"><select lemma="geahči" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gietjie" tags="n.*"><select lemma="loahppa" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+      <match tags="n.sem_measr_time.*"/>
+       <match lemma="gietjie" tags="n.*"><select lemma="loahppa" tags="n.*"/></match>
+      </rule>
+ 
   <rule weight="1.0">
        <match lemma="njoktje" tags="n.*"><select lemma="njukča" tags="n.*"/></match>
   </rule>
@@ -130,7 +175,21 @@
        <match lemma="provhkedh" tags="vblex.*"><select lemma="lávet" tags="vblex.*"/></match>
        <match tags="vblex.*.inf.*" />
   </rule>
+  <rule weight="0.6">
+       <match lemma="provhkedh" tags="vblex.*"><select lemma="lávet" tags="vblex.*"/></match>
+       <match tags="n.*.*.acc.*" />
+       <match tags="vblex.*.inf.*" />
+  </rule>
 
+  <rule weight="1.0">
+       <match lemma="gaajhkesh" tags="prn.coll.*"><select lemma="buohkat" tags="prn.ind.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="gaajhkesh" tags="prn.coll.*"><select lemma="buot" tags="prn.ind.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="gaajhkesh" tags="prn.coll.*.*.@→N"><select lemma="buot" tags="prn.ind.*"/></match>
+  </rule>
 
   <rule weight="1.0">
        <match lemma="ulmie" tags="n.*"><select lemma="ulbmil" tags="n.*"/></match>

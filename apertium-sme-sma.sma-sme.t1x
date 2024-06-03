@@ -10,7 +10,26 @@
     <def-cat n="gåaradidh_lex">
       <cat-item lemma="gåaradidh" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="muvhte_lex">
+      <cat-item lemma="muvhte" tags="prn.*"/>
+      <cat-item lemma="gellie" tags="prn.*"/>
+      <cat-item lemma="naan" tags="prn.*"/>
+      <cat-item lemma="fïerhte" tags="prn.*"/>
+    </def-cat>
+    <def-cat n="add_attr">
+      <cat-item lemma="gaajhkesh" tags="prn.*"/>
+    </def-cat>
 
+    <def-cat n="aejkie_lex">
+      <cat-item lemma="aejkie" tags="n.*"/>
+    </def-cat>
+    <def-cat n="fïere_lex">
+      <cat-item lemma="fïere" tags="prn.*"/>
+    </def-cat>
+
+    <def-cat n="guhte_lex">
+      <cat-item lemma="guhte" tags="prn.*"/>
+    </def-cat>
 
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
@@ -22,6 +41,7 @@
     
         <def-cat n="mod_n">
       <cat-item tags="prn.dem.*.*.@→N"/>
+      <cat-item tags="prn.coll.*.*.@→N"/>
       <cat-item tags="prn.dem.*.@→N"/>
       <cat-item tags="prn.ind.*.*.@→N"/>
       <cat-item tags="prn.ind.*.@→N"/>
@@ -814,6 +834,28 @@
     <def-var n="infin"/>
     <def-var n="neg_tense"/>
   </section-def-vars>
+  
+  <section-def-lists>
+    <def-list n="giele">
+      <list-item v="daaroengïele"/> 
+      <list-item v="svïenskegïele"/> 
+      <list-item v="eenngelsgïele"/> 
+      <list-item v="saemiengïele"/> 
+      <list-item v="soemengïele"/> 
+      <list-item v="umesaemiengïele"/> 
+      <list-item v="russlaantengïele"/> 
+      <list-item v="orredaaroengïele"/> 
+      <list-item v="skåaltesaemiengïele"/> 
+      <list-item v="spaanskegïele"/> 
+      <list-item v="fraanskegïele"/> 
+      <list-item v="åarjelsaemiengïele"/> 
+      <list-item v="julevsaemiengïele"/> 
+    </def-list>
+    <def-list n="addattr">
+      <list-item v="buot"/> 
+      <list-item v="juohke"/> 
+    </def-list>
+  </section-def-lists>
 
   <section-def-macros>
 
@@ -837,6 +879,17 @@
     
         <def-macro n="general-macro-1Param" npar="1">
       <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
+	<choose>
+        <when c="add attr">
+          <test><and>
+             <in><clip pos="1" side="tl" part="lem"/><list n="addattr"/></in>     
+          <equal><clip pos="1" side="tl" part="a_func"/><lit-tag v="@→N"/></equal>
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        </when>
+	</choose>
       <choose>
         <when c="add func">
           <test><not><equal><clip pos="1" side="tl" part="a_func"/><lit v=""/></equal></not></test>
@@ -849,7 +902,15 @@
       <let><clip pos="1" side="tl" part="a_sem"/><lit v=""/></let>		
 	</when>
 	</choose>
-	<choose><when><test>
+	<choose>
+        <when c="giella ill">
+          <test><and>
+          <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ine"/></equal>
+             <in><clip pos="1" side="sl" part="lem"/><list n="giele"/></in>     
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
+        </when>		
+		<when><test>
       <not><equal><clip pos="1" side="tl" part="a_ela_ine"/><lit v=""/></equal></not></test>
       <let><clip pos="1" side="tl" part="a_ela_ine"/><lit-tag v="loc"/></let>		
 	</when>
@@ -981,7 +1042,7 @@
       <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
       </when></choose>
        <choose> 	      <when><test>
-	  <equal><clip pos="1" side="tl" part="lemma"/><lit v="eambbo"/></equal>
+	  <equal><clip pos="1" side="tl" part="lem"/><lit v="eambbo"/></equal>
 	  </test>
       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>
       </when></choose> 
@@ -1091,7 +1152,7 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
       <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
-            <let><clip pos="1" side="tl" part="lemh"/><lit v="leat"/></let>
+            <let><clip pos="1" side="tl" part="lem"/><lit v="leat"/></let>
       <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -1109,6 +1170,65 @@
         </out>
       </action>
     </rule>
+    <rule comment="C[S] muvhte_lex aejkie_lex" c="muvhtene aejkien : muhtumin">
+      <pattern>
+        <pattern-item n="muvhte_lex"/>
+        <pattern-item n="aejkie_lex"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+      <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <choose>
+ 	        <when>
+	        <test>
+       <equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="fïerhte"/></equal>
+           </test>
+       <let><clip pos="1" side="tl" part="lem"/><lit v="čađat"/></let>
+       <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adv"/></let>
+        <out>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+               <b />
+          </chunk>
+        </out>
+       </when>
+       
+	        <when>
+	        <test><or>
+       <equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="naan"/></equal>
+        <equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="muvhte"/></equal>
+          </or></test>
+       <let><clip pos="2" side="tl" part="lem"/><lit v="muhtumin"/></let>
+       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       </when>
+	        <when>
+	        <test>
+       <equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="gellie"/></equal>
+           </test>
+       <let><clip pos="2" side="tl" part="lem"/><lit v="máŋgii"/></let>
+       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adv"/></let>
+       </when>
+        </choose>
+        <out>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+               <b />
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+     <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>     
+      </action>
+    </rule>
+
 
     <rule comment="C[S] mod_n n_not_cmp" c="stoerre gåetie : stuora viessu">
       <pattern>
@@ -1122,10 +1242,17 @@
         <choose>
 	        <when>
 	        <test><and>
-       <equal><clip pos="1" side="tl" part="lemh"/><lit v="buorre"/></equal>
+       <equal><clip pos="1" side="tl" part="lem"/><lit v="buorre"/></equal>
        <equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal>
            </and></test>
        <let><clip pos="1" side="tl" part="a_attr"/><concat><clip pos="2" side="tl" part="a_nbr"/><clip pos="2" side="tl" part="a_case"/></concat></let>
+       </when>
+	        <when>
+	        <test><and>
+       <equal><clip pos="1" side="tl" part="lem"/><lit v="juohke"/></equal>
+       <equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+           </and></test>
+       <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
        </when>
          </choose>
        <out>
@@ -1160,7 +1287,7 @@
         <choose>
 	        <when>
 	        <test><and>
-       <equal><clip pos="1" side="tl" part="lemh"/><lit v="buorre"/></equal>
+       <equal><clip pos="1" side="tl" part="lem"/><lit v="buorre"/></equal>
        <equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal>
            </and></test>
        <let><clip pos="1" side="tl" part="a_attr"/><concat><clip pos="3" side="tl" part="a_nbr"/><clip pos="3" side="tl" part="a_case"/></concat></let>
@@ -1286,6 +1413,39 @@
             </mlu>
           </chunk>
         </out>
+      </action>
+    </rule>
+    <rule comment="C[S] fïere guhte n_not_cmp" c="fïere guhte learoehkasse : iešguđet oahppái ">
+      <pattern>
+        <pattern-item n="fïere_lex"/>
+        <pattern-item n="guhte_lex"/>
+        <pattern-item n="n_not_cmp"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+      <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <let><clip pos="2" side="tl" part="a_nbr"/><lit v=""/></let>
+	 <choose><when><test>
+      <not><equal><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></equal></not>		 
+	</test>
+	<let><clip pos="2" side="tl" part="a_case"/><lit-tag v="gen"/></let>	 
+	</when>
+	</choose>	     
+        <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+              <lu>
+                <clip pos="3" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
+     <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="2"/></out></when></choose>     
       </action>
     </rule>
 
