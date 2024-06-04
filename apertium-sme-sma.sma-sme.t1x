@@ -76,6 +76,11 @@
     </def-cat>
 
 
+    <def-cat n="num_cmp">
+      <cat-item tags="num.*.cmp"/>
+      <cat-item tags="num.*.*.cmp"/>
+      <cat-item tags="num.*.*.*.cmp"/>
+    </def-cat>
     <def-cat n="np_cmp">
       <cat-item tags="np.*.*.*.*.cmp"/>
       <cat-item tags="np.*.*.*.cmp"/>
@@ -96,7 +101,6 @@
       <cat-item tags="n.*.*.*.*.*.cmp.guio"/>
       <cat-item tags="vblex.*.*.*.cmp"/>
       <cat-item tags="vblex.*.*.*.*.cmp"/>
-      <cat-item tags="*.cmp"/>
       <cat-item tags="adj.*.*.*.cmp"/>
       <cat-item lemma="dárogiel" tags="adj.*.attr.*"/>
       <cat-item lemma="sámegiel" tags="adj.*.attr.*"/>
@@ -1512,6 +1516,44 @@
     
 <!-- General cleanup rules -->
     
+
+    <rule comment="REGLA:  num_cmp default ">
+      <pattern>
+        <pattern-item n="num_cmp"/>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+         <choose>
+	        <when>
+	        <test>
+       <equal><clip pos="2" side="sl" part="a_type"/><lit-tag v="ord"/></equal>
+           </test>
+       <let><clip pos="2" side="tl" part="a_PoS"/><lit-tag v="num"/></let>
+       <let><clip pos="2" side="tl" part="a_type"/><lit-tag v="sg.nom"/></let>
+       <let><clip pos="2" side="tl" part="a_attr"/><lit v=""/></let>
+       </when>
+         </choose>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: DEFAULT">
       <pattern>
         <pattern-item n="default"/>
