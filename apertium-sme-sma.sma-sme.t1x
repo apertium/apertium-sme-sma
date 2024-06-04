@@ -10,6 +10,13 @@
     <def-cat n="gåaradidh_lex">
       <cat-item lemma="gåaradidh" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="riikkat_lex">
+      <cat-item lemma="Nöörje" tags="np.*"/>
+      <cat-item lemma="nöörjen" tags="adj.*"/>
+    </def-cat>
+    <def-cat n="raedtie_lex">
+      <cat-item lemma="raedtie" tags="n.*"/>
+    </def-cat>
     <def-cat n="muvhte_lex">
       <cat-item lemma="muvhte" tags="prn.*"/>
       <cat-item lemma="gellie" tags="prn.*"/>
@@ -1230,6 +1237,49 @@
           </chunk>
         </out>
      <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>     
+      </action>
+    </rule>
+
+
+    <rule comment="C[S] riikkat_lex raedtie_lex" c="Nöörjen raedtesne  : muhtumin">
+      <pattern>
+        <pattern-item n="riikkat_lex"/>
+        <pattern-item n="raedtie_lex"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+      <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <choose>
+ 	        <when>
+	        <test><or>
+       <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="ine"/></equal>
+       <equal><clip pos="2" side="sl" part="a_case"/><lit-tag v="ela"/></equal>
+           </or></test>
+       <let><clip pos="2" side="tl" part="lem"/><lit v="bealde"/></let>
+       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="post"/></let>
+       </when>
+ 	        <when>
+	        <test>
+       <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ill"/></equal>
+           </test>
+       <let><clip pos="2" side="tl" part="lem"/><lit v="beallai"/></let>
+       <let><clip pos="2" side="tl" part="tags"/><lit-tag v="post"/></let>
+       </when>
+        </choose>
+        <out>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+              <lu>
+                <clip pos="2" side="tl" part="whole"/>
+              </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 
