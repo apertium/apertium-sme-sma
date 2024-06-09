@@ -176,6 +176,7 @@
     </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
+      <attr-item tags="np"/>
     </def-attr>
     <def-attr n="a_case">
       <attr-item tags="nom"/>
@@ -865,6 +866,9 @@
     <def-list n="addattr">
       <list-item v="buot"/> 
       <list-item v="juohke"/> 
+      <list-item v="eanet"/> 
+      <list-item v="muhtin"/> 
+      <list-item v="visot"/> 
     </def-list>
   </section-def-lists>
 
@@ -889,11 +893,10 @@
     </def-macro>
     
         <def-macro n="general-macro-1Param" npar="1">
-      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
 	<choose>
         <when c="add attr">
           <test><and>
-             <in><clip pos="1" side="tl" part="lem"/><list n="addattr"/></in>     
+             <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="addattr"/></in>     
           <equal><clip pos="1" side="tl" part="a_func"/><lit-tag v="@→N"/></equal>
           </and></test>
           <let><clip pos="1" side="tl" part="a_attr"/><lit v=""/></let>
@@ -938,7 +941,7 @@
         <when c="giella ill">
           <test><and>
           <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="ine"/></equal>
-             <in><clip pos="1" side="sl" part="lem"/><list n="giele"/></in>     
+             <in caseless="yes"><clip pos="1" side="sl" part="lem"/><list n="giele"/></in>     
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
         </when>		
@@ -967,12 +970,13 @@
      </test>
       <let><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_neg-ge"/></let>
       </when></choose>
+      <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
     <def-macro n="general-macro-2Param" npar="2" c="Use for all chunks of two pattern-items
                                                     param1: first pattern-item; used to set caseFirstword
                                                     param2: second pattern-item; used to set func variable">
-      <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
       <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="2"/></call-macro>
       <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro> 
       <choose><when>
         <test><and>
@@ -1562,6 +1566,14 @@
        <equal><clip pos="1" side="sl" part="a_mood"/><lit v=""/></equal>
            </and></test>
        <let><clip pos="1" side="tl" part="a_infin"/><concat><lit-tag v="indic"/><var n="neg_tense"/><clip pos="1" side="sl" part="a_infin"/></concat></let>
+       </when>
+	        <when>
+	        <test><and>
+       <equal><clip pos="1" side="sl" part="a_infin"/><lit-tag v="conneg"/></equal>
+       <not><equal><clip pos="1" side="sl" part="a_tense"/><lit v=""/></equal></not>
+           </and></test>
+       <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
+       <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
        </when>
 	        <when>
 	        <test>
