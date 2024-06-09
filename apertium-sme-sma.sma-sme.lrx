@@ -31,6 +31,10 @@
       <match lemma="fïere"/>
        <match lemma="guhte" tags="prn.*"><select lemma="okta" tags="num.*"/></match>
       </rule>
+  <rule weight="0.6">
+      <match lemma="ij"/>
+       <match lemma="guhte" tags="prn.*"><select lemma="okta" tags="num.*"/></match>
+      </rule>
 
   <rule weight="1.0">
        <match lemma="mejtie" tags="pcle.*"><select lemma="vejolaččat" tags="adv.*"/></match>
