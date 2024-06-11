@@ -3181,10 +3181,9 @@
     </rule>      
  
        <rule weight="0.6">   
-  <match lemma="ieš" tags="prn.ref.sg.nom.*" >   
+  <match lemma="ieš" tags="prn.ref.sg.nom.@→N" >   
       <select lemma="jïjtjehke"/>   
     </match>    
-    <match tags="n.*.sg.nom.*"/>    
     </rule>      
  
  <rule weight="1.0">   
