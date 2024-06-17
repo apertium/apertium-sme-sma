@@ -42,6 +42,17 @@
 
 
   <rule weight="1.0">
+       <match lemma="boelhke" tags="n.*"><select lemma="oassi" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="boelhke" tags="n.*"><select lemma="áigodat" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="boelhke" tags="n.*"><select lemma="áigodat" tags="n.*"/></match>
+      <match tags="num.sem_year.*"/>
+      </rule>
+
+  <rule weight="1.0">
        <match lemma="gaajhke" tags="prn.*"><select lemma="buot" tags="prn.*"/></match>
   </rule>
   <rule weight="0.5">
