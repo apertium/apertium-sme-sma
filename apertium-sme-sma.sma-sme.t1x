@@ -10,6 +10,9 @@
     <def-cat n="gåaradidh_lex">
       <cat-item lemma="gåaradidh" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="aemieluesedh_lex">
+      <cat-item lemma="aemieluesedh" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="riikkat_lex">
       <cat-item lemma="Nöörje" tags="np.*"/>
       <cat-item lemma="nöörjen" tags="adj.*"/>
@@ -188,6 +191,17 @@
       <attr-item tags="ine"/>
       <attr-item tags="com"/>
       <attr-item tags="ess"/>
+    </def-attr>
+    <def-attr n="a_poss">
+       <attr-item tags="px1sg"/>
+       <attr-item tags="px2sg"/>
+       <attr-item tags="px3sg"/>
+       <attr-item tags="px1du"/>
+       <attr-item tags="px2du"/>
+       <attr-item tags="px3du"/>
+       <attr-item tags="px1pl"/>
+       <attr-item tags="px2pl"/>
+       <attr-item tags="px3pl"/>
     </def-attr>
     <def-attr n="a_ela_ine">
       <attr-item tags="ela"/>
@@ -835,6 +849,8 @@
 
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="poss"/>
+    <def-var n="pers"/>
     <def-var n="case"/>
     <def-var n="func"/>
     <def-var n="main-verb-lemma"/>
@@ -891,7 +907,128 @@
         <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
       </when></choose>
     </def-macro>
-    
+ 
+        <def-macro n="nrpers-to-poss1" npar="1">
+       <choose>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px1sg"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px2sg"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px3sg"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px1du"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px2du"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px3du"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px1pl"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px2pl"/></let>
+          </when>
+	      <when>
+	      <test><and>
+	      <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3"/></equal>
+	      </and></test>
+          <let><var n="poss"/><lit-tag v="px3pl"/></let>
+          </when>
+          </choose>   
+    </def-macro>
+
+        <def-macro n="poss-to-nrpers1" npar="1">
+      <choose>
+	      <when>
+	      <test><or>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1pl"/></equal>
+	      </or></test>
+          <let><var n="pers"/><lit-tag v="p1"/></let>
+          </when>
+	      <when>
+	      <test><or>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2pl"/></equal>
+	      </or></test>
+          <let><var n="pers"/><lit-tag v="p2"/></let>
+          </when>
+	      <when>
+	      <test><or>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px3sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px3du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px3pl"/></equal>
+	      </or></test>
+          <let><var n="pers"/><lit-tag v="p3"/></let>
+          </when>
+	      <when>
+	      <test><or>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px3sg"/></equal>
+	      </or></test>
+          <let><var n="number"/><lit-tag v="sg"/></let>
+          </when>
+	      <when>
+	      <test><or>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2du"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px3du"/></equal>
+	      </or></test>
+          <let><var n="number"/><lit-tag v="du"/></let>
+          </when>
+	      <when>
+	      <test><or>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1pl"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2pl"/></equal>
+	      <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px3pl"/></equal>
+	      </or></test>
+          <let><var n="number"/><lit-tag v="pl"/></let>
+          </when>
+          </choose>
+    </def-macro>
+
         <def-macro n="general-macro-1Param" npar="1">
 	<choose>
         <when c="add attr">
@@ -1175,6 +1312,32 @@
             <lu>
               <lit v="borranmiella"/>
               <lit-tag v="n.sg.nom"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[S] aemieluesedh" c="aemielöösin : sorbmejedje iežaset">
+      <pattern>
+        <pattern-item n="aemieluesedh_lex"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+      <call-macro n="nrpers-to-poss1"><with-param pos="1"/></call-macro>
+      <out>
+          <chunk name="noun" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            <b />
+            <lu>
+              <lit v="ieš"/>
+              <lit-tag v="prn.ref.acc"/>
+              <var n="poss"/>
             </lu>
           </chunk>
         </out>
