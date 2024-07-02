@@ -26,10 +26,6 @@
       <cat-item lemma="naan" tags="prn.*"/>
       <cat-item lemma="fïerhte" tags="prn.*"/>
     </def-cat>
-    <def-cat n="add_attr">
-      <cat-item lemma="gaajhkesh" tags="prn.*"/>
-      <cat-item lemma="gaajhke" tags="prn.*"/>
-    </def-cat>
 
     <def-cat n="aejkie_lex">
       <cat-item lemma="aejkie" tags="n.*"/>
@@ -1032,13 +1028,22 @@
 
         <def-macro n="general-macro-1Param" npar="1">
 	<choose>
-        <when c="add attr">
+        <when c="add attr 1">
           <test><and>
              <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="addattr"/></in>     
           <equal><clip pos="1" side="tl" part="a_func"/><lit-tag v="@→N"/></equal>
           <equal><clip pos="1" side="tl" part="a_attr"/><lit v=""/></equal>
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
+          <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        </when>
+        <when c="add attr 2">
+          <test><and>
+             <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="addattr"/></in>     
+          <equal><clip pos="1" side="tl" part="a_func"/><lit-tag v="@→N"/></equal>
+          <equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal>
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
         </when>
 	</choose>
@@ -1353,8 +1358,9 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
       <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
             <let><clip pos="1" side="tl" part="lem"/><lit v="leat"/></let>
+       <let><clip pos="1" side="tl" part="a_infin"/><concat><lit-tag v="indic"/><var n="neg_tense"/><clip pos="1" side="sl" part="a_infin"/></concat></let>
       <out>
-          <chunk name="noun" case="caseFirstword">
+          <chunk name="adj" case="caseFirstword">
             <tags>
               <tag><lit-tag v="SV"/></tag>
             </tags>
