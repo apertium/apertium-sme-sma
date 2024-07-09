@@ -174,6 +174,9 @@
       <attr-item tags="←vdic→"/>
       <attr-item tags="err_orth_mt"/>
     </def-attr>
+    <def-attr n="a_hab">
+      <attr-item tags="←hab→"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
       <attr-item tags="np"/>
@@ -883,6 +886,13 @@
       <list-item v="muhtin"/> 
       <list-item v="visot"/> 
     </def-list>
+    <def-list n="gencmp">
+      <list-item v="máilbmi"/> 
+      <list-item v="vuoigatvuohta"/> 
+      <list-item v="olmmošvuohta"/> 
+      <list-item v="guoddevašvuohta"/> 
+      <list-item v="luondu"/> 
+    </def-list>
   </section-def-lists>
 
   <section-def-macros>
@@ -1088,6 +1098,12 @@
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
         </when>		
+		<when><test><and>
+      <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
+      <not><equal><clip pos="1" side="tl" part="a_hab"/><lit v=""/></equal></not>
+      </and></test>
+      <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="loc"/></let>		
+	</when>
 		<when><test>
       <not><equal><clip pos="1" side="tl" part="a_ela_ine"/><lit v=""/></equal></not></test>
       <let><clip pos="1" side="tl" part="a_ela_ine"/><lit-tag v="loc"/></let>		
@@ -1161,12 +1177,15 @@
       <call-macro n="set_caseFirstword"><with-param pos="1"/></call-macro>
     </def-macro>
  
-     <def-macro n="cmp-conversion" npar="1">
-	 <choose><when><test>
-      <equal><clip pos="1" side="sl" part="a_cmp"/><lit v=""/></equal>		 
-	</test>
-	<let><clip pos="1" side="tl" part="a_cmp"/><lit v="cmp_sgnom"/></let>	 
-	</when></choose>	     
+     <def-macro n="cmp-conversion1" npar="1">
+	 <choose>
+	<when><test><and>
+     <in caseless="yes"><clip pos="1" side="tl" part="lem"/><list n="gencmp"/></in>     
+	<equal><clip pos="1" side="sl" part="a_cmp"/><lit-tag v="cmp_sgnom"/></equal>	 
+	</and></test>
+	<let><clip pos="1" side="tl" part="a_cmp"/><lit-tag v="cmp_sggen"/></let>	 
+	</when>
+	</choose>	     
 	     
     </def-macro>
    
@@ -1215,7 +1234,7 @@
 	      <when><test><and>
 	  <equal><clip pos="1" side="sl" part="a_attr"/><lit-tag v="attr"/></equal>
 	  <equal><clip pos="1" side="tl" part="a_type"/><lit-tag v="ord"/></equal>
-	  <not><equal><clip pos="1" side="tl" part="lemma"/><lit v="nubbi"/></equal></not>
+	  <not><equal><clip pos="1" side="tl" part="lem"/><lit v="nubbi"/></equal></not>
 	  </and></test>
       <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
@@ -1236,10 +1255,16 @@
       <let><clip pos="1" side="tl" part="a_postags"/><lit-tag v="vblex.iv.prfprc"/></let>
       </when>
       </choose> 
+      <choose><when><test>
+	  <equal><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_les"/></equal></test>
+      <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_lasj"/></let>
+      </when>
+      </choose> 
       <choose>
 	      <when><test><and>
 	  <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="adj"/></equal>
 	  <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal>
+	  <not><equal><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_vuota"/></equal></not>
 	  </and></test>
       <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="attr"/></let>
@@ -1529,6 +1554,7 @@
         <pattern-item n="n_not_cmp"/>
       </pattern>
       <action>
+        <call-macro n="cmp-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="general-macro-3Param"><with-param pos="1"/><with-param pos="2"/><with-param pos="3"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
@@ -1571,6 +1597,7 @@
         <pattern-item n="noun"/>
       </pattern>
       <action>
+        <call-macro n="cmp-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
       <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
@@ -1599,6 +1626,8 @@
         <pattern-item n="noun"/>
       </pattern>
       <action>
+        <call-macro n="cmp-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="cmp-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
@@ -1633,6 +1662,9 @@
         <pattern-item n="noun"/>
       </pattern>
       <action>
+        <call-macro n="cmp-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="cmp-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="cmp-conversion1"><with-param pos="3"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>

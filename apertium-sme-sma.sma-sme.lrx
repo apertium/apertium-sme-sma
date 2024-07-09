@@ -39,6 +39,19 @@
   <rule weight="1.0">
        <match lemma="mejtie" tags="pcle.*"><select lemma="vejolaččat" tags="adv.*"/></match>
   </rule>
+  <rule weight="1.0">
+       <match lemma="eatneme" tags="n.*"><select lemma="eanadat" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.5">
+       <match lemma="eatneme" tags="n.*"><select lemma="luondu" tags="n.*"/></match>
+  </rule>
+  <rule weight="0.6">
+       <match lemma="eatneme" tags="n.*"><select lemma="luondu" tags="n.*"/></match>
+       <or>
+      <match lemma="gellievoete"/>
+      <match lemma="aehpie"/>
+       </or>
+      </rule>
 
 
   <rule weight="1.0">
