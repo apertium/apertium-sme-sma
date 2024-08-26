@@ -1410,7 +1410,7 @@
       </pattern>
       <action>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
-      <call-macro n="general-macro-2Param"><with-param pos="2"/><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
  	        <when>
 	        <test>
