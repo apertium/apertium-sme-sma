@@ -7,6 +7,9 @@
     <def-cat n="bårrestohtedh_lex">
       <cat-item lemma="bårrestohtedh" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="baavodh_lex">
+      <cat-item lemma="baavodh" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="gåaradidh_lex">
       <cat-item lemma="gåaradidh" tags="vblex.*"/>
     </def-cat>
@@ -1462,6 +1465,31 @@
       </action>
     </rule>
 
+
+    <rule comment="C[S] baavodh_lex" c="baavodh  : leat áhpeheapme">
+      <pattern>
+        <pattern-item n="baavodh_lex"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="adv" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+              <b pos="1"/>
+            <lu>
+              <lit v="áhpeheapme"/>
+              <lit-tag v="adj.ess"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="C[S] riikkat_lex raedtie_lex" c="Nöörjen raedtesne  : muhtumin">
       <pattern>
