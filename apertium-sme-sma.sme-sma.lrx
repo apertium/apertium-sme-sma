@@ -3167,6 +3167,38 @@
         </match>   
         </rule>     -->        
 
+
+ <rule weight="1.0">   
+  <match lemma="vuolde" tags="post.@←ADVL-ela" >   
+      <select lemma="nueleste"/>    
+    </match>    
+    </rule>      
+
+ <rule weight="1.0">   
+  <match lemma="vuolde" tags="post.@←ADVL-ine" >   
+      <select lemma="nuelesne"/>    
+    </match>    
+    </rule>      
+
+
+ <rule weight="1.0">   
+  <match lemma="báddi" tags="n.*" >   
+      <select lemma="baante"/>    
+    </match>    
+    </rule>      
+ <rule weight="0.5">   
+  <match lemma="báddi" tags="n.*" >   
+      <select lemma="tåajje"/>    
+    </match>    
+    </rule>      
+ <rule weight="1.0">   
+       <match lemma="heaŋgát" />   
+  <match lemma="báddi" tags="n.*" >   
+      <select lemma="tåajje"/>    
+    </match>    
+    </rule>      
+
+
   
  <rule weight="1.0">   
   <match lemma="ieš" tags="prn.ref.sg.nom.*" >   
