@@ -13,6 +13,9 @@
     <def-cat n="gåaradidh_lex">
       <cat-item lemma="gåaradidh" tags="vblex.*"/>
     </def-cat>
+    <def-cat n="mïrrestalledh_lex">
+      <cat-item lemma="mïrrestalledh" tags="vblex.*"/>
+    </def-cat>
     <def-cat n="aemieluesedh_lex">
       <cat-item lemma="aemieluesedh" tags="vblex.*"/>
     </def-cat>
@@ -1401,6 +1404,30 @@
             <lu>
               <lit v="vejolaš"/>
               <lit-tag v="adj.sg.nom"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="C[S] mïrrestalledh" c="mïrrestalledh : leat ovttadássásaččat">
+      <pattern>
+        <pattern-item n="mïrrestalledh_lex"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+      <out>
+          <chunk name="adj" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
+              </lu>
+            <b pos="1"/>
+            <lu>
+              <lit v="ovttadássásaš"/>
+              <lit-tag v="adj.pl.nom"/>
             </lu>
           </chunk>
         </out>
