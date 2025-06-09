@@ -3265,7 +3265,7 @@ And then there are some categories like "month", with all the months.
         </when>
 
       </choose>
-      <choose>
+<!--      <choose>
         <when c="M[T] attr to gen">
           <test>
             <and>
@@ -3275,7 +3275,7 @@ And then there are some categories like "month", with all the months.
           </test>
           <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="gen"/></let>
         </when>
-      </choose>
+      </choose> -->
               <choose>  
         <when c="M[T] sg to pl.nom: göökte laejpieh">
         <test><and>
@@ -3414,10 +3414,9 @@ And then there are some categories like "month", with all the months.
           <test>
             <and>
             <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj"/></equal>
-            <not>
-            <and>
-            <equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal>
-            <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal></and></not></and>
+            <not><and><equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal>
+            <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></equal></and></not>
+            </and>
           </test>
           <let><var n="case"/><clip pos="1" side="tl" part="a_case"/></let>
           <let><var n="nmbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
@@ -8874,6 +8873,11 @@ And then there are some categories like "month", with all the months.
 	    </and></not></test>
           <let><var n="foc-ge"/><lit v=""/></let>
         </when></choose>
+	<choose>
+	<when  c="ikke lem"><test>
+     <equal><clip pos="1" side="tl" part="lem"/><lit v=""/></equal></test> </when>
+        <otherwise>
+
         <out>
           <chunk name="noun" case="caseFirstword">
             <tags>
@@ -8890,6 +8894,8 @@ And then there are some categories like "month", with all the months.
           </chunk>
         </out>
           <let><var n="foc-ge"/><lit v=""/></let>
+        </otherwise>
+	</choose>
       </action>
     </rule>
 
