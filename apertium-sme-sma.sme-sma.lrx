@@ -1791,6 +1791,20 @@
        <select lemma="seatadidh"/>
      </match>
    </rule>     
+   
+   
+       <!-- borrat byöpmedidh -->
+    <rule weight="1.0">
+     <match lemma="borrat">
+       <select lemma="byöpmedidh"/>
+     </match>
+   </rule> 
+     <rule weight="0.5">
+     <match lemma="borrat">
+       <select lemma="byöpmedidh" tags="*.der_nomact.*"/>
+     </match>
+   </rule> 
+   
  
  <!-- borrat bårredh -->
     <rule weight="0.5">
@@ -1798,13 +1812,12 @@
        <select lemma="bårredh"/>
      </match>
    </rule>
+
    
    <rule weight="0.6">
           <or>
         <match lemma="stállu"/>
-        <match lemma="beana"/>
-        <match lemma="albbas"/>
-        <match lemma="bussá"/>
+        <match tags="*.sem_ani.*.nom.*"/>
        </or>
      <match lemma="borrat">
        <select lemma="bårredh"/>
@@ -1813,9 +1826,7 @@
    <rule weight="0.6">
           <or>
         <match lemma="stállu"/>
-        <match lemma="beana"/>
-        <match lemma="albbas"/>
-        <match lemma="bussá"/>
+        <match tags="*.sem_ani.*.nom.*"/>
        </or>
      <match/>
      <match lemma="borrat">
@@ -1825,13 +1836,12 @@
    <rule weight="0.6">
           <or>
         <match lemma="stállu"/>
-        <match lemma="beana"/>
-        <match lemma="albbas"/>
-        <match lemma="bussá"/>
+        <match tags="*.sem_ani.*.nom.*"/>
        </or>
      <match/>
      <match/>
-     <match lemma="borrat"><select lemma="bårredh"/></match>
+     <match lemma="borrat">
+	     <select lemma="bårredh"/></match>
    </rule>
 
 
@@ -1874,17 +1884,6 @@
      <match lemma="borrat"><select lemma="gåatodh"/></match>
    </rule>
    
-       <!-- borrat byöpmedidh -->
-    <rule weight="1.0">
-     <match lemma="borrat">
-       <select lemma="byöpmedidh"/>
-     </match>
-   </rule> 
-     <rule weight="0.5">
-     <match lemma="borrat">
-       <select lemma="byöpmedidh" tags="*.der_nomact.*"/>
-     </match>
-   </rule> 
   
    
     <rule weight="1.0">
@@ -3182,6 +3181,55 @@
 
 
  <rule weight="1.0">   
+  <match lemma="váidalit" tags="vblex.*" >   
+      <select lemma="hïemedh"/>    
+    </match>    
+    </rule>      
+ <rule weight="0.5">   
+  <match lemma="váidalit" tags="vblex.*" >   
+      <select lemma="håjjedh"/>    
+    </match>    
+    </rule>      
+ <rule weight="0.6">   
+     <match tags="*.sem_ani.*"/>    
+  <match lemma="váidalit" tags="vblex.*" >   
+      <select lemma="håjjedh"/>    
+    </match>    
+    </rule>      
+ <rule weight="0.6">   
+     <match tags="*.sem_ani.*"/>    
+        <match />   
+  <match lemma="váidalit" tags="vblex.*" >   
+      <select lemma="håjjedh"/>    
+    </match>    
+    </rule>      
+
+
+ <rule weight="1.0">   
+  <match lemma="guovttis" tags="n.*" >   
+      <select lemma="gööktesh"/>    
+    </match>    
+    </rule>      
+ <rule weight="0.5">   
+  <match lemma="guovttis" tags="n.*" >   
+      <select lemma="guaktah"/>    
+    </match>    
+    </rule>      
+ <rule weight="0.6">   
+     <match tags="*.cmp"/>    
+  <match lemma="guovttis" tags="n.*" >   
+      <select lemma="guaktah"/>    
+    </match>    
+    </rule>      
+ <rule weight="0.6">   
+     <match tags="*.gen.@→N"/>    
+  <match lemma="guovttis" tags="n.*" >   
+      <select lemma="guaktah"/>    
+    </match>    
+    </rule>      
+
+
+ <rule weight="1.0">   
   <match lemma="báddi" tags="n.*" >   
       <select lemma="baante"/>    
     </match>    
@@ -3398,6 +3446,7 @@
     <or>
   <match tags="vblex.*" />   
   <match tags="adv.*" />   
+  <match tags="sent" />   
     </or>
     </rule>    
  <rule weight="0.6">   
@@ -3407,6 +3456,7 @@
     <or>
   <match tags="vblex.*" />   
   <match tags="adv.*" />   
+  <match tags="sent" />   
     </or>
     </rule>    
  <rule weight="0.6">   
@@ -3416,6 +3466,7 @@
     <or>
   <match tags="vblex.*" />   
   <match tags="adv.*" />   
+  <match tags="sent" />   
     </or>
     </rule>    
 
