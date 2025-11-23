@@ -1810,6 +1810,55 @@ And then there are some categories like "month", with all the months.
         </out>
       </action>
     </rule>
+    
+        <rule comment="left_border IFMainV ADVL_left NP_Obj_l ADVL_left " > <!--S V ADVL OBJ ADVL becomes S ADVL OBJ ADVL V -->
+      <pattern>
+        <pattern-item n="left_border"/>
+        <pattern-item n="IFMainV"/>
+        <pattern-item n="ADVL_left"/>
+        <pattern-item n="NP_Obj_l"/>
+        <pattern-item n="ADVL_left"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lemh"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="lemq"/>
+          </chunk>
+          <b pos="1"/>
+        <chunk>
+            <clip pos="3" part="lemh"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+            <clip pos="3" part="lemq"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="4" part="lemh"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
+            <clip pos="4" part="lemq"/>
+          </chunk>
+          <b pos="3"/>
+        <chunk>
+            <clip pos="5" part="lemh"/>
+            <clip pos="5" part="tags"/>
+            <clip pos="5" part="chcontent"/>
+            <clip pos="5" part="lemq"/>
+          </chunk>
+          <b pos="3"/>
+        <chunk>
+            <clip pos="2" part="lemh"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="lemq"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="left_border IFMainV NP_Obj_l NP_Opred_l " > <!--S V OPRED OBJ becomes S OBJ  OPRED V -->
       <pattern>

@@ -372,6 +372,20 @@ And then there are some categories like "month", with all the months.
       <cat-item lemma="gii" tags="prn.itg.*.nom.*"/>
     </def-cat>
 
+    <def-cat n="prn_ind">
+      <cat-item tags="prn.ind.*."/>
+    </def-cat>
+
+    <def-cat n="feara_adv">
+      <cat-item lemma="feara" tags="adv.*."/>
+    </def-cat>
+    <def-cat n="juste_adv">
+      <cat-item lemma="juste" tags="adv.*."/>
+      <cat-item lemma="justa" tags="adv.*."/>
+    </def-cat>
+    <def-cat n="fal_adv">
+      <cat-item lemma="fal" tags="adv.*."/>
+    </def-cat>
 
     <def-cat n="prn_ind_mod">
       <cat-item tags="prn.ind.*.*.*.@→N"/>
@@ -733,6 +747,14 @@ And then there are some categories like "month", with all the months.
       <cat-item tags="*.sem_year.pl.gen.*"/>
       <cat-item tags="*.sem_year.sg.acc.*"/>
       <cat-item tags="*.sem_year.pl.acc.*"/>
+    </def-cat>
+
+    <def-cat n="goardit_vblex">
+      <cat-item lemma="goardit" tags="vblex.*"/>
+    </def-cat>
+ 
+    <def-cat n="beaivvas_n">
+      <cat-item lemma="beaivváš" tags="n.*"/>
     </def-cat>
 
     <def-cat n="áigi_n">
@@ -8659,6 +8681,78 @@ And then there are some categories like "month", with all the months.
       </action>
     </rule> -->
 
+
+    <rule comment="beaivvas_n goardit_vblex" c="beaivváš goardá : biejjhguakoe"> 
+      <pattern>
+        <pattern-item n="beaivvas_n"/>
+        <pattern-item n="goardit_vblex"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-1Param"><with-param pos="1"/></call-macro>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <lit v="biejjhguakoe"/>
+              <lit-tag v="n.sg.nom"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="feara_adv prn_ind" c="soai hutkaba feara maid : saaht maam"> 
+      <pattern>
+        <pattern-item n="feara_adv"/>
+        <pattern-item n="prn_ind"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <out>
+          <chunk name="noun" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>            
+            </lu>
+          </chunk>
+        </out>
+       <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>      
+     </action>
+    </rule>
+
+    <rule comment="juste_adv fal_adv" c="juste fal : nov gujht"> 
+      <pattern>
+        <pattern-item n="juste_adv"/>
+        <pattern-item n="fal_adv"/>
+      </pattern>
+      <action>
+         <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <out>
+          <chunk name="adv" case="caseFirstword">
+             <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><var n="func"/></tag>
+            </tags>
+            <lu>
+              <lit v="nov"/>
+              <lit-tag v="adv"/>
+            </lu>
+              <b pos="1"/>
+            <lu>
+              <lit v="gujht"/>
+              <lit-tag v="pcle"/>
+            </lu>
+          </chunk>
+        </out>
+     </action>
+    </rule>
 
     <rule comment="C[DT]-ADV eret_adv noun_loc" c="eret Hábmeris : Hábmeristie"> 
       <pattern>
