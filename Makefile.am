@@ -152,17 +152,19 @@ $(PREFIX2).syn.rlx.bin: $(AP_SRC2)/$(LANG2).syn.rlx.bin
 ## Bilingual dictionaries
 ###############################################################################
 
+LT_COMP_SINGLE_SECTION=LT_JOBS=false LT_MAX_SECTION_ENTRIES=0 lt-comp --no-split
+
 $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
-	lt-comp lr -r s $< $@
+	$(LT_COMP_SINGLE_SECTION) lr -r s $< $@
 
 $(PREFIX1n).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
-	lt-comp lr -r n $< $@
+	$(LT_COMP_SINGLE_SECTION) lr -r n $< $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
-	lt-comp rl $< $@
+	$(LT_COMP_SINGLE_SECTION) rl $< $@
 
 ###############################################################################
 ## Lexical selection rules
