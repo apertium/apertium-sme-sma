@@ -3789,13 +3789,16 @@ And then there are some categories like "month", with all the months.
       </choose>
       <choose>
         <when c="M[CT] der_passs to der_passl">
-          <test><and>
+          <test>
+<!--	          <and>
                <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_passs"/></equal>
                <or>
                <equal><clip pos="1" side="tl" part="lem"/><lit v="orrestidh"/></equal>           
                <equal><clip pos="1" side="tl" part="lem"/><lit v="mohtedidh"/></equal>           
                </or>
-          </and></test>
+          </and> -->
+               <equal><clip pos="1" side="sl" part="a_deriv"/><lit-tag v="der_passs"/></equal>
+          </test> 
           <let><clip pos="1" side="tl" part="a_deriv"/><lit-tag v="der_passl"/></let>
         </when>
 <!--        <when c="M[CT] der_passs to other lemma">
