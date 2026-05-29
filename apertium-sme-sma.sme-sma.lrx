@@ -449,7 +449,10 @@
   </rule>
   <rule weight="0.6">
        <match lemma="bivdit" tags="vblex.tv.*"><select lemma="aanoestidh" tags="vblex.*"/></match>
+       <or>
        <match tags="n.sem_hum.*"/>
+       <match tags="n.sem_hum_pos.*"/>
+       </or>
   </rule>
   <rule weight="0.6">
        <match lemma="bivdit" tags="vblex.tv.*"><select lemma="gööledh" tags="vblex.*"/></match>
