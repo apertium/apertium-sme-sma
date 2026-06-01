@@ -39,6 +39,9 @@
     <def-cat n="fïere_lex">
       <cat-item lemma="fïere" tags="prn.*"/>
     </def-cat>
+    <def-cat n="åemie_lex">
+      <cat-item lemma="åemie" tags="adj.*"/>
+    </def-cat>
 
     <def-cat n="guhte_lex">
       <cat-item lemma="guhte" tags="prn.*"/>
@@ -89,6 +92,11 @@
     </def-cat>
 
 
+    <def-cat n="hum_n">
+      <cat-item tags="n.sem_hum.*"/>  
+      <cat-item tags="n.sem_hum_pos.*"/>  
+      <cat-item tags="np.ant.*"/>  
+    </def-cat>
     <def-cat n="num_cmp">
       <cat-item tags="num.*.cmp"/>
       <cat-item tags="num.*.*.cmp"/>
@@ -1493,6 +1501,62 @@
       </action>
     </rule>
 
+    <rule comment="C[S] åemie_lex sem_hum" c="åemie aehtjie, åemie Laara : áhččerohkki, Laara-rohkki">
+      <pattern>
+        <pattern-item n="åemie_lex"/>
+        <pattern-item n="hum_n"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+      <call-macro n="general-macro-2Param"><with-param pos="1"/><with-param pos="2"/></call-macro>
+	        <choose>
+	        <when>
+	        <test>
+       <equal caseless="yes"><clip pos="2" side="sl" part="a_PoS"/><lit-tag v="np"/></equal>
+          </test>
+        <out>
+          <chunk name="noun¯" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+             <mlu>
+             <lu>
+                <clip pos="2" side="tl" part="lemh"/>
+               <lit-tag v="np.cmp_sgnom.cmp_hyph.cmp"/>
+             </lu>
+              <lu>
+                <clip pos="1" side="tl" part="lemh"/>
+                <clip pos="1" side="tl" part="a_PoS"/>
+                <clip pos="2" side="tl" part="a_nbr"/>
+                <clip pos="2" side="tl" part="a_case"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+       </when>
+       <otherwise>
+        <out>
+          <chunk name="noun¯" case="caseFirstword">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+            <mlu>
+              <lu>
+                <clip pos="2" side="tl" part="lemh"/>
+               <lit-tag v="n.cmp_sgnom.cmp"/>
+             </lu>
+              <lu>
+                <clip pos="1" side="tl" part="lemh"/>
+                <clip pos="2" side="tl" part="tags"/>
+              </lu>
+            </mlu>
+          </chunk>
+        </out>
+        </otherwise>
+ 	        </choose>
+     <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>     
+    </action>
+    </rule>
 
     <rule comment="C[S] baavodh_lex" c="baavodh  : leat áhpeheapme">
       <pattern>
