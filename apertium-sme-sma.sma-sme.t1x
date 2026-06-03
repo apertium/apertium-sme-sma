@@ -304,6 +304,11 @@
        <attr-item tags="pret"/>
        <attr-item tags="pres"/>
     </def-attr>
+    <def-attr n="a_proptypes">
+       <attr-item tags="cog"/>
+       <attr-item tags="ant"/>
+       <attr-item tags="org"/>
+    </def-attr>
 
     <def-attr n="a_postags">
        <attr-item tags="n.sg.nom"/>
@@ -1072,6 +1077,14 @@
           </and></test>
           <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
           <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+        </when>
+        <when c="remove attr">
+          <test><and>
+          <equal><clip pos="1" side="tl" part="a_PoS"/><lit-tag v="np"/></equal>
+          <equal><clip pos="1" side="tl" part="a_proptypes"/><lit-tag v="cog"/></equal>
+          <equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal>
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_attr"/><lit-tag v="sg.nom"/></let>
         </when>
 	</choose>
       <choose>
